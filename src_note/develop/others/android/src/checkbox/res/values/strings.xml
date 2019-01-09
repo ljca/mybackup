@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CheckBoxTest</string>
+	<string name="str">Hello World, CheckBoxTest</string>
+	<string name="check1">CheckBox1</string>
+	<string name="check2">CheckBox2</string>
+	<string name="check3">CheckBox3</string>
+	<string name="check4">CheckBox4</string>
+	<string name="check5">CheckBox5</string>
+</resources>

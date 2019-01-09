@@ -1,0 +1,490 @@
+{
+  "version": 1,
+  "height": 48,
+  "env": {
+    "TERM": "screen",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.029318,
+      "\u001b[1;33mDid you know that？\u001b[0m"
+    ],
+    [
+      0.021924,
+      " _______________________________________ \r\n< \u001b[1;36mpstree.x11：没有 appropriate。\u001b[0m >\r\n --------------------------------------- \r\n\r\n                                   ,-----.\r\n                                   |     |\r\n                                ,--|     |-.\r\n                         __,----|  |     | |\r\n                       ,;::     |  `_____' |\r\n                       `._______|    i^i   |\r\n                                `----| |---'| .\r\n                           ,-------._| |== ||//\r\n                           |       |_|P`.  /'/\r\n                           `-------' 'Y Y/'/'\r\n                                     .== /_\r\n   ^__^                             /   /'|  `i\r\n   (oo)_______                   /'   /  |   |\r\n   (__)       )/             /'    /   |   `i\r\n       ||----w |           ___,;`----'.___L_,-'`__\r\n       ||     ||          i_____;----.____i\"\"____\r\n"
+    ],
+    [
+      0.006941,
+      "\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m"
+    ],
+    [
+      1.80148,
+      " "
+    ],
+    [
+      0.735761,
+      "\b\u001b[K"
+    ],
+    [
+      0.219698,
+      " "
+    ],
+    [
+      0.8391,
+      "s"
+    ],
+    [
+      0.094773,
+      "u"
+    ],
+    [
+      0.082851,
+      "d"
+    ],
+    [
+      0.03296,
+      "o"
+    ],
+    [
+      0.084437,
+      " "
+    ],
+    [
+      0.482504,
+      "e"
+    ],
+    [
+      0.485207,
+      "m"
+    ],
+    [
+      0.088231,
+      "e"
+    ],
+    [
+      0.256818,
+      "e"
+    ],
+    [
+      0.032082,
+      "e"
+    ],
+    [
+      0.559939,
+      "\b\u001b[K"
+    ],
+    [
+      0.261764,
+      "\b\u001b[K"
+    ],
+    [
+      0.132106,
+      "r"
+    ],
+    [
+      0.528198,
+      "g"
+    ],
+    [
+      0.122815,
+      "e"
+    ],
+    [
+      0.186736,
+      "\r\n"
+    ],
+    [
+      0.001277,
+      "emerge           emerge-webrsync\r\n\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m sudo emerge"
+    ],
+    [
+      0.481275,
+      " "
+    ],
+    [
+      0.29871,
+      "-"
+    ],
+    [
+      0.155327,
+      "-"
+    ],
+    [
+      0.551377,
+      "a"
+    ],
+    [
+      0.207177,
+      "s"
+    ],
+    [
+      0.10817,
+      "k"
+    ],
+    [
+      0.131513,
+      " "
+    ],
+    [
+      3.411392,
+      "w"
+    ],
+    [
+      0.186599,
+      "w"
+    ],
+    [
+      0.152819,
+      "w"
+    ],
+    [
+      0.226903,
+      "-"
+    ],
+    [
+      0.715813,
+      "c"
+    ],
+    [
+      0.074102,
+      "l"
+    ],
+    [
+      0.169584,
+      "e"
+    ],
+    [
+      0.35533,
+      "i"
+    ],
+    [
+      0.600908,
+      "\b\u001b[K"
+    ],
+    [
+      0.198503,
+      "\b\u001b[K"
+    ],
+    [
+      0.257228,
+      "i"
+    ],
+    [
+      0.154585,
+      "e"
+    ],
+    [
+      0.330732,
+      "n"
+    ],
+    [
+      0.272145,
+      "\r\n"
+    ],
+    [
+      0.004526,
+      "chromium                ck4up                   conkeror                dillo                   dooble                  elinks                  epiphany\r\n"
+    ],
+    [
+      0.003283,
+      "fetch                   firefox                 firefox-bin             google-chrome           google-chrome-beta      google-chrome-unstable  httrack\r\n"
+    ],
+    [
+      0.003223,
+      "jd                      links                   lynx                    metadata.xml            midori                  netrik                  netsurf\r\n"
+    ],
+    [
+      0.003205,
+      "opera                   opera-beta              opera-developer         otter                   phantomjs               pybugz                  qupzilla\r\n"
+    ],
+    [
+      0.003523,
+      "qutebrowser             ripe-atlas-cousteau     seamonkey               seamonkey-bin           surf                    surfraw                 uget\r\n"
+    ],
+    [
+      0.002505,
+      "vivaldi                 vivaldi-snapshot        w3m                     w3mmee                  weboob\r\n\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m sudo emerge --ask www-client/"
+    ],
+    [
+      1.464007,
+      "f"
+    ],
+    [
+      0.165169,
+      "i"
+    ],
+    [
+      0.078753,
+      "r"
+    ],
+    [
+      0.099662,
+      "e"
+    ],
+    [
+      0.143978,
+      "f"
+    ],
+    [
+      0.111958,
+      "o"
+    ],
+    [
+      0.572165,
+      "\r\n"
+    ],
+    [
+      0.001459,
+      "firefox      firefox-bin\r\n\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m sudo emerge --ask www-client/firefox"
+    ],
+    [
+      0.911935,
+      " "
+    ],
+    [
+      2.25561,
+      "c"
+    ],
+    [
+      0.129646,
+      "h"
+    ],
+    [
+      0.104026,
+      "r"
+    ],
+    [
+      0.145159,
+      "o"
+    ],
+    [
+      0.876826,
+      "m"
+    ],
+    [
+      0.156415,
+      "i"
+    ],
+    [
+      0.45621,
+      "\r\n"
+    ],
+    [
+      0.000336,
+      "chromium      chromium-bsu\r\n\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n"
+    ],
+    [
+      3.1e-05,
+      "\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m sudo emerge --ask www-client/firefox chromium"
+    ],
+    [
+      1.125657,
+      "u"
+    ],
+    [
+      1.106239,
+      "\b\u001b[K"
+    ],
+    [
+      0.16215,
+      "\b\u001b[K"
+    ],
+    [
+      0.190484,
+      "\r\n"
+    ],
+    [
+      0.000313,
+      "chromium      chromium-bsu\r\n\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n"
+    ],
+    [
+      2e-05,
+      "\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m sudo emerge --ask www-client/firefox chromium"
+    ],
+    [
+      1.908475,
+      "\u001b[H\u001b[J\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m sudo emerge --ask www-client/firefox chromium"
+    ],
+    [
+      1.782456,
+      "\r\n"
+    ],
+    [
+      0.002772,
+      "密码："
+    ],
+    [
+      2.788513,
+      "\r\n"
+    ],
+    [
+      0.307665,
+      "\u001b]0;emerge\u0007"
+    ],
+    [
+      0.108575,
+      "\r\n\u001b[33;01m * IMPORTANT:\u001b[39;49;00m 2 news items need reading for repository 'gentoo'.\r\n"
+    ],
+    [
+      3.2e-05,
+      "\u001b[33;01m *\u001b[39;49;00m Use \u001b[32;01meselect news read\u001b[39;49;00m to view new items.\r\n\r\n"
+    ],
+    [
+      0.003182,
+      "\r\n \u001b[33;01m* IMPORTANT:\u001b[39;49;00m 4 config files in '/etc/portage' need updating.\r\n"
+    ],
+    [
+      3.9e-05,
+      " \u001b[33;01m*\u001b[39;49;00m See the \u001b[32mCONFIGURATION FILES\u001b[39;49;00m and \u001b[32mCONFIGURATION FILES UPDATE TOOLS\u001b[39;49;00m\r\n"
+    ],
+    [
+      1.9e-05,
+      " \u001b[33;01m*\u001b[39;49;00m sections of the \u001b[01memerge\u001b[39;49;00m man page to learn how to update config files.\r\n"
+    ],
+    [
+      9.1e-05,
+      "\r\n\u001b[32mThese are the packages that would be merged, in order:\u001b[39;49;00m\r\n\r\n"
+    ],
+    [
+      3.1e-05,
+      "Calculating dependencies  "
+    ],
+    [
+      0.195242,
+      "\b\b -"
+    ],
+    [
+      0.050542,
+      "\b\b -"
+    ],
+    [
+      0.050461,
+      "\b\b |"
+    ],
+    [
+      0.05097,
+      "\b\b |"
+    ],
+    [
+      0.050791,
+      "\b\b \\"
+    ],
+    [
+      0.050753,
+      "\b\b |"
+    ],
+    [
+      0.051162,
+      "\b\b /"
+    ],
+    [
+      0.050465,
+      "\b\b -"
+    ],
+    [
+      0.05368,
+      "\b\b -"
+    ],
+    [
+      0.068234,
+      "\b\b \\"
+    ],
+    [
+      0.897285,
+      "\b\b /"
+    ],
+    [
+      0.262794,
+      "\b\b... done!\r\n"
+    ],
+    [
+      0.001999,
+      "\r\nThe following \u001b[31;01mUSE changes\u001b[39;49;00m are necessary to proceed:\r\n (see \"package.use\" in the portage(5) man page for more details)\r\n# required by www-client/chromium-60.0.3112.78::gentoo\r\n# required by chromium (argument)\r\n\u001b[32m>=sys-libs/zlib-1.2.11 minizip\u001b[39;49;00m\r\n"
+    ],
+    [
+      0.0011,
+      "\u001b[01m\r\nWould you like to add these changes to your config files?\u001b[39;49;00m"
+    ],
+    [
+      2.4e-05,
+      " [\u001b[32;01mYes\u001b[39;49;00m/\u001b[31;01mNo\u001b[39;49;00m] "
+    ],
+    [
+      1.854197,
+      "\r\n"
+    ],
+    [
+      0.000819,
+      "\r\nAutounmask changes successfully written.\r\n"
+    ],
+    [
+      0.00336,
+      "\r\n \u001b[33;01m* IMPORTANT:\u001b[39;49;00m 5 config files in '/etc/portage' need updating.\r\n"
+    ],
+    [
+      3.4e-05,
+      " \u001b[33;01m*\u001b[39;49;00m See the \u001b[32mCONFIGURATION FILES\u001b[39;49;00m and \u001b[32mCONFIGURATION FILES UPDATE TOOLS\u001b[39;49;00m\r\n \u001b[33;01m*\u001b[39;49;00m sections of the \u001b[01memerge\u001b[39;49;00m man page to learn how to update config files.\r\n"
+    ],
+    [
+      0.117803,
+      "\r\n!!! \u001b[31;01mThe ebuild selected to satisfy \u001b[39;49;00m\u001b[32m\">=media-video/ffmpeg-3:=\"\u001b[39;49;00m\u001b[31;01m has unmet requirements.\u001b[39;49;00m\r\n"
+    ],
+    [
+      0.002645,
+      "- media-video/ffmpeg-3.2.6::gentoo USE=\"\u001b[31;01mX\u001b[39;49;00m \u001b[31;01malsa\u001b[39;49;00m \u001b[31;01mbzip2\u001b[39;49;00m \u001b[31;01mencode\u001b[39;49;00m \u001b[31;01mgpl\u001b[39;49;00m \u001b[31;01mhardcoded-tables\u001b[39;49;00m \u001b[31;01miconv\u001b[39;49;00m \u001b[31;01mmp3\u001b[39;49;00m \u001b[31;01mnetwork\u001b[39;49;00m \u001b[31;01mopengl\u001b[39;49;00m \u001b[31;01mpostproc\u001b[39;49;00m \u001b[31;01msdl\u001b[39;49;00m \u001b[31;01mthreads\u001b[39;49;00m \u001b[31;01mtruetype\u001b[39;49;00m \u001b[31;01mvorbis\u001b[39;49;00m \u001b[31;01mx264\u001b[39;49;00m \u001b[31;01mxcb\u001b[39;49;00m \u001b[31;01mxvid\u001b[39;49;00m \u001b[31;01mzlib\u001b[39;49;00m (\u001b[34;01m-altivec\u001b[39;49;00m) \u001b[34;01m-amr\u001b[39;49;00m \u001b[34;01m-amrenc\u001b[39;49;00m (\u001b[34;01m-armv5te\u001b[39;49;00m) (\u001b[34;01m-armv6\u001b[39;49;00m) (\u001b[34;01m-armv6t2\u001b[39;49;00m) (\u001b[34;01m-armvfp\u001b[39;49;00m) \u001b[34;01m-bluray\u001b[39;49;00m \u001b[34;01m-bs2b\u001b[39;49;00m \u001b[34;01m-cdio\u001b[39;49;00m \u001b[34;01m-celt\u001b[39;49;00m \u001b[34;01m-chromaprint\u001b[39;49;00m \u001b[34;01m-cpudetection\u001b[39;49;00m \u001b[34;01m-debug\u001b[39;49;00m \u001b[34;01m-doc\u001b[39;49;00m \u001b[34;01m-ebur128\u001b[39;49;00m \u001b[34;01m-fdk\u001b[39;49;00m \u001b[34;01m-flite\u001b[39;49;00m \u001b[34;01m"
+    ],
+    [
+      3.4e-05,
+      "-fontconfig\u001b[39;49;00m \u001b[34;01m-frei0r\u001b[39;49;00m \u001b[34;01m-fribidi\u001b[39;49;00m \u001b[34;01m-gcrypt\u001b[39;49;00m \u001b[34;01m-gme\u001b[39;49;00m \u001b[34;01m-gmp\u001b[39;49;00m \u001b[34;01m-gnutls\u001b[39;49;00m \u001b[34;01m-gsm\u001b[39;49;00m \u001b[34;01m-iec61883\u001b[39;49;00m \u001b[34;01m-ieee1394\u001b[39;49;00m \u001b[34;01m-jack\u001b[39;49;00m \u001b[34;01m-jpeg2k\u001b[39;49;00m \u001b[34;01m-kvazaar\u001b[39;49;00m \u001b[34;01m-ladspa\u001b[39;49;00m \u001b[34;01m-libass\u001b[39;49;00m \u001b[34;01m-libcaca\u001b[39;49;00m \u001b[34;01m-libilbc\u001b[39;49;00m \u001b[34;01m-librtmp\u001b[39;49;00m \u001b[34;01m-libsoxr\u001b[39;49;00m \u001b[34;01m-libv4l\u001b[39;49;00m \u001b[34;01m-lzma\u001b[39;49;00m (\u001b[34;01m-mipsdspr1\u001b[39;49;00m) (\u001b[34;01m-mipsdspr2\u001b[39;49;00m) (\u001b[34;01m-mipsfpu\u001b[39;49;00m) (\u001b[34;01m-mmal\u001b[39;49;00m) \u001b[34;01m-modplug\u001b[39;49;00m (\u001b[34;01m-neon\u001b[39;49;00m) \u001b[34;01m-nvenc\u001b[39;49;00m \u001b[34;01m-openal\u001b[39;49;00m \u001b[34;01m-openh264\u001b[39;49;00m \u001b[34;01m-openssl\u001b[39;49;00m \u001b[34;01m-opus\u001b[39;49;00m \u001b[34;01m-oss\u001b[39;49;00m \u001b[34;01m-pic\u001b[39;49;00m \u001b[34;01m-pulseaudio\u001b[39;49;00m \u001b[34;01m-rubberband\u001b[39;49;00m \u001b[34;01m-samba\u001b[39;49;00m \u001b[34;01m-schroedi"
+    ],
+    [
+      1.7e-05,
+      "nger\u001b[39;49;00m \u001b[34;01m-snappy\u001b[39;49;00m \u001b[34;01m-speex\u001b[39;49;00m \u001b[34;01m-ssh\u001b[39;49;00m \u001b[34;01m-static-libs\u001b[39;49;00m \u001b[34;01m-test\u001b[39;49;00m \u001b[34;01m-theora\u001b[39;49;00m \u001b[34;01m-twolame\u001b[39;49;00m \u001b[34;01m-v4l\u001b[39;49;00m \u001b[34;01m-vaapi\u001b[39;49;00m \u001b[34;01m-vdpau\u001b[39;49;00m \u001b[34;01m-vpx\u001b[39;49;00m \u001b[34;01m-wavpack\u001b[39;49;00m \u001b[34;01m-webp\u001b[39;49;00m \u001b[34;01m-x265\u001b[39;49;00m \u001b[34;01m-zimg\u001b[39;49;00m \u001b[34;01m-zvbi\u001b[39;49;00m\" ABI_X86=\"(\u001b[31;01m64\u001b[39;49;00m) \u001b[34;01m-32\u001b[39;49;00m (\u001b[34;01m-x32\u001b[39;49;00m)\" CPU_FLAGS_X86=\"\u001b[31;01mmmx\u001b[39;49;00m \u001b[31;01msse\u001b[39;49;00m \u001b[31;01msse2\u001b[39;49;00m \u001b[34;01m-3dnow\u001b[39;49;00m \u001b[34;01m-3dnowext\u001b[39;49;00m \u001b[34;01m-aes\u001b[39;49;00m \u001b[34;01m-avx\u001b[39;49;00m \u001b[34;01m-avx2\u001b[39;49;00m \u001b[34;01m-fma3\u001b[39;49;00m \u001b[34;01m-fma4\u001b[39;49;00m \u001b[34;01m-mmxext\u001b[39;49;00m \u001b[34;01m-sse3\u001b[39;49;00m \u001b[34;01m-sse4_1\u001b[39;49;00m \u001b[34;01m-sse4_2\u001b[39;49;00m \u001b[34;01m-ssse3\u001b[39;49;00m \u001b[34;01m-xop\u001b[39;49;00m\" FFTOOLS=\"\u001b[31;01maviocat\u001b[39;49;00m \u001b[31;01mcws2fws\u001b[39;49;00m \u001b[31;01mffescape\u001b[39;49;"
+    ],
+    [
+      1.9e-05,
+      "00m \u001b[31;01mffeval\u001b[39;49;00m \u001b[31;01mffhash\u001b[39;49;00m \u001b[31;01mfourcc2pixfmt\u001b[39;49;00m \u001b[31;01mgraph2dot\u001b[39;49;00m \u001b[31;01mismindex\u001b[39;49;00m \u001b[31;01mpktdumper\u001b[39;49;00m \u001b[31;01mqt-faststart\u001b[39;49;00m \u001b[31;01msidxindex\u001b[39;49;00m \u001b[31;01mtrasher\u001b[39;49;00m\"\r\n\r\n  The following REQUIRED_USE flag constraints are unsatisfied:\r\n"
+    ],
+    [
+      0.000228,
+      "    cpu_flags_x86_sse? ( cpu_flags_x86_mmxext )\r\n"
+    ],
+    [
+      3.2e-05,
+      "\r\n  The above constraints are a subset of the following complete expression:\r\n"
+    ],
+    [
+      2.3e-05,
+      "    libv4l? ( v4l ) fftools_cws2fws? ( zlib ) test? ( encode ) postproc? ( gpl ) frei0r? ( gpl ) cdio? ( gpl ) samba? ( gpl ) encode? ( x264? ( gpl ) x265? ( gpl ) xvid? ( gpl ) X? ( !xcb? ( gpl ) ) ) cpu_flags_x86_avx2? ( cpu_flags_x86_avx ) cpu_flags_x86_fma4? ( cpu_flags_x86_avx ) cpu_flags_x86_fma3? ( cpu_flags_x86_avx ) cpu_flags_x86_xop? ( cpu_flags_x86_avx ) cpu_flags_x86_avx? ( cpu_flags_x86_sse4_2 ) cpu_flags_x86_aes? ( cpu_flags_x86_sse4_2 ) cpu_flags_x86_sse4_2? ( cpu_flags_x86_sse4_1 ) cpu_flags_x86_sse4_1? ( cpu_flags_x86_ssse3 ) cpu_flags_x86_ssse3? ( cpu_flags_x86_sse3 ) cpu_flags_x86_sse3? ( cpu_flags_x86_sse2 ) cpu_flags_x86_sse2? ( cpu_flags_x86_sse ) cpu_flags_x86_sse? ( cpu_flags_x86_mmxext ) cpu_flags_x86_mmxext? ( cpu_flags_x86_mmx ) cpu_flags_x86_3dnowext? ( cpu_flags_x86_3dnow ) cpu_flags_x86_3dnow? ( cpu_flags_x86_mmx )\r\n\r\n"
+    ],
+    [
+      0.000292,
+      "(dependency required by \"\u001b[32mwww-client/chromium-60.0.3112.78::gentoo[system-ffmpeg]\u001b[39;49;00m\" [ebuild])\r\n(dependency required by \"\u001b[32mchromium\u001b[39;49;00m\" [argument])"
+    ],
+    [
+      2.3e-05,
+      "\r\n"
+    ],
+    [
+      0.011443,
+      "\u001b]0;root@:\u0007"
+    ],
+    [
+      0.157217,
+      "\u001b[1;31m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m23\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m2\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mootng\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src-note/note/lin/shell\u001b[0m\r\r\n\u001b[1;31m:(\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m"
+    ],
+    [
+      3.191134,
+      " "
+    ],
+    [
+      0.746403,
+      "\b\u001b[K"
+    ]
+  ],
+  "width": 174,
+  "title": null,
+  "duration": 41.22912,
+  "command": null
+}

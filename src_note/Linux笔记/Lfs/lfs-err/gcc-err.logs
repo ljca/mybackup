@@ -1,0 +1,9 @@
+gcc: error: unrecognized command line option '-V'
+gcc: fatal error: no input files
+gcc: error: unrecognized command line option '-qversion'
+gcc: fatal error: no input files
+g++: error: unrecognized command line option '-V'
+g++: fatal error: no input files
+g++: error: unrecognized command line option '-qversion'
+g++: fatal error: no input files
+stage2_werror_flag=''

@@ -1,0 +1,5 @@
+select e.ename,d.dname from employee e
+inner join depts d
+on (d.deptno = e.deptno)
+group by e.ename,d.dname
+/

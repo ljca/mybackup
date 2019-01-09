@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ledtest</string>
+	<string name="txt">This is only led test programs!</string>
+	<string name="led1">Led1</string>
+	<string name="led2">Led2</string>
+	<string name="led3">Led3</string>
+	<string name="led4">Led4</string>
+	<string name="buz">Buzzer</string>
+</resources>

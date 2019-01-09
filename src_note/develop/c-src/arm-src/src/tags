@@ -1,0 +1,317 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Animal	practice/cpp/animal.h	/^		Animal()$/;"	f	class:tmp::Animal
+Animal	practice/cpp/animal.h	/^		Animal(int color,int type,string name,char sex)$/;"	f	class:tmp::Animal
+Animal	practice/cpp/animal.h	/^	class Animal{$/;"	c	namespace:tmp
+Animal	practice/cpp/test_cpp4.cpp	/^		Animal(){$/;"	f	class:tmp::Animal
+Animal	practice/cpp/test_cpp4.cpp	/^		Animal(int color,int type,string name,char sex)$/;"	f	class:tmp::Animal
+Animal	practice/cpp/test_cpp4.cpp	/^	class Animal{$/;"	c	namespace:tmp	file:
+Book	practice/book/book.c	/^struct Book{$/;"	s	file:
+CC	struct/link_test.bk/Makefile	/^CC = gcc$/;"	m
+COLOR	union_enum/enum_test.c	/^typedef enum COLOR$/;"	g	file:
+C_FLAG	struct/link_test.bk/Makefile	/^C_FLAG=gcc -c$/;"	m
+DES	struct/link_test.bk/Makefile	/^DES=\/usr\/local$/;"	m
+Dog	practice/cpp/dog.cxx	/^	Dog()$/;"	f	class:Dog
+Dog	practice/cpp/dog.cxx	/^	Dog(int color,int type,string name,char sex,string buy):Animal(color,type,name,sex)$/;"	f	class:Dog
+Dog	practice/cpp/dog.cxx	/^class Dog:public Animal{$/;"	c	file:
+Dog	practice/cpp/test_cpp4.cpp	/^		Dog()$/;"	f	class:tmp::Dog
+Dog	practice/cpp/test_cpp4.cpp	/^		Dog(int color,int type,string name,char sex,string buy):Animal(color,type,name,sex)$/;"	f	class:tmp::Dog
+Dog	practice/cpp/test_cpp4.cpp	/^	class Dog : public Animal{$/;"	c	namespace:tmp	file:
+Dog	practice/list/main.c	/^struct Dog{$/;"	s	file:
+Dog	practice/string/dog.cpp	/^struct Dog : public node{$/;"	s	file:
+Dog	struct/link_test.bk/link.h	/^}*Dog;$/;"	t	typeref:struct:dog
+FILES	struct/link_test.bk/Makefile	/^FILES=del_link1.o del_link.o find_link.o insert_head.o insert_tail.o link_list.o link_reverse.o show.o link_sort.o find_max.o$/;"	m
+Isleapyear	ctr_struct/my_calc.c	/^int Isleapyear(int year)$/;"	f
+Node	struct/link_test/link_test.c	/^typedef struct Node{$/;"	s	file:
+Number	practice/string/link_test.c	/^struct Number{$/;"	s	file:
+OBJ	struct/link_test.bk/Makefile	/^OBJ=test_link$/;"	m
+Person	list/list_t.c	/^typedef struct Person{$/;"	s	file:
+Person	list/list_t.c_tmp.c	/^typedef struct Person{$/;"	s	file:
+Person	struct/dou_link.c	/^typedef struct Person$/;"	s	file:
+RM	struct/link_test.bk/Makefile	/^RM=rm -fv $/;"	m
+ShowInfo	list/list_t.c	/^void ShowInfo(person **per)$/;"	f
+ShowInfo	list/list_t.c_tmp.c	/^void ShowInfo(person *per)$/;"	f
+Test	practice/string/test.cpp	/^	Test(){$/;"	f	struct:Test
+Test	practice/string/test.cpp	/^struct Test{$/;"	s	file:
+Test1	practice/string/test.cpp	/^	Test1()$/;"	f	struct:Test1
+Test1	practice/string/test.cpp	/^struct Test1 : public Test{$/;"	s	file:
+Tmp	practice/file/file_read2.c	/^struct Tmp{$/;"	s	file:
+Tmp	practice/file/file_read3.c	/^struct Tmp$/;"	s	file:
+UNION	union_enum/union_1.c	/^union UNION$/;"	u	file:
+_ANIMAL_	practice/cpp/animal.h	5;"	d
+_LIST_H_	list/list.h	3;"	d
+_LIST_H_	practice/list/list.h	3;"	d
+_LIST_H_	practice/string/list.h	3;"	d
+_LIST_H_	struct/link_test/list.h	3;"	d
+_TMP_	practice/file/file_read3.c	10;"	d	file:
+__LINK_H	struct/link_test.bk/link.h	2;"	d
+add	recursion/recursion_1.c	/^int add(int n)$/;"	f
+age	list/list_t.c	/^	int age;$/;"	m	struct:Person	file:
+age	list/list_t.c_tmp.c	/^	int age;$/;"	m	struct:Person	file:
+age	struct/dou_link.c	/^	int age;$/;"	m	struct:Person	file:
+age	struct/link_test.bk/struct_1.c	/^	int age;$/;"	m	struct:person	file:
+arr_reverse	array/arr_rev.c	/^void arr_reverse(int *int_arr,int arr_leng)$/;"	f
+author	practice/book/book.c	/^	char *author;$/;"	m	struct:Book	file:
+author	practice/struct/book.c	/^	char author[30];$/;"	m	struct:book	file:
+b	practice/cpp/test_cpp2.cpp	/^		char b;$/;"	m	struct:tmp::number	file:
+b	practice/cpp/test_cpp2.cpp	/^		int b;$/;"	m	class:tmp::clas	file:
+binToHex	ctr_struct/main_1.c	/^int binToHex(int *num)$/;"	f
+black	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+blue	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+book	practice/book/book.c	/^}*book[12];$/;"	v	typeref:struct:Book
+book	practice/struct/book.c	/^struct book$/;"	s	file:
+book_sort	practice/book/book.c	/^struct Book *book_sort(struct Book *b,int price)$/;"	f
+books	practice/struct/book.c	/^}books[5];$/;"	v	typeref:struct:book
+buy	practice/cpp/dog.cxx	/^	string buy;$/;"	m	class:Dog	file:
+buy	practice/cpp/test_cpp4.cpp	/^		string buy;$/;"	m	class:tmp::Dog	file:
+c	practice/cpp/test_cpp2.cpp	/^		char c;$/;"	m	struct:tmp::number	file:
+c	struct/link_test.bk/struct_mem.c	/^	char c;\/*sizeof(c)  = 1 if sizeof(c)%sizeof(s) == 0;if (sizeof(c)+sizeof(s)+sizeof(n))%sizeof(n)==0;return $/;"	m	struct:stest	file:
+c	union_enum/union_1.c	/^	char c; \/\/ size(c) = 1;$/;"	m	union:UNION	file:
+ch	union_enum/union_2.c	/^	char ch[9];$/;"	m	union:union_leng	file:
+clas	practice/cpp/test_cpp2.cpp	/^	class clas{$/;"	c	namespace:tmp	file:
+color	practice/cpp/animal.h	/^		int color;$/;"	m	class:tmp::Animal
+color	practice/cpp/test_cpp4.cpp	/^		int color;$/;"	m	class:tmp::Animal	file:
+color	practice/list/main.c	/^	int color;$/;"	m	struct:Dog	file:
+color	practice/string/dog.cpp	/^	int color;$/;"	m	struct:Dog	file:
+color	union_enum/enum_test.c	/^}color;$/;"	t	typeref:enum:COLOR	file:
+comp	practice/string/list.h	/^	virtual int comp(node *,node *){}$/;"	f	struct:node
+comp_color	practice/list/main.c	/^int comp_color(struct node *arg,struct node *cur)$/;"	f
+converse_arr	string/strToint.c	/^void converse_arr(int (*arr)[3],int (*brr)[2]) $/;"	f
+count	practice/file/file_read2.c	/^	int count;$/;"	m	struct:Tmp	file:
+count	practice/file/file_read3.c	/^  int count;$/;"	m	struct:Tmp	file:
+count_char	ctr_struct/pra2_3.c	/^void count_char()$/;"	f
+cyan	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+days	ctr_struct/my_calc.c	/^int days[12]={31,0,31,30,31,30,31,31,30,31,30,31};$/;"	v
+decTo	ctr_struct/pra2_3.c	/^int decTo(int num)$/;"	f
+del_link	struct/link_test.bk/del_link.c	/^Dog del_link(Dog head,int n)$/;"	f
+del_link1	struct/link_test.bk/del_link1.c	/^void del_link1(Dog tmp,int n)$/;"	f
+delete	practice/list/list.c	/^struct node *delete(struct node *h,struct node *n)$/;"	f
+dog	struct/link_test.bk/link.h	/^typedef struct dog$/;"	s
+dogs	practice/list/main.c	/^struct Dog dogs;$/;"	v	typeref:struct:Dog
+dou_link	struct/dou_link.c	/^void dou_link(person p1)$/;"	f
+dou_link	struct/link_test.bk/dou_link.c	/^void dou_link(Dog d)$/;"	f
+febo	recursion/recursion_1.c	/^int febo(int num)$/;"	f
+file_stat	practice/file/stat.c	/^void file_stat(char *path)$/;"	f
+find_link	struct/link_test.bk/find_link.c	/^void find_link(Dog tmp,int n)$/;"	f
+find_max	struct/link_test.bk/find_max.c	/^Dog find_max(Dog h)$/;"	f
+find_reverse_n	practice1/10.c	/^int find_reverse_n(void)$/;"	f
+gf	list/list_t.c	/^	char *gf;$/;"	m	struct:Person	file:
+gf	list/list_t.c_tmp.c	/^	char *gf;$/;"	m	struct:Person	file:
+gitbits	bit/bit-2.c	/^int gitbits(int val,int n1,int n2)$/;"	f
+green	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+id	practice/string/dog.cpp	/^	int id;$/;"	m	struct:Dog	file:
+id	practice/string/test.cpp	/^	int id;$/;"	m	struct:Test	file:
+info	practice/cpp/animal.h	/^		static void info()$/;"	f	class:tmp::Animal
+info	practice/cpp/test_cpp4.cpp	/^		void info()$/;"	f	class:tmp::Animal
+insert	list/list.c	/^void insert(struct node **h,struct node *new_h)$/;"	f
+insert	practice/list/list.c	/^struct insert(struct node **h,struct node *n)$/;"	f
+insert	practice/string/list.cpp	/^void insert(node **h,node *new_h)$/;"	f
+insert_h	practice/string/link_test.c	/^struct Number *insert_h(struct Number *tmp,int n)$/;"	f
+insert_head	struct/link_test.bk/insert_head.c	/^Dog insert_head(Dog head,int n)$/;"	f
+insert_head	struct/link_test/link_test.c	/^node *insert_head(node *nods,int n)$/;"	f
+insert_t	practice/book/book.c	/^struct Book *insert_t(struct Book *b)$/;"	f
+insert_tail	struct/link_test.bk/insert_tail.c	/^Dog insert_tail(Dog head,int n)$/;"	f
+link_reverse	struct/link_test.bk/link_reverse.c	/^Dog link_reverse(Dog h)$/;"	f
+link_sort	struct/link_test.bk/link_sort.c	/^Dog link_sort(Dog h)$/;"	f
+m	union_enum/union_1.c	/^	int m; \/\/ size(m) = 4;$/;"	m	union:UNION	file:
+m	union_enum/union_2.c	/^	double m;$/;"	m	union:union_leng	file:
+main	array/arr-3.c	/^int main(void)$/;"	f
+main	array/arr-4.c	/^int main()$/;"	f
+main	array/arr_0_1.c	/^int main(void)$/;"	f
+main	array/arr_rev.c	/^int main(void)$/;"	f
+main	array/arr_sort_1.c	/^int main(void)$/;"	f
+main	array/array.c	/^int main(void)$/;"	f
+main	array/arry-2.c	/^int main(void)$/;"	f
+main	array/arry_0_2.c	/^int main()$/;"	f
+main	array/febo.c	/^int main(void)$/;"	f
+main	bit/bit-1.c	/^int main(void)$/;"	f
+main	bit/bit-2.c	/^int main(void)$/;"	f
+main	bit/my_htonl.c	/^int main()$/;"	f
+main	ctr_struct/for-2.c	/^int main()$/;"	f
+main	ctr_struct/main_1.c	/^int main(int argc,char *str[])$/;"	f
+main	ctr_struct/my_calc.c	/^int main()$/;"	f
+main	ctr_struct/pra2_3.c	/^int main()$/;"	f
+main	ctr_struct/prime_number_1.c	/^int main(void)$/;"	f
+main	ctr_struct/tmp.c	/^int main(void)$/;"	f
+main	ctr_struct/tmp_2.c	/^int main(void)$/;"	f
+main	ctr_struct/year_tmp.c	/^int main()$/;"	f
+main	function/fun_point.c	/^int main(void)$/;"	f
+main	function/fun_t_1.c	/^int main(void)$/;"	f
+main	list/list_t.c	/^int main()$/;"	f
+main	list/list_t.c_tmp.c	/^int main()$/;"	f
+main	list/main.c	/^int main()$/;"	f
+main	pra2_9/strToint.c	/^int main()$/;"	f
+main	pra2_9/tmp.c	/^int main()$/;"	f
+main	practice/book/book.c	/^int main()$/;"	f
+main	practice/cpp/dog.cxx	/^int main()$/;"	f
+main	practice/cpp/test_cpp.cpp	/^int main()$/;"	f
+main	practice/cpp/test_cpp2.cpp	/^int main()$/;"	f
+main	practice/cpp/test_cpp3.cxx	/^int main()$/;"	f
+main	practice/cpp/test_cpp4.cpp	/^int main()$/;"	f
+main	practice/file/color.c	/^int main()$/;"	f
+main	practice/file/file_read.c	/^int main(int argc,char *argv[])$/;"	f
+main	practice/file/file_read2.c	/^int main(int argc,char *argv[])$/;"	f
+main	practice/file/file_read3.c	/^main (int argc, char *argv[])$/;"	f
+main	practice/file/file_write.c	/^int main(int argc,char *argv[])$/;"	f
+main	practice/file/rfromf.c	/^main ()$/;"	f
+main	practice/file/stat.c	/^int main(int argc,char *argv[])$/;"	f
+main	practice/file/vt.c	/^int main()$/;"	f
+main	practice/list/main.c	/^int main()$/;"	f
+main	practice/mmap/mmap_read.c	/^main (int argc, char *argv[])$/;"	f
+main	practice/mmap/mmap_write.c	/^int main(int argc,char *argv[])$/;"	f
+main	practice/string/dog.cpp	/^int main()$/;"	f
+main	practice/string/link_test.c	/^int main()$/;"	f
+main	practice/string/strtoint.c	/^int main()$/;"	f
+main	practice/string/test.cpp	/^int main()$/;"	f
+main	practice/struct/book.c	/^int main()$/;"	f
+main	practice/struct/strcmp_test.c	/^int main()$/;"	f
+main	practice1/10.c	/^int main(void)$/;"	f
+main	practice1/11.c	/^int main(void)$/;"	f
+main	practice1/pra12.c	/^int main()$/;"	f
+main	recursion/recursion_1.c	/^int main(void)$/;"	f
+main	string/my_memset.c	/^int main()$/;"	f
+main	string/my_strcmp.c	/^int main()$/;"	f
+main	string/my_strcpy.c	/^int main()$/;"	f
+main	string/my_strstr.c	/^int main()$/;"	f
+main	string/practice/str_reverse.c	/^int main()$/;"	f
+main	string/strToint.c	/^int main(void)$/;"	f
+main	string/str_tok.c	/^int main()$/;"	f
+main	struct/dou_link.c	/^int main()$/;"	f
+main	struct/link_test.bk/link_list.c	/^int main()$/;"	f
+main	struct/link_test.bk/link_sort.c	/^int main()$/;"	f
+main	struct/link_test.bk/struct_1.c	/^int main()$/;"	f
+main	struct/link_test.bk/struct_mem.c	/^int main()$/;"	f
+main	struct/link_test/link_test.c	/^int main()$/;"	f
+main	union_enum/enum_test.c	/^int main()$/;"	f
+main	union_enum/union_1.c	/^int main()$/;"	f
+main	union_enum/union_2.c	/^int main()$/;"	f
+my_atio	string/strToint.c	/^int my_atio(char *str)$/;"	f
+my_atoi	pra2_9/strToint.c	/^int my_atoi(char *str)$/;"	f
+my_htonl	bit/my_htonl.c	/^int my_htonl(int n)$/;"	f
+my_memset	string/my_memset.c	/^void *my_memset(void *v,char c,int size)$/;"	f
+my_strcat	pra2_9/strToint.c	/^char *my_strcat(char *dest_str,char *str)$/;"	f
+my_strcat	pra2_9/tmp.c	/^char *my_strcat(char *dest_str,char *str)$/;"	f
+my_strcmp	pra2_9/strToint.c	/^int my_strcmp(char *dest_str,char *str)$/;"	f
+my_strcmp	string/my_strcmp.c	/^int my_strcmp(char *str1,char *str2)$/;"	f
+my_strcpy	pra2_9/strToint.c	/^char *my_strcpy(char *dest_str,char *str)$/;"	f
+my_strcpy	string/my_strcpy.c	/^char *my_strcpy(char *str,char *str2)$/;"	f
+my_strlen	pra2_9/strToint.c	/^int my_strlen(char *str)$/;"	f
+my_strstr	pra2_9/strToint.c	/^char *my_strstr(char *dest_str,char *str)$/;"	f
+my_strstr	string/my_strstr.c	/^char *my_strstr(char *str1,char *str2)$/;"	f
+my_strtok	pra2_9/strToint.c	/^char *my_strtok(char *dest_str,char *str)$/;"	f
+n	struct/link_test.bk/link.h	/^	int n;$/;"	m	struct:dog
+n	struct/link_test.bk/struct_mem.c	/^	int n; \/\/sizeof(n) = 4$/;"	m	struct:stest	file:
+n	union_enum/union_1.c	/^	int n; \/\/ size(n) = 4;$/;"	m	union:UNION	file:
+n	union_enum/union_2.c	/^	int n;$/;"	m	union:union_leng	file:
+name	list/list_t.c	/^	char *name;$/;"	m	struct:Person	file:
+name	list/list_t.c_tmp.c	/^	char *name;$/;"	m	struct:Person	file:
+name	practice/cpp/animal.h	/^		string name;$/;"	m	class:tmp::Animal
+name	practice/cpp/test_cpp4.cpp	/^		string name;$/;"	m	class:tmp::Animal	file:
+name	practice/file/file_read2.c	/^	char *name;$/;"	m	struct:Tmp	file:
+name	practice/file/file_read3.c	/^  char *name;$/;"	m	struct:Tmp	file:
+name	practice/string/test.cpp	/^	char *name;$/;"	m	struct:Test1	file:
+name	practice/struct/book.c	/^	char *name;$/;"	m	struct:book	file:
+name	struct/dou_link.c	/^	char *name;$/;"	m	struct:Person	file:
+name	struct/link_test.bk/struct_1.c	/^	char *name;$/;"	m	struct:person	file:
+new_link	practice/list/main.c	/^struct node *new_link = search(nodes,comp_color,&dogs.no);$/;"	v	typeref:struct:node
+next	list/list.h	/^	struct node *next;$/;"	m	struct:node	typeref:struct:node::node
+next	practice/book/book.c	/^	struct Book *next;$/;"	m	struct:Book	typeref:struct:Book::Book	file:
+next	practice/file/file_read2.c	/^	struct Tmp *next;$/;"	m	struct:Tmp	typeref:struct:Tmp::Tmp	file:
+next	practice/file/file_read3.c	/^  struct Tmp *next;$/;"	m	struct:Tmp	typeref:struct:Tmp::Tmp	file:
+next	practice/file/rfromf.c	/^  struct readFF *next;$/;"	m	struct:readFF	typeref:struct:readFF::readFF	file:
+next	practice/list/list.h	/^	struct node *next;$/;"	m	struct:node	typeref:struct:node::node
+next	practice/string/link_test.c	/^	struct Number *next;$/;"	m	struct:Number	typeref:struct:Number::Number	file:
+next	practice/string/list.h	/^	\/*struct *\/node *next;$/;"	m	struct:node
+next	struct/dou_link.c	/^	struct Person *next;$/;"	m	struct:Person	typeref:struct:Person::Person	file:
+next	struct/link_test.bk/link.h	/^	struct dog *next;$/;"	m	struct:dog	typeref:struct:dog::dog
+next	struct/link_test/link_test.c	/^	struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+next	struct/link_test/list.h	/^	struct node *next;$/;"	m	struct:node	typeref:struct:node::node
+no	practice/list/main.c	/^	struct node no;$/;"	m	struct:Dog	typeref:struct:Dog::node	file:
+node	list/list.h	/^struct node  {$/;"	s
+node	practice/list/list.h	/^struct node  {$/;"	s
+node	practice/string/list.h	/^struct node  {$/;"	s
+node	struct/link_test/link_test.c	/^}node;$/;"	t	typeref:struct:Node	file:
+node	struct/link_test/list.h	/^struct node  {$/;"	s
+nodes	practice/list/main.c	/^struct node *nodes;$/;"	v	typeref:struct:node
+nu	practice/string/link_test.c	/^	int nu;$/;"	m	struct:Number	file:
+num	practice/cpp/test_cpp.cpp	/^		int num;$/;"	m	class:tests::test	file:
+num	practice/file/rfromf.c	/^  int num;$/;"	m	struct:readFF	file:
+num	struct/link_test/link_test.c	/^	int num;$/;"	m	struct:Node	file:
+num	union_enum/union_1.c	/^}num; \/\/ sizeof(num)=?:12$/;"	v	typeref:union:UNION
+num2	practice/cpp/test_cpp.cpp	/^		int num2;$/;"	m	class:tests::test	file:
+number	practice/cpp/test_cpp2.cpp	/^	struct number{$/;"	s	namespace:tmp	file:
+open_file	practice/file/file_read.c	/^void open_file(char *path)$/;"	f
+open_file	practice/file/file_read2.c	/^void open_file(char *path)$/;"	f
+operator -	practice/cpp/test_cpp.cpp	/^		test operator-(test &m)$/;"	f	class:tests::test
+person	list/list_t.c	/^}person;$/;"	t	typeref:struct:Person	file:
+person	list/list_t.c_tmp.c	/^}person;$/;"	t	typeref:struct:Person	file:
+person	struct/dou_link.c	/^}*person;$/;"	t	typeref:struct:Person	file:
+person	struct/link_test.bk/struct_1.c	/^struct person$/;"	s	file:
+person2	struct/link_test.bk/struct_1.c	/^}person2 = {18,'M',"Tom"};$/;"	v	typeref:struct:person
+pink	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+pra12	practice1/pra12.c	/^void pra12()$/;"	f
+pra_11	practice1/11.c	/^void pra_11()$/;"	f
+pre	struct/dou_link.c	/^	struct Person *pre;$/;"	m	struct:Person	typeref:struct:Person::Person	file:
+pre	struct/link_test.bk/link.h	/^	struct dog *pre;$/;"	m	struct:dog	typeref:struct:dog::dog
+price	practice/book/book.c	/^	int price;$/;"	m	struct:Book	file:
+price	practice/struct/book.c	/^	int price;$/;"	m	struct:book	file:
+readFF	practice/file/rfromf.c	/^struct readFF$/;"	s	file:
+read_f	practice/file/file_read3.c	/^read_f (char *path)$/;"	f
+readed	practice/file/rfromf.c	/^readed ()$/;"	f
+red	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+s	struct/link_test.bk/struct_mem.c	/^	short s;\/\/sizeof(s) = 2$/;"	m	struct:stest	file:
+search	practice/list/list.c	/^struct node *search(struct node *h,  int (*comp)(struct node *, struct node *), struct node *d )$/;"	f
+sex	list/list_t.c	/^	char sex;$/;"	m	struct:Person	file:
+sex	list/list_t.c_tmp.c	/^	char sex;$/;"	m	struct:Person	file:
+sex	practice/cpp/animal.h	/^		char sex;$/;"	m	class:tmp::Animal
+sex	practice/cpp/test_cpp4.cpp	/^		char sex;$/;"	m	class:tmp::Animal	file:
+sex	struct/link_test.bk/struct_1.c	/^	char sex;$/;"	m	struct:person	file:
+show	list/list_t.c	/^	void (*show)(struct Person **);$/;"	m	struct:Person	file:
+show	practice/book/book.c	/^void show(struct Book *b)$/;"	f
+show	practice/cpp/animal.h	/^		virtual void show()$/;"	f	class:tmp::Animal
+show	practice/cpp/test_cpp4.cpp	/^		virtual void show()$/;"	f	class:tmp::Animal
+show	practice/string/dog.cpp	/^	void show()$/;"	f	struct:Dog
+show	practice/string/link_test.c	/^void show(struct Number *num)$/;"	f
+show	practice/string/list.h	/^	virtual void show(){}$/;"	f	struct:node
+show	practice/string/test.cpp	/^	void show()$/;"	f	struct:Test
+show	practice/string/test.cpp	/^	void show()$/;"	f	struct:Test1
+show	struct/link_test.bk/show.c	/^void show(Dog head)$/;"	f
+show	struct/link_test/link_test.c	/^void show(node *h)$/;"	f
+show_info	practice/cpp/dog.cxx	/^	void show_info()$/;"	f	class:Dog
+show_info	practice/cpp/test_cpp4.cpp	/^		void show_info()$/;"	f	class:tmp::Dog
+show_list	list/list.c	/^void show_list(struct node *h,void (*show)(struct node *))$/;"	f
+show_list	practice/list/list.c	/^struct show_list(struct node *h,void (*show)(struct node *n))$/;"	f
+show_list	practice/string/list.cpp	/^void show_list(node *h)$/;"	f
+stest	struct/link_test.bk/struct_mem.c	/^struct stest$/;"	s	file:
+str	practice/file/rfromf.c	/^  char str[15];$/;"	m	struct:readFF	file:
+str1	practice/cpp/test_cpp2.cpp	/^		string str1;$/;"	m	class:tmp::clas	file:
+str_reverse	string/practice/str_reverse.c	/^char *str_reverse(char *str)$/;"	f
+strupr	string/my_strcpy.c	/^char *strupr(char *str)$/;"	f
+swap_num	function/fun_t_1.c	/^void swap_num(int x,int y)$/;"	f
+test	practice/cpp/test_cpp.cpp	/^	class test{$/;"	c	namespace:tests	file:
+test_fun	function/fun_point.c	/^void test_fun(void)$/;"	f
+test_fun3	function/fun_point.c	/^int test_fun3(int a)$/;"	f
+test_fun_2	function/fun_point.c	/^void test_fun_2(int (*test_fun3)(int),int a)$/;"	f
+tests	practice/cpp/test_cpp.cpp	/^namespace tests{$/;"	n	file:
+title	practice/book/book.c	/^	char *title;$/;"	m	struct:Book	file:
+tmp	pra2_9/tmp.c	/^void tmp(char *dest_str,char *str)$/;"	f
+tmp	practice/cpp/animal.h	/^namespace tmp{$/;"	n
+tmp	practice/cpp/test_cpp2.cpp	/^namespace tmp$/;"	n	file:
+tmp	practice/cpp/test_cpp4.cpp	/^namespace tmp{$/;"	n	file:
+toDec	ctr_struct/main_1.c	/^int toDec(char *p)$/;"	f
+type	practice/cpp/animal.h	/^		int type;$/;"	m	class:tmp::Animal
+type	practice/cpp/test_cpp4.cpp	/^		int type;$/;"	m	class:tmp::Animal	file:
+type	practice/list/main.c	/^	int type;$/;"	m	struct:Dog	file:
+type	practice/string/dog.cpp	/^	int type;$/;"	m	struct:Dog	file:
+union_leng	union_enum/union_2.c	/^union union_leng$/;"	u	file:
+union_length	union_enum/union_2.c	/^}union_length;$/;"	v	typeref:union:union_leng
+white	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+write_file	practice/file/file_write.c	/^void write_file(char *path)$/;"	f
+x	practice/cpp/test_cpp2.cpp	/^		int x;$/;"	m	class:tmp::clas	file:
+yellow	union_enum/enum_test.c	/^	black=30,red,blue,yellow,green,pink,cyan,white$/;"	e	enum:COLOR	file:
+~Dog	practice/cpp/dog.cxx	/^	~Dog(){}$/;"	f	class:Dog
+~Dog	practice/cpp/test_cpp4.cpp	/^		~Dog(){}$/;"	f	class:tmp::Dog

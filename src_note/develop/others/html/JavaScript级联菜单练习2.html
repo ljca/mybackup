@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JavaScript级联菜单练习2</title>
+
+</head>
+
+<body>
+<form action="" method="post">
+<p>
+<select id="selectprice" onchange="javascript:changeEx()">
+<option>--请选择省--</option>
+</select>
+<select id="selectcity">
+<option>--请选择市--</option>
+</select>
+</p>
+</form>
+<script type="text/javascript">
+<!-- 
+var cityList = new Array();
+cityList['四川省']=['成都市','资阳市','攀枝花市','达州市','泸州市','','','','',''];
+cityList['福建省']=['福州市','福清市','厦门市','三明市','沙县'];
+cityList['其它']=['其它'];
+
+function changeEx(){
+  var price=document.getElementById("selectprice").value;
+  var city=document.getElementById("selectcity");
+	city.options.length=0;
+	for(var i in cityList){
+		if(i==price){
+			for(var j in cityList[i]){
+			  city.add(new Option(cityList[i][j],cityList[i][j],null));
+			}
+		}
+	}
+}
+
+function addAll(){
+	var price=document.getElementById("selectprice");
+  for(var i in cityList){
+	  price.add(new Option(i,i),null);
+  }
+}
+window.onload=addAll();
+-->
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+ XSLT     depmod.d.5
+ /bin/sh: --nonet: command not found
+ Makefile:594: recipe for target 'depmod.d.5' failed
+ make[2]: *** [depmod.d.5] Error 127
+ Makefile:1919: recipe for target 'all-recursive' failed
+ make[1]: *** [all-recursive] Error 1
+ Makefile:1071: recipe for target 'all' failed
+ make: *** [all] Error 2
+

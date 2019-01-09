@@ -1,0 +1,9 @@
+[    3.425000] [ 6 ] Memory Type Undertermined.
+[    3.460000] Waiting for root device /dev/mmcblock0p1...
+[    3.460000] Failed to init busfreq.
+[    3.215000]  mmcblk0: p1 p2 p3 p4
+[    3.215000]  mmcblk0boot1: unknown partition table
+[    3.215000]  mmcblk0boot0: unknown partition table
+No Linux ARM Ramdisk Image
+[err] boot_get_ramdisk
+[    0.215000] Failed to declare coherent memory for MFC device (0 bytes at 0x43000000)

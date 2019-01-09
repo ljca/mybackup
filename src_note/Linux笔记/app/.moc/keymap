@@ -1,0 +1,6 @@
+menu_up			= k UP
+menu_down		= j DOWN
+menu_page_up			= ^b PAGE_UP
+menu_page_down		= ^d PAGE_DOWN
+menu_first_item		= M-b HOME
+menu_last_item		= M-d END 

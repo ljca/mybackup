@@ -1,0 +1,34 @@
+#  _______________________________________________________________
+# (   _________________________   ________________________________)
+#  ) (__  _  _  _    _  .      ) (  __ __  ____       .  ____* ___
+# (   __)( \/ )( \/\/ )/\/\ * (   )(  )  )(  __)* /\/\  (  __)/ __)
+#  ) ( .  \  /* \    //    \ . ) (  ) _ ( *) _). /    \* ) _).\__ \
+# (___)  * \/  . \/\/(_/\/\_) (___)(__(__)(____)(_/\/\_)(____)(___/
+#
+SetEnv fvwm_root $[HOME]/.fvwm
+
+SetEnv fvwm_image_path $[fvwm_root]/images/
+ImagePath +:/home/user/Ljca/.fvwm/images/icons/
+ImagePath +:/home/user/Ljca/.fvwm/images/pixmaps/
+ImagePath +:/home/user/Ljca/.fvwm/images/pixmaps/fvwm/
+
+SetEnv fvwm_wallpaper_dir $[fvwm_image_path]/wallpaper
+SetEnv fvwm_wallpaper $[fvwm_wallpaper_dir]/test.jpg
+
+
+DestroyMenu StartFunction 
+AddToFunc StartFunction
++ I Module FvwmButtons
++ I Module FvwmTaskBar
++ I Module FvwmAuto 500 Raise Nop
++ I Module FvwmAnimate
++ I Module FvwmEvent
+
+DestroyFunc  InitFunction
+AddToFunc InitFunction
++ I Exec exec xloadimage -onroot -fullscreen $[fvwm_wallpaper_dir]
++ I Exec exec xscreensaver -no-splash 
+
+AddToFunc ExitFunction
++ I All (xscreensaver) Close
+

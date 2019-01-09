@@ -1,0 +1,410 @@
+ cd  /home/tmp/sh/
+ vim ~/.bashrc
+#1477684460
+ cd /home/tmp/sh/
+#1477684467
+ source profile.sh 
+ su lfs
+#1478254221
+echo -en "\e]P7ffffff"
+#1478261838
+tar -xf libnl-3.2.25.tar.gz 
+#1478261849
+cd libnl-3.2.25
+#1478261901
+tar -xf check-0.9.14.tar.gz 
+#1478261838
+tar -xf libnl-3.2.25.tar.gz 
+#1478261901
+tar -xf check-0.9.14.tar.gz 
+#1478262202
+echo -en "\e]P7ffffff"
+#1478262236
+cd check-0.9.14
+#1478262258
+./configure --prefix=/usr --disable-static
+#1478262333
+sudo make docdir=/usr/share/doc/check-0.9.14 install 
+#1478262460
+cd libnl-3.2.25
+#1478262508
+./configure --prefix=/usr --sysconfdir=/etc --disable-static 
+#1478262574
+sudo make install 
+#1478263380
+tar -xf wireless_tools.29.tar.gz 
+#1478263389
+cd wireless_tools.29
+#1478263519
+make 
+#1478263578
+sudo make PREFIX=/usr INSTALL_MAN=/usr/share/man install 
+#1478264248
+
+#1478264605
+echo -en "\e]P7ffffff"
+#1478264632
+tar -xf /media/Others/Temp/lfs_sr/lfs-package/sources/Python-2.7.11.tar.xz -C .
+#1478264643
+cd Python-2.7.11/
+#1478264753
+./configure --prefix=/usr --enable-shared --with-system-expat --with-system-ffi --enable-unicode=ucs4 
+#1478264807
+make 
+#1478265176
+sudo make install 
+#1478265460
+sudo chmod -v 755 /usr/lib/libpython2.7.so.1.0 
+#1478256785
+tar -xf pciutils-3.3.0.tar.xz 
+#1478256788
+cd pciutils-3.3.0
+#1478256929
+make PREFIX=/usr SHAREDIR=/usr/share/misc SHARED=yes
+#1478256960
+sudo make PREFIX=/usr SHAREDIR=/usr/share/misc SHARED=yes install install-lib
+#1478256995
+sudo chmod -v 755 /usr/lib/libpci.so
+#1478262902
+make modules_install 
+#1478262911
+sudo make modules_install 
+#1478263054
+sudo cp -Libv arch/x86_64/boot/bzImage /boot/vmlinuz-3.19-lfs-7.7-systemd 
+#1478263086
+sudo cp -ibLv System.map /boot/
+#1478263096
+sudo cp -ibLv System.map /boot/System.map-3.29 
+#1478263153
+sudo cp -ibv .config /boot/config-`date +%F`
+#1478264862
+sudo make firmware_install 
+#1478363494
+make install 
+#1478363540
+sudo make install 
+#1478363623
+tar -xf iproute2-3.17.0.tar.xz 
+#1478363631
+cd iproute2-3.17.0
+#1478363694
+./configure --prefix=/usr 
+#1478363878
+tar -xf mkinitrd-3.5.7.tar.bz2 
+#1478363881
+cd mkinitrd-3.5.7
+#1478363906
+make 
+#1478413850
+echo -en "\e]P7ffffff"
+#1478451354
+make modules_install 
+#1478451389
+sudo make firmware_install 
+#1478452000
+echo -en "\e]P7ffffff"
+#1478452150
+sudo make 
+#1478453328
+make 
+#1478533336
+echo -en "\e]P7ffffff"
+#1478533648
+tar -xf libxml2-2.9.2.tar.gz 
+#1478533655
+cd libxml2-2.9.2
+#1478533859
+sed -e /xmlInitializeCatalog/d -e 's/((ent->checked =.&&/(((ent->checked == 0) ||\
+((ent->chidren == NULL) \&\& (ctxt->options \& XML_PARSE_NOENT))) \&\&/' -i parser.c 
+#1478534108
+./configure --prefix=/usr --disable-static --with-history
+#1478534123
+make 
+#1478534535
+tar -xf wpa_supplicant-2.3.tar.gz 
+#1478534537
+cd wpa_supplicant-2.3
+#1478534569
+cat > wpa_supplicant/.config << "EOF"
+CONFIG_BACKEND=file
+CONFIG_CTRL_IFACE=y
+CONFIG_DEBUG_FILE=y
+CONFIG_DEBUG_SYSLOG=y
+CONFIG_DEBUG_SYSLOG_FACILITY_LOG_DAEMON
+CONFIG_DRIVER_NL80211=y
+CONFIG_DRIVER_WEXT=y
+CONFIG_DRIVER_WIRED=y
+CONFIG_EAP_GTC=y
+CONFIG_EAP_LEAP=y
+CONFIG_EAP_MD5=y
+CONFIG_EAP_MSCHAPV2=y
+CONFIG_EAP_OTP=y
+CONFIG_EAP_PEAP=y
+CONFIG_EAP_TLS=y
+CONFIG_EAP_TTLS=y
+CONFIG_IEEE8021X_EAPOL=y
+CONFIG_IPV6=y
+config_libnl32=y
+CONFIG_PEERKEY=y
+CONFIG_PKCS12=y
+CONFIG_READLINE=y
+CONFIG_SMARTCARD=y
+CONFIG_WPS=y
+CFLAGS += -I/usr/include/libnl3
+EOF
+
+#1478535179
+make BINDIR=/sbin LIBDIR=/lib
+#1478535335
+sudo install -v -m755 wpa_{cli,passphrase,supplicant} /sbin
+#1478535397
+sudo install -v -m644 doc/docbook/wpa_supplicant.conf.5 /usr/share/man/man5
+#1478535435
+sudo install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 /usr/share/man/man8
+#1478536818
+df 
+#1478537260
+fbterm 
+#1478537284
+echo -en "\e]P7ffffff"
+#1478537287
+df 
+#1478603735
+echo -en "\e]P7ffffff"
+#1478606403
+cat >> /etc/fuse.conf << "EOF"
+mount_max=1000
+user_allow_other
+EOF
+
+#1478615135
+cat >> lid << "EOF"
+event=button/lid
+action=/etc/acpi/lid.sh
+EOF
+
+#1478615203
+cat >> /etc/acpi/lid.sh
+#1478615212
+cat >> /etc/acpi/lid.sh << "EOF"
+#!/bin/bash 
+/bin/grep -q open /proc/acpi/button/lid/LID/state  && exit 0
+/usr/sbin/pm-suspend
+EOF
+
+#1478615354
+chmod +x ../lid.sh 
+#1478605158
+CONFIG_DRIVER_WIRED=y
+#1478605158
+CONFIG_EAP_GTC=y
+#1478605158
+CONFIG_EAP_LEAP=y
+#1478605158
+CONFIG_EAP_MD5=y
+#1478605158
+CONFIG_EAP_MSCHAPV2=y
+#1478605158
+CONFIG_EAP_OTP=y
+#1478605158
+CONFIG_EAP_PEAP=y
+#1478605158
+CONFIG_EAP_TLS=y
+#1478605158
+CONFIG_EAP_TTLS=y
+#1478605158
+CONFIG_IEEE8021X_EAPOL=y
+#1478605158
+CONFIG_IPV6=y
+#1478605158
+config_libnl32=y
+#1478605158
+CONFIG_PEERKEY=y
+#1478605158
+CONFIG_PKCS12=y
+#1478605158
+CONFIG_READLINE=y
+#1478605158
+CONFIG_SMARTCARD=y
+#1478605158
+CONFIG_WPS=y
+#1478605158
+CFLAGS += -I/usr/include/libnl3
+#1478605158
+EOF
+#1478535179
+make BINDIR=/sbin LIBDIR=/lib
+#1478535335
+sudo install -v -m755 wpa_{cli,passphrase,supplicant} /sbin
+#1478535397
+sudo install -v -m644 doc/docbook/wpa_supplicant.conf.5 /usr/share/man/man5
+#1478535435
+sudo install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 /usr/share/man/man8
+#1478536818
+df 
+#1478537260
+fbterm 
+#1478537284
+echo -en "\e]P7ffffff"
+#1478537287
+df 
+#1478603735
+echo -en "\e]P7ffffff"
+#1478605542
+tar -xf fuse-2.9.3.tar.gz 
+#1478605544
+cd fuse-2.9.3
+#1478605666
+./configure --prefix=/usr --disable-static INIT_D_PATH=/tmp/init.d 
+#1478606031
+sudo mv -iv /usr/lib/libfuse.so.* /lib
+#1478606119
+sudo ln -sfv ../../lib/libfuse.so.2.9.3 /usr/lib/libfuse.so 
+#1478606149
+sudo rm -rf /tmp/init.d
+#1478606181
+sudo install -m755 -dv /usr/share/doc/fuse-2.9.3 
+#1478606259
+sudo install -v -m644 doc/{how-fuse-works,kernel.txt} /usr/share/doc/fuse-2.9.3
+#1478606289
+sudo install -m755 -dv /usr/share/doc/fuse-2.9.3/api 
+#1478606617
+tar -xf ntfs-3g_ntfsprogs-2014.2.15.tgz 
+#1478606624
+cd ntfs-3g_ntfsprogs-2014.2.15
+#1478606662
+./configure --prefix=/usr --disable-static
+#1478606709
+mkae distclean
+#1478606717
+make clean
+#1478606721
+make distclean
+#1478606749
+./configure --prefix=/usr --disable-static --with-fuse=external
+#1478606901
+sudo ln -sv ../bin/ntfs-3g /sbin/mount.ntfs
+#1478606926
+sudo chmod 4755 /sbin/mount.ntfs
+#1478608152
+sudo ln -sv /usr/share/man/man8/{ntfs-3g,mount.ntfs}.8
+#1478608637
+tar -xf cpio-2.11.tar.bz2 
+#1478608639
+cd cpio-2.11
+#1478608699
+sed -i -e '/gets is a/d' gnu/stdio.in.h 
+#1478608777
+./configure --prefix=/usr --bindir=/bin --enable-mt --with-rmt=/usr/libexec/rmt 
+#1478608913
+makeinfo --html -o doc/html  doc/cpio.texi 
+#1478608979
+makeinfo --html --no-split -o doc/cpio.html doc/cpio.texi 
+#1478609021
+makeinfo  --plaintext -o doc/cpio.txt doc/cpio.texi 
+#1478609074
+sudo install -dv -m755 /usr/share/doc/cpio-2.11/html
+#1478609111
+sudo install -v -m644 doc/html/* /usr/share/doc/cpio-2.11/html
+#1478609164
+sudo install -v -m644 doc/cpio.{html,txt} /usr/share/doc/cpio-2.11
+#1478610304
+tar -xf pcre-8.36.tar.bz2 
+#1478610307
+cd pcre-8.36
+#1478610327
+./configure --prefix=/usr --docdir=/usr/share/doc/pcre-8.36 --enable-pcre16 --enable-pcre32 --enable-unicode-properties --enable-pcregrep-libz --enable-pcregrep-libbz2 --enable-pcretest-libreadline  --disable-static 
+#1478610771
+sudo mv -iv /usr/lib/libpcre.so.* /lib
+#1478611012
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
+#1478611088
+tar -xf glib-2.42.1.tar.xz 
+#1478611153
+./configure --prefix=/usr --sysconfdir=/etc --enable-charset
+#1478611185
+cd glib-2.42.1
+#1478611230
+./configure --prefix=/usr --with-pcre=system
+#1478611655
+tar -xf slang-2.2.4.tar.bz2 
+#1478611657
+cd slang-2.2.4
+#1478611735
+./configure --prefix=/usr --sysconfdir=/etc --with-readline=gnu
+#1478611776
+make -j1
+#1478611900
+sudo make install_doc_dir=/usr/share/doc/slang-2.2.4 SLSH_DOC_DIR=/usr/share/doc/slang-2.2.4/slsh install-all 
+#1478612247
+sudo chmod -v 755 /usr/lib/libslang.so.2.2.4 /usr/lib/slang/v2/modules/*.so
+#1478612298
+cd mc-4.8.13
+#1478612314
+sudo ./configure --prefix=/usr --sysconfdir=/etc --enable-charset
+#1478612379
+sudo make 
+#1478612516
+sudo cp -v doc/keybind-migration.txt /usr/share/mc
+#1478613587
+tar -xf initd-tools-0.1.3.tar.gz 
+#1478613589
+cd initd-tools-0.1.3
+#1478613611
+./configure --prefix=/usr 
+#1478613686
+tar -xf hdparm-9.45.tar.gz 
+#1478613688
+cd hdparm-9.45
+#1478613803
+tar -xf p7zip_9.38_src_all.tar.bz2 
+#1478613809
+cd p7zip_9.38
+#1478613872
+sed -i -e 's/chmod 555/chmod 755/' -e 's/chmod 444/chmod 644/' install.sh 
+#1478613878
+make all3
+#1478614184
+sudo make DEST_HOME=/usr DEST_MAN=/usr/share/man DEST_SHARE_DOC=/usr/share/doc/p7zip-9.38 install 
+#1478614529
+tar -xf xmlto-0.0.26.tar.bz2 
+#1478614531
+cd xmlto-0.0.26
+#1478614646
+tar -xf pm-utils-1.4.1.tar.gz 
+#1478614648
+cd pm-utils-1.4.1
+#1478614651
+./configure --prefix=/usr --sysconfdir=/etc --docdir=/usr/share/doc/pm-utils-1.4.1 
+#1478614702
+sudo install -v -m644 man/*.1 /usr/share/man/man1
+#1478614709
+sudo install -v -m644 man/*.8 /usr/share/man/man8
+#1478614798
+sudo ln -sv pm.action.8 /usr/share/man/man8/pm-suspend.8
+#1478614820
+sudo ln -sv pm.action.8 /usr/share/man/man8/pm-hibernate.8 
+#1478614851
+sudo ln -sv pm.action.8 /usr/share/man/man8/pm-suspend-hybrid.8
+#1478614899
+tar -xf acpid-2.0.23.tar.xz 
+#1478614903
+cd acpid-2.0.23
+#1478614936
+./configure --prefix=/usr --docdir=/usr/share/doc/acpid-2.0.23
+#1478615019
+install -dv -m755 /etc/acpi/events
+#1478615024
+sudo install -dv -m755 /etc/acpi/events
+#1478615048
+sudo cp -rv samples /usr/share/doc/acpid-2.0.23
+#1478615550
+tar -xf dhcpcd-6.7.1.tar.bz2 
+#1478615555
+cd dhcpcd-6.7.1
+#1478615677
+./configure --libexecdir=/lib/dhcpcd --dbdir=/var/tmp
+#1478615699
+make 
+#1478615776
+sudo make install 

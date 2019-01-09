@@ -1,0 +1,36 @@
+/* CSS DOCUMENT */
+
+/*∂Œ¬‰≈≈∞Ê*/
+.div{
+	background:white;width:1000px;
+	height:50px;
+	text-indent:2em;overflow:auto;
+	}
+	
+	/* ¡¥Ω”≈≈∞Ê */
+a:link{
+	text-decoration:none;font-size:18px;
+	text-align:center;
+	}
+	
+a:hover{
+font-size:25px;text-decoration:none;
+color:red;
+}
+
+a:active:{
+font-size:30px;text-decoration:none;
+}
+
+.list{
+	
+list-style:none;
+}
+.list li{
+float:left;line-height:25px;
+}
+
+
+
+
+

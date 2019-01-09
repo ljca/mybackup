@@ -1,0 +1,66 @@
+
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+#menuentry "Microsoft Windows BootMgr"
+#	echo "Loadding Microsoft Windows BootMgr...."
+#	insmod part_gpt
+#	insmod fat
+#	#insmod search_fs_uuid
+#	insmod chain
+#	search --no-floppy --set=root --hint-bios=hd0,gpt1  --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1 --label ESP
+#	#search --set=root --no-floppy --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1 --fs-uuid 0000-4823
+#	chainloader /EFI/Microsoft/Boot/bootmgfw.efi;
+
+submenu 'Linux Live' {
+  set partition="6"
+	menuentry 'Arch_201701' --class iso { 
+		set iso='/external/iso/archlinux-2017.06.01-x86_64.iso'
+		loopback loop (hd0,$partition)$iso
+		linux (loop)/arch/boot/x86_64/vmlinuz archisolabel=ARCH_201706 img_dev=/dev/sda$partition img_loop=$iso earlymodules=loop
+		initrd (loop)/arch/boot/x86_64/archiso.img
+	}
+  menuentry 'UbuntuKlyin 15.04 Dekstop' {
+		set iso='/external/iso/ubuntukylin-15.04-desktop-amd64.iso'
+		loopback loop (hd0,$partition)$iso
+		linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=$iso noquiet noject splash --
+		initrd (loop)/casper/initrd.lz
+	}
+  menuentry 'XUbuntu 16.04.2 dekstop amd64' {
+		set iso='/external/iso/xubuntu-16.04.2-desktop-amd64.iso'
+		loopback loop (hd0,$partition)$iso
+		linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=$iso noquiet noject splash --
+		initrd (loop)/casper/initrd.lz
+	}
+	#menuentry 'Fedora 23 Workstation' {
+	#	insmod iso9660 
+	#	insmod loopback
+	#	set iso='/tmp/iso/Fedora-Live-Workstation-x86_64-23-10.iso'
+	#	loopback loop (hd0,$partition)$iso
+	#	linux (loop)/isolinux/vmlinuz0  iso-scan/filename=$iso rootfstype=auto root=live:CDLABEL=Fedora-Live-WS-x86_64-23-10 ro rd.live.image noquiet norhgb rd.luks=0 rd.md=0 rd.dm=0
+	#	initrd (loop)/isolinux/initrd0.img
+	#	}
+	#menuentry  'Fedora 24 Workstation'{
+	#	insmod iso9660 
+	#	insmod loopback
+	#	set iso='/tmp/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso'
+	#	#search -no-floppy --label --set=root 
+	#	loopback loop (hd0,$partition)$iso
+	#	linux (loop)/isolinux/vmlinuz  iso-scan/filename=$iso root=live:CDLABEL=Fedora-WS-Live-24-1-2 rootfstype=auto  ro rd.live.image noquiet norhgb rd.luks=0 rd.md=0 rd.dm=0
+	#	initrd (loop)/isolinux/initrd.img
+	#	}
+	menuentry 'Fedora 23 Workstatic_Xfce' {
+		insmod iso9660 
+		insmod loopback
+		set iso='/external/iso/Fedora-Live-Xfce-x86_64-23-10.iso'
+		#search -no-floppy --label --set=root 
+		loopback loop (hd0,$partition)$iso
+		linux (loop)/isolinux/vmlinuz0  iso-scan/filename=$iso rootfstype=auto root=live:CDLABEL=Fedora-Live-Xfce-x86_64-23-10 ro rd.live.image noquiet norhgb rd.luks=0 rd.md=0 rd.dm=0
+		initrd (loop)/isolinux/initrd0.img
+	}
+}
+
+# vim:set ft=cfg:
+

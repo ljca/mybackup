@@ -1,0 +1,10 @@
+gcc -shared -Wl,-soname,libreadline.so.6.3 -Wl,-rpath,/usr/lib -Wl,-soname,`basename libreadline.so.6.3 .3` -o libreadline.so.6.3 readline.so vi_mode.so funmap.so keymaps.so parens.so search.so rltty.so complete.so bind.so isearch.so display.so signals.so util.so kill.so undo.so macro.so input.so callback.so terminal.so text.so nls.so misc.so history.so histexpand.so histfile.so histsearch.so shell.so mbutil.so tilde.so colors.so parse-colors.so xmalloc.so xfree.so compat.so -lncurses
+/usr/bin/ld: /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/../../../../lib64/libncurses.a(lib_termcap.o): relocation R_X86_64_32 against `_nc_globals' can not be used when making a shared object; recompile with -fPIC
+/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/../../../../lib64/libncurses.a: error adding symbols: Bad value
+collect2: error: ld returned 1 exit status
+Makefile:176: recipe for target 'libreadline.so.6.3' failed
+make[1]: *** [libreadline.so.6.3] Error 1
+make[1]: Leaving directory '/src/readline-6.3/shlib'
+Makefile:211: recipe for target 'shared' failed
+make: *** [shared] Error 2
+

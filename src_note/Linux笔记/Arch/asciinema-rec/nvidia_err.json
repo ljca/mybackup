@@ -1,0 +1,2266 @@
+{
+  "version": 1,
+  "width": 159,
+  "height": 27,
+  "duration": 43.142493,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.044372,
+      "\u001b[1;33mDid you know that？\u001b[0m"
+    ],
+    [
+      0.069833,
+      "\u001b[38;5;199m \u001b[0m"
+    ],
+    [
+      6.2e-05,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      0.000113,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      0.0001,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      7.5e-05,
+      "\u001b[38;5;199m_\u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;163m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;163m_\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      7.8e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      9.2e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      8e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;164m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;128m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;128m_\u001b[0m"
+    ],
+    [
+      8.3e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      2.8e-05,
+      "\r\n"
+    ],
+    [
+      0.000132,
+      "\u001b[38;5;199m/\u001b[0m"
+    ],
+    [
+      9e-05,
+      "\u001b[38;5;199m \u001b[0m"
+    ],
+    [
+      8.3e-05,
+      "\u001b[38;5;199ma\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;199ml\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;199mr\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;163me\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;163mc\u001b[0m"
+    ],
+    [
+      7.8e-05,
+      "\u001b[38;5;164mo\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;164mr\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164md\u001b[0m"
+    ],
+    [
+      5.6e-05,
+      "\u001b[38;5;164m：\u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;164m没\u001b[0m"
+    ],
+    [
+      7e-05,
+      "\u001b[38;5;164m有\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      5.7e-05,
+      "\u001b[38;5;164m\\\u001b[0m\r\n"
+    ],
+    [
+      8.7e-05,
+      "\u001b[38;5;199m\\\u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;199m \u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;163ma\u001b[0m"
+    ],
+    [
+      5.9e-05,
+      "\u001b[38;5;163mp\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;164mp\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164mr\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164mo\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;164mp\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164mr\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164mi\u001b[0m"
+    ],
+    [
+      7.8e-05,
+      "\u001b[38;5;164ma\u001b[0m"
+    ],
+    [
+      5.3e-05,
+      "\u001b[38;5;164mt\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;164me\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;164m。\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;128m \u001b[0m"
+    ],
+    [
+      5.9e-05,
+      "\u001b[38;5;128m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5.5e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5.5e-05,
+      "\u001b[38;5;129m/\u001b[0m\r\n"
+    ],
+    [
+      0.000113,
+      "\u001b[38;5;163m \u001b[0m"
+    ],
+    [
+      8.8e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      7.8e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      7.2e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      7e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      8.2e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;164m-\u001b[0m"
+    ],
+    [
+      8.1e-05,
+      "\u001b[38;5;128m-\u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;128m-\u001b[0m"
+    ],
+    [
+      7.6e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.5e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.5e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.3e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      9.7e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.7e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      6.7e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.3e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.7e-05,
+      "\u001b[38;5;129m-\u001b[0m"
+    ],
+    [
+      7.9e-05,
+      "\u001b[38;5;93m-\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;93m-\u001b[0m"
+    ],
+    [
+      8e-05,
+      "\u001b[38;5;93m-\u001b[0m"
+    ],
+    [
+      7.4e-05,
+      "\u001b[38;5;93m-\u001b[0m"
+    ],
+    [
+      7.4e-05,
+      "\u001b[38;5;93m-\u001b[0m"
+    ],
+    [
+      7.5e-05,
+      "\u001b[38;5;93m \u001b[0m\r\n"
+    ],
+    [
+      0.000116,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      6.6e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      6.6e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      8.8e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      7.3e-05,
+      "\u001b[38;5;164m\\\u001b[0m\r\n"
+    ],
+    [
+      0.000109,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      6.6e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      8e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      7.3e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;128m\\\u001b[0m\r\n"
+    ],
+    [
+      0.0001,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      8.2e-05,
+      "\u001b[38;5;164m \u001b[0m"
+    ],
+    [
+      0.000123,
+      "\u001b[38;5;128m \u001b[0m"
+    ],
+    [
+      7.1e-05,
+      "\u001b[38;5;128m \u001b[0m"
+    ],
+    [
+      9.1e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      6.5e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      6.7e-05,
+      "\u001b[38;5;129m\\\u001b[0m\r\n"
+    ],
+    [
+      0.000108,
+      "\u001b[38;5;128m \u001b[0m"
+    ],
+    [
+      8.8e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      6.3e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;129m_\u001b[0m"
+    ],
+    [
+      0.000535,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      7.2e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      0.000108,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5.6e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      7.5e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      9.3e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      7.4e-05,
+      "\u001b[38;5;93m_\u001b[0m"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;93m_\u001b[0m"
+    ],
+    [
+      6.1e-05,
+      "\u001b[38;5;93m_\u001b[0m"
+    ],
+    [
+      8.6e-05,
+      "\u001b[38;5;93m_\u001b[0m"
+    ],
+    [
+      5.9e-05,
+      "\u001b[38;5;93m_\u001b[0m"
+    ],
+    [
+      5.9e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.4e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      8.5e-05,
+      "\u001b[38;5;99m \u001b[0m"
+    ],
+    [
+      6.1e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      6.1e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      9.3e-05,
+      "\u001b[38;5;63m_\u001b[0m\r\n"
+    ],
+    [
+      9.9e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      7.7e-05,
+      "\u001b[38;5;129m/\u001b[0m"
+    ],
+    [
+      2.9e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5.3e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;129m\\\u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      4.3e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.1e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.2e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      7.2e-05,
+      "\u001b[38;5;93m/\u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.1e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      8e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      0.000102,
+      "\u001b[38;5;99m/\u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      8.9e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.4e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      0.00022,
+      "\u001b[38;5;63m \u001b[0m\u001b[38;5;63m/\u001b[0m\u001b[38;5;63m \u001b[0m\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      8.1e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3e-05,
+      "\u001b[38;5;63m\\\u001b[0m\r\n"
+    ],
+    [
+      0.000105,
+      "\u001b[38;5;129m|\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5.5e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;129m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;93m|\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.3e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      7.7e-05,
+      "\u001b[38;5;93m/\u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.5e-05,
+      "\u001b[38;5;99m \u001b[0m"
+    ],
+    [
+      5.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;63m/\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      5.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;69m \u001b[0m"
+    ],
+    [
+      6.4e-05,
+      "\u001b[38;5;33m|\u001b[0m\r\n"
+    ],
+    [
+      8.7e-05,
+      "\u001b[38;5;129m|\u001b[0m"
+    ],
+    [
+      5.5e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.3e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.5e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;93m|\u001b[0m"
+    ],
+    [
+      5e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.3e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;93m/\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;99m_\u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      6.4e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;63m/\u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      5.7e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;69m \u001b[0m"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      6.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      5.2e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      6.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;33m \u001b[0m\r\n"
+    ],
+    [
+      7.6e-05,
+      "\u001b[38;5;93m|\u001b[0m"
+    ],
+    [
+      7.2e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;93m|\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;99m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6.5e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.8e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      6.9e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.3e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;69m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      4.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.4e-05,
+      "\u001b[38;5;33m|\u001b[0m\r\n"
+    ],
+    [
+      5.3e-05,
+      "\u001b[38;5;93m|\u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;93m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;99m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;63m{\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m}\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;69m/\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.7e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m|\u001b[0m\r\n"
+    ],
+    [
+      6.3e-05,
+      "\u001b[38;5;93m|\u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;99m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      4.2e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      3e-05,
+      "\u001b[38;5;63m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;69m_\u001b[0m"
+    ],
+    [
+      4.3e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m/\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m|\u001b[0m"
+    ],
+    [
+      1.2e-05,
+      "\r\n"
+    ],
+    [
+      5.7e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.7e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.6e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.7e-05,
+      "\u001b[38;5;69m \u001b[0m"
+    ],
+    [
+      3.8e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      3.7e-05,
+      "\u001b[38;5;33m=\u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;33m=\u001b[0m"
+    ],
+    [
+      3.8e-05,
+      "\u001b[38;5;33m|\u001b[0m"
+    ],
+    [
+      3.4e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.5e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.7e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.6e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.6e-05,
+      "\u001b[38;5;39m|\u001b[0m"
+    ],
+    [
+      3.7e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      5.8e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      2.6e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.9e-05,
+      "\u001b[38;5;39m|\u001b[0m\r\n"
+    ],
+    [
+      6e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.5e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      4.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;69m\\\u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;33m_\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;39m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m_\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m/\u001b[0m"
+    ],
+    [
+      3.6e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      4.7e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.4e-05,
+      "\u001b[38;5;38m|\u001b[0m\r\n"
+    ],
+    [
+      5.3e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      0.000189,
+      "\u001b[38;5;63m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;69m \u001b[0m"
+    ],
+    [
+      3.5e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      5.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      4.3e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      4.9e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.4e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;38m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;38m \u001b[0m"
+    ],
+    [
+      3.5e-05,
+      "\u001b[38;5;44m \u001b[0m"
+    ],
+    [
+      4.1e-05,
+      "\u001b[38;5;44m|\u001b[0m\r\n"
+    ],
+    [
+      5.4e-05,
+      "\u001b[38;5;63m|\u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;69m \u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      3.1e-05,
+      "\u001b[38;5;33m \u001b[0m"
+    ],
+    [
+      4.1e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      4.5e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      4.4e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;39m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;38m \u001b[0m"
+    ],
+    [
+      4.2e-05,
+      "\u001b[38;5;38m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;44m \u001b[0m"
+    ],
+    [
+      3.3e-05,
+      "\u001b[38;5;44m \u001b[0m"
+    ],
+    [
+      3.2e-05,
+      "\u001b[38;5;44m \u001b[0m"
+    ],
+    [
+      4.6e-05,
+      "\u001b[38;5;44m \u001b[0m"
+    ],
+    [
+      0.000137,
+      "\u001b[38;5;44m|\u001b[0m\r\n"
+    ],
+    [
+      0.01464,
+      "\u001b]0;kyzs@my-arch:/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u0007"
+    ],
+    [
+      0.00158,
+      "\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m55\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mkyzs\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m"
+    ],
+    [
+      10.993158,
+      " "
+    ],
+    [
+      0.379268,
+      "s"
+    ],
+    [
+      0.13583,
+      "u"
+    ],
+    [
+      0.064068,
+      "d"
+    ],
+    [
+      0.076038,
+      "o"
+    ],
+    [
+      0.002504,
+      " "
+    ],
+    [
+      0.846548,
+      "m"
+    ],
+    [
+      0.101063,
+      "o"
+    ],
+    [
+      0.064617,
+      "d"
+    ],
+    [
+      0.435154,
+      "p"
+    ],
+    [
+      0.098356,
+      "r"
+    ],
+    [
+      0.13104,
+      "o"
+    ],
+    [
+      0.09478,
+      "be "
+    ],
+    [
+      0.628639,
+      "n"
+    ],
+    [
+      0.046176,
+      "v"
+    ],
+    [
+      0.135163,
+      "i"
+    ],
+    [
+      0.175389,
+      "d"
+    ],
+    [
+      0.164322,
+      "a"
+    ],
+    [
+      0.004696,
+      "i"
+    ],
+    [
+      0.672462,
+      "\b\u001b[K"
+    ],
+    [
+      0.169188,
+      "\b\u001b[K"
+    ],
+    [
+      0.263098,
+      "i"
+    ],
+    [
+      0.100965,
+      "a"
+    ],
+    [
+      0.364098,
+      "\r\n"
+    ],
+    [
+      0.014277,
+      "[sudo] kyzs 的密码："
+    ],
+    [
+      2.969264,
+      "\r\n"
+    ],
+    [
+      0.319469,
+      "modprobe: ERROR: could not insert 'nvidia': No such device\r\n"
+    ],
+    [
+      0.004381,
+      "\u001b]0;kyzs@my-arch:/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u0007"
+    ],
+    [
+      0.004088,
+      "\u001b[1;31m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m55\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m2\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mkyzs\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u001b[0m\r\r\n\u001b[1;31m:(\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m"
+    ],
+    [
+      3.573288,
+      " "
+    ],
+    [
+      0.216762,
+      "l"
+    ],
+    [
+      0.076735,
+      "s"
+    ],
+    [
+      0.343714,
+      "p"
+    ],
+    [
+      0.063136,
+      "c"
+    ],
+    [
+      0.142177,
+      "i"
+    ],
+    [
+      0.079151,
+      " "
+    ],
+    [
+      0.206228,
+      "-"
+    ],
+    [
+      0.257561,
+      "k"
+    ],
+    [
+      0.005603,
+      "v"
+    ],
+    [
+      1.836312,
+      "\r\n"
+    ],
+    [
+      0.161085,
+      "00:00.0 Host bridge: Intel Corporation Broadwell-U Host Bridge -OPI (rev 09)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      4.9e-05,
+      "\tFlags: bus master, fast devsel, latency 0\r\n\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      2.4e-05,
+      "\tKernel driver in use: bdw_uncore\r\n"
+    ],
+    [
+      0.000257,
+      "\r\n00:02.0 VGA compatible controller: Intel Corporation HD Graphics 5500 (rev 09) (prog-if 00 [VGA controller])\r\n\t"
+    ],
+    [
+      2.7e-05,
+      "Subsystem: Acer Incorporated [ALI] Device 0940\r\n\tFlags: bus master, fast devsel, latency 0, IRQ 51\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tMemory at c2000000 (64-bit, non-prefetchable) [size=16M]\r\n\tMemory at d0000000 (64-bit, prefetchable) [size=256M]\r\n\tI/O ports at 5000 [size=64]\r\n\t[virtual] Expansion ROM at 000c0000 [disabled] [size=128K]\r\n"
+    ],
+    [
+      2.8e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.4e-05,
+      "\tKernel driver in use: i915\r\n"
+    ],
+    [
+      3.4e-05,
+      "\tKernel modules: i915\r\n\r\n"
+    ],
+    [
+      1.7e-05,
+      "00:03.0 Audio device: Intel Corporation Broadwell-U Audio Controller (rev 09)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      1.4e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 53\r\n\tMemory at c4210000 (64-bit, non-prefetchable) [size=16K]\r\n"
+    ],
+    [
+      1.4e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.2e-05,
+      "\tKernel driver in use: snd_hda_intel\r\n"
+    ],
+    [
+      5.1e-05,
+      "\tKernel modules: snd_hda_intel\r\n\r\n00:14.0 USB controller: Intel Corporation Wildcat Point-LP USB xHCI Controller (rev 03) (prog-if 30 [XHCI])\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      2.9e-05,
+      "\tFlags: medium devsel, IRQ 47\r\n\tMemory at c4200000 (64-bit, non-prefetchable) [size=64K]\r\n"
+    ],
+    [
+      4.4e-05,
+      "\tCapabilities: <access denied>\r\n\tKernel driver in use: xhci_hcd\r\n"
+    ],
+    [
+      4e-05,
+      "\tKernel modules: xhci_pci\r\n\r\n00:16.0 Communication controller: Intel Corporation Wildcat Point-LP MEI Controller #1 (rev 03)\r\n"
+    ],
+    [
+      2.1e-05,
+      "\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      2e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 49\r\n\tMemory at c421a000 (64-bit, non-prefetchable) [size=32]\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tKernel driver in use: mei_me\r\n"
+    ],
+    [
+      3e-05,
+      "\tKernel modules: mei_me\r\n\r\n"
+    ],
+    [
+      1.8e-05,
+      "00:1b.0 Audio device: Intel Corporation Wildcat Point-LP High Definition Audio Controller (rev 03)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      2.7e-05,
+      "\tFlags: bus master, fast devsel, latency 64, IRQ 52\r\n\tMemory at c4214000 (64-bit, non-prefetchable) [size=16K]\r\n"
+    ],
+    [
+      2.6e-05,
+      "\tCapabilities: <access denied>\r\n\tKernel driver in use: snd_hda_intel\r\n"
+    ],
+    [
+      3.9e-05,
+      "\tKernel modules: snd_hda_intel\r\n\r\n"
+    ],
+    [
+      1.9e-05,
+      "00:1c.0 PCI bridge: Intel Corporation Wildcat Point-LP PCI Express Root Port #1 (rev e3) (prog-if 00 [Normal decode])\r\n"
+    ],
+    [
+      1.6e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 42\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tBus: primary=00, secondary=01, subordinate=01, sec-latency=0\r\n\tI/O behind bridge: 00002000-00002fff [size=4K]\r\n\tMemory behind bridge: a0100000-a02fffff [size=2M]\r\n\tPrefetchable memory behind bridge: 00000000a0300000-00000000a04fffff [size=2M]\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tKernel driver in use: pcieport\r\n"
+    ],
+    [
+      3.6e-05,
+      "\tKernel modules: shpchp\r\n\r\n"
+    ],
+    [
+      1.9e-05,
+      "00:1c.2 PCI bridge: Intel Corporation Wildcat Point-LP PCI Express Root Port #3 (rev e3) (prog-if 00 [Normal decode])\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 43\r\n\tBus: primary=00, secondary=02, subordinate=02, sec-latency=0\r\n"
+    ],
+    [
+      2e-05,
+      "\tI/O behind bridge: 00004000-00004fff [size=4K]\r\n\tMemory behind bridge: c4100000-c41fffff [size=1M]\r\n\tPrefetchable memory behind bridge: None\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tCapabilities: <access denied>\r\n\tKernel driver in use: pcieport\r\n"
+    ],
+    [
+      4.3e-05,
+      "\tKernel modules: shpchp\r\n\r\n00:1c.3 PCI bridge: Intel Corporation Wildcat Point-LP PCI Express Root Port #4 (rev e3) (prog-if 00 [Normal decode])\r\n"
+    ],
+    [
+      3.4e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 44\r\n\tBus: primary=00, secondary=03, subordinate=03, sec-latency=0\r\n\tI/O behind bridge: None\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tMemory behind bridge: c4000000-c40fffff [size=1M]\r\n\tPrefetchable memory behind bridge: None\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tCapabilities: <access denied>\r\n\tKernel driver in use: pcieport\r\n"
+    ],
+    [
+      4.4e-05,
+      "\tKernel modules: shpchp\r\n\r\n00:1c.4 PCI bridge: Intel Corporation Wildcat Point-LP PCI Express Root Port #5 (rev e3) (prog-if 00 [Normal decode])\r\n"
+    ],
+    [
+      3.2e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 45\r\n\tBus: primary=00, secondary=04, subordinate=04, sec-latency=0\r\n"
+    ],
+    [
+      2.8e-05,
+      "\tI/O behind bridge: 00003000-00003fff [size=4K]\r\n\tMemory behind bridge: c3000000-c3ffffff [size=16M]\r\n\tPrefetchable memory behind bridge: 00000000b0000000-00000000c1ffffff [size=288M]\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tKernel driver in use: pcieport\r\n"
+    ],
+    [
+      3.1e-05,
+      "\tKernel modules: shpchp\r\n\r\n"
+    ],
+    [
+      1.9e-05,
+      "00:1f.0 ISA bridge: Intel Corporation Wildcat Point-LP LPC Controller (rev 03)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tFlags: bus master, medium devsel, latency 0\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tKernel driver in use: lpc_ich\r\n"
+    ],
+    [
+      3.3e-05,
+      "\tKernel modules: lpc_ich\r\n\r\n"
+    ],
+    [
+      2.3e-05,
+      "00:1f.2 SATA controller: Intel Corporation Wildcat Point-LP SATA Controller [AHCI Mode] (rev 03) (prog-if 01 [AHCI 1.0])\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tFlags: bus master, 66MHz, medium devsel, latency 0, IRQ 48\r\n\tI/O ports at 5088 [size=8]\r\n\tI/O ports at 5094 [size=4]\r\n"
+    ],
+    [
+      1.6e-05,
+      "\tI/O ports at 5080 [size=8]\r\n\tI/O ports at 5090 [size=4]\r\n\tI/O ports at 5060 [size=32]\r\n\tMemory at c4218000 (32-bit, non-prefetchable) [size=2K]\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tKernel driver in use: ahci\r\n"
+    ],
+    [
+      3.6e-05,
+      "\tKernel modules: ahci\r\n\r\n00:1f.3 SMBus: Intel Corporation Wildcat Point-LP SMBus Controller (rev 03)\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tFlags: medium devsel, IRQ 18\r\n\tMemory at c4219000 (64-bit, non-prefetchable) [size=256]\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tI/O ports at 5040 [size=32]\r\n\tKernel driver in use: i801_smbus\r\n"
+    ],
+    [
+      3.9e-05,
+      "\tKernel modules: i2c_i801\r\n\r\n"
+    ],
+    [
+      2e-05,
+      "02:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTL8411B PCI Express Card Reader (rev 01)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      2.7e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 46\r\n\tMemory at c4105000 (32-bit, non-prefetchable) [size=4K]\r\n\tExpansion ROM at c4110000 [disabled] [size=64K]\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tKernel driver in use: rtsx_pci\r\n"
+    ],
+    [
+      4.3e-05,
+      "\tKernel modules: rtsx_pci\r\n\r\n"
+    ],
+    [
+      1.8e-05,
+      "02:00.1 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 12)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0940\r\n"
+    ],
+    [
+      2.5e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 50\r\n\tI/O ports at 4000 [size=256]\r\n\tMemory at c4104000 (64-bit, non-prefetchable) [size=4K]\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tMemory at c4100000 (64-bit, non-prefetchable) [size=16K]\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.7e-05,
+      "\tKernel driver in use: r8169\r\n"
+    ],
+    [
+      3.1e-05,
+      "\tKernel modules: r8169\r\n\r\n"
+    ],
+    [
+      1.8e-05,
+      "03:00.0 Network controller: Qualcomm Atheros AR9462 Wireless Network Adapter (rev 01)\r\n\tSubsystem: Foxconn International, Inc. Device e052\r\n"
+    ],
+    [
+      2.6e-05,
+      "\tFlags: bus master, fast devsel, latency 0, IRQ 19\r\n\tMemory at c4000000 (64-bit, non-prefetchable) [size=512K]\r\n\tExpansion ROM at c4080000 [disabled] [size=64K]\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      1.8e-05,
+      "\tKernel driver in use: ath9k\r\n"
+    ],
+    [
+      3.4e-05,
+      "\tKernel modules: ath9k\r\n\r\n"
+    ],
+    [
+      1.9e-05,
+      "04:00.0 3D controller: NVIDIA Corporation GM108M [GeForce 840M] (rev a2)\r\n\tSubsystem: Acer Incorporated [ALI] Device 0942\r\n"
+    ],
+    [
+      1.6e-05,
+      "\tFlags: fast devsel, IRQ 16\r\n"
+    ],
+    [
+      2.1e-05,
+      "\t[virtual] Memory at c3000000 (32-bit, non-prefetchable) [size=16M]\r\n\tMemory at b0000000 (64-bit, prefetchable) [size=256M]\r\n\tMemory at c0000000 (64-bit, prefetchable) [size=32M]\r\n\tI/O ports at 3000 [size=128]\r\n"
+    ],
+    [
+      1.9e-05,
+      "\tCapabilities: <access denied>\r\n"
+    ],
+    [
+      5.1e-05,
+      "\tKernel modules: nouveau, nvidia_drm, nvidia\r\n\r\n"
+    ],
+    [
+      0.000467,
+      "\u001b]0;kyzs@my-arch:/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u0007"
+    ],
+    [
+      0.001529,
+      "\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m55\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m3\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mkyzs\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m"
+    ],
+    [
+      0.648735,
+      " "
+    ],
+    [
+      2.943507,
+      "m"
+    ],
+    [
+      0.210246,
+      "d"
+    ],
+    [
+      0.42199,
+      "\b\u001b[K"
+    ],
+    [
+      0.674422,
+      "o"
+    ],
+    [
+      0.130736,
+      "d"
+    ],
+    [
+      0.170108,
+      "i"
+    ],
+    [
+      0.239117,
+      "n"
+    ],
+    [
+      0.147291,
+      "i"
+    ],
+    [
+      0.417094,
+      "\b\u001b[K"
+    ],
+    [
+      0.364851,
+      "fo "
+    ],
+    [
+      0.952675,
+      "n"
+    ],
+    [
+      0.051384,
+      "v"
+    ],
+    [
+      0.130827,
+      "i"
+    ],
+    [
+      0.139874,
+      "d"
+    ],
+    [
+      0.156557,
+      "a"
+    ],
+    [
+      0.427071,
+      "\b\u001b[K"
+    ],
+    [
+      0.289589,
+      "i"
+    ],
+    [
+      0.111256,
+      "a"
+    ],
+    [
+      0.312765,
+      "\r\n"
+    ],
+    [
+      0.002636,
+      "filename:       /lib/modules/4.12.8-2-ARCH/extramodules/nvidia.ko.gz\r\n"
+    ],
+    [
+      0.117336,
+      "alias:          char-major-195-*\r\nversion:        384.59\r\nsupported:      external\r\nlicense:        NVIDIA\r\nsrcversion:     31FF0349D3C7B1D9A62B474\r\nalias:          pci:v000010DEd00000E00sv*sd*bc04sc80i00*\r\nalias:          pci:v000010DEd*sv*sd*bc03sc02i00*\r\nalias:          pci:v000010DEd*sv*sd*bc03sc00i00*\r\ndepends:        \r\nvermagic:       4.12.8-1-ARCH SMP preempt mod_unload modversions \r\nparm:           NVreg_Mobile:int\r\nparm:           NVreg_ResmanDebugLevel:int\r\nparm:           NVreg_RmLogonRC:int\r\nparm:           NVreg_ModifyDeviceFiles:int\r\nparm:           NVreg_DeviceFileUID:int\r\nparm:           NVreg_DeviceFileGID:int\r\nparm:           NVreg_DeviceFileMode:int\r\nparm:           NVreg_UpdateMemoryTypes:int\r\nparm:           NVreg_InitializeSystemMemoryAllocations:int\r\nparm:           NVreg_UsePageAttributeTable:int\r\nparm:           NVreg_MapRegistersEarly:int\r\nparm:           NVreg_RegisterForACPIEvents:int\r\nparm:           NVreg_CheckPCIConfigSpace:int\r\nparm:           NVreg_EnablePCIeGen3:int\r\nparm:   "
+    ],
+    [
+      4.3e-05,
+      "        NVreg_EnableMSI:int\r\nparm:           NVreg_TCEBypassMode:int\r\nparm:           NVreg_UseThreadedInterrupts:int\r\nparm:           NVreg_EnableStreamMemOPs:int\r\nparm:           NVreg_MemoryPoolSize:int\r\nparm:           NVreg_RegistryDwords:charp\r\nparm:           NVreg_RegistryDwordsPerDevice:charp\r\nparm:           NVreg_RmMsg:charp\r\nparm:           NVreg_AssignGpus:charp\r\n"
+    ],
+    [
+      0.001045,
+      "\u001b]0;kyzs@my-arch:/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u0007"
+    ],
+    [
+      0.001568,
+      "\u001b[1;31m0\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;32m55\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;36m4\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;35mkyzs\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;37m/media/Others/Backup/lin/publicUser/src_note/lin/shell/Arch\u001b[0m\r\r\n\u001b[1;37m^_^\u001b[0m\u001b[1;35m-\u001b[0m\u001b[1;33m$ \u001b[0m"
+    ],
+    [
+      0.416054,
+      " "
+    ],
+    [
+      7.086563,
+      "\b\u001b[K"
+    ]
+  ]
+}

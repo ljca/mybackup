@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5/zh_cn" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" -->
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article>
+<info>
+  <title>DocBook 笔记<trademark /></title>
+  <author>kyzs</author>
+<address></address>
+
+<copyright>
+<year>2018</year>
+<holder><email>k_y_z_s@yeah.net</email></holder>
+</copyright>
+
+</info>
+
+<sect1>
+  <title>docbook<co id="1" /> 从安装与搭建测试环境开始</title>
+<para>
+  <footnote>
+    <para>如果不喜欢使用最新版本的，可以从 docbook <ulink url="https://sourceforge.net/projects/docbook/files">[home]</ulink>获得其它版本的 xsl.</para>
+  </footnote>
+</para>
+
+<!-- Test -->
+<para>
+  <filename>~/.config/i3/config</filename>
+  <database>MySQL</database>
+  10<superscript>2</superscript>
+  1000<subscript>10</subscript>
+  <userinput>this is user input.</userinput>
+  <quote>Quote</quote>
+  <envar>PATH</envar>
+  <abbrev>I.E,.Co</abbrev>
+</para>
+
+
+  <itemizedlist>
+    <listitem>libxml2</listitem>
+    <listitem>libxslt</listitem>
+    <listitem>docbook-xml</listitem>
+    <listitem>docbook-xslt</listitem>
+  </itemizedlist>
+
+  <!-- screen>
+  docbook<co id="1" /> 
+</screen -->
+
+<para>
+  主要工具： <command>xsltproc</command> 由 <application>libxslt</application> 提供。
+</para>
+
+<synopsis>
+  this is synopsis.
+</synopsis>
+<programlisting>
+  xsltproc -o docbook.html /usr/share/xml/docbook/xsl-stylesheets-1.79.1/html/docbook.xsl docbook.xml
+</programlisting>
+
+<!-- command> </command> -->
+
+<!-- graphic fileref="images/warning.png" / -->
+
+<figure> 
+<imagedata fileref="images/important.png" />
+</figure>
+
+<blockquote> 参阅：</blockquote>
+
+<!-- 无序列表 -->
+<itemizedlist>
+  <listitem><ulink url="https://blog.csdn.net/fgh1987168/article/details/6899157">[csdn_紫馨岚 博客]</ulink></listitem>
+  <listitem><ulink url="http://www.ha97.com/book/OpenSource_Guide/ch27.html">开源世界旅行手册，第 27 章</ulink></listitem>
+  <listitem><ulink url="https://blog.csdn.net/snaill/article/details/728102">snaill</ulink></listitem>
+  <listitem><ulink url="https://blog.csdn.net/sarkuya/article/details/6854323">snaill</ulink></listitem>
+</itemizedlist>
+
+</sect1>
+
+<calloutlist>
+  <callout arearefs="1">给定 xml 输入，包含多个输出(html,pdf,rtf,fo...)的写作平台。主要特点是方便维护。</callout>
+</calloutlist>
+
+</article>
+

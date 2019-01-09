@@ -1,0 +1,24 @@
+/* */
+/* a:link {text-decoration:underline;color:black;} */
+
+h1,h2,h3,h4,h5{text-align:center;}
+
+div.code{border:1 solid;}
+
+ul{list-style:circle;}
+
+table{width:100%;border-collapse:collapse;}
+th{
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#A7C942;
+	color:#ffffff;
+}
+th,td{
+	border:1px solid #98bf21;
+	padding:3px 7px 2px 7px;
+  text-align:center;
+}
+/* th,td{border:1px solid;} */
+/*th,td{text-align:center;}*/
+

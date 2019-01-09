@@ -1,0 +1,305 @@
+# i3 窗口调整与切换的主使用键：Mod1 <=> Meta(Alt) | Mod4 <=> (Windows键，Supper键)
+set $mod Mod4
+
+font pango:DejaVu Sans Mono 10
+#                       border  bgcolor fgcolor msg
+client.focused          #333333 #333333 #FFFFFF #333333
+client.focused_inactive #999999 #999999 #FFFFFF #3399FF
+client.unfocused        #999999 #999999 #FFFFFF #3399FF
+client.urgent           #990000 #990000 #FFFFFF #990000
+client.placeholder      #000000 #000000 #FFFFFF #000000
+client.background       #FFFFFF
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# 打开默认终端窗口的键绑定……
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
+#bindsym $mod+Return exec cool-retro-term
+#bindsym $mod+Return exec urxvt -sh 40
+
+#
+# 随 i3 一起启动的程序（这些程序在使用之前必须被安装到系统中），为了让调整的设置生效，你可能需要重启 X 或者 i3 会话……
+# 为了设置 i3 壁纸（图片路径需要被正确设置）……
+exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/solar_term/391014106.jpg"
+#exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/573d31d4263ea.jpg"
+
+# 因为 i3 窗口合成器不支持对窗口合成一些混合效果（比如：窗口的打开/关闭动画（淡入淡出）、混合透明、窗口阴影），所以如果你希望窗口有这些效果的话，你可能需要安装`xcompmpr`或者其它类似的程序并在终端模拟器中添加适当的选项在后台运行它，如果你不打算让它随 i3 一起启动的话……
+#exec --no-startup-id xcompmgr -FCf -nc -t -5 &
+exec --no-startup-id compton -b
+
+
+# 为了启动 i3bar 上的网络管理小程序……
+#exec --no-startup-id nm-applet&
+
+# 为了启动 fcitx 输入法……
+exec --no-startup-id LANG="zh_CN.UTF-8" fcitx &
+
+# 为了设置电源管理……
+exec --no-startup-id xset s 0
+exec --no-startup-id xset dpms 90 300
+
+# 为了在 i3bar 上显示那种桌面环境面板上的托盘图标，你需要调整`xrandr`的输出（可以尝试运行`xrandr`获取）的……
+#exec --no-starup-id xrandr --output eDP-1 --primary
+#exec --no-startup-id xfce4-appfinder &
+
+# 如果你不想使用i3bar，可以使用其它桌面环境的面板来替代，比如 xfce4 的:
+#exec --no-startup-id xfce4-panel --disable-wm-check
+
+exec --no-startup-id xfce4-terminal&>/dev/null&
+
+# 为了启用触摸板的轻触功能，不过在这里设置无效……
+#synclient VertTwoFingerScroll = 1 HorizTwoFingerScroll = 1 TapButton1 = 1 TapButton2 = 3 TapButton3 = 2
+
+# kill 窗口的键绑定……
+#bindsym $mod+Shift+q kill
+bindsym mod1+F4 kill
+
+
+# Application Key Bind Start……
+# 绑定截图程序到 Print 键……
+#bindsym $mod+Print exec scrot
+bindsym Print exec xfce4-screenshooter -m 2>/dev/null
+
+# File Browser 1
+#bindsym Ctrl+mod1+F exec pcmanfm &>/dev/null&
+
+# File Browser 2
+bindsym Ctrl+mod1+F exec thunar &>/dev/null&
+
+# Pdf Browser
+#bindsym Ctrl+mod1+D exec masterpdfeditor3 &>/dev/null&
+bindsym Ctrl+mod1+D exec evince &>/dev/null&
+
+# Web Browser
+bindsym Ctrl+mod1+W exec firefox &>/dev/null&
+
+# Music Player 
+bindsym Ctrl+mod1+M exec RhythmCat &>/dev/null &
+
+# Picture Browser
+bindsym Ctrl+mod1+P exec ristretto &>/dev/null&
+
+# Application Key Bind End……
+
+# dmenu 非常类似于桌面环境的运行……
+bindsym mod1+F1 exec dmenu_run
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym mod1+F2 exec --no-startup-id i3-dmenu-desktop
+#bindsym mod1+F2 exec xfce4-appfinder
+
+bindsym Ctrl+F2 exec xfce4-appfinder --collapsed
+
+# 窗口焦点移动方式（默认跟随光标）键绑定……
+bindsym $mod+j focus up
+bindsym $mod+k focus down
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+#bindsym $mod+semicolon focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# 调整窗口在工作区的位置……
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+j move down
+#bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# 这两个键绑定可以隐藏和显示焦点下的窗口……
+# minus 对应 -，plus 对应 +
+bindsym $mod+minus move scratchpad 
+bindsym $mod+plus scratchpad show
+
+
+# 调整窗口边框样式……
+bindsym $mod+u border none
+bindsym $mod+n border normal
+bindsym $mod+o border 1pixel
+bindsym $mod+b border toggle
+
+# 新窗口打开后在工作区的放置方式，按下这组键绑定之后……
+# 放到焦点窗口的右方……
+bindsym Ctrl+$mod+h split h
+
+# 放到焦点窗口的下方……
+bindsym $mod+v split v
+
+# 窗口最大化与正常窗口间切换的键绑定……
+bindsym $mod+f fullscreen toggle
+
+# 改变窗口的布局方式（平铺还是标签化？或者是堆叠？）……
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# 窗口浮动切换……
+bindsym $mod+Shift+space floating toggle
+
+# 在工作区中的浮动窗口和平铺窗口键切换焦点……
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# 工作区切换……
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# 移动焦点窗口到其它工作区……
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# 在工作区的窗口间切换……
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# 窗口大小调整键绑定配置……
+mode "resize" {
+# These bindings trigger as soon as you enter the resize mode
+
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+  bindsym h resize grow width 5 px or 5 ppt
+    bindsym l resize shrink width 5 px or 5 ppt
+    bindsym j resize grow height 5 px or 5 ppt
+    bindsym k resize shrink height 5 px or 5 ppt
+#bindsym semicolon resize grow width 10 px or 10 ppt
+
+# same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# i3bar 配置……
+bar {
+# 默认位置：底部……
+  position top 
+  #i3bar_command i3bar -t
+    status_command i3status
+    #status_command ~/.config/i3/jconky
+    separator_symbol ""
+    colors {
+      background #eeeeee
+        statusline #000000
+        separator #2d2d2d
+# border bgcolor fgcolor
+        focused_workspace #636e88 #285de7 #dedfdg
+        active_workspace #556677 #234567 #56ef67
+        inactive_workspace #636d72 #2d2d2d #dedede
+        urgent_workspace #ffffff #900000 #d23d32
+
+#focused_workspace  #3297FD #11111100 #FFFFFF
+#active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
+#inactive_workspace #111111 #11111100 #FFFFFF
+#urgent_workspace   #990000 #11111100 #FFFFFF
+        binding_mode       #990000 #99000000 #FFFFFF
+
+    }
+}
+
+# for_window 和 assign 配置对某些 Gtk3 程序无效……
+
+# 新窗口打开时要不要浮动起来？
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+#for_window [class="pop-up"] floating enable
+#for_window [class="task_dialog"] floating enable
+
+focus_follows_mouse yes
+
+# 新窗口默认在哪个工作区中打开 →
+# assign [class="(?i)osdlyrics"] 2
+#
+
+assign [class="(?i)evince"]  2
+assign [class="(?i)masterpdfeditor3"]  2
+assign [class="(?i)masterpdfeditor4"]  2
+
+assign [class="(?i)vnote"]  3
+assign [class="(?i)gedit"]  3
+assign [class="(?i)mousepad"]  3
+
+#assign [class="(?i)"] 4
+assign [class="(?i)thunderbird"] 4
+
+assign [class="(?i)firefox"] 5
+assign [class="(?i)chromium"] 5
+assign [class="(?i)opera"] 5
+
+
+assign [class="(?i)virtualbox"] 9
+
+#assign [class="(?i)mplayer"]  10
+assign [class="(?i)smplayer"]  10
+assign [class="(?i)RhythmCat"]  10
+assign [class="(?i)vlc"]  10
+#assign [class="(?i)ristretto"] 10
+
+# 打开新窗口时的默认边框样式……
+new_float none
+
+new_window none
+
+#mode "system" {
+#  bindsym L exec ~/pm_mem.sh 
+#}
+#
+#bindsym $mod+Pause mode "system"
+
+# 重载 i3 配置文件……
+bindsym $mod+Shift+c reload
+
+# 重启 i3 窗口管理器……
+bindsym $mod+Shift+r restart
+
+# 退出 i3，也会杀死 X ……
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
+
+#{ "full_text" : "", "color": "\#BADA55"},
+# { "full_text" : " ${time %H:%M}" , "color" : "\#8BADF9" }
+#{ "full_text": " ${exec curl icanhazip.com}"},
+#

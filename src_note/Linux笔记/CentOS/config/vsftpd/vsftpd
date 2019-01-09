@@ -1,0 +1,5 @@
+#auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser
+#account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser
+
+auth required pam_pwdfile.so pwdfile /etc/vsftpd/.passwd
+account required pam_permit.so

@@ -1,0 +1,202 @@
+
+"--------File Encoding Configure--------"
+set fileencodings=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+"set fileencoding=utf-8
+"set encoding=utf-8
+set number
+set noswapfile
+set nobackup
+
+"colorscheme ron
+let g:iswindows = 0
+let g:islinux = 0
+let g:isGUI = 0
+
+if(has("win64") || has("win32"))
+	let g:iswindows = 1
+else
+	let g:islinux = 1
+endif
+
+if(has("gui_running"))
+	let g:isGUI = 1
+else 
+	let g:isGUI = 0
+endif
+
+if(g:iswindows)
+	if filereadable(expand("$VIM/vim.bundles")) 
+		source $VIM/vim.bundles
+	endif
+	"source ~/.vim/autoload/pathogen.vim
+	"call pathogen#runtime_append_all_bundles() 
+	source $VIM/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+	call pathogen#infect()
+	if filereadable(expand("$VIM/vim.windows")) 
+		source $VIM/vim.windows
+	endif
+	if filereadable(expand("$VIM/vim.keymap")) 
+		source $VIM/vim.keymap
+	endif
+else
+	if filereadable(expand("~/.vim/vim.bundles"))
+		source ~/.vim/vim.bundles
+	endif
+	source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
+	execute pathogen#infect()
+
+	if filereadable(expand("~/.vim/vim.linux")) 
+		source ~/.vim/vim.linux
+	endif
+	if filereadable(expand("~/.vim/vim.keymap"))
+		source ~/.vim/vim.keymap
+	endif
+	colorscheme ron
+	"---------LightLine Configure---------"
+	let g:lightline = {
+				\ 'colorscheme': 'landscape',
+				\ 'active': {
+				\   'left': [ [ 'mode', 'paste' ],[ 'readonly', 'filename', 'modified' ] ]
+				\ },
+				\ 'component': {
+				\   'readonly': '%{&readonly?"+":""}',
+				\ },
+				\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+				\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+				\ }
+endif
+
+"--------Develop Configure--------"
+set completeopt=longest,menu
+let g:SuperTabDefaultCompletionType="context"
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"---------Tagbar Configure-------"
+autocmd BufNewFile,BufReadPost *.c,*.cpp,*.cxx,*.h call tagbar#autoopen()
+let g:tagbar_width=28
+let g:tagbar_left=1
+nmap tb :TlistClose<CR>:TagbarToggle<CR>
+
+"neocomplcache set
+let g:neocomplcache=1
+
+"-------cscope Configure-------"
+if has("cscope")
+	set cscopequickfix=s-,c-,d-,i-,t-,e-
+	set cscopetag 
+	set csto=0
+	if filereadable("cscope.out")
+		cs add cscope.out
+  elseif filereadable("../cscope.out")
+		cs add ../cscope.out ..
+	"elseif $CSCOPE_DB != ""
+	"	cs add $CSCOPE_DB
+	endif
+  set cscopeverbose
+endif
+
+"--------Develop Configure End-------"
+
+"----------Fold Configure---------"
+let g:javabrowser_ctags_cmd = "/usr/bin/ctags"
+set foldenable
+"set foldmethod=manual
+
+set foldcolumn=1
+setlocal foldlevel=3
+"set foldclose=all
+set foldopen-=search
+set foldopen-=undo
+
+if &filetype == "c" || &filetype == "cpp" || &filetype == "python" || &filetype == "java" || &filetype == "sh"
+  set foldmethod = syntax
+  set foldopen = all
+endif
+
+
+"--------Tab Configure--------"
+"if &filetype == 'make'
+"let autocommands_loaded = 1
+autocmd! BufNewFile Makefile call append(line("$"),"# vim:set noet noci ts=4 sts=4 st=4:")
+autocmd! BufNewFile python call append(line("$"),"# vim:set noet noci ts=4 sts=4 st=4:")
+autocmd! BufRead Makefile set noexpandtab nocindent shiftwidth=4 tabstop=4 softtabstop=4
+autocmd! BufRead python set noexpandtab nocindent shiftwidth=4 tabstop=4 softtabstop=4
+"endif
+set expandtab
+set linespace=2
+set tabstop=2
+set softtabstop=2
+"set smarttab
+set shiftwidth=2
+set smartindent
+set autoindent
+if &filetype == "c" || &filetype == "cxx" || &filetype == "h" || &filetype == "cpp"
+  set cindent
+endif
+"
+"-------Modline Configure------"
+set modeline
+set modelines=5
+
+"--------Genery Configure--------"
+"VIM Windows Configure"
+"set columns=200 lines=155
+set shortmess=atI
+"set helplang=cn
+"winpos 5 5
+"autocmd InsertLeave
+"autocmd InsertEnter
+set scrolloff=3
+set number
+set wildmenu
+"set wildmode=longest,list
+set showcmd
+set nobackup
+set noswapfile
+set confirm
+set autoread
+set backspace=2
+"自动格式化
+set formatoptions=tcrqn
+"括号自动配对
+set showmatch
+set matchtime=2
+"查找忽略大小写
+set ignorecase
+set nowrapscan
+"高亮显示搜索到的文本
+set hlsearch
+set incsearch
+set ruler
+set laststatus=2     " Always show the statusline
+set t_Co=256         " Explicitly tell Vim that the terminal support 256 colors
+set cmdheight=1
+"--------Genary Configure End-------"
+"--------Multi_Cursor Edit Configuretion-------"
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+"---------Other Configure-------"
+let NERDTreeWinSize=22
+" 设置 NERDTree 子窗口位置
+let NERDTreeWinPos="right"
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
+
+
+"---------Themes Configure-------"
+
+"---------Unknown Configure-------"
+" reopening a file
+"if has("autocmd")
+"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"set TxtBrowser
+autocmd BufRead,BufNewFile *.txt setlocal ft=txt
+"endif
+

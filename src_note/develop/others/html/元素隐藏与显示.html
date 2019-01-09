@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>元素隐藏与显示</title>
+<script type="text/javascript" src="../jQuery/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("h3").click(function(){
+		if($("p").is(":hidden")){
+			$("p").show(4000);/*,function(){
+				$(this).text("欢迎来到jQuery的世界！");
+				});*/
+			}else{
+				$("p").hide("slow");
+				}
+		
+		});
+	});
+</script>
+</head>
+
+<body>
+<h3>Hello</h3>
+<p style="display:none">欢迎来到jQuery的世界！</p>
+</body>
+</html>

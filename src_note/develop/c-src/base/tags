@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+PI	practice/operatx.c	2;"	d	file:
+TITLE	practice/pra1.h	2;"	d
+main	practice/charpter0-1.c	/^int main(void)$/;"	f
+main	practice/color.c	/^int main(void)$/;"	f
+main	practice/color2.c	/^int main()$/;"	f
+main	practice/d_size.c	/^int main()$/;"	f
+main	practice/decTobin.c	/^int main(void)$/;"	f
+main	practice/hello.c	/^int main()$/;"	f
+main	practice/helloworld.c	/^int main(void)$/;"	f
+main	practice/operatTemprature.c	/^int main()$/;"	f
+main	practice/operatTemprature2.c	/^int main()$/;"	f
+main	practice/operatx.c	/^int main()$/;"	f
+main	practice/pra1.c	/^int main(void)$/;"	f
+main	practice/printf.c	/^int main(int argc,char **argv)$/;"	f
+main	practice/rename.c	/^int main(int argc,char **argv)$/;"	f
+main	practice/string/strtoint.c	/^int main()$/;"	f
+main	practice/test.c	/^int main(void)$/;"	f
+operate	practice/operatx.c	/^void operate(int num)$/;"	f
+operate2	practice/operatx.c	/^int operate2(int num)$/;"	f
+test	practice/decTobin.c	/^int test(int)$/;"	f
+test	practice/test.c	/^void test(void)$/;"	f
+test1	practice/decTobin.c	/^int test1(int)$/;"	f
+test2	practice/decTobin.c	/^int test2(int)$/;"	f
+test3	practice/decTobin.c	/^int test3(int)$/;"	f

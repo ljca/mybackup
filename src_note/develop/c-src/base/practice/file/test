@@ -1,0 +1,22 @@
+# .bashrc
+
+# User specific aliases and functions
+
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+#alias ls='ls -aF --color=tty'
+alias ls='ls --color=tty'
+alias ll='ls -AlFSh --color=tty'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias dirs='dirs -v'
+type l&>/dev/null||alias l='ls -aF --color=tty'
+export HISTCONTROL="ignoreboth:erasedups"
+#PATH=$PATH:$HOME/bin
+export CDPATH=".:/home/tmp"

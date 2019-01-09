@@ -1,0 +1,8 @@
+
+<!ENTITY file SYSTEM "file.xml">
+<!ENTITY file1 SYSTEM "file1.xml">
+<!ENTITY file2 SYSTEM "file2.xml">
+<!ENTITY file3 SYSTEM "file3.xml">
+<!ENTITY file4 SYSTEM "file4.xml">
+<!ENTITY file5 SYSTEM "file5.xml">
+

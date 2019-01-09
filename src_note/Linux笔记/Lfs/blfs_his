@@ -1,0 +1,2277 @@
+echo -en "\e]P7ffffff"
+sudo install -dv -m755 $XORG_PREFIX/lib
+cd Lfs/Blfs/blfs-package
+tar -xf util-macros-1.19.0.tar.bz2 
+cd util-macros-1.19.0
+./configure --prefix=/usr --disable-static && make && sudo make install 
+tar -xf libxslt-1.1.28.tar.gz 
+cd libxslt-1.1.28
+cd libXau-1.0.8
+sudo install -dv -m755 $XORG_PREFIX/lib&&sudo install -dv -m755 $XORG_PREFIX/lib
+sudo ln -sv lib $XORG_PREFIX/lib64 
+cd Lfs/Blfs/blfs-package&&tar -xf util-macros-1.19.0.tar.bz2 &&cd util-macros-1.19.0&&./configure $XORG_CONFIG && sudo make install 
+tar -xf libXau-1.0.8.tar.bz2 
+tar -xf libXdmcp-1.1.1.tar.bz2 
+cd libXdmcp-1.1.1
+tar -xf xcb-proto-1.11.tar.bz2 
+cd xcb-proto-1.11
+./configure $XORG_CONFIG && sudo make install 
+tar -xf libxcb-1.11.tar.bz2 
+cd libxcb-1.11
+sed -i "s/pthread-stubs//" configure
+./configure $XORG_CONFIG --enable-xinput --dordir='${datadir}'/doc/libxcb-1.11 && make && sudo make install 
+./configure $XORG_CONFIG --enable-xinput --docdir='${datadir}'/doc/libxcb-1.11 && make && sudo make install 
+sudo ln -sv $XORG_PREFIX/include/X11 /usr/include/X11 
+sudo ln -sv $XORG_PREFIX/lib/X11 /usr/lib/X11 
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+tar -xf xcb-util-image-0.4.0.tar.bz2 
+cd xcb-util-image-0.4.0
+tar -xf xcb-util-keysyms-0.4.0.tar.bz2 
+cd xcb-util-keysyms-0.4.0
+tar -xf xcb-util-renderutil-0.3.9.tar.bz2 
+cd xcb-util-renderutil-0.3.9
+tar -xf xcb-util-wm-0.4.1.tar.bz2 
+cd xcb-util-wm-0.4.1
+./configure $XORG_CONFIG && make && sudo make install 
+tar -xf MesaLib-10.4.5.tar.bz2 
+cd Mesa-10.4.5/
+patch -Np1 -i ../MesaLib-10.4.5-add_xdemos-1.patch 
+autoreconf -f -i
+./configure --prefix=$XORG_PREFIX \
+./configure CFLAGS="-O2" CXXFLAGS="-O2" --prefix=$XORG_PREFIX --sysconfdir=/etc --enable-texture-float --enable-gles1 --enable-gles2 --enable-osmesa --enable-xa --enable-gbm --enable-glx-tls --with-egl-platforms="drm,x11" --with-gallium-drivers="nouveau,r300,r600,radeonsi,svga,swrast"
+make 
+ll /usr/lib
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+./configure $XORG_CONFIG --docdir=/usr/share/doc/libvdpau-0.9
+make && sudo make install 
+tar -xf libdrm-2.4.59.tar.bz2 
+cd libdrm-2.4.59
+sed -e "/pthread-stubs/d" -i configure.ac 
+autoreconf -fiv
+./configure --prefix=/usr --enable-udev && make && sudo make install 
+] sudo  vim /etc/ld.so.conf
+CONFIG_IPV6=y
+config_libnl32=y
+CONFIG_PEERKEY=y
+CONFIG_PKCS12=y
+CONFIG_READLINE=y
+CONFIG_SMARTCARD=y
+CONFIG_WPS=y
+CFLAGS += -I/usr/include/libnl3
+EOF
+make BINDIR=/sbin LIBDIR=/lib
+sudo install -v -m755 wpa_{cli,passphrase,supplicant} /sbin
+sudo install -v -m644 doc/docbook/wpa_supplicant.conf.5 /usr/share/man/man5
+sudo install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 /usr/share/man/man8
+df 
+fbterm 
+echo -en "\e]P7ffffff"
+df 
+echo -en "\e]P7ffffff"
+tar -xf fuse-2.9.3.tar.gz 
+cd fuse-2.9.3
+./configure --prefix=/usr --disable-static INIT_D_PATH=/tmp/init.d 
+sudo mv -iv /usr/lib/libfuse.so.* /lib
+sudo ln -sfv ../../lib/libfuse.so.2.9.3 /usr/lib/libfuse.so 
+sudo rm -rf /tmp/init.d
+sudo install -m755 -dv /usr/share/doc/fuse-2.9.3 
+sudo install -v -m644 doc/{how-fuse-works,kernel.txt} /usr/share/doc/fuse-2.9.3
+sudo install -m755 -dv /usr/share/doc/fuse-2.9.3/api 
+tar -xf ntfs-3g_ntfsprogs-2014.2.15.tgz 
+cd ntfs-3g_ntfsprogs-2014.2.15
+./configure --prefix=/usr --disable-static
+mkae distclean
+make clean
+make distclean
+./configure --prefix=/usr --disable-static --with-fuse=external
+sudo ln -sv ../bin/ntfs-3g /sbin/mount.ntfs
+sudo chmod 4755 /sbin/mount.ntfs
+sudo ln -sv /usr/share/man/man8/{ntfs-3g,mount.ntfs}.8
+tar -xf cpio-2.11.tar.bz2 
+cd cpio-2.11
+sed -i -e '/gets is a/d' gnu/stdio.in.h 
+./configure --prefix=/usr --bindir=/bin --enable-mt --with-rmt=/usr/libexec/rmt 
+makeinfo --html -o doc/html  doc/cpio.texi 
+makeinfo --html --no-split -o doc/cpio.html doc/cpio.texi 
+makeinfo  --plaintext -o doc/cpio.txt doc/cpio.texi 
+sudo install -dv -m755 /usr/share/doc/cpio-2.11/html
+sudo install -v -m644 doc/html/* /usr/share/doc/cpio-2.11/html
+sudo install -v -m644 doc/cpio.{html,txt} /usr/share/doc/cpio-2.11
+tar -xf pcre-8.36.tar.bz2 
+cd pcre-8.36
+./configure --prefix=/usr --docdir=/usr/share/doc/pcre-8.36 --enable-pcre16 --enable-pcre32 --enable-unicode-properties --enable-pcregrep-libz --enable-pcregrep-libbz2 --enable-pcretest-libreadline  --disable-static 
+sudo mv -iv /usr/lib/libpcre.so.* /lib
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
+tar -xf glib-2.42.1.tar.xz 
+./configure --prefix=/usr --sysconfdir=/etc --enable-charset
+cd glib-2.42.1
+./configure --prefix=/usr --with-pcre=system
+tar -xf slang-2.2.4.tar.bz2 
+cd slang-2.2.4
+./configure --prefix=/usr --sysconfdir=/etc --with-readline=gnu
+make -j1
+sudo make install_doc_dir=/usr/share/doc/slang-2.2.4 SLSH_DOC_DIR=/usr/share/doc/slang-2.2.4/slsh install-all 
+sudo chmod -v 755 /usr/lib/libslang.so.2.2.4 /usr/lib/slang/v2/modules/*.so
+cd mc-4.8.13
+sudo ./configure --prefix=/usr --sysconfdir=/etc --enable-charset
+sudo make 
+sudo cp -v doc/keybind-migration.txt /usr/share/mc
+tar -xf initd-tools-0.1.3.tar.gz 
+cd initd-tools-0.1.3
+./configure --prefix=/usr 
+tar -xf hdparm-9.45.tar.gz 
+cd hdparm-9.45
+tar -xf p7zip_9.38_src_all.tar.bz2 
+cd p7zip_9.38
+sed -i -e 's/chmod 555/chmod 755/' -e 's/chmod 444/chmod 644/' install.sh 
+make all3
+sudo make DEST_HOME=/usr DEST_MAN=/usr/share/man DEST_SHARE_DOC=/usr/share/doc/p7zip-9.38 install 
+tar -xf xmlto-0.0.26.tar.bz2 
+cd xmlto-0.0.26
+tar -xf pm-utils-1.4.1.tar.gz 
+cd pm-utils-1.4.1
+./configure --prefix=/usr --sysconfdir=/etc --docdir=/usr/share/doc/pm-utils-1.4.1 
+sudo install -v -m644 man/*.1 /usr/share/man/man1
+sudo install -v -m644 man/*.8 /usr/share/man/man8
+sudo ln -sv pm.action.8 /usr/share/man/man8/pm-suspend.8
+sudo ln -sv pm.action.8 /usr/share/man/man8/pm-hibernate.8 
+sudo ln -sv pm.action.8 /usr/share/man/man8/pm-suspend-hybrid.8
+tar -xf acpid-2.0.23.tar.xz 
+cd acpid-2.0.23
+./configure --prefix=/usr --docdir=/usr/share/doc/acpid-2.0.23
+install -dv -m755 /etc/acpi/events
+sudo install -dv -m755 /etc/acpi/events
+sudo cp -rv samples /usr/share/doc/acpid-2.0.23
+tar -xf dhcpcd-6.7.1.tar.bz2 
+cd dhcpcd-6.7.1
+./configure --libexecdir=/lib/dhcpcd --dbdir=/var/tmp
+make 
+sudo make install 
+sudo make install 
+echo -en "\e]P7ffffff"
+sudo vim /etc/profile.d/dircolors.sh
+sudo vim /etc/profile.d/readline.sh
+sudo vim /etc/profile.d/umask.sh
+sudo vim /etc/profile.d/i18n.sh
+sudo vim /etc/profile
+echo -en "\e]P7ffffff"
+tar -xf lsb-release-1.4.tar.gz 
+cd lsb-release-1.4
+sed -i "s|n/a|unavailable|" lsb_release
+./help2man -N --include ./lsb_release.examples --alt_version_key=program_version ./lsb_release > lsb_release.1
+sudo install -v -m 644 lsb_release.1 /usr/share/man/man1/lsb_release.1
+sudo install -v -m 755 lsb_release /usr/bin/lsb_release
+echo -en "\e]P7ffffff"
+sudo make modules_install 
+echo "$XORG_PREFIX" >> /etc/ld.so.conf
+echo "$XORG_PREFIX/lib" >> /etc/ld.so.conf
+echo "/usr/lib/python2.7/site-packages" >> /etc/ld.so.conf
+for tmp in $(grep -v '^#' ../proto-7.7.md5 | awk '{print $2}'); do tmpdir=${tmp%.tar.bz2}; tar -xf $tmp; pushd $tmpdir; ./configure $XORG_CONFIG ; as_root make install ; popd ; rm -rf $tmpdir; done
+tar -xf lsb-release-1.4.tar.gz 
+cd lsb-release-1.4
+sed -i "s|n/a|unavailable|" lsb_release
+./help2man -N --include ./lsb_release.examples --alt_version_key=program_version ./lsb_release > lsb_release.1
+sudo install -v -m 644 lsb_release.1 /usr/share/man/man1/lsb_release.1
+sudo install -v -m 755 lsb_release /usr/bin/lsb_release
+sudo make modules_install 
+echo -en "\e]P7ffffff"
+]  ./profile.sh 
+sed "s@/usr/X11R6@$XORG_PREFIX@g" -i /etc/man_db.conf 
+sudo sed "s@/usr/X11R6@$XORG_PREFIX@g" -i /etc/man_db.conf 
+sudo ln -sv $XORG_PREFIX/share/X11 /usr/share/X11
+sudo ln -sv $XORG_PREFIX /usr/X11R6
+sudo insatll -v -m755 -d $XORG_PREFIX/lib
+sudo install -v -m755 -d $XORG_PREFIX/lib
+sudo ln -sv lib $XORG_PREFIX/lib64
+tar -xf libxml2-2.9.2.tar.gz 
+cd libxml2-2.9.2
+sed -e /xmlInitializeCatalog/d -e 's/((ent->checked =. *&&/(((ent->checked ==0) ||\
+((ent->children == NULL) \&\& (ctxt->options \& xml_parse_noent))) \&\&/' -i parser.c 
+./configure --prefix=/usr --disable-static --with-history
+make 
+tar -xf xcb-proto-1.11.tar.bz2 
+cd xcb-proto-1.11
+tar -xf util-macros-1.19.0.tar.bz2 
+cd util-macros-1.19.0
+./configure $XORG_CONFIG 
+sudo make install 
+mkdir proto
+cd proto
+grep -v '^#' ../proto-7.7.md5 | awk '{print $2}' | wget -i- -c -B http://xorg.freedesktop.org/releases/individual/proto/ && md5sum -c ../proto-7.7.md5 
+grep -v '^#' ../proto-7.7.md5 | awk '{print $2}' | wget -i- -c --no-check-certificate -B http://xorg.freedesktop.org/releases/individual/proto/ && md5sum -c ../proto-7.7.md5 
+wget --no-check-certificate http://xorg.freedesktop.org/archive/individual/proto/xproto-7.0.27.tar.bz2 
+as_root() {  if [ $EUID = 0 ] ; then $*;  elif [ -x /usr/bin/sudo ] ;then sudo $*; else su -c \\"$*\\"; fi; }
+export -f as_root
+bash -e
+echo -en "\e]P7ffffff"
+for tmp in $(grep -v '^#' ../lib-7.7.md5 | awk '{print $2}'); do tmpdir=${tmp%.tar.bz2}; tar -xf $tmp; pushd $tmpdir; case $tmpdir in  libXfont-[0-9]* ) ./configure $XORG_CONFIG --disable-devel-docs ; ;; libXt-[0-9]* ) ./configure $XORG_CONFIG --with-appdefaultdir=/etc/X11/app-defaults; ;; * ) ./configure $XORG_CONFIG ; ;; esac; make ; as_root make install ; popd ; rm -rf $tmpdir; as_root /sbin/ldconfig ; done
+for tmp in $(grep -v '^#' ../font-7.7.md5 | awk '{print $2}'); do  tmpdir=${tmp%.tar.bz2}; tar -xf $tmp; pushd $tmpdir; ./configure $XORG_CONFIG ; make ; as_root make install ; popd ; as_root rm -rf $tmpdir; done
+echo -en "\e]P7ffffff"
+tar -xf xcb-proto-1.11.tar.bz2 
+cd xcb-proto-1.11
+tar -xf util-macros-1.19.0.tar.bz2 
+cd util-macros-1.19.0
+mkdir proto
+cd proto
+grep -v '^#' ../proto-7.7.md5 | awk '{print $2}' | wget -i- -c -B http://xorg.freedesktop.org/releases/individual/proto/ && md5sum -c ../proto-7.7.md5 
+grep -v '^#' ../proto-7.7.md5 | awk '{print $2}' | wget -i- -c --no-check-certificate -B http://xorg.freedesktop.org/releases/individual/proto/ && md5sum -c ../proto-7.7.md5 
+wget --no-check-certificate http://xorg.freedesktop.org/archive/individual/proto/xproto-7.0.27.tar.bz2 
+as_root() {  if [ $EUID = 0 ] ; then $*;  elif [ -x /usr/bin/sudo ] ;then sudo $*; else su -c \\"$*\\"; fi; }
+export -f as_root
+echo -en "\e]P7ffffff"
+tar -xf libXau-1.0.8.tar.bz2 
+tar -xf libXdmcp-1.1.1.tar.bz2 
+./configure $XORG_CONFIG 
+tar -xf libxcb-1.11.tar.bz2 
+sed -i "s/pthread-stubs//" configure
+./configure $XORG_CONFIG --enable-xinput --docdir='${datadir}'/doc/libxcb-1.11
+as_root() {  if [ $EUID = 0 ] ; then $*;  elif [ -x /usr/bin/sudo ] ;then sudo $*; else su -c \\"$*\\"; fi; }&&export -f as_root
+bash -e
+sudo ln -sv $XORG_PREFIX/lib/X11 /usr/lib/X11 
+sudo ln -sv $XORG_PREFIX/include/X11 /usr/include/X11 
+tar -xf libvdpau-0.9.tar.gz 
+./configure $XORG_CONFIG --docdir=/usr/share/doc/libvdpau-0.9
+tar -xf llvm-3.5.1.src.tar.xz 
+tar -xf ../cfe-3.5.1.src.tar.xz -C tools
+tar -xf ../compiler-rt-3.5.1.src.tar.xz -C projects/
+sed -e "s:/docs/llvm:/share/docs/llvm-3.5.1:/" -i Makefile.config.in 
+sed -e "s:/docs/llvm:/share/docs/llvm-3.5.1:" -i Makefile.config.in 
+CC=gcc CXX=g++ ./configure --prefix=/usr --sysconfdir=/etc --enable-libffi --enable-optimized --enable-shared --disable-assertions
+sudo make -C docs -f Makefile.sphinx man 
+for file in /usr/lib/lib{clang,LLVM,LTO}*.a; do test -f $file && sudo chmod -v 644 $file; done
+sudo install -v -d -m755 /usr/lib/clang-analyzer
+for prog in scan-build scan-view ; do sudo cp -rfv tools/clang/tools/$prog /usr/lib/clang-analyzer; sudo ln -sfv ../lib/clang-analyzer/$prog/$prog /usr/bin; done
+sudo ln -sfv /usr/bin/clang /usr/lib/clang-analyzer/scan-build/
+sudo mv -v /usr/lib/clang-analyzer/scan-build/scan-build.1 /usr/share/man/man1
+tar -xf elfutils-0.161.tar.bz2 
+sed -e '/*runp =/,+2d' -e '/runp +=/s/r.*;/*runp++ = '\0';/' -i libelf/elf_begin.c 
+./configure --prefix=/usr --program-prefix="eu-"
+sed -e "/pthread-stubs/d" -i configure.ac && autoconf -fiv
+tar -xf libdrm-2.4.59.tar.bz2 
+sed -e "/pthread-stubs/d" -i configure.ac && autoreconf -fiv
+./configure --prefix=/usr --enable-udev 
+make 
+sudo make install 
+cat >> system-account << "EOF"
+account required pam_unix.so
+EOF
+
+cat >> system-auth << "EOF"
+cat >> system-account << "EOF"
+auth required pam_unix.so
+EOF
+
+cat >> system-password << "EOF"
+password required pam_cracklib.so type=Linux retry=3 difok=5 difignore=23 minlen=9 dcredit=1 ucredit=1 lcredit=1 ocredit=1 dictpath=/lib/cracklib/pw_dict
+password required pam_unix.so sha512 shadow use_authtok 
+EOF
+
+cat >> system-session << "EOF"
+session required pam_unix.so 
+EOF
+
+cat >> login << "EOF"
+auth optional pam_faildelay.so delay=3000000
+auth requisite pam_nologin.so 
+auth include system-auth 
+account required pam_access.so 
+account include system-account 
+session required pam_env.so
+session include system-session 
+session required pam_limits.so
+password include system-password 
+EOF
+
+cat >> passwd << "EOF"
+password include system-password 
+EOF
+
+cat > su << "EOF"
+auth sufficient pam_rootok.so 
+auth include system-auth 
+account include system-account 
+session required pam_env.so
+session include system-session 
+EOF
+
+cat > chage << "EOF"
+auth suffcient pam_rootok.so
+auth include system-auth 
+account include system-account 
+session include system-session 
+password required pam_permit.so
+EOF
+
+for tmp in chfn chgpasswd chpasswd chsh groupadd groupdel groupmems groupmod newusers useradd userdel usermod; do install -v -m644 /etc/pam.d/chage /etc/pam.d/${tmp}; sed -i "s/chage/$tmp/" /etc/pam.d/${tmp}; done
+cat > /etc/pam.d/other << "EOF"
+auth required pam_warn.so
+auth required pam_deny.so 
+EOF
+
+[ -f /etc/login.access ] && mv -v /etc/login.access{,.NOUSE}
+[ -f /etc/limits ] && mv -v /etc/limits{,.NOUSE}
+wget --no-check-certificate http://xorg.freedesktop.org/archive/individual/proto/xproto-7.0.27.tar.bz2 
+as_root() {  if [ $EUID = 0 ] ; then $*;  elif [ -x /usr/bin/sudo ] ;then sudo $*; else su -c \\"$*\\"; fi; }
+export -f as_root
+echo -en "\e]P7ffffff"
+tar -xf libXau-1.0.8.tar.bz2 
+tar -xf libXdmcp-1.1.1.tar.bz2 
+tar -xf libxcb-1.11.tar.bz2 
+sed -i "s/pthread-stubs//" configure
+./configure $XORG_CONFIG --enable-xinput --docdir='${datadir}'/doc/libxcb-1.11
+as_root() {  if [ $EUID = 0 ] ; then $*;  elif [ -x /usr/bin/sudo ] ;then sudo $*; else su -c \\"$*\\"; fi; }&&export -f as_root
+bash -e
+sudo ln -sv $XORG_PREFIX/lib/X11 /usr/lib/X11 
+sudo ln -sv $XORG_PREFIX/include/X11 /usr/include/X11 
+tar -xf libvdpau-0.9.tar.gz 
+./configure $XORG_CONFIG --docdir=/usr/share/doc/libvdpau-0.9
+tar -xf llvm-3.5.1.src.tar.xz 
+tar -xf ../cfe-3.5.1.src.tar.xz -C tools
+tar -xf ../compiler-rt-3.5.1.src.tar.xz -C projects/
+sed -e "s:/docs/llvm:/share/docs/llvm-3.5.1:/" -i Makefile.config.in 
+sed -e "s:/docs/llvm:/share/docs/llvm-3.5.1:" -i Makefile.config.in 
+CC=gcc CXX=g++ ./configure --prefix=/usr --sysconfdir=/etc --enable-libffi --enable-optimized --enable-shared --disable-assertions
+sudo make -C docs -f Makefile.sphinx man 
+for file in /usr/lib/lib{clang,LLVM,LTO}*.a; do test -f $file && sudo chmod -v 644 $file; done
+sudo install -v -d -m755 /usr/lib/clang-analyzer
+for prog in scan-build scan-view ; do sudo cp -rfv tools/clang/tools/$prog /usr/lib/clang-analyzer; sudo ln -sfv ../lib/clang-analyzer/$prog/$prog /usr/bin; done
+sudo ln -sfv /usr/bin/clang /usr/lib/clang-analyzer/scan-build/
+sudo mv -v /usr/lib/clang-analyzer/scan-build/scan-build.1 /usr/share/man/man1
+tar -xf elfutils-0.161.tar.bz2 
+sed -e '/*runp =/,+2d' -e '/runp +=/s/r.*;/*runp++ = '\0';/' -i libelf/elf_begin.c 
+./configure --prefix=/usr --program-prefix="eu-"
+sed -e "/pthread-stubs/d" -i configure.ac && autoconf -fiv
+tar -xf libdrm-2.4.59.tar.bz2 
+sed -e "/pthread-stubs/d" -i configure.ac && autoreconf -fiv
+./configure --prefix=/usr --enable-udev 
+tar -xf doxygen-1.8.9.1.src.tar.gz 
+./configure --prefix /usr --docdir /usr/share/doc/doxygen-1.8.9.1
+sudo make MAN1DIR=/share/man/man1 install 
+sudo make install_docs
+tar -xf xcb-util-wm-0.4.1.tar.bz2 
+tar -xf xcb-util-0.4.0.tar.bz2 
+tar -xf xcb-util-image-0.4.0.tar.bz2 
+tar -xf xcb-util-renderutil-0.3.9.tar.bz2 
+tar -xf xcb-util-keysyms-0.4.0.tar.bz2 
+./configure $XORG_CONFIG 
+patch -Np1 ../MesaLib-10.4.5-add_xdemos-1.patch 
+tar -xf MesaLib-10.4.5
+tar -xf MesaLib-10.4.5.tar.bz2 
+patch -Np1 -i ../MesaLib-10.4.5-add_xdemos-1.patch 
+autoreconf -f -i
+./configure CFLAGS='-O2' CXXFLAGS='-O2' --prefix=$XORG_PREFIX --sysconfdir=/etc --enable-texture-float --enable-gles1 --enable-gles2 --enable-osmesa --enable-xa --enable-gbm --enable-glx-tls --with-egl-platforms="drm,X11" --with-gallium-drivers="nouveau,r300,r600,radeonsi,svga,swrast"
+./configure CFLAGS='-O2' CXXFLAGS='-O2' --prefix=$XORG_PREFIX --sysconfdir=/etc --enable-texture-float --enable-gles1 --enable-gles2 --enable-osmesa --enable-xa --enable-gbm --enable-glx-tls --with-egl-platforms="drm,x11" --with-gallium-drivers="nouveau,r300,r600,radeonsi,svga,swrast"
+make -C xdemos DEMOS_PREFIX=$XORG_PREFIX
+sudo make -C xdemos DEMOS_PREFIX=$XORG_PREFIX install 
+sudo install -d -m755 -v /usr/share/doc/MesaLib-10.4.5
+sudo cp -rfv docs/* /usr/share/doc/MesaLib-10.4.5
+tar -xf libepoxy-1.2.tar.gz 
+./autogen.sh --prefix=/usr 
+tar -xf nettle-2.7.1.tar.gz 
+cd nettle-2.7.1
+./configure --prefix=/usr 
+sudo chmod -v 755 /usr/lib/libhogweed.so.2.5 /usr/lib/libnettle.so.4.7 
+sudo install -dv -m755 /usr/share/doc/libnettle-2.7.1
+sudo install -dv -m755 /usr/share/doc/nettle-2.7.1
+sudo install -v -m644 nettle.html /usr/share/doc/nettle-2.7.1
+cd db-6.1.19
+cd build_unix/
+../dist/configure --prefix=/usr --enable-compat185 --enable-dbm --disable-static --enable-cxx 
+tar -xf db-6.1.19.tar.gz 
+cd db-6.1.19/build_unix/
+../dist/configure --prefix=/usr --enable-compat185 --enable-dbm --disable-static --enable-cxx --enable-tcl --with-tcl=/usr/lib
+sudo make docdir=/usr/share/doc/db-6.1.19 install 
+sudo chown -R -v root:root /usr/bin/db_* /usr/include/db{,_185,_cxx}.h /usr/lib/libdb*.{so,la} /usr/share/doc/db-6.1.19
+tar -xf cracklib-2.9.2.tar.gz 
+cd cracklib-2.9.2
+sed -i '/skipping/d' util/packer.c 
+./configure --prefix=/usr --disable-static --with-default-dict=/lib/cracklib/pw_dict
+sudo mv /usr/lib/libcrack.so.* /lib
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libcrack.so) /usr/lib/libcrack.so 
+sudo install -v -m755 -D ../cracklib-words-20080507.gz /usr/share/dict/cracklib-words.gz 
+sudo gunzip -v /usr/share/dict/cracklib-words.gz 
+sudo ln -v -sf cracklib-words /usr/share/dict/words 
+sudo install -v -m755 -d /lib/cracklib
+sudo create-cracklib-dict /usr/share/dict/cracklib-words /usr/share/dict/cracklib-extra-words 
+tar -xf libtirpc-0.2.5.tar.bz2 
+cd libtirpc-0.2.5
+./configure --prefix=/usr --sysconfdir=/etc --disable-static --diable-gssapi 
+./configure --prefix=/usr --sysconfdir=/etc --disable-static --disable-gssapi 
+sudo mv -v /usr/lib/libtirpc.so.* /lib
+sudo ln -sfv ../../lib/libtirpc.so.1.0.10 /usr/lib/libtirpc.so 
+tar -xf Linux-PAM-1.1.8
+tar -xf Linux-PAM-1.1.8-docs.tar.bz2 
+tar -xf Linux-PAM-1.1.8.tar.bz2 
+cd Linux-PAM-1.1.8
+./configure --prefix=/usr --sysconfdir=/etc --libdir=/usr/lib --enable-securedir=/lib/security --docdir=/usr/share/doc/Linux-PAM-1.1.8 
+make 
+sudo chmod -v 4755 /sbin/unix_chkpwd 
+for file in pam pam_misc pamc ; do   sudo mv /usr/lib/lib${file}.so.* /lib && sudo ln -sfv ../../lib/$(readlink /usr/lib/lib${file}.so) /usr/lib/lib${file}.so ; done
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+sudo sed -i 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@' /etc/login.defs 
+sed -i 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@' etc/login.defs 
+sed -i 's/groups$(EXEEXT) //' src/Makefile.in 
+find man -name Makefile.in -exec sed -i 's/groups\.1 / /' {} \;
+sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' -e 's@/var/spool/mail@/var/mail@' etc/login.defs 
+sed -i 's/1000/999/' etc/useradd 
+./configure --sysconfdir=/etc --with-group-name-max-length=32 && make 
+sudo make install 
+sudo mv /usr/bin/passwd /bin
+sudo sed -i 's/yes/no/' /etc/default/useradd 
+sudo install -v -m644 /etc/login.defs /etc/login.defs.orig
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE \ ; FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE \   
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE \ ; FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE \
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE do; sudo sed -i "s/^${fun}/# &/" /etc/login.defs
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE do sudo sed -i "s/^${fun}/# &/" /etc/login.defs; done
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE; do sudo sed -i "s/^${fun}/# &/" /etc/login.defs; done
+cd /etc/pam.d/;sudo -s
+cat > /etc/gtk-2.0/gtkrc << "EOF"
+include "/usr/share/themes/Clearlooks/gtk-2.0/gtkrc" 
+gtk-icon-theme-name = "elementary"
+EOF
+
+tar -xf Linux-PAM-1.1.8.tar.bz2 
+cd Linux-PAM-1.1.8
+./configure --prefix=/usr --sysconfdir=/etc --libdir=/usr/lib --enable-securedir=/lib/security --docdir=/usr/share/doc/Linux-PAM-1.1.8 
+sudo chmod -v 4755 /sbin/unix_chkpwd 
+for file in pam pam_misc pamc ; do   sudo mv /usr/lib/lib${file}.so.* /lib && sudo ln -sfv ../../lib/$(readlink /usr/lib/lib${file}.so) /usr/lib/lib${file}.so ; done
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+sudo sed -i 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@' /etc/login.defs 
+sed -i 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@' etc/login.defs 
+sed -i 's/groups$(EXEEXT) //' src/Makefile.in 
+find man -name Makefile.in -exec sed -i 's/groups\.1 / /' {} \;
+sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' -e 's@/var/spool/mail@/var/mail@' etc/login.defs 
+sed -i 's/1000/999/' etc/useradd 
+./configure --sysconfdir=/etc --with-group-name-max-length=32 && make 
+sudo mv /usr/bin/passwd /bin
+sudo sed -i 's/yes/no/' /etc/default/useradd 
+sudo install -v -m644 /etc/login.defs /etc/login.defs.orig
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE \ ; FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE \   
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE \ ; FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE \
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE do; sudo sed -i "s/^${fun}/# &/" /etc/login.defs
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE do sudo sed -i "s/^${fun}/# &/" /etc/login.defs; done
+for fun in FAIL_DELAY FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB OBSCURE_CHECKS_ENAB PROTTIME_CHECKS_ENAB QUOTAS_ENAB CONSOLE MOTD_FILE FTMP_FILE NOLOGINS_FILES ENV_HZ PASS_MIN_LEN SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES PASS_ALWAYS_WARN CHFN_AUTH ENCRYPT_METHOD ENVIRON_FILE; do sudo sed -i "s/^${fun}/# &/" /etc/login.defs; done
+cd /etc/pam.d/;sudo -s
+tar -xf libcap-2.24.tar.xz 
+cd libcap-2.24
+sed -i 's:LIBDIR:PAM_&:g' pam_cap/Makefile 
+sudo make prefix=/usr SBINDIR=/sbin PAM_LIBDIR=/lib RAISE_SETFCAP=no install 
+sudo chmod 755 /lib/libcap.so 
+sudo chmod 755 /usr/lib/libcap.so 
+sudo mv -v /usr/lib/libcap.so.* /lib
+sudo ln -sfv ../../lib/libcap.so.2 /usr/lib/libcap.so 
+tar -xf pth-2.0.7.tar.gz 
+cd pth-2.0.7
+sed -i 's#$(LOBJS): Makefile#$(LOBJS): pth_p.h Makefile#' Makefile.in 
+./configure --prefix=/usr --disable-static --mandir=/usr/share/man 
+sudo install -dv -m755 /usr/share/doc/pth-2.0.7 
+sudo install -v -m644 README PORTING SUPPORT TESTS /usr/share/doc/pth-2.0.7
+tar -xf libgpg-error-1.18.tar.bz2 
+cd libgpg-error-1.18
+sudo install -v -m644 -D README /usr/share/doc/libgpg-error-1.18/README
+tar -xf libgcrypt-1.6.2.tar.bz2 
+cd libcroco-0.6.8.tar.xz 
+cd libgcrypt-1.6.2
+./configure --prefix=/usr && make 
+./configure --prefix=/usr --disable-static 
+tar -xf cairo-1.14.0.tar.xz 
+cd cairo-1.14.0
+./configure --prefix=/usr --disable-static --enable-tee && make && sudo make install 
+tar -xf gobject-introspection-1.42.0.tar.xz 
+cd gobject-introspection-1.42.0
+tar -xf harfbuzz-0.9.38.tar.bz2 
+cd harfbuzz-0.9.38
+./configure --prefix=/usr --with-gobject && make && sudo make install 
+sudo pango-querymodules --update-cache
+tar -xf freetype-2.5.5.tar.bz2 
+cd freetype-2.5.52
+sed -i -e "/AUX.*.gxvalid/s@^# @@" -e "/AUX.*.otvalid/s@^# @@" modules.cfg 
+sed -ri -e 's:.*(#.*SUBPIXEL.*) .*:\1:' include/config/ftoption.h 
+tar -xf pango-1.36.8.tar.xz 
+cd pango-1.36.8
+tar -xf nasm-2.11.06.tar.xz 
+cd nasm-2.11.06
+tar -xf yasm-1.3.0.tar.gz 
+cd yasm-1.3.0
+sed -i 's#) ytasm.*#)#' Makefile.in 
+./configure --prefix=/usr && make && sudo make install 
+cd libjpeg-turbo-1.4.0
+tar -xf libjpeg-turbo-1.4.0.tar.gz 
+sed -i -e '/^docdir/ s:$:/libjpeg-turbo-1.4.0:' -e '/^exampledir/ s:$:/libjpeg-turbo-1.4.0:' Makefile.in 
+./configure --prefix=/usr --mandir=/usr/share/man --with-jpeg8 --disable-static 
+make 
+tar -xf glu-9.0.0.tar.bz2 
+cd glu-9.0.0
+./configure --prefix=$XORG_PREFIX --disable-static
+make && sudo make install 
+tar -xf freeglut-2.8.1.tar.gz 
+cd freeglut-2.8.1
+tar -xf tiff-4.0.3.tar.gz 
+cd tiff-4.0.3
+sed -i '/glDrawPixels/a glFlush();' tools/tiffgt.c 
+./configure --prefix=/usr --disable-static && make 
+tar -xf gdk-pixbuf-2.31.2.tar.xz 
+cd gdk-pixbuf-2.31.2
+./configure --prefix=/usr --with-x11 && make && sudo make install 
+tar -xf atk-2.14.0.tar.xz 
+cd atk-2.14.0
+./configure --prefix=/usr && make && sudo make install
+tar -xf hicolor-icon-theme-0.14.tar.xz 
+cd hicolor-icon-theme-0.14
+./configure --prefix=/usr 
+tar -xf gtk+-2.24.26.tar.xz 
+cd gtk+-2.24.26
+sed -i 's#l \(gtk-.*\).sgml#& -o \1#' doc/{faq,tutorial}/Makefile.in
+sed -i 's#l \(gtk-.*\).sgml#& -o \1#' docs/{faq,tutorial}/Makefile.in
+sed -i -e 's#pltcheck.sh#$(NULL)#g' gtk/Makefile.in 
+./configure --prefix=/usr --sysconfdir=/etc && make && sudo make install 
+tar -xf pixman-0.32.6.tar.gz 
+cd pixman-0.32.6
+./configure --prefix=/usr --disable-static && make && sudo make install 
+tar -xf xbitmaps-1.1.1.tar.bz2 
+cd xbitmaps-1.1.1
+./configure $XORG_CONFIG 
+sudo make install 
+sudo install -dv -m755 $XORG_PREFIX 
+for tmp in $(grep -v '^#' ../app-7.7.md5 |awk '{print $2}'); do tmpdir=${tmp%.tar.bz2}; tar -xf $tmp; pushd $tmpdir; ./configure $XORG_CONFIG ; make ; as_root make install ; popd 
+ll
+] ls
+export -f as_root
+for tmp in $(grep -v '^#' ../app-7.7.md5|awk '{print $2}'); do tmpdir=${tmp%.tar.bz2}; tar -xf $tmp; pushd $tmpdir ; case $tmpdir in luit-[0-9]* ) line1="#ifdef _XOPEN_SOURCE"; line2="# undef _XOPEN_SOURCE"; line3="# define _XOPEN_SOURCE 600"; line4="#endif"; sed -i -e "s@#ifdef HAVE_CONFIG_H@$line1\n$line2\n$line3\n$line4\n\n&@" sys.c; unset line1 line2 line3 line4 ; ;; esac; ./configure $XORG_CONFIG ; make ; sudo make install ; popd ; rm -rf $tmpdir; done
+tar -xf xcursor-themes-1.0.4.tar.bz2 
+cd xcursor-themes-1.0.4
+cd gtk+-2.24.26
+sed -i 's#l \(gtk-.*\).sgml#& -o \1#' doc/{faq,tutorial}/Makefile.in
+sed -i 's#l \(gtk-.*\).sgml#& -o \1#' docs/{faq,tutorial}/Makefile.in
+sed -i -e 's#pltcheck.sh#$(NULL)#g' gtk/Makefile.in 
+./configure --prefix=/usr --sysconfdir=/etc && make && sudo make install 
+tar -xf pixman-0.32.6.tar.gz 
+cd pixman-0.32.6
+./configure --prefix=/usr --disable-static && make && sudo make install 
+tar -xf xbitmaps-1.1.1.tar.bz2 
+cd xbitmaps-1.1.1
+./configure $XORG_CONFIG 
+sudo install -dv -m755 $XORG_PREFIX 
+for tmp in $(grep -v '^#' ../app-7.7.md5 |awk '{print $2}'); do tmpdir=${tmp%.tar.bz2}; tar -xf $tmp; pushd $tmpdir; ./configure $XORG_CONFIG ; make ; as_root make install ; popd 
+ll
+] ls
+export -f as_root
+cd xcursor-themes-1.0.4
+./configure $XORG_CONFIG && make 
+tar -xf xkeyboard-config-2.14.tar.bz2 
+cd xkeyboard-config-2.14
+./configure $XORG_CONFIG --with-xkb-rules-symlink=xorg
+sudo make install 
+./configure  $XORG_CONFIG --enable-glamor --enable-install-setuid --enable-suid-wrapper --enable-systemd-logind --with-xkb-output=/var/lib/xkb
+make 
+./configure  $XORG_CONFIG --enable-glamor --enable-install-setuid --enable-suid-wrapper --with-xkb-output=/var/lib/xkb
+cd xorg-server-1.17.1
+tar -xf xorg-server-1.17.1.tar.bz2 &&cd xorg-server-1.17.1&&patch -Np1 -i ../xorg-server-1.17.1-add_prime_support-1.patch 
+sudo sed "s@/usr/X11R6@$XORG_PREFIX@g" -i /etc/man_db.conf 
+sudo ln -sfv $XORG_PREFIX/share/X11 /usr/share/X11
+sudo ln -sv $XORG_PREFIX /usr/X11R6
+tar -xf xorg-server-1.17.1.tar.bz2 
+patch -Np1 -i ../xorg-server-1.17.1-add_prime_support-1.patch 
+./configure  $XORG_CONFIG --enable-glamor --enable-install-setuid --enable-suid-wrapper --with-xkb-output=/var/lib/xkbp
+make && sudo make install 
+./configure --prefix=/usr --docdir=/usr/share/doc/pcre-8.36 --enable-unicode-properties --enable-pcre16 --enable-pcre32 --enable-pcregrep-libz --enable-pcregrep-libbz2 --enable-pcretest-libreadline --disable-static 
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so 
+tar -xf glib-2.42.1
+tar -xf glib-2.42.1.tar.xz 
+cd glib-2.42.1
+./configure --prefix=/usr --with-pcre=system
+cd harfbuzz-0.9.38
+cd gobject-introspection-1.42.0
+./configure --prefix=$xorg_lib --disable-static
+tar -xf freetype-2.5.5.tar.bz2 
+tar -xf fontconfig-2.11.1.tar.bz2 
+./configure --prefix=$xorg_lib --sysconfdir=/etc --localstatedir=/var --disable-docs --docdir=$xorg_lib/doc/font-config-2.11 
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-docs --docdir=/usr/share/doc/font-config-2.11 
+tar -xf harfbuzz-0.9.38.tar.bz2 
+./configure --prefix=$xorg_lib --with-gobject
+./configure --prefix=/usr --with-gobject
+sed -i -e "/AUX.*.gxvalid/s@^# @@" -e "/AUX.*.otvalid/s@^# @@" modules.cfg &&sed -ri -e 's:.*(#.*SUBPIXEL.*) .*:\1:' include/config/ftoption.h 
+make clean
+./configure --prefix=/usr --without-harfbuzz --disable-static 
+tar -xf gobject-introspection-1.42.0.tar.xz 
+./configure --prefix=/usr --without-gobject 
+./configure --prefix=/usr --with-gobject 
+./configure --disable-static --enable-tee --prefix=/usr 
+./configure --disable-static --enable-tee --prefix=$xorg_lib
+./configure --prefix=/usr --without-harfbuzz --disable-static
+tar -xf libepoxy-1.2.tar.gz 
+cd libepoxy-1.2
+./autogen.sh --prefix=/usr 
+tar -xf xorg-server-1.17.1.tar.bz2 
+cd xorg-server-1.17.1
+patch -Np1 -i ../xorg-server-1.17.1-add_prime_support-1.patch 
+tar -xf libxcb-1.11.tar.bz2 
+./configure $XORG_CONFIG --enable-xinput --docdir='{datedir}'/doc/libxcb-1.11
+sed -i "s/pthread-stubs//" configure
+./configure $XORG_CONFIG --enable-xinput --docdir='${datedir}'/doc/libxcb-1.11
+tar -xf xcb-util-keysyms-0.4.0.tar.bz2 
+tar -xf xcb-util-image-0.4.0.tar.bz2 
+tar -xf xcb-util-renderutil-0.3.9.tar.bz2 4
+tar -xf xcb-util-wm-0.4.1.tar.bz2 
+./configure $XORG_CONFIG --enable-glamor --enable-install-setuid --enable-suid-wrapper --with-xkb-output=/var/lib/xkb 
+sudo make modules_install
+sudo cp -iLvb arch/x86_64/boot/bzImage /boot/vmlinuz-3.19-lfs-7.7-systemd 
+sudo cp -Libv System.map /boot/System.map 
+sudo cp .config /boot/config-`date +%F`
+umt
+tar -xf libevdev-1.3.2.tar.xz 
+cd libevdev-1.3.2
+tar -xf mtdev-1.1.5.tar.bz2 
+tar -xf xf86-input-evdev-2.9.1.tar.bz2 
+tar -xf xf86-input-synaptics-1.8.1.tar.bz2 
+tar -xf xf86-input-wacom-0.28.0.tar.bz2 
+tar -xf xf86-video-fbdev-0.4.4.tar.bz2 
+cd xf86-video-fbdev-0.4.4
+tar -xf xf86-video-intel-2.99.917.tar.bz2 
+./configure $XORG_CONFIG --enable-kms-only
+tar -xf xf86-video-nouveau-1.0.11.tar.bz2 
+sudo mkdir /etc/X11/xorg.conf.d
+sudo vim /etc/X11/xorg.conf.d/nvidia.conf
+tar -xf libva-1.5.0.tar.bz2 
+cd libva-1.5.0
+mkdir -pv m4
+tar -xf libva-intel-driver-1.5.0.tar.bz2 
+cd libva-intel-driver-1.5.0
+mkdir -p m4
+autoreconf -fi
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+./configure $XORG_CONFIG --docdir=/usr/share/doc/libvdpau-0.9 
+tar -xf lzo-2.09.tar.gz 
+./configure --prefix=/usr --enable-shared --disable-static --docdir=/usr/share/doc/lzo-2.09
+tar -xf libarchive-3.1.2.tar.gz 
+cd libarchive-3.1.2
+tar -xf libtasn1-4.2.tar.gz 
+cd libtasn1-4.2
+URL=http://anduin.linuxfromscratch.org/sources/other/certdata.txt
+make-ca.sh && remove-expired-certs.sh certs 
+wget $URL 
+remove-expired-certs.sh certs/
+make-ca.sh 
+remove-expired-certs.sh certs
+SSLDIR=/etc/ssl
+sudo install -v ${SSLDIR}/certs
+sudo install -d ${SSLDIR}/certs
+sudo cp -v certs/*.pem ${SSLDIR}/certs
+sudo c_rehash 
+sudo install BLFS-ca-bundle-20161112.crt ${SSLDIR}/ca-bundle.crt
+sudo ln -sfv ../ca-bundle.crt ${SSLDIR}/certs/ca-certificates.crt
+unset SSLDIR
+tar -xf gnutls-3.3.12.tar.xz 
+cd gnutls-3.3.12
+./configure --prefix=/usr --with-default-trust-store-file=/etc/ssl/ca-bundle.crt 
+tar -xf curl-7.40.0.tar.lzma 
+cd curl-7.40.0
+./configure --prefix=/usr --disable-static --enable-threaded-resolver
+tar -xf cmake-3.1.3.tar.gz 
+cd cmake-3.1.3
+./bootstrap --prefix=/usr --system-libs --mandir=/usr/share/man --docdir=/usr/share/doc/cmake-3.1.3
+tar -xf libvdpau-va-gl-0.3.4.tar.gz 
+cd libvdpau-va-gl-0.3.4
+mkdir build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$XORG_PREFIX .. 
+tar -xf twm-1.0.8.tar.bz2 
+cd twm-1.0.8
+wget `cat ../xterm.url`
+tar -xf xterm-314.tgz 
+cd xterm-314
+TERMINFO=/usr/share/terminfo ./configure $XORG_CONFIG  --with-app-defaults=/etc/X11/app-defaults
+sudo make install-ti
+tar -xf xclock-1.0.7.tar.bz2 
+cd xclock-1.0.7
+tar -xf xinit-1.3.4.tar.bz2 
+cd xinit-1.3.4
+./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
+tar -xf libxfce4util-4.10.1.tar.bz2 
+cd libxfce4util-4.10.1
+./configure --prefix=/usr --sysconfdir=/etc
+sudo groupadd -g 18 messagebus
+sudo useradd -c "D-Bus Message Daemon User" -d /var/run/dbus -u 18 -g message -s /bin/false messagebus
+sudo useradd -c "D-Bus Message Daemon User" -d /var/run/dbus -u 18 -g messagebus -s /bin/false messagebus
+tar -xf dbus-1.8.16.tar.gz 
+cd dbus-1.8.16
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-doxygen-docs --disable-xml-docs --disable-static --with-console-auth-dir=/run/cosole/ --docdir=/usr/share/doc/dbus-1.8.16
+tar -xf dbus-glib-0.104.tar.gz 
+cd dbus-glib-0.104
+./configure --prefix=/usr --sysconfdir=/etc --disable-static
+tar -xf xfconf-4.10.0.tar.bz2 
+cd xfconf-4.10.0
+tar -xf atk-2.14.0.tar.xz 
+cd atk-2.14.0
+tar -xf gdk-pixbuf-2.31.2.tar.xz 
+cd gdk-pixbuf-2.31.2
+./configure --prefix=/usr --with-x11 
+tar -xf cairo-1.14.0.tar.xz 
+cd cairo-1.14.0
+./configure --prefix=/usr --disable-static --enable-tee
+tar -xf pango-1.36.8.tar.xz 
+cd pango-1.36.8
+tar -xf gtk+-2.24.26.tar.xz 
+make n
+ll ~
+tar -xf libxfce4ui-4.10.0.tar.bz2 
+cd libxfce4ui-4.10.0
+c startup-notification-0.12
+cd startup-notification-0.12
+tar -xf exo-0.10.2.tar.bz2 
+cd exo-0.10.2
+tar -xf URI-1.65.tar.gz
+cd URI-1.65
+tar -xf garcon-0.3.0.tar.bz2 
+cd garcon-0.3.0
+tar -xf gtk-xfce-engine-3.0.1.tar.bz2 
+cd gtk-xfce-engine-3.0.1
+tar -xf libwnck-2.30.7.tar.xz 
+cd libwnck-2.30.7
+wget `cat blfs-book/xcb-util.txt`
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+./configure $XORG_CONFIG 
+tar -xf startup-notification-0.12.tar.gz 
+./configure --prefix=/usr --disable-static --program-suffix=-1
+./configure --prefix=/usr --disable-static --program-suffix=-1 --without-gobject-introspection
+./configure --prefix=/usr --disable-static --program-suffix=-1 --disable-gobject-introspection
+./configure --prefix=/usr --disable-static --program-suffix=-1 --disable-gobject
+./configure --prefix=/usr --disable-static --program-suffix=-1 --without-gobject
+./configure --prefix=/usr --disable-static --program-suffix=-1 --enable-introspection=no
+make GETTEXT_PACKAGE=libwnck-1
+tar -xf libglade-2.6.4.tar.bz2 
+cd libglade-2.6.4
+sed -i '/DG_DISABLE_DEPRECATED/d' glade/Makefile.in 
+./configure --prefix=/usr --disable-static 
+tar -xf libxfcegui4-4.10.0.tar.bz2 
+cd libxfcegui4-4.10.0
+sudo make  install 
+tar -xf xfce4-panel-4.10.1.tar.bz2 
+cd xfce4-panel-4.10.1
+tar -xf libcroco-0.6.8.tar.xz 
+cd libcroco-0.6.8
+tar -xf librsvg-2.40.7.tar.xz 
+cd librsvg-2.40.7
+tar -xf vala-0.26.2.tar.xz 
+cd vala-0.26.2
+make && sudo make install&&cd ..
+./configure --prefix=/usr --enable-vala --disable-static --disable-introspection
+tar -xf libxklavier-5.4.tar.bz2 
+cd libxklavier-5.4
+tar -xf iso-codes-3.57.tar.xz 
+cd iso-codes-3.57
+./configure --prefix=/usr --disable-introspection --disable-static
+tar -xf xfce4-xkb-plugin-0.5.6.tar.bz2 
+cd xfce4-xkb-plugin-0.5.6
+./configure --prefix=/usr --disable-static --disable-debug
+tar -xf XML-Simple-2.20.tar.gz
+cd XML-Simple-2.20
+perl Makefile.PL 
+tar -xf icon-naming-utils-0.8.90.tar.bz2 
+cd icon-naming-utils-0.8.90
+tar -xf gnome-icon-theme-3.12.0.tar.xz 
+cd gnome-icon-theme-3.12.0
+tar -xf lxde-icon-theme-0.5.1.tar.xz 
+cd lxde-icon-theme-0.5.1
+tar -xf libnotify-0.7.6.tar.xz 
+cd libnotify-0.7.6
+tar -xf at-spi2-core-2.14.1.tar.xz 
+cd at-spi2-core-2.14.1
+./configure --prefix=/usr --sysconfdir=/etc --disable-introspection
+tar -xf at-spi2-atk-2.14.1.tar.xz 
+cd at-spi2-atk-2.14.1
+./configure --prefix=/usr 
+tar -xf gtk+-3.14.8.tar.xz 
+cd gtk+-3.14.8
+./configure --prefix=/usr --sysconfdir=/etc --enable-broadway-backend --enable-x11-backend --disable-wayland-backend --disable-introspection
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+sudo gtk-query-immodules-3.0 --update-cache
+./configure --prefix=/usr --disable-static --disable-introspection
+tar -xf Thunar-1.6.4.tar.bz2 
+cd Thunar-1.6.4
+tar -xf tumbler-0.1.30.tar.bz2 
+cd tumbler-0.1.30
+make && sudo make install 
+tar -xf xfce4-appfinder-4.10.1.tar.bz2 
+cd xfce4-appfinder-4.10.1
+./configure --prefix=/usr
+tar -xf upower-0.9.23.tar.xz 
+cd upower-0.9.23
+tar -xf libusb-1.0.19.tar.bz2 
+cd libusb-1.0.19
+./configure --prefix=/usr --disable-static
+tar -xf nspr-4.10.8.tar.gz 
+cd nspr-4.10.8
+tar -xf mozjs17.0.0.tar.gz 
+mozjs17.0.0/
+cd mozjs17.0.0
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Pam
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Linux-Pam
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-libpam 
+tar -xf polkit-0.112.tar.gz 
+cd polkit-0.112
+tar -xf upower-0.9.23
+tar -xf pm-utils-1.4.1.tar.gz 
+cd pm-utils-1.4.1
+tar -xf usbutils-008.tar.xz 
+cd usbutils-008
+tar -xf eudev-1.7.tar.gz 
+cd eudev-1.7
+./configure --enable-deprecated --disable-introspection --disable-static --localstatedir=/var --sysconfdir=/etc --prefix=/usr 
+sudo make install 
+tar -xf xfce4-power-manager-1.4.2.tar.bz2 
+cd xfce4-power-manager-1.4.2
+./configure --prefix=/usr --sysconfdir=/etc 
+make 
+sudo make docdir=/usr/share/doc/xfce4-power-manager-1.4.2 imagesdir=/usr/share/doc/xfce4-power-manager-1.4.2/images install 
+tar -xf xfce4-appfinder-4.10.1.tar.bz2 
+cd xfce4-appfinder-4.10.1
+./configure --prefix=/usr
+tar -xf upower-0.9.23.tar.xz 
+cd upower-0.9.23
+tar -xf libusb-1.0.19.tar.bz2 
+cd libusb-1.0.19
+tar -xf nspr-4.10.8.tar.gz 
+cd nspr-4.10.8
+tar -xf mozjs17.0.0.tar.gz 
+mozjs17.0.0/
+cd mozjs17.0.0
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Pam
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Linux-Pam
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-libpam 
+tar -xf polkit-0.112.tar.gz 
+cd polkit-0.112
+tar -xf upower-0.9.23
+tar -xf pm-utils-1.4.1.tar.gz 
+cd pm-utils-1.4.1
+tar -xf usbutils-008.tar.xz 
+cd usbutils-008
+tar -xf eudev-1.7.tar.gz 
+cd eudev-1.7
+./configure --enable-deprecated --disable-introspection --disable-static --localstatedir=/var --sysconfdir=/etc --prefix=/usr 
+tar -xf xfce4-power-manager-1.4.2.tar.bz2 
+cd xfce4-power-manager-1.4.2
+sudo make docdir=/usr/share/doc/xfce4-power-manager-1.4.2 imagesdir=/usr/share/doc/xfce4-power-manager-1.4.2/images install 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf libogg-1.3.2.tar.xz 
+cd libogg-1.3.2
+tar -xf libvorbis-1.3.4.tar.xz 
+cd libvorbis-1.3.4
+./configure --prefix=/usr --disable-static
+tar -xf alsa-lib-1.0.28.tar.bz2 
+cd alsa-lib-1.0.28
+./configure 
+tar -xf gstreamer-1.4.5.tar.xz 
+cd gstreamer-1.4.5
+./configure --
+./configure --prefix=/usr             --with-package-name="GStreamer 1.4.5 BLFS"             --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" && make
+./configure --prefix=/usr             --with-package-name="GStreamer 1.4.5 BLFS"             --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" && make
+./configure --prefix=/usr  --with-package-name="GStreamer 1.4.5 BLFS" --disable-introspection  --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" && make
+tar -xf libcanberra-0.30.tar.xz 
+cd libcanberra-0.30
+./configure --prefix=/usr --disable-oss 
+tar -xf xfce4-settings-4.11.0.tar.bz2 
+cd xfce4-settings-4.11.0
+tar -xf xfdesktop-4.10.3.tar.bz2 
+cd xfdesktop-4.10.3
+./configure --prefix=/usr --sysconfdir=/etc 
+tar -xf xfwm4-4.10.1.tar.bz2 
+cd xfwm4-4.10.1
+tar -xf desktop-file-utils-0.22.tar.xz 
+cd desktop-file-utils-0.22
+tar -xf shared-mime-info-1.4.tar.xz 
+cd shared-mime-info-1.4
+./configure --prefix=/usr 
+make -j1
+tar -xf xfce4-session-4.10.1.tar.bz2 
+cd xfce4-session-4.10.1
+./configure --prefix=/usr --sysconfdir=/etc --disable-legacy-sm
+tar -xf vte-0.38.3.tar.xz 
+cd vte-0.38.3
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static --disable-introspection
+tar -xf gobject-introspection-1.42.0.tar.xz 
+cd gobject-introspection-1.42.0
+./configure --prefix=/usr --disable-static 
+sudo make install 
+make 
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static 
+sudo find . -name *.ko -exec sudo cp -iv '{}' ../tmp ';'
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+./configure $XORG_CONFIG 
+make 
+sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+./configure $XORG_CONFIG 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf startup-notification-0.12.tar.gz 
+cd startup-notification-0.12
+./configure --prefix=/usr --disable-static
+tar -xf  libwnck-2.30.7.tar.xz 
+cd libwnck-2.30.7
+./configure --prefix=/usr --disable-static --program-suffix=-1
+meke GETTEXT_PACKAGE=libwnck-1
+make GETTEXT_PACKAGE=libwnck-1
+tar -xf gdk-pixbuf-2.31.2.tar.xz 
+cd gdk-pixbuf-2.31.2
+./configure --prefix=/usr --with-x11
+make dist
+make clean
+./configure --prefix=/usr --with-x11 --disable-gtk-doc
+./configure --prefix=/usr --with-x11 --disable-gtk-doc --disable-introspection
+sudo make install 
+make 
+./configure --prefix=/usr 
+make 2>../libwnck-com.err
+sudo cp -Librv /lib/ /etc /opt/ .
+pushd /home/tmp/Lfs/Blfs/blfs-book/
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+./configure --prefix=/usr --docdir=/usr/share/doc/pcre-8.36 --enable-unicode-properties --enable-pcre16 --enable-pcre32 --enable-pcregrep-libz --enable-pcregrep-libbz2 --enable-pcretest-libreadline --disable-static 
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so 
+tar -xf glib-2.42.1
+tar -xf glib-2.42.1.tar.xz 
+cd glib-2.42.1
+./configure --prefix=/usr --with-pcre=system
+cd harfbuzz-0.9.38
+cd gobject-introspection-1.42.0
+./configure --prefix=$xorg_lib --disable-static
+tar -xf freetype-2.5.5.tar.bz2 
+tar -xf fontconfig-2.11.1.tar.bz2 
+./configure --prefix=$xorg_lib --sysconfdir=/etc --localstatedir=/var --disable-docs --docdir=$xorg_lib/doc/font-config-2.11 
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-docs --docdir=/usr/share/doc/font-config-2.11 
+tar -xf harfbuzz-0.9.38.tar.bz2 
+./configure --prefix=$xorg_lib --with-gobject
+./configure --prefix=/usr --with-gobject
+sed -i -e "/AUX.*.gxvalid/s@^# @@" -e "/AUX.*.otvalid/s@^# @@" modules.cfg &&sed -ri -e 's:.*(#.*SUBPIXEL.*) .*:\1:' include/config/ftoption.h 
+./configure --prefix=/usr --without-harfbuzz --disable-static 
+tar -xf gobject-introspection-1.42.0.tar.xz 
+./configure --prefix=/usr --without-gobject 
+./configure --prefix=/usr --with-gobject 
+./configure --disable-static --enable-tee --prefix=/usr 
+./configure --disable-static --enable-tee --prefix=$xorg_lib
+./configure --prefix=/usr --without-harfbuzz --disable-static
+tar -xf libepoxy-1.2.tar.gz 
+cd libepoxy-1.2
+./autogen.sh --prefix=/usr 
+tar -xf xorg-server-1.17.1.tar.bz2 
+cd xorg-server-1.17.1
+patch -Np1 -i ../xorg-server-1.17.1-add_prime_support-1.patch 
+tar -xf libxcb-1.11.tar.bz2 
+./configure $XORG_CONFIG --enable-xinput --docdir='{datedir}'/doc/libxcb-1.11
+sed -i "s/pthread-stubs//" configure
+./configure $XORG_CONFIG --enable-xinput --docdir='${datedir}'/doc/libxcb-1.11
+tar -xf xcb-util-keysyms-0.4.0.tar.bz2 
+tar -xf xcb-util-image-0.4.0.tar.bz2 
+tar -xf xcb-util-renderutil-0.3.9.tar.bz2 4
+tar -xf xcb-util-wm-0.4.1.tar.bz2 
+./configure $XORG_CONFIG --enable-glamor --enable-install-setuid --enable-suid-wrapper --with-xkb-output=/var/lib/xkb 
+sudo make modules_install
+sudo cp -iLvb arch/x86_64/boot/bzImage /boot/vmlinuz-3.19-lfs-7.7-systemd 
+sudo cp -Libv System.map /boot/System.map 
+sudo cp .config /boot/config-`date +%F`
+umt
+tar -xf libevdev-1.3.2.tar.xz 
+cd libevdev-1.3.2
+tar -xf mtdev-1.1.5.tar.bz2 
+tar -xf xf86-input-evdev-2.9.1.tar.bz2 
+tar -xf xf86-input-synaptics-1.8.1.tar.bz2 
+tar -xf xf86-input-wacom-0.28.0.tar.bz2 
+tar -xf xf86-video-fbdev-0.4.4.tar.bz2 
+cd xf86-video-fbdev-0.4.4
+tar -xf xf86-video-intel-2.99.917.tar.bz2 
+./configure $XORG_CONFIG --enable-kms-only
+tar -xf xf86-video-nouveau-1.0.11.tar.bz2 
+sudo mkdir /etc/X11/xorg.conf.d
+sudo vim /etc/X11/xorg.conf.d/nvidia.conf
+tar -xf libva-1.5.0.tar.bz2 
+cd libva-1.5.0
+mkdir -pv m4
+tar -xf libva-intel-driver-1.5.0.tar.bz2 
+cd libva-intel-driver-1.5.0
+mkdir -p m4
+autoreconf -fi
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+./configure $XORG_CONFIG --docdir=/usr/share/doc/libvdpau-0.9 
+tar -xf lzo-2.09.tar.gz 
+./configure --prefix=/usr --enable-shared --disable-static --docdir=/usr/share/doc/lzo-2.09
+tar -xf libarchive-3.1.2.tar.gz 
+cd libarchive-3.1.2
+tar -xf libtasn1-4.2.tar.gz 
+cd libtasn1-4.2
+URL=http://anduin.linuxfromscratch.org/sources/other/certdata.txt
+make-ca.sh && remove-expired-certs.sh certs 
+wget $URL 
+remove-expired-certs.sh certs/
+make-ca.sh 
+remove-expired-certs.sh certs
+SSLDIR=/etc/ssl
+sudo install -v ${SSLDIR}/certs
+sudo install -d ${SSLDIR}/certs
+sudo cp -v certs/*.pem ${SSLDIR}/certs
+sudo c_rehash 
+sudo install BLFS-ca-bundle-20161112.crt ${SSLDIR}/ca-bundle.crt
+sudo ln -sfv ../ca-bundle.crt ${SSLDIR}/certs/ca-certificates.crt
+unset SSLDIR
+tar -xf gnutls-3.3.12.tar.xz 
+cd gnutls-3.3.12
+./configure --prefix=/usr --with-default-trust-store-file=/etc/ssl/ca-bundle.crt 
+tar -xf curl-7.40.0.tar.lzma 
+cd curl-7.40.0
+./configure --prefix=/usr --disable-static --enable-threaded-resolver
+tar -xf cmake-3.1.3.tar.gz 
+cd cmake-3.1.3
+./bootstrap --prefix=/usr --system-libs --mandir=/usr/share/man --docdir=/usr/share/doc/cmake-3.1.3
+tar -xf libvdpau-va-gl-0.3.4.tar.gz 
+cd libvdpau-va-gl-0.3.4
+mkdir build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$XORG_PREFIX .. 
+tar -xf twm-1.0.8.tar.bz2 
+cd twm-1.0.8
+wget `cat ../xterm.url`
+tar -xf xterm-314.tgz 
+cd xterm-314
+TERMINFO=/usr/share/terminfo ./configure $XORG_CONFIG  --with-app-defaults=/etc/X11/app-defaults
+sudo make install-ti
+tar -xf xclock-1.0.7.tar.bz2 
+cd xclock-1.0.7
+tar -xf xinit-1.3.4.tar.bz2 
+cd xinit-1.3.4
+./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
+tar -xf libxfce4util-4.10.1.tar.bz2 
+cd libxfce4util-4.10.1
+./configure --prefix=/usr --sysconfdir=/etc
+sudo groupadd -g 18 messagebus
+sudo useradd -c "D-Bus Message Daemon User" -d /var/run/dbus -u 18 -g message -s /bin/false messagebus
+sudo useradd -c "D-Bus Message Daemon User" -d /var/run/dbus -u 18 -g messagebus -s /bin/false messagebus
+tar -xf dbus-1.8.16.tar.gz 
+cd dbus-1.8.16
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-doxygen-docs --disable-xml-docs --disable-static --with-console-auth-dir=/run/cosole/ --docdir=/usr/share/doc/dbus-1.8.16
+tar -xf dbus-glib-0.104.tar.gz 
+cd dbus-glib-0.104
+./configure --prefix=/usr --sysconfdir=/etc --disable-static
+tar -xf xfconf-4.10.0.tar.bz2 
+cd xfconf-4.10.0
+tar -xf atk-2.14.0.tar.xz 
+cd atk-2.14.0
+./configure --prefix=/usr --with-x11 
+tar -xf cairo-1.14.0.tar.xz 
+cd cairo-1.14.0
+./configure --prefix=/usr --disable-static --enable-tee
+tar -xf pango-1.36.8.tar.xz 
+cd pango-1.36.8
+tar -xf gtk+-2.24.26.tar.xz 
+make n
+ll ~
+tar -xf libxfce4ui-4.10.0.tar.bz2 
+cd libxfce4ui-4.10.0
+c startup-notification-0.12
+tar -xf exo-0.10.2.tar.bz2 
+cd exo-0.10.2
+tar -xf URI-1.65.tar.gz
+cd URI-1.65
+tar -xf garcon-0.3.0.tar.bz2 
+cd garcon-0.3.0
+tar -xf gtk-xfce-engine-3.0.1.tar.bz2 
+cd gtk-xfce-engine-3.0.1
+tar -xf libwnck-2.30.7.tar.xz 
+wget `cat blfs-book/xcb-util.txt`
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+./configure $XORG_CONFIG 
+./configure --prefix=/usr --disable-static --program-suffix=-1 --without-gobject-introspection
+./configure --prefix=/usr --disable-static --program-suffix=-1 --disable-gobject-introspection
+./configure --prefix=/usr --disable-static --program-suffix=-1 --disable-gobject
+./configure --prefix=/usr --disable-static --program-suffix=-1 --without-gobject
+./configure --prefix=/usr --disable-static --program-suffix=-1 --enable-introspection=no
+tar -xf libglade-2.6.4.tar.bz2 
+cd libglade-2.6.4
+sed -i '/DG_DISABLE_DEPRECATED/d' glade/Makefile.in 
+./configure --prefix=/usr --disable-static 
+tar -xf libxfcegui4-4.10.0.tar.bz2 
+cd libxfcegui4-4.10.0
+sudo make  install 
+tar -xf xfce4-panel-4.10.1.tar.bz2 
+cd xfce4-panel-4.10.1
+tar -xf libcroco-0.6.8.tar.xz 
+cd libcroco-0.6.8
+tar -xf librsvg-2.40.7.tar.xz 
+cd librsvg-2.40.7
+tar -xf vala-0.26.2.tar.xz 
+cd vala-0.26.2
+make && sudo make install&&cd ..
+./configure --prefix=/usr --enable-vala --disable-static --disable-introspection
+tar -xf libxklavier-5.4.tar.bz2 
+cd libxklavier-5.4
+tar -xf iso-codes-3.57.tar.xz 
+cd iso-codes-3.57
+./configure --prefix=/usr --disable-introspection --disable-static
+tar -xf xfce4-xkb-plugin-0.5.6.tar.bz2 
+cd xfce4-xkb-plugin-0.5.6
+./configure --prefix=/usr --disable-static --disable-debug
+tar -xf XML-Simple-2.20.tar.gz
+cd XML-Simple-2.20
+perl Makefile.PL 
+tar -xf icon-naming-utils-0.8.90.tar.bz2 
+cd icon-naming-utils-0.8.90
+tar -xf gnome-icon-theme-3.12.0.tar.xz 
+cd gnome-icon-theme-3.12.0
+tar -xf lxde-icon-theme-0.5.1.tar.xz 
+cd lxde-icon-theme-0.5.1
+tar -xf libnotify-0.7.6.tar.xz 
+cd libnotify-0.7.6
+tar -xf at-spi2-core-2.14.1.tar.xz 
+cd at-spi2-core-2.14.1
+./configure --prefix=/usr --sysconfdir=/etc --disable-introspection
+tar -xf at-spi2-atk-2.14.1.tar.xz 
+cd at-spi2-atk-2.14.1
+tar -xf gtk+-3.14.8.tar.xz 
+cd gtk+-3.14.8
+./configure --prefix=/usr --sysconfdir=/etc --enable-broadway-backend --enable-x11-backend --disable-wayland-backend --disable-introspection
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+sudo gtk-query-immodules-3.0 --update-cache
+./configure --prefix=/usr --disable-static --disable-introspection
+tar -xf Thunar-1.6.4.tar.bz2 
+cd Thunar-1.6.4
+tar -xf tumbler-0.1.30.tar.bz2 
+cd tumbler-0.1.30
+make && sudo make install 
+tar -xf xfce4-appfinder-4.10.1.tar.bz2 
+cd xfce4-appfinder-4.10.1
+./configure --prefix=/usr
+tar -xf upower-0.9.23.tar.xz 
+cd upower-0.9.23
+tar -xf libusb-1.0.19.tar.bz2 
+cd libusb-1.0.19
+tar -xf nspr-4.10.8.tar.gz 
+cd nspr-4.10.8
+tar -xf mozjs17.0.0.tar.gz 
+mozjs17.0.0/
+cd mozjs17.0.0
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Pam
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Linux-Pam
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-libpam 
+tar -xf polkit-0.112.tar.gz 
+cd polkit-0.112
+tar -xf upower-0.9.23
+tar -xf pm-utils-1.4.1.tar.gz 
+cd pm-utils-1.4.1
+tar -xf usbutils-008.tar.xz 
+cd usbutils-008
+tar -xf eudev-1.7.tar.gz 
+cd eudev-1.7
+./configure --enable-deprecated --disable-introspection --disable-static --localstatedir=/var --sysconfdir=/etc --prefix=/usr 
+tar -xf xfce4-power-manager-1.4.2.tar.bz2 
+cd xfce4-power-manager-1.4.2
+./configure --prefix=/usr --sysconfdir=/etc 
+sudo make docdir=/usr/share/doc/xfce4-power-manager-1.4.2 imagesdir=/usr/share/doc/xfce4-power-manager-1.4.2/images install 
+tar -xf xfce4-appfinder-4.10.1.tar.bz2 
+cd xfce4-appfinder-4.10.1
+./configure --prefix=/usr
+tar -xf upower-0.9.23.tar.xz 
+cd upower-0.9.23
+tar -xf libusb-1.0.19.tar.bz2 
+cd libusb-1.0.19
+tar -xf nspr-4.10.8.tar.gz 
+cd nspr-4.10.8
+tar -xf mozjs17.0.0.tar.gz 
+mozjs17.0.0/
+cd mozjs17.0.0
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Pam
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-Linux-Pam
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+./configure --sysconfdir=/etc --with-group-name-max-length=32 --without-libpam 
+tar -xf polkit-0.112.tar.gz 
+cd polkit-0.112
+tar -xf upower-0.9.23
+tar -xf pm-utils-1.4.1.tar.gz 
+cd pm-utils-1.4.1
+tar -xf usbutils-008.tar.xz 
+cd usbutils-008
+tar -xf eudev-1.7.tar.gz 
+cd eudev-1.7
+./configure --enable-deprecated --disable-introspection --disable-static --localstatedir=/var --sysconfdir=/etc --prefix=/usr 
+tar -xf xfce4-power-manager-1.4.2.tar.bz2 
+cd xfce4-power-manager-1.4.2
+sudo make docdir=/usr/share/doc/xfce4-power-manager-1.4.2 imagesdir=/usr/share/doc/xfce4-power-manager-1.4.2/images install 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf libogg-1.3.2.tar.xz 
+cd libogg-1.3.2
+tar -xf libvorbis-1.3.4.tar.xz 
+cd libvorbis-1.3.4
+tar -xf alsa-lib-1.0.28.tar.bz2 
+cd alsa-lib-1.0.28
+./configure 
+tar -xf gstreamer-1.4.5.tar.xz 
+cd gstreamer-1.4.5
+./configure --
+./configure --prefix=/usr             --with-package-name="GStreamer 1.4.5 BLFS"             --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" && make
+./configure --prefix=/usr             --with-package-name="GStreamer 1.4.5 BLFS"             --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" && make
+./configure --prefix=/usr  --with-package-name="GStreamer 1.4.5 BLFS" --disable-introspection  --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" && make
+tar -xf libcanberra-0.30.tar.xz 
+cd libcanberra-0.30
+./configure --prefix=/usr --disable-oss 
+tar -xf xfce4-settings-4.11.0.tar.bz2 
+cd xfce4-settings-4.11.0
+tar -xf xfdesktop-4.10.3.tar.bz2 
+cd xfdesktop-4.10.3
+./configure --prefix=/usr --sysconfdir=/etc 
+tar -xf xfwm4-4.10.1.tar.bz2 
+cd xfwm4-4.10.1
+tar -xf desktop-file-utils-0.22.tar.xz 
+cd desktop-file-utils-0.22
+tar -xf shared-mime-info-1.4.tar.xz 
+cd shared-mime-info-1.4
+make -j1
+tar -xf xfce4-session-4.10.1.tar.bz2 
+cd xfce4-session-4.10.1
+./configure --prefix=/usr --sysconfdir=/etc --disable-legacy-sm
+tar -xf vte-0.38.3.tar.xz 
+cd vte-0.38.3
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static --disable-introspection
+tar -xf gobject-introspection-1.42.0.tar.xz 
+cd gobject-introspection-1.42.0
+./configure --prefix=/usr --disable-static 
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static 
+sudo find . -name *.ko -exec sudo cp -iv '{}' ../tmp ';'
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+./configure $XORG_CONFIG 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf startup-notification-0.12.tar.gz 
+cd startup-notification-0.12
+./configure --prefix=/usr --disable-static
+tar -xf  libwnck-2.30.7.tar.xz 
+cd libwnck-2.30.7
+./configure --prefix=/usr --disable-static --program-suffix=-1
+meke GETTEXT_PACKAGE=libwnck-1
+make GETTEXT_PACKAGE=libwnck-1
+tar -xf gdk-pixbuf-2.31.2.tar.xz 
+cd gdk-pixbuf-2.31.2
+./configure --prefix=/usr --with-x11
+make dist
+make clean
+./configure --prefix=/usr --with-x11 --disable-gtk-doc
+./configure --prefix=/usr --with-x11 --disable-gtk-doc --disable-introspection
+sudo make install 
+make 
+./configure --prefix=/usr 
+make 2>../libwnck-com.err
+sudo cp -Librv /lib/ /etc /opt/ .
+tar -xf llvm-3.5.1.src.tar.xz 
+cd llvm-3.5.1.src 
+./llvm.sh &&cs
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+tar -xf llvm-3.5.1.src.tar.xz 
+cd llvm-3.5.1.src
+./llvm.sh ;cs
+./xorg-proto-install.sh 
+./xorg-lib-install.sh 
+./bootstrap --prefix=/usr --system-libs --mandir=/usr/share/man --docdir=/usr/share/doc/cmake-3.13
+sudo make uninstall 
+cd llvm-3.5.1.src
+./llvm.sh 
+tar -xf llvm-3.5.1.src.tar.xz 
+./llvm.sh &&exit
+tar -xf llvm-3.5.1.src.tar.xz 
+cd llvm-3.5.1.src 
+./llvm.sh &&cs
+tar -xf llvm-3.5.1.src.tar.xz 
+cd llvm-3.5.1.src
+./llvm.sh ;cs
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+ll /usr/X11R6 
+sudo install -v -m755 -d $XORG_PREFIX 
+sudo install -v -m755 -d $XORG_PREFIX/lib
+sudo ln -sf lib $XORG_PREFIX/lib64
+tar -xf util-macros-1.19.0.tar.bz2 
+cd util-macros-1.19.0
+cd lib/xorg-proto/
+ls
+bash -e
+tar -xf libXau-1.0.8.tar.bz2 
+cd libXau-1.0.8
+tar -xf libXdmcp-1.1.1.tar.bz2 
+cd libXdmcp-1.1.1
+tar -xf xcb-proto-1.11.tar.bz2 
+cd xcb-proto-1.11
+./configure $XORG_CONFIG 
+tar -xf libxcb-1.11.tar.bz2 
+cd libxcb-1.11
+./libxcb.sh 
+make 
+sudo make install 
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+./install-app.sh 
+tar -xf util-macros-1.19.0.tar.bz2 
+cd util-macros-1.19.0
+cd lib/xorg-proto/
+ls
+bash -e
+tar -xf libXau-1.0.8.tar.bz2 
+cd libXau-1.0.8
+tar -xf libXdmcp-1.1.1.tar.bz2 
+cd libXdmcp-1.1.1
+tar -xf xcb-proto-1.11.tar.bz2 
+cd xcb-proto-1.11
+tar -xf libxcb-1.11.tar.bz2 
+cd libxcb-1.11
+./libxcb.sh 
+ll /usr/lib/X11 /usr/include/X11
+tar -xf xcb-util-0.4.0.tar.bz2 
+cd xcb-util-0.4.0
+make 
+tar -xf xcb-util-image-0.4.0.tar.bz2 
+cd xcb-util-image-0.4.0
+tar -xf xcb-util-keysyms-0.4.0.tar.bz2 
+cd xcb-util-keysyms-0.4.0
+tar -xf xcb-util-renderutil-0.3.9.tar.bz2 
+cd xcb-util-renderutil-0.3.9
+./configure $XORG_CONFIG && make && sudo make install 
+tar -xf xcb-util-wm-0.4.1.tar.bz2 
+cd xcb-util-wm-0.4.1
+./configure $XORG_CONFIG && make && sudo make install && sudo /sbin/ldconfig -v
+tar -xf libdrm-2.4.59.tar.bz2 
+cd libdrm-2.4.59
+./libdrm.sh 
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libvdpau-0.9 --disable-documentation 
+make && sudo make install && sudo /sbin/ldconfig -v&&cd ..
+tar -xf glu-9.0.0.tar.bz2 
+cd glu-9.0.0
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+cp ../mesa_lib.sh .
+tar -xf MesaLib-10.4.5.tar.bz2 
+cd Mesa-10.4.5/
+./mesa_lib.sh 
+tar -xf xbitmaps-1.1.1.tar.bz2 
+cd xbitmaps-1.1.1
+./configure $XORG_CONFIG 
+sudo make install 
+tar -xf Linux-PAM-1.1.8.tar.bz2 
+cd Linux-PAM-1.1.8
+./linuxpam.sh 
+cd lib/xorg-app/
+./install-xorg-font.sh 
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+tar -xf xcursor-themes-1.0.4.tar.bz2 
+cd xcursor-themes-1.0.4
+./configure $XORG_CONFIG && make && sudo make install 
+cd lib/xorg-font/
+./install-xorg-font.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+./install-xorg-font.sh 
+tar -xf xcursor-themes-1.0.4.tar.bz2 
+cd xcursor-themes-1.0.4
+./configure $XORG_CONFIG && make && sudo make install 
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+cd lib/xorg-font/
+tar -xf xkeyboard-config-2.14.tar.bz2 
+cd xkeyboard-config-2.14
+./configure $XORG_CONFIG --with-xkb-rules-symlink=xorg
+tar -xf pixman-0.32.6.tar.gz 
+cd pixman-0.32.6
+./configure --prefix=/usr --disable-static
+./configure --prefix=$xorg_lib --disable-static
+./configure --prefix=/usr/local --disable-static
+tar -xf libepoxy-1.2.tar.gz 
+cd libepoxy-1.2
+./autogen.sh --prefix=/usr 
+sudo make uninstall 
+./autogen.sh --prefix=$xorg_lib 
+make 
+sudo make install 
+sudo rm -iv /usr/sbin/*cap
+sudo rm -iv /usr/sbin/cap*
+tar -xf libgcrypt-1.6.2.tar.bz2 
+cd libgcrypt-1.6.2
+./configure --prefix=/usr 
+./configure --help
+./linuxpam.sh 
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+./configure --prefix=/usr 
+make 
+sudo make install 
+tar -xf xorg-server-1.1
+tar xf xorg-server-1.17.1.tar.bz2 
+cd xorg-server-1.17.1
+./xorg-server.sh x
+make && sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+./configure $XORG_CONFIG && make && sudo make install 
+cd lib/xorg-font/
+tar -xf xkeyboard-config-2.14.tar.bz2 
+cd xkeyboard-config-2.14
+./configure $XORG_CONFIG --with-xkb-rules-symlink=xorg
+tar -xf pixman-0.32.6.tar.gz 
+cd pixman-0.32.6
+./configure --prefix=/usr --disable-static
+./configure --prefix=$xorg_lib --disable-static
+./configure --prefix=/usr/local --disable-static
+tar -xf libepoxy-1.2.tar.gz 
+cd libepoxy-1.2
+./autogen.sh --prefix=/usr 
+sudo make uninstall 
+./autogen.sh --prefix=$xorg_lib 
+sudo rm -iv /usr/sbin/*cap
+sudo rm -iv /usr/sbin/cap*
+tar -xf libgcrypt-1.6.2.tar.bz2 
+cd libgcrypt-1.6.2
+./configure --prefix=/usr 
+./configure --help
+./linuxpam.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+./configure --prefix=/usr 
+tar -xf xorg-server-1.1
+tar xf xorg-server-1.17.1.tar.bz2 
+cd xorg-server-1.17.1
+./xorg-server.sh x
+make && sudo make install 
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+tar -xf libevdev-1.3.2.tar.xz 
+cd libevdev-1.3.2~
+cd libevdev-1.3.2
+tar -xf xf86-input-evdev-2.9.1.tar.bz2 
+cd xf86-input-evdev-2.9.1
+tar -xf xf86-input-synaptics-1.8.1.tar.bz2 
+cd xf86-input-synaptics-1.8.1
+tar -xf xf86-input-vmmouse-13.0.0.tar.bz2 
+cd  xf86-input-vmmouse-13.0.0
+./vmmouse.sh 
+maek 
+tar -xf xf86-input-wacom-0.28.0.tar.bz2 
+cd xf86-input-wacom-0.28.0
+tar -xf xf86-video-fbdev-0.4.4.tar.bz2 
+cd xf86-video-fbdev-0.4.4
+tar -xf xf86-video-intel-2.99.917.tar.bz2 
+cd xf86-video-intel-2.99.917
+./configure $XORG_CONFIG --enable-kms-only
+tar -xf xf86-video-nouveau-1.0.11.tar.bz2 
+cd xf86-video-nouveau-1.0.11
+tar -xf libva-1.5.0.tar.bz2 
+cd libva-1.5.0
+tar -xf libva-intel-driver-1.5.0.tar.bz2 
+cd libva-intel-driver-1.5.0
+\mkdir -p m4
+autoreconf -fi
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+tar -xf twm-1.0.8.tar.bz2 
+cd twm-1.0.8
+./twm.sh 
+make && sudo make install&&cd ..
+tar -xf xterm-314.tgz 
+cd xterm-314
+./xterm.sh 
+make && sudo make install&& cd ..
+tar -xf xclock-1.0.7.tar.bz2 
+cd xclock-1.0.7
+./configure $XORG_CONFIG 
+make 
+sudo make install 
+tar -xf xinit-1.3.4.tar.bz2 
+cd xinit-1.3.4
+./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
+make && sudo make install && cd ..
+eval "$(dircolors -b /etc/dircolors)"
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+tar -xf xfce4-settings-4.11.0.tar.bz2 
+cd xfce4-settings-4.11.0
+./configure --prefix=/usr --sysconfdir=/etc
+./configure --prefix=$xfce --sysconfdir=/etc
+make 
+cd xcb-util-keysyms-0.4.0
+tar -xf xcb-util-renderutil-0.3.9.tar.bz2 
+cd xcb-util-renderutil-0.3.9
+./configure $XORG_CONFIG && make && sudo make install 
+tar -xf xcb-util-wm-0.4.1.tar.bz2 
+cd xcb-util-wm-0.4.1
+./configure $XORG_CONFIG && make && sudo make install && sudo /sbin/ldconfig -v
+tar -xf libdrm-2.4.59.tar.bz2 
+cd libdrm-2.4.59
+./libdrm.sh 
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libvdpau-0.9 --disable-documentation 
+make && sudo make install && sudo /sbin/ldconfig -v&&cd ..
+tar -xf glu-9.0.0.tar.bz2 
+cd glu-9.0.0
+cp ../mesa_lib.sh .
+tar -xf MesaLib-10.4.5.tar.bz2 
+cd Mesa-10.4.5/
+./mesa_lib.sh 
+tar -xf xbitmaps-1.1.1.tar.bz2 
+cd xbitmaps-1.1.1
+./configure $XORG_CONFIG 
+tar -xf Linux-PAM-1.1.8.tar.bz2 
+cd Linux-PAM-1.1.8
+./linuxpam.sh 
+cd lib/xorg-app/
+./install-xorg-font.sh 
+tar -xf xcursor-themes-1.0.4.tar.bz2 
+cd xcursor-themes-1.0.4
+./configure $XORG_CONFIG && make && sudo make install 
+cd lib/xorg-font/
+./install-xorg-font.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+./install-xorg-font.sh 
+tar -xf xcursor-themes-1.0.4.tar.bz2 
+cd xcursor-themes-1.0.4
+./configure $XORG_CONFIG && make && sudo make install 
+cd lib/xorg-font/
+tar -xf xkeyboard-config-2.14.tar.bz2 
+cd xkeyboard-config-2.14
+./configure $XORG_CONFIG --with-xkb-rules-symlink=xorg
+tar -xf pixman-0.32.6.tar.gz 
+cd pixman-0.32.6
+tar -xf libepoxy-1.2.tar.gz 
+cd libepoxy-1.2
+./autogen.sh --prefix=/usr 
+./autogen.sh --prefix=$xorg_lib 
+sudo rm -iv /usr/sbin/*cap
+sudo rm -iv /usr/sbin/cap*
+tar -xf libgcrypt-1.6.2.tar.bz2 
+cd libgcrypt-1.6.2
+./configure --help
+./linuxpam.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+tar -xf xorg-server-1.1
+tar xf xorg-server-1.17.1.tar.bz2 
+cd xorg-server-1.17.1
+./xorg-server.sh x
+make && sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+./configure $XORG_CONFIG && make && sudo make install 
+cd lib/xorg-font/
+tar -xf xkeyboard-config-2.14.tar.bz2 
+cd xkeyboard-config-2.14
+./configure $XORG_CONFIG --with-xkb-rules-symlink=xorg
+tar -xf pixman-0.32.6.tar.gz 
+cd pixman-0.32.6
+tar -xf libepoxy-1.2.tar.gz 
+cd libepoxy-1.2
+./autogen.sh --prefix=/usr 
+./autogen.sh --prefix=$xorg_lib 
+sudo rm -iv /usr/sbin/*cap
+sudo rm -iv /usr/sbin/cap*
+tar -xf libgcrypt-1.6.2.tar.bz2 
+cd libgcrypt-1.6.2
+./configure --help
+./linuxpam.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+tar -xf xorg-server-1.1
+tar xf xorg-server-1.17.1.tar.bz2 
+cd xorg-server-1.17.1
+./xorg-server.sh x
+make && sudo make install 
+tar -xf libevdev-1.3.2.tar.xz 
+cd libevdev-1.3.2~
+cd libevdev-1.3.2
+tar -xf xf86-input-evdev-2.9.1.tar.bz2 
+cd xf86-input-evdev-2.9.1
+tar -xf xf86-input-synaptics-1.8.1.tar.bz2 
+cd xf86-input-synaptics-1.8.1
+tar -xf xf86-input-vmmouse-13.0.0.tar.bz2 
+cd  xf86-input-vmmouse-13.0.0
+./vmmouse.sh 
+maek 
+tar -xf xf86-input-wacom-0.28.0.tar.bz2 
+cd xf86-input-wacom-0.28.0
+tar -xf xf86-video-fbdev-0.4.4.tar.bz2 
+cd xf86-video-fbdev-0.4.4
+tar -xf xf86-video-intel-2.99.917.tar.bz2 
+cd xf86-video-intel-2.99.917
+./configure $XORG_CONFIG --enable-kms-only
+tar -xf xf86-video-nouveau-1.0.11.tar.bz2 
+cd xf86-video-nouveau-1.0.11
+tar -xf libva-1.5.0.tar.bz2 
+cd libva-1.5.0
+tar -xf libva-intel-driver-1.5.0.tar.bz2 
+cd libva-intel-driver-1.5.0
+\mkdir -p m4
+autoreconf -fi
+tar -xf libvdpau-0.9.tar.gz 
+cd libvdpau-0.9
+tar -xf twm-1.0.8.tar.bz2 
+cd twm-1.0.8
+./twm.sh 
+make && sudo make install&&cd ..
+tar -xf xterm-314.tgz 
+cd xterm-314
+./xterm.sh 
+make && sudo make install&& cd ..
+tar -xf xclock-1.0.7.tar.bz2 
+cd xclock-1.0.7
+./configure $XORG_CONFIG 
+tar -xf xinit-1.3.4.tar.bz2 
+cd xinit-1.3.4
+./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
+make && sudo make install && cd ..
+eval "$(dircolors -b /etc/dircolors)"
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+./configure --prefix=$xfce --sysconfdir=/etc
+./configure --prefix=/usr --sysconfdir=/etc --disable-static
+cd gobject-introspection-1.42.0
+tar -xf libjpeg-turbo-1.4.0.tar.gz 
+./libjpeg-turbo.sh 
+tar -xf tiff-4.0.3.tar.gz 
+mv tiff.sh tiff-4.0.3
+cd tiff-4.0.3
+./tiff.sh 
+sudo make uninstall 
+cd libjpeg-turbo-1.4.0
+./configure --prefix=/usr --with-x11
+./configure --prefix=$xorg_lib --with-x11
+tar -xf cairo-1.14.0.tar.xz 
+cd cairo-1.14.0
+./configure --prefix=/usr --enable-tee --disable-static
+./configure --prefix=/usr/local --enable-tee --disable-static 
+tar -xf icu4c-54_1-src.tgz 
+cd icu
+cd source/
+./configure --prefix=$xorg_lib 
+./configure --prefix=$xorg_lib --sysconfdir=/etc 
+cd gtk+-2.24.26
+./gtk2-24.sh 
+cd libxfce4ui-4.10.0
+cd exo-0.10.2
+cd garcon-0.3.0
+tar -xf gtk-xfce-engine-3.0.1.tar.bz2 
+cd gtk-xfce-engine-3.0.1
+./configure --prefix=$xfce 
+tar -xf libwnck-2.30.7.tar.xz 
+cd libwnck-2.30.7
+./libwnck.sh 
+tar -xf libxml2-2.9.2.tar.gz 
+cd libxml2-2.9.2
+./libxml2.sh 
+tar -xf libglade-2.6.4.tar.bz2 
+cd libglade-2.6.4
+./libglade.sh 
+cd libxfcegui4-4.10.0.tar.bz2 
+tar -xf libxfcegui4-4.10.0.tar.bz2 
+cd libxfcegui4-4.10.0
+./configure --prefix=$xfce --disable-static 
+sudo make install
+tar -xf xfce4-panel-4.10.1.tar.bz2 
+cd xfce4-panel-4.10.1
+tar -xf shared-mime-info-1.4.tar.xz 
+cd shared-mime-info-1.4
+tar -xf desktop-file-utils-0.22.tar.xz 
+cd desktop-file-utils-0.22
+./configure --prefix=/usr/local
+./configure --prefix=$xfcen
+make -j1
+./configure --prefix=/usr
+tar -xf Thunar-1.6.4.tar.bz2 
+cd Thunar-1.6.4
+./Thunar.sh 
+tar -xf tumbler-0.1.30.tar.bz2 
+cd tumbler-0.1.30
+tar -xf xfce4-appfinder-4.10.1.tar.bz2 
+cd xfce4-appfinder-4.10.1
+cd gtk+-3.14.8
+tar -xf at-spi2-core-2.14.1
+cd at-spi2-core-2.14.1
+suo make uninstall 
+tar -xf at-spi2-atk-2.14.1.tar.xz 
+cd at-spi2-atk-2.14.1
+./configure --prefix=$xfce
+./gtk3.sh 
+cd libnotify-0.7.6
+./configure --prefix=$xfce --disable-static
+tar -xf libogg-1.3.2.tar.xz 
+cd libogg-1.3.2
+tar -xf libvorbis-1.3.4.tar.xz 
+cd libvorbis-1.3.4
+./configure --prefix=/usr/local --disable-static
+tar -xf gstreamer-1.4.5.tar.xz 
+cd gstreamer-1.4.5
+./gstreamer.sh 
+tar -xf libcanberra-0.30.tar.xz 
+cd libcanberra-0.30
+./configure --prefix=/usr --disable-oss
+./configure --prefix=/usr/local --disable-oss
+./configure --prefix=/usr --disable-static
+./configure --prefix=$xorg_lib --disable-static
+make nss
+./configure --prefix=$xorg_lib --disable-oss
+cd xfce4-settings-4.11.0
+cd xfdesktop-4.10.3
+tar -xf xfce4-power-manager-1.4.2.tar.bz2 
+cd xfce4-power-manager-1.4.2
+tar -xf upower-0.9.23.tar.xz 
+tar -xf polkit-0.112.tar.gz 
+cd polkit-0.112
+./configure --prefix=/usr 
+./configure --prefix=/usr --with-authfw=shadow
+./configure --prefix=/usr/local --with-authfw=shadow --disable-static --sysconfdir=/etc --localstatedir=/var 
+tar -xf eudev-1.7.tar.gz 
+cd eudev-1.7
+./eudev.sh 
+sudo make install  
+cd upower-0.9.23
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-deprecated --disable-static
+./configure --prefix=/usr/local --sysconfdir=/etc --localstatedir=/var --enable-deprecated --disable-static
+./configure --prefix=/usr --sysconfdir=/etc 
+./configure --prefix=$xfce --sysconfdir=/etc 
+make 
+sudo make install 
+tar -xf vte-0.38.3.tar.xz 
+cd vte-0.38.3
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static --disable-inprospection
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+cd xfce4-session-4.10.1
+./configure --prefix=/usr --sysconfdir=/etc --disable-legacy-sm
+./configure --prefix=$xfce --sysconfdir=/etc --disable-legacy-sm
+make 
+sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+cd xfce4-session-4.10.1
+./configure --prefix=/usr --sysconfdir=/etc --disable-legacy-sm
+./configure --prefix=$xfce --sysconfdir=/etc --disable-legacy-sm
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+tar -xf icon-naming-utils-0.8.90.tar.bz2 
+cd icon-naming-utils-0.8.90
+./configure --prefix=/usr
+tar -xf hicolor-icon-theme-0.14.tar.xz 
+cd hicolor-icon-theme-0.14
+tar -xf gnome-icon-theme-3.12.0.tar.xz 
+cd gnome-icon-theme-3.12.0
+make 
+tar -xf lxde-icon-theme-0.5.1.tar.xz 
+cd lxde-icon-theme-0.5.1
+./configure --prefix=/usr 
+sudo make install 
+sudo gtk-update-icon-cache  -qf /usr/share/icons/nuoveXT2/
+pushd /home/tmp/Lfs/Blfs/blfs-book/&&lynx index.html
+echo -en "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/ 
+./configure --prefix=$xfce --sysconfdir=/etc 
+make 
+sudo make install 
+./configure --prefix=/usr --disable-static --enable-vala=no --disable-introspection
+./configure --prefix=/usr --libexec=/usr/lib/vte --disable-static --enable-vala=no --disable-introspection
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static --enable-vala=no --disable-introspection
+./configure --prefix=/usr --libexecdir=/usr/lib/vte --disable-static --enable-vala=no 
+cd pango-1.36.8
+./configure --prefix=$xorg_lib --sysconfdir=/etc 
+ make clean
+./configure --prefix=$xfce --sysconfdir=/etc 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+./configure --prefix=$xfce --disable-static --disable-introspection
+./configure --prefix=$xorg_lib --with-x11 
+sudo gdk-pixbuf-query-loaders --update-cache
+./gtk3.sh 
+sudo make install 
+./configure --prefix=/usr 
+./configure --prefix=$xorg_lib --disable-static
+wget http://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz
+tar -xf vte-0.28.2.tar.xz 
+cd vte-0.28.2
+cd xfce4-terminal-0.6.3
+make && sudo make install 
+./gtk2-24.sh 
+./configure --prefix=$xfce --disable-static
+tar -xf lxterminal-0.2.0.tar.gz 
+cd lxterminal-0.2.0
+sed -i 's/System/Utility/' data/lxterminal.desktop.in
+./configure --prefix=$xfce 
+make 
+sudo make install 
+wget http://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz
+tar -xf vte-0.28.2.tar.xz 
+cd vte-0.28.2
+cd xfce4-terminal-0.6.3
+./gtk2-24.sh 
+./configure --prefix=$xfce --disable-static
+tar -xf lxterminal-0.2.0.tar.gz 
+cd lxterminal-0.2.0
+sed -i 's/System/Utility/' data/lxterminal.desktop.in
+./configure --prefix=$xfce 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+cd pango-1.36.8
+./gtk3.sh 
+make && sudo make install 
+./configure --prefix=$xorg_lib 
+make 
+sudo make install 
+lynx index.html 
+./configure --prefix=$xfce 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+cd pango-1.36.8
+./gtk3.sh 
+make && sudo make install 
+./configure --prefix=$xorg_lib 
+lynx index.html 
+tar -xf libcap-2.24.tar.xz 
+cd libcap-2.24
+sudo make RAISE_SETFCAP=no prefix=/usr install 
+sudo chmod -v 755 /usr/lib/libcap.so
+sudo mv -v /usr/lib/libcap.so.* /lib
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libcap.so) /usr/lib/libcap.so 
+tar -xf  shadow-4.2.1.tar.xz 
+sed -ii 's/groups$(EXEEXT) //' src/Makefile.in 
+tar -xf shadow-4.2.1.tar.xz 
+cd shadow-4.2.1
+sed -i 's/groups$(EXEEXT) //' src/Makefile.in 
+find man -name Makefile.in -exec sed -i 's/groups\.1 / /' {} \;
+sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' -e 's@/var/spool/mail@/var/mail@' etc/login.defs 
+sed -i 's/1000/999/' etc/useradd 
+./configure --sysconfdir=/etc --with-group-name-max-length=32
+sudo mv -v /usr/bin/passwd /bin
+sudo grpconv 
+sudo pwconv
+sudo sed -i 's/yes/no/' /etc/default/useradd 
+tar -xf sudo-1.8.12.tar.gz 
+cd sudo-1.8.12
+./configure --prefix=/usr --libexecdir=/usr/lib --with-secure-path --with-all-insults --with-env-editor --docdir=/usr/share/doc/sudo-1.8.12 --with-passprompt="[sudo] password for %p: "
+tar -xf gst-plugins-base-0.10.36.tar.xz 
+cd gst-plugins-base-0.10.36
+./configure --prefix=/usr/local --disable-static
+./configure
+export qt4dir=/opt/X_Lib/qt-4.8.6 qt4link=/opt/X_Lib/qt4 
+./configure -prefix $qt4dir -sysconfdir /etc/xdg -opensource -release -system-sqlite -no-phonon -no-phonon-backend -no-nis -nomkae demos -nomake exemples -optimized-qmake -dbus-linked -openssl-linked 
+./configure -prefix $qt4dir -sysconfdir /etc/xdg -opensource -release -system-sqlite -no-phonon -no-phonon-backend -no-nis -nomake demos -nomake exemples -optimized-qmake -dbus-linked -openssl-linked 
+./configure -prefix $qt4dir -sysconfdir /etc/xdg -opensource -release  -no-phonon -no-phonon-backend -no-nis -nomake demos -nomake exemples -optimized-qmake -dbus-linked -openssl-linked 
+make 
+tar -xf qt-everywhere-opensource-src-4.8.6.tar.gz 
+cd qt-everywhere-opensource-src-4.8.6
+./qt4.sh 
+make -j5
+sudo make install 
+./qt4-set.sh 
+cd polkit-0.112
+./configure --prefix=/usr/local --with-authfw=shadow --disable-static --sysconfdir=/etc --localstatedir=/var
+pushd /home/tmp/Lfs/Blfs/blfs-package/;echo -en "\e]P7ffffff"
+cd polkit-0.112
+./configure --prefix=/usr/local --with-authfw=shadow --disable-static --sysconfdir=/etc --localstatedir=/var
+make 
+sudo make install 
+cd polkit-0.112
+./configure --prefix=/usr/local --with-authfw=shadow --disable-static --sysconfdir=/etc --localstatedir=/var
+make 
+sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+sudo make uninstall 
+cp ../blfs-sh/qt4-install.sh qt-everywhere-opensource-src-4.8.6
+tar -xf qt-everywhere-opensource-src-4.8.6.tar.gz 
+cd qt-everywhere-opensource-src-4.8.6
+./qt4-install.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-book/
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+read password
+stty echo 
+tar -xf sqlite-autoconf-3080802.tar.gz 
+cd sqlite-autoconf-3080802
+./configure --prefix=/usr --disable-static CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 -DSQLITE_SECURE_DELETE=1" 
+make 
+sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+read password
+stty echo 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf libevent-2.0.22-stable.tar.gz 
+cd libevent-2.0.22-stable
+./configure --prefix=/usr/local --disable-static 
+tar -xf libvpx-v1.3.0.tar.xz 
+cd libvpx-v1.3.0
+sed -i 's/cp -p/cp/' build/make/Makefile 
+chmod -v 644 vpx/*.h 
+mkdir ../libvpx-build;cd libvpx-build
+cd ../libvpx-build/
+../libvpx-v1.3.0/configure --prefix=/usr/local --enable-shared --disable-static 
+make 
+sudo make install 
+tar -xf nss-3.17.4.tar.gz 
+cd nss-3.17.4
+patch -Np1 -i ../nss-3.17.4-standalone-1.patch 
+cd nss/
+make BUILD_OPT=1 NSPR_INCLUDE_DIR=/usr/include/nspr USE_SYSTEM_ZLIB=1 ZLIB_LIBS=-lz $([ $(uname -m) = x86_64 ] && echo USE_64=1) $([ -f /usr/include/sqlite3.h ] && echo NSS_USE_SYSTEM_SQLITE=1) -j1
+cd ../dist/
+sudo install -v -m755 Linux*/lib/*.so /usr/local/lib
+sudo install -v -m644 Linux*/lib/{*.chk,libcrmf.a} /usr/local/lib
+sudo install -v -m755 -d /usr/local/include/nss
+sudo cp -v -RL {public,private}/nss/* /usr/local/include/nss
+sudo chmod -v 644 /usr/local/include/nss/* 
+sudo install -v -m755 Linux*/bin/{certutil,nss-config,pk12util} /usr/local/bin
+sudo install -v -m644 Linux*/lib/pkgconfig/nss.pc /usr/local/lib/pkgconfig
+cd mozilla-release/
+vim mozconfig
+vim mozconfig 
+mkae -f client.mk
+make -f client.mk
+tar -xf firefox-36.0.source.tar.bz2 
+make -f client.mk 
+sudo mkdir -pv /usr/share/pixmaps
+sudo -sfv /usr/local/lib/firefox-36.0/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png
+sudo ln -sfv /usr/local/lib/firefox-36.0/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png
+make -f client.mk 
+make -f client.mk
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+sudo mount -t vfat -o rw,flush,utf8=1,uid=$UID /dev/sdb1 /media/tmp/
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf firefox-36.0.source.tar.bz2 
+make -f client.mk 
+make -f client.mk ;cs
+echo "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/
+pushd /home/tmp/Lfs/Blfs/blfs-package/;echo -en "\e]P7ffffff"
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf firefox-36.0.source.tar.bz2 
+cd mozilla-release/
+make -f client.mk 
+sudo make -f client.mk install INSTALL_SDK=
+sudo chown -R 0:0 /usr/local/lib/firefox-36.0 
+sudo mkdir -pv /usr/local/lib/mozilla/plugins 
+sudo ln -sfv ../../mozilla/plugins /usr/local/lib/firefox-36.0/browser 
+sudo ln -sfv /usr/local/lib/firefox-36.0/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png 
+tar -xf emacs-24.4.tar.xz 
+cd emacs-24.4
+./configure --prefix=/usr/local --with-gif=no --localstatedir=/var 
+make bootstrap
+sudo make install 
+sudo chown -R -v root:root /usr/local/share/emacs/24.4
+sudo gtk-update-icon-cache -qf /usr/share/icons/hicolor
+ls
+sudo mount -t vfat -o rw,flush,nouser,uid=$UID,utf8=1 /dev/sdb1 /media/tmp 
+echo ${PWD##*/}
+for i in $(ls -F|grep -E '/$');do [ -d "$i" ]&&cd $i&& if [ -f config.log ];then cp -fv config.log ../../blfs-log/${PWD##*/}-config.log&&cd ..&&sudo rm -r "$i";else echo ${PWD##*/} is not config >>../../blfs-log/blfs-package.log;cd ..;fi;done
+for i in $(ls -F|grep -E '/$');do [ -d "$i" ]&&cd $i&& if [ -f config.log ];then \cp -fv config.log ../../blfs-log/${PWD##*/}-config.log&&cd ..&&sudo rm -r "$i";else echo ${PWD##*/} is not config >>../../blfs-log/blfs-package.log;cd ..;fi;done
+make -f client.mk 
+make -f client.mk ;cs
+echo "\e]P7ffffff";pushd /home/tmp/Lfs/Blfs/blfs-package/
+pushd /home/tmp/Lfs/Blfs/blfs-package/;echo -en "\e]P7ffffff"
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+tar -xf firefox-36.0.source.tar.bz2 
+cd mozilla-release/
+make -f client.mk 
+sudo make -f client.mk install INSTALL_SDK=
+sudo chown -R 0:0 /usr/local/lib/firefox-36.0 
+sudo mkdir -pv /usr/local/lib/mozilla/plugins 
+sudo ln -sfv ../../mozilla/plugins /usr/local/lib/firefox-36.0/browser 
+sudo ln -sfv /usr/local/lib/firefox-36.0/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png 
+tar -xf emacs-24.4.tar.xz 
+cd emacs-24.4
+./configure --prefix=/usr/local --with-gif=no --localstatedir=/var 
+make bootstrap
+sudo chown -R -v root:root /usr/local/share/emacs/24.4
+sudo gtk-update-icon-cache -qf /usr/share/icons/hicolor
+ls
+sudo mount -t vfat -o rw,flush,nouser,uid=$UID,utf8=1 /dev/sdb1 /media/tmp 
+echo ${PWD##*/}
+for i in $(ls -F|grep -E '/$');do [ -d "$i" ]&&cd $i&& if [ -f config.log ];then cp -fv config.log ../../blfs-log/${PWD##*/}-config.log&&cd ..&&sudo rm -r "$i";else echo ${PWD##*/} is not config >>../../blfs-log/blfs-package.log;cd ..;fi;done
+for i in $(ls -F|grep -E '/$');do [ -d "$i" ]&&cd $i&& if [ -f config.log ];then \cp -fv config.log ../../blfs-log/${PWD##*/}-config.log&&cd ..&&sudo rm -r "$i";else echo ${PWD##*/} is not config >>../../blfs-log/blfs-package.log;cd ..;fi;done
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf zsh-5.0.7.tar.bz2 
+cd zsh-5.0.7
+tar --strip-components=1 -xf ../zsh-5.0.7-doc.tar.bz2 
+./configure --prefix=/usr --bindir=/bin --sysconfdir=/etc/zsh --enable-etcdir=/etc/zsh 
+makeinfo Doc/zsh.texi --plaintext -o Doc/zsh.txt 
+makeinfo Doc/zsh.text --html -o Doc/html 
+makeinfo Doc/zsh.texi --html -o Doc/html 
+makeinfo Doc/zsh.texi --html --no-split --no-headers -o Doc/zsh.html
+texi2pdf Doc/zsh.texi -o Doc/zsh.pdf 
+sudo make infodir=/usr/share/info install.info 
+sudo install -dv -m755 /usr/share/doc/zsh-5.0.7/html
+sudo install -v -m644 Doc/html/* /usr/share/doc/zsh-5.0.7/html
+sudo install -v -m644 Doc/zsh.{html,txt} /usr/share/doc/zsh-5.0.7 
+sudo make htmldir=/usr/share/doc/zsh-5.0.7/html install.html 
+sudo mv -v /usr/lib/libgdbm.so.* /lib
+sudo ln -sfv ../../lib/libgdbm.so.3 /usr/lib/libgdbm.so 
+tar -xf unrarsrc-5.2.6.tar.gz 
+cd unrar
+make -f makefile 
+sudo install -v -m755 unrar /usr/bin
+tar -xf net-tools-CVS_20101030.tar.gz 
+cd net-tools-CVS_20101030
+wget http://www.linuxfromscratch.org/patches/blfs/7.7/net-tools-CVS_20101030-remove_dups-1.patch
+patch -Np1 -i ../net-tools-CVS_20101030-remove_dups-1.patch 
+yes "" | make config
+sudo make update 
+wget http://mama.indstate.edu/users/ice/tree/src/tree-1.7.0.tgz
+tar -xf tree-1.7.0.tgz 
+cd tree-1.7.0
+sudo make MANDIR=/usr/share/man/man1 install 
+sudo chmod -v 644 /usr/share/man/man1/tree.1 
+tar -xf time-1.7.tar.gz 
+cd time-1.7
+sed -i 's/$(ACLOCAL)//' Makefile.in
+sed -i 's/lu", ptok ((UL) resp->ru.ru_maxrss)/ld", resp->ru.ru_maxrss/' time.c
+./configure --prefix=/usr --infodir=/usr/share/info 
+tar -xf links-2.9.tar.bz2 
+cd links-2.9
+./configure --prefix=/usr --mandir=/usr/share/man 
+sudo make install
+sudo install -dv -m755 /usr/share/d
+sudo install -dv -m755 /usr/share/doc/links-2.9 
+sudo install -v -m644 doc/links_cal/* KEYS BRAILLE_HOWTO /usr/share/doc/links-2.9 
+sudo uninstall 
+sudo make uninstall 
+./configure --prefix=/usr --mandir=/usr/share/man --enable-graphics 
+tar -xf ConsoleKit-0.4.6.tar.xz 
+cd ConsoleKit-0.4.6
+./configure --prefix=/usr/local --sysconfdir=/etc --localstate=/var --enable-udev-acl
+sudoe /usr/local/lib/ConsoleKit/run-session.d/pam-foreground-compat.bk
+tar -xf libcroco-0.6.8.tar.xz 
+cd libcroco-0.6.8
+./configure --prefix=/usr/local --disable-static 
+vim lxdm.sh
+cd lxdm-0.5.0
+./configure --prefix=$xorg_lib --sysconfdir=/etc --disable-pam
+tar -xf Linux-PAM-1.1.8-docs.tar.bz2 
+tar -xf Linux-PAM-1.1.8.tar.bz2 
+cd Linux-PAM-1.1.8
+./configure --prefix=/usr/local --sysconfdir=/etc --libdir=/usr/lib --enable-securedir=/lib/security --docdir=/usr/share/doc/Linux-PAM-1.1.8 
+sudo install -v -m755 -d /etc/pam.d
+sudo chmod -v 4755 /usr/local/sbin/unix_chkpwd 
+for file in pam pam_misc pamc; do sudo mv -v /usr/lib/lib${file}.so.* /lib ; sudo ln -sfv ../../lib/$(readlink /usr/lib/lib${file}.so) /usr/lib/lib{file}.so; done
+sudo ln -sfv ../../lib/libpam.so.0.83.1 /usr/lib/libpam.so
+sudo ln -sfv ../../libpam_misc.so.0.82.0 /usr/lib/libpam_misc.so 
+sudo ln -sfv ../../lib/libpamc.so.0.82.1 /usr/lib/libpamc.so 
+sudo ln -sfv ../../lib/libpam_misc.so.0.82.0 /usr/lib/libpam_misc.so 
+tar -xf lxdm-0.5.0.tar.xz 
+./lxdm.sh 
+./configure --prefix=$xorg_lib --sysconfdir=/etc --with-pam
+make 
+sudo make install 
+tar -xf llvm-3.5.1.src.tar.xz 
+vim ~/.dmrc
+cd llvm-3.5.1.src
+vim llvm.sh
+./llvm.sh 
+./llvm.sh 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf leafnode-1.11.5.tar.bz2 
+cd leafnode-1.11.5
+sh ./configure --prefix=$xfce --sysconfdir=/etc 
+make 
+sudo groupadd news
+sudo useradd -s /bin/false -g news news
+sudo make install 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+sudo mount /dev/sdb2 /mnt/
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf fcitx-4.2.9.tar.xz 
+cd fcitx-4.2.9
+mkdir build
+cd build/
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local 
+gcc c.c -shared -fPIC -o libc.so
+rm -rf qlo10k1 Makefile gitcompile 
+vim alsa-tools.sh
+./alsa-tools.sh 
+cd llvm-3.5.1.src
+vim llvm.sh
+./llvm.sh 
+./llvm.sh 
+tar -xf leafnode-1.11.5.tar.bz2 
+cd leafnode-1.11.5
+sh ./configure --prefix=$xfce --sysconfdir=/etc 
+sudo groupadd news
+sudo useradd -s /bin/false -g news news
+sudo mount /dev/sdb2 /mnt/
+tar -xf fcitx-4.2.9.tar.xz 
+cd fcitx-4.2.9
+mkdir build
+cd build/
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local 
+gcc c.c -shared -fPIC -o libc.so
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf simplescreenrecoreder.tar.bz2 
+cd simplescreenrecoreder/ssr/
+tar -xf ffmpeg-2.5.4.tar.bz2 
+tar -xf fribidi-0.19.6.tar.bz2 
+cd fribidi-0.19.6
+sed -i "s|glib/gstrfuncs\.h|glib.h|" charset/fribidi-char-sets.c 
+sed -i "s|glib/gmem\.h|glib.h|"      lib/mem.h
+./configure --prefix=/usr/local 
+tar -xf libass-0.12.1.tar.xz 
+cd libass-0.12.1
+tar -xf fdk-aac-0.1.3.tar.gz 
+cd fdk-aac-0.1.3
+tar -xf lame-3.99.5.tar.gz 
+./configure --prefix=/usr/local --enable-mp3rtp --disable-static
+cd lame-3.99.5
+sudo make uninstall 
+sudo make pkghtmldir=/usr/share/doc/lame-3.99.5 install 
+tar -xf libtheora-1.1.1.tar.xz 
+cd libtheora-1.1.1
+sed -i 's/png_\(sizeof\)/\1/g' examples/png2theora.c
+
+./configure --prefix=/usr/local --disable-static 
+for E in *;do
+cd examples/.libs/
+for E in *;do   sudo install -v -m755 $E /usr/bin/theora_${E}; done
+tar -xf x264-snapshot-20141208-2245-stable.tar.bz2 
+cd x264-snapshot-20141208-2245-stable
+./configure --prefix=/usr/local --enable-shared --disable-cli 
+tar -xf SDL-1.2.15.tar.gz 
+cd SDL-1.2.15
+sed -i '/_XData32/s:register long:register _Xconst long:' src/video/x11/SDL_x11sym.h 
+./configure --prefix=/usr/local --disable-static --disable-sdl-dlopen 
+sudo make install 
+sudo install -v -m644 docs/html/*.html /usr/local/share/doc/SDL-1.2.15/html
+tar -xf libvdpau-va-gl-0.3.4.tar.gz 
+cd libvdpau-va-gl-0.3.4
+mkdir build;cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$XORG_PREFIX ..
+tar -xf alsa-utils-1.0.28.tar.bz2 
+cd alsa-utils-1.0.28
+./configure --disable-alsaconf --disable-xmlto
+make 
+tar -xf alsa-tools-1.0.28.tar.bz2 
+cd alsa-tools-1.0.28
+bash -e 
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+cd alsa-tools-1.0.28
+./alsa-tools.sh
+sudo mount -t vfat -o rw,flush,nouser,uid=$UID,utf8=1 /dev/sdb1 /media/tmp 
+tar -xf alsa-utils-1.0.28.tar.bz2 
+./configure --disable-alsaconf --disable-xmlto
+cd alsa-tools-1.0.28
+cd alsa-tools-1.0.28
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+./alsa-tools.sh
+bash -e 
+tar -xf alsa-tools-1.0.28.tar.bz2 
+tar -xf alsa-firmware-1.0.28.tar.bz2 
+cd alsa-firmware-1.0.28
+./configure --prefix=/usr 
+tar -xf alsa-utils-1.0.28
+cd alsa-utils-1.0.28
+./configure --disable-alsaconf --disable-xmlto 
+make 
+sudo make install 
+sudo gpasswd lfs audio
+sudo gpasswd -a lfs audio
+pushd /home/tmp/Lfs/Blfs/blfs-book/
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+sudo make modules_install 
+sudo make firmware_install 
+sudo cp -ibvL arch/x86_64/boot/bzImage /boot/vmlinuz-3.19-lfs-7.7-systemd 
+sudo cp -ibvL .config /boot/config-2016-11-23
+lynx index.html 
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+cd alsa-tools-1.0.28
+./alsa-tools.sh
+sudo mount -t vfat -o rw,flush,nouser,uid=$UID,utf8=1 /dev/sdb1 /media/tmp 
+tar -xf alsa-utils-1.0.28.tar.bz2 
+./configure --disable-alsaconf --disable-xmlto
+cd alsa-tools-1.0.28
+cd alsa-tools-1.0.28
+./alsa-tools.sh
+bash -e 
+tar -xf alsa-tools-1.0.28.tar.bz2 
+tar -xf alsa-firmware-1.0.28.tar.bz2 
+cd alsa-firmware-1.0.28
+./configure --prefix=/usr 
+tar -xf alsa-utils-1.0.28
+cd alsa-utils-1.0.28
+./configure --disable-alsaconf --disable-xmlto 
+sudo gpasswd lfs audio
+sudo gpasswd -a lfs audio
+pushd /home/tmp/Lfs/Blfs/blfs-book/
+pushd /home/tmp/Lfs/Blfs/blfs-book/;lynx index.html 
+sudo make modules_install 
+sudo make firmware_install 
+sudo cp -ibvL arch/x86_64/boot/bzImage /boot/vmlinuz-3.19-lfs-7.7-systemd 
+sudo cp -ibvL .config /boot/config-2016-11-23
+tar -xf mplayer-2015-02-20.tar.xz `
+tar -xf mplayer-2015-02-20.tar.xz 
+cd mplayer-2015-02-20
+sed -i 's:libsmbclient.h:samba-4.0/&:' configure stream/stream_smb.c
+sudo make install
+sudo ln -sfv /usr/local/share/icons/hicolor/48x48/apps/mplayer.png /usr/share/pixmaps/mplayer.png
+sudo ln -sfv /usr/local/share/icons/hicolor/48x48/apps/emacs.png /usr/share/pixmaps/emacs.png
+sudo install -v -m644 etc/codecs.conf /etc/mplayer/
+sudo install -v -m644 etc/*.conf /etc/mplayer/
+sudo gtk-update-icon-cache
+sudo update-desktop-database
+tar -xf Clearlooks-1.6.tar.bz2 -C /usr/local/share/mplayer/skins/
+sudo tar -xf Clearlooks-1.6.tar.bz2 -C /usr/local/share/mplayer/skins/
+sudo ln -sfvn Clearlooks /usr/local/share/mplayer/skins/default
+tar -xf gtksourceview-2.10.5.tar.gz 
+cd gtksourceview-2.10.5
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf ffmpeg-2.5.4.tar.bz2 
+cd ffmpeg-2.5.4
+sed -i 's/-lflite"/-lflite -lasound"/' configure 
+./configure --prefix=/usr/local --enable-version3 --enable-nonfree --disable-static --enable-shared --enable-debug --enable-libass --enable-libfdk-aac --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-x11grab --docdir=/usr/share/doc/ffmpeg-2.5.4 
+./configure --prefix=/usr/local --enable-version3 --enable-nonfree --disable-static --enable-shared --enable-debug --enable-libass --enable-libfdk-aac --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-x11grab --docdir=/usr/share/doc/ffmpeg-2.5.4 --enable-gpl
+gcc tools/qt-faststart.c -o tools/qt-faststart
+sudo install -v -m755 tools/qt-faststart /usr/local/bin
+sudo install -dv -m755 /usr/local/share/doc/ffmpeg-2.5.4 
+sudo install -dv -m644 doc/*.txt /usr/local/share/doc/ffmpeg-2.5.4 
+sudo install -v -m644 doc/*.txt /usr/local/share/doc/ffmpeg-2.5.4 
+./configure --prefix=/usr/local --confdir=/etc/mplayer --enable-dynamic-plugins --enable-menu --enable-gui 
+./configure --prefix=/usr/local --mandir=/usr/share/man --enable-shared --disable-static CFLAG"-g O2 $([ $(uname -m) = x86_64 ] && echo -fPIC)" 
+./configure --prefix=/usr/local --mandir=/usr/share/man --enable-shared --disable-static CFLAG="-g O2 $([ $(uname -m) = x86_64 ] && echo -fPIC)" 
+tar -xf lua-5.3.0.tar.gz 
+cd lua-5.3.0
+patch -Np1 -i ../lua-5.3.0-shared_library-1.patch 
+sed -i '/#define LUA_ROOT/s:/usr/local/:/usr/:' src/luaconf.h
+make linux
+sudo make INSTALL_TOP=/usr/local TO_LIB="liblua.so liblua.so.5.3 liblua.so.5.3.0" INSTALL_DATA="cp -d" INSTALL_MAN=/usr/share/man/man1 install 
+sudo mkdir -pv /usr/local/share/doc/lua-5.3.0 
+sudo cp -v doc/*.{html,css,gif,png} /usr/local/share/doc/lua-5.3.0
+sudoe /usr/local/lib/pkgconfig/lua.pc
+vim vlc.sh
+wget http://www.linuxfromscratch.org/patches/blfs/7.7/libmad-0.15.1b-fixes-1.patch
+tar -xf libmad-0.15.1b.tar.gz 
+cd libmad-0.15.1b
+patch -Np1 -i ../libmad-0.15.1b-fixes-1.patch 
+sed "s@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@g" -i configure.ac
+touch NEWS AUTHORS ChangeLog
+autoreconf -fi
+./configure --prefix=/usr/local --disable-static 
+sudoe /usr/local/lib/pkgconfig/mad.pc
+tar -xf a52dec-0.7.4.tar.gz 
+cd a52dec-0.7.4
+./configure --prefix=/usr/local --mandir=/usr/share/man --enable-sahared --disable-static CFLAGS="-g -O2 $([ $(uname -m) = x86_64 ] && echo -fPIC)"
+sudo make install 
+sud ocp liba52/a52_internal.h /usr/local/include/a52dec
+sudo cp liba52/a52_internal.h /usr/local/include/a52dec
+tar -xf vlc-2.1.5.tar.xz 
+cp vlc.sh vlc-2.1.5
+cd vlc-2.1.5
+./vlc.sh 
+make 
+ip link set wlp3s0 up
+ip link show wlp3s0
+iw dev wlp3s0 scan |less
+iw dev wlp3s0 scan|grep -i 'ssid'
+wpa_supplicant -i wlp3s0 -c <(wpa_passphrase "MERCURY_A6E2" "Zhangtao.0839.") -B 
+iw dev wlp3s0 link 
+dhcpcd wlp3s0 
+ping -c 2 www.baidu.com
+wpa_passphrase "MERCURY_A6E2" "Zhangtao.0839." >> /etc/wpa_supplicant/wpa_supplicant.conf
+iw dev wlp3s0 scan|grep -i 'ssid'
+cd libexif-0.6.21
+pushd /home/tmp/Lfs/Blfs/blfs-package/
+tar -xf fcitx/fcitx-4.2.9.tar.xz 

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>第五章练习2</title>
+<script src="./../jQuery/jquery-1.8.3.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("a.s").click(function(){
+		alert("发现惊喜！");
+		$("div").fadeToggle("slow");
+		$("dt,dd").show("slow");
+		});
+	});
+
+</script>
+
+<style type="text/css">
+a{text-decoration:none;float:left;}
+div{
+	float:left;display:none;
+	width:100px;height:100px;
+	margin:10px;padding:10px;
+	border:1px solid red;
+	}
+	dt,dd{display:none;}
+	dl{clear:both;}
+</style>
+</head>
+
+<body>
+<a href="#" class="s">点我看看有啥惊喜?</a>
+
+<div></div>
+<div></div>
+<div></div>
+<dl>
+<br/>
+<dt>点我看看</dt>
+<dd>点我看看</dd>
+<dd>点我看看</dd>
+</dl>
+<a href="javascript:close()">关闭窗口？</a>
+
+
+</body>
+</html>

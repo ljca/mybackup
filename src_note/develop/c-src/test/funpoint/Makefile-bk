@@ -1,0 +1,8 @@
+all:
+	CC -o test return_funpoin.c
+.PHONY:test
+test:
+	./test
+
+# vim:set noet filetype=make:
+

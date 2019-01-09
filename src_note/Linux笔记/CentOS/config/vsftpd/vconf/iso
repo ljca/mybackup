@@ -1,0 +1,17 @@
+
+local_root=/home/external
+
+anonymous_enable=NO
+
+write_enable=YES
+
+local_umask=022
+
+anon_upload_enable=NO
+
+anon_mkdir_write_enable=NO
+
+max_per_ip=5
+
+max_clients=10
+

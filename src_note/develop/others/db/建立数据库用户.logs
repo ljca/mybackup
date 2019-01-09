@@ -1,0 +1,35 @@
+SQL Server数据库用户创建的方法（使用SQL语句）(1)
+2010-09-06 09:53 佚名 互联网 字号：T | T
+一键收藏，随时查看，分享好友！
+管理SQL Server数据库需要建立数据库用户，下面将为您介绍使用SQL语句来建立SQL Server数据库用户的方法，供您参考，希望对您有所帮助。
+AD：
+管理SQL Server数据库需要建立数据库用户，下面将为您介绍使用SQL语句来建立SQL Server数据库用户的方法，供您参考，希望对您有所帮助。
+
+要想成功访问 SQL Server 数据库中的数据， 我们需要两个方面的授权：一、获得准许连接 SQL Server 服务器的权利； 二、获得访问特定数据库中数据的权利（select, update, delete, create table ...）。 假设，我们准备建立一个 dba 数据库帐户，用来管理数据库 mydb。
+
+1. 首先在 SQL Server 服务器级别，创建登陆帐户（create login） 
+create login dba with password='sqlstudy', default_database=mydb
+登陆帐户名为：“dba”，登陆密码：“sqlstudy”，默认连接到的数据库：“mydb”。 这时候，dba 帐户就可以连接到 SQL Server 服务器上了。但是此时还不能 访问数据库中的对象（严格的说，此时 dba 帐户默认是 guest 数据库用户身份， 可以访问 guest 能够访问的数据库对象）。
+
+要使 dba 帐户能够在 mydb 数据库中访问自己需要的对象， 需要在数据库 mydb中建立一个“数据库用户”，赋予这个“数据库用户” 某些访问权限，并且把登陆帐户“dba” 和这个“数据库用户”映射起来。 
+习惯上，“数据库用户” 的名字和 “登陆帐户”的名字相同，即：“dba”。 创建“数据库用户”和建立映射关系只需要一步即可完成：
+
+2. 创建数据库用户（create user）： 
+create user dba for login dba with default_schema=dbo
+并指定数据库用户“dba” 的默认 schema 是“dbo”。这意味着 用户“dba” 在执行“select * from t”，实际上执行的是 “select * from dbo.t”。
+
+3. 通过加入数据库角色，赋予数据库用户“dba”权限： 
+exec sp_addrolemember 'db_owner', 'dba'
+此时，dba 就可以全权管理数据库 mydb 中的对象了。
+
+如果想让 SQL Server 登陆帐户“dba”访问多个数据库，比如 mydb2。 可以让 sa 执行下面的语句：
+
+use mydb2gocreate user dba for login dba with default_schema=dbogoexec sp_addrolemember 'db_owner', 'dba'go
+此时，dba 就可以有两个数据库 mydb, mydb2 的管理权限了！
+
+4. 禁用、启用登陆帐户： 
+alter login dba disablealter login dba enable
+5. 登陆帐户改名： 
+alter login dba with name=dba_tom
+提示：在 SQL Server 2005 中也可以给 sa 改名。 《SQL Server 2005 安全性增强：给超级用户 sa 改名》
+

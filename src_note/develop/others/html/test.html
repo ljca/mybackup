@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>元素添加与移除</title>
+<style type="text/css">
+<!--
+ul li{float:right;list-style:none;}
+a{text-decoration:none;color:red;}
+a:hover{text-decoration:underline;color:blue;}
+div{border:red solid 1px; height:150px; width:700px;
+margin:0px auto; padding:10px;
+}
+
+-->
+</style>
+
+<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+<!--
+$();
+function addNode(){
+	var $node = $("<li>软件</li>");
+	var $node2 = $("<a href='#'>测试节点</a>");
+$("div ul").append($node);
+$("div p").append($node2);
+$("ul li").appendTo("div#test");
+alert('元素添加成功！');
+}	
+
+//-->
+</script>
+
+</head>
+
+<body>
+<div>
+<ul>
+<li>命令</li>
+</ul>
+</div>
+
+<div>
+<p></p>
+</div>
+<div id="test">
+</div>
+
+<div>
+<span><a href='javascript:addNode();'>添加</a></span>
+<span><a href='javascript:removeNode();'>移除</a></span>
+</div>
+
+</body>
+</html>

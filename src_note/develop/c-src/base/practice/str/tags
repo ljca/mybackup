@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Number	link_test.c	/^struct Number{$/;"	s	file:
+insert_h	link_test.c	/^struct Number *insert_h(struct Number *tmp,int n)$/;"	f
+main	link_test.c	/^int main()$/;"	f
+main	strtoint.c	/^int main()$/;"	f
+next	link_test.c	/^	struct Number *next;$/;"	m	struct:Number	typeref:struct:Number::Number	file:
+nu	link_test.c	/^	int nu;$/;"	m	struct:Number	file:
+show	link_test.c	/^void show(struct Number *num)$/;"	f

@@ -1,0 +1,35 @@
+gcc下载地址在http://ftp.gnu.org/gnu/gcc
+gcc必选依赖:gmp,mpfr,mpc；可选依赖:isl,cloog
+虽然说在LFS中，gcc4.9.2缺少isl和cloog仍然会configure成功，然而却会make失败
+gcc4.9.2 configure脚本建议isl版本是0.11/0.12或者0.13
+gcc4.9.2 configure脚本建议cloog版本是0.17或者0.18,它的下载地址在http://lil.fr.distfiles.macports.org/cloog/
+
+lfs 7.7 systemd 第一遍编译gcc4.9.2出错
+gcc4.9.2 编译出错:
+hecking dynamic linker characteristics... configure: error: Link tests are not allowed after GCC_NO_EXECUTABLES.
+Makefile:11501: recipe for target 'configure-target-libssp' failed
+make[1]: *** [configure-target-libssp] Error 1
+make[1]: Leaving directory '/mnt/lfs/sources/gcc-build'
+Makefile:851: recipe for target 'all' failed
+make: *** [all] Error 2
+没有正确的给出gcc --disable-libssp命令行编译选项
+
+以下摘自LFS-BOOK-7.7-systemd:
+--disable-decimal-float, --disable-threads, --disable-libatomic, --disable-libgomp, 
+  --disable-libitm, --disable-libquadmath, --disable-libsanitizer, 
+  --disable-libssp, --disable-libvtv, --disable-libcilkrts, --disable-libstdc++-v3
+  这些选项取消了对十进制浮点数扩展、线程化、libatomic、libgomp、libitm、libquadmath、libsanitizer、libssp、libvtv、libcilkrts和C++标准库的支持。这些功能在编译交叉编译器的时候会导致编译失败，对于交叉编译临时libc来说也没有必要。
+
+In file included from ../../gcc-4.9.2/gcc/genmddeps.c:19:0:
+  ../../gcc-4.9.2/gcc/system.h:205:20: fatal error: cstring: No such file or directory
+#include <cstring>
+compilation terminated.
+Makefile:2366: recipe for target 'build/genmddeps.o' failed
+make[2]: *** [build/genmddeps.o] Error 1
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-build/gcc'
+Makefile:3991: recipe for target 'all-gcc' failed
+make[1]: *** [all-gcc] Error 2
+make[1]: Leaving directory '/mnt/lfs/sources/gcc-build'
+Makefile:872: recipe for target 'all' failed
+make: *** [all] Error 2
+

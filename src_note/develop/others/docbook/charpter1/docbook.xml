@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5/zh_cn" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" -->
+
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" 
+[
+<!ENTITY charpter1 SYSTEM "charpter1.xml">
+<!ENTITY charpter2 SYSTEM "charpter2.xml">
+<!ENTITY charpter3 SYSTEM "charpter3.xml">
+<!ENTITY charpter4 SYSTEM "charpter4.xml">
+<!ENTITY charpter5 SYSTEM "charpter5.xml">
+]>
+
+<book>
+  <info>
+    <title>引用外部文件</title> 
+    <author>kyzs</author>
+  </info>
+  &charpter1;
+  &charpter2;
+  &charpter3;
+  &charpter4;
+  &charpter5;
+</book>
+
+

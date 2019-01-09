@@ -1,0 +1,5 @@
+AC_INIT
+AC_PROG_CC
+AC_PROG_CC_C_O
+AC_CHECK_HEADERS([sqlite3.h sys/errno.h errno.h])
+AC_OUTPUT(Makefile)

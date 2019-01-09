@@ -1,0 +1,267 @@
+#  c
+c语言运行的几个阶段：
+预处理:编译器调用cpp处理源文件中的预处理指令，展开被包含的文件内容到预处理文件中
+$ gcc -E -v 
+编译和汇编
+$ gcc -v -c -x [-o 目标文] 预处理文件
+链接
+$ gcc [-g -v] -o 名称 目标文件
+运行程序
+如果当前路径没有在系统的PATH环境变量中，那么要运行位于当前目录中的程序需要使用点./程序名称来运行
+它即代表了当前目录，也是一个特殊的shell内置命令(只用于执行脚本,等价于source命令)
+$ ./program
+$ ./../program
+$ ./../bin/program
+export PATH=$PATH:.
+
+C语言的字符串
+
+字符串常量使用字符指针或者字符数组来保存
+char *char="";
+char char[]="";
+
+
+库函数的搜索路径
+文件包含指令
+#include <filename>/"filename"
+如果文件包含指令的文件名是包含在一对尖括号<>中的，头文件的搜索路径从/usr/include开始
+如果文件包含指令的文件名是包含在一对双引号""中的，头文件的搜索路径会从包含这个文件包含指令的源文件的当前路径开始
+
+编译器预处理时调用cpp命令展开包含的文件内容到源文件中，形成了预处理文件
+标准库函数printf的声明位于stdio.h头文件中,函数的原型声明：
+extern int printf (__const char *__restrict __format, ...);
+这个库函数共有两个形参：常量字符串和可变长参数
+其中，常量字符串是一对以双引号引起来的字符串，在其中允许存在格式控制字符，格式控制字符必须以百分号%开始，后面紧跟一个控制字符，在控制字符之前还可以有更精细的格式控制。
+控制字符控制着，它可以是
+c:打印单个字符
+s:打印字符串
+[num]d:打印整型数字
+e/E:打印指数
+[num].[num]f:打印浮点数 
+#x/X:打印不带前缀的十六进制数
+p:打印变量地址(大多数时候用来打印内存地址)
+#o/O:打印不带前缀的八进制数
+...
+可变长参数意味着可以传递0个或者多个实参给这个函数。
+
+逻辑运算符,运算规则：
+&&
+||
+!
+>
+<
+>=
+<=
+!=
+==  如果逻辑运算赋==写成了赋值运算符=，编译器并不会对此进行检查从而顺利通过编译，因此返回的结果可能与逻辑运算符的不一致。
+逻辑运算符==不等价于赋值运算符=
+
+位运算符,运算规则:
+&:见0即0
+|:见1即1
+^:只有两个数相异，才为1。如果相同，则为0
+~:
+<< 左移运算，向左移动n(n必须是一个正整数)位,高位被移动过来的低位覆盖，空缺的低位补零
+n1 << n
+
+>>:右移运算，向右移动n位(n必须是一个正整数),低位被移动过来的高位覆盖，空缺的高位补零
+n1 >> n
+
+数组是指拥有同一种数据类型的数据集合,属于结合类型
+
+为数组分配空间时，分配一组连续的内存地址空间，数组名只是保存了整个数组的首地址，即是数组第一个元素的地址。
+虽然在栈上分配内存时是从上到下(高地址到低地址,堆是反方向的)分配的，但数组里面的元素的的地址却是从下到上依次递增的。
+
+除了在数组初始化时可以对数组直接赋值外，其余任何时候都无法对整个数组重新进行赋值
+
+数组的一般定义形式：
+Type 数组名[];
+Type 数组名[] = {值列表};
+
+Type是数组的类型，可以是基本的也可以是结合型的，或者是自定义型的，比如枚举和结构体
+
+方括号中用来指定数组长度(方括号不一定要和数组一起出现)，即数组中允许的数组元素个数,除非在定义数组时初始化了，才允许不给数组指定具体的长度。否则其它任何时候都应该给数组指定具体的长度。
+
+如果省略了值列表，数组定义就成了数组声明，这时编译器并不会为数组分配内存空间。反之,值列表如果有多个值， 多个值需要使用逗号分隔;字符数组有些特殊，允许将多个字符组合为一个字符串，甚至连用来保存值列表的花括号也不是必须的。因此，以下的字符数组定义是合法的:
+char ch3[]={'a','b','c','d','e'}; <=> char ch1[] = {"abcde"}; <=>  char ch2[] = "abcde";
+
+gcc在编译源文件时不会检查数组下标，访问不存在的元素可能会返回不正确的值
+
+访问数组的元素可以依次使用数组索引或者下标访问，但因为数组标识符中保存有整个数组在内存空间中的首地址，因此还可以使用解地址的方式来访问数组中的元素。
+
+*(arr+1)等价与arr[1];
+
+非法访问内存可能会引起段错误。比如低地址空间中的变量访问高地址中的，或者访问数组下标之外的元素(数组下标越界);
+
+二维数组和多维数组以及指针数组和数组指针
+
+数组指针一般用来保存二维以上数组的地址。
+()[];
+
+注释
+c99风格的单行注释 //
+多行注释 /*  */
+条件化注释 
+#if 0 
+#else 
+#endif 
+
+指针
+希望保存地址的变量
+
+指针
+指针加1等于基类的长度
+
+指针的声明和定义形式:
+基类 *指针标识符 = NULL;
+
+C函数(function)
+
+! main函数是程序员的入口函数,它在启动代码执行之后调用。
+程序的真正入口是__start，它是用汇编写成
+
+函数声明和函数定义.
+一般函数声明形式:
+函数返回值类型|void 函数名称(参数|void);
+!函数定义在主函数之后，要对这个函数进行声明,如果是在主函数之前定义的函数，就不需要对这个函数声明了。
+
+函数声明在主函数之前，函数声明没有函数体，函数声明的形参可以没有标识符,但函数定义不可省略。
+! 如果函数没有参数，可以省略void关键字，但返回值如果为void，就不能省略，因为系统默认的函数返回值是int型.
+函数定义:
+函数返回值类型|void 函数名称(参数|void)
+{
+	函数体;
+}
+
+函数指针是一个保存了函数首地址的指针。
+函数指针，语法
+类型(*标识符)([形参]);
+
+回调函数
+
+函数调用：
+主调函数(调用者)，被调函数(被调用者)
+1.正常调用
+2.作为其它函数的参数被调用。
+
+结构和联合体
+#progma 预处理指令能设置内存的对齐方式
+
+struct Node{ }; 
+typedef可以为
+链表
+
+单链表
+单链表节点元素的遍历
+单链表节点元素的修改
+单链表头插法与尾插法
+单链表排序
+内存动态分配和释放
+
+双链表
+
+字符/字符串函数
+strlen
+strstr
+strcpy
+strtok
+
+
+I/O函数
+fread
+fwrite
+read
+open
+getline
+fseek/rewind
+fgets
++ [50个C语言经典小程序和C语言编写的小游戏，带注释和解析_C语言中文网](http://c.biancheng.net/cpp/u/yuanma/)
+
++ [AUR (en) - gcc47](https://aur.archlinux.org/packages/gcc47/)
+
++ [C语言main函数详解_C语言中文网](http://c.biancheng.net/cpp/html/725.html)
+
++ [c语言查询mysql示例 - - ITeye技术网站](http://jimmee.iteye.com/blog/2174717?utm_source=tuicool)
+
++ [C语言解析lrc文件-编程10000问-电脑编程网](http://biancheng.dnbcw.info/1000wen/390694.html)
+
++ [C 语言进制之间的转换_C 语言_脚本之家](http://www.jb51.net/article/88714.htm)
+
++ [C语言实现双向链表_C 语言_脚本之家](http://www.jb51.net/article/62628.htm)
+
++ [c语言字符数组与字符串的使用详解_C 语言_脚本之家](http://www.jb51.net/article/37456.htm)
+
++ [C++指针数组、数组指针、数组名及二维数组技巧汇总_C 语言_脚本之家](http://www.jb51.net/article/54220.htm)
+
++ [GCC 5.3.0 - pass 1 - compilation failed](http://www.linuxquestions.org/questions/linux-from-scratch-13/gcc-5-3-0-pass-1-compilation-failed-4175572316/)
+
++ [GCC中的内嵌汇编语言 - 编程资料大全 - ITeye技术网站](http://daimajishu.iteye.com/blog/1087668)
+
++ [GNU编译器套件GCC 6.1发布 默认使用C++14标准_Linux新闻_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2016-04/130788.htm)
+
++ [Google Translate](https://translate.google.com/translate?hl=en&sl=auto&tl=zh-CN&u=https%3A%2F%2Fgcc.gnu.org%2Fgcc-6%2Fporting_to.html&sandbox=1)
+
++ [Linux中opendir的函数结构体详解 - yyfwd的博客 - 博客频道 - CSDN.NET](http://blog.csdn.net/yyfwd/article/details/50339721)
+
++ [N多C语言的面试题（1） - 贵子 - 51CTO技术博客](http://ud1121.blog.51cto.com/228311/199629/)
+
++ [Porting to GCC 6 - GNU Project - Free Software Foundation (FSF)](https://gcc.gnu.org/gcc-6/porting_to.html)
+
++ [编程中位运算用法总结 - 大神养成中..... - 博客频道 - CSDN.NET](http://blog.csdn.net/y990041769/article/details/12977271)
+
++ [编译旧版本gcc_robot_新浪博客](http://blog.sina.com.cn/s/blog_4705f1f3010105us.html)
+
++ [部分面试题](http://www.fx114.net/qa-70-142998.aspx)
+
++ [c语言_链表实例讲解两个经典例子](http://www.oschina.net/code/piece_full?code=43706&piece=61014#61014)
+
++ [-数据结构之栈操作讲解](https://www.oschina.net/code/piece_full?code=58479&piece=87195#87195)
+
++ [和菜鸟一起学linux之双向链表list head的简单实例 - 东月之神 - 博客频道 - CSDN.NET](http://blog.csdn.net/eastmoon502136/article/details/8082009)
+
++ [基于Linux C的socket抓包程序和Package分析_Linux编程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2014-11/109330.htm)
+
++ [基于Linux C的socket抓包程序和Package分析 第2页_Linux编程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2014-11/109330p2.htm)
+
++ [进制之间的转换_C语言中文网](http://c.biancheng.net/cpp/html/2855.html)
+
++ [进制转换基础_相关技巧_脚本之家](http://www.jb51.net/article/34132.htm)
+
++ [进制转换算法原理（二进制 八进制 十进制 十六进制）_相关技巧_脚本之家](http://www.jb51.net/article/23650.htm)
+
++ [使用 Socket 通信实现 FTP 客户端程序](http://www.ibm.com/developerworks/cn/linux/l-cn-socketftp/)
+
++ [数据结构之栈操作讲解 - 开源中国社区](https://www.oschina.net/code/snippet_2703963_58479)
+
++ [位运算简介及实用技巧（三）：进阶篇(2) _ Matrix67_ The Aha Moments](http://www.matrix67.com/blog/archives/266)
+
++ [文件系统的实现-目录实现和文件实现_操作系统教程](http://c.biancheng.net/cpp/html/2625.html)
+
++ [优秀程序员不得不知道的20个位运算技巧 - 人在江湖 - 博客频道 - CSDN.NET](http://blog.csdn.net/zmazon/article/details/8262185)
+
++ [在Ubuntu上编译GCC会到的问题及解决方法_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2012-09/70461.htm)
+
++ [最大公约数_百度百科](http://baike.baidu.com/link?url=HBoJQ7MlHaGxg1iVA6UB68sXyAfk-rLXb1aadwwQNK_CCl28Udaz50mUmvIXhjS3WzIRhx8FAW8Vd7EM3GseqAViAf63KEOvkqP_kSMMfI4hKJeXaZnuVH9c50OSfbaEgYVOxBCaQwqj3vRtS2Ngfq)
+
++ [C语言程序设计50例(经典收藏)_C 语言_脚本之家](https://www.jb51.net/article/38051.htm)
+
++ 介绍一款国产开源C编译器 - ngaut - C++博客
+
++ C_C++_C#_编程开发_电子书籍 - 脚本之家
+
++ c语言10个经典小程序_C 语言_脚本之家
+
++ 50个C语言经典小程序和C语言编写的小游戏，带注释和解析_C语言中文网.html
+
++ C语言参考手册(原书第五版）中文版_pdf-[电子书]–华为网盘资源共享-文件备份-免费网络硬盘
+
++ C语言函数sscanf()的用法 - Walter L - 博客园
+
++ c语言结构体对齐 - renrenhappy的专栏 - 博客频道 - CSDN.NET
+
++ 详解约瑟夫环问题及其相关的C语言算法实现_C 语言_脚本之家
+
++ 小说阅读器的编写之智能分章实现 - Excalibur丶 - 博客园
+
++ C语言字符串操作总结大全(超详细)_C 语言_脚本之家
+

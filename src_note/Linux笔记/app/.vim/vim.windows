@@ -1,0 +1,34 @@
+if(g:iswindows && g:isGUI)
+	au GUIEnter * call libcallnr("vimtweak.dll","SetAlpha",210)
+	set guifont=Ubuntu_Mono_derivative_Powerlin:h16:cANSI
+	source $VIMRUNTIME/vimrc_example.vim
+	source $VIMRUNTIME/mswin.vim
+	behave mswin
+	"vim的菜单乱码解决：
+	set encoding=utf-8
+	source $VIMRUNTIME/delmenu.vim
+	source $VIMRUNTIME/menu.vim
+	"colorscheme murphy
+	"colorscheme elflord
+	colorscheme torte
+	set tags+=$VIMRUNTIME/tags
+	"airline set
+	let g:airline_powerline_fonts = 1
+	let g:airline#extentions#tabline#enabled = 1
+	let g:airline#extentions#tabline#buffer_nr_show = 1
+	let g:airline_theme='light'
+	"突出显示当前行
+	"set cursorline
+	"hi Cursorline term=bold cterm=bold
+	hi String ctermfg=yellow cterm=bold
+	hi Type ctermfg=white cterm=bold
+	let NERDTreeDirArrows=0
+	"set termencoding=utf-8
+	"设置编码
+	"set langmenu=zh_CN.UTF-8
+	set path+=.,,"I:/"
+	set path+=/i/src-note/src/*
+
+endif
+
+" vim:set ft=vim:"

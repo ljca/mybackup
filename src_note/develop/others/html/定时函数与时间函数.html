@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>定时函数与时间函数</title>
+<style type="text/css">
+<!--
+*{margin:0px auto;padding:0px;}
+
+-->
+</style>
+<script type="text/javascript" src="./../jQuery/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+<!--
+function timer(){
+	var date = new Date();
+	var hh = date.getHours();
+	var mm = date.getMinutes();
+	var ss = date.getSeconds();
+	document.getElementById("time").innerHTML = "现在时间是<h3>" + hh + ":" + mm + ":" + ss + "</h3>";
+	}
+	var times = setInterval("timer()",1000);
+-->
+</script>
+</head>
+
+<body>
+<div id="time"></div>
+</body>
+</html>

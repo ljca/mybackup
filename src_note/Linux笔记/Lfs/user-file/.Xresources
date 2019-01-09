@@ -1,0 +1,15 @@
+! - OR -
+! Uncomment this for black text on a "white" background.
+xterm*background: black
+xterm*foreground: white 
+xterm*scrollBar:ture
+xterm*rightScrollBar:true
+xterm*geometry:151x31
+
+Xterm*metaSendEscape: true
+Xterm*eightBitInput:false
+Xterm*saveLines: 4096
+
+xterm*FaceNameDoublesize:WenQuanYiMicroHei:antialias:true:pixelsize=18
+!xterm*FaceNameDoublesize:Consolas:antialias:true:pixelsize=18
+xTerm*locale:zh_CN.UTF-8

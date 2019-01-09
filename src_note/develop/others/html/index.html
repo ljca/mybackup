@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JavaScript级联菜单练习1</title>
+<style type="text/css">
+<!--
+
+-->
+</style>
+<script type="text/javascript">
+<!--
+function changeEx(){
+   var previence=document.getElementById("selectx").value;
+   var city=document.getElementById("selectcity");
+   city.options.length=0;
+   switch(previence){
+	  case "四川省": 
+	  	city.add(new Option("成都市","成都市"),null);
+	  break;
+	  case "陕西省": 
+	  	city.add(new Option("西安市","西安市"),null);
+	  break;
+	  case "福建省": 
+	  	city.add(new Option("福州市","福州市"),null);
+	  break;
+	  
+	}
+}
+
+-->
+</script>
+</head>
+
+<body>
+<form method="post" action="">
+<p><select id="selectx" onchange="javascript:changeEx()">
+<option>--请选择省--</option>
+<option value="四川省" name="">四川省</option>
+<option value="陕西省" name="">陕西省</option>
+<option value="福建省" name="">福建省</option>
+</select>
+<select id="selectcity">
+<option>--请选择市--</option>
+</select>
+</p>
+
+</form>
+</body>
+</html>

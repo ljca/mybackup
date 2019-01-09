@@ -1,0 +1,47 @@
+
+<?php
+if($conf = parse_ini_file(realpath(dirname(__FILE__) .'/../config/config.ini'))) echo "</br>";
+
+if($conn = mysqli_connect($conf['host'],$conf['user'],$conf['psk'],$conf['db'])) echo "connect mysql sucess.</br>";
+  else  die("Connect Faild".mysqli_connect_error());
+
+var_dump(mysqli_connect_error());
+
+#$sql = "select * from guests";
+$sql = "select * from guests where id > 3";
+
+#var_dump($result = mysqli_query($conn,$sql));
+$result = mysqli_query($conn,$sql);
+
+#var_dump(mysqli_num_rows($result));
+#
+echo "query result: </br>";
+echo "<hr>";
+$ifs=' | ';
+if(mysqli_num_rows($result) > 0){
+  echo "id{$ifs}firstname{$ifs}lastname{$ifs}email{$ifs}reg_time<br>";
+  while($row = mysqli_fetch_assoc($result)){
+    echo $row['id'],$ifs,$row['firstname'],$ifs,$row['lastname'],$ifs,$row['email'],"<br>";
+  }
+  echo '<hr>';
+
+}else echo "<br>no query results.<br>";
+if($rs = mysqli_query($conn,$sql)){
+  if(mysqli_num_rows($rs) <= 0){
+    echo "no results...<br>";
+  }else{
+    echo "second query result: <hr>";
+    while($row = mysqli_fetch_array($rs)){
+      echo $row['id'],$ifs,$row['firstname'],$ifs,$row['lastname'],$ifs,$row['email'],"</br>";
+    }
+    echo "<hr/>";
+  }
+}
+
+mysqli_free_result($rs);
+
+mysqli_close($conn);
+
+echo "close connection done.</br>";
+
+?>

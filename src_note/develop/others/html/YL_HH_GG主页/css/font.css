@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	 margin:0px;padding:0px;
+   font-weight:normal; color:#03F;
+	 font-family:Consolas, "文泉驿等宽正黑";
+}
+
+
+a{
+ text-decoration:none; color:orange;
+}
+a:hover{
+ color:red;font-size:18px;
+ text-decoration:underline;
+}
+
+li{
+   float:left; list-style:none;
+	 font-size:15px;text-indent:2em;
+	 line-height:20px; 
+}
+li a{
+	text-align:center;
+}

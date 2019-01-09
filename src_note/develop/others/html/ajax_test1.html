@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <style type="text/css">
+  <!--
+
+  //-->
+  </style>
+   <script type="text/javascript">
+ <!--
+
+function check(){
+  var xhq;
+   if (window.XMLHttpRequest){
+     xhq = new XMLHttpRequest();
+   }else{
+     xhq = new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   if (xhq!=null){
+   xhq.onReadyStateChange = callBack;
+   //var url = "";
+   alert(xhq.readyState+xhq.status);
+   xhq.open("GET","./simple.xml",true);
+   xhq.send("null");
+   alert(xhq.readyState);
+   }else{
+   alert("Your Browser is not support XMLHttpRequset!");
+   }
+}
+
+   function callBack(){
+     if (xhq.readyState == 4 && xhq.status == 200){
+       //var result = xmlHttpRequest.responseText;
+       alert("Welcome to the Ajax!");
+       alert(xhq.responseText);
+       //document.getElementByID("span_uname").innerHTML="UserName has used!";
+     }
+   }
+ //-->
+ </script>
+
+
+ </head>
+
+ <body>
+
+ <script type="text/javascript">
+ <!--
+ /*@
+
+ */
+
+ //-->
+ </script>
+
+ <form accept="#">
+   <!-- UserName:<input type="text" name="" onBlur="javascript:checkUser();"/><div id="uname"><span id="span_uname"></span></div>
+   PassWord:<input type="password" name=""/>
+   <input type="submit" name="" value="Submit" /> -->
+   <input type="button" name="" onclick="javascript:check();" value="异步请求" />
+ </form>
+ </body>
+</html>
