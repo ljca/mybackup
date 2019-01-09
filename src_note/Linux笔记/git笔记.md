@@ -36,7 +36,7 @@ name =
 git init
 git add . 
 git commit -m "mybackup" -a
-git remote add origin git@github.com:meiseup/mybackup.git
+git remote add origin git@github.com:ljca/mybackup.git
 git push -u origin master 
 ```
 ```Bash
@@ -72,6 +72,23 @@ git status -s
 git diff
 git checkout -- welcome.txt
 ```
+
+`git status`
+
+`git log`
+
+`git reset HEAD`
+
+`git remote remove origin`
+
+
+## branch
+
+`git checkout -b lex`
+
+`git branch add lex`
+
+`git checkout lex`
 
 [git&ssh]: https://help.github.com/articles/connecting-to-github-with-ssh/
 
