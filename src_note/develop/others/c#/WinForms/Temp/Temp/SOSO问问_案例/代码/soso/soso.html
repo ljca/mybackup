@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SOSO问问</title>
+<style type="text/css">
+body {
+	font:12px Arial, Helvetica, sans-serif, "宋体";
+	color:#059;
+	margin:0;
+}
+a {
+	text-decoration:none;
+	color:#059;
+}
+a:hover {
+	text-decoration:underline;
+}
+p {
+	margin:0;
+}
+h1 {
+	margin:0;
+	font-size:14px;
+	color:#383838;
+}
+h2 {
+	margin:0;
+}
+ul {
+	margin:0;
+	padding:0;
+}
+li {
+	list-style:none;
+}
+dl {
+	margin:0;
+	padding:10px 0;
+}
+dt {
+	font-size:14px;
+	font-weight:bold;
+	margin:10px 10px 0 10px;
+}
+dd {
+	border-bottom:1px dotted #ddd;
+	line-height:30px;
+	margin:0;
+}
+dd a {
+	margin-left:10px;
+}
+dd.last {
+	border:none;
+}
+#wrap {
+	width:982px;
+	overflow:hidden;
+	margin:0 10px;
+}
+#head {
+	width:100%;
+	overflow:hidden;
+	padding:10px 0;
+}
+.logo {
+	background:url(images/logo.gif) 20px center no-repeat;
+	height:90px;
+	width:100%;
+}
+#nav {
+	background:url(images/nav_bar_bg.gif) 0 0 repeat-x;
+	width:100%;
+	overflow:hidden;
+	height:38px;
+	font-weight:bold;
+}
+#nav a {
+	color:#fff;
+	font-size:14px;
+}
+#nav .home {
+	background:url(images/nav_current.gif) 0 0 no-repeat;
+	height:38px;
+	width:125px;
+	float:left;
+	line-height:38px;
+	text-align:center;
+}
+#nav .navs {
+	width:125px;
+	height:38px;
+	float:left;
+	line-height:38px;
+	text-align:center;
+}
+.topnav {
+	width:100%;
+	overflow:hidden;
+}
+.topnav p {
+	float:left;
+}
+.topnav a {
+	margin:0 10px;
+	text-decoration:underline;
+}
+.topnav a:hover {
+	text-decoration:none;
+}
+.topnav span {
+	float:right;
+}
+.tips {
+	overflow:hidden;
+	margin:10px 0;
+}
+.tips li {
+	float:left;
+	margin:0 10px;
+}
+.tips li.dynamic {
+	float:right;
+}
+#mainbody {
+	width:100%;
+	overflow:hidden;
+}
+.banner {
+	float:left;
+	border:1px solid #c5c5c5;
+	margin-bottom:10px;
+}
+#sidebar {
+	width:186px;
+	float:left;
+	margin-right:10px;
+	border:1px solid #ddd;
+}
+#sidebar h1 {
+	background:url(images/tile_icon.gif) 10px 8px no-repeat;
+	padding-left:35px;
+	line-height:30px;
+}
+.title {
+	background:url(images/submenu_tle_bg.gif) 0 0 repeat-x;
+	height:30px;
+	overflow:hidden;
+	border-bottom:1px solid #ddd;
+}
+#content {
+	float:left;
+	width:780px;
+}
+.left {
+	float:left;
+	width:550px;
+	margin-right:10px;
+}
+.left ul {
+	margin:10px 0;
+}
+.left li {
+	line-height:24px;
+	background:url(images/listicon.gif) 0 10px no-repeat;
+	padding-left:15px;
+}
+.left li a {
+	font-size:14px;
+}
+.topic {
+	width:100%;
+	overflow:hidden;
+	line-height:35px;
+	border-bottom:1px solid #ddd;
+	margin:10px 0;
+}
+.topic h1 {
+	float:left;
+}
+.topic span {
+	float:right;
+}
+.title_01 {
+	background:url(images/icon_01.gif) 0 0 no-repeat;
+	padding-left:40px;
+}
+.title_02 {
+	background:url(images/icon_02.gif) 0 0 no-repeat;
+	padding-left:40px;
+}
+.hot {
+	width:100%;
+	overflow:hidden;
+}
+.hot img {
+	float:left;
+	margin-right:15px;
+}
+.hot p {
+	line-height:24px;
+	color:#000;
+}
+.hot p span {
+	color:#059;
+}
+.lemma {
+	clear:both;
+	padding:10px 0;
+	font-size:14px;
+}
+.lemma a {
+	font-size:12px;
+	margin:0 10px;
+}
+.right {
+	float:left;
+	width:218px;
+	border:1px solid #ddd;
+}
+.topic_r {
+	width:100%;
+	overflow:hidden;
+	line-height:30px;
+}
+.topic_r h1 {
+	float:left;
+	text-indent:10px;
+}
+.topic_r span {
+	float:right;
+}
+.text {
+	padding:10px;
+	border-bottom:1px solid #ddd;
+}
+.text img {
+	float:left;
+	margin-right:10px;
+}
+.text h2 {
+	font-size:12px;
+	line-height:30px;
+}
+.text p {
+	line-height:30px;
+}
+.text ul {
+	clear:both;
+	margin-top:10px;
+}
+.text li {
+	line-height:22px;
+}
+.text li span {
+	color:#000;
+	margin-right:5px;
+}
+.rank {
+	padding:10px;
+}
+.rank li {
+	line-height:30px;
+}
+.rank li.rank_01 {
+	background:url(images/rank_01.gif) 0 5px no-repeat;
+	padding-left:25px;
+}
+.rank li.rank_02 {
+	background:url(images/rank_02.gif) 0 5px no-repeat;
+	padding-left:25px;
+}
+.rank li.rank_03 {
+	background:url(images/rank_03.gif) 0 5px no-repeat;
+	padding-left:25px;
+}
+.rank li.rank_04 {
+	background:url(images/rank_04.gif) 0 5px no-repeat;
+	padding-left:25px;
+}
+.rank li.rank_05 {
+	background:url(images/rank_05.gif) 0 5px no-repeat;
+	padding-left:25px;
+}
+#footer {
+	text-align:center;
+	margin:10px 0;
+	border-top:1px solid #ddd;
+}
+#footer ul {
+	margin-top:10px;
+}
+#footer li {
+	line-height:24px;
+}
+#footer li a {
+	margin:0 10px;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="head">
+    <div class="topnav">
+      <p><a href="#">网页</a><a href="#">图片</a><a href="#">视频</a><a href="#">音乐</a><a href="#">问问</a><a href="#">新闻</a><a href="#">地图</a><a href="#">百科</a><a href="#">搜吧</a><a href="#">更多?</a></p>
+      <span><a href="#">登录</a></span> </div>
+    <div class="logo"></div>
+    <div id="nav">
+      <div class="home"><a href="#">问问首页</a></div>
+      <div class="navs"><a href="#">问题库</a></div>
+      <div class="navs"><a href="#">知识频道</a></div>
+      <div class="navs"><a href="#">用户频道</a></div>
+      <div class="navs"><a href="#">问问活动</a></div>
+      <div class="navs"><a href="#">问问团队</a></div>
+    </div>
+    <div class="tips">
+      <ul>
+        <li>已解决问题：195871850</li>
+        <li>待解决问题：5166080</li>
+        <li>在线用户数：529336</li>
+        <li class="dynamic">问问动态：<a href="#">看穿越动画赢苹果手机</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="mainbody">
+    <div id="sidebar">
+      <div class="title">
+        <h1>所有问题分类</h1>
+      </div>
+      <dl>
+        <dt>电脑/数码</dt>
+        <dd><a href="#">电脑常识</a><a href="#">互联网</a><a href="#">微软专区</a></dd>
+        <dt>生活家居</dt>
+        <dd><a href="#">购物</a><a href="#">生活百科</a><a href="#">烹饪美食</a></dd>
+        <dt>QQ专区</dt>
+        <dd><a href="#">I'M QQ</a><a href="#">搜搜问问</a><a href="#">QQ空间</a></dd>
+        <dt>游戏</dt>
+        <dd><a href="#">腾讯游戏</a><a href="#">盛大游戏</a><a href="#">网易游戏</a></dd>
+        <dt>体育运动</dt>
+        <dd><a href="#">综合体育</a><a href="#">篮球</a><a href="#">足球</a></dd>
+        <dt>娱乐/明星</dt>
+        <dd class="last"><a href="#">电影电视</a><a href="#">明星</a><a href="#">音乐</a></dd>
+      </dl>
+    </div>
+    <div id="content">
+      <div class="banner"><img src="images/banner_1.jpg" /><img src="images/ad_01.jpg" /> </div>
+      <div class="left">
+        <div class="topic">
+          <h1 class="title_01">待解决问题</h1>
+          <span><a href="#">更多>></a></span></div>
+        <ul>
+          <li><a href="#">如果卡锁在KB1210里面怎么办<span>[生活百科]</span></a></li>
+          <li><a href="#">是否有港式汗蒸养身馆的设计图<span>[中医]</span></a></li>
+          <li><a href="#">山西长治瑜伽教练培训一个月多少钱<span>[健身]</span></a></li>
+          <li><a href="#">天1法师技能魔力夺取是什么怪物掉落<span>[冒险岛]</span></a></li>
+          <li><a href="#">舒城过年有什么风俗习惯<span>[民风民俗]</span></a></li>
+        </ul>
+        <div class="hot">
+          <div class="topic">
+            <h1 class="title_02">百科热门词条</h1>
+            <span><a href="#">更多>></a></span></div>
+          <img src="images/pic_02.jpg" />
+          <h2>小冰期</h2>
+          <p>小冰期(Little Ice Age)一词最早用来描述“全新世最暖期之后冰川中等规模复活的寒冷时期”。在小冰期期间世界上许多地点的<span>冰川</span>都发生明显的扩展和前进新鲜和完整的<span>冰碛</span>物及其构成的<span>地貌</span>，表明其规模和范围要比现今的冰川大得多。这是小冰期名... <a href="#">阅读全文</a> </p>
+          <p class="lemma">其它热门词条：<a href="#">地球神盾</a><a href="#">波罗的海指数</a><a href="#">忍够体</a><a href="#">垃圾债券</a><a href="#">新艺术运动</a></p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="topic_r">
+          <h1>问问之星</h1>
+          <span>更多>></span></div>
+        <div class="text"> <img src="images/pic_01.jpg" />
+          <h2>第58届问问之星</h2>
+          <p>云淡风轻</p>
+          <ul>
+            <li><a href="#"><span>[擅长分类]</span>财付通</a></li>
+            <li><a href="#"><span>[星星做客]</span>第58届问问之星简介</a></li>
+            <li><a href="#"><span>[获选理由]</span>精通财付通的问问之星</a></li>
+          </ul>
+        </div>
+        <div class="topic_r">
+          <h1>声望排行</h1>
+          <span>更多>></span></div>
+        <ul class="rank">
+          <li class="rank_01"><a href="#">小优子</a><span>813</span></li>
+          <li class="rank_02"><a href="#">↙繁花落尽↘</a><span>743</span></li>
+          <li class="rank_03"><a href="#">曾少丽</a><span>728</span></li>
+          <li class="rank_04"><a href="#">愤怒的小黄瓜</a><span>689</span></li>
+          <li class="rank_05"><a href="#">萧萧兮水寒</a><span>688</span></li>
+        </ul>
+        <img src="images/ad_02.gif" alt="问问开放平台 闪亮登场" /> </div>
+    </div>
+  </div>
+  <div id="footer">
+    <ul>
+      <li><a href="#">设搜搜为主页</a> <a href="#">开放平台</a> <a href="#">搜索推广</a> <a href="#">免责声明</a> <a href="#">关于腾讯</a> <a href="#">帮助</a> <a href="#">反馈建议</a></li>
+      <li>&copy;2012 Tencent  粤B2-20090028</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

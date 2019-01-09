@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root name="石牌街道">
+	<juwei name="瑞华居委">
+		<jianzhu smid="6" name="瑞华花园1栋">
+			<fjname>101室</fjname>
+			<fjname>102室</fjname>							
+		</jianzhu>
+		<jianzhu smid="7" name="瑞华花园2栋">
+			<fjname>101室</fjname>
+			<fjname>102室</fjname>							
+		</jianzhu>
+	</juwei>
+	<juwei name="金帝居委">
+		<jianzhu smid="4" name="金帝花园1栋">		
+				<fjname>101室</fjname>
+				<fjname>102室</fjname>		
+		</jianzhu>
+	</juwei>
+	<juwei name="朝阳居委">
+		<jianzhu smid="5" name="金帝花园1栋">		
+				<fjname>101室</fjname>
+				<fjname>102室</fjname>
+		</jianzhu>
+	</juwei>
+</root>

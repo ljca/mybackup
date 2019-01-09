@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "FileXmlExample\File.csproj", "{B9485B52-CB18-4B85-B86F-D228A73131C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlRead", "XmlRead\XmlRead.csproj", "{0513F9B6-9842-4FB7-90E4-67FFB89E13C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewDemo", "TreeViewDemo\TreeViewDemo.csproj", "{CCEEDCC2-CAA2-4695-91B6-ACC74609A44B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9485B52-CB18-4B85-B86F-D228A73131C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9485B52-CB18-4B85-B86F-D228A73131C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9485B52-CB18-4B85-B86F-D228A73131C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9485B52-CB18-4B85-B86F-D228A73131C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0513F9B6-9842-4FB7-90E4-67FFB89E13C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0513F9B6-9842-4FB7-90E4-67FFB89E13C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0513F9B6-9842-4FB7-90E4-67FFB89E13C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0513F9B6-9842-4FB7-90E4-67FFB89E13C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCEEDCC2-CAA2-4695-91B6-ACC74609A44B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEEDCC2-CAA2-4695-91B6-ACC74609A44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCEEDCC2-CAA2-4695-91B6-ACC74609A44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCEEDCC2-CAA2-4695-91B6-ACC74609A44B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
