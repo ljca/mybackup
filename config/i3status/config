@@ -32,7 +32,7 @@ order += "volume master"
 #}
 
 wireless _first_ {
-        format_up = " %essid%quality"
+        format_up = " %essid %quality"
         format_down = ": offline"
         color_good = "#0000FF"
         #color_bad = "#0000FF"
