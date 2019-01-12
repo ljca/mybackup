@@ -1,4 +1,3 @@
-# Markdown List: 
 + [ARM第四课：ARM-内存管理单元MMU](develop/c-note/arm/arm_mmu.md)
 + [Arm 笔记：嵌入式系统的初步了解](develop/c-note/arm/arm笔记.md)
 + [arm asm 汇编](develop/c-note/arm/asm_cmd.md)
@@ -200,7 +199,7 @@
 + [我见过的一些终端下很有意思的命令和脚本 ](Linux笔记/otools/intestresting-command.md)
 + [laptop-mode](Linux笔记/otools/laptop-mode.md)
 + [一些有用的Linux工具](Linux笔记/otools/other_tools.md)
-+ [`pandoc -f|--from <formats> -t|--to <formarts> file -o file` ](Linux笔记/otools/pandoc.md)
++ [pandoc：](Linux笔记/otools/pandoc.md)
 + [xclip：Linux X 下的命令行剪贴板工具](Linux笔记/otools/xclip.md)
 + [Power Manager：Linux 上的电源管理方案](Linux笔记/power_manage.md)
 + [sed：流编辑器](Linux笔记/sed：流编辑器.md)
