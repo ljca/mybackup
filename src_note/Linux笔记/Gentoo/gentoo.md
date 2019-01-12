@@ -1,5 +1,10 @@
-# Gentoo安装笔记
-## Install 之前
+# Gentoo 笔记：
+ 
+# 附
+
+## 安装 
+
+### Install 之前
 
 > 制作 Gentoo 可启动盘……
 
@@ -7,15 +12,12 @@
 + stage 3 （可选）
 + portage 树（可选）
 
-
 ```Bash
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 0xBB572E0E2D182910
 gpg --verify install-amd64-minimal-20170810.iso.DIGESTS.asc 
 grep -A 1 -i sha512 install-amd64-minimal-20170810.iso.DIGESTS.asc 
 sha512sum install-amd64-minimal-20170810.iso
 ```
- 
-## 安装 
 
 > 从 BIOS[^bios]启动 Gentoo 可启动盘，选择一个内核和可选内核参数启动[^kernel_option]，开始安装 Gentoo 前的准备。
 
@@ -178,6 +180,9 @@ emerge --ask sys-fs/{xfsprogs,jfsutils,dosfstools,btrfs-progs,reiserfsprogs}
 [^bios]: 然而 Gentoo 的启动盘并不支持从 UEFI 启动，据称只有少数的 Live DVD 可以。
 
 [^gentoo_systemd]: Gentoo 默认使用的 init 是 OpenRC，
+
+> 参考：
+
 + [Configuring the Linux kernel - Gentoo Wiki](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel/zh-cn#.E5.AE.89.E8.A3.85.E6.BA.90.E7.A0.81)
 
 + [Configuring the network - Gentoo Wiki](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Networking/zh-cn)
@@ -196,7 +201,27 @@ emerge --ask sys-fs/{xfsprogs,jfsutils,dosfstools,btrfs-progs,reiserfsprogs}
 
 + [Gentoo系统安装步骤详解_LINUX_操作系统_脚本之家](http://www.jb51.net/LINUXjishu/393587.html)
 
-+ [Linux-4.4-x86_64 内核配置选项简介 [金步国]](http://www.jinbuguo.com/kernel/longterm-linux-kernel-options.html)
++ [Linux-4.4-x86_64 内核配置选项简介](http://www.jinbuguo.com/kernel/longterm-linux-kernel-options.html)
 
 + [启用systemd的gentoo安装方法 - KlausZL的个人页面 - 开源中国社区](http://my.oschina.net/klauszl/blog/223752)
+
+
+## GentooUSE标记
+
+> 一些ebuild需要或禁止USE标志的某些组合才能正常工作。 这通过放置在 REQUIRED\_USE，用一组条件来表示。 此条件确保所有功能和依赖性都已完成，并且构建将成功并按预期执行。 如果任何一个不符合，emerge会提醒你，并要求你解决这个问题。
+
+```
+下面是REQUIRED_USE的一个例子：
+Example 	Description
+REQUIRED_USE="foo? ( bar )" 	如果 foo 被设定, 必须设定bar 。
+REQUIRED_USE="foo? ( !bar )" 	如果 foo 被设定， 必须设定 bar。
+REQUIRED_USE="foo? ( || ( bar baz ) )" 	如果 foo被设定， 必须设定 bar 或baz 。
+REQUIRED_USE="^^ ( foo bar baz )" 	foo bar 或baz 必须有一个被设定
+REQUIRED_USE="|| ( foo bar baz )" 	至少 foo bar 或 baz 有一个被设定。
+REQUIRED_USE="?? ( foo bar baz )" 	foo bar 或 baz中必须同时被设定多个
+```
+
+> 参考：
+
++ [USE Flags](https://www.gentoo.org/support/use-flags/)
 

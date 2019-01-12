@@ -1,3 +1,7 @@
+# Arm 笔记：嵌入式系统的初步了解
+
+> 参考：
+
 + [ARM指令集详解(超详细！带实例！） - dxmcu的专栏 - 博客频道 - CSDN.NET.html](http://blog.csdn.net/dddxxxx/article/details/47130545)
 
 + [BusyBox构建根文件系统_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2015-08/121320.htm)

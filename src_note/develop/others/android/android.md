@@ -1,3 +1,7 @@
+# Android 笔记：
+
+> 参考：
+
 + [Android内核模块编译执行 - 水汐。2014 的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/qq1084283172/article/details/56958136)
 
 + [Android内核模块编译执行 - 推酷](http://www.tuicool.com/articles/E3ARJzi)
@@ -50,4 +54,24 @@
 + 使用fastboot工具刷入recovery_img、boot_img、system_img等
 
 + 在Ubuntu-14.04.3配置并成功编译Android6_r1源码 - LeoLiang - 博客园
+
+# 附
+## Android 测试环境
+
+`*#*#4636#*#*` 测试：可以用来切换SIM卡的2G/3G/……，以及查看电池和wifi信息（部分机型不支持）
+
+`*#803#*`  wifi 测试……
+
+`*#86#` 手机 IME 查询
+
+
+### 仅华为
+
+`*#*#2846579#*#*` 工程菜单
+1. 后台设置
+2. 单板信息查询
+3. 网络信息查询
+4. 软件升级
+5. 恢复出厂设置
+6. 补电
 

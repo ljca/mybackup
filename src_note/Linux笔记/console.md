@@ -1,3 +1,4 @@
+# Linux 核心控制台（tty）：
 
 > 禁止Arch Linux启动时清除启动信息： 创建目录 `/etc/systemd/system/getty@tty1.service.d`，And Then,Touch file: `noclear.conf`, Add: 
 

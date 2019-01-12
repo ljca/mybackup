@@ -1,3 +1,4 @@
+# pacman：Arch Linux 软件包管理器
 pacman -S zsh
 pacman -S dialog wire_less
 pacman -S dialog wireless

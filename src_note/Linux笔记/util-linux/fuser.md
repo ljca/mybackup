@@ -1,3 +1,5 @@
-    4  2016-07-07 18:19:48 cd ..
-    5  2016-07-08 10:53:04 fuser -m -v -u /dev/shm
-    6  2016-07-08 10:58:21 getenforce 
+# fuser: 
+
+> fuser: `fuser-m -v -u /dev/shm`
+
+参考：[lsof: ](lsof.md)
