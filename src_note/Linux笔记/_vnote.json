@@ -194,9 +194,6 @@
     ],
     "sub_directories": [
         {
-            "name": "tmp"
-        },
-        {
             "name": "Arch"
         },
         {
