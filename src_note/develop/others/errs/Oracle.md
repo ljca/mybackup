@@ -1,4 +1,4 @@
-#  Oracle
+# Oracle
 Oracle
 ★ Oracle数据库安装ERROR:
 ERR:未开启系统共享

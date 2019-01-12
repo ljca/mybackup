@@ -1,4 +1,4 @@
-#  asciinema：高级的终端会话记录和回放工具
+# asciinema：高级的终端会话记录和回放工具
 ##  安装
 
 &nbsp;&nbsp;[asciinema][asciinema] 是一个用 python 实现的程序，主要用于录制和回放终端会话（可以是 asciiname 网络上的，也可以是本地的）[^0][^1]。因此它没有太多的依赖，大多数较新的 Linux 发行都在官方源包含了这个工具，只需要使用包管理器就能直接安装它。 如果没有在官方源中找到这个工具，[asciinema][asciinema_install]网站上已经提供了较详细的安装教程，[git][asciinema_git]上也提供另外的安装方法。当然，如果是在 Linux 上，还可以直接使用 pip3/pip 安装 `sudo pip3 install asciinema`

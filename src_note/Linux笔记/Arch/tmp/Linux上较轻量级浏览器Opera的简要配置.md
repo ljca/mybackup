@@ -1,4 +1,4 @@
-#  Linux上较轻量级浏览器Opera的简要配置
+# Linux上较轻量级浏览器Opera的简要配置
 &nbsp;&nbsp;Opera 属于浏览器中的较轻量级浏览器。说是较轻量级，也只是针对 Linux PC 端的 Firefox 和 Chrome,Chromium 的内存占用而言，不过浏览器该有的功能却是有的。而且，字体渲染也不差。
 
 &nbsp;&nbsp;Linux 中的 Opera 浏览器链接总是被添加了下划线，这样可以迅速与其它的文本相区分。

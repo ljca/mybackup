@@ -1,4 +1,4 @@
-#  ruxvt
+# ruxvt
 当我启动 urxvt 时，遇到了下面的错误……
 urxvt: unable to load base fontset, please specify a valid one using -fn, aborting.
 

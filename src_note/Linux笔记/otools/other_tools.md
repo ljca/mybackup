@@ -1,4 +1,4 @@
-#  一些有用的Linux工具
+# 一些有用的Linux工具
 
 ## [cv](https://github.com/Xfennec/progress) 显示`cp`、`mv`、等指令在工作时的进度。
 

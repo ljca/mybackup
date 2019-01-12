@@ -1,4 +1,4 @@
-#  Android apk 分析工具 aapt 用法简介
+# Android apk 分析工具 aapt 用法简介
 &nbsp;&nbsp;Android apk 分析工具(Android Assiant Packging Tool)，不仅可以用来分析得到一些 apk 概况(比如列出 apk 包内的文件和列出 apk 权限)还可以用来更改 apk 包(添加或者删除 apk 包中的某个文件,甚至可以用来重新打包 apk)
 
 &nbsp;&nbsp;这个工具是在编译 Android 系统镜像时交叉编译(为主机而编译)然后输出到安卓 sdk 源码下的`/out/host/linux-x86/bin`这个目录下的。这个工具不需要以根用户权限来执行，下面是它的几个基本使用方法：

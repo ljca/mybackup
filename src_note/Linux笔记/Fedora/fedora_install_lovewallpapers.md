@@ -1,4 +1,4 @@
-#  fedora_install_lovewallpapers
+# fedora_install_lovewallpapers
 1. install 必须依赖 python-pyside ：`dnf install python-pyside`
 如果没有安装这个软件包,会提示载入模块Pyside.QtCore失败
 安装好lovewallpaper的依赖软件包之后,直接使用LoveWallpaper提供给Fedora的rpm包 `rpm -ivh LoveWallpaper4LinuxFedora.rpm`

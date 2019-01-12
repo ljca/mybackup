@@ -1,4 +1,4 @@
-#  Python3笔记
+# Python3笔记
 # Python 3 笔记：基础语法
 
 > ***~~以下所有在脚本在 Linux 上测试完成。Python 版本为 3.6。~~***

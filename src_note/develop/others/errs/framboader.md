@@ -1,4 +1,4 @@
-#  framboader
+# framboader
 MyEclipse-Hibernate 
 ERROR:
 ？信息: Reading mappings from resource : test.entity.District.hbm.xml

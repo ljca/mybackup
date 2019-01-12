@@ -1,4 +1,4 @@
-#  adb_tmp
+# adb_tmp
 普通用户执行adb devices:
 $ adb devices
 List of devices attached 

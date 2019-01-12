@@ -1,4 +1,4 @@
-#  Loop Device：a magic device（奇妙的环回设备）。
+# Loop Device：a magic device（奇妙的环回设备）。
 
 &nbsp;&nbsp;  我们还可以将一个文件来作为磁盘读写，做法与创建交换文件作为操作系统交换空间类似,其原理是将这个文件全用0来填充，然后将它像磁盘一样格式化，但挂载时需要将它挂载为环回设备。 我们首先需要使用 **`dd`** 指令[^dd]创建一个由特殊字符 '\0' 填充的数据文件[^size]，特殊设备 `/dev/zero` 可以完成这个任务。 `mkdir tmp;dd if=/dev/zero of=tmp/loop.iso bs=1024M count=1`
 

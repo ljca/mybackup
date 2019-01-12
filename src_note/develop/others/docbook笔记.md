@@ -1,4 +1,4 @@
-#  charpter1
+# charpter1
 [^docbook]学习笔记
 
 ## 第一步：从安装与搭建测试环境开始

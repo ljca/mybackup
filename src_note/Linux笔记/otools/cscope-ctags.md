@@ -1,4 +1,4 @@
-#  cscope&ctags
+# cscope&ctags
 ## vim 插件 cscope&ctags
 
 ### Search And Install ctags

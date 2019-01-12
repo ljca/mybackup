@@ -1,4 +1,4 @@
-#  Fedora23_install_chromium55
+# Fedora23_install_chromium55
 Fedora23安装Chromium 54/55
 rpm Download Address:
 chromium x86_64:

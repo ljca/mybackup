@@ -1,4 +1,4 @@
-#  Jsp_Servlet
+# Jsp_Servlet
 Jsp/Serverlet
 C/S(Client/Server):客户端/服务器端模式，基于局域网
 使用C/S结构的Web应用程序，则必须安装客户端程序，维护和升级必须在服务器和客户端同时进行

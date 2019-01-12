@@ -1,4 +1,4 @@
-#  为什么在我的Linux核心控制台上，Alt Gr键不能被用作Meta键？
+# 为什么在我的Linux核心控制台上，Alt Gr键不能被用作Meta键？
 &nbsp;&nbsp;Meta 键是一个元键，一般对应于 PC 机键盘上的左 Alt，如果图形界面的伪终端也正确配置了 Alt 键，右边的 Alt 也可以作为 Meta 键使用。
 在没有 Alt 键的时代，是使用 Esc 键来代替 Meta 键的。
 

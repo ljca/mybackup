@@ -1,4 +1,4 @@
-#  nvidia 导致的 X 服务器黑屏问题
+# nvidia 导致的 X 服务器黑屏问题
 ﻿&nbsp;&nbsp;在 Arch Linux 系统上，如果你选择安装 `nvidia` 的闭源驱动并尝试加入 `initramfs` 则可能会导致 X 服务器在启动时黑屏：
 
 =========== /etc/mkinitcpio.conf ============

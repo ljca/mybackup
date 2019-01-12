@@ -1,4 +1,4 @@
-#  Fedora Xfce 23：安装与配置指东
+# Fedora Xfce 23：安装与配置指东
 ## 安装 ##
 ### grub2配置 ###
 > 从iso启动的Linux Live系统的所在文件系统不能在Linux Live环境中被再次挂载(如果一定要挂载，可以传递--bind参数以绑定挂载的方式)

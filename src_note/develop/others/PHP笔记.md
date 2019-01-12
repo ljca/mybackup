@@ -1,4 +1,4 @@
-#  PHP笔记：PHP 中文手册在[这里][php-man-zh].
+# PHP笔记：PHP 中文手册在[这里][php-man-zh].
 
 ## 基本输出/打印函数。
 echo 

@@ -1,4 +1,4 @@
-#  Linux平台下的中国象棋游戏gmchess
+# Linux平台下的中国象棋游戏gmchess
 gmchess 是一款 Linux 下的中国象棋游戏。
 
 作者信息：

@@ -1,4 +1,4 @@
-#  kernel_modules
+# kernel_modules
 内核模块实现:
 #include <linux/init.h>
 #include <linux/kernel.h>

@@ -1,4 +1,4 @@
-#  interrupt
+# interrupt
 #include <linux/interrupt.h>
 #include <asm/gpio.h>
 中断注册与注销

@@ -1,4 +1,4 @@
-#  grub 笔记
+# grub 笔记
 
 ## GRUB 2 Themes
 &nbsp;&nbsp;如果你希望调整`Grub`默认主题并且没兴趣了解、讨论`Grub`主题配置文件细节，你可以尝试从 Gnome Themes 的 [Grub Themes][grub_themes] 节获取您喜欢的主题后放到合适的位置然后根据需要调整…… 下面这些仅仅适合我和那些“希望了解`Grub`主题包细节和对`Grub`主题进行微小调整的人群”……

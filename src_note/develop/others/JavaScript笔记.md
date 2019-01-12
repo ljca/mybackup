@@ -1,4 +1,4 @@
-#  JavaScript
+# JavaScript
 ﻿一、JavaScript篇
 * JavaScript语言，基于对象和事件驱动。由ECMAScript(标准国际通用脚本语言规范),DOM(Document Object Model)文档对象模型，提供了操作Html元素的一些API(对象和方法),BOM(Broser Object Model)浏览器对象模型,提供了和浏览器交互对象* 解释性语言，边解释边执行。一旦某处有语法错误，将不再执行错误处之后的代码
 # 网页中使用JS的几种方式：

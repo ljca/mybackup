@@ -1,4 +1,4 @@
-#  readelf
+# readelf
 ELF 头：
   Magic：  7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
   类别:                              ELF64

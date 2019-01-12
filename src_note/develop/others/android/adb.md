@@ -1,4 +1,4 @@
-#  adb
+# adb
 使用adb: 重新挂载远程(安卓设备上)的system分区为读写.
 $ adb remount
 

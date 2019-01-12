@@ -1,4 +1,4 @@
-#  laptop-mode
+# laptop-mode
 ```
 # 
 iwconfig wlp3s0 power on

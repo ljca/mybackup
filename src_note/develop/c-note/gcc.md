@@ -1,4 +1,4 @@
-#  gcc
+# gcc
 
 ```
 ../gcc-4.9.2/configure --disable-cloog-version-check --disable-isl-version-check   --prefix=/home/external/usr/tools/gcc-4.9.2 --enable-languages=c,c++ --disable-multilib --disable-bootstrap --with-system-zlib

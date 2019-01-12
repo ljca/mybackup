@@ -1,4 +1,4 @@
-#  xfce_acpid
+# xfce_acpid
 acpi自定义电源事件
 安装acpid
 

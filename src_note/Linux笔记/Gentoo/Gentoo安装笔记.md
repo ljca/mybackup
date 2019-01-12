@@ -1,4 +1,4 @@
-#  Gentoo安装笔记
+# Gentoo安装笔记
 ## Install 之前
 
 > 制作 Gentoo 可启动盘……

@@ -1,4 +1,4 @@
-#  Oracle初步
+# Oracle初步
 ★ 第一章 Oracle初步
 实例
 ！安装Oracle过程中，如果配置了数据库，则

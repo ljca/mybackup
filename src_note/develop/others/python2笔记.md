@@ -1,4 +1,4 @@
-#  python学习笔记
+# python学习笔记
 # Python 学习笔记
 
 `import` 用来导入 Python 的某个模块即某个库。

@@ -1,3 +1,3 @@
-#  sqlite
+# sqlite
 
  vim:set ft=markdown:

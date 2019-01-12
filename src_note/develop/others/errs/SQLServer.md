@@ -1,4 +1,4 @@
-#  SQLServer
+# SQLServer
 SQLServer问题日志
 SQLSever分组查询
 * 如果select查询语句中没有包含聚合函数,则应将被查询的列包含在group by字句中

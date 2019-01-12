@@ -1,4 +1,4 @@
-#  Android调试桥adb与Android应用服务调试工具am用法简介
+# Android调试桥adb与Android应用服务调试工具am用法简介
 adb 是 Android 调试桥(Android Debug Bridge)的简称，一般而言，adb 至少具有以下几个功能：
   1. 调试 Android 程序
   2. 安装、卸载、运行、停止设备上的 Android 应用

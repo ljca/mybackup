@@ -1,4 +1,4 @@
-#  YCM：一个很厉害的VIM代码补全插件
+# YCM：一个很厉害的VIM代码补全插件
 vim version must support python：
 
 ```

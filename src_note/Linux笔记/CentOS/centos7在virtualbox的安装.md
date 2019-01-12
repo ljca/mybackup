@@ -1,4 +1,4 @@
-#  CentOS7在VirtualBox的安装
+# CentOS7在VirtualBox的安装
 # §. CentOS 7 在 VirtualBox 里的安装
 
 > ViretualBox 同时支持 `BIOS` 和 `UEFI` [^uefi]。 关于系统存储控制器的选择有几种：

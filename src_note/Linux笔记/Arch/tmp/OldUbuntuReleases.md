@@ -1,4 +1,4 @@
-#  Old Ubuntu Releases
+# Old Ubuntu Releases
 &nbsp;&nbsp;对于一些非`LTS`版本的`Ubuntu`，`Canonical`公司可能在它们过了维护期后就不再进行维护。
 
 > &nbsp;&nbsp;如果有一天，你希望找到一些旧版本`Ubuntu`（非`LTS`版本）的资源文件（比如你希望找到一些旧版本`Ubuntu`的壁纸），可以尝试从 [Old Ubuntu Releases](http://old-releases.ubuntu.com/releases/)（也许未来的某一天，这个地址会迁移或者不再有效）处获取光盘镜像文件后手动提取[^1]，这真是够无聊的……

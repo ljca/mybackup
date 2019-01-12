@@ -1,4 +1,4 @@
-#  Jsp-Servlet
+# Jsp-Servlet
 Jsp/Servlet
 ？在java为MS-SQ中的Data类型的赋值
 -> new java.sql.Date(....getTime());

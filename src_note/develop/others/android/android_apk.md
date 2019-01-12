@@ -1,4 +1,4 @@
-#  android_apk
+# android_apk
 获取安卓sdk基本命令行工具包:
 android-sdk_r21-linux.tgz
 android-sdk_r24.4.1-linux.tgz

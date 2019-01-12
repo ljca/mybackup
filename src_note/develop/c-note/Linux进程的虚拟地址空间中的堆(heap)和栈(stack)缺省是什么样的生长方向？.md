@@ -1,4 +1,4 @@
-#  Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？
+# Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？
 
 ```C
 int main()

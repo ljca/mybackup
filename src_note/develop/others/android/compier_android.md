@@ -1,4 +1,4 @@
-#  compier_android
+# compier_android
 在64位的Ubuntu 14.04上编译安卓4.2.2:
 Install Sun JDK1.6 with 64
 

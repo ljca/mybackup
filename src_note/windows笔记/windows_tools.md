@@ -1,4 +1,4 @@
-#  Windows 8.1 Optimization[^op] Tools
+# Windows 8.1 Optimization[^op] Tools
 
 + **`Aero Glass for Win 8.1` 可以将 windos 8.1 的窗口边框[^window-border]调整成类似于 win7 那样的毛玻璃显示效果。Win8 的 `Ribbon` 样式菜单是可以调整[^ribbon]的。**
 + **`QTTabbar` 为资源管理器提供了 `标签式选项卡` 以及资源管理器其它的优化可能。**

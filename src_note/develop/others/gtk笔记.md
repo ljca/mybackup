@@ -1,4 +1,4 @@
-#  gtk
+# gtk
 所有的gtk程序都要包含头文件gtk.h,然而这个头文件在不同的Linux发行的位置却不是一样的。
 函数原型：gtk_init(int *argc,char ***argv);
 从命令行参数初始化窗口，这是所有gtk图形程序都要做的工作

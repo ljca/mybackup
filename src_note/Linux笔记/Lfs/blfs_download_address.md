@@ -1,4 +1,4 @@
-#  blfs_download_address
+# blfs_download_address
 BLFS Book(EN) http://www.linuxfromscratch.org/lfs/downloads/
 BLFS Package HTTP/FTP Sites
 If the above methods are not available to you, the packages are also available individually on the following ftp and http mirrors.

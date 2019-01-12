@@ -1,4 +1,4 @@
-#  lib_call
+# lib_call
 C库调用及系统调用
 
 

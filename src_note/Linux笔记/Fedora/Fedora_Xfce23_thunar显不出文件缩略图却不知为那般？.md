@@ -1,4 +1,4 @@
-#  Fedora Xfce 23 thunar 显不出文件缩略图却不知为那般？
+# Fedora Xfce 23 thunar 显不出文件缩略图却不知为那般？
 &nbsp;&nbsp;在我的 Fedora[^fedora] Xfce 系统上，有一个问题让我让我觉得十分奇怪：Xfce 的 Thunar 文件管理器不显示出图片/视频/文档等文件的缩略图(我发现一开始好像不会这样，后来就变成了文件的缩略图上仅仅只有文件类型了)，图片浏览器 Ristretto 也是如此…… 哦，不知道是什么原因导致了这样的问题[^problem]。
 
 ## 重新编译安装 tumbler 

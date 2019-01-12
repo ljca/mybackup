@@ -1,4 +1,4 @@
-#  instant-markdown-d：在浏览器中预览 markdown
+# instant-markdown-d：在浏览器中预览 markdown
 + 首先安装 npm
 + 并同步 [instant-markdown-d.git](https://github.com/suan/instant-markdown-d)，这一步其实是可选的。
 

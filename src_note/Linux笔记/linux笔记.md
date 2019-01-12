@@ -1,4 +1,4 @@
-#  font-config
+# font-config
 fontconfig基本配置：
 现代Linux使用了FreeType2来渲染文字，配置文件在 /etc/fonts/fonts.conf、/etc/fonts/conf.d、$xdg_home/.config/fontconfig/fonts.conf、$xdg_home/.config/fontconfig/conf.d
 

@@ -1,4 +1,4 @@
-#  在Java中使用JNI(Jave Native Interface)调用C库
+# 在Java中使用JNI(Jave Native Interface)调用C库
 
 ```Bash
 mkdir -pv test/test

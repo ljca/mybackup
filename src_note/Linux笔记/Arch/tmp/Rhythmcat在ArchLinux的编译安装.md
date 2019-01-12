@@ -1,4 +1,4 @@
-#  Rhythmcat在Arch Linux的编译安装
+# Rhythmcat在Arch Linux的编译安装
 
 gstreamer 源码树见 [这里](https://gstreamer.freedesktop.org/src/).
 

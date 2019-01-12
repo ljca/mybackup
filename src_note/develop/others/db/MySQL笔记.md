@@ -1,4 +1,4 @@
-#  MySQL[^sql]笔记
+# MySQL[^sql]笔记
 
 ## show 指令
 
