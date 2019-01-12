@@ -6,7 +6,7 @@ __pycache__
 *.exe
 *.log
 *.jar
-jquery-1.8.3.js
+jquery*.js
 build
 _v_recycle_bin
 bin
@@ -31,9 +31,9 @@ source/src/c
 source/src/C++
 source/src/php
 source/src/docbook-5.0
-src_note/Linux笔记/tmp
 src_note/develop/others/db/sql/myorder.sql
 #src_note/develop/others/c#
 src_note/develop/others/java_src
 source/docs/tmp/星际I介绍/
-src_note/develop/c-src/arm-src/project/Android移植项目/tiny4412-doc
+src_note/tmp
+
