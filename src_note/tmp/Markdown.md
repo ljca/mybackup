@@ -104,6 +104,11 @@ con(no)->op
 
 其次则是 Leanote，Leanote Markdown 语法手册在[这里](http://www.leanote.com/blog/post/531b263bdfeb2c0ea9000002)。
 
+> Leanote 参阅： 
+
++ [如何开发Leanote桌面端插件 · Issue _110 · leanote_desktop-app · GitHub](https://github.com/leanote/desktop-app/issues/110)
+
++ [如何开发Leanote桌面端主题 · Issue _109 · leanote_desktop-app · GitHub](https://github.com/leanote/desktop-app/issues/109)
 
 
 [^1]: 什么是[脚注][]？脚注就是对某个生僻词汇或者句子的详细解释…

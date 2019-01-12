@@ -1,4 +1,6 @@
 # pacman：Arch Linux 软件包管理器
+
+```Bash
 pacman -S zsh
 pacman -S dialog wire_less
 pacman -S dialog wireless
@@ -627,3 +629,6 @@ paci rox
 paci uget
 paci calc
 paci lftp 
+```
+
+# 附

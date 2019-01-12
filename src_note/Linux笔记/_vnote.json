@@ -7,7 +7,7 @@
             ],
             "created_time": "2019-01-09T09:06:17Z",
             "modified_time": "2019-01-09T13:08:13Z",
-            "name": "linux笔记.md",
+            "name": "linux.md",
             "tags": [
             ]
         },
@@ -17,7 +17,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T12:38:43Z",
-            "name": "shell笔记.md",
+            "name": "shell.md",
             "tags": [
             ]
         },
@@ -27,7 +27,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T13:45:23Z",
-            "name": "CLI-ART.md",
+            "name": "cli_art.md",
             "tags": [
             ]
         },
@@ -37,7 +37,7 @@
             ],
             "created_time": "",
             "modified_time": "",
-            "name": "Ext文件系统工具：.md",
+            "name": "ext_utils.md",
             "tags": [
             ]
         },
@@ -47,7 +47,7 @@
             ],
             "created_time": "",
             "modified_time": "2018-12-05T18:33:22Z",
-            "name": "find与xargs：.md",
+            "name": "find_xargs：.md",
             "tags": [
             ]
         },
@@ -57,7 +57,7 @@
             ],
             "created_time": "",
             "modified_time": "2018-12-05T17:29:51Z",
-            "name": "git笔记.md",
+            "name": "git.md",
             "tags": [
             ]
         },
@@ -67,7 +67,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T12:05:59Z",
-            "name": "ip的手动配置.md",
+            "name": "network_manal.md",
             "tags": [
             ]
         },
@@ -77,7 +77,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T12:36:45Z",
-            "name": "Linux-Shell脚本笔记.md",
+            "name": "shell_script.md",
             "tags": [
             ]
         },
@@ -87,7 +87,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T12:51:33Z",
-            "name": "sed：流编辑器.md",
+            "name": "sed.md",
             "tags": [
             ]
         },
@@ -97,7 +97,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T12:51:03Z",
-            "name": "tar：Linux命令行归档工具.md",
+            "name": "tar.md",
             "tags": [
             ]
         },
@@ -107,7 +107,7 @@
             ],
             "created_time": "2018-10-18T06:37:50Z",
             "modified_time": "2019-01-09T12:37:08Z",
-            "name": "systemd笔记.md",
+            "name": "systemd.md",
             "tags": [
             ]
         },
@@ -147,7 +147,7 @@
             ],
             "created_time": "",
             "modified_time": "2019-01-09T12:46:19Z",
-            "name": "util-linux：Linux工具.md",
+            "name": "util_linux.md",
             "tags": [
             ]
         },
@@ -187,7 +187,7 @@
             ],
             "created_time": "",
             "modified_time": "",
-            "name": "Linux和Unix.md",
+            "name": "linux_unix.md",
             "tags": [
             ]
         }

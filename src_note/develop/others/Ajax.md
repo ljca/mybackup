@@ -1,6 +1,4 @@
-# Ajax
-Ajax:(A.. JavaScript And XML)：异步JavaScript和XML可扩展语言
-Ajax:(Async.. JavaScript And XML)：异步JavaScript和XML可扩展语言
+# Ajax，Async.. JavaScript And XML：异步JavaScript和XML可扩展语言
 Ajax其实不是一种新技术，根据相关文献，它来源于MS公司。为了解决
 一些浏览器厂商纷纷对它提供了支持。
 它是多种技术的集合，它包含了JavaScript、XML、CSS、等对象集合
@@ -22,4 +20,9 @@ json:一种数据传输格式，类似于xml
 格式为：{"属性一":值一,....,"属性n":值n}
 重写toString方法
 
- vim:set filetype=markdown: 
+> 参阅：
+
++ [轻松掌握XMLHttpRequest对象 - Bēniaǒ - 博客园](http://www.cnblogs.com/beniao/archive/2008/03/29/1128914.html)
++ [掌握 Ajax，第 1 部分_ Ajax 入门简介](http://www.ibm.com/developerworks/cn/xml/wa-ajaxintro1.html#ibm-pcon)
++ [掌握 Ajax，第 7 部分_ 在请求和响应中使用 XML](http://www.ibm.com/developerworks/cn/xml/wa-ajaxintro7.html)
+ + [Ajax 详解 (2) ：XHR 实例 GET 和 POST 异步和同步 - 温故而 ' 自信 ' - SegmentFault](https://segmentfault.com/a/1190000002789203)

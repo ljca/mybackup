@@ -231,9 +231,9 @@ reboot
 [kernel_module]: https://wiki.archlinux.org/index.php/Kernel_module#Blacklisting
 
 -------------------------------
-## 附
+# 附
 
-### *`pacman 用法`*
+## *[pacman](pacman.md) 用法*
 
 + [pacman](https://www.archlinux.org/pacman/pacman.conf.5.html#_package_and_database_signature_checking)
 + [Pacman (简体中文) - ArchWiki][pacman]
@@ -245,7 +245,7 @@ reboot
 [pkg_sig]: https://wiki.archlinux.org/index.php/Pacman/Package_signing_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E9.85.8D.E7.BD.AE_pacman
 [pacman_tricks]: https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
-### *`Chroot环境`* ：配置虚拟文件系统（可选）[^option]
+## *`Chroot环境`* ：配置虚拟文件系统（可选）[^option]
 
 [^option]: 据称，只要 Bash 的版本合适，这些虚拟文件系统甚至可以不必配置。
 
@@ -263,16 +263,28 @@ reboot
 
 [chroot]: https://wiki.archlinux.org/index.php/Change_root_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
---------------------------------
-
-### 安装过程后遇到的一些问题
-
-
-### 软件包[列表](list.md)，[List of applications (简体中文) - ArchWiki][list_package]
+## 软件包[列表](list.md)，[List of applications (简体中文) - ArchWiki][list_package]
 
 *`Install Arch Linux base system  from USB, 2017-1-21 16:40:00`*
 
 [list_package]: https://wiki.archlinux.org/index.php/List_of_applications_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E6.88.AA.E5.8F.96.E5.B1.8F.E5.B9.95
+
+
+--------------------------------
+
+# FIQ
+
+## Arch Linux滚系统后pacman无法正常使用
+[^archlinux]: Arch Linux 是一个比较"前卫"的滚动式(系统没有版本号，一条指令能更新系统中所有的软件到最新版本)Linux 发行，因为它使用的软件包版本始终都是最新的。
+
+&nbsp;&nbsp;我在滚系统时收到了 pacman 因为依赖关系破坏的提示而导致无法更新任何软件包。不过呢，pacman 同步和移除软件包都有一个不被推荐使用的选项那就是在同步或者移除软件包时允许跳过所有的依赖关系检查(使用时只需传递两个 dd 选项给 pacman)。这样一来，就会出很多问题。
+
+我果断的用了这个选项滚了系统，之后系统果然出了问题。连 pacman 都无法好好工作了，说是自己要的一个动态库(它找不到的那个动态库叫libnghttp2.so.14，虽然它也是一个符号链接)找不到了。怎么办呢？
+
+首先，我用了常规解决方案，看看系统中有没有这个动态库？没有，那有没有这个软件包？没有？从 Arch Linux 官网上下一个。libnghttp2  属于 Core 的，而 pacman  的启动依赖于这个软件包。
+
+因为 Arch Linux 的软件包实际上就是一个经过 tar 打包然后用 xz 压缩过的归档。所以解决方案就是直接解开软件包并将解开后的文件放到合适的位置(虽然放到 usr下再用 pacman 工作正常，但依然无法将缺的这个软件包装上，会提示已经存在同名文件，不过，为了让 pacman 工作正常，传递 --force 选项给 pacman 进行覆盖安装好了)放到 /usr/local 下更好或者其它位置，但需要进行另外配置。)之后，pacman 能正常工作了。这时重新安装安装 pacman 所缺的这个软件包已经没有了问题。虽然在 Live 环境的 pacstrap 也能完成这个工作，不过却是显得有些繁琐了。
+
 
 [^uefi]: 你可以在 [UEFI WIKI] 获得关于 UEFI 和 BIOS 的详细解释。如果你不打算使用 UEFI，那么以下的磁盘分区方案和 grub 安装引导方式将不适合您的计算机，你可能需要再次查看 Arch Linux wiki. boot目录下用于安装系统内核和初始化文件系统，这个目录名称最好不要随意更改,为了不将引导和内核混在一起，`/boot/efi`。
 
