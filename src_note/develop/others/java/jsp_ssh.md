@@ -370,14 +370,17 @@ ibatis工具类:mybatis.jar https://github.com/mybatis/mybatis-3/releases
 ```
 
 * 配置好iBatis主配置文件和SQL映射文件之后
+
 > 构建InputStream或者Reader实例
-Resouces.getResouceAsReader方法定义:
+
+```java
+// Resouces.getResouceAsReader方法定义:
 public static Reader getResourceAsReader(String resource) throws IOException
-或者InputStream对象:
+// 或者InputStream对象:
 public static InputStream getResourceAsStream(String resource) throws IOException
 java.io.Reader reader = org.apache.ibatis.io.Resources.getResouceAsReader("");
-> 构建SqlSessionFactory获取Session工厂
-> 获取SqlSession实例
+// 构建SqlSessionFactory获取Session工厂
+// 获取SqlSession实例
 if(null != sf){
 	SqlSession session = sf.OpenSession();
 }
@@ -385,6 +388,8 @@ if(null != reader){
 	SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(Reader reader);
 }
 ......
+```
+
 ## iBatis的条件查询
 
 ## ibatis动态查询和动态多条件查询

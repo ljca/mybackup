@@ -1,5 +1,4 @@
-# python学习笔记
-# Python 学习笔记
+# Python[^version] 学习笔记
 
 `import` 用来导入 Python 的某个模块即某个库。
 
@@ -15,7 +14,8 @@ print(floor(32.9))
 
 > Note！！！
 
- + 本篇学习笔记使用的是 `Python3`。
- + Python 语句或者表达式结束不需要使用分号。
- + Python 使用英文字符下的冒号分割语句。
- + Python 变量再声明/定义时不需要使用数据类型。
++ Python 语句或者表达式结束不需要使用分号。
++ Python 使用英文字符下的冒号分割语句。
++ Python 变量再声明/定义时不需要使用数据类型。
+
+[^version]: 本篇学习笔记使用的是 `Python2`。

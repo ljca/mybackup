@@ -1,26 +1,34 @@
-# android_apk
-获取安卓sdk基本命令行工具包:
-android-sdk_r21-linux.tgz
-android-sdk_r24.4.1-linux.tgz
+# 在 Linux 命令行上管理 Android 项目
 
-android-studio-ide-143.2821654-linux.zip
-android-studio-ide-145.3537739-linux.zip
+## 环境准备
 
-包含安卓平台及平台工具(Platform和platform tools)
-android-17_r01.zip
+> 获取安卓sdk基本命令行工具包:
 
-swt java库 用于java图形界面编程
-swt-3.7.1-gtk-linux-x86_64.zip
-swt-3.7.1-win32-win32-x86_64.zip
++ android-sdk_r21-linux.tgz
++ android-sdk_r24.4.1-linux.tgz
 
-安卓sdk命令行工具:
-andorid有andorid sdk-tools提供.
++ android-studio-ide-143.2821654-linux.zip
++ android-studio-ide-145.3537739-linux.zip
 
-还能通过android sdk获取android platform和platform tools
-$an-sdk/tools/android [sdk]
+> 包含安卓平台及平台工具(Platform和platform tools)
+
+`android-17_r01.zip`
+
+> swt java库 用于java图形界面编程
+
++ swt-3.7.1-gtk-linux-x86_64.zip
++ swt-3.7.1-win32-win32-x86_64.zip
+
+## android：管理（创建、移除、构建、打包） android 项目
+
+安卓sdk命令行工具: andorid 由 andorid sdk-tools提供.
+
+还能通过android sdk获取android platform和platform tools `an-sdk/tools/android [sdk]`
 
 Note:
 1.直接运行andorid等效于运行android adk,获取帮助信息应该使用android --help
+
+```log
 Usage:
 android [global options] action [action options]
 Global options:
@@ -62,9 +70,11 @@ Global options:
                         SDK add-ons.
 - update sdk          : Updates the SDK by suggesting new platforms to install
                         if available.
+```
 
-创建安卓工程:
-android create project
+创建安卓工程: `android create project`
+
+```log
        Usage:
        android [global options] create project [action options]
        Global options:
@@ -84,25 +94,38 @@ Options:
   -k --package       : Android package name for the application. [required]
   -a --activity      : Name of the default Activity that is created.
                        [required]
-$ android create project --name test --target 1 --package com.test --activity Test --path ./test
+```
 
-编写Android Makefile(Android.mk,名字是固定的)
-vim Android.mk
-基本规则如下：
+```Bash
+$ android create project --name test --target 1 --package com.test --activity Test --path ./test
+```
+
+### Android Makefile（Android.mk）
+
+> 编写Android Makefile(Android.mk,名字是固定的)，基本规则如下：
+
+```makefile
 LOCAL_PATH := $(call my-dir)
 LOCAL_SRC_FILES	:= $(call all-subdir-java-files)
 LOCAL_PACKAGE_NAME	:= test
 include $(BUILD_PACKAGE)
+```
 
-用m,mm,mmm编译安卓工程: m,mm,mmm等函数由andordid_src/build/envsetup.sh脚本提供
+### 构建 Android 项目
+
+用m,mm,mmm编译安卓工程: m,mm,mmm等函数由andordid_src/build/envsetup.sh脚本提供 
+
+```Bash
 . build/envsetup.sh
-
 mmm 安卓工程目录
+```
 
-Note:
-1.每一个要被编译的工程目录下都要存在Android.mk并具有有效规则.
-2.mmm由build/envsetup.sh脚本提供,每次在新的标签或者窗口时编译安卓工程时都要执行这个脚本.
-3.编译安卓过程要到安卓源码目录下。
+> Note:
 
-swt下载地址:
-http://archive.eclipse.org/eclipse/downloads/drops/R-3.7.1-201109091335/#SWT
+1. 每一个要被编译的工程目录下都要存在Android.mk并具有有效规则.
+2. mmm由build/envsetup.sh脚本提供,每次在新的标签或者窗口时编译安卓工程时都要执行这个脚本.
+3. 编译安卓过程要到安卓源码目录下。
+
+# 附
+
++ [swt](http://archive.eclipse.org/eclipse/downloads/drops/R-3.7.1-201109091335/#SWT)

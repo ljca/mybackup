@@ -145,23 +145,23 @@ name:
 selected:默认选中,只允许一项
 隐藏域
 语义化表单:
-域:将表单元素放到<fieldset>标签中，浏览器会以特殊方式显示它们，被语义化的表单通常有特殊的边界
-域标签<fieldset></fieldset>
-如果需要给域设置标题，则需在域标签中添加<legend></legend>标签
+域:将表单元素放到`<fieldset>`标签中，浏览器会以特殊方式显示它们，被语义化的表单通常有特殊的边界
+域标签`<fieldset></fieldset>`
+如果需要给域设置标题，则需在域标签中添加`<legend></legend>`标签
 表单元素的标注:
 如何在单击单选按钮或者复选框旁边的文字就能选中这个它？
-这个需要将表单元素使用<lable for="表单元素的id值"></lable>标签进行标注
+这个需要将表单元素使用`<lable for="表单元素的id值"></lable>`标签进行标注
 
 1.2 如何在网页中定义框架？
-* 定义框架使用<frameset>或者<iframe>标签,前者属于整个页面都用框架布局的网页，后者适用于网页中少量框架布局
-* 如果网页中使用了<frameset>标签，在html文档中则不能包含<body>标签
-<frameset>-<freme>
+* 定义框架使用`<frameset>`或者`<iframe>`标签,前者属于整个页面都用框架布局的网页，后者适用于网页中少量框架布局
+* 如果网页中使用了`<frameset>`标签，在html文档中则不能包含`<body>`标签
+`<frameset>-<freme>`
 常用属性:
 是否允许框架窗口有边框？frameborder="" //值:[0|1|yes|no] 0为默认
 bordercolor:
 是否允许调整框架窗口大小？noresize="" //值：[noresize]
 name:
-链接网页打开方式？target="" //值：[_blank|_self|_parent|_top|也可以是<frame>已经指定了name属性的框架窗口名]
+链接网页打开方式？target="" //值：[_blank|_self|_parent|_top|也可以是`<frame>`已经指定了name属性的框架窗口名]
 
 框架网页布局方式:
 
@@ -175,4 +175,5 @@ name:
 </frameset>
 </html>
 ```
+
 > 参阅：
