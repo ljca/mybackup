@@ -34,7 +34,7 @@
 + [一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解](develop/c-note/一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解.md)
 + [使用Ｃ语言获取文件大小](develop/c-note/使用Ｃ语言获取文件大小.md)
 + [函数指针与指针函数](develop/c-note/函数指针与指针函数.md)
-+ [在Java中使用JNI(Jave Native Interface)调用C库](develop/c-note/在Java中使用JNI(JaveNativeInterface)调用C库.md)
++ [在Java中使用JNI(Jave Native Interface)调用C库](develop/others/java/jni.md)
 + [常量指针与指向指针的常量](develop/c-note/常量指针与指向指针的常量.md)
 + [数据结构之线性表](develop/c-note/数据结构之线性表.md)
 + [数组指针与指针数组](develop/c-note/数组指针与指针数组.md)
