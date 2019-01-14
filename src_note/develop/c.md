@@ -200,7 +200,7 @@ strtok
 ## [C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？](c-note/C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？.md)
 ## [gcc](c-note/gcc.md)
 ## [kernel 笔记：](c-note/kernel.md)
-## [lib_call](c-note/lib_call.md)
+## [libcall](c-note/libcall.md)
 ## [Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？](c-note/Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？.md)
 ## [network](c-note/network.md)
 ## [operator_priority](c-note/operator_priority.md)
