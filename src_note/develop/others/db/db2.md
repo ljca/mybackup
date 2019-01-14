@@ -1,6 +1,4 @@
 # Db2安装配置笔记
-Db2安装配置笔记
-
 
 下载地址：https://www-01.ibm.com/marketing/iwm/iwm/web/pick.do?source=swg-db2expressc&S_TACT=000000VR&S_OFF_CD=10000761&lang=en_US
 ibm db2 Express-C 10.1 64位下载地址：

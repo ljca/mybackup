@@ -115,12 +115,12 @@ am subcmd options或者adb shell am subcmd options
 am start options
 am start -n package_name/package_name.Activity  # -n 参数后需要给出两次包名，并且是相同的。比如```
 am start -n test.test/test.test.Test
-......
+#......
 ```
 
- 2. `kill`子命令用于停止应用，kill 子命令允许直接从 Android shell 停掉一个 Android 应用活动或者服务
+2. `kill`子命令用于停止应用，kill 子命令允许直接从 Android shell 停掉一个 Android 应用活动或者服务
 
- 3. `service`子命令用于管理 Android 设备上正在运行的服务，service 子命令允许对 Android 系统上的服务进行管理。
+3. `service`子命令用于管理 Android 设备上正在运行的服务，service 子命令允许对 Android 系统上的服务进行管理。
 
 ```sh
 am service subcmd   //subcmd 可以是 list(列出)
