@@ -1,4 +1,4 @@
-# 一些有用的Linux工具
+# Other Linux Tools
 ## erase/rm
 ## erase
 ## file/stat

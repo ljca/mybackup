@@ -1,17 +1,26 @@
 # Linux 笔记
-## [Shell 笔记](shell.md)
 ## [Linux 命令行艺术：管道、重定向 & shell 扩展](cli_art.md)
-## [find & xargs：](find_xargs.md)
-## [git 笔记](git.md)
-## [手动配置网络](network_mana.md)
-## [Linux Shell脚本学习笔记](shell_script.md)
-## [sed：流编辑器](sed.md)
-## [tar：Linux/Unix 归档工具](tar.md)
+## [Linux 核心控制台（tty）：](console.md)
 ## [coreutils：Linux 核心工具集](coreutils.md)
-## [util-linux：Linux 工具集](util_linux.md)
-## [Other Linux Tools](other_tools.md)
-## [Ext FS Tools](fs_tools/ext_fs_utils.md)
+## [find与xargs：](find_xargs：.md)
 ## [Other FS Tools](fs_tools.md)
+## [git 笔记](git.md)
+## [grub 笔记](grub.md)
+## [iptables：Linux 服务器的包请求过滤](iptables.md)
+## [Linux和Unix](linux_unix.md)
+## [low_interface](low_interface.md)
+## [手工配置网络](network_mana.md)
+## [Other Linux Tools](other_tools.md)
+## [Power Manager：Linux 上的电源管理方案](pm.md)
+## [sed：流编辑器](sed.md)
+## [Linux Shell笔记](shell.md)
+## [Linux Shell脚本学习笔记](shell_script.md)
+## [交换 Caps Lock & 左 Ctrl 键](swap_caps_ctrl.md)
+## [systemd 笔记](systemd.md)
+## [tar：Linux/Unix 归档工具](tar.md)
+## [util-linux：Linux 工具集](util_linux.md)
+## [Ext FS Tools](fs_tools/ext_fs_utils.md)
+## [一些技巧](some_tips.md)
 
 > 参考：
 
@@ -343,3 +352,25 @@ function sl ()
 ## Linux可执行文件预编译的和自己从源代码中编译安装的有什么区别
 
 预编译的很可能是动态编译的。动态编译允许它的某些可选依赖在它被安装之后才被安装。
+
+## kernel: usb 1-5: string descriptor 0 read error: -22
+
+假如您的计算机在引导`Linux`系统时真的出现了这种内核消息，那很不幸。
+
+> ！这可能意味着：
+
++ 在您的计算机上，某个或者某些 USB 接口存在着硬件上的问题（比如供电不足）或者说是因为某些非人力可抗/误操作/物理等因素已经快要挂掉，从而无法被系统正常使用导致内核中的 USB 驱动模块工作不正常（无法为它分配 IO 资源（包括文件描述符等））。
+
++ 当然，这也有可能是其它问题所致（假如您安装了多个系统，您可以尝试在其它系统（比如`Windows`）上测试测试您的那些`USB`接口是否工作正常）。
+
+> Tip：
+
+如果您认为是内核的问题，那么您可以尝试在插拔`USB`设备时跟踪一下系统日志：
+
+```Bash
+# 如果您计算机上的 Linux 使用的 init 是 systemd：
+journalctl -f
+```
+
+>！要不然，您就很有可能需要尝试对那个或者那些“不正常的”`USB`接口进行检测和维修，假如您拥有不俗的硬件造诣的话。
+

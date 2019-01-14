@@ -1,4 +1,4 @@
-# 其它文件系统工具
+# Other FS Tools
 ## [`LVM`：逻辑卷管理](fs_tools/lvm.md)
 ## [`RAID`：磁盘阵列](fs_tools/raid.md)
 ## [Loop Device：a magic device（奇妙的环回设备）](fs_tools/loopback.md)
