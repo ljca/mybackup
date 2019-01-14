@@ -1,5 +1,4 @@
-# 编译 & 移植 Android 
-
+# 编译 & 移植 Android
 ```Bash
 # compier_android
 在64位的Ubuntu 14.04上编译安卓4.2.2:
