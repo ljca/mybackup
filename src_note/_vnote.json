@@ -7,7 +7,7 @@
             "attachments": [
             ],
             "created_time": "",
-            "modified_time": "2019-01-12T08:29:02Z",
+            "modified_time": "2019-01-14T12:05:09Z",
             "name": "files.md",
             "tags": [
             ]
@@ -17,10 +17,10 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "Linux笔记"
+            "name": "Linux"
         },
         {
-            "name": "windows笔记"
+            "name": "Windows"
         },
         {
             "name": "tmp"

@@ -1,1 +1,7 @@
-> 这是我在使用Linux 时（Ubuntu,Fedora,Arch Linux,LFS,Gentoo Linux）保存的一些配置文件以及记录的一些个人心得……
+# Markdown List: 
+
+> 仅记录个人心得……
+
++ [Windows 笔记](src_note/Windows/windows8.md)
++ [Linux 笔记](src_note/Linux/linux.md)
++ [develop 笔记]()

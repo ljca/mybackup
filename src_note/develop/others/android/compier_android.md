@@ -1,3 +1,6 @@
+# 编译 & 移植 Android 
+
+```Bash
 # compier_android
 在64位的Ubuntu 14.04上编译安卓4.2.2:
 Install Sun JDK1.6 with 64
@@ -9,25 +12,26 @@ host exec:
 minicom execute:
 TINY4412# set bootargs console=ttySAC0,115200n8 androidboot.console=ttySAC0 uhost0=n ctp=2 skipcali=n vmalloc=512m lcd=S70 init=/init root=/dev/mmcblock0p1 rootwait rw 
 TINY4412# set bootcmd movi read kernel 0 40008000\;movi read rootfs 0 41000000 100000\;bootm 40008000 41000000
+```
 
 
-Nfs引导的android系统:
-nfs配置:
-Ubuntu:
+## Nfs引导的android系统:
+
+> nfs配置: Ubuntu:
+
+```Bash
 install nfs-kernel-server
 # apt-get install nfs-kernel-server
 
-edit /etc/exports
-# vim /etc/exports
+# /etc/exports
 
-as root,execute:
-# service nfs-kernel-server start
+# as root,execute:
+service nfs-kernel-server start
 
-uboot-set:
+# uboot-set:
 TINY4412# set bootargs console=ttySAC0,115200n8 androidboot.console=ttySAC0 uhost0=n ctp=2 skipcali=n vmalloc=512m lcd=S70 init=/init root=/dev/mmcblock0p1 rootwait rw 
 TINY4412# sset bootcmd movi read kernel 0 40008000\;bootm 40008000 41000000
-
-# 附
+```
 
 ## 编译 Android 
 
@@ -53,6 +57,9 @@ sudo apt install g++ dpkg-dev gcc-multilib g++-4.8-multilib
 pushd /home/external/android/android-4.2.2_r1/
 make -j4 
 make -j4
+```
+
+```Bash
 cd /home/external/android/
 sudo apt install xfsprogs reiserfsprogs reiser4progs jfsutils kpartx dmraid gpart
 showmount -e localhost 
@@ -82,6 +89,7 @@ make -j3
 ```
 
 ### fastboot：
+
 ```Bash
 sudo minicom
 sudo minicom 
@@ -165,52 +173,71 @@ sudo update-alternatives --install "/usr/bin/javah" "javah" "`pwd`/javah" 1
 sudo pkill NetworkManager 
 ```
 
-# 移植 & Android 项目
+## 创建、构建 Android 项目
+
 ```Bash
 android list
 android list target
 android list
 android list target
 android list targetn
+
 LD_LIBRARY_PATH=. java person 
 gcc -fPIC -shared -I/home/external/Share/android/tools/jdk6u43/include/{,linux} -o libperson.so person.c
 LD_LIBRARY_PATH=. java person 
+
 emulator -kernel $tmp2/kernel-qemu-armv7 -sysdir $tmp -system system.img -data userdata.img -ramdisk ramdisk.img
 emulator -kernel $tmp2/kernel-qemu-armv7 -sysdir $tmp -system system.img -data userdata.img -ramdisk $tmp/ramdisk.img
 emulator -system system.img -data ./out/target/product/tiny4412/userdata.img -ramdisk ./out/target/product/tiny4412/ramdisk.img
 emulator -system system.img -data ./out/target/product/tiny4412/userdata.img -ramdisk ./out/target/product/tiny4412/ramdisk.img
+
 sudo apt-get install exfat-* -y
+
 emulator -help
 emulator -shell -sysdir /home/external/Share/android/android-4.2.2_r1/out/target/product/tiny4412 -system system.img -ramdisk /home/external/Share/android/android-4.2.2_r1/out/target/product/tiny4412/ramdisk.img -avd test
+
 android create -n test -t 1 -p . -a TestActivity -k test.android 
 android create project -n test -t 1 -p . -a TestActivity -k test.android 
 android create project -n test -t 1 -p ./test -a TestActivity -k test.android 
+
 sudo apt-get install libreoffice-l10n-zh-cn unoconv 
-find /home/external/Share/android/android-sdk-linux/tools/ -name "mmm“
+
 find /home/external/Share/android/android-sdk-linux/tools/ -name "mmm"
+
 export ANDROID_PRODUCT_TOP=`pwd`
 export ANDROID_PRODUCT_out=`pwd`
+
 mmm /home/external/back/tmp/java/test
+
 android create project -n test -t 1 -p ./test -a Test -k test.android 
+
 mmm /home/external/back/tmp/java/test
+
 android create project -n test -t 1 -p ./test -a Test -k test.android 
+
 mmm /home/external/back/tmp/java/test
+
 sudo vim /etc/udev/rules.d/50-android.rules
 sudo chmod a+rx /etc/udev/rules.d/50-android.rules 
 sudo service udev restart 
+
 mmm /home/external/back/tmp/java/test
 mmm /home/external/back/tmp/java/test
 mmm /home/external/back/tmp/java/test2/jni
 mmm /home/external/back/tmp/java/test2/jni
+
 sudo apt-get install android-tools-adb
 sudo apt-get remove android-tools-adb
 sudo vim /etc/udev/rules.d/50-android.rules
 sudo chmod a+rx /etc/udev/rules.d/50-android.rules 
 sudo service udev restart 
+
 mmm /home/external/back/tmp/java/test
 mmm /home/external/back/tmp/java/test
+
 sudo apt-get install android-tools-adb
 sudo apt-get remove android-tools-adb
+
 mmm /home/external/back/tmp/java/test2/jni
 mmm /home/external/back/tmp/java/test2/test
 mmm /home/external/back/tmp/java/test2/jar
@@ -254,14 +281,18 @@ mmm /home/external/back/tmp/android/led
 java -jar signapk.jar platform.x509.pem platform.pk8 Led-tmp.apk Led.apk
 mmm /home/external/back/tmp/android/led/jni
 mmm /home/external/back/tmp/android/led/jni
+
 make ledtest
+
 java -jar signapk.jar platform.x509.pem platform.pk8 Led-tmp.apk Led.apk
 w
 mmm /home/external/back/tmp/android/checkbox
 mmm /home/external/back/tmp/android/led/jni
 mmm /home/external/back/tmp/android/led
+
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;import android.widget.CompoundButton;
+
 sudo apt-get install ncurses-*
 sudo apt-get install ncurses-base ncurses-doc ncurses-examples 
 sudo apt install libncurses5-dev
@@ -270,34 +301,40 @@ vim src/led/test/Led.java
 android create project -t 1 -p ./checkbox -a CheckBoxTest -k test.check -n checkbox
 mmm /home/external/back/tmp/android/checkbox
 cd graphis/ncurses/
+
 sudo apt install libncurses5-dev
 sudo apt-get install ncurses-*
 sudo apt-get install ncurses-base ncurses-doc ncurses-examples 
 sudo apt install libncurses5-dev
 sudo apt install libncursesada2-dev
+
 vim src/led/test/Led.java 
 android create project -t 1 -p ./checkbox -a CheckBoxTest -k test.check -n checkbox
 mmm /home/external/back/tmp/android/checkbox
+
 cd graphis/ncurses/
 sudo apt install libncurses5-dev
-l 
+
 adb shell rm -f /data/local/ledtest.ko
-l ls
-ls
 mmm /home/external/back/misc/android/led/jni
 mmm /home/external/back/misc/android/led
 adb push ledtest.ko /data/local
-adb push ledtest.ko /data/local
-ls
+
+# 解包 ramdisk.img 
 cpio -ivmd < ../ramdisk.img 
 find . | cpio -ov -H newc | gzip > ../ramdisk-uboot.img&&mkimage -A arm -O linux -C none -a 0x40800000 -n "ramdisk" -d ramdisk-tmp.img ramdisk-uboot.img
 find . | cpio -ov -H newc | gzip > ../ramdisk-uboot.img&&mkimage -A arm -O linux -C none -a 0x40800000 -n "ramdisk" -d ../ramdisk-tmp.img ramdisk-uboot.img
 find . | cpio -ov -H newc | gzip > ../ramdisk-tmp.img&&mkimage -A arm -O linux -C none -a 0x40800000 -n "ramdisk" -d ../ramdisk-tmp.img ramdisk-uboot.img
+
 mmm /home/external/back/misc/android/led/jni
 mmm /home/external/back/misc/android/led
 make_ext4fs -s -l 330000000 -a system system-new.img system
 mmm /home/external/back/misc/android/led
+
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
 sudo apt-get install simplescreenrecorder*
 ```
 
+# 参考
+
++ Ubuntu12.04下Android4.0.4源码的下载及其编译过程-Android开发环境 -Android开发网
