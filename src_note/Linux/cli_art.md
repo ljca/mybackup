@@ -173,43 +173,7 @@ command >& filename
 &nbsp;&nbsp;尽管`Unix`风格的命令替换 ` `` ` 和`GNU`风格的命令替换 $() 都可以用来执行命令替换，也允许嵌套使用。然而，在`Unix`风格的命令替换中，嵌套使用 \` 需要使用 \\ 转义 ……
 
 
-## §. 工作在 Emacs 模式下的 Bash 快捷键列表
-
-> 所有的键映射可以通过`bind`查看和设置……
-
-+ Ctrl+A 行首
-+ Ctrl+B/Alt+B 字符/单词前移动
-+ Ctrl+C 中断程序。
-+ Ctrl+D/Alt+D 流结束符，退出 shell/单词后檫除
-+ Ctrl+E 行尾
-+ Ctrl+F/Alt+F 字符/单词后移动
-+ Ctrl+G 结束搜索模式
-+ Ctrl+H 字符檫除
-+ Ctrl+I 等同制表符
-+ Ctrl+J 回车
-+ Ctrl+K 檫除光标之后所有字符并将文本移入删除环
-+ Ctlr+L 清屏/Alt+L 大小写转换
-+ Ctrl+M 换行
-+ Ctrl+N 下一条历史记录
-+ Ctrl+O 上下文补全
-+ Ctrl+P 上一条历史
-+ Ctrl+Q 解锁
-+ Alt+R/Ctrl+R 撤销更改/正向搜索,取消
-+ Ctrl+S 挂起终端
-+ Ctrl+T/Alt+T 反转字符/单词
-+ Alt+U/Ctrl+U 单词大写/檫除光标之前所有字符并将文本移入删除环
-+ Ctrl+V 控制字符的输入方法
-+ Ctrl+W 前
-+ ……
-+ Ctrl+Y/Alt+Y 在删除环循环
-+ Ctrl+Z 程序后台运行
-+ Alt+\>/Alt+<
-
-
-> Ctrl+X 模式：
-
-**&nbsp;&nbsp;当 Bash 处于 emacs 模式下并且需要在终端键入一个长长的带很多参数的命令时，可以按下 Ctrl+X  Ctrl+E 启动一个文本编辑器(这个编辑器可以由 EDITOR 环境变量来指定)来编辑这个或者这一组命令，保存退出之后即可执行。**
-
+# 附
 ## §. 正则表达式
 
 ### 1. 元字符列表
