@@ -2,84 +2,9 @@
 
 ## apt(Advice package tool)
 
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get -fy install mc docky tasksel vim gdm
-sudo apt-get -y install pepperflashplugin-nonfree && sudo update-pepperflashplugin-nonfree --install 
-sudo apt-get -y purge libreoffice? && sudo apt-get -y autoremove && sudo add-apt-repository -y ppa:libreoffice/ppa
-sudo apt-get -y update && sudo apt-get -y dist-upgrade
-sudo apt-get -y install libreoffice libreoffice-l10n-zh-cn && skill -u kyzs
-sudo apt-get -y autoremove && sudo apt-get autoclean
-sudo apt-get -y install finger
-sudo add-apt-repository ppa:ubuntu-wine/ppa && sudo apt-get -y update && sudo apt-get -y install wine
-sudo add-apt-repository ppa:ubuntu-wine/ppa
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get -y install compiz-plugins-extra compiz-plugins compizconfig-settings-manager unity-tweak-tool  tweak gnome-tweak-tool
-sudo apt-get autoremove
-sudo apt-get -y install tcsh
-suco cp -v /etc/apt/sources.list /etc/apt/sources.list.bak && sudo gedit /etc/apt/sources.list
-sudo add-apt-repository -y ppa:jfi/ppa 
-sudo apt-get -y update && sudo apt-get -y install install lm-sensors hddtemp psensor
-sudo apt-get -y install lm-sensors hddtemp psensor laptop-mode-tools
-sudo laptop_mode start
-cat /proc/sys/vm/laptop_mode 
-sudo laptop_mode status
-sudo gedit /etc/laptop-mode/laptop-mode.conf
-sudo vim /etc/laptop-mode/laptop-mode.conf
-history/.bash_history:sudo apt-get -y install vim mc unity-tweak-tool docky gdm
-history/.bash_history:sudo apt-get install gnome-tweak-tool
-history/.bash_history:sudo apt-get install libncurses5-dev
-sudo apt-get update ; sudo apt-get dist-upgrade 
-sudo apt-get install mc vim tasksel docky  gdm
-sudo apt-get install openjdk-8-jre-headless
-sudo apt-get install pepperflashplugin-nonfree && sudo update-pepperflashplugin-nonfree --install
-sudo apt-get install ubuntu-make
-sudo apt-get install monodevolop
-sudo apt-get install laptop-mode-tools
-sudo laptop_mode start
-cat /proc/sys/vm/laptop_mode
-sudo apt-get install zhcon
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install ksnapshot
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get autoremove && sudo apt-get autoclean
-sudo apt-get install openssh-server
-sudo apt-get purge libreoffice? && sudo apt-get autoremove && sudo add-apt-repository ppa:libreoffice/ppa && sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get install libreoffice libreoffice-l10n-zh-cn
-sudo apt-get install compizconfig-settings-manager
-sudo apt-get update ; sudo apt-get upgrade 
-sudo dpkg -l | grep linux-image- ;sudo apt-get autoremove KERNEL_IMAGE_NAME
-sudo apt-get install compizconfig-settings-manager compiz-plugins-extra compiz-plugins tweak
-sudo apt-get update ; sudo apt-get dist-updategrade 
-sudo apt-get update ; sudo apt-get dist-upgrade 
-sudo apt-get check
-sudo apt-get install git
-sudo add-apt-repository ppa:noobslab/apps ; sudo apt-get update ; sudo apt-get install xdman
-sudo aptitude install curl
-sudo apt-get install compiz-fusion-bcop compiz-dev \build-essential
-sudo apt-get install compizconfig-settings-manager compiz-fusion-plugins-main compiz-fusion-bcop compiz-dev \build-essential libtool \libglu1-mesa-dev libxss-dev \libcairo2-dev git-core
-sudo apt-get autoremove ; sudo apt-get autoclean
-sudo apt-get udate && sudo apt-get dist-upgrade
-sudo apt-get uddate && sudo apt-get dist-upgrade
-sudo apt-get update && sudo apt-get dist-upgrade
-sudo apt autoremove ; sudo apt-get autoclean
-sudo apt-get install kubuntu-Desktop
-sudo apt-get purge kubuntu-Desktop
-sudo apt-get autoremove ; sudo apt-get autoclean
-sudo apt-get autoremove
-sudo apt-get install -f
-sudo apt-get autoremove ; sudo apt-get autoclean
-sudo apt-get update && sudo apt-get upgrade
-apt 
-apt search xdm
-sudo apt-get purge xdm
-apt
-apt show
-apt show xdm
-apt list x*
-apt list --help
-apt list
-apt list | pager
-sudo apt-get purge xdman
-sudo apt-get autoremove ; sudo apt-get autoclean
+
+# 附
+## [在Ubuntu Linux上启用3D桌面和更多的窗口动画](在UbuntuLinux上启用3D桌面和更多的窗口动画.md)
 
 > 参考：
 
@@ -137,20 +62,3 @@ sudo apt-get autoremove ; sudo apt-get autoclean
 + ubuntu如何完全卸载和安装 Java及android环境 - LXRM的个人空间 - 开源中国社区
 
 + 教程：Ubuntu 14.04 和 Windows 8.1 双系统安装步骤 - 51CTO.COM
-sudo dpkg-reconfigure locales
-sudo dpkg-reconfigure gdm
-umake ide eclipse
-sudo dpkg --configure -a
-sudo umake ide eclipse
-umake ide eclipse
-umake ide eclipse
-umake ide webstorm
-umake ide phpstorm
-sudo dpkg -i *.deb && sudo update-grub
-sudo dpkg -i linux-headers-4.2.0-*.deb linux-image-4.2.0-*.deb && sudo update-grub
-sudo dpkg -i linux-headers-4.2*.deb linux-image-4.2*.deb && sudo update-grub 
-sudo dpkg --configure -a 
-sudo dpkg --configure -a
-sudo dpkg --configure -a
-sudo unity --reset
-sudo skill -u kyzs
