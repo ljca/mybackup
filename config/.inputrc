@@ -22,9 +22,11 @@ $if mode=emacs
   ";5D":backward-word
   #C ->
   ";5C":forward-word
-  "\C-o":menu-complete
+  #"\C-o": menu-complete
+  "": menu-complete
 $endif
 $if Bash
 "\C-xq":"\eb\"\ef\""
+"\C-x'":"\eb\'\ef\'"
 $endif
 # set expand-tilde On

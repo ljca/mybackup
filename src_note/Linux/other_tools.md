@@ -14,13 +14,27 @@
 ## passwd/gpasswd
 ## usermod/groupmod
 
-## iconv：文件编码转换工具
-iconv -f 源文件编码(输入文件编码) -t 目的编码 要转换的文件(即源文件或者输入文件) -o 输出文件名
+## bc
 
-参数解释：
+> option，多个选项使用分号分隔。
+
++ obase：输出进制
++ ibase：输入进制
++ scale：浮点运算时精度控制
+
+```Bash
+# 0X2BF 进制转换：16 -> 2
+bc <<< "ibase=16;obase=2;0X2BF"
+```
+
+## iconv：文件编码转换工具 `iconv -f 源文件编码(输入文件编码) -t 目的编码 要转换的文件(即源文件或者输入文件) -o 输出文件名`
+
+> 参数解释：
+
 -f
 -t 
 -o 指定输出文件名(如果输出文件和源文件同名，那么将会覆盖源文件内容。如果不带-o选项则会将转换编码后的文件内容输出到控制台)
+-l 列出所有编码
 
 ## shutdown/halt/poweroff/reboot
 ## crontab/at
