@@ -1,4 +1,4 @@
-# git 笔记
+# git[^git] 笔记
 
 ***~~&nbsp;&nbsp;如果你希望从命令行 push，那么你至少得有一个 git 帐号、一个 git repo(仓库，这需要你自己动手在 git 网站上创建)，除了这些，你还必须正确配置了 ssh key 或者 gpg key。git 官方配置文档的传送门在[这里][git&ssh]。~~***
 
@@ -92,3 +92,6 @@ git checkout -- welcome.txt
 
 [git&ssh]: https://help.github.com/articles/connecting-to-github-with-ssh/
 
+## 参考：
+
++ [Windows 系统下 Git 安装图解](http://www.w3cplus.com/node/74)

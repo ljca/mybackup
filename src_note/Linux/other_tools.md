@@ -120,6 +120,7 @@ for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs &&
 
 > 参考：
 
++ [使用 Synergy 共享你的鼠标和键盘](http://easwy.com/blog/archives/share-your-keyboard-and-mouse-by-synergy/)
 + [11个让你吃惊的 Linux 终端命令 - 51CTO.COM](http://os.51cto.com/art/201505/476564.htm)
 + [12款最佳Linux命令行终端工具 - 生死看淡，不服就干！ - 博客频道 - CSDN.NET](https://blog.csdn.net/u013634961/article/details/39534521)
 + [Autojump：一个可以在 Linux 文件系统快速导航的高级 cd 命令_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2015-08/121421.htm)

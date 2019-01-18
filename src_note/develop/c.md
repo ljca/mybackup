@@ -115,26 +115,17 @@ c99风格的单行注释 //
 #endif 
 ```
 
-指针
-希望保存地址的变量
-
-指针
-指针加1等于基类的长度
-
-指针的声明和定义形式:` 基类 *指针标识符 = NULL;`
+指针希望保存地址的变量。指针加1等于基类的长度。指针的声明和定义形式:` 基类 *指针标识符 = NULL;`
 
 ## C函数(function)
 
-! main函数是程序员的入口函数,它在启动代码执行之后调用。
-程序的真正入口是__start，它是用汇编写成
+! main函数是程序员的入口函数,它在启动代码执行之后调用。程序的真正入口是__start，它是用汇编写成
 
 函数声明和函数定义.
 一般函数声明形式:`函数返回值类型|void 函数名称(参数|void);`
 !函数定义在主函数之后，要对这个函数进行声明,如果是在主函数之前定义的函数，就不需要对这个函数声明了。
 
-函数声明在主函数之前，函数声明没有函数体，函数声明的形参可以没有标识符,但函数定义不可省略。
-! 如果函数没有参数，可以省略void关键字，但返回值如果为void，就不能省略，因为系统默认的函数返回值是int型.
-函数定义:
+函数声明在主函数之前，函数声明没有函数体，函数声明的形参可以没有标识符,但函数定义不可省略。如果函数没有参数，可以省略void关键字，但返回值如果为void，就不能省略，因为系统默认的函数返回值是int型.  函数定义:
 
 ```c
 函数返回值类型|void 函数名称(参数|void)
@@ -143,8 +134,7 @@ c99风格的单行注释 //
 }
 ```
 
-函数指针是一个保存了函数首地址的指针。
-函数指针，` 类型(*标识符)([形参]);`
+函数指针是一个保存了函数首地址的指针。` 类型(*标识符)([形参]);`
 
 回调函数
 
@@ -194,33 +184,34 @@ strtok
 + fgets
 
 # 附
-## [arm 笔记：嵌入式设备编程笔记](c-note/arm.md)
-## [cxx](c-note/cxx.md)
-## [C十六进制数的疑惑：一个十六进制数的一位如果换成二进制数的话原来是二进制数的4个位](c-note/C十六进制数的疑惑：一个十六进制数的一位如果换成二进制数的话原来是二进制数的4个位.md)
-## [C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？](c-note/C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？.md)
-## [gcc](c-note/gcc.md)
-## [kernel 笔记：](c-note/kernel.md)
-## [libcall](c-note/libcall.md)
-## [Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？](c-note/Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？.md)
-## [network](c-note/network.md)
-## [operator_priority](c-note/operator_priority.md)
-## [shared_mem](c-note/shared_mem.md)
-## [sort：排序](c-note/sort.md)
-## [strlen_sizeof](c-note/strlen_sizeof.md)
-## [term 函数：](c-note/term.md)
-## [thread](c-note/thread.md)
-## [Unix网络编程](c-note/Unix网络编程.md)
-## [一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解](c-note/一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解.md)
-## [使用Ｃ语言获取文件大小](c-note/使用Ｃ语言获取文件大小.md)
-## [函数指针与指针函数](c-note/函数指针与指针函数.md)
-## [常量指针与指向指针的常量](c-note/常量指针与指向指针的常量.md)
-## [数据结构之线性表](c-note/数据结构之线性表.md)
-## [数组指针与指针数组](c-note/数组指针与指针数组.md)
-## [检查主机是网络little-enddle还是big-enddle](c-note/检查主机是网络little-enddle还是big-enddle.md)
-## [让GNU Compier Collections在编译时输出的编译信息带上色彩](c-note/让GNUCompierCollections在编译时输出的编译信息带上色彩.md)
-## [Ｃ语言操作MySQL数据库：从连接到MySQL数据库服务器开始](c-note/Ｃ语言操作MySQL数据库：从连接到MySQL数据库服务器开始.md)
-## [Ｃ语言的结构与联合内存对齐问题：结构或者联合大小取决于？](c-note/Ｃ语言的结构与联合内存对齐问题：结构或者联合大小取决于？.md)
-## [Ｃ源码工具集，其中的大部分来自于Ｃ专家编程作者的推荐](c-note/Ｃ源码工具集，其中的大部分来自于Ｃ专家编程作者的推荐.md)
+
++ [arm 笔记：嵌入式设备编程笔记](c-note/arm.md)
++ [cxx](c-note/cxx.md)
++ [C十六进制数的疑惑：一个十六进制数的一位如果换成二进制数的话原来是二进制数的4个位](c-note/C十六进制数的疑惑：一个十六进制数的一位如果换成二进制数的话原来是二进制数的4个位.md)
++ [C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？](c-note/C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？.md)
++ [gcc](c-note/gcc.md)
++ [kernel 笔记：](c-note/kernel.md)
++ [libcall](c-note/libcall.md)
++ [Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？](c-note/Linux进程的虚拟地址空间中的堆(heap)和栈(stack)缺省是什么样的生长方向？.md)
++ [network](c-note/network.md)
++ [operator_priority](c-note/operator_priority.md)
++ [shared_mem](c-note/shared_mem.md)
++ [sort：排序](c-note/sort.md)
++ [strlen_sizeof](c-note/strlen_sizeof.md)
++ [term 函数：](c-note/term.md)
++ [thread](c-note/thread.md)
++ [Unix网络编程](c-note/Unix网络编程.md)
++ [一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解](c-note/一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解.md)
++ [使用Ｃ语言获取文件大小](c-note/使用Ｃ语言获取文件大小.md)
++ [函数指针与指针函数](c-note/函数指针与指针函数.md)
++ [常量指针与指向指针的常量](c-note/常量指针与指向指针的常量.md)
++ [数据结构之线性表](c-note/数据结构之线性表.md)
++ [数组指针与指针数组](c-note/数组指针与指针数组.md)
++ [检查主机是网络little-enddle还是big-enddle](c-note/检查主机是网络little-enddle还是big-enddle.md)
++ [让GNU Compier Collections在编译时输出的编译信息带上色彩](c-note/让GNUCompierCollections在编译时输出的编译信息带上色彩.md)
++ [Ｃ语言操作MySQL数据库：从连接到MySQL数据库服务器开始](c-note/Ｃ语言操作MySQL数据库：从连接到MySQL数据库服务器开始.md)
++ [Ｃ语言的结构与联合内存对齐问题：结构或者联合大小取决于？](c-note/Ｃ语言的结构与联合内存对齐问题：结构或者联合大小取决于？.md)
++ [Ｃ源码工具集，其中的大部分来自于Ｃ专家编程作者的推荐](c-note/Ｃ源码工具集，其中的大部分来自于Ｃ专家编程作者的推荐.md)
 
 # 参考：
 
@@ -269,4 +260,5 @@ strtok
 + 详解约瑟夫环问题及其相关的C语言算法实现_C 语言_脚本之家
 + 小说阅读器的编写之智能分章实现 - Excalibur丶 - 博客园
 + C语言字符串操作总结大全(超详细)_C 语言_脚本之家
++ C 语言嵌入汇编
 

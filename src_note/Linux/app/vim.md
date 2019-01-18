@@ -263,6 +263,16 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 ##  参考：
 
++ [vi_vim使用进阶_ 保存项目相关配置 – 易水博客](http://easwy.com/blog/archives/advanced-vim-skills-catalog/)
++ vim应用：终极解决 windows 系统 gvim/vim的各种乱码(文件， 菜单，提示信息)！
++ Vim-Scripts 里的东西
++ [强大的vim配置文件，让编程更随意](https://github.com/ma6174/vim,http://t.cn/RvFZs2c)
++ [图灵社区  阅读  Vim插件入门](http://www.ituring.com.cn/article/124970) 
++ [最佳 vim 技巧](http://www.cnblogs.com/napoleon_liu/articles/1988535.html)
++ [手把手教你把Vim改装成一个IDE编程环境(图文) - 吴垠的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/wooin/article/details/1858917)
++ [手把手教你把Vim改装成一个IDE编程环境](http://blog.csdn.net/wooin/archive/2007/10/31/1858917.aspx)
++ [vim 配置 vimrc 详解（一）](http://blog.csdn.net/uid-23366077-id-3758944.html)
++ [vim 配置](http://www.cnblogs.com/moonz-wu/archive/2008/01/29/1058082.html)
 + [CENTOS6.5中VIM插件配置，重点记录YouCompleteMe的安装 2015-7 - bboxhe的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/bboxhe/article/details/46849167)
 + [GitHub - edkolev_promptline.vim_ Generate a fast shell prompt with powerline symbols and airline colors](https://github.com/edkolev/promptline.vim)
 + [GitHub - edkolev_tmuxline.vim_ Simple tmux statusline generator with support for powerline symbols and statusline _ airline _ lightline integration](https://github.com/edkolev/tmuxline.vim)

@@ -15,7 +15,7 @@
 
 - [VNote](https://github.com/tamlok/vnote)
 - 蚂蚁笔记
-- Cmd Markdown 作业部落
+- [Cmd Markdown 作业部落](https://www.zybuluo.com/)
 - 为知笔记
 - 有道云笔记
 - 印象笔记
@@ -127,3 +127,18 @@ con(no)->op
 [5]: https://
 [脚注]: https://
 [Todo List]: https://
+
+参考：
++ <a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank"> 维基百科
+
+
+[1]: http://math.stackexchange.com/
+[2]: https://github.com/jmcmanus/pagedown-extra "Pagedown Extra"
+[3]: http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+[4]: http://bramp.github.io/js-sequence-diagrams/
+[5]: http://adrai.github.io/flowchart.js/
+[6]: https://github.com/benweet/stackedit
+访问 [MathJax](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference) 参考更多使用方法
+> - [时序图语法](http://bramp.github.io/js-sequence-diagrams/)
+> - [流程图语法](http://adrai.github.io/flowchart.js)
+* [Sublime Text 2](http://www.sublimetext.com/2) + [MarkdownEditing](http://ttscoff.github.com/MarkdownEditing/) / [教程](http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/)

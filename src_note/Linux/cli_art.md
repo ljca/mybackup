@@ -197,7 +197,12 @@ command >& filename
 
 [^com]: 以下所有的解释不确定是否对除 `Bash` 之外的 Shell 解释器有效。
 
-> 参考：
+
+## 参考：
 
 + Bash 4.0 中文手册
++ [命令行的艺术](https://github.com/jlevy/the-art-of-command-line)
++ [Linux 文档项目 : 高级 Bash 脚本指南](http://www.tldp.org/LDP/abs/html/)
++ [Awesome Shell](https://github.com/sindresorhus/awesome)
++ [Awesome Fish](https://github.com/jbucaran/awesome-fish)
 

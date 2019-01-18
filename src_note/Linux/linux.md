@@ -1,26 +1,27 @@
 # Linux 笔记
-## [Linux 命令行艺术：管道、重定向 & shell 扩展](cli_art.md)
-## [Linux 核心控制台（tty）：](console.md)
-## [coreutils：Linux 核心工具集](coreutils.md)
-## [find与xargs：](find_xargs：.md)
-## [Other FS Tools](fs_tools.md)
-## [git 笔记](git.md)
-## [grub 笔记](grub.md)
-## [iptables：Linux 服务器的包请求过滤](iptables.md)
-## [Linux和Unix](linux_unix.md)
-## [low_interface](low_interface.md)
-## [手工配置网络](network_mana.md)
-## [Other Linux Tools](other_tools.md)
-## [Power Manager：Linux 上的电源管理方案](pm.md)
-## [sed：流编辑器](sed.md)
-## [Shell 笔记](shell.md)
-## [Linux Shell 脚本笔记](shell_script.md)
-## [交换 Caps Lock & 左 Ctrl 键](swap_caps_ctrl.md)
-## [systemd 笔记](systemd.md)
-## [tar：Linux/Unix 归档工具](tar.md)
-## [util-linux：Linux 工具集](util_linux.md)
-## [Ext FS Tools](fs_tools/ext_fs_utils.md)
-## [一些技巧](some_tips.md)
+
++ [Linux 命令行艺术：管道、重定向 & shell 扩展](cli_art.md)
++ [Linux 核心控制台（tty）：](console.md)
++ [coreutils：Linux 核心工具集](coreutils.md)
++ [find与xargs：](find_xargs：.md)
++ [Other FS Tools](fs_tools.md)
++ [git 笔记](git.md)
++ [grub 笔记](grub.md)
++ [iptables：Linux 服务器的包请求过滤](iptables.md)
++ [Linux和Unix](linux_unix.md)
++ [low_interface](low_interface.md)
++ [手工配置网络](network_mana.md)
++ [Other Linux Tools](other_tools.md)
++ [Power Manager：Linux 上的电源管理方案](pm.md)
++ [sed 笔记](sed.md)
++ [Shell 笔记](shell.md)
++ [Linux Shell 脚本笔记](shell_script.md)
++ [交换 Caps Lock & 左 Ctrl 键](swap_caps_ctrl.md)
++ [systemd 笔记](systemd.md)
++ [tar：Linux/Unix 归档工具](tar.md)
++ [util-linux：Linux 工具集](util_linux.md)
++ [Ext FS Tools](fs_tools/ext_fs_utils.md)
++ [一些技巧](some_tips.md)
 
 > 参考：
 
@@ -49,14 +50,16 @@
 [asciinema-player]: https://github.com/asciinema/asciinema-player
 
 # 附
-## [FreeBSD 笔记](freebsd.md)
-## [Arch/Linux 笔记](Arch/arch.md)
-## [CentOS 笔记](CentOS/centos.md)
-## [Ubuntu/Linux 笔记](Ubuntu/ubuntu.md)
-## [OpenSUSE 笔记](opensuse.md)
-## [Gentoo/Linux 笔记](Gentoo/gentoo.md)
-## [Fedora/Linux 笔记](Fedora/fedora.md)
-## [LFS 笔记](Lfs/Lfs.md)
+
++ [FreeBSD 笔记](freebsd.md)
++ [Arch/Linux 笔记](Arch/arch.md)
++ [CentOS 笔记](CentOS/centos.md)
++ [Ubuntu/Linux 笔记](Ubuntu/ubuntu.md)
++ [OpenSUSE 笔记](opensuse.md)
++ [Gentoo/Linux 笔记](Gentoo/gentoo.md)
++ [Fedora/Linux 笔记](Fedora/fedora.md)
++ [LFS 笔记](Lfs/Lfs.md)
+
 ## tools：
 
 + [gptfdisk-code](https://git.code.sf.net/p/gptfdisk/code)
@@ -309,7 +312,7 @@ a:visited{color:#cc00ff;}
 
 &nbsp;&nbsp;然而，即便没有安装核显的驱动包，内核也直接提供了相应的通用模块。在我的计算机上，核显使用的是`i915`模块(这可以通过`lspci -kv`来查看)。假如你同时在`/sys`文件系统下找到了由内核中的驱动提供的接口文件，那么就可以通过它直接调节核显亮度。不幸的是：这只会对会当前用户会话生效。而如果你希望对核显亮度的调节能在重启系统后同样保持，那么你可能需要在调节亮度之后将`X`服务器杀死一次才能在重新引导系统之后保持之前对核显调整好的亮度。
 
-```
+```log
 .............
 00:02.0 VGA compatible controller: Intel Corporation Broadwell-U Integrated Graphics (rev 09) (prog-if 00 [VGA controller])
 	Subsystem: Acer Incorporated [ALI] Device 0940

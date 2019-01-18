@@ -622,15 +622,11 @@ STARTUP;
 
 > 参阅： 
 
++ Oracle 表的创建 及相关参数_数据库技术_Linux公社-Linux系统门户网站
 + [Oracle 表的创建 及相关参数_数据库技术_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2014-05/101947.htm)
-
 + [Oracle几种常见启动方式比较_数据库技术_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2011-11/46924.htm)
-
 + [造成ORA-01843 无效的月份 的一些原因 - 一江水 - 博客园](http://www.cnblogs.com/rootq/archive/2009/05/16/1458090.html)
-
 + [sql plus 与Oracle交互常用令与sql plus语句完整页_西西软件资讯](http://www.cr173.com/html/6302_all.html)
-
 + [PLSQL 经常自动断开失去连接的解决过程_数据库技术_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2015-09/123286.htm)
-
 
 [^tcl]: TCL:事务控制语言:COMMIT(提交),SAVAPOINT(保存点),ROLLBACK(回滚);

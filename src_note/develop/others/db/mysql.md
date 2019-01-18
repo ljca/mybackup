@@ -374,7 +374,7 @@ nvarchar实际上是varchar的同义词
 ### 其它函数
 ### 加密/解密函数
 
-## 问题：
+## FIQ：
 
 1. 忘记 MySQL 密码
 &nbsp;&nbsp;假如你忘记了 MySQL root 账户密码？你可以在命令提示符或者命令解释器上以 `--skip-grant-tables` 选项运行 MySQL 服务器。**如果 mysql 服务已经在运行，需要先停止 mysql 服务 `sudo killall mysqld`**。
@@ -426,6 +426,18 @@ truncate table语句会清空表并且不会记录日志，还会让那些支持
 
 > 参阅：
 
++ 深入理解 SQL 的四种连接-左外连接、右外连接、内连接、全连接
++ 用 SELECT... INTO OUTFILE 语句导出
+MySQL 数据的教程
++ 常用的 MySQL 数据库命令大全
++ Windows 平台下 MySQL 常用操作与命令
++ MYSQL 数据库导入导出命令
++ MySQL 编码设置方法 MySQL 编
+码为 utf8 设置方法
++ [mysql的约束 - kqygww的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/kqygww/article/details/8882990)
++ mysql中文乱码的一些解决方案_西西软件资讯
++ Can't connect to MySQL server on localhost (10061)解决方法_Mysql_脚本之家
++ [15个 MySQL 基础面试题，DBA 们准备好了吗？-技术 ◆ 学习_Linux.中国-开源社区](https://linux.cn/article-2445-1.html)
 + [mysql load操作 - ggjucheng - 博客园](http://www.cnblogs.com/ggjucheng/archive/2012/11/05/2755683.html)
 + [MySQL优化配置文件my.ini(discuz论坛)_Mysql_脚本之家](http://www.jb51.net/article/26471.htm)
 + [数据库常见操作_zhouhuaooo_新浪博客](http://blog.sina.com.cn/s/blog_57f325fb0100gt2j.html)

@@ -26,9 +26,8 @@ exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpa
 #exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/573d31d4263ea.jpg"
 
 # 因为 i3 窗口合成器不支持对窗口合成一些混合效果（比如：窗口的打开/关闭动画（淡入淡出）、混合透明、窗口阴影），所以如果你希望窗口有这些效果的话，你可能需要安装`xcompmpr`或者其它类似的程序并在终端模拟器中添加适当的选项在后台运行它，如果你不打算让它随 i3 一起启动的话……
-exec --no-startup-id xcompmgr -FCf -nc -t -5 &
-#exec --no-startup-id compton -b
-
+#exec --no-startup-id xcompmgr -FCf -nc -t -5 &
+exec --no-startup-id compton -b -f -i 0.8 -C -G -c
 
 # 为了启动 i3bar 上的网络管理小程序……
 #exec --no-startup-id nm-applet&

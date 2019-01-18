@@ -928,9 +928,13 @@ org.apache.ibatis.executor.ExecutorException: Executor was closed.
 + [hibernate4的BaseDao实现_小组_ThinkSAAS](http://www.thinksaas.cn/group/topic/102449/)
 
 + [hibernate--basedao，借鉴别人的完善自己的](http://www.360doc.com/content/16/0331/12/27730037_546781068.shtml)
-
++ JavaWeb入门详细开发教程
++ javaweb项目基础步骤
++ [MyBatis XML 映射配置文件 - Freiheit - 博客园](http://www.cnblogs.com/xiepeixing/p/4273910.html)
++ [MyBatis学习总结(三)——优化MyBatis配置文件中的配置 - 孤傲苍狼 - 博客园](http://www.cnblogs.com/xdp-gacl/p/4264301.html)
++ 掌握 Ajax，第 1 部分_ Ajax 入门简介
 + [hibernate框架BaseDao - 开源中国社区](http://www.oschina.net/code/snippet_1170373_22692)
-
++ [Hibernate 高级查询技巧——分页查询 - javacoffe的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/javacoffe/article/details/1733584)
 + [Struts2-I18n国际化 - PerfectPlan - ITeye技术网站](http://perfectplan.iteye.com/blog/1561810)
 
 + [Struts2工作原理 - 博学而笃志，切问而近思 - 博客频道 - CSDN.NET](http://blog.csdn.net/wuwenxiang91322/article/details/11070513)
