@@ -61,4 +61,3 @@ type vbs &> /dev/null || alias vbs='vboxmanage storageattach'
 #https_proxy="$http_proxy"
 #export http_proxy https_proxy
 type e &>/dev/null || alias e='vim'
-if ps aux|grep -v grep|grep X &>/dev/null;then synconf;fi

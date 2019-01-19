@@ -57,3 +57,7 @@ nameserver="192.168.43.1"
 [^freebsd]: FreeBSD 使用 `OpenRC` 作为系统的 `init`。因此，所有 OpenRC 指令（如 service /etc/rc.d/.. start）都可用。
 [^singer_user]: FreeBSD 的单用户模式就在系统引导时的选择序列中。因此，无需对引导或者内核参数进行修改。
 
+# 附
+
++[FreeBSD Mirror list](http://mirrors.ustc.edu.cn/freebsd/releases)
+
