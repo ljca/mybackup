@@ -1,20 +1,22 @@
 # Other Linux Tools
-## erase/rm
-## erase
-## file/stat
-## more/less
-## dump
-## sudo
-## ps
-## skill
-## nice
-## killall
-## useradd/userdel
-## groupadd/groupdel
-## passwd/gpasswd
-## usermod/groupmod
 
-## bc
++ erase/rm
++ erase
++ file/stat
++ more/less
++ dump
++ sudo
++ ps
++ skill
++ nice
++ killall
++ useradd/userdel
++ groupadd/groupdel
++ passwd/gpasswd
++ usermod/groupmod
++ <a href="#" name="screen">screen：Linux 终端多会话</a>
++ [tmux：终端上的多会话](otools/tmux.md)
++ bc：数学计算
 
 > option，多个选项使用分号分隔。
 
@@ -27,7 +29,7 @@
 bc <<< "ibase=16;obase=2;0X2BF"
 ```
 
-## iconv：文件编码转换工具 `iconv -f 源文件编码(输入文件编码) -t 目的编码 要转换的文件(即源文件或者输入文件) -o 输出文件名`
++ iconv：文件编码转换工具 `iconv -f 源文件编码(输入文件编码) -t 目的编码 要转换的文件(即源文件或者输入文件) -o 输出文件名`
 
 > 参数解释：
 
@@ -36,14 +38,13 @@ bc <<< "ibase=16;obase=2;0X2BF"
 -o 指定输出文件名(如果输出文件和源文件同名，那么将会覆盖源文件内容。如果不带-o选项则会将转换编码后的文件内容输出到控制台)
 -l 列出所有编码
 
-## shutdown/halt/poweroff/reboot
-## crontab/at
-## tzselect
-## hwclock
-## locale
++ shutdown/halt/poweroff/reboot
++ crontab/at
++ tzselect
++ hwclock
++ locale
 
-
-## [cv](https://github.com/Xfennec/progress) 显示`cp`、`mv`、等指令在工作时的进度。
++ [cv](https://github.com/Xfennec/progress) 显示`cp`、`mv`、等指令在工作时的进度。
 
 ```Bash
 # 编译安装……
@@ -63,7 +64,7 @@ watch progress -w
 
 ```
 
-## [lsp](https://github.com/dborzov/lsp)
++ [lsp](https://github.com/dborzov/lsp)
 
 如果你的系统还没有安装`go`，需要先安装`go`。
 
@@ -78,8 +79,7 @@ go get github.com/dborzov/lsp
 export PATH="$GOPATH/bin:$PATH" # GOPATH 默认在 $HOME/go
 ```
 
-
-## [powertop](https://github.com/fenrus75/powertop)
++ [powertop](https://github.com/fenrus75/powertop)
 
 ```Bash
 # 编译 poertop
@@ -89,15 +89,10 @@ export PATH="$GOPATH/bin:$PATH" # GOPATH 默认在 $HOME/go
 make && make install 
 ```
 
-## ncdu
-
-## htop | atop
-
-## man2html：`man ls | man2html`
-
-## htmltext（python-html2text）：`html2text <(man ls|man2html) > ls.txt`
-
-`html2text [options] file|url [encoding]`
++ ncdu
++ htop | atop
++ man2html：`man ls | man2html`
++ htmltext（python-html2text）：`html2text <(man ls|man2html) > ls.txt` `html2text [options] file|url [encoding]`
 
 可以是一个本地文件或者url路径,其后的编码项是可选的
 
@@ -110,13 +105,22 @@ make && make install
 for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs && mv $i bk;done
 ```
 
-## dos2unix
++ dos2unix
++ docx2txt
++ MySQL | MariaDB Client: mycli
++ python: bpython | ipython
 
-## MySQL | MariaDB: mycli
+# 附
 
-## python: bpython | ipython
-
-## docx2txt
++ [asciinema：高级的终端会话记录和回放工具](otools/asciinema.md)
++  [convert-format](otools/convert-format.md)
++ [cscope&ctags](otools/cscope-ctags.md)
++ [pandoc](otools/pandoc.md)
++ [xclip：Linux X 下的命令行剪贴板工具](otools/xclip.md)
++  [ffmpeg：视频、音频读取、转换、生成工具](otools/ffmpeg.md)
++ [gvfs-google & gvfs-mtp：让Linux的文件管理器可以自动挂载Android设备的外部和内部存储卡](otools/gvfs_mtp.md)
++ [instant-markdown-d：在浏览器中预览 markdown](otools/instant-markdown-d.md)
++ [我见过的一些终端下很有意思的命令和脚本](otools/intestresting-command.md)
 
 > 参考：
 

@@ -1,22 +1,22 @@
 # Other FS Tools
-## [`LVM`：逻辑卷管理](fs_tools/lvm.md)
-## [`RAID`：磁盘阵列](fs_tools/raid.md)
-## [Loop Device：a magic device（奇妙的环回设备）](fs_tools/loopback.md)
-## [quota：磁盘配额工具](fs_tools/quota.md)
 
-## 磁盘分区创建与调整工具
++ [`LVM`：逻辑卷管理](fs_tools/lvm.md)
++ [`RAID`：磁盘阵列](fs_tools/raid.md)
++ [Loop Device：a magic device（奇妙的环回设备）](fs_tools/loopback.md)
++ [quota：磁盘配额工具](fs_tools/quota.md)
+
+# 磁盘分区创建与调整工具
 
 + `gfdisk`
 + `gdisk`
 + `parted`
++ `gparted`：GUI 磁盘工具
 
-GUI 磁盘工具：`gparted`。
+>  基于文件系统的工具：
+## mtools
 
-## 基于文件系统的工具：
-### mtools
-
-### [NTFS 工具集](fs_tools/ntfs-utils.md)
-### [exfat](fs_tools/exfat_utils.md)
++ [NTFS 工具集](fs_tools/ntfs-utils.md)
++ [exfat](fs_tools/exfat_utils.md)
 
 + `fat`系列卷标修改工具`mlabel`（mlabel命令由mtools软件包提供，然而，并不是所有的Linux发行都会会默认安装mtools软件包）。
 
@@ -56,7 +56,7 @@ mlabel -N X /dev/sdb1
 mlabel /dev/sdb1
 ```
 
-### [Ext 文件系统工具集](fs_tools/ext_fs_utils.md)
+## [Ext 文件系统工具集](fs_tools/ext_fs_utils.md)
 
 + jfs
 + xfs
@@ -68,7 +68,7 @@ mlabel /dev/sdb1
 
 + mkisofs
 + genisoimage
-+ eject
 
 # 附
-## testdisk
+
++ testdisk

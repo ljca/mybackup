@@ -52,13 +52,13 @@
 # 附
 
 + [FreeBSD 笔记](freebsd.md)
-+ [Arch/Linux 笔记](Arch/arch.md)
++ [Arch Linux 笔记](Arch/arch.md)
 + [CentOS 笔记](CentOS/centos.md)
-+ [Ubuntu/Linux 笔记](Ubuntu/ubuntu.md)
++ [Ubuntu Linux 笔记](Ubuntu/ubuntu.md)
 + [OpenSUSE 笔记](opensuse.md)
-+ [Gentoo/Linux 笔记](Gentoo/gentoo.md)
-+ [Fedora/Linux 笔记](Fedora/fedora.md)
-+ [LFS 笔记](Lfs/Lfs.md)
++ [Gentoo Linux 笔记](Gentoo/gentoo.md)
++ [Fedora Linux 笔记](Fedora/fedora.md)
++ [LFS 笔记](Lfs/lfs.md)
 
 ## tools：
 
@@ -91,7 +91,7 @@
 + [/etc/fonts/conf.d/60-latain-free.conf](config/60-latain-free.conf)
 
 
-# FIQ
+# FAQ
 ## 为什么在我的 Linux 核心控制台上，Alt Gr 键不能被用作 Meta 键？
 
 &nbsp;&nbsp;Meta 键是一个元键，一般对应于 PC 机键盘上的左 Alt，如果图形界面的伪终端也正确配置了 Alt 键，右边的 Alt 也可以作为 Meta 键使用。在没有 Alt 键的时代，是使用 Esc 键来代替 Meta 键的。
@@ -132,6 +132,8 @@ loadkeys alt
  + [Linux & Unix](https://unix.stackexchange.com/questions/44453/how-to-define-a-compose-key-in-terminal-no-desktop-environment?answertab=votes)
  + [Arch Linux Wiki](https://wiki.archlinux.org/index.php/Keyboard_shortcuts)
 
+## 登录管理器无法载入桌面会话[](https://)
+
 ## 为什么我的鼠标和触摸板在Linux上使用时总会出现反应延迟的问题？
 > Tip: 也许这是因为 laptopmode-tools 工具的设备自动挂起功能，也有可能仅仅只是因为在桌面环境设置的鼠标和触摸板设置中启用了`在输入时（使用键盘时，包括 Alt Tab 切换窗口）禁用触摸板多长时间`这个功能而已……
 
@@ -166,7 +168,7 @@ loadkeys alt
 
 > 配置文件(/etc/asound.conf or ~/.asoundrc)其实是在更新系统时（不知道是由`ALSA`还是`pulseaudio`创建的）是这样写的：
 
-```
+```config
 # Use PulseAudio by default
 pcm.!default {
   type pulse
@@ -186,7 +188,7 @@ ctl.!default {
 
 而我原本的`ALSA`配置文件是这样的：
 
-```
+```config
 defaults.pcm.card 1
 defaults.pcm.device 0
 defaults.ctl.card 1
@@ -194,7 +196,9 @@ defaults.ctl.card 1
 
 &nbsp;&nbsp;接下来，我先用 vlc 播放了一个 MV，又用 smplayer 播放了一个视频，同时又打开了 mocp 和　RhythmCat 播放音乐，当我同时听到了它们放出的美妙声音时，心里其实挺激动的（这种东西貌似在`Windows`上根本不需要配置就可以直接使用的）。遗憾的是，至今仍未找到方法在 Firefox 浏览器播放在线音乐或者视频时的同时在本地播放多媒体（或者相反。据称，这可能是由于 firefox 浏览器是直接使用的 pluseaudio 来解析在线媒体流），虽然一般不会有人这样子搞……
 
-![奇妙的混音啊](images/混音啊_1543755226_1711254746.png)
+----------------
+
+![](images/ui/softmixing.jpg)
 
 > 参考：
 

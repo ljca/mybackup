@@ -1,27 +1,43 @@
 # FreeBSD 笔记
 
-## pkg: FreeBSD 10 软件包管理
+## pkg: FreeBSD 10+ 预编译软件包管理
 
-### install：安装
-### search：查询
-### repo
-### info
-### query
-### rquery
++ install：安装
++ search：查询
++ remove: 移除
++ repo
++ info
++ query
++ rquery
++ ....
 
-## 网络配置：ifconfig
+## FreeBSD ports 系统
+### 同步 ports：pacsnap
 
-/etc/rc.conf.d
-/etc/rc.conf
++ 解包：`pacsnap extract`
++ 更新：`pacsnap update`
 
-### 配置默认 IP 和 路由
+## FreeBSD make
+
++ 搜索：`make search key/name=`
++ 安装：`make install clean`
++ 卸载：`make deinstall`
+
+## 升级 FreeBSD freebsd-version 
+
++ `freebsd-version -k`
++ `freebsd-version -u`
+
++ 小幅度的系统版本升级：`freebsd-update -k RELEASE-10 upgrade` 
+
+## 手动网络配置：ifconfig
+### 配置默认 IP 和 路由 `/etc/rc.conf`
+
 ```ini
 # ifconfig em0 192.168.43.119/24 netmask 255.255.255.0
 ifconfig_em0="192.168.43.111/24 netmask 255.255.255.0" 
 # route add default 192.168.43.1
 defaultrouter="192.168.43.1" 
-netif_enable="YES"
-routing_enable="YES"
 sshd_enable="YES"
 ```
 
@@ -31,10 +47,7 @@ sshd_enable="YES"
 + 删除网卡地址：`ifconfig em0 delete`
 + 查看路由表 `netstat -rn`
 
-
-## 配置默认 DNS
-
-/etc/resolv.conf
+### 配置默认 DNS `/etc/resolv.conf`
 
 ```ini
 nameserver="192.168.43.1"
@@ -59,5 +72,9 @@ nameserver="192.168.43.1"
 
 # 附
 
-+[FreeBSD Mirror list](http://mirrors.ustc.edu.cn/freebsd/releases)
+## 安装
+
+FreeBSD 9+ 安装框架 bsdinstall
+
++ [FreeBSD Mirror list](http://mirrors.ustc.edu.cn/freebsd/releases)
 

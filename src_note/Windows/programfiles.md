@@ -61,8 +61,6 @@
 + Tomcat7
 + Tomcat8027
 
-> Lib
-
 > Others
 
 + Gtk+
@@ -83,15 +81,29 @@
 + CometAssistant
 + CoolFormat：源代码格式化工具。
 + md5sum：
-+ EcMenu，MenuMgr：右键上下文工具。
-+ RightMenuMgr
 + swf提mp3
 + tab2space
 + tidy
 + TorToMag：磁力链转换到 bt 种子。
++ ColorPix：颜色拾取器。
++ MD5Calc
++ AutoHotkey_1
++ pinmuldtj
++ swf2videopro
++ TC8.51
++ viatc.0.4.1
+
+> Tweak-Tools
+
++ 7TaskbarTweaker
++ MacType
++ PCMaster
++ XWindowsDock
++ EcMenu，MenuMgr：右键上下文工具。
++ RightMenuMgr
++ 变速齿轮
 + WebBrowseOptimizer：浏览器优化工具。
 + WinaeroCharmsBarKiller：
-+ ColorPix：颜色拾取器。
 
 > `Android_Tools`
 
@@ -113,20 +125,6 @@
 > Data
 
 + idsuite_noins
-
-> Download
-
-+ BatteryMoncn
-+ BitComet
-+ eMule
-+ FlashGet
-+ FLV Downloader
-+ iDocDown
-+ OrbitDownloaderPortable
-+ PanDownload
-+ PanDownloadv1
-+ QQDownload
-
 
 > Files
 
@@ -150,15 +148,11 @@
 + PicosmosTools
 + PNG-ICO
 
-+ MD5Calc
-
 > net
 
 + SRSniffer
 
-> Others
-
-+ Feige
+## Others
 
 > Pdf-Tool
 
@@ -169,22 +163,6 @@
 + ChmDecompiler
 + PDFzhcWord
 
-+ AutoHotkey_1
-+ Backup
-+ pinmuldtj
-+ Plugin
-+ swf2videopro
-+ TC8.51
-+ viatc.0.4.1
-+ Tweak-Tools
-+ 7TaskbarTweaker
-+ MacType
-+ PCMaster
-+ XWindowsDock
-+ 变速齿轮
-
-+ Jing：录屏，格式为 swf。
-
 > vcodec
 
 + DivX265_1.5.8
@@ -193,6 +171,7 @@
 
 > Vedio
 
++ Jing：录屏，格式为 swf。
 + Adobe Flash CS6
 + FLASH_SWF
 + FreeVideo2Flash
@@ -215,6 +194,7 @@
 
 + Defraggler：FAT 、NTFS 文件系统磁盘碎片整理。
 + DiskGenius
++ AcronisDiskDirector10 硬盘分区调整软件
 + DRU
 + HDDTest
 + NTFS与FAT32转换器2.0
@@ -263,13 +243,14 @@
 
 ## App
 
++ 91Reader
++ DOSBox-0.74
+
+
 > 压缩工具
 
 + 7z
 + WinRar
-
-+ 91Reader
-+ DOSBox-0.74
 
 > Web 浏览器
 
@@ -290,8 +271,19 @@
 + KUWO
 + QQMusic
 
-> 下载
+> Download
 
++ BatteryMoncn
++ BitComet
++ eMule
++ FlashGet
++ FLV Downloader
++ iDocDown
++ OrbitDownloaderPortable
++ PanDownload
++ PanDownloadv1
++ QQDownload
++ Feige
 + Thunder
 + ThunderX
 

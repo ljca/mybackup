@@ -142,10 +142,13 @@ vim /etc/hosts
 
 # Install 常用 Program
 .....
+```
+### 安装 Grub
 
+```
 # Install Grub to the Disk boot partition And Update Grub Configure
 pacman -S --needed os-prober grub efibootmgr dosfstools
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --boot-directory=/boot/efi/EFI/Arch --compress="xz" --debug
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=boot --boot-directory=/boot/efi/EFI/boot --compress="xz" --debug
 # Or grub-mkstandalone --directory="/usr/lib/grub/x86_64-efi" --format="x86_64-efi" --compress="xz" --output="arch_grub.efi" "boot/grub/grub.cfg=/tmp/grub.cfg"
 # Then Update Grub Configure:
 grub-mkconfig -o /boot/efi/EFI/Arch/grub/grub.cfg
@@ -159,10 +162,8 @@ sync;sync;sync;sync;sync;sync;sync;
 
 # exit Or Ctrl D 
 
-# 如果无法卸载文件系统，则需要使用-R选项来强行卸载文件系统，/mnt 是系统挂载点
-
-umount -R /mnt/{home,boot/efi,}
-
+# -R 选项可以递归卸载
+umount -R /mnt
 reboot
 ```
 

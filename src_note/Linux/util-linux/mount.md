@@ -1,4 +1,6 @@
-# mount：挂载磁盘或者分区
+# mount/umount：挂载/卸载磁盘或者分区
+
++ <a href="#mount" name="mount">mount：挂载磁盘或者分区</a>
 
 **&nbsp;&nbsp;现代 Linux 一般直接给文件管理器配置了 `gvfs`[^gvfs]，这也就意味着：你不需要终端模拟器就可以随时在文件管理器中方便地进行挂载和卸载某个分区或者某个磁盘。**
 
@@ -38,6 +40,6 @@ mount -t vfat -o rw,utf8,uid=$UID /dev/disk/by-label/tmp ./vfat
 
 [^root_perm]: 因为blkid指令允许直接查看分区UUID，如果你没有使用根用户权限来执行，那也不会有任何问题。就是不会有任何输出，就像ip等可以操作配置网卡的工具一样。但是 `fdisk` 工具可以直接操作系统磁盘分区，因此必须以根用户权限执行，即使仅仅只是查看系统磁盘和分区信息也不行!
 
-# umount：卸载磁盘或者分区
++ <a name="umount" href="#umount">umount：卸载磁盘或者分区</a>
 
 **&nbsp;&nbsp;你只需要给 umount 带上挂载时的挂载点或者是诸如 `/dev/sdb1` 一样的设备名就可以直接卸载分区了。如果你没有卸载掉，可以试试 -R 选项或者使用 `fuser` 或者 `lsof` 检查下是否存在着文件占用问题。如果你在挂载 fat 系文件系统时用了 nouser 选项，那还可以不用根用户权限就可以直接卸载掉 fat 系的文件系统。**
