@@ -140,12 +140,11 @@ loadkeys alt
 
 -- 如果是后者的原因？
 
--- 如果是因为 laptopmode-tools（laptopmode-tools 使用了黑名单）？```AUTOSUSPEND_USE_WHITELIST=0```
+-- 如果是因为 laptopmode-tools（laptopmode-tools 使用了黑名单）？`AUTOSUSPEND_USE_WHITELIST=0`
+
 > Note：新版本的 `laptopmode-tools` 已经将 USB 自动挂起功能从 usb-autosuspend 模块移动到运行时 pm 模块（关于它的配置文件移到了 /etc/laptop-mode/conf.d/runtime-pm.conf）。如果你希望知道 laptopmode-tools 的详细信息，请参阅 laptop-mode.conf（8）手册页。
 
-&nbsp;&nbsp;可以尝试将 USB 设备的 VID 和 PID 号（！关于这个，可以尝试插拔 USB 设备并对比 lsusb 指令上下文的变化，多个设备的 vid 和 pid 使用空格分开）添加到
-
-`AUTOSUSPEND_RUNTIME_DEVID_BLACKLIST=""` 段并重启　laptopmode-tools 服务，可能还要重新插拔一下　USB 设备。更多 laptopmode-tools 问题参见 Arch Linux laptopmode-tools Wiki.
+&nbsp;&nbsp;可以尝试将 USB 设备的 VID 和 PID 号（！关于这个，可以尝试插拔 USB 设备并对比 lsusb 指令上下文的变化，多个设备的 vid 和 pid 使用空格分开）添加到 `AUTOSUSPEND_RUNTIME_DEVID_BLACKLIST=""` 段并重启　laptopmode-tools 服务，可能还要重新插拔一下　USB 设备。更多 laptopmode-tools 问题参见 Arch Linux laptopmode-tools Wiki.
 
 ## 如何清除 gtk 程序的最近打开历史？
 
@@ -214,20 +213,17 @@ defaults.ctl.card 1
 
 [^start]: 这仅适合 init 是 systemd，登录管理器使用的是 lxdm 的 Linux 系统，OpenRC，Upstart 使用了不同的方式。
 
-&nbsp;&nbsp;除非掉了 X 服务器(后台运行 startx 似乎没有什么用)，tty1 才会重新显示出 shell 的提示符(如果确定 X 服务配置没有问题而又不希望看到那些日志信息的话，可以尝试将输出和错误信息重定向到位桶(/dev/null)，这样重新回到字符界面的时候控制台看起来也许会显得“干净”一点)。而有的时候出于需要，不想让 tty1 直接被 X 服务器占用。除了尝试传递参数给 X 服务器之外。
+[^tmp1]: &nbsp;&nbsp;除非掉了 X 服务器(后台运行 startx 似乎没有什么用)，tty1 才会重新显示出 shell 的提示符(如果确定 X 服务配置没有问题而又不希望看到那些日志信息的话，可以尝试将输出和错误信息重定向到位桶(/dev/null)，这样重新回到字符界面的时候控制台看起来也许会显得“干净”一点)。而有的时候出于需要，不想让 tty1 直接被 X 服务器占用。除了尝试传递参数给 X 服务器之外。
 
-&nbsp;&nbsp;还可以通过编辑显示管理器的服务和配置文件（假如 `init` 使用的是 `systemd` 的话。不过，init 使用的是 `System V` 的 `openRC` 的话 也可以尝试使用类似的方法配置）来让显示管理器和 X 服务器明白自己“应该”在哪一个 tty 上启动自己做到“永久性配置”。假如桌面环境显示管理器或者说是登录管理器使用的是 lxdm（其它的似乎也没有多少不同），它的 systemd 服务单元文件在不同的 Linux 发行上位置可能不同，不过实际上`/etc/systemd/system/display-manager.service` 只是一个指向显示管理器服务的符号链接，一般是在显示服务器的服务被允许开机启动或者多用户环境目标被设为图形用户时自动创建。
+[^tmp]: &nbsp;&nbsp;还可以通过编辑显示管理器的服务和配置文件（假如 `init` 使用的是 `systemd` 的话。不过，init 使用的是 `System V` 的 `openRC` 的话 也可以尝试使用类似的方法配置）来让显示管理器和 X 服务器明白自己“应该”在哪一个 tty 上启动自己做到“永久性配置”。假如桌面环境显示管理器或者说是登录管理器使用的是 lxdm（其它的似乎也没有多少不同），它的 systemd 服务单元文件在不同的 Linux 发行上位置可能不同，不过实际上`/etc/systemd/system/display-manager.service` 只是一个指向显示管理器服务的符号链接，一般是在显示服务器的服务被允许开机启动或者多用户环境目标被设为图形用户时自动创建。
 
-假如要让显示管理器 lxdm 在系统引导时自动启动（如果系统已经直接将多用户目标配置为图形用户，那么根本不需要这样做），以根用户权限运行：
+[^graphics]: 假如你希望登录管理器 lxdm 在系统引导时自动启动（如果系统已经直接将多用户目标配置为图形用户，那么根本不需要这样做），以根用户权限运行： `systemctl enable lxdm`。
 
-```Bash
-systemctl enable lxdm
-```
-
-而如果想要让 systemd 在其它的 tty(比如个人计算机上很少使用的 tty12)启动显示管理器，那么就可能需要适当的编辑显示管理器 systemd 服务文件：
+&nbsp;&nbsp;如果你希望 systemd 在其它的 tty(比如个人计算机上很少使用的 tty12)启动显示管理器，那么通常你只需要适当的编辑登录管理器的 systemd 单元文件和登录管理器自己的配置文件（当然，还可以直接给 X 服务器传递适当的参数）：
 
 ```Bash
-sudoe $(readlink /etc/systemd/system/display-manager.service)  #sudoe是sudo -E vim的别名，目的是为了在以其它用户启动vim时仍然使用现在用户的环境比如仍然读取当前用户的vimrc。
+#sudoe是sudo -E vim的别名，目的是为了在以其它用户启动vim时仍然使用现在用户的环境比如仍然读取当前用户的vimrc。
+sudoe $(readlink /etc/systemd/system/display-manager.service)  
 ```
 
 ```config
@@ -245,11 +241,7 @@ After=systemd-user-sessions.service getty@tty12.service plymouth-quit.service
 arg=/usr/bin/X -background vt12 # 这会让显示管理器在第 12 个 tty 上启动 X 服务器和自身
 ```
 
- 假如重启之后成功引导了系统，可以通过切换控制台或者直接用 ps 指令检查结果。
-
-```Bash
-ps aux|grep -v grep|grep X
-```
+重启之后如果成功引导了系统，可以通过切换控制台或者直接用 ps 指令检查结果。 `ps aux|grep -v grep|grep X`
 
 ```log
 root       790  1.7  3.0 616836 120248 tty12   Ssl+ 17:20   0:41 /usr/lib/xorg-server/Xorg -background none :0 vt12 -nolisten tcp -novtswitch -auth /var/run/lxdm/lxdm-:0.auth
@@ -268,7 +260,8 @@ root       790  1.7  3.0 616836 120248 tty12   Ssl+ 17:20   0:41 /usr/lib/xorg-s
 ```ini
 [Login]
 #......
-NAutoVTs=1 # 只在 tty1 上启动了 getty，不过奇怪的是这样的配置对 tty6 似乎并没有什么用处。
+NAutoVTs=1 # 启动的 tty 个数，只在 tty1 上启动了 getty
+ReserveVT=2 # 哪一个 tty 可以自动启动
 #……
 ```
 
@@ -278,6 +271,20 @@ Linux 上使用 qt4 编写的应用程序看起来有点和操作系统界面字
 qt4 应用程序风格除了可以在程序代码中单独配置外，还可以使用 qtconfig-qt4 工具来配置从而将效果生效应用于本地所有 qt4 应用。注：仅指窗口风格与应用程序菜单字体调整。
 
 qt4 软件包所提供的 qtconfig-qt4 用来设置了 qt 应用的风格，它将应用于本地所有的 Qt 应用程序，不过这只限于 Qt4。而 qt5 编写的应用程序已经默认遵循操作系统的风格配置，包括菜单字体风格和窗口风格,不需要另行手动配置。
+
+QT4: qtconfig-qt4
+QT5: qt5ct
+
+为了使用 qt5ct 调整 QT5 程序外观： `echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' >> ~/.xprofile`
+
++ QT_QPA_PLATFORMTHEME
++ QT_STYLE_OVERRIDE
++ QML_DISABLE_DISK_CACHE=1
+
+> 参考：
+
++ Arch Wiki，[QT](https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE_Plasma)
++ [Uniform look for Qt and GTK applications](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications)
 
 ## Linux上较轻量级浏览器Opera的简要配置
 
