@@ -30,7 +30,9 @@ order += "volume master"
 #      format = "%degrees °C"
 #      path = "/sys/class/hwmon/hwmon0/temp1_input"
 #}
+#
 
+# 想要          🔋     这些看着像图标的字体？你只需要想办法往系统中安装一种叫做 图标字体 的东西即可。
 wireless _first_ {
         format_up = " %essid %quality"
         format_down = ": offline"
@@ -46,7 +48,7 @@ ethernet _first_ {
 }
 
 battery all {
-        #format = " 🔋%status %percentage  %remaining"
+        #format = "    %status %percentage  %remaining"
         format = " %status %percentage,%remaining"
         format_down = "No battery" 
         status_chr = "⚡" 
