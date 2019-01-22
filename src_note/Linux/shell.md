@@ -146,6 +146,7 @@
 
 + [第 14 章 命令系统 Bash](https://i.linuxtoy.org/docs/guide/ch14s05.html)
 + [开源世界旅行手册](https://i.linuxtoy.org/docs/guide/index.html)
++ [_etc_profile、_etc_bashrc、~_](http://blog.chinaunix.net/uid-26435987-id-3400127.html)
 
 ## Tcsh
 ## Csh

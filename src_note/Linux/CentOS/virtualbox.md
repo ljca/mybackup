@@ -1,4 +1,4 @@
-# §.VirtualBox 基础 
+# §.VirtualBox[^virtualbox] 笔记
 # §. 附
 ## Ⅰ. ViratulBox 增强包：
 
@@ -32,6 +32,8 @@ reboot
 ```Bash
 mkdir /media/Others
 mount -t vboxsf -o rw,uid=$UID,utf8=1 others /media/Others
+sudo mount -t vboxsf  Others /media/Others 
+sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
 ```
 
 ### 1.2 USB 2.0及以上支持 。
@@ -294,33 +296,10 @@ vboxmanage import centos7.ovf
 
 ## Ⅴ. vboxtool
 
+[^virtualbox]: VirtualBox 是一种虚拟机软件，在各个 PC 端 OS 上都有。这里仅在 Linux 上。
 [^port_fireward]: 子系统端口是虚拟机中的系统的端口，主机端口可以和子系统端口一样
 [^brige]: 桥接网卡并不需要端口转发，它们都有独立的局域网ip，它们的访问是双向的。这需要正确配置了虚拟机系统内的防火墙。如果启用了的话。
 
 [wiki]: https://wiki.configlinux.org/index.php/File_systems_
 [google]: https://www.google.com/ncr
 
-sudo mount -t vboxsf -o rw Others /media/Others 
-sudo mount -t vboxsf  Others /media/Others 
-sudo mount -t vboxsf  Others /media/Others 
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others 
-sudo mount -t vboxsf Others /media/others/
-sudo mount -t vboxsf lin /mnt/
-sudo mount -t vboxsf Others /mnt/
-sudo mount -t vboxsf Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID Others /media/others
-sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others

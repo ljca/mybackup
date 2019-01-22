@@ -38,7 +38,7 @@ ssh-keygen -t rsa
 ```Bash
 # 之所以使用 ssh-copy-id，那是因为这个 shell 脚本所做的工作能准确达成我们的目的（除了将公钥添加到服务器端用户目录下 .ssh下的authrized_keys中，还会正确配置它们的权限）。你还可以使用 scp，或者在服务端执行 cat 的方式添加，但二者权限却需要你自己动手配置。
 # .ssh 700，.ssh/authorized_keys 600.
-# ssh-copy-id <[-i] *.pub> user@host # 如果你用 ssh-keygen 生成的公钥文件不是默认的 id_rsa.pub ，你就需要用 -i 选项指定它的位置和文件名。如果你更改了 ssh 服务的默认端口，你还要用 -P 选项来指定目标系统的端口号。
+# ssh-copy-id <[-i] *.pub> user@host # 如果你用 ssh-keygen 生成的公钥文件不是默认的 id_rsa.pub ，你就需要用 -i 选项指定它的位置和文件名。如果你更改了 ssh 服务的默认端口，你还要用 -p 选项来指定目标系统的端口号。
 ssh-copy-id -i ~/.ssh/centos_rsa.pub tmp@192.168.43.191
 
 ```
@@ -110,6 +110,7 @@ umount -v local_mount_point
 ```
 
 或者:
+
 ``` Bash
 fusermount -u local_mount_point
 ```
@@ -123,3 +124,4 @@ systemctl stop sshd.service
 
 + [ssh连接到虚拟机的一般方法 - 简书](http://www.jianshu.com/p/eca72e767d71)
 + [VirtualBox中开启Linux的SSH（CentOS） - gangzz的个人页面 - 开源中国社区](https://my.oschina.net/pangyangyang/blog/177869)
+

@@ -1,11 +1,11 @@
-# 在Ubuntu Linux上启用3D桌面和更多的窗口动画.
-对于我而言，3D桌面是次要的，我真正需要的是对窗口动画和主题进行自定义……
+# 在Ubuntu Linux上启用3D桌面和更多的窗口动画[^anima]
+
+[^anima]: 对于我而言，3D桌面是次要的，我真正需要的是对窗口动画和主题进行自定义……
 
 > 如果你希望体验`3D`桌面[^0]以及对默认窗口动画进行自定义，那么你可能需要：
 
-## 切换到闭源（官方）显卡驱动(闭源驱动可以在设置的软件源部分找到)是有必要的。
-
-## 安装 compiz，ccsm(compizconfig-settings-manager)，compiz-plugins……以及 unity-tweak(ubuntu tweak tool)，Ubuntu 主题……
++ 切换到闭源（官方）显卡驱动(闭源驱动可以在设置的软件源部分找到)是有必要的。
++ 安装 compiz，ccsm(compizconfig-settings-manager)，compiz-plugins……以及 unity-tweak(ubuntu tweak tool)，Ubuntu 主题……
 
 &nbsp;&nbsp;使用软件包管理器 apt (这个是基于命令行的工具)，图形化的叫软件中心，还有一个 aptitude 是一个基于 apt 的使用 ncurser 库的的伪图形界面，也要在终端使用。但不管使用命令行还是图形软件包管理器，都要安装好 ccsm 软件套件及其插件包才能正常设置 3D 桌面。 
 
@@ -18,7 +18,7 @@
 apt-get -y install unity-tweak compizconfig-settings-manager  compiz-plugins-extra compiz-plugins
 ```
 
-## 配置 ccsm，可选配置 `unity-tweak`
++ 配置 ccsm，可选配置 `unity-tweak`
 
 &nbsp;&nbsp;接着，你需要运行 `ccsm` 进行配置，并打开其中的一些基本特效。基本的 3D 桌面只需要打开 ccsm 设置里的 3D Desktop，旋转立方体等基本特效，还要配置虚拟桌面个数（一般是 4 个）就可以了。至于什么下雪、焰火、养鱼等骚包的效果，别怪我没提醒你，如果你的计算机硬件配置不是很高，这些东西还是玩玩就好，别太认真去耍，如果硬件真的因此而出了问题，你不要哭泣。
 

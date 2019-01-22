@@ -1,7 +1,3 @@
-wget -P ~/back  http://mirrors.yun-idc.com/epel/6/i386/epel-release-6-8.noarch.rpm
-wget -P ~/back http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-sudo wget http://mirrors.aliyun.com/repo/epel-6.repo
-sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
 
  sudo groupmod -g 501 kyzs 
 

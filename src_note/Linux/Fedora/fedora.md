@@ -1,28 +1,28 @@
 # Fedora 23 笔记：
 
-## dnf[^dnf]：Fedora 新一代软件包管理器，Usage: `dnf option command subcommand`
+## dnf[^dnf]：Fedora 新一代的软件包管理器
 
-> OPTION LIST：
+> Usage: `dnf option command subcommand`，Option List：
 
 + -y 所有的询问都回答 yes
 
 >  Command List：
 
-### install：从软件仓库中安装软件包
-### remove | purge：从系统中移除软件包
++ dnf install：从软件仓库中安装软件包
++ dnf remove | purge：从系统中移除软件包
 
 ```Bash
 dnf remove -y cairo-dock
 dnf remove -y google-chrome-stable
 ```
 
-### update：更新系统
-### search：从软件仓库中根据软件包名搜索
-### search all：从软件仓库中根据软件包描述搜索
-### clean：清除下载缓存
-### clean all：清除所有缓存
-### makecache：创建 repo 缓存
-### config-manager：配置软件仓库
++ update：更新系统
++ search：从软件仓库中根据软件包名搜索
++ search all：从软件仓库中根据软件包描述搜索
++ clean：清除下载缓存
++ clean all：清除所有缓存
++ makecache：创建 repo 缓存
++ config-manager：配置软件仓库
 
 ```Bash
 dnf config-manager --add-repo=http://repo.fdzh.org/FZUG/FZUG.repo # 等效于 dnf install http://repo.fdzh.org/FZUG/free/23/x86_64/fzug-release-23-0.1.noarch.rpm
@@ -40,4 +40,5 @@ dnf config-manager --add-repo=http://repo.fdzh.org/FZUG/FZUG.repo # 等效于 dn
 
 # 附
 ## [Fedora Xfce 23 安装 & 配置](install_fedora23_xfce.md)
-## [rpm 软件包管理](rpm.md)
+## [yum 软件包管理系统](../CentOS/centos.md)
+## [rpm 软件包管理系统](../CentOS/rpm.md)

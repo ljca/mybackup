@@ -1,4 +1,4 @@
-# pacman：Arch Linux 软件包管理器
+# pacman：Arch Linux 的软件包管理器
 
 + 软件包查询：-Q
 + 安装：-S
@@ -12,10 +12,10 @@
 + pkgfile
 + pactree
 
-> **参考：pacman 用法和技巧**
+> **参考：**
 
-+ [pacman](https://www.archlinux.org/pacman/pacman.conf.5.html#_package_and_database_signature_checking)
 + [Pacman (简体中文) - ArchWiki][pacman]
++ [package_and_database_signature_checking](https://www.archlinux.org/pacman/pacman.conf.5.html#_package_and_database_signature_checking)
 + [pacman_Package signing (简体中文) - ArchWiki][pkg_sig]
 + [PacmanTips and tricks (简体中文) - ArchWiki][pacman_tricks]
 + [ArchLinux 的 pacman 命令详解 - 开源中国社区](http://www.oschina.net/question/54100_29072)
