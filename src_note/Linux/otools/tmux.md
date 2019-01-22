@@ -1,4 +1,4 @@
-# tmux：终端上的多会话，以前使用 [screen](screen.md)。
+# tmux：终端上的多会话，以前使用 [screen](../other_tools.md#screen)。
 
 > 一对尖括号 `<>` 扩起来的键是键盘上的区分于字母或者数字键的专有键，比如 `<Space>` 代表空格键，`<C-b>` 代表了 `Ctrl b`，`<M-b>` 即是 `Alt b`。
 
