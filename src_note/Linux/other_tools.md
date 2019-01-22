@@ -1,9 +1,7 @@
 # Other Linux Tools
 
-+ erase/rm
 + erase
 + file/stat
-+ more/less
 + dump
 + sudo
 + ps
@@ -14,7 +12,8 @@
 + groupadd/groupdel
 + passwd/gpasswd
 + usermod/groupmod
-+ <a href="otools/screen.md" name="screen">screen：Linux 终端多会话</a>
++ <a href="#screen" name="screen">screen：Linux 终端多会话</a>
+
 + [tmux：终端上的多会话](otools/tmux.md)
 + bc：数学计算
 
@@ -141,7 +140,7 @@ for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs &&
 + [linux 高速下载工具 aria2 的用法_chris_新浪博客](http://blog.sina.com.cn/s/blog_8cf0057a01017nun.html)
 + [Linux 下载工具 - 开源软件库 - 开源中国社区](http://www.oschina.net/project/tag/97/download-tools?lang=37&sort=view)
 
-### tools：
+## tools：
 
 + [gptfdisk-code](https://git.code.sf.net/p/gptfdisk/code)
 + [afterstep-devel](https://github.com/sashavasko/afterstep-devel)
