@@ -83,13 +83,14 @@
 
 ## font config 基本配置：
 
-&nbsp;&nbsp;现代 Linux 大多使用了FreeType2来渲染文字，配置文件在 /etc/fonts/fonts.conf、/etc/fonts/conf.d、$xdg_home/.config/fontconfig/fonts.conf、$xdg_home/.config/fontconfig/conf.d
+&nbsp;&nbsp;现代 Linux 大多使用了FreeType2来渲染文字，配置文件在 /etc/fonts/fonts.conf、/etc/fonts/conf.d、`$xdg_home/.config/fontconfig/fonts.conf`、`$xdg_home/.config/fontconfig/conf.d`
 
 > fontconfig基本配置：
 
 + [/etc/fonts/conf.d/99-base.conf](config/99-base.conf)
 + [/etc/fonts/conf.d/60-latain-free.conf](config/60-latain-free.conf)
 
+----------------------
 
 # FAQ
 ## 为什么在我的 Linux 核心控制台上，Alt Gr 键不能被用作 Meta 键？
@@ -211,7 +212,7 @@ defaults.ctl.card 1
 
 ## 如何让显示管理器在其它的tty启动[^start]？
 
-[^start]: 仅适合 init 是 systemd，登录管理器使用的是 lxdm 的 Linux 系统，OpenRC，Upstart 使用了不同的方式。
+[^start]: 这仅适合 init 是 systemd，登录管理器使用的是 lxdm 的 Linux 系统，OpenRC，Upstart 使用了不同的方式。
 
 &nbsp;&nbsp;除非掉了 X 服务器(后台运行 startx 似乎没有什么用)，tty1 才会重新显示出 shell 的提示符(如果确定 X 服务配置没有问题而又不希望看到那些日志信息的话，可以尝试将输出和错误信息重定向到位桶(/dev/null)，这样重新回到字符界面的时候控制台看起来也许会显得“干净”一点)。而有的时候出于需要，不想让 tty1 直接被 X 服务器占用。除了尝试传递参数给 X 服务器之外。
 

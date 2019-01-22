@@ -1,17 +1,16 @@
 # pacman：Arch Linux 软件包管理器
 
-## 软件包查询：-Q
-## 安装：-S
-## 卸载/移除：-R
-## 指令查询：-F
-## 更新：-U
-## 帮助：-H
++ 软件包查询：-Q
++ 安装：-S
++ 卸载/移除：-R
++ 指令查询：-F
++ 更新：-U
++ 帮助：-H
 
 # 附
-## yaourt | pacaur
-## pkgfile
-## pactree
-
++ yaourt | pacaur: 从 aur 搜索，安装。
++ pkgfile
++ pactree
 
 > **参考：pacman 用法和技巧**
 

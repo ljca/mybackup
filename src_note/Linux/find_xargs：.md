@@ -1,6 +1,6 @@
 # find与xargs：
 
-## find：文件搜索利器……
+## find：文件搜索……
 
 > 指令中的括号约定：
 
@@ -14,7 +14,6 @@ find [path] [options] [command & options] # 除非不指定任何选项，否则
  
 
 + -name "" 根据指定的表达式查找
-
 + -type {type} 根据指定的类型查找
 
 type 可以是：

@@ -4,22 +4,7 @@
 
 ##  Bash
 
-BASH 
-BASH_ALIASES 
-BASH_ARGC 
-BASH_ARGV 
-BASH_CMDS 
-BASH_COMMAND 
-BASH_COMPLETION_VERSINFO 
-BASH_LINENO 
-BASHOPTS 
-BASHPID 
-BASH_SOURCE 
-BASH_SUBSHELL 
-BASH_VERSINFO 
-BASH_VERSION
-
-### SHELL环境变量
+> 一些重要的 SHELL 环境变量
 
 + HISTSIZE
 + HISTFILE
@@ -29,108 +14,87 @@ BASH_VERSION
 + PS1...PS4
 + HOSTNAME
 + UID
++ .....
 
-###  Bash内建：
+> Bash 内建：
 
 + job_spec
-+ (())
-+ .
++ (())：执行算术运算。
++ . 等同于 `source`
 + :
-+ []
-+ [[]]
-+ alias
-+ bg
++ []: 执行算术运算。
++ [[]]：字符串条件测试
++ alias（定义 shell 别名），`alias name="command options"`
++ bg：将作业放入后台
 + bind：Bash 键绑定
 + break
 + builtin
 + caller
 + case
-+ cd
--P
--L
-
-+ command
++ cd[^cd]: 
++ command: 不使用任何定义的别名，函数来运行指令。
 + compgen
-+ complete
-命令行可编程的补全
--c
--W
--F
-
++ complete 命令行可编程的补全 -c -W -F
 + compopt
-+ continue
++ continue：shell 函数中的循环中有效。
 + coproc
-+ declare
-+ dirs
++ declare：定义或者声明数组，一般用于 shell 脚本。
++ dirs（显示目录栈中的目录项）：`dirs -v`
 + disown
 + echo
-+ enable
++ enable（启用/禁用一个内建指令）：
 + eval
-+ exec
-+ exit
-+ export
++ exec：
++ exit（退出当前 shell）
++ export（导出一个定义的变量为全局系统变量，也可使用 -f 选项将一个 shell 函数导出为全局）
 + false
 + fc
-+ fg
++ fg：将^Z挂起的作业放入前台继续执行。
 + for
 + function
 + getopts
 + hash
 + help
-+ history
++ history：显示或者编辑命令历史记录[^history]
 + if
-+ jobs
-+ kill
-+ let
-+ local
-+ logout
++ jobs：列出后台作业
++ kill：根据给出的命令进程号和选项对进程发送信号，默认是杀死
++ let：算术计算
++ local：仅在 function 中定义和生效的变量。
++ logout：注销系统
 + mapfile
-+ popd
-+ printf
-+ pushd
-+ pwd
++ popd：从目录栈中移除一个目录项
++ printf：根据指定的格式打印
++ pushd：将一个目录加入/压入目录栈中。
++ pwd：显示当前工作目录。
 + read
 + readarray
 + readonly
-+ return
++ return：在 function 中返回值给 shell 
 + select
-+ set
++ set: 设置 shell 选项[^set]或者显示当前 shell 中的环境变量和函数。
 + shift
-+ shopt
-+ source
++ shopt：设置 Shell 选项[^shell_opt]
++ source：在当前 shell 中读取并执行一个 shell 脚本。
 + suspend
-+ test
-+ time
++ test[^test]：执行条件测试。
++ time: 
 + times
 + trap
 + true
-+ type(Bash内建)：指令识别……
-
-> Note：
-
-+ 如果是`shell`函数定义，还会显示函数定义
-
-```Bash
-# Usage:
-type [-a] command 
-```
-
-> options：
-
--a 识别命令在系统中的所有可能出处（包括命令别名定义，函数定义，二进制，shell 脚本）
-
++ type(指令识别[^type])：`type command `
 + typeset
 + ulimit
 + mask
-+ unalias
-+ unset
++ unalias：取消定义一个别名
++ unset：取消定义函数或者变量
 + until
 + variables
 + wait 
 +  while
-+  { ;}
++  { ;}：将一组指令放入当前 shell 执行。
 
-## §. 工作在 Emacs 模式下的 Bash 快捷键列表，所有的键映射可以通过`bind`查看和设置……
+> 工作在 Emacs 模式下的 Bash 快捷键列表，所有的键映射可以通过`bind`查看和设置……
 
 + Ctrl+A 行首
 + Ctrl+B/Alt+B 字符/单词前移动
@@ -183,6 +147,16 @@ type [-a] command
 + [第 14 章 命令系统 Bash](https://i.linuxtoy.org/docs/guide/ch14s05.html)
 + [开源世界旅行手册](https://i.linuxtoy.org/docs/guide/index.html)
 
+## Tcsh
+## Csh
+
+> Csh 内建
+
++ setenv: 设置环境变量，`setenv name value`
++ alias: 定义别名，`alias name command & options`
+
+## Ksh
+
 ## Zsh
 
 > 参考：
@@ -192,11 +166,14 @@ type [-a] command
 [zsh]: https://wiki.archlinux.org/index.php/Zsh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
 
-## Tcsh
-
-## Csh
-
-## Ksh
-
 [^shell]:  
 
+[^type]:  -a 识别命令在系统中的所有可能出处（包括命令别名定义，函数定义，二进制，shell 脚本），如果是`shell`函数定义，还会显示函数定义。 
+
+[^shell_opt]: 
+
+[^set]:  Bash 的位置参数（命令行参数）也可以用 set 设置。
+
+[^test]: 大多数情况下，我们在进行条件测试时可能更喜欢使用 `[`。
+
+[^cd]: `-P -L`
