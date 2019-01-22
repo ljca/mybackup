@@ -14,7 +14,7 @@
 + groupadd/groupdel
 + passwd/gpasswd
 + usermod/groupmod
-+ <a href="#" name="screen">screen：Linux 终端多会话</a>
++ <a href="otools/screen.md" name="screen">screen：Linux 终端多会话</a>
 + [tmux：终端上的多会话](otools/tmux.md)
 + bc：数学计算
 
