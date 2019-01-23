@@ -1,12 +1,21 @@
-all:sqliteinit.o main 
+all:sqliteinit.o test
 
 sqliteinit.o:sqliteinit.c sqliteinit.h
 
-main:sqliteinit.o main.c sqliteinit.h
-	cc -o main -lsqlite3 sqliteinit.o main.c
+test:sqliteinit.o main.c sqliteinit.h
+	cc -o test -lsqlite3 sqliteinit.o main.c
 
 #.:clean dist
 clean:
-	rm -f main *.o
+	rm -f test *.o -r autom4te.cache config.* configure Makefile
+install:
+	cp test ${HOME}/bin
+
+uninstall:
+	rm -f ${HOME}/bin/test\
+	rm -rf ${prefix}
+
+run:
+	./test
 
 # vim:set noet noci ts=4 sts=4 st=4:

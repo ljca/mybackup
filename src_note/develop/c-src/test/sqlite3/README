@@ -1,0 +1,5 @@
+First, running `autoconf`, configure and then, running `configure`, Makefile. next, running `make` compier the main programs.
+
++ `make run`, run test programs.
++ `make clean`, romove all compier's file and tmp dirs.
+
