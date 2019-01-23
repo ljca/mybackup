@@ -3,11 +3,11 @@
 [^sed]: sed 是 Linux 以及 Unix 变体上的 I/O 流编辑器。
 
 + options:
- + -i：对文件直接应用
- + -n：取消自动打印模式空间
- + -r：启用扩展正则表达式
- + -e：启用多个表达式支持
- + -f：指定 sed 脚本
+  + -i：对文件直接应用
+  + -n：取消自动打印模式空间
+  + -r：启用扩展正则表达式
+  + -e：启用多个表达式支持
+  + -f：指定 sed 脚本
 
 ## sed 的模式空间[^model_space]命令
 
@@ -59,6 +59,7 @@ sed '/./,/^$/!d' file|I/O
 # 隔行删除
 N~Md # 从第 N 行开始，隔 N-M 行删除
 ```
+
 + p
 + n (next)
 + i  在之前插入行
@@ -79,6 +80,7 @@ sed 1i"`date`" file | I/O
 ```
 
 ## sed 多行模式空间指令
+
 + N
 + D
 + P
@@ -97,13 +99,15 @@ sed '/^$/d;G' lynx_bookmarks.html
 + x：交换
 
 ### 分支，测试
+
 + :
 + b
 + t
 
 # 附
 ## 正则表达式
-## 元字符
+## 元字符[^meta_char]
+
 + `.`：
 + `^`：
 + `$`：
@@ -119,9 +123,6 @@ sed '/^$/d;G' lynx_bookmarks.html
 + `\|`：
 + `&`：匹配表达式
  
- 不幸的是，很多元字符和扩展元字符会被 sed 直接解释，除了 ^ $ [] * 等元字符，大多数的元字符都需要转义。就连 . 也需要转义。
-
-
 > 参考：
 
 + 《sed & awk 指南》
@@ -133,3 +134,5 @@ sed '/^$/d;G' lynx_bookmarks.html
 + [学习 Linux，101_ 文本流和过滤器](http://www.ibm.com/developerworks/cn/linux/l-lpic1-103-2/index.html)
 + [某行的前一行或后一行添加内容 _ 旺旺知识库](http://www.toxingwang.com/linux-unix/linux-basic/2721.html)
 + sed系列:行或者模式匹配删除特定行
+
+[^meta_char]: 不幸的是，很多元字符和扩展元字符会被 sed 直接解释，除了 ^ $ [] * 等元字符，大多数的元字符都需要转义。就连 . 也需要转义。

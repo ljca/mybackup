@@ -1,4 +1,4 @@
-# asciinema：高级的终端会话记录和回放工具
+# asciinema：高级的终端会话记录[^script]和回放工具
 ##  安装
 
 &nbsp;&nbsp;[asciinema][asciinema] 是一个用 python 实现的程序，主要用于录制和回放终端会话（可以是 asciiname 网络上的，也可以是本地的）[^0][^1]。因此它没有太多的依赖，大多数较新的 Linux 发行都在官方源包含了这个工具，只需要使用包管理器就能直接安装它。 如果没有在官方源中找到这个工具，[asciinema][asciinema_install]网站上已经提供了较详细的安装教程，[git][asciinema_git]上也提供另外的安装方法。当然，如果是在 Linux 上，还可以直接使用 pip3/pip 安装 `sudo pip3 install asciinema`
@@ -44,3 +44,6 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 [^0]: &nbsp;&nbsp;虽然说`asciinema`和`script` 这两种工具都可以录制终端会话，然而 asciinema 似乎表现得技高一筹：script 录制的终端会话不仅需要用两个文件来存放，而且还需要单独的工具 scriptreplay 进行回放。它也不能存放到网站上。asciinema 在录制与回放时使用的都是同一个工具和文件，并不需要使用另外的文件来记录时间序列。也不需要使用另外的工具来回放会话。不仅如此，它还可以播放来自 asciinema 网站上的会话文件。而 `script` 可以借助于管道来同步显示输出，而 `asciinama` 做不到这一点。***但是很遗憾，`asciinema` 似乎并不支持记录终端中的交互式会话。比如 mysql，python 等。***
 
 [^1]: &nbsp;&nbsp;虽然屏幕录制工具录制的视频多姿多彩，基本上在屏幕上能见到的和听到的都可以在其中找到。然而，这样做的代价是录制过程中需要占用不低的 cpu 资源以及录制后也因为视频文件太大不太好在网络之间传送与分享从而交换信息，或许，初衷并不一定就是要将所有的东西都录进去呢。
+
+[^scrpt]: 我也在使用[script](../util-linux/script.md).
+

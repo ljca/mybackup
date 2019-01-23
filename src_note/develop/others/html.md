@@ -177,3 +177,6 @@ name:
 ```
 
 > 参阅：
+
+http://www.w3school.com.cn/cssref/css_colors.asp
+http://www.divcss5.com/rumen/r116.shtml
