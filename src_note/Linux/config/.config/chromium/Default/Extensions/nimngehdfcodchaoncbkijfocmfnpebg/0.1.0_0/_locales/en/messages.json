@@ -1,0 +1,14 @@
+{
+   "extDesc": {
+      "description": "Short description for the extension",
+      "message": "Open Chrono Download Manager from browser's Toolbar"
+   },
+   "extName": {
+      "description": "Extension name",
+      "message": "Chrono Manager Button"
+   },
+   "tipBrowserAction": {
+      "description": "Tool-tip for the extension button on Chrome's Toolbar",
+      "message": "Open Chrono Download Manager"
+   }
+}

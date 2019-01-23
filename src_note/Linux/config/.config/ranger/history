@@ -1,0 +1,15 @@
+open_with 
+open_with m
+
+!sudo rm -f 70_2533.jpg
+set colorscheme snow
+set colorscheme jungle
+set hidden_filter
+hide_bookmarks 
+shell ho
+set show_hidden
+set show_hidden True
+set show_cursor False
+set show_cursor True
+search upload
+set padding_right

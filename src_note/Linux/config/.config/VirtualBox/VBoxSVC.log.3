@@ -1,0 +1,49 @@
+VirtualBox XPCOM Server 5.1.26 r117224 linux.amd64 (Jul 27 2017 21:22:37) release log
+00:00:00.000246 main     Log opened 2019-01-23T15:01:02.823086000Z
+00:00:00.000248 main     Build Type: release
+00:00:00.000250 main     OS Product: Linux
+00:00:00.000251 main     OS Release: 4.12.8-2-ARCH
+00:00:00.000252 main     OS Version: #1 SMP PREEMPT Fri Aug 18 14:08:02 UTC 2017
+00:00:00.000269 main     DMI Product Name: V3-572G-5247
+00:00:00.000274 main     DMI Product Version: V1.30
+00:00:00.000312 main     Host RAM: 3869MB (3.7GB) total, 3536MB (3.4GB) available
+00:00:00.000315 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000316 main     Process ID: 25266
+00:00:00.000316 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.002618 main     IPC socket path: /tmp/.vbox-kyzs-ipc/ipcd
+00:00:00.108874 nspr-2   VirtualBox: object creation starts
+00:00:00.109009 nspr-2   Home directory: '/home/user/Arch/.config/VirtualBox'
+00:00:00.109314 nspr-2   Loading settings file "/home/user/Arch/.config/VirtualBox/VirtualBox.xml" with version "1.14-linux"
+00:00:00.122896 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp3s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.138507 nspr-2   NAT: resolv.conf: nameserver 192.168.43.1
+00:00:00.138530 nspr-2   NAT: resolv.conf: nameserver 2409:8954:3818:2086::67
+00:00:00.138541 nspr-2   HostDnsMonitor: old information
+00:00:00.138544 nspr-2     no server entries
+00:00:00.138546 nspr-2     no domain set
+00:00:00.138549 nspr-2     no search string entries
+00:00:00.138551 nspr-2   HostDnsMonitor: new information
+00:00:00.138553 nspr-2     server 1: 192.168.43.1
+00:00:00.138556 nspr-2     server 2: 2409:8954:3818:2086::67
+00:00:00.138559 nspr-2     no domain set
+00:00:00.138561 nspr-2     no search string entries
+00:00:00.138565 nspr-2   HostDnsMonitorProxy::notify
+00:00:00.146927 nspr-2   failed to create vboxnet0, error (0x80004005)
+00:00:00.147548 nspr-2   VD: VDInit finished
+00:00:00.147629 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={0eb668d2-495e-5a36-8890-29999b5f030c} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.152773 nspr-2   Loading settings file "/media/Others/Temp/Data/Virtual/vbox/RedHat7/RedHat7.vbox" with version "1.16-linux"
+00:00:00.154083 nspr-2   Loading settings file "/media/Others/Temp/Data/Virtual/vbox/CentOS7/CentOS7.vbox" with version "1.16-linux"
+00:00:00.155052 nspr-2   Loading settings file "/media/Others/Temp/Data/Virtual/vbox/xp/xp.vbox" with version "1.15-linux"
+00:00:00.155995 nspr-2   Loading settings file "/media/Others/Temp/Data/Virtual/vbox/freebsd10/freebsd10.vbox" with version "1.15-linux"
+00:00:00.159132 nspr-2   VirtualBox: object created
+00:00:08.767320 main     VirtualBox: object deletion starts
+00:00:08.767417 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/RedHat7.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.767476 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/part/data.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.767506 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/part/external.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.767532 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/part/back.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.767576 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/part/user.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.767883 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/centos7.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.768114 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/winxp.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:08.768371 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/media/Others/Temp/Data/Virtual/vbox/FreeBSD-10.3-RELEASE-amd64.vhd' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:09.162316 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={0169423f-46b4-cde9-91af-1e9d5b6cd945} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:13.769365 main     {00007f6db4010650} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_TIMEOUT
+00:00:13.770049 main     VirtualBox: object deleted

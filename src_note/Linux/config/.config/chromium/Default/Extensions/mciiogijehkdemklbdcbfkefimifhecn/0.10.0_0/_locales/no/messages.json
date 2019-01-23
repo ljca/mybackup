@@ -1,0 +1,1028 @@
+{
+  "btnAbout": {
+    "message": "Info"
+  },
+  "btnAddPaused": {
+    "message": "Legg til Pauset"
+  },
+  "btnApply": {
+    "message": "Bruk"
+  },
+  "btnBackToManager": {
+    "message": "Tilbake"
+  },
+  "btnCancel": {
+    "message": "Avbryt"
+  },
+  "btnClearAll": {
+    "message": "Fjern alle"
+  },
+  "btnClearFailed": {
+    "message": "Fjern mislyktes oppgaver"
+  },
+  "btnClearFinished": {
+    "message": "Fjern fullf\u00f8rte oppgaver"
+  },
+  "btnClearRemoved": {
+    "message": "Fjern manglende filer"
+  },
+  "btnFAQ": {
+    "message": "Vanlige sp\u00f8rsm\u00e5l"
+  },
+  "btnGotIt": {
+    "message": "Skj\u00f8nner!"
+  },
+  "btnImportChromeHistory": {
+    "message": "Importer historikk over nedlasting fra Chrome"
+  },
+  "btnLater": {
+    "message": "Senere"
+  },
+  "btnLoadPreview": {
+    "message": "Last inn forh\u00e5ndsvisning"
+  },
+  "btnOpenManager": {
+    "message": "\u00c5pne Administrator"
+  },
+  "btnPopRemoveFile": {
+    "message": "Og slett filen"
+  },
+  "btnPopRemoveList": {
+    "message": "Fjern fra listen"
+  },
+  "btnRate": {
+    "message": "Vurder"
+  },
+  "btnShareDone": {
+    "message": "Jeg har allerede gjort det"
+  },
+  "btnStart": {
+    "message": "Start"
+  },
+  "btnStartAll": {
+    "message": "Last ned alle"
+  },
+  "btnTakeMeThere": {
+    "message": "Kj\u00f8r p\u00e5"
+  },
+  "btnUpdateReload": {
+    "message": "Oppdater n\u00e5"
+  },
+  "chromesysAllowFileAccess": {
+    "message": "Tillat tilgang til filnettadresser"
+  },
+  "chromesysChange": {
+    "message": "Endre"
+  },
+  "chromesysDownloadLocation": {
+    "message": "Plassering for nedlasting"
+  },
+  "chromesysDownloadSaveAsPrompt": {
+    "message": "Sp\u00f8r f\u00f8r nedlasting hvor hver fil skal lagres"
+  },
+  "chromesysDownloadsSection": {
+    "message": "Nedlastinger"
+  },
+  "chromesysFailedGenericDownloadError": {
+    "message": "Nedlastingsfeil"
+  },
+  "chromesysFailedGenericNetworkError": {
+    "message": "Nettverksfeil"
+  },
+  "chromesysFailed_CRASH": {
+    "message": "Programstopp"
+  },
+  "chromesysFailed_FILE_ACCESS_DENIED": {
+    "message": "Utilstrekkelige tillatelser"
+  },
+  "chromesysFailed_FILE_BLOCKED": {
+    "message": "Blokkert"
+  },
+  "chromesysFailed_FILE_NAME_TOO_LONG": {
+    "message": "Filbanen er for lang"
+  },
+  "chromesysFailed_FILE_NO_SPACE": {
+    "message": "Harddisken er full"
+  },
+  "chromesysFailed_FILE_SAME_AS_SOURCE": {
+    "message": "Allerede lastet ned"
+  },
+  "chromesysFailed_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Virusskanningen mislyktes"
+  },
+  "chromesysFailed_FILE_TOO_LARGE": {
+    "message": "Filen er for stor"
+  },
+  "chromesysFailed_FILE_TOO_SHORT": {
+    "message": "Filen er komprimert"
+  },
+  "chromesysFailed_FILE_TRANSIENT_ERROR": {
+    "message": "Systemet er opptatt"
+  },
+  "chromesysFailed_FILE_VIRUS_INFECTED": {
+    "message": "Virus oppdaget"
+  },
+  "chromesysFailed_NETWORK_TIMEOUT": {
+    "message": "Tidsavbrudd for nettverket"
+  },
+  "chromesysFailed_SERVER_BAD_CONTENT": {
+    "message": "Ingen fil"
+  },
+  "chromesysFailed_SERVER_CERT_PROBLEM": {
+    "message": "Ugyldig sertifikat"
+  },
+  "chromesysFailed_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Filen er ufullstendig"
+  },
+  "chromesysFailed_SERVER_FAILED": {
+    "message": "Problem med tjeneren"
+  },
+  "chromesysFailed_SERVER_FORBIDDEN": {
+    "message": "Forbudt"
+  },
+  "chromesysFailed_SERVER_UNAUTHORIZED": {
+    "message": "Trenger autorisasjon"
+  },
+  "chromesysFailed_SERVER_UNREACHABLE": {
+    "message": "Tjeneren er ikke tilgjengelig"
+  },
+  "chromesysFailed_USER_CANCELED": {
+    "message": "Avbrutt"
+  },
+  "chromesysFailed_USER_SHUTDOWN": {
+    "message": "Avslutning"
+  },
+  "chromesysFontSize": {
+    "message": "Skriftst\u00f8rrelse"
+  },
+  "chromesysLanguageSection": {
+    "message": "Spr\u00e5k"
+  },
+  "chromesysShowAdvSettings": {
+    "message": "Vis avanserte innstillinger"
+  },
+  "chromesysWebStore": {
+    "message": "Chrome Nettmarked"
+  },
+  "confirmBatchDownload": {
+    "message": "Det virker som du kommer til \u00e5 starte samle-nedlastinger, her er noen eksempler:"
+  },
+  "confirmBatchDownloadNaming": {
+    "message": "For samle-nedlasting - pass p\u00e5 at navngivningsregler genererer forskjellige filnavn. Fortsett likevel?"
+  },
+  "confirmBtnYes": {
+    "message": "Ja"
+  },
+  "confirmBtnYesFile": {
+    "message": "Ja, slett filen"
+  },
+  "confirmCantResumeRestart": {
+    "message": "Oppgave $1 klarer ikke \u00e5 fortsette, omstarte den?"
+  },
+  "confirmClearTask": {
+    "message": "Er du sikker p\u00e5 at du vil fjerne $1 elementer?"
+  },
+  "confirmProceed": {
+    "message": "Fortsette?"
+  },
+  "confirmRecycleRunning": {
+    "message": "Slett kj\u00f8rende oppgave(r)?"
+  },
+  "confirmRemoveExtFilter": {
+    "message": "Vil du fjerne de valgte elementene?"
+  },
+  "confirmRemoveRule": {
+    "message": "Vil du fjerne de valgte elementene?"
+  },
+  "confirmRemoveTask": {
+    "message": "Permanent fjerne valgte oppgave(r)?"
+  },
+  "confirmReset": {
+    "message": "Handlingen kan ikke angres. Vil du fortsette?"
+  },
+  "errorFNameConflict": {
+    "message": "Navnekonflikt"
+  },
+  "errorFileNotExist": {
+    "message": "Fant ikke filen"
+  },
+  "errorInvalidNamingMask": {
+    "message": "Ugyldig navn"
+  },
+  "errorInvalidURLs": {
+    "message": "Ugyldig nettadresse"
+  },
+  "errorNoID": {
+    "message": "Mislykkes i \u00e5 legge til ny oppgave til Chrono fordi det er for mange oppgaver i behandleren, ryddeopp noen ubrukte oppgaver og pr\u00f8v igjen."
+  },
+  "errorNone": {
+    "message": "Ingen feil"
+  },
+  "errorRemovedFromChrome": {
+    "message": "Oppgaven kan ha blitt fjernet fra Chrome."
+  },
+  "everyXDays": {
+    "message": "Hver $1. dag"
+  },
+  "everyXHours": {
+    "message": "Hver $1. time"
+  },
+  "everyXMinutes": {
+    "message": "Hvert $1. minutt"
+  },
+  "extDesc": {
+    "message": "Nedlastingsadministrasjon | Videonedlasting| Bulk Bildenedlaster"
+  },
+  "extDescBest": {
+    "message": "Beste nedlastingsadministrator for Chrome"
+  },
+  "extDescSlogan": {
+    "message": "Last ned og h\u00e5ndter nettet!"
+  },
+  "extName": {
+    "message": "Chrono Nedlastingsadministrator"
+  },
+  "extsAll": {
+    "message": "Alle"
+  },
+  "extsApp": {
+    "message": "App"
+  },
+  "extsArchive": {
+    "message": "Arkiv"
+  },
+  "extsAudio": {
+    "message": "Lyd"
+  },
+  "extsDocument": {
+    "message": "Dokument"
+  },
+  "extsImage": {
+    "message": "Bilde"
+  },
+  "extsNew": {
+    "message": "Nytt Filter"
+  },
+  "extsOthers": {
+    "message": "Annet"
+  },
+  "extsVideo": {
+    "message": "Video"
+  },
+  "fieldAddTime": {
+    "message": "Tidspunkt for oppretting"
+  },
+  "fieldAvgSpeed": {
+    "message": "Gjennomsnittlig hastighet"
+  },
+  "fieldDownloadedSize": {
+    "message": "er lastet ned"
+  },
+  "fieldElapsedTime": {
+    "message": "Forl\u00f8pt tid"
+  },
+  "fieldFileName": {
+    "message": "Filnavn"
+  },
+  "fieldFileSize": {
+    "message": "Filst\u00f8rrelse"
+  },
+  "fieldFinishTime": {
+    "message": "Fullf\u00f8ringsklokkeslett"
+  },
+  "fieldFolder": {
+    "message": "Mappe"
+  },
+  "fieldNaming": {
+    "message": "Navngivings-regel"
+  },
+  "fieldProgress": {
+    "message": "Fremdrift"
+  },
+  "fieldRedirection": {
+    "message": "Omdirigering"
+  },
+  "fieldReferer": {
+    "message": "Henvisningsadresse"
+  },
+  "fieldRemainingTime": {
+    "message": "Gjenst\u00e5ende tid"
+  },
+  "fieldRemarks": {
+    "message": "Kommentarer"
+  },
+  "fieldSpeed": {
+    "message": "Hastighet"
+  },
+  "fieldState": {
+    "message": "Status"
+  },
+  "fieldThreads": {
+    "message": "Tr\u00e5der"
+  },
+  "fieldType": {
+    "message": "Filtype"
+  },
+  "fieldURL": {
+    "message": "Nettadresse"
+  },
+  "headExtFilterCaption": {
+    "message": "Visningsnavn"
+  },
+  "headExtFilterExts": {
+    "message": "Filetternavn"
+  },
+  "headExtFilterRefName": {
+    "message": "Internt navn"
+  },
+  "headRulesActive": {
+    "message": "Aktiv"
+  },
+  "headRulesAsFilter": {
+    "message": "Som Oppgaver Filter"
+  },
+  "headRulesCaption": {
+    "message": "Visningsnavn"
+  },
+  "headRulesCondition": {
+    "message": "Uttrykk"
+  },
+  "headRulesRefName": {
+    "message": "Internt navn"
+  },
+  "helpExtFilter": {
+    "message": "* Dobbeltklikk for \u00e5 redigere. \n* Skriv p\u00e5 tom rad for \u00e5 legge til et nytt filter. \n* Velg rader og trykk SLETT for \u00e5 fjerne dem."
+  },
+  "helpRules": {
+    "message": "* Dobbeltklikk for \u00e5 redigere. \n* Skriv i en tom rad for \u00e5 legge til en ny regel. \n* Velg rader og trykk SLETT for \u00e5 fjerne dem. \n* Hvis du har problemer med \u00e5 skrive reglene, kan du se i Hjelpe-seksjonen."
+  },
+  "hintSearchDownloads": {
+    "message": "S\u00f8k i nedlastinger"
+  },
+  "labelAutoClear": {
+    "message": "Planlegg"
+  },
+  "labelBGBlur": {
+    "message": "Gj\u00f8r uskarpt"
+  },
+  "labelBGChooseFrom": {
+    "message": "Velg et bilde"
+  },
+  "labelBGConstantColor": {
+    "message": "Ensfarget"
+  },
+  "labelBGImageURL": {
+    "message": "Tilpasset bildeadresse"
+  },
+  "labelBGOpacity": {
+    "message": "Gjennomsiktighet"
+  },
+  "labelCustomFilter": {
+    "message": "Egendefinert filter"
+  },
+  "menuDAudio": {
+    "message": "Lagre lyd som"
+  },
+  "menuDAudioOneClick": {
+    "message": "Ett-Klikk laste ned lyden"
+  },
+  "menuDImage": {
+    "message": "Lagre bildet som..."
+  },
+  "menuDImageOneClick": {
+    "message": "Ett-Klikk last ned bildet"
+  },
+  "menuDLink": {
+    "message": "Lagre linken som\u2026"
+  },
+  "menuDLinkOneClick": {
+    "message": "Ett-Klikk last ned koblingen"
+  },
+  "menuDVideo": {
+    "message": "Lagre video som"
+  },
+  "menuDVideoOneClick": {
+    "message": "Ett-Klikk laste ned video"
+  },
+  "menuGetHelp": {
+    "message": "F\u00e5 hjelp"
+  },
+  "menuOpenManager": {
+    "message": "\u00c5pne administrator"
+  },
+  "menuReportIssue": {
+    "message": "Rapporter et problem"
+  },
+  "msgCannotScanResources": {
+    "message": "Kan ikke skanne ressurser for denne siden."
+  },
+  "msgChromeI18nLanguage": {
+    "message": "Chrono bruker samme spr\u00e5k som din Chrome nettleser."
+  },
+  "msgEmptyDownloadsList": {
+    "message": "Tom liste"
+  },
+  "msgPreviewErrorReadFile": {
+    "message": "Feil ved lesing av fil"
+  },
+  "msgPreviewFailed": {
+    "message": "Kunne ikke laste inn forh\u00e5ndsvisning av filen"
+  },
+  "msgPreviewFileAccess": {
+    "message": "Kan ikke laste inn lokal fil for forh\u00e5ndsvisning, du kan sl\u00e5 p\u00e5 denne funksjonen ved \u00e5 merke av i boksen $1 under $2 p\u00e5 chrome://extensions-siden."
+  },
+  "msgPreviewLargeFile": {
+    "message": "Det kan ta litt tid \u00e5 laste forh\u00e5ndsvisningen."
+  },
+  "msgPreviewPdfViewer": {
+    "message": "Chrome PDF Viewer er n\u00f8dvendig for forh\u00e5ndsvisningen, vennligst skru den p\u00e5 ved \u00e5 f\u00f8lge instruksjonene"
+  },
+  "msgRateShare": {
+    "message": "Hvis du fant $1 nyttig, kan du vurdere den p\u00e5 $2 og dele den med dine venner!"
+  },
+  "msgSearchNoResults": {
+    "message": "Finner ingen treff"
+  },
+  "msgSelectTaskInfo": {
+    "message": "Ingen elementer er valgt."
+  },
+  "msgTaskAddPaused": {
+    "message": "Opgave lagt til og pauset"
+  },
+  "msgTaskFinish": {
+    "message": "Nedlastingen er fullf\u00f8rt"
+  },
+  "msgTaskInterrupt": {
+    "message": "Nedlasting mislyktes"
+  },
+  "msgTaskStart": {
+    "message": "Oppgave lagt til k\u00f8"
+  },
+  "msgTextUpdateAvail": {
+    "message": "Vennligst oppdater utvidelsen for \u00e5 aktivere oppdateringen."
+  },
+  "msgTextWelcome": {
+    "message": "F\u00f8r du starter er det anbefalt \u00e5 sl\u00e5 av Chromes dialogboks for \u00e5 Lagre som, ved \u00e5 fjerne avmerkingen i henhold til $1.\nDu kan ogs\u00e5 tillate at Chrono \u00e5 f\u00e5 tilgang til fil-URLer for \u00e5 oppn\u00e5 en bedre brukeropplevelse, som kan aktiveres ved avmerkingsboksen $2 under $3.\nHvis du har sp\u00f8rsm\u00e5l, sjekk hjelpesiden og FAQ-side, og du kan ogs\u00e5 sende e-post til dev@chronodownloader.net .\nGod forn\u00f8yelse!"
+  },
+  "msgTitleUpdateAvail": {
+    "message": "Ny versjon er tilgjengelig"
+  },
+  "msgTitleWelcome": {
+    "message": "Velkommen!"
+  },
+  "msgUpdated": {
+    "message": "$1 er oppdatert."
+  },
+  "optItemBadgeDownloadNum": {
+    "message": "Vis antall nedlastingsoppgaver p\u00e5 ikonet p\u00e5 verkt\u00f8ylinjen"
+  },
+  "optItemClearRemoveFile": {
+    "message": "Slett fra disk"
+  },
+  "optItemClearSearch": {
+    "message": "T\u00f8m s\u00f8keboksen n\u00e5r filteret endres"
+  },
+  "optItemClickNotify": {
+    "message": "Ved \u00e5 klikke p\u00e5 en melding"
+  },
+  "optItemConcurrentDownloads": {
+    "message": "Samtidige nedlastinger"
+  },
+  "optItemDblClickAction": {
+    "message": "Dobbeltklikk p\u00e5 oppgaven"
+  },
+  "optItemDefAddPaused": {
+    "message": "Legg til Pauset"
+  },
+  "optItemDefFolder": {
+    "message": "Standardplassering"
+  },
+  "optItemDefNaming": {
+    "message": "Standard Navngivings-regel"
+  },
+  "optItemDownloadClipboard": {
+    "message": "Last ned URL fra utklippstavle"
+  },
+  "optItemDownloadsPerServer": {
+    "message": "Nedlastinger per server"
+  },
+  "optItemHideShelf": {
+    "message": "Skjule Chromes nedlastings-linje"
+  },
+  "optItemMenuDialog": {
+    "message": "Lagre linken som\u2026"
+  },
+  "optItemMenuOneClick": {
+    "message": "Ett-Klikk last ned lenke/bilde"
+  },
+  "optItemNameConflict": {
+    "message": "N\u00e5r filnavn er i konflikt"
+  },
+  "optItemNotifyError": {
+    "message": "Vis varsel n\u00e5r det oppst\u00e5r feil"
+  },
+  "optItemNotifyFinish": {
+    "message": "Vis varsel n\u00e5r nedlastingen er fullf\u00f8rt"
+  },
+  "optItemNotifyLargePreview": {
+    "message": "Vis stor forh\u00e5ndsvisning for bilder"
+  },
+  "optItemNotifyOneClick": {
+    "message": "Vis varsel n\u00e5r du legger til Ett-Klikks nedlasting"
+  },
+  "optItemNotifyProgress": {
+    "message": "Vis nedlastingsfremdrift"
+  },
+  "optItemOverrideChrome": {
+    "message": "Overstyr Chromes opprinnelige nedlastingsside og aktiver $1 tastatursnarvei"
+  },
+  "optItemPopClearClose": {
+    "message": "Lukk Sprettopp etter sletting av oppgaver"
+  },
+  "optItemPopDeleteAction": {
+    "message": "Klikk \"Slett\"-knappen"
+  },
+  "optItemPopLikeButtons": {
+    "message": "Vis sosiale media-knapper"
+  },
+  "optItemPopMaxItems": {
+    "message": "Maksimalt antall elementer i nedlastingslisten"
+  },
+  "optItemPopShowDLFirst": {
+    "message": "Vis nedlastingsoppgaver f\u00f8rst"
+  },
+  "optItemPreviewAutoplay": {
+    "message": "Autoavspilling"
+  },
+  "optItemRecycleCancel": {
+    "message": "Avbryt oppgaven n\u00e5r den blir slettet"
+  },
+  "optItemRuleMatchMode": {
+    "message": "Modus for fullf\u00f8ring av samsvar"
+  },
+  "optItemSlideDetailsPanel": {
+    "message": "Skyv inn Detaljer Panel n\u00e5r du klikker p\u00e5 oppgave"
+  },
+  "optItemSoundError": {
+    "message": "Spill lyd n\u00e5r det oppst\u00e5r feil"
+  },
+  "optItemSoundFinish": {
+    "message": "Spill lyd n\u00e5r nedlastingen er fullf\u00f8rt"
+  },
+  "optItemStartInterrupted": {
+    "message": "Start-knapp kan starte mislyktes oppgaver"
+  },
+  "optOptionClearAllNotify": {
+    "message": "Fjern alle varsler"
+  },
+  "optOptionClearNotify": {
+    "message": "Fjern varselet"
+  },
+  "optOptionDoNothing": {
+    "message": "Ikke gj\u00f8r noe"
+  },
+  "optOptionFirstMatch": {
+    "message": "F\u00f8rste treff"
+  },
+  "optOptionOpenFile": {
+    "message": "\u00c5pne fil"
+  },
+  "optOptionOpenFolder": {
+    "message": "\u00c5pne mappen"
+  },
+  "optOptionOverwrite": {
+    "message": "Overskriv"
+  },
+  "optOptionPrompt": {
+    "message": "Sp\u00f8r"
+  },
+  "optOptionRemAsk": {
+    "message": "Sp\u00f8r"
+  },
+  "optOptionRemFile": {
+    "message": "Slett fra disk uten bekreftelse"
+  },
+  "optOptionRemList": {
+    "message": "Fjern fra listen"
+  },
+  "optOptionReplace": {
+    "message": "Erstatt"
+  },
+  "optOptionSkipCancel": {
+    "message": "Avbryt nedlastingen"
+  },
+  "optOptionSkipPause": {
+    "message": "Pause i nedlastingen"
+  },
+  "optOptionStartPause": {
+    "message": "Start eller pause"
+  },
+  "optOptionUniquify": {
+    "message": "Unikifiser"
+  },
+  "optSectionBehaviors": {
+    "message": "Funksjonalitet"
+  },
+  "optSectionMenu": {
+    "message": "Meny"
+  },
+  "optSectionMisc": {
+    "message": "Diverse"
+  },
+  "optSectionNetwork": {
+    "message": "Nettverk"
+  },
+  "optSectionNotifications": {
+    "message": "Varsler"
+  },
+  "optSectionOneClick": {
+    "message": "Ett-klikk Nedlasting"
+  },
+  "optSectionPopup": {
+    "message": "Forgrunnsvindu"
+  },
+  "optSectionPreview": {
+    "message": "Forh\u00e5ndsvisning"
+  },
+  "optSectionTaskDefaults": {
+    "message": "Ny oppgave Standarder"
+  },
+  "optionAddTop": {
+    "message": "Legg til f\u00f8rst i k\u00f8en"
+  },
+  "optionDisableExtFilters": {
+    "message": "Deaktiver utvidelsesfiltre"
+  },
+  "optionDontAsk": {
+    "message": "Husk valget mitt"
+  },
+  "optionSearchCaseSensitive": {
+    "message": "Skiller mellom store og sm\u00e5 bokstaver"
+  },
+  "optionSearchFuzzyMatch": {
+    "message": "Delvis treff"
+  },
+  "optionShowSize": {
+    "message": "Vis filst\u00f8rrelsen"
+  },
+  "optionTableAutoResize": {
+    "message": "Tvingetilpass kolonner"
+  },
+  "optionTableSyncResize": {
+    "message": "Synkron st\u00f8rrelsesendring"
+  },
+  "phraseAutomatic": {
+    "message": "Automatisk"
+  },
+  "phraseEnable": {
+    "message": "Sl\u00e5 p\u00e5"
+  },
+  "phraseMultiValues": {
+    "message": "Flere verdier"
+  },
+  "phraseNever": {
+    "message": "Aldri"
+  },
+  "phrasePreview": {
+    "message": "Se forh\u00e5ndsvisning"
+  },
+  "phraseRegex": {
+    "message": "Regul\u00e6rt uttrykk"
+  },
+  "phraseToday": {
+    "message": "I dag"
+  },
+  "phraseUnknown": {
+    "message": "Ukjent"
+  },
+  "phraseUnknownSize": {
+    "message": "Ukjent st\u00f8rrelse"
+  },
+  "phraseVersion": {
+    "message": "Versjon"
+  },
+  "phraseYesterday": {
+    "message": "I g\u00e5r"
+  },
+  "ruleAllTasks": {
+    "message": "Alle oppgaver"
+  },
+  "ruleAudio": {
+    "message": "Lyd"
+  },
+  "ruleDocument": {
+    "message": "Dokument"
+  },
+  "ruleDownloading": {
+    "message": "Laster ned"
+  },
+  "ruleFinished": {
+    "message": "Fullf\u00f8rt"
+  },
+  "ruleImage": {
+    "message": "Bilde"
+  },
+  "ruleInterrupted": {
+    "message": "Mislyktes"
+  },
+  "ruleNew": {
+    "message": "Ny regel"
+  },
+  "ruleOther": {
+    "message": "Annet"
+  },
+  "ruleRecent": {
+    "message": "Nylig"
+  },
+  "ruleRecycled": {
+    "message": "Papirkurv"
+  },
+  "ruleSmallFiles": {
+    "message": "Sm\u00e5 filer"
+  },
+  "ruleVideo": {
+    "message": "Video"
+  },
+  "stateDownloading": {
+    "message": "Laster ned"
+  },
+  "stateError": {
+    "message": "Mislyktes"
+  },
+  "stateFileMiss": {
+    "message": "Fil mangler"
+  },
+  "stateFinished": {
+    "message": "Fullf\u00f8rt"
+  },
+  "statePaused": {
+    "message": "Pauset"
+  },
+  "stateQueue": {
+    "message": "Venter"
+  },
+  "statusCopyURL": {
+    "message": "Kopierer URL..."
+  },
+  "statusCopyURLDone": {
+    "message": "Nettadressen er kopiert til utklippstavlen"
+  },
+  "statusDownloadedSize": {
+    "message": "$1 av $2"
+  },
+  "statusImportDone": {
+    "message": "Import fullf\u00f8rt"
+  },
+  "statusImporting": {
+    "message": "Importerer ..."
+  },
+  "statusNumDownloading": {
+    "message": "$1 laster ned"
+  },
+  "statusNumItems": {
+    "message": "$1 elementer"
+  },
+  "statusReadClipboard": {
+    "message": "Leser utklippstavlen..."
+  },
+  "statusScheduledAutoClear": {
+    "message": "Automatisk sletting av oppgaver vil kj\u00f8re om $1 sekunder"
+  },
+  "statusSelectedOf": {
+    "message": "$1 elementer er valgt"
+  },
+  "statusTasksCleared": {
+    "message": "$1 elementer ble fjernet"
+  },
+  "statusTimeLeft": {
+    "message": "$1 gjenst\u00e5r"
+  },
+  "tipAutoClear": {
+    "message": "Fjern automatisk oppgaver fra listen, men behold filer p\u00e5 disken"
+  },
+  "tipBGBlur": {
+    "message": "Sl\u00f8ringseffekt kan redusere GUI responderingsevne"
+  },
+  "tipBGEnable": {
+    "message": "P\u00e5 grunn av visse egenskaper ved Chrome, vil aktivering av bakgrunn \u00f8ke minnebruken mye, ha dette i bakhodet f\u00f8r du aktiverer denne funksjonen."
+  },
+  "tipBGURLHasFileAccess": {
+    "message": "Skriv inn en URL p\u00e5 web, eller hele stien til et bilde p\u00e5 datamaskinen med prefiks 'file:///'"
+  },
+  "tipBGURLNoFileAccess": {
+    "message": "Skriv inn en URL p\u00e5 web, eller hele stien til et bilde p\u00e5 datamaskinen (for lokal fil m\u00e5 du aktivere filtilgang for Chrono f\u00f8rst - klikk p\u00e5 sp\u00f8rsm\u00e5lstegnet for \u00e5 se hvordan)"
+  },
+  "tipBrowserAction": {
+    "message": "Last ned alle ressursene p\u00e5 denne siden"
+  },
+  "tipBtnBackToManager": {
+    "message": "Tilbake til Administrator"
+  },
+  "tipBtnChangeDefaultLocation": {
+    "message": "Bytt m\u00e5lmappe"
+  },
+  "tipBtnClear": {
+    "message": "Fjern"
+  },
+  "tipBtnConfigExtFilters": {
+    "message": "Rediger filtre"
+  },
+  "tipBtnCopyLink": {
+    "message": "Kopi\u00e9r linken"
+  },
+  "tipBtnDelete": {
+    "message": "Slett"
+  },
+  "tipBtnHelp": {
+    "message": "Hjelp"
+  },
+  "tipBtnNewTask": {
+    "message": "Ny oppgave"
+  },
+  "tipBtnOpenDefaultLocation": {
+    "message": "\u00c5pne nedlastingsmappen"
+  },
+  "tipBtnOpenFile": {
+    "message": "\u00c5pne fil"
+  },
+  "tipBtnOpenFolder": {
+    "message": "\u00c5pne mappen"
+  },
+  "tipBtnOptions": {
+    "message": "Alternativer"
+  },
+  "tipBtnPause": {
+    "message": "Pause"
+  },
+  "tipBtnPauseAll": {
+    "message": "Pause alle"
+  },
+  "tipBtnPopList": {
+    "message": "Bytt til nedlastingsliste"
+  },
+  "tipBtnPopSniffer": {
+    "message": "Bytt til Sniffer"
+  },
+  "tipBtnRecycle": {
+    "message": "Flytt til papirkurven"
+  },
+  "tipBtnRestart": {
+    "message": "Start p\u00e5 nytt"
+  },
+  "tipBtnRestore": {
+    "message": "Gjenopprett"
+  },
+  "tipBtnSort": {
+    "message": "Sortere oppgaver"
+  },
+  "tipBtnStart": {
+    "message": "Start"
+  },
+  "tipBtnStartAll": {
+    "message": "Start alle"
+  },
+  "tipExtFilterEnable": {
+    "message": "Aktivert som fil-endings-filter i Chrono Sniffer"
+  },
+  "tipExtFilterRefName": {
+    "message": "Internt navn for \u00e5 referere filteret i andre uttrykk"
+  },
+  "tipNaming": {
+    "message": "Vennligst referer til hjelpesiden for bruk av Navngivings-regler."
+  },
+  "tipOptItemRuleMatchMode": {
+    "message": "V\u00e6r oppmerksom p\u00e5 at bare aktive Regler er brukt for sammenligning. I Erstatt-modus, blir alle samsvarende Regler benyttet, men senere regler vil overskrive tidligere funn."
+  },
+  "tipOptItemSlideDetailsPanel": {
+    "message": "Du kan ogs\u00e5 Alt+klikke oppgaven for \u00e5 \u00e5pne Detaljer Panelet"
+  },
+  "tipOptNoRuleMatch": {
+    "message": "Brukes n\u00e5r ingen regel samsvarer"
+  },
+  "tipOptSectionOneClick": {
+    "message": "Dersom aktivert, vil nedlastingen starter umiddelbart n\u00e5r du klikker p\u00e5 en lenke, og bruke standard innstillinger for handlingen(se ovenfor), uten \u00e5 vise en dialog for \u00e5 sette Navningsregel osv."
+  },
+  "tipOptSectionTaskDefaults": {
+    "message": "Standard innstillinger som skal brukes n\u00e5r du legger til nye oppgaver, for eksempel gjeldende for Ett-klikk nedlastinger"
+  },
+  "tipRulesActive": {
+    "message": "Bare aktive regler vil bli brukt til Regel-sammenligning"
+  },
+  "tipRulesAsFilter": {
+    "message": "Vis som oppgaverfilter i Nedlastingsbehandler"
+  },
+  "tipRulesRefName": {
+    "message": "Internt navn for \u00e5 referere regelen i andre uttrykk"
+  },
+  "tipURL": {
+    "message": "Du kan legge inn flere webadresser atskilt med ny-linje-tegn; du kan starte samlenedlastinger ved hjelp av Bunt-Beskrivelser."
+  },
+  "tipmsgCopySelectedURLs": {
+    "message": "Du kan enkelt trykke $1 for \u00e5 kopiere URL-er av merkede oppgave(r)"
+  },
+  "tipmsgDoubleClick": {
+    "message": "Du kan endre dobbeltklikk oppf\u00f8rsel under $1"
+  },
+  "tipmsgFitColumnWidth": {
+    "message": "Dobbeltklikk p\u00e5 kolonnen for \u00e5 justere kolonnebredden automatisk"
+  },
+  "tipmsgGridSelection": {
+    "message": "Bruk Ctrl/Shift for \u00e5 velge flere rader, eller trykk $1 for \u00e5 velge alle radene"
+  },
+  "tipmsgNotifications": {
+    "message": "Du kan endre varslinger/lydinnstillinger under $1"
+  },
+  "tipmsgOpenShortcut": {
+    "message": "Den enkleste m\u00e5ten \u00e5 \u00e5pne $1 er \u00e5 trykke $2"
+  },
+  "tipmsgSlideDetailsPanel": {
+    "message": "Den glidende Detaljer Panelet kan sl\u00e5s av under $1"
+  },
+  "tipmsgTaskFilter": {
+    "message": "Dra for \u00e5 endre rekkef\u00f8lgen p\u00e5 Oppgavefilter; du kan ogs\u00e5 legge til dine egne Oppgavefilter under $1"
+  },
+  "titleChangeBG": {
+    "message": "Endre bakgrunn"
+  },
+  "titleNewTaskDialog": {
+    "message": "Ny oppgave"
+  },
+  "titleOptions": {
+    "message": "Alternativer"
+  },
+  "titleOptionsAbout": {
+    "message": "Info"
+  },
+  "titleOptionsFilter": {
+    "message": "Filtre"
+  },
+  "titleOptionsGeneral": {
+    "message": "Generelt"
+  },
+  "titleOptionsHelp": {
+    "message": "Hjelp"
+  },
+  "titleOptionsInterface": {
+    "message": "Brukergrensesnitt"
+  },
+  "titleOptionsRules": {
+    "message": "Regelsystem"
+  },
+  "titleQuickSelection": {
+    "message": "Hurtigvalg"
+  },
+  "titleRateShare": {
+    "message": "Ranger og del!"
+  },
+  "titleSniffer": {
+    "message": "Sniffer"
+  },
+  "titleSwitchUI": {
+    "message": "Bytt visningsmodus"
+  },
+  "titleTaskProps": {
+    "message": "Oppgaveegenskaper"
+  },
+  "titleTips": {
+    "message": "Tips"
+  },
+  "titleUpdateLog": {
+    "message": "Endringslogg"
+  },
+  "translateContributors": {
+    "message": "lindset"
+  },
+  "uilang": {
+    "message": "no"
+  },
+  "uilangName": {
+    "message": "Norwegian"
+  },
+  "unitBytes": {
+    "message": "$1 byte"
+  },
+  "unitDay": {
+    "message": "$1 dag"
+  },
+  "unitDays": {
+    "message": "$1 dager"
+  },
+  "unitHour": {
+    "message": "$1 time"
+  },
+  "unitHours": {
+    "message": "$1 timer"
+  },
+  "unitMinute": {
+    "message": "$1 min."
+  },
+  "unitMinutes": {
+    "message": "$1 min"
+  },
+  "unitSecond": {
+    "message": "$1 sek."
+  },
+  "unitSeconds": {
+    "message": "$1 sek"
+  }
+}

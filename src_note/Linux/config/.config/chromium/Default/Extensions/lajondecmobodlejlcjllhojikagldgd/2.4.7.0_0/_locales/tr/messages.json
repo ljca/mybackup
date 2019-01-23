@@ -1,0 +1,359 @@
+{
+   "about": {
+      "message": "Hakkında"
+   },
+   "advancedoptions": {
+      "message": "Gelişmiş Seçenekler"
+   },
+   "areyouhappy": {
+      "message": "Zoom hoşunuza gitti mi?"
+   },
+   "basicsettings": {
+      "message": "Öğeler"
+   },
+   "btnreset": {
+      "message": "Sıfırla"
+   },
+   "changelog": {
+      "message": "Değişim Günlüğü"
+   },
+   "desallscreen": {
+      "message": "For all screen sizes"
+   },
+   "desallzoom": {
+      "message": "Tüm sayfalara aynı seviyede yakınlaştırma uygula."
+   },
+   "desbadge": {
+      "message": "Zoom Eklentiler simgesinde mevcut yakınlaştırma değerini göster"
+   },
+   "desbrowserextension": {
+      "message": "tarayıcı uzantısı"
+   },
+   "descontextmenu": {
+      "message": "Web sayfasında yakınlaşıp uzaklaşmak için sağ tık menüsünü etkinleştirin"
+   },
+   "description": {
+      "message": "Zoom, İnternet içinde veya dışında bir şeyleri rahatça okumanız için yazılar üzerinde yeterli yakınlaştırmayı sağlar."
+   },
+   "desdefaultzoomvalue": {
+      "message": "Varsayılan yakınlaştırma seviyesini seçin"
+   },
+   "deslargepopup": {
+      "message": "Show you a large popup window"
+   },
+   "desproject": {
+      "message": "proje"
+   },
+   "desrememberpage": {
+      "message": "Bu seçeneği etkinleştirirseniz, hatırlanan sayfalarınız görüntülenmeyecektir."
+   },
+   "desremfacebook": {
+      "message": "Recommend this on Facebook"
+   },
+   "desremyoutube": {
+      "message": "Subscribe on YouTube"
+   },
+   "dessinglescreen": {
+      "message": "For that screen size"
+   },
+   "deszoombydomain": {
+      "message": "Zoom at domain level"
+   },
+   "deszoombypage": {
+      "message": "Zoom at web page level"
+   },
+   "deszoomchrome": {
+      "message": "Gömülü tarayıcı yakınlaştırmasını kullanın"
+   },
+   "deszoomdoubleclick": {
+      "message": "Enable the option for double click to zooms in and a single click to zooms out the web page"
+   },
+   "deszoommousedirectiondown": {
+      "message": "Clockwise scroll"
+   },
+   "deszoommousedirectionup": {
+      "message": "Counter clockwise scroll"
+   },
+   "deszoommouseleft": {
+      "message": "Left mouse click"
+   },
+   "deszoommouseright": {
+      "message": "Right mouse click"
+   },
+   "deszoommousescroll": {
+      "message": "Hold the 'mouse button', and scroll up or down to change the zoom level"
+   },
+   "deszoomsteps": {
+      "message": "Sonraki değer için yakınlaştırma adımları"
+   },
+   "deszoomweb": {
+      "message": "Web CSS yakınlaştırmasını kullanın"
+   },
+   "donatecalltoaction": {
+      "message": "Şimdi Bağış Yapın!"
+   },
+   "donatepromotext": {
+      "message": "Ufakta olsa bir bağış yapabilirseniz, cidden çok memnun olurum!"
+   },
+   "donatetext": {
+      "message": "Bağış miktarının az olmasından dolayı proje kapanabilir. Lütfen Bağışla sonraki geliştirmeleri destekleyin."
+   },
+   "enjoyshare": {
+      "message": "Bu eklenti hoşunuza gittiyse, kullanmaktan zevk alacak kişilerle de paylaşın."
+   },
+   "friendlyremember": {
+      "message": "Dostça Hatırla..."
+   },
+   "guide": {
+      "message": "Z Hoşgeldiniz Rehberi"
+   },
+   "help": {
+      "message": "Yardım"
+   },
+   "lastchecked": {
+      "message": "En son sürüm kontrol edildi"
+   },
+   "longdonatetext": {
+      "message": "Bu eklentiyi ayakta tutmam ve sonraki kullanıcıların bunu görmesi için bağış yaparsanız çok memnun kalırım. 1$$ ya da 100$$ olması fark etmez, her türlü makbule geçer!"
+   },
+   "name": {
+      "message": "Zoom"
+   },
+   "namechrome": {
+      "message": "Zoom for Google Chrome"
+   },
+   "nameedge": {
+      "message": "Zoom for Microsoft Edge"
+   },
+   "namefirefox": {
+      "message": "Zoom for Firefox"
+   },
+   "nameopera": {
+      "message": "Zoom for Opera"
+   },
+   "namesafari": {
+      "message": "Zoom for Safari"
+   },
+   "nothanks": {
+      "message": "Hayır teşekkürler"
+   },
+   "optionpagetitle": {
+      "message": "Zoom - Seçenekler"
+   },
+   "pageatitle": {
+      "message": "Zoom"
+   },
+   "pagehelp": {
+      "message": "yardım"
+   },
+   "pagestillloading": {
+      "message": "Bu sayfa hala yükleniyor mu?"
+   },
+   "productshare": {
+      "message": "Paylaş"
+   },
+   "promocalltoaction": {
+      "message": "Şimdi İndirin!"
+   },
+   "promotext": {
+      "message": "Web tarayıcınız için yeni ve muazzam bir şey kullanmak ister misiniz? $product$ Tarayıcı eklentisini deneyin.",
+      "placeholders": {
+         "product": {
+            "content": "$1",
+            "example": "Turn Off the Lights"
+         }
+      }
+   },
+   "promotitle": {
+      "message": "Günün İpucu"
+   },
+   "ratedes": {
+      "message": "Ve bu güzel eklentiyi herkese bildirin!"
+   },
+   "rateitema": {
+      "message": "5 yıldızla oyla"
+   },
+   "ratetitle": {
+      "message": "Lütfen eklentilerimi eleştirin ve oylayın"
+   },
+   "rememberrate": {
+      "message": "Oy"
+   },
+   "reportbug": {
+      "message": "Sorunlarınızı Bildirin"
+   },
+   "resetbrowserextension": {
+      "message": "Zoom ayarlarını sıfırla"
+   },
+   "screenzoomvalue": {
+      "message": "Zoom value in percent (e.g. 80%)"
+   },
+   "settings": {
+      "message": "Ayarlar"
+   },
+   "sharemenudonatetitle": {
+      "message": "Geliştirmelere Destek Ol"
+   },
+   "sharemenupostonfacebook": {
+      "message": "Facebook'ta Yayınla"
+   },
+   "sharemenupostongoogleplus": {
+      "message": "Google+ ile yolla"
+   },
+   "sharemenuratetitle": {
+      "message": "Eklentileri oyla"
+   },
+   "sharemenusendatweet": {
+      "message": "Tweetle"
+   },
+   "sharemenusharetitle": {
+      "message": "Bunu paylaş"
+   },
+   "sharemenutellafriend": {
+      "message": "Arkadaşlarına bildir"
+   },
+   "sharemenuwelcomeguidetitle": {
+      "message": "Hoşgeldiniz Rehberi"
+   },
+   "showremember": {
+      "message": "Seçenekler sekmesini açtığınız zaman, Hatırlanan Sayfalarınız gözükmeyecektir."
+   },
+   "skipremember": {
+      "message": "Bu adımı geç ve seçenekler sayfasını aç"
+   },
+   "tellothers": {
+      "message": "Görüşlerinizi emniyete alır"
+   },
+   "textfoot": {
+      "message": "Bu yazılım CC-GNU GPL lisanslıdır. Bu lisansın bir kopyasını görüntülemek için ziyaret edin"
+   },
+   "titeladd": {
+      "message": "Add"
+   },
+   "titelallzoom": {
+      "message": "Tümünü Yakınlaştı/Uzaklaştır"
+   },
+   "titelbadge": {
+      "message": "Rozet"
+   },
+   "titelbadgecolor": {
+      "message": "Arkaplan rozet renginizi seçin"
+   },
+   "titelcontextmenu": {
+      "message": "Kaynak Menüsü"
+   },
+   "titeldefaultzoomvalue": {
+      "message": "Varsayılan Yakınlaştırma Seviyesi"
+   },
+   "titeldeveloper": {
+      "message": "Geliştirici"
+   },
+   "titeldownloadaaupgrade": {
+      "message": "Bu güncelleme seçilen resimlere odak eklemeyi sağlar ve sitede bir resim galerisinde gösterecektir."
+   },
+   "titeldownloadbutton": {
+      "message": "Güncelleştirmeyi İndir!"
+   },
+   "titeldownloadupgrade": {
+      "message": "Sayfanın tamamını karartarak, sizlere sanki sinemadaymış gibi bir görüntü sağlar."
+   },
+   "titeldownloadupgradedatetoday": {
+      "message": "Bu eklenti menü çubuğunda analog saat gösterir. Simgeye tıkladığınız zaman şu anki saati, ayı ve günü gösterir."
+   },
+   "titeldownloadupgradefinancetoolbar": {
+      "message": "Bu seçenek size eş zamanlı borsa bilgilerini gösterir."
+   },
+   "titeldownloadupgradefullscreen": {
+      "message": "Bu uzantı ile kolayca tam ekrana geçebilirsin. Bu özellik resim, video ve web sayfası içindir."
+   },
+   "titeldownloadupgradepropermenubar": {
+      "message": "Siyah menüçubuğunu Google İnternet sitesine geri ekler."
+   },
+   "titellargepopup": {
+      "message": "Large window"
+   },
+   "titelrememberpage": {
+      "message": "Sayfayı hatırla"
+   },
+   "titelremove": {
+      "message": "Remove"
+   },
+   "titelreset": {
+      "message": "Ayarları sıfırla"
+   },
+   "titelrightsreserved": {
+      "message": "Bazı hakları gizlidir."
+   },
+   "titelscreen": {
+      "message": "Screen size"
+   },
+   "titelscreendetect": {
+      "message": "Detect screen size"
+   },
+   "titelsharebutton": {
+      "message": "Paylaşım Tuşları"
+   },
+   "titelsharethis": {
+      "message": "Bunu paylaş:"
+   },
+   "titelsync": {
+      "message": "Senkronize et"
+   },
+   "titelsyncbrowser": {
+      "message": "Uzantı ayarlarınızı diğer tarayıcılarınızlada senkronize edin."
+   },
+   "titelupgrade": {
+      "message": "Yükselt"
+   },
+   "titelwebsite": {
+      "message": "İnternet sitesi"
+   },
+   "titelwelcome": {
+      "message": "Merhaba ve Hoşgeldiniz"
+   },
+   "titelzoomdoubleclick": {
+      "message": "Button action"
+   },
+   "titelzoomengine": {
+      "message": "Zoom Motoru"
+   },
+   "titelzoommousescroll": {
+      "message": "Mouse Wheel"
+   },
+   "titelzoomsteps": {
+      "message": "Adımlar"
+   },
+   "titledonatebutton": {
+      "message": "Bağış"
+   },
+   "titleshortzoomin": {
+      "message": "Zoom in on the current web page"
+   },
+   "titleshortzoomout": {
+      "message": "Zoom out on the current web page"
+   },
+   "titleshortzoomreset": {
+      "message": "Reset the zoom value on the current web page"
+   },
+   "translateme": {
+      "message": "Yerelleştirmede Yardımcı Ol"
+   },
+   "upgradefbshare": {
+      "message": "Facebook üzerinden paylaş"
+   },
+   "upgradetwshare": {
+      "message": "Tweetle"
+   },
+   "version": {
+      "message": "Sürüm"
+   },
+   "websitezoomvalue": {
+      "message": "Yüzdelik yakınlaştırma değer (ör. %80)"
+   },
+   "welcomebasictext": {
+      "message": "Zoom Tarayıcı eklentisine hoşgeldiniz. Web tarayıcınızda Zoom eklentisini nasıl kullanacağınızı anlatan bir video bulunmaktadır."
+   },
+   "writeareview": {
+      "message": "Eleştirini yaz"
+   }
+}

@@ -1,0 +1,14 @@
+if(g:isGUI)
+  "Set_Window
+  set noerrorbells vb t_vb=
+  autocmd GUIEnter * set vb t_vb=
+  autocmd GUIEnter * simalt ~x 
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=m
+  set mouse=a
+  set selection=exclusive
+  set selectmode=mouse,key
+  set report=0
+endif

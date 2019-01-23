@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="MountItem__home" mtime="1539653696" type="int" value="0"/>
+	<entry name="MountItem__boot_efi" mtime="1539653696" type="int" value="0"/>
+	<entry name="MountItem__" mtime="1539653696" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C026_5D" mtime="1537974806" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C023_5D" mtime="1537974643" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C014_5D" mtime="1537974381" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_ftp_host_192_168_43_1_port_3721" mtime="1537691061" type="int" value="0"/>
+	<entry name="MountItem__home_user_Kyzs_VirtualBoxVMs_Gentoo_tmp" mtime="1536197383" type="int" value="0"/>
+	<entry name="MountItem__media_Others_iso_tmp" mtime="1536122049" type="int" value="0"/>
+	<entry name="MountItem__home_user_Kyzs_VirtualBoxVMs_centos7_tmp" mtime="1536119923" type="int" value="0"/>
+	<entry name="MountItem__home_user_Kyzs_VirtualBox_VMs_centos7_tmp" mtime="1536117882" type="int" value="0"/>
+	<entry name="MountItem__run_media_kyzs_backup" mtime="1537690501" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C002_5D" mtime="1532222219" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C027_5D" mtime="1527417059" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C008_5D" mtime="1526806887" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C006_5D" mtime="1532222248" type="int" value="0"/>
+	<entry name="MountItem__run_media_kyzs_LIN" mtime="1537690849" type="int" value="0"/>
+	<entry name="MountItem__media_tmp" mtime="1539531656" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C010_5D" mtime="1525594273" type="int" value="0"/>
+	<entry name="MountItem__media_Applications" mtime="1539945416" type="int" value="0"/>
+	<entry name="MountItem__run_user_996_gvfs_mtp_host__5Busb_3A001_2C009_5D" mtime="1525590547" type="int" value="0"/>
+	<entry name="MountItem__run_media_kyzs_______" mtime="1539765839" type="int" value="0"/>
+	<entry name="MountItem__media_Others" mtime="1539928022" type="int" value="0"/>
+	<entry name="GMailDockItem_Inbox" mtime="1539928022" type="int" value="0"/>
+	<entry name="DockyItem" mtime="1539928021" type="int" value="8"/>
+</gconf>

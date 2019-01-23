@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "Short description for the extension",
+      "message": "从浏览器工具栏上直接打开Chrono下载管理器"
+   },
+   "extName": {
+      "description": "Extension name",
+      "message": "Chrono管理器-工具栏按钮"
+   }
+}

@@ -1,0 +1,10 @@
+[Configuration]
+LastActiveMode=THUNAR_RENAMER_MODE_SUFFIX
+LastActiveRenamer=ThunarSbrReplaceRenamer
+
+[ThunarSbrReplaceRenamer]
+Regexp=FALSE
+Replacement=avi
+CaseSensitive=FALSE
+Pattern=amv
+

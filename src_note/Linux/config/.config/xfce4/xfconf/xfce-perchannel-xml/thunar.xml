@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="thunar" version="1.0">
+  <property name="last-view" type="string" value="ThunarIconView"/>
+  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_LARGEST"/>
+  <property name="last-window-width" type="int" value="1641"/>
+  <property name="last-window-height" type="int" value="649"/>
+  <property name="last-window-maximized" type="bool" value="true"/>
+  <property name="last-separator-position" type="int" value="189"/>
+  <property name="misc-single-click" type="bool" value="true"/>
+  <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_NORMAL"/>
+  <property name="last-show-hidden" type="bool" value="true"/>
+  <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
+  <property name="hidden-devices" type="array">
+    <value type="string" value="E2D09041D0901DBB"/>
+    <value type="string" value="efi"/>
+    <value type="string" value="文件系统根目录"/>
+  </property>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
+</channel>

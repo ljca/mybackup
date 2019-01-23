@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>Chrono - New Task</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript" src="../libs/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="taskdlg.min.js"></script>
+<link rel="stylesheet" type="text/css" href="taskdlg.min.css">
+
+</head>
+<body class="chrome-bootstrap unselectable">
+    <div class="overlay">
+    <div class="page">
+        <h1 style="text-align: center;height: 1.4em;line-height: 1.4em;padding-top: 20px;">
+            <span i18n-text="titleNewTaskDialog">New Task</span>
+            <a class="close-button"></a>
+        </h1>
+        <div class="content-area" style="overflow: visible;"> 
+            <form class="dy_new_task_dlg">
+            <table>
+                <tr>
+                    <td class="dy_field_label">
+                        <span i18n-text="fieldURL">URL</span>
+                        <span id="tip-batch_desc" class="simptip-position-right clickable" i18n-tooltip="tipURL"></span>
+                    </td>
+                    <td>
+                        <textarea rows=1 name="url"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dy_field_label">
+                        <span i18n-text="fieldNaming">Naming Mask</span>
+                        <span id="tip-naming_mask" class="simptip-position-right clickable" i18n-tooltip="tipNaming"></span>
+                    </td>
+                    <td>
+                        <input type="text" name="naming" list="naming_history"/>
+                        <datalist id="naming_history">
+                        </datalist>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dy_field_label" i18n-text="fieldReferer">
+                        Referer
+                    </td>
+                    <td>
+                        <input type="text" name="referer" />
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dy_field_label" i18n-text="fieldRemarks">
+                        Remarks
+                    </td>
+                    <td>
+                        <textarea name="desc"></textarea>
+                        <input type="hidden" name="title"/>
+                        <input type="hidden" name="text"/>
+                    </td>
+                </tr>
+            </table>
+            <div style="margin-right: 5px; margin-top: 10px; text-align: right">
+                <label>
+                    <span style="margin-right: 5px" i18n-text="optionAddTop">Add to top of the list</span>
+                    <input type="checkbox" name="addtop">
+                </label>
+            </div>
+            </form>
+			<div id="error_msg">              
+            </div>
+        </div>
+        <div class="action-area" style="padding:9px 17px 14px 17px">
+            <div class="action-area-right">
+                <div class="button-strip">
+                    <button class="dlg_start_btn" i18n-text="btnStart">
+                        Start!</button>
+                    <button class="dlg_apause_btn" i18n-text="btnAddPaused">
+                        Add Paused</button>
+                    <button class="dlg_cancel_btn" i18n-text="btnCancel">
+                        Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

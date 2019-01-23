@@ -1,0 +1,100 @@
+string
+re.findall("C#",string,re.I)
+re.findall("C#",string)
+re.findall("C#",string,re.S)
+string
+string = string.lower()
+string
+string = string.upper()
+string
+re.sub("[ ]","",string)
+string
+string=re.sub("[ ]","",string)
+string
+string=re.sub("[#]","^",string)
+string
+re.findall("\W"*",string)
+re.findall("\W*",string)
+re.findall("\W{0,5}",string)
+del string
+del re
+help(str)
+help(list)
+help(tuple)
+help(int)
+help(str)
+help(bool)
+help(set)
+help(setatt)
+help(setattr)
+help(ord)
+ord('\c')
+ord('c')
+ord('C')
+ord('我')
+help(float)
+help(int)
+import re
+string="Javac#phpc#phpc#perl"
+def convert(value):
+    matched = value.group()
+    return "!!" + matched + "!!"
+r = re.sub("c#",convert,string)
+print(r)
+help(match)
+import re
+help(match)
+help(re.match)
+help(re.search)
+help(re.match)
+help(re.span)
+help(str.span)
+help(str().span)
+string="clso"
+string.span
+help(string.span)
+ipmort os
+import os
+os.environ.get("PATH")
+os.environ.get("SHELL")
+os.environ.get("OSTYPE")
+os.environ.get("OSTYPE")
+import site
+site.getusersitepackages()
+site.getsitepackages()
+import os
+os.getcwd()
+os.getgid()
+os.getuid()
+os.getpid()
+os.get_exec_path()
+os.get_terminal_size
+os.get_terminal_size()
+os.getenv("$HOME")
+os.getenv(HOME)
+os.getenv("OSTYPE")
+os.getenv("PATH")
+os.getenv("COLUMNS")
+os.get_terminal_size()
+del os
+import os
+os.getenv("HOME")
+from urllib import request
+r = request.urlopen("https://www.panda.tv/cate/lol")
+r = request.urlopen("https://www.panda.tv/cate/lol")
+r = request.urlopen("https://www.panda.tv/cate/lol")
+r = request.urlopen("https://www.panda.tv/cate/lol")
+r = request.urlopen("https://www.panda.tv/cate/lol")
+from  urllib import requests
+from  urllib import request
+r = request.urlopen("https://www.panda.tv/cate/lol")
+htmls = r.read()
+type(r)
+type(htmls)
+print(r)
+print(r.read())
+print(htmls)
+htmls = str(htmls,encoding='utf-8')
+print(type(htmls))
+print(htmls)
+import re

@@ -1,0 +1,798 @@
+{
+  "3pListsOfBlockedHostsPerListStats": {
+    "message": "Empregados {{used}} de {{total}}", 
+    "description": "Appears aside each filter list in the _3rd-party filters_ pane"
+  }, 
+  "1pApplyChanges": {
+    "message": "Aplicar cambios", 
+    "description": "English: Apply changes"
+  }, 
+  "popupPowerSwitchInfo": {
+    "message": "Click: desactivar/activar o uBlock₀ neste sitio.\n\nCtrl+click: desactivar o Block₀ só nesta páxina.", 
+    "description": "English: Click: disable/enable uBlock₀ for this site.\n\nCtrl+click: disable uBlock₀ only on this page."
+  }, 
+  "whitelistPageName": {
+    "message": "Lista branca", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "1pExport": {
+    "message": "Exportar", 
+    "description": "English: Export"
+  }, 
+  "3pIgnoreGenericCosmeticFilters": {
+    "message": "Ignorar os filtros cosméticos xenéricos", 
+    "description": "This will cause uBO to ignore all generic cosmetic filters."
+  }, 
+  "settingsIconBadgePrompt": {
+    "message": "Amosar o número de peticións bloqueadas no icono", 
+    "description": "English: Show the number of blocked requests on the icon"
+  }, 
+  "rulesEditDiscard": {
+    "message": "Descartar", 
+    "description": "Will discard manually-edited content and exit manual-edit mode"
+  }, 
+  "settingsColorBlindPrompt": {
+    "message": "Accesible para daltónicos", 
+    "description": "English: Color-blind friendly"
+  }, 
+  "logRequestsHeaderFilter": {
+    "message": "Filtro", 
+    "description": "English: Filter"
+  }, 
+  "dashboardName": {
+    "message": "uBlock₀ — Panel de control", 
+    "description": "English: uBlock₀ — Dashboard"
+  }, 
+  "logFilterPrompt": {
+    "message": "filtras as entradas de rexistro", 
+    "description": "English: filter log entries"
+  }, 
+  "errorCantConnectTo": {
+    "message": "Erro da rede: {{msg}}", 
+    "description": "English: Network error: {{msg}}"
+  }, 
+  "settingsNoCSPReportsPrompt": {
+    "message": "Bloquear reportes CSP", 
+    "description": "background information: https://github.com/gorhill/uBlock/issues/3150"
+  }, 
+  "3pPageName": {
+    "message": "Filtros de terceiros", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "loggerStaticFilteringFinderSentence1": {
+    "message": "Filtro estático <code>{{filter}}</code>atopado en:", 
+    "description": "Below this sentence, the filter list(s) in which the filter was found"
+  }, 
+  "popupTipNoCosmeticFiltering": {
+    "message": "Activar o filtrado cosmético nesta páxina", 
+    "description": "Tooltip for the no-cosmetic-filtering per-site switch"
+  }, 
+  "loggerStaticFilteringFinderSentence2": {
+    "message": "Non atopamos filtro estático <code>{{filter}}</code> en ningunha das listas de filtros activas", 
+    "description": "Message to show when a filter cannot be found in any filter lists"
+  }, 
+  "shortcutCapturePlaceholder": {
+    "message": "Introduce un atallo", 
+    "description": "Placeholder string for input field used to capture a keyboard shortcut"
+  }, 
+  "pickerCosmeticFiltersHint": {
+    "message": "Click, Ctrl-click", 
+    "description": "English: Click, Ctrl-click"
+  }, 
+  "settingsLastBackupPrompt": {
+    "message": "Última copia de seguridade:", 
+    "description": "English: Last backup:"
+  }, 
+  "aboutIssues": {
+    "message": "Seguimento de erros", 
+    "description": "Text for a link to official issue tracker"
+  }, 
+  "pickerCreate": {
+    "message": "Crear", 
+    "description": "English: Create"
+  }, 
+  "settingsPageName": {
+    "message": "Configuración", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "logMaxEntriesTip": {
+    "message": "Número máximo de entradas de rexistro", 
+    "description": "Tooltip informaing that the input field is to set the maximum number of entries in the log"
+  }, 
+  "aboutSupport": {
+    "message": "Asistencia", 
+    "description": "A link for where to get support"
+  }, 
+  "3pListsOfBlockedHostsHeader": {
+    "message": "Lista dos servidores bloqueados", 
+    "description": "English: Lists of blocked hosts"
+  }, 
+  "1pImport": {
+    "message": "Importar e anexar", 
+    "description": "English: Import and append"
+  }, 
+  "pickerCosmeticFilters": {
+    "message": "Filtros cosméticos", 
+    "description": "English: Cosmetic filters"
+  }, 
+  "3pGroupMultipurpose": {
+    "message": "Multipropósito", 
+    "description": "English: Multipurpose"
+  }, 
+  "popupOr": {
+    "message": "ou", 
+    "description": "English: or"
+  }, 
+  "pickerQuit": {
+    "message": "Saír", 
+    "description": "English: Quit"
+  }, 
+  "popupTipSaveRules": {
+    "message": "Fai click para gardar os cambios.", 
+    "description": "Tooltip when hovering over the padlock in the dynamic filtering pane."
+  }, 
+  "pickerPick": {
+    "message": "Escoller", 
+    "description": "English: Pick"
+  }, 
+  "elapsedOneMinuteAgo": {
+    "message": "fai un minuto", 
+    "description": "English: a minute ago"
+  }, 
+  "docblockedBack": {
+    "message": "Retroceder", 
+    "description": "English: Go back"
+  }, 
+  "loggerStaticFilteringSentencePartAnyType": {
+    "message": "calquera tipo", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "rulesEditSave": {
+    "message": "Gardar", 
+    "description": "Will save manually-edited content and exit manual-edit mode"
+  }, 
+  "aboutRestoreDataButton": {
+    "message": "Recuperar dende arquivo...", 
+    "description": "English: Restore from file..."
+  }, 
+  "3pGroupMalware": {
+    "message": "Dominios de <i>malware</i>", 
+    "description": "English: Malware domains"
+  }, 
+  "settingsAdvancedUserPrompt": {
+    "message": "Sonche un usuario experto (<a href='https://github.com/gorhill/uBlock/wiki/Advanced-user-features'>Precisas ler isto</a>)", 
+    "description": ""
+  }, 
+  "cloudNoData": {
+    "message": "... ...", 
+    "description": ""
+  }, 
+  "logRequestsHeaderURL": {
+    "message": "Enderezo", 
+    "description": "English: URL"
+  }, 
+  "3pUpdating": {
+    "message": "Actualizando...", 
+    "description": "used as a tooltip for the spinner icon beside a list"
+  }, 
+  "3pNetworkError": {
+    "message": "Un erro de rede está a impedir que se actualicen os recursos.", 
+    "description": "used as a tooltip for error icon beside a list"
+  }, 
+  "rulesImport": {
+    "message": "Importar dun arquivo...", 
+    "description": ""
+  }, 
+  "popupBlockedOnThisPagePrompt": {
+    "message": "nesta páxina", 
+    "description": "English: on this page"
+  }, 
+  "settingsCollapseBlockedPrompt": {
+    "message": "Agochar marcadores de posición dos elementos bloqueados", 
+    "description": "English: Hide placeholders of blocked elements"
+  }, 
+  "popupTipNoRemoteFonts2": {
+    "message": "Click: deixar de bloquear fontes remotas neste sitio", 
+    "description": "Tooltip for the no-remote-fonts per-site switch"
+  }, 
+  "aboutContributors": {
+    "message": "Colaboradores", 
+    "description": "English: Contributors"
+  }, 
+  "cloudPush": {
+    "message": "Exportar ó almacenamento na nube", 
+    "description": "tooltip"
+  }, 
+  "popupTipNoRemoteFonts1": {
+    "message": "Click: bloquear fontes remotas neste sitio", 
+    "description": "Tooltip for the no-remote-fonts per-site switch"
+  }, 
+  "advancedSettingsPageName": {
+    "message": "Configuración avanzada", 
+    "description": "Title for the advanced settings page"
+  }, 
+  "logRequestsHeaderDomain": {
+    "message": "Dominio", 
+    "description": "English: Domain"
+  }, 
+  "3pParseAllABPHideFiltersPrompt1": {
+    "message": "Analizar e aplicar filtros cosméticos.", 
+    "description": "English: Parse and enforce Adblock+ element hiding filters."
+  }, 
+  "docblockedDisablePermanent": {
+    "message": "Permanentemente", 
+    "description": "English: Permanently"
+  }, 
+  "popupTipNoLargeMedia1": {
+    "message": "Click: bloquear todos elementos multimedia de gran tamaño neste sitio", 
+    "description": "Tooltip for the no-large-media per-site switch"
+  }, 
+  "popupTipNoLargeMedia2": {
+    "message": "Click: deixar de bloquear todos elementos multimedia de gran tamaño neste sitio", 
+    "description": "Tooltip for the no-large-media per-site switch"
+  }, 
+  "fennecMenuItemBlockingOff": {
+    "message": "desactivado", 
+    "description": "Firefox-specific: appears as 'uBlock₀ (off)'"
+  }, 
+  "rulesHint": {
+    "message": "Listado coas túas regras de filtrado dinámico.", 
+    "description": "English: List of your dynamic filtering rules."
+  }, 
+  "popupTipGlobalRules": {
+    "message": "Reglas globais: esta columna é para as reglas que afectan a todos os sitios.", 
+    "description": "Tooltip when hovering the top-most cell of the global-rules column."
+  }, 
+  "pickerPreview": {
+    "message": "Vista previa", 
+    "description": "Element picker preview mode: will cause the elements matching the current filter to be removed from the page"
+  }, 
+  "popup3pAnyRulePrompt": {
+    "message": "de terceiros", 
+    "description": ""
+  }, 
+  "popupImageRulePrompt": {
+    "message": "imaxes", 
+    "description": ""
+  }, 
+  "settingsHyperlinkAuditingDisabledPrompt": {
+    "message": "Desactivar a auditoría de hiperligazóns/señais (<i>beacons</i>)", 
+    "description": "English: "
+  }, 
+  "loggerStaticFilteringSentencePartAllow": {
+    "message": "Permitir", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "rulesEdit": {
+    "message": "Editar", 
+    "description": "Will enable manual-edit mode (textarea)"
+  }, 
+  "1pPageName": {
+    "message": "Os meus filtros", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "aboutRestoreDataError": {
+    "message": "Os datos son inválidos ou non poden ser lidos", 
+    "description": "Message to display when an error occurred during restore"
+  }, 
+  "settingsWebRTCIPAddressHiddenPrompt": {
+    "message": "Impedir que o WebRTC revele os enderezos IP locais", 
+    "description": "English: "
+  }, 
+  "showNetworkLogButton": {
+    "message": "Amosar o rexistro de peticións da rede", 
+    "description": "Firefox/Fennec-specific: Show Logger"
+  }, 
+  "3pGroupPrivacy": {
+    "message": "Privacidade", 
+    "description": "English: Privacy"
+  }, 
+  "aboutResetDataButton": {
+    "message": "Restabelecer os axustes por defecto...", 
+    "description": "English: Reset to default settings..."
+  }, 
+  "3pExternalListObsolete": {
+    "message": "Desactualizada.", 
+    "description": "used as a tooltip for the out-of-date icon beside a list"
+  }, 
+  "3pApplyChanges": {
+    "message": "Aplicar os cambios", 
+    "description": "English: Apply changes"
+  }, 
+  "subscriberConfirm": {
+    "message": "uBlock₀: Engadir o seguinte enderezo á túa lista de filtros personalizados?\n\nTitle: \"{{title}}\"\nURL: {{url}}", 
+    "description": "English: The message seen by the user to confirm subscription to a ABP filter list"
+  }, 
+  "assetViewerPageName": {
+    "message": "uBlock₀ — Asset viewer", 
+    "description": "Title for the asset viewer page"
+  }, 
+  "1pExportFilename": {
+    "message": "o-meu-ublock-filtros-estaticos_{{datetime}}.txt", 
+    "description": "English: my-ublock-static-filters_{{datetime}}.txt"
+  }, 
+  "extName": {
+    "message": "uBlock Origin", 
+    "description": "extension name."
+  }, 
+  "settingsAdvancedUserSettings": {
+    "message": "configuración avanzada", 
+    "description": "For the tooltip of a link which gives access to advanced settings"
+  }, 
+  "showDashboardButton": {
+    "message": "Amosar no Panel de control", 
+    "description": "Firefox/Fennec-specific: Show Dashboard"
+  }, 
+  "shortcutsPageName": {
+    "message": "Atallos", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "docblockedPrompt2": {
+    "message": "Por mor deste filtro:", 
+    "description": "English: Because of the following filter"
+  }, 
+  "3pGroupAnnoyances": {
+    "message": "Molestias", 
+    "description": "The header identifying the filter lists in the category 'annoyances'"
+  }, 
+  "statsPageName": {
+    "message": "uBlock₀ — Rexistro de peticións de rede", 
+    "description": "Title for the logger window"
+  }, 
+  "loggerStaticFilteringSentence": {
+    "message": "{{action}} peticións de rede tipo {{type}} {{br}} nas cales o enderezo contenga {{url}} {{br}}e que teñan como orixe {{origin}},{{br}}{{importance}} haxa un filtro de excepción aplicable.", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "popupTipNoPopups": {
+    "message": "Activar todas as xanelas emerxentes nesta páxina", 
+    "description": "Tooltip for the no-popups per-site switch"
+  }, 
+  "settingsCloudStorageEnabledPrompt": {
+    "message": "Activar soporte para almacenamento na nube", 
+    "description": ""
+  }, 
+  "rulesFormatHint": {
+    "message": "Sintaxe das regras: <code>orixe destino tipo acción</code> (<a href='https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-rule-syntax'>documentación completa</a>).", 
+    "description": "English: dynamic rule syntax and full documentation."
+  }, 
+  "pickerContextMenuEntry": {
+    "message": "Bloquear elemento", 
+    "description": "English: Block element"
+  }, 
+  "aboutWiki": {
+    "message": "Wiki", 
+    "description": "English: project' wiki on GitHub"
+  }, 
+  "settingsTooltipsPrompt": {
+    "message": "Desactivar axuda emerxente", 
+    "description": "A checkbox in the Settings pane"
+  }, 
+  "aboutRestoreDataConfirm": {
+    "message": "Todas as túas preferencias serán rescritas, usando os datos rexistrados no {{time}}, e o uBlock₀ reiniciará. Queres sobrescribir toda a configuración existente empregando os datos da copia de seguridade?", 
+    "description": "Message asking user to confirm restore"
+  }, 
+  "whitelistExportFilename": {
+    "message": "o-meu-ublock-lista-branca_{{datetime}}.txt", 
+    "description": "English: my-ublock-whitelist_{{datetime}}.txt"
+  }, 
+  "popupTipNoScripting1": {
+    "message": "Click to disable JavaScript on this site", 
+    "description": "Tooltip for the no-scripting per-site switch"
+  }, 
+  "popupTipNoScripting2": {
+    "message": "Click to no longer disable JavaScript on this site", 
+    "description": "Tooltip for the no-scripting per-site switch"
+  }, 
+  "rulesExport": {
+    "message": "Exportar a un arquivo", 
+    "description": ""
+  }, 
+  "popupTipDashboard": {
+    "message": "Fai click para abrir o panel de control", 
+    "description": "English: Click to open the dashboard"
+  }, 
+  "whitelistImport": {
+    "message": "Importar e anexar", 
+    "description": "English: Import and append"
+  }, 
+  "3pIgnoreGenericCosmeticFiltersInfo": {
+    "message": "<p>Os filtros cosméticos xenéricos estanche pensados para seren aplicados en todas as páxinas.<p>Aínda que o uBlock₀ os xestiona dun xeito eficiente, algúns deles precisan de altas cantidades de memoria e sobreemprego da CPU, especialmente nas páxinas grandes e nas máis duradeiras.<p>Activar esta opción suprimirá os requerimentos de memoria e CPU por causa destes filtros cosméticos xenéricos, así como reducirá a cantidade de memoria ocupada polo uBlock₀ mesmo.<p>Recomendámosche activar esta opción sobre todo nos dispositivos menos potentes.", 
+    "description": "Describes the purpose of the 'Ignore generic cosmetic filters' feature."
+  }, 
+  "loggerStaticFilteringSentencePartBlock": {
+    "message": "Bloquear", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "popupTipNoPopups2": {
+    "message": "Click: deixar de bloquear todos os elementos emerxentes neste sitio", 
+    "description": "Tooltip for the no-popups per-site switch"
+  }, 
+  "popupTipNoPopups1": {
+    "message": "Click: bloquear todos os elementos emerxentes neste sitio", 
+    "description": "Tooltip for the no-popups per-site switch"
+  }, 
+  "1pFormatHint": {
+    "message": "Un filtro por cada liña. O filtro pode ser un nome de servidor, ou un filtro compatible co Adblock Plus. As liñas que comecen con <code>!</code> seranche ignoradas.", 
+    "description": "Short information about how to create custom filters"
+  }, 
+  "docblockedPrompt1": {
+    "message": "O uBlock₀ impediu cargar a seguinte páxina:", 
+    "description": "English: uBlock₀ has prevented the following page from loading:"
+  }, 
+  "loggerStaticFilteringSentencePartType": {
+    "message": "tipo “{{type}}”", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "loggerStaticFilteringSentencePartImportant": {
+    "message": "aínda cando", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "rulesRevert": {
+    "message": "Reverter", 
+    "description": "This will remove all temporary rules"
+  }, 
+  "genericSubmit": {
+    "message": "Enviar", 
+    "description": "for generic 'Submit' buttons"
+  }, 
+  "popup3pScriptRulePrompt": {
+    "message": "Scripts de terceiros", 
+    "description": ""
+  }, 
+  "contextMenuTemporarilyAllowLargeMediaElements": {
+    "message": "Permitir temporalmente os elementos multimedia grandes", 
+    "description": "A context menu entry, present when large media elements have been blocked on the current site"
+  }, 
+  "popupTipNoRemoteFonts": {
+    "message": "Activar o bloqueo de fontes remotas para esta páxina", 
+    "description": "Tooltip for the no-remote-fonts per-site switch"
+  }, 
+  "aboutResetDataConfirm": {
+    "message": "Eliminaranse todas as túas preferencias, e reiniciará o uBlock₀. Queres resetear o uBlock₀ á configuración por defecto?", 
+    "description": "Message asking user to confirm reset"
+  }, 
+  "settingPerSiteSwitchGroup": {
+    "message": "Comportamento predefinido", 
+    "description": ""
+  }, 
+  "rulesPermanentHeader": {
+    "message": "Regras permanentes", 
+    "description": "header"
+  }, 
+  "extShortDesc": {
+    "message": "Ó fin, un bloqueador eficiente que non chupa toda a memoria e o procesador.", 
+    "description": "this will be in the Chrome web store: must be 132 characters or less"
+  }, 
+  "docblockedDisableTemporary": {
+    "message": "Temporalmente", 
+    "description": "English: Temporarily"
+  }, 
+  "popupHitDomainCount": {
+    "message": "{{count}} de {{total}}", 
+    "description": "appears in popup"
+  }, 
+  "popupBlockedRequestPrompt": {
+    "message": "peticións bloqueadas", 
+    "description": "English: requests blocked"
+  }, 
+  "3pListsOfBlockedHostsPrompt": {
+    "message": "{{netFilterCount}} filtros de rede ＋ {{cosmeticFilterCount}} filtros cosméticos:", 
+    "description": "Appears at the top of the _3rd-party filters_ pane"
+  }, 
+  "aboutChangelog": {
+    "message": "Rexistro de cambios", 
+    "description": ""
+  }, 
+  "logAll": {
+    "message": "Todas", 
+    "description": "Appears in the logger's tab selector"
+  }, 
+  "rulesPageName": {
+    "message": "As miñas regras", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "rulesCommit": {
+    "message": "Estabelecer", 
+    "description": "This will persist temporary rules"
+  }, 
+  "whitelistPrompt": {
+    "message": "A lista branca é a túa lista de nomes de servidor nos que o uBlock₀ estará desactivado. Ten unha entrada por cada liña, e os nomes de servidor non válidos serán ignorados.", 
+    "description": "English: An overview of the content of the dashboard's Whitelist pane."
+  }, 
+  "settingsNoScriptingPrompt": {
+    "message": "Disable JavaScript", 
+    "description": "The default state for the per-site no-scripting switch"
+  }, 
+  "popupTipNoLargeMedia": {
+    "message": "Activar/desactivar o bloqueo de elementos multimedia grandes para este sitio", 
+    "description": "Tooltip for the no-large-media per-site switch"
+  }, 
+  "logRequestsHeaderType": {
+    "message": "Tipo", 
+    "description": "English: Type"
+  }, 
+  "settingsNoLargeMediaPrompt": {
+    "message": "Bloquear elementos os audiovisuais meirandes de {{input:number}} kB", 
+    "description": ""
+  }, 
+  "whitelistExport": {
+    "message": "Exportar", 
+    "description": "English: Export"
+  }, 
+  "aboutBackupFilename": {
+    "message": "ublock-copia-seguridade_{{datetime}}.txt", 
+    "description": "English: my-ublock-backup_{{datetime}}.txt"
+  }, 
+  "3pLastUpdate": {
+    "message": "Última actualización: {{ago}}\nFai click para forzar a actualización.", 
+    "description": "used as a tooltip for the clock icon beside a list"
+  }, 
+  "popupTipLocalRules": {
+    "message": "Reglas locais: esta columna é para as reglas que afectan só a un sitio. As reglas locais anteponse ás globais.", 
+    "description": "Tooltip when hovering the top-most cell of the local-rules column."
+  }, 
+  "3pImport": {
+    "message": "Importar...", 
+    "description": "The label for the checkbox used to import external filter lists"
+  }, 
+  "3pAutoUpdatePrompt1": {
+    "message": "Actualización automática das listas de filtros.", 
+    "description": "A checkbox in the _3rd-party filters_ pane"
+  }, 
+  "aboutCode": {
+    "message": "Código fonte (GPLv3)", 
+    "description": "English: Source code (GPLv3)"
+  }, 
+  "settingsLastRestorePrompt": {
+    "message": "Última recuperación:", 
+    "description": "English: Last restore:"
+  }, 
+  "3pGroupDefault": {
+    "message": "Local", 
+    "description": "Header for the uBlock filters section in 'Filter lists pane'"
+  }, 
+  "loggerStaticFilteringSentencePartNotImportant": {
+    "message": "agás cando", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "3pPurgeAll": {
+    "message": "Vaciar todas as cachés", 
+    "description": "A button in the in the _3rd-party filters_ pane"
+  }, 
+  "popupBlockedStats": {
+    "message": "{{count}} ou {{percent}}%", 
+    "description": "Example: 15 or 13%"
+  }, 
+  "elapsedManyHoursAgo": {
+    "message": "fai {{value}} horas", 
+    "description": "English: {{value}} hours ago"
+  }, 
+  "docblockedNoParamsPrompt": {
+    "message": "sen parámetros", 
+    "description": "label to be used for the parameter-less URL: https://cloud.githubusercontent.com/assets/585534/9832014/bfb1b8f0-593b-11e5-8a27-fba472a5529a.png"
+  }, 
+  "pickerNetFilters": {
+    "message": "Filtros da rede", 
+    "description": "English: header for a type of filter in the element picker dialog"
+  }, 
+  "settingsPrefetchingDisabledPrompt": {
+    "message": "Desactivar a precarga de sitios (prevén calquera conexión para peticións de red bloqueadas)", 
+    "description": "English: "
+  }, 
+  "elapsedManyDaysAgo": {
+    "message": "fai {{value}} días", 
+    "description": "English: {{value}} days ago"
+  }, 
+  "cloudPullAndMerge": {
+    "message": "Importar dende a nube e combinar coas preferencias actuais", 
+    "description": "tooltip"
+  }, 
+  "popupTipNoCosmeticFiltering2": {
+    "message": "Click: activar filtrado cosmético neste sitio", 
+    "description": "Tooltip for the no-cosmetic-filtering per-site switch"
+  }, 
+  "popupTipNoCosmeticFiltering1": {
+    "message": "Click: desactivar filtrado cosmético neste sitio", 
+    "description": "Tooltip for the no-cosmetic-filtering per-site switch"
+  }, 
+  "3pGroupRegions": {
+    "message": "Rexións, linguaxes", 
+    "description": "English: Regions, languages"
+  }, 
+  "popupAnyRulePrompt": {
+    "message": "todo", 
+    "description": ""
+  }, 
+  "loggerStaticFilteringHeader": {
+    "message": "Filtrado estático", 
+    "description": "Small header to identify the static filtering section"
+  }, 
+  "loggerCurrentTab": {
+    "message": "Lapela activa", 
+    "description": "Appears in the logger's tab selector"
+  }, 
+  "docblockedFoundIn": {
+    "message": "Atopado en:", 
+    "description": "English: List of filter list names follows"
+  }, 
+  "rulesDefaultFileName": {
+    "message": "o-meu-ublock-regras-dinamicas_{{datetime}}.txt", 
+    "description": "default file name to use"
+  }, 
+  "genericRevert": {
+    "message": "Reverter", 
+    "description": "for generic 'Revert' buttons"
+  }, 
+  "whitelistApply": {
+    "message": "Aplicar os cambios", 
+    "description": "English: Apply changes"
+  }, 
+  "elapsedOneDayAgo": {
+    "message": "fai un día", 
+    "description": "English: a day ago"
+  }, 
+  "popupTipRevertRules": {
+    "message": "Fai click para desfacer os cambios.", 
+    "description": "Tooltip when hovering over the eraser in the dynamic filtering pane."
+  }, 
+  "loggerURLFilteringHeader": {
+    "message": "Filtrado dinámico do enderezo", 
+    "description": "Small header to identify the dynamic URL filtering section"
+  }, 
+  "docblockedClose": {
+    "message": "Pechar esta xanela", 
+    "description": "English: Close this window"
+  }, 
+  "3pGroupAds": {
+    "message": "Anuncios", 
+    "description": "English: Ads"
+  }, 
+  "docblockedProceed": {
+    "message": "Desactivar o bloqueo estricto en {{hostname}}", 
+    "description": "English: Disable strict blocking for {{hostname}} ..."
+  }, 
+  "loggerURLFilteringTypeLabel": {
+    "message": "Tipo:", 
+    "description": "Label for the type selector"
+  }, 
+  "settingsContextMenuPrompt": {
+    "message": "Empregar o menú contextual cando sexa posible", 
+    "description": "English: Make use of context menu where appropriate"
+  }, 
+  "3pParseAllABPHideFiltersInfo": {
+    "message": "<p>Esta opción permitirache a análise e a aplicación de <a href=\"https://adblockplus.org/en/faq_internal#elemhide\">&ldquo;filtros de ocultación de elementos&rdquo; compatibles co Adblock Plus</a>. \nEstes filtros sonche sobre todo cosméticos, serven para agochar elementos visualmente molestos nunha determinada páxina, non sendo posible a súa eliminación cun motor de bloqueo baseado en peticións.</p><p>Activar esta opción incrementará o uso de memoria do <i>uBlock₀</i>.</p>", 
+    "description": "Describes the purpose of the 'Parse and enforce cosmetic filters' feature."
+  }, 
+  "elapsedManyMinutesAgo": {
+    "message": "fai {{value}} minutos", 
+    "description": "English: {{value}} minutes ago"
+  }, 
+  "settingsStorageUsed": {
+    "message": "Almacenamento empregado: {{value}} bytes", 
+    "description": "English: Storage used: {{}} bytes"
+  }, 
+  "popupInlineScriptRulePrompt": {
+    "message": "Scripts embebidos", 
+    "description": ""
+  }, 
+  "popupPowerSwitchInfo2": {
+    "message": "Click: activar o uBlock₀ neste sitio.", 
+    "description": "Message to be read by screen readers"
+  }, 
+  "popupPowerSwitchInfo1": {
+    "message": "Click: desactivar/activar o uBlock₀ neste sitio.\n\nCtrl+click: desactivar o Block₀ só nesta páxina.", 
+    "description": "Message to be read by screen readers"
+  }, 
+  "popupBlockedSinceInstallPrompt": {
+    "message": "dende a instalación", 
+    "description": "English: since install"
+  }, 
+  "3pExternalListsHint": {
+    "message": "Un enderezo por liña. Os enderezos inválidos seranche ignorados.", 
+    "description": "Short information about how to use the textarea to import external filter lists by URL"
+  }, 
+  "advancedSettingsWarning": {
+    "message": "Ollo! Non cambies estas configuracións avanzadas senón sabes ben o que estás a facer.", 
+    "description": "A warning to users at the top of 'Advanced settings' page"
+  }, 
+  "genericBytes": {
+    "message": "bytes", 
+    "description": ""
+  }, 
+  "popupTipPicker": {
+    "message": "Ir ó modo do selector de elementos", 
+    "description": "English: Enter element picker mode"
+  }, 
+  "popup3pPassiveRulePrompt": {
+    "message": "Imaxes/css de terceiros", 
+    "description": ""
+  }, 
+  "loggerStaticFilteringSentencePartOrigin": {
+    "message": "dende “{{origin}}”", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "settingsNoRemoteFontsPrompt": {
+    "message": "Bloquear fontes remotas", 
+    "description": ""
+  }, 
+  "settingsNoCosmeticFilteringPrompt": {
+    "message": "Desactivar o filtrado cosmético", 
+    "description": ""
+  }, 
+  "popup1pScriptRulePrompt": {
+    "message": "Scripts de dominio", 
+    "description": ""
+  }, 
+  "rulesTemporaryHeader": {
+    "message": "Regras temporais", 
+    "description": "header"
+  }, 
+  "cloudPull": {
+    "message": "Importar dende o almacenamento na nube", 
+    "description": "tooltip"
+  }, 
+  "settingPerSiteSwitchGroupSynopsis": {
+    "message": "Estes comportamentos predefinidos poden ser modificados para cada páxina en particular", 
+    "description": ""
+  }, 
+  "3pUpdateNow": {
+    "message": "Actualizar agora", 
+    "description": "A button in the in the _3rd-party filters_ pane"
+  }, 
+  "logBehindTheScene": {
+    "message": "Peticións ocultas", 
+    "description": "Pretty name for behind-the-scene network requests"
+  }, 
+  "dummy": {
+    "message": "Esta ten que ser a derradeira entrada", 
+    "description": "so we dont need to deal with comma for last entry"
+  }, 
+  "cloudDeviceNamePrompt": {
+    "message": "O nome deste dispositivo:", 
+    "description": "used as a prompt for the user to provide a custom device name"
+  }, 
+  "elapsedOneHourAgo": {
+    "message": "fai unha hora", 
+    "description": "English: an hour ago"
+  }, 
+  "popupHitDomainCountPrompt": {
+    "message": "dominios conectados", 
+    "description": "appears in popup"
+  }, 
+  "3pGroupCustom": {
+    "message": "Personalizado", 
+    "description": "English: Custom"
+  }, 
+  "popupTipZapper": {
+    "message": "Activar o modo \"eliminación de elementos\"", 
+    "description": "Tooltip for the element-zapper icon in the popup panel"
+  }, 
+  "aboutBackupDataButton": {
+    "message": "Facer copia de seguridade nun arquivo", 
+    "description": "Text for button to create a backup of all settings"
+  }, 
+  "loggerURLFilteringContextLabel": {
+    "message": "Contexto:", 
+    "description": "Label for the context selector"
+  }, 
+  "loggerStaticFilteringSentencePartAnyOrigin": {
+    "message": "dende calquera sitio", 
+    "description": "Used in the static filtering wizard"
+  }, 
+  "genericApplyChanges": {
+    "message": "Aplicar os cambios", 
+    "description": "for generic 'Apply changes' buttons"
+  }, 
+  "popup3pFrameRulePrompt": {
+    "message": "Frames de terceiros", 
+    "description": ""
+  }, 
+  "aboutPageName": {
+    "message": "Sobre", 
+    "description": "appears as tab name in dashboard"
+  }, 
+  "popupTipLog": {
+    "message": "Ir ó rexistro de peticións", 
+    "description": "Tooltip used for the logger icon in the panel"
+  }
+}

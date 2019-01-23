@@ -1,0 +1,245 @@
+{
+	"name": "新建 0",
+	"type": 1,
+	"state": 0,
+	"info": {
+		"category": {
+			"hosts": [
+				".edu",
+				".idv"
+			],
+			"schemes": [
+				"ftps",
+				"magnet"
+			],
+			"file-exts": [
+				"torrent",
+				"metalink"
+			],
+			"active-limit": 3,
+			"finished-limit": 300,
+			"recycled-limit": 300
+		},
+		"common": {
+			"folder": "\/home\/user\/Kyzs",
+			"connect-timeout": 15,
+			"transmit-timeout": 30,
+			"retry-delay": 6,
+			"retry-limit": 99,
+			"retry-count": 0,
+			"max-connections": 1,
+			"max-upload-speed": 0,
+			"max-download-speed": 0,
+			"timestamp": 1
+		}
+	},
+	"children": [
+		{
+			"name": "CentOS-7-x86_64-DVD-1804.iso",
+			"type": 2,
+			"state": 72,
+			"info": {
+				"relation": {
+					"task": {
+						"plugin-name": "curl",
+						"priority": 1
+					}
+				},
+				"progress": {
+					"complete": 4470079488,
+					"total": 4470079488,
+					"elapsed": 987,
+					"uploaded": 0,
+					"percent": 100
+				},
+				"log": {
+					"added-time": 1532233057,
+					"completed-time": 1532246260,
+					"messages": [
+					]
+				},
+				"http": {
+					"redirection-limit": 30
+				},
+				"proxy": {
+					"port": 80,
+					"type": 0
+				},
+				"common": {
+					"uri": "http:\/\/mirrors.163.com\/centos\/7\/isos\/x86_64\/CentOS-7-x86_64-DVD-1804.iso",
+					"file": "CentOS-7-x86_64-DVD-1804.iso",
+					"folder": "\/home\/user\/Kyzs\/Downloads",
+					"connect-timeout": 15,
+					"transmit-timeout": 30,
+					"retry-delay": 6,
+					"retry-limit": 99,
+					"retry-count": 0,
+					"max-connections": 1,
+					"max-upload-speed": 0,
+					"max-download-speed": 0,
+					"timestamp": 1
+				}
+			},
+			"children": [
+				{
+					"name": "\/home\/user\/Kyzs\/Downloads\/CentOS-7-x86_64-DVD-1804.iso.aria2",
+					"type": 5,
+					"state": 0,
+					"info": {
+					},
+					"children": [
+					]
+				},
+				{
+					"name": "\/home\/user\/Kyzs\/Downloads\/CentOS-7-x86_64-DVD-1804.iso",
+					"type": 0,
+					"state": 0,
+					"info": {
+					},
+					"children": [
+					]
+				}
+			]
+		},
+		{
+			"name": "wkhtmltox_0.12.5-1.trusty_amd64.deb",
+			"type": 2,
+			"state": 72,
+			"info": {
+				"relation": {
+					"task": {
+						"plugin-name": "curl",
+						"priority": 1
+					}
+				},
+				"progress": {
+					"complete": 14059010,
+					"total": 14059010,
+					"elapsed": 2799,
+					"uploaded": 0,
+					"percent": 100
+				},
+				"log": {
+					"added-time": 1530355145,
+					"completed-time": 1530357944,
+					"messages": [
+						{
+							"string": "不可续传",
+							"type": 2,
+							"time": 1530355177
+						}
+					]
+				},
+				"http": {
+					"redirection-limit": 30
+				},
+				"proxy": {
+					"port": 80,
+					"type": 0
+				},
+				"common": {
+					"uri": "https:\/\/github.com\/wkhtmltopdf\/wkhtmltopdf\/releases\/download\/0.12.5\/wkhtmltox_0.12.5-1.trusty_amd64.deb",
+					"file": "wkhtmltox_0.12.5-1.trusty_amd64.deb",
+					"folder": "\/home\/user\/Kyzs\/Downloads",
+					"connect-timeout": 15,
+					"transmit-timeout": 30,
+					"retry-delay": 6,
+					"retry-limit": 99,
+					"retry-count": 31,
+					"max-connections": 1,
+					"max-upload-speed": 0,
+					"max-download-speed": 0,
+					"timestamp": 1
+				}
+			},
+			"children": [
+				{
+					"name": "\/home\/user\/Kyzs\/Downloads\/wkhtmltox_0.12.5-1.trusty_amd64.deb.aria2",
+					"type": 5,
+					"state": 0,
+					"info": {
+					},
+					"children": [
+					]
+				},
+				{
+					"name": "\/home\/user\/Kyzs\/Downloads\/wkhtmltox_0.12.5-1.trusty_amd64.deb",
+					"type": 0,
+					"state": 0,
+					"info": {
+					},
+					"children": [
+					]
+				}
+			]
+		},
+		{
+			"name": "wkhtmltox-0.12.4_linux-generic-amd64.tar.xz",
+			"type": 2,
+			"state": 72,
+			"info": {
+				"relation": {
+					"task": {
+						"plugin-name": "curl",
+						"priority": 1
+					}
+				},
+				"progress": {
+					"complete": 14541904,
+					"total": 14541904,
+					"elapsed": 1456,
+					"uploaded": 0,
+					"percent": 100
+				},
+				"log": {
+					"added-time": 1530354311,
+					"completed-time": 1530357081,
+					"messages": [
+					]
+				},
+				"http": {
+					"redirection-limit": 30
+				},
+				"proxy": {
+					"port": 80,
+					"type": 0
+				},
+				"common": {
+					"uri": "https:\/\/github.com\/wkhtmltopdf\/wkhtmltopdf\/releases\/download\/0.12.4\/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz",
+					"file": "wkhtmltox-0.12.4_linux-generic-amd64.tar.xz",
+					"folder": "\/home\/user\/Kyzs\/Downloads",
+					"connect-timeout": 15,
+					"transmit-timeout": 30,
+					"retry-delay": 6,
+					"retry-limit": 99,
+					"retry-count": 12,
+					"max-connections": 1,
+					"max-upload-speed": 0,
+					"max-download-speed": 0,
+					"timestamp": 1
+				}
+			},
+			"children": [
+				{
+					"name": "\/home\/user\/Kyzs\/Downloads\/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz.aria2",
+					"type": 5,
+					"state": 0,
+					"info": {
+					},
+					"children": [
+					]
+				},
+				{
+					"name": "\/home\/user\/Kyzs\/Downloads\/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz",
+					"type": 0,
+					"state": 0,
+					"info": {
+					},
+					"children": [
+					]
+				}
+			]
+		}
+	]
+}
+

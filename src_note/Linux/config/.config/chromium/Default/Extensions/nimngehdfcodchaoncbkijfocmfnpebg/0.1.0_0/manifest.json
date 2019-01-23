@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/19.png",
+         "38": "icons/38.png"
+      },
+      "default_title": "__MSG_tipBrowserAction__"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extDesc__",
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn8v+1JtwKW0ouxGATevRPe/stfxbbINkSWqpt6nZz1uFkH3dPE5vZQea2OWx4cNzH96bib57AJWzwJ8qGEAOsni+T/d+eWd/CX9GVqNmJlvreoie/luG+9geGdEUXeRX8PtaqfBDPiEqP65Dk8Z4eDfCEyHmWDkHXdezJniRQmxXlXL8Rl9cFULrlOBHDUWPiN/H9bKu6oanLIoNUNK1GzJQAKe7cxiffbRfS+PY9PP1pCGvZk5Zw9bjVwUQBk80sNXGDcV8d7JrjbiNc80HIByNvojxLrASSb6hAxvM+z6Io+Ew6SRG/fxPjQQJfe5j0T4kKCdq5CBZ3JKHRmX3HQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "31",
+   "name": "__MSG_extName__",
+   "short_name": "Chrono",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.0"
+}

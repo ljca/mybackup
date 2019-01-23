@@ -1,0 +1,398 @@
+{
+   "about": {
+      "message": "Giới thiệu"
+   },
+   "advancedoptions": {
+      "message": "Tùy chọn Nâng cao"
+   },
+   "areyouhappy": {
+      "message": "Bạn có hài lòng về Zoom?"
+   },
+   "basicsettings": {
+      "message": "Cơ bản"
+   },
+   "btnreset": {
+      "message": "Thiết lập lại"
+   },
+   "changelog": {
+      "message": "Nhật ký thay đổi"
+   },
+   "desallscreen": {
+      "message": "Các kích thước màn hình"
+   },
+   "desallzoom": {
+      "message": "Áp dụng mức thu phóng cho tất cả các trang"
+   },
+   "desbadge": {
+      "message": "Hiện giá trị thu phóng hiện tại bên trong biểu tượng Tiện ích Thu Phóng"
+   },
+   "desbrowserextension": {
+      "message": "tiện ích mở rộng của trình duyệt"
+   },
+   "descontextmenu": {
+      "message": "Kích hoạt thực đơn chuột phải để thu phóng trang web"
+   },
+   "description": {
+      "message": "Phóng to hoặc thu nhỏ nội dung trang web bằng cách sử dụng nút zoom và cuộn chuột để đọc thoải mái hơn. Đơn vị tính theo mỗi giá trị phần trăm."
+   },
+   "desdefaultzoomvalue": {
+      "message": "Chọn cấp độ thu phóng mặc định của bạn"
+   },
+   "desintroduce": {
+      "message": "Với mọi tính năng bạn từng dùng, với một vẻ nhìn mới mẻ, và được cá nhân hóa cho bạn."
+   },
+   "deslargepopup": {
+      "message": "Hiện cửa sổ popup lớn"
+   },
+   "desproject": {
+      "message": "dự án"
+   },
+   "desrememberpage": {
+      "message": "Nếu tùy chọn này được kích hoạt, bạn sẽ không thấy được trang nhắc nhở"
+   },
+   "desremfacebook": {
+      "message": "Đề nghị điều này trên Facebook"
+   },
+   "desremrate": {
+      "message": "Nếu bạn thích Zoom™, xin đừng ngần ngại đánh giá mở rộng này 5 sao ngay bây giờ. Điều này giúp chúng tôi có thêm động lực để tiếp tục phát triển sản phẩm này cho bạn. Bạn có thể viết một bài đánh giá, nhưng điều này là không bắt buộc. Nếu bạn không có thời gian để viết một bài đánh giá, bạn có thể đánh giá nó ẩn danh. Rất quan trọng khi trao cho nó ★★★★★. Cảm ơn bạn!"
+   },
+   "desremyoutube": {
+      "message": "Đăng ký kênh Youtube của chúng tôi"
+   },
+   "dessinglescreen": {
+      "message": "Dò tìm kích thước màn hình"
+   },
+   "deszoombydomain": {
+      "message": "Thu phóng ở cấp domain"
+   },
+   "deszoombypage": {
+      "message": "Thu phóng ở cấp trang web"
+   },
+   "deszoomchrome": {
+      "message": "Sử dụng trình duyệt tích hợp"
+   },
+   "deszoomdoubleclick": {
+      "message": "Kích hoạt tùy chọn khi nhấp đúp chuột để phóng to và nhấp chuột một lần để thu nhỏ trang web"
+   },
+   "deszoomfont": {
+      "message": "Chỉ thay đổi kích thước phông chữ trên trang web đó"
+   },
+   "deszoommousedirectiondown": {
+      "message": "Cuộn theo chiều kim đồng hồ"
+   },
+   "deszoommousedirectionup": {
+      "message": "Cuộn ngược chiều kim đồng hồ"
+   },
+   "deszoommouseleft": {
+      "message": "Nhấn chuột trái"
+   },
+   "deszoommouseright": {
+      "message": "Nhấn chuột phải"
+   },
+   "deszoommousescroll": {
+      "message": "Giữ 'nút chuột', và cuộn lên hoặc xuống để thay đổi mức thu phóng"
+   },
+   "deszoomsteps": {
+      "message": "Phân độ thu phóng đối với giá trị kế tiếp"
+   },
+   "deszoomweb": {
+      "message": "Sử dụng ngôn ngữ CSS"
+   },
+   "donatecalltoaction": {
+      "message": "Tài trợ ngay!"
+   },
+   "donatepromotext": {
+      "message": "Nếu bạn có thể ủng hộ cho tôi một số tiền cho tính năng này, tôi vô cùng cảm kích!"
+   },
+   "donatetext": {
+      "message": "Do số lượng đóng góp rất nhỏ, các dự án có thể bị đóng cửa. Vui lòng tiếp tục hỗ trợ phát triển với một Sự Quyên Góp."
+   },
+   "enjoyshare": {
+      "message": "Tận hưởng phần mở rộng này và chia sẻ nó với những người khác, những người mà bạn nghĩ rằng sẽ đánh giá cao nó."
+   },
+   "friendlyremember": {
+      "message": "Trình nhắc nhở thân thiện..."
+   },
+   "guide": {
+      "message": "Chào mừng bạn đến với mục hướng dẫn"
+   },
+   "help": {
+      "message": "Trợ giúp"
+   },
+   "lastchecked": {
+      "message": "Phiên bản mới nhất đã được kiểm tra lúc"
+   },
+   "longdonatetext": {
+      "message": "Tôi thực sự đánh giá cao nếu bạn có thể ủng hộ tôi để giữ cho phần mở rộng trình duyệt này còn tồn tại cho những người dùng mới khác. Cho dù đó là $1 hoặc $100, hỗ trợ của bạn được đánh giá cao vô cùng!"
+   },
+   "name": {
+      "message": "Thu phóng"
+   },
+   "namechrome": {
+      "message": "Phóng to cho Google Chrome"
+   },
+   "nameedge": {
+      "message": "Phóng to cho Microsoft Edge"
+   },
+   "namefirefox": {
+      "message": "Phóng to cho Firefox"
+   },
+   "nameopera": {
+      "message": "Phóng to cho Opera"
+   },
+   "namesafari": {
+      "message": "Phóng to cho Safari"
+   },
+   "nothanks": {
+      "message": "Không, cảm ơn"
+   },
+   "optionpagetitle": {
+      "message": "Zoom – Tùy chọn"
+   },
+   "pageatitle": {
+      "message": "Thu phóng"
+   },
+   "pagehelp": {
+      "message": "trợ giúp"
+   },
+   "pagestillloading": {
+      "message": "Trang vẫn đang tải sao?"
+   },
+   "productshare": {
+      "message": "Chia sẻ"
+   },
+   "promocalltoaction": {
+      "message": "Tải về Ngay"
+   },
+   "promotext": {
+      "message": "Muốn dùng một thứ gì đó mới và tuyệt vời cho trình duyệt web của bạn? Hãy thử tiện ích Trình duyệt $product$.",
+      "placeholders": {
+         "product": {
+            "content": "$1",
+            "example": "Turn Off the Lights"
+         }
+      }
+   },
+   "promotitle": {
+      "message": "Mẹo trong ngày"
+   },
+   "ratedes": {
+      "message": "Và để cho mọi người biết về phần mở rộng tuyệt vời này!"
+   },
+   "rateitema": {
+      "message": "Đánh giá 5 sao"
+   },
+   "ratetitle": {
+      "message": "Xin vui lòng tỷ lệ & xem xét mở rộng của tôi"
+   },
+   "rememberrate": {
+      "message": "Xếp hạng"
+   },
+   "reportbug": {
+      "message": "Báo lỗi"
+   },
+   "resetbrowserextension": {
+      "message": "Đặt lại các cài đặt Zoom"
+   },
+   "screenzoomvalue": {
+      "message": "Giá trị thu phóng theo phần trăm (vd: 80%)"
+   },
+   "settings": {
+      "message": "Thiết lập"
+   },
+   "sharemenudonatetitle": {
+      "message": "Hỗ trợ phát triển"
+   },
+   "sharemenupostonfacebook": {
+      "message": "Đăng trên Facebook"
+   },
+   "sharemenupostongoogleplus": {
+      "message": "Đăng trên Google +"
+   },
+   "sharemenuratetitle": {
+      "message": "Đánh giá tiện ích mở rộng này"
+   },
+   "sharemenusendatweet": {
+      "message": "Gửi một Tweet"
+   },
+   "sharemenusharetitle": {
+      "message": "Chia sẻ điều này"
+   },
+   "sharemenutellafriend": {
+      "message": "Giới thiệu với bạn bè"
+   },
+   "sharemenuwelcomeguidetitle": {
+      "message": "Chào mừng bạn đến với mục hướng dẫn"
+   },
+   "sharetextd": {
+      "message": "Tiện ích Zoom là phần mở rộng tốt nhất cho trình duyệt web của tôi. Hãy Tải về và tự bạn trải nghiệm!"
+   },
+   "showremember": {
+      "message": "Không hiển thị trang nhắc nhở này nữa khi tôi mở Các tùy chọn"
+   },
+   "skipremember": {
+      "message": "Bỏ qua điều này, và mở trang tuỳ chọn bây giờ"
+   },
+   "tellothers": {
+      "message": "Đảm bảo ý kiến của bạn được quan tâm"
+   },
+   "textfoot": {
+      "message": "Phần mềm này được cấp phép theo CC-GNU GPL. Để xem một bản sao của giấy phép này, hãy truy cập"
+   },
+   "titeladd": {
+      "message": "Thêm"
+   },
+   "titelallzoom": {
+      "message": "Thu phóng trang"
+   },
+   "titelbadge": {
+      "message": "Huy hiệu"
+   },
+   "titelbadgecolor": {
+      "message": "Chọn màu nền cho huy hiệu của bạn"
+   },
+   "titelcontextmenu": {
+      "message": "Trình đơn ngữ cảnh"
+   },
+   "titeldefaultzoomvalue": {
+      "message": "Cấp độ thu phóng mặc định"
+   },
+   "titeldeveloper": {
+      "message": "Nhà phát triển"
+   },
+   "titeldownloadaaupgrade": {
+      "message": "Việc nâng cấp sẽ được hỗ trợ đối với các hình ảnh được chọn, và sẽ hiển thị một bộ sưu tập các hình ảnh trên trang web."
+   },
+   "titeldownloadbutton": {
+      "message": "Tải về nâng cấp này!"
+   },
+   "titeldownloadupgrade": {
+      "message": "Toàn bộ trang web sẽ tối dần, giống như bạn đang xem video trong rạp chiếu phim."
+   },
+   "titeldownloadupgradedatetoday": {
+      "message": "Phần mở rộng này hiển thị đồng hồ analog trong thanh thực đơn. Khi bạn bấm vào biểu tượng, nó cho bạn thấy thời gian hiện tại, tháng và ngày trong tuần."
+   },
+   "titeldownloadupgradefinancetoolbar": {
+      "message": "Việc này sẽ hiển thị thông tin thị trường chứng khoán thời gian thực."
+   },
+   "titeldownloadupgradefullscreen": {
+      "message": "Với phần mở rộng này bạn có thể dễ dàng dùng chế độ xem toàn màn hình. Điều này áp dụng với hình ảnh, video và trang web."
+   },
+   "titeldownloadupgradepropermenubar": {
+      "message": "Thêm vào thanh menu đen trên trang web của Google."
+   },
+   "titelintroduce": {
+      "message": "Giới thiệu về Zoom mới!"
+   },
+   "titellargepopup": {
+      "message": "Cửa sổ lớn"
+   },
+   "titelpopupoptions": {
+      "message": "Tùy chọn"
+   },
+   "titelpopupsupport": {
+      "message": "Hỗ trợ"
+   },
+   "titelrememberpage": {
+      "message": "Trang Nhắc nhở"
+   },
+   "titelremove": {
+      "message": "Xoá"
+   },
+   "titelreset": {
+      "message": "Đặt lại thiết lập mặc định"
+   },
+   "titelrightsreserved": {
+      "message": "Một số quyền."
+   },
+   "titelscreen": {
+      "message": "Kích thước màn hình"
+   },
+   "titelscreendetect": {
+      "message": "Dò tìm kích thước màn hình"
+   },
+   "titelsharebutton": {
+      "message": "Nút chia sẻ"
+   },
+   "titelsharethis": {
+      "message": "Chia sẻ điều này:"
+   },
+   "titelsync": {
+      "message": "Đồng bộ hóa"
+   },
+   "titelsyncbrowser": {
+      "message": "Đồng bộ các thiết lập tiện ích mở rộng với các trình duyệt khác của bạn"
+   },
+   "titelupgrade": {
+      "message": "Nâng cấp"
+   },
+   "titelwebsite": {
+      "message": "Trang web"
+   },
+   "titelwelcome": {
+      "message": "Xin Chào mừng và Hello"
+   },
+   "titelzoomdoubleclick": {
+      "message": "Hành động nút"
+   },
+   "titelzoomengine": {
+      "message": "Dùng engine thu phóng"
+   },
+   "titelzoommousescroll": {
+      "message": "Cuộn chuột"
+   },
+   "titelzoomsteps": {
+      "message": "Phân độ thu phóng"
+   },
+   "titlecancel": {
+      "message": "Hủy bỏ"
+   },
+   "titledarkmodeoff": {
+      "message": "Tắt Chế độ Tối"
+   },
+   "titledarkmodeon": {
+      "message": "Chế độ Tối"
+   },
+   "titledonatebutton": {
+      "message": "Ủng hộ"
+   },
+   "titlelratenow": {
+      "message": "Đánh giá ngay!"
+   },
+   "titleok": {
+      "message": "Đồng ý"
+   },
+   "titleratelater": {
+      "message": "Để sau"
+   },
+   "titleshortzoomin": {
+      "message": "Phóng to trang web hiện tại"
+   },
+   "titleshortzoomout": {
+      "message": "Thu nhỏ trang web hiện tại"
+   },
+   "titleshortzoomreset": {
+      "message": "Khôi phục giá trị cho trang web hiện tại"
+   },
+   "translateme": {
+      "message": "Giúp chúng tôi phiên dịch"
+   },
+   "upgradefbshare": {
+      "message": "Chia sẻ lên Facebook"
+   },
+   "upgradetwshare": {
+      "message": "Tweet"
+   },
+   "version": {
+      "message": "Phiên bản"
+   },
+   "websitezoomvalue": {
+      "message": "Giá trị thu phóng theo phần trăm (vd: 80%)"
+   },
+   "welcomebasictext": {
+      "message": "Chào mừng đến với tiện tích Trình Duyệt Thu Phóng. Đây là video mô tả vắn tắt về cách dùng tiện ích Thu Phóng này trong trình duyệt web của bạn."
+   },
+   "writeareview": {
+      "message": "Viết bình luận"
+   }
+}

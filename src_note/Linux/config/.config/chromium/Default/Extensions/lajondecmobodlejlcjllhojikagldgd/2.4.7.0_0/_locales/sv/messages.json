@@ -1,0 +1,359 @@
+{
+   "about": {
+      "message": "Om"
+   },
+   "advancedoptions": {
+      "message": "Avancerade alternativ"
+   },
+   "areyouhappy": {
+      "message": "Are you happy about Zoom?"
+   },
+   "basicsettings": {
+      "message": "Grunderna"
+   },
+   "btnreset": {
+      "message": "Återställ"
+   },
+   "changelog": {
+      "message": "Ändringslogg"
+   },
+   "desallscreen": {
+      "message": "For all screen sizes"
+   },
+   "desallzoom": {
+      "message": "Använd zoomnivån på alla sidor."
+   },
+   "desbadge": {
+      "message": "Show the current zoom value in the Zoom Extension icon"
+   },
+   "desbrowserextension": {
+      "message": "webbläsartillägg"
+   },
+   "descontextmenu": {
+      "message": "Enable the right click menu to zoom in or out the web page"
+   },
+   "description": {
+      "message": "Zooma in eller ut webbinnehåll med zoom-knapparna för bekvämare läsning."
+   },
+   "desdefaultzoomvalue": {
+      "message": "Choose your default zoom level"
+   },
+   "deslargepopup": {
+      "message": "Show you a large popup window"
+   },
+   "desproject": {
+      "message": "projekt"
+   },
+   "desrememberpage": {
+      "message": "If this option is enabled, it will not show you the reminder page"
+   },
+   "desremfacebook": {
+      "message": "Recommend this on Facebook"
+   },
+   "desremyoutube": {
+      "message": "Subscribe on YouTube"
+   },
+   "dessinglescreen": {
+      "message": "For that screen size"
+   },
+   "deszoombydomain": {
+      "message": "Zoom at domain level"
+   },
+   "deszoombypage": {
+      "message": "Zoom at web page level"
+   },
+   "deszoomchrome": {
+      "message": "Use the built-in browser zoom"
+   },
+   "deszoomdoubleclick": {
+      "message": "Enable the option for double click to zooms in and a single click to zooms out the web page"
+   },
+   "deszoommousedirectiondown": {
+      "message": "Clockwise scroll"
+   },
+   "deszoommousedirectionup": {
+      "message": "Counter clockwise scroll"
+   },
+   "deszoommouseleft": {
+      "message": "Left mouse click"
+   },
+   "deszoommouseright": {
+      "message": "Right mouse click"
+   },
+   "deszoommousescroll": {
+      "message": "Hold the 'mouse button', and scroll up or down to change the zoom level"
+   },
+   "deszoomsteps": {
+      "message": "The zoom steps for the next value"
+   },
+   "deszoomweb": {
+      "message": "Use the web CSS zoom"
+   },
+   "donatecalltoaction": {
+      "message": "Donera nu!"
+   },
+   "donatepromotext": {
+      "message": "Om du kan göra en donation av valfri storlek, hade jag uppskattat det enormt!"
+   },
+   "donatetext": {
+      "message": "Due to the very small number of donations the project may be closed. Please support further development with a Donation."
+   },
+   "enjoyshare": {
+      "message": "Enjoy this extension and share it with others who you think will appreciate it."
+   },
+   "friendlyremember": {
+      "message": "Vänlig påminnelse..."
+   },
+   "guide": {
+      "message": "Z välkomstguide"
+   },
+   "help": {
+      "message": "Hjälp"
+   },
+   "lastchecked": {
+      "message": "Senaste version kontrollerad den"
+   },
+   "longdonatetext": {
+      "message": "I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
+   },
+   "name": {
+      "message": "Zoom"
+   },
+   "namechrome": {
+      "message": "Zoom for Google Chrome"
+   },
+   "nameedge": {
+      "message": "Zoom for Microsoft Edge"
+   },
+   "namefirefox": {
+      "message": "Zoom for Firefox"
+   },
+   "nameopera": {
+      "message": "Zoom for Opera"
+   },
+   "namesafari": {
+      "message": "Zoom for Safari"
+   },
+   "nothanks": {
+      "message": "Nej tack"
+   },
+   "optionpagetitle": {
+      "message": "Zoom - Inställningar"
+   },
+   "pageatitle": {
+      "message": "Zooma"
+   },
+   "pagehelp": {
+      "message": "hjälp"
+   },
+   "pagestillloading": {
+      "message": "Laddas sidan fortfarande?"
+   },
+   "productshare": {
+      "message": "Dela"
+   },
+   "promocalltoaction": {
+      "message": "Download it Now!"
+   },
+   "promotext": {
+      "message": "Want to use something new and amazing for your web browser? Try the $product$ Browser extension.",
+      "placeholders": {
+         "product": {
+            "content": "$1",
+            "example": "Turn Off the Lights"
+         }
+      }
+   },
+   "promotitle": {
+      "message": "Dagens tips"
+   },
+   "ratedes": {
+      "message": "And let everyone know about this great extension!"
+   },
+   "rateitema": {
+      "message": "Ge 5 stjärnor"
+   },
+   "ratetitle": {
+      "message": "Please rate & review my extension"
+   },
+   "rememberrate": {
+      "message": "Hastighet"
+   },
+   "reportbug": {
+      "message": "Rapportera ett problem"
+   },
+   "resetbrowserextension": {
+      "message": "Reset the Zoom settings"
+   },
+   "screenzoomvalue": {
+      "message": "Zoom value in percent (e.g. 80%)"
+   },
+   "settings": {
+      "message": "Inställningar"
+   },
+   "sharemenudonatetitle": {
+      "message": "Support Development"
+   },
+   "sharemenupostonfacebook": {
+      "message": "Post on Facebook"
+   },
+   "sharemenupostongoogleplus": {
+      "message": "Post on Google+"
+   },
+   "sharemenuratetitle": {
+      "message": "Rate this extension"
+   },
+   "sharemenusendatweet": {
+      "message": "Skicka en Tweet"
+   },
+   "sharemenusharetitle": {
+      "message": "Dela det här"
+   },
+   "sharemenutellafriend": {
+      "message": "Tipsa en vän"
+   },
+   "sharemenuwelcomeguidetitle": {
+      "message": "Välkomstguide"
+   },
+   "showremember": {
+      "message": "It doesn't show the reminder page when I open the Options"
+   },
+   "skipremember": {
+      "message": "Skip this, and open now the options page"
+   },
+   "tellothers": {
+      "message": "Ensures that your opinion counts"
+   },
+   "textfoot": {
+      "message": "Denna mjukvara är licensierad under licensen CC-GNU GPL. För att visa en kopia av denna licens, besök"
+   },
+   "titeladd": {
+      "message": "Lägg till"
+   },
+   "titelallzoom": {
+      "message": "Zooma in/ut allt"
+   },
+   "titelbadge": {
+      "message": "Badge"
+   },
+   "titelbadgecolor": {
+      "message": "Choose your background badge color"
+   },
+   "titelcontextmenu": {
+      "message": "Kontextmeny"
+   },
+   "titeldefaultzoomvalue": {
+      "message": "Default Zoom Level"
+   },
+   "titeldeveloper": {
+      "message": "Utvecklare"
+   },
+   "titeldownloadaaupgrade": {
+      "message": "The upgrade adds support for focusing selected images, and will display a gallery of images on the site."
+   },
+   "titeldownloadbutton": {
+      "message": "Hämta den här uppgraderingen!"
+   },
+   "titeldownloadupgrade": {
+      "message": "The entire page will be fading to dark, so you can watch the video as if you were in the cinema."
+   },
+   "titeldownloadupgradedatetoday": {
+      "message": "This extension show the analog clock in the menu bar. When you click on the icon, it shows you the current time; month and day of the week."
+   },
+   "titeldownloadupgradefinancetoolbar": {
+      "message": "This shows you the real time stock market information."
+   },
+   "titeldownloadupgradefullscreen": {
+      "message": "With this extension you can easy go to full screen. This for image, video and webpage."
+   },
+   "titeldownloadupgradepropermenubar": {
+      "message": "Add back the black menubar on the Google website."
+   },
+   "titellargepopup": {
+      "message": "Stort fönster"
+   },
+   "titelrememberpage": {
+      "message": "Kom ihåg sida"
+   },
+   "titelremove": {
+      "message": "Ta bort"
+   },
+   "titelreset": {
+      "message": "Återställ inställningar"
+   },
+   "titelrightsreserved": {
+      "message": "Some rights reserved."
+   },
+   "titelscreen": {
+      "message": "Skärmstorlek"
+   },
+   "titelscreendetect": {
+      "message": "Detect screen size"
+   },
+   "titelsharebutton": {
+      "message": "Delningsknappar"
+   },
+   "titelsharethis": {
+      "message": "Dela detta:"
+   },
+   "titelsync": {
+      "message": "Sync"
+   },
+   "titelsyncbrowser": {
+      "message": "Sync the extension settings with your other browser"
+   },
+   "titelupgrade": {
+      "message": "Uppgradera"
+   },
+   "titelwebsite": {
+      "message": "Webbplats"
+   },
+   "titelwelcome": {
+      "message": "Hej och välkommen"
+   },
+   "titelzoomdoubleclick": {
+      "message": "Knappåtgärd"
+   },
+   "titelzoomengine": {
+      "message": "Zoom Engine"
+   },
+   "titelzoommousescroll": {
+      "message": "Mushjul"
+   },
+   "titelzoomsteps": {
+      "message": "Steg"
+   },
+   "titledonatebutton": {
+      "message": "Donera"
+   },
+   "titleshortzoomin": {
+      "message": "Zoom in on the current web page"
+   },
+   "titleshortzoomout": {
+      "message": "Zoom out on the current web page"
+   },
+   "titleshortzoomreset": {
+      "message": "Reset the zoom value on the current web page"
+   },
+   "translateme": {
+      "message": "Hjälp översätta"
+   },
+   "upgradefbshare": {
+      "message": "Dela på Facebook"
+   },
+   "upgradetwshare": {
+      "message": "Tweet"
+   },
+   "version": {
+      "message": "Version"
+   },
+   "websitezoomvalue": {
+      "message": "Zoom value in percent (e.g. 80%)"
+   },
+   "welcomebasictext": {
+      "message": "Welcome on the Zoom Browser extension. Here a brief video about how to use the Zoom extension in your web browser."
+   },
+   "writeareview": {
+      "message": "Skriv en recension"
+   }
+}

@@ -1,0 +1,26 @@
+{
+   "description": {
+      "message": "點擊縮放按鈕，調整網頁顯示大小，讓瀏覽更舒適"
+   },
+   "name": {
+      "message": "縮放"
+   },
+   "namechrome": {
+      "message": "縮放 for Google Chrome"
+   },
+   "nameedge": {
+      "message": "縮放 for Microsoft Edge"
+   },
+   "namefirefox": {
+      "message": "縮放 for Firefox"
+   },
+   "nameopera": {
+      "message": "縮放 for Opera"
+   },
+   "namesafari": {
+      "message": "縮放 for Safari"
+   },
+   "pageatitle": {
+      "message": "縮放"
+   }
+}

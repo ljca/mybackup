@@ -1,0 +1,86 @@
+{
+   "chromesysAllowFileAccess": {
+      "message": "Allow access to file URLs"
+   },
+   "chromesysChange": {
+      "message": "Change..."
+   },
+   "chromesysDownloadLocation": {
+      "message": "Download location"
+   },
+   "chromesysDownloadSaveAsPrompt": {
+      "message": "Ask where to save each file before downloading"
+   },
+   "chromesysDownloadsSection": {
+      "message": "Downloads"
+   },
+   "chromesysFailed_SERVER_UNAUTHORIZED": {
+      "message": "Needs authorisation"
+   },
+   "chromesysFailed_USER_CANCELED": {
+      "message": "Cancelled"
+   },
+   "chromesysFontSize": {
+      "message": "Font size"
+   },
+   "chromesysLanguageSection": {
+      "message": "Language"
+   },
+   "chromesysShowAdvSettings": {
+      "message": "+ Show advanced settings"
+   },
+   "chromesysWebStore": {
+      "message": "Chrome Web Store"
+   },
+   "errorNoID": {
+      "message": "Failed to add new task because there are too many tasks in the Manager. Please remove some unwanted tasks and try again."
+   },
+   "fieldReferer": {
+      "message": "Referrer"
+   },
+   "fieldState": {
+      "message": "Status"
+   },
+   "labelBGConstantColor": {
+      "message": "Solid colour"
+   },
+   "labelBGImageURL": {
+      "message": "Customised image URL"
+   },
+   "msgSelectTaskInfo": {
+      "message": "No item selected."
+   },
+   "msgTaskAddPaused": {
+      "message": "Paused task added"
+   },
+   "msgTitleUpdateAvail": {
+      "message": "New version available"
+   },
+   "optItemDefFolder": {
+      "message": "Default location"
+   },
+   "optOptionPrompt": {
+      "message": "Ask"
+   },
+   "optSectionBehaviors": {
+      "message": "Behaviour"
+   },
+   "ruleRecycled": {
+      "message": "Bin"
+   },
+   "tipBtnRecycle": {
+      "message": "Move to bin"
+   },
+   "tipOptSectionTaskDefaults": {
+      "message": "Default settings to be applied when adding new tasks, e.g.  One-Click downloads"
+   },
+   "translateContributors": {
+      "message": "zach, RaceProUK, tom, Thomas Thorne, Callum McLean, Jarva, milesmuso.mf, Steve Whitaker etc."
+   },
+   "uilang": {
+      "message": "en-GB"
+   },
+   "uilangName": {
+      "message": "English (United Kingdom)"
+   }
+}
