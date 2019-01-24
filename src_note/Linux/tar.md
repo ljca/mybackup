@@ -9,6 +9,7 @@
 > `tar [other options] -{<c|r|A|x|d>}f tar归档文件 文件1|目录1[...文件n|目录n]`，归档选项：
 
 + -c | --create 创建一个新的归档，可以调用压缩工具在归档的同时压缩归档。
++ --remove-files 在将文件归档到一个归档文件中之后移除已经归档的文件。
 
 **&nbsp;&nbsp;尽管下列的这些选项在更新归档文件时非常有用，然后不幸的是这只对那些在归档之前没有调用任何压缩工具的tar归档有效。e.g: `tar --delete -cf test.tar test.txt`**
 
@@ -25,7 +26,6 @@
 
 >  `tar -xf test.tar.bz2`，解包选项：
 
-+ --remove-files 在将文件归档到一个归档文件中之后就会移除已经归档的文件。
 + --xattrs 在归档文件时保留用户权限等属性,归档文件时使用。--remove-files在展开归档文件时使用无效
 + --strip-components=n 解压时跳过[^strip]n级目录
 + -p 在展开归档时保留文件的用户权限，展开归档文件时使用
