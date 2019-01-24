@@ -149,9 +149,12 @@ vim /etc/hosts
 # Install Grub to the Disk boot partition And Update Grub Configure
 pacman -S --needed os-prober grub efibootmgr dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=boot --boot-directory=/boot/efi/EFI/boot --compress="xz" --debug
+
+cd /boot/efi/EFI/boot
+mv -ibv grubx64.efi bootx64.efi 
 # Or grub-mkstandalone --directory="/usr/lib/grub/x86_64-efi" --format="x86_64-efi" --compress="xz" --output="arch_grub.efi" "boot/grub/grub.cfg=/tmp/grub.cfg"
 # Then Update Grub Configure:
-grub-mkconfig -o /boot/efi/EFI/Arch/grub/grub.cfg
+grub-mkconfig -o /boot/efi/EFI/boot/grub/grub.cfg
 ```
 
 ```Bash
@@ -258,12 +261,13 @@ reboot
 
 [list_package]: https://wiki.archlinux.org/index.php/List_of_applications_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E6.88.AA.E5.8F.96.E5.B1.8F.E5.B9.95
 
-
 --------------------------------
 
-# FIQ
+# FAQ
 
 [^uefi]: 你可以在 [UEFI WIKI] 获得关于 UEFI 和 BIOS 的详细解释。如果你不打算使用 UEFI，那么以下的磁盘分区方案和 grub 安装引导方式将不适合您的计算机，你可能需要再次查看 Arch Linux wiki. boot目录下用于安装系统内核和初始化文件系统，这个目录名称最好不要随意更改,为了不将引导和内核混在一起，`/boot/efi`。
+
+[^secure_boot]: 安全引导并非不可引导 Linux，你只要在 UEFI 设置中添加自己信任的 efi 引导项即可，然后就无需理会 Windows Boot Manager（是的，完全无需理会！也不用去管 Windows 的 bcdedit 了。我甚至还在 EFI 目录下改掉了 Microsoft 这个名字，只因不想 UEFI 发现 Windows 自带的 Windows Boot Manager 并尝试加载它）。当然，这有可能需要更新 BIOS。如果你更新了 BIOS 还是没能发现添加 efi 的选项，那么还是老实的禁用掉 secure boot 吧。
 
 [^1]: 制作启动盘的方式是多样的。在 Linux 上，你可以直接使用 dd 或者 cat。 在 Windows 上，使用第三方工具(然而遗憾的是，大名鼎鼎的软碟通制作出来的启动盘并不支持UEFI方式启动)来完成启动盘的制作。
 
@@ -273,6 +277,6 @@ reboot
 
 [^swap]: 我们非常建议你启用一个交换分区（如果你的计算机有很多内存而又不打算休眠系统，那么设置交换空间这种做法看上去好像很鸡肋），但是如果你的 Linux 用作开发，在编译某些大型软件时，交换分区是很有用的。不必太大，即使你的系统拥有足够的内存可使用。当然，如果你计算机内存不是很富足，你不应该尝试使用交换分区来代替物理内存，那是没有用的。
 
-[^efi]: **如果你打算用其它系统的 grub 来引导，那就可以不用挂载 EFI～**
+[^efi]: **如果你打算用其它系统的 grub 来引导，那就可以不用安装和挂载 EFI～**
 
 [^boot_efi]: 没有 EFI 分区而又打算使用 UEFI 启动，创建 EFI 系统分区：`mkfs.vfat -F32 -s1 -n ESP /dev/sda1`

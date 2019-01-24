@@ -11,7 +11,7 @@
 
 ======== dir:/boot/.../grub/themes/books/ =========
 
-```
+```log
 ├── books.png # Grub 背景图片
 ├── theme.txt # Grub 主题定义文件，
 ├── icons  # 一组 OS 图标（可以仅收集已安装系统的）
@@ -43,7 +43,7 @@
 
 &nbsp;&nbsp; 如果你希望自定义`Grub`主题，一个格式是纯文本的文件（文件名倒是可以随意，但引用时必须一致）是必须的，它被用来定义`Grub`主题样式。
 
-> [themes.txt](themes.txt)
+> [themes.txt](config/themes.txt)
 
 &nbsp;&nbsp;如果你在第一次更改`Grub`主题文件后已经更新过了`Grub`配置文件，那么之后如果仅仅是对`Grub`主题文件作了修改就不再需要更新`Grub`配置文件…… 然后更新`Grub`配置文件应用`Grub`主题： `/etc/default/grub`,`/etc/grub.d/40-custom`....还可以是其它的[^2]。
 
