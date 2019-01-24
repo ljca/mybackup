@@ -65,6 +65,8 @@ sudo dmsetup status
 cat /proc/mdstat
 ```
 
+> 参考：
+
 + [RAID (简体中文) - ArchWiki][raid]
 + [软RAID管理命令mdadm详解 _ 旺旺知识库](http://www.toxingwang.com/linux-unix/linux-basic/1048.html)
 + [关于GPT磁盘的分区表备份-红联Linux系统门户](http://www.linuxdiyf.com/viewarticle.php?id=310996)
