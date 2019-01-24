@@ -167,7 +167,7 @@ defaults.ctl.card 1
 
 [alsa]: https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E7.94.A8.E6.88.B7.E6.9D.83.E9.99.90
 
-[^softmix]: 虽然我由此而接触到了混音的概念，但奇怪的是，我并没有因此而学到更多，因为我以前是用的`Windows`，而在`Windows`上似乎不会去思考声卡独占这种`Windows`用户可能认为很奇葩的而在`Linux`上（哦，不对，一些现代 Linux 已经正确配置了声卡并启用了混音。）确实又存在的系统问题……
+[^softmix]: 虽然我由此而接触到了混音的概念，但奇怪的是，我并没有因此而学到更多，因为我以前是用的`Windows`，而在`Windows`上似乎不可能存在这种问题。虽然，现代 Linux 早已正确配置了声卡并启用了混音……
 
 ## 如何让显示管理器在其它的tty启动[^start]？
 
