@@ -1,35 +1,22 @@
 # Arch Linux 的安装配置笔记
 
-> *&nbsp;&nbsp;本次安装的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*
+> *&nbsp;&nbsp;本次安装的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi][^secure_boot]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*
 
-**&nbsp;&nbsp;你必须已经准备好了引导盘[^1][^2]，可以是可启动的 U 盘，光盘，甚至如果你有系统镜像并且系统上已经安装了某一个 Linux 发行使用 GRUB2 引导，你还可以直接使用 GRUB2 引导。同时，你还可以选择从网络引导。**
+**&nbsp;&nbsp;你必须已经准备好了引导盘[^boot]，可以是可启动的 U 盘，光盘，甚至如果你有系统镜像并且系统上已经安装了某一个 Linux 发行使用 GRUB2 引导，你还可以直接使用 GRUB2 引导。同时，你还可以选择从网络引导。**
 
-## Start Install[^start_install]
+## Start Install[^start]
 
-**&nbsp;&nbsp;我们假定你已经准备好了启动盘和规划好了系统分区，后期版本的Arch系统并没有提供安装框架(伪图形界面的安装引导程序)；所以，在这里，所有安装任务都需要你使用命令（会有一份详细指南）完成。Live系统默认采用的shell是zsh,并且提供了bash，/root 目录下的 install.log 简要的叙述了安装步骤。**
-
-### set network(only wifi and  used wpa2)
+### set network
 
 ```Bash
-# 如果你使用的以太网工作不正常
 systemctl restart dhcpcd@enp2s0.service
 # 或者
 systemctl stop dhcpcd@enp2s0.service
 ifconfig enp2s0f1 up
 dhcpcd enp2s0f1 
-
-# If 你使用的 wifi 而且 SSID 使用的是 wpa 及更高加密方式，only run：
-wifi-menu
-# 如果你不喜欢 wifi-menu 那丑陋的伪图形界面，那你可以试下用 wpa_supplicant 和 dhcpcd 来连接加密方式为 wpa,wpa2及更高以上的无线网络。
-# 确认并打开网络接口准备扫描无线网络：
-ifconfig -a
-ip link set wlp3s0 up # ifconfig wlp3s0 up
-iw [dev] wlp3s0 scan[|grep -i ssid]
-# if ... already knowned ssid and psk,use 
-wpa_supplicant -iwlp3s0 -c<(wpa_passphare "ssid" "psk") -B && dhcpcd wlp3s0
 ```
 
-> 参考：
+>  `wifi-menu` 可以用来直接选择并连接到一个无线网络[^wifi_menu]。 参考：
 
 + [Arch Linux实现wifi和有线联网_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2016-11/137666.htm)
 + [archlinux 无线网卡资料一-heiyou-ChinaUnix博客](http://blog.chinaunix.net/uid-108863-id-136997.html)
@@ -44,6 +31,7 @@ wpa_supplicant -iwlp3s0 -c<(wpa_passphare "ssid" "psk") -B && dhcpcd wlp3s0
 [wireless]: https://wiki.archlinux.org/index.php/Wireless_network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
 ### Update system date and timezone
+
 > **请务必确认系统时钟正确与否，因为系统时钟错误将会产生非常严重的后果。。。**
 
 ```Bash
@@ -63,7 +51,7 @@ timedatectl set-localtime-rtc true
 cd /etc/pacman.d
 grep -i -A1 "china" mirrorlist | vim -
 # 编辑软件源配置文件之后需要初始化源和软件源钥匙环文件(gpg)
-pacman-key --init && pacman-key --populate archlinux
+#pacman-key --init && pacman-key --populate archlinux
 pacman -Syy
 ```
 
@@ -143,7 +131,7 @@ vim /etc/hosts
 # Install 常用 Program
 .....
 ```
-### 安装 Grub
+### 安装 Grub[^grub]
 
 ```
 # Install Grub to the Disk boot partition And Update Grub Configure
@@ -267,16 +255,20 @@ reboot
 
 [^uefi]: 你可以在 [UEFI WIKI] 获得关于 UEFI 和 BIOS 的详细解释。如果你不打算使用 UEFI，那么以下的磁盘分区方案和 grub 安装引导方式将不适合您的计算机，你可能需要再次查看 Arch Linux wiki. boot目录下用于安装系统内核和初始化文件系统，这个目录名称最好不要随意更改,为了不将引导和内核混在一起，`/boot/efi`。
 
-[^secure_boot]: 安全引导并非不可引导 Linux，你只要在 UEFI 设置中添加自己信任的 efi 引导项即可，然后就无需理会 Windows Boot Manager（是的，完全无需理会！也不用去管 Windows 的 bcdedit 了。我甚至还在 EFI 目录下改掉了 Microsoft 这个名字，只因不想 UEFI 发现 Windows 自带的 Windows Boot Manager 并尝试加载它）。当然，这有可能需要更新 BIOS。如果你更新了 BIOS 还是没能发现添加 efi 的选项，那么还是老实的禁用掉 secure boot 吧。
+[^secure_boot]: 一般而言，安装 Linux 并不困难，不过安全引导（secure boot）和快速启动（quick boot）都会使 UEFI 跳过 Linux 的引导。安全引导[^secureboot]并非不可引导 Linux（实际上，经过特殊处理过的 efi 也可引导操作系统。不过，使用 secure boot 引导的 Windows 没法在系统启动时加载一些需要使用注册表加载的自启程序），你只要在 UEFI 设置中添加自己信任的 efi 引导文件后适当的调整一下引导顺序即可，然后就无需理会 Windows Boot Manager（是的，完全无需理会！也不用去管 Windows 的 bcdedit 了。我甚至还在 EFI 目录下改掉了 Microsoft 这个名字，只因不想 UEFI 发现 Windows 自带的 Windows Boot Manager 并尝试加载它）。当然，这有可能需要更新 BIOS。如果你更新了 BIOS 还是没能发现添加 efi 的选项，并且无所谓那个病毒的恐吓，我建议还是禁用掉 secure boot 吧。
 
-[^1]: 制作启动盘的方式是多样的。在 Linux 上，你可以直接使用 dd 或者 cat。 在 Windows 上，使用第三方工具(然而遗憾的是，大名鼎鼎的软碟通制作出来的启动盘并不支持UEFI方式启动)来完成启动盘的制作。
+[^boot]: 制作启动盘的方式是多样的。在 Linux 上，你可以直接使用 dd 或者 cat。 在 Windows 上，可以试下 rufus（旧版软碟通并不支持UEFI方式启动）。不过你要是希望被用作启动盘后的 U 盘还可以作为普通的磁盘读写，可以试下转换 U 盘分区表到 GPT（哦，对了，转换分区表并不需要对U盘重新格式化），在 Windows 平台，无损转换分区表的软件有很多。转换 U 盘分区表为 GPT 之后（这种方式同样支持 windows 8），并创建一个 fat32 的首分区（为了可以用来安装 Windows 8.1，我分给了它足足 4 个多 G 的空间。至于为什么还要弄其它分区，那是因为 Fat32 限制了单个文件的大小超过 4G）。然后挂载 U 盘首分区和 Arch Linux iso 并复制ISO镜像中的所有目录和文件到刚才创建好的 fat32 分区根目录下(最好备份U盘文件，也可以将之前文件和目录集中放到一个临时目录下，为了避免与系统文件和目录出现混淆，另外，重设卷标)，当然，这只适合 UEFI GPT 硬盘的的启动以及引导方式。
 
-[^2]: 如果你希望被用作启动盘后的 U 盘仍然可以当作普通的磁盘读写，那么你可以尝试转换 U 盘分区表。如果你的 U 盘是 MBR 分区表（将它的分区表转换为 `GPT` 会有一个好处：那就是无需对U盘重新格式化），在 Windows 平台，无损转换分区表的软件有很多。转换 U 盘分区表为 GPT（这种方式同样支持 windows 8），并创建一个 fat32 的首分区（如果你有给 U 盘创建多分区的打算的话）。然后挂载 U 盘首分区和 Arch Linux iso 并复制 iso 里的所有文件到 U 盘首分区。复制ISO镜像中的所有目录和文件到U盘根目录下(最好备份U盘文件，也可以将之前文件和目录集中放到一个临时目录下，为了避免与系统文件和目录出现混淆，另外，重设卷标)，当然，这只适合 UEFI 的启动以及引导。
+[^start]: **我们假定你已经准备好了启动盘和规划好了系统分区，后期版本的Arch系统并没有提供安装框架(伪图形界面的安装引导程序)；所以，在这里，所有安装任务都需要使用命令（会有一份详细指南）完成。Live系统默认采用的shell是zsh,并且提供了bash，/root 目录下的 install.log 简要的叙述了安装步骤。 如果一切顺利，将会出现Arch的引导菜单(如果使用自定义的制作启动盘的方式，并且没有将U盘卷标设为镜像文件挂载之后的卷标，则务必编辑引导菜单中的label的值部分（或者，可以不用 label 而是直接用设备名或者是 UUID 什么的）,在这里，默认值为系统名称和发行时间。lable值应该和 U 盘卷标一样)，然后回车引导系统；如果顺利，系统将会初始化多个虚拟控制台，并且在第一个控制台tty1出现一个命令提示符并以 root 用户自动登录，否则会卡在挂载文件系统这一项系统任务上。**
 
-[^start_install]: 如果一切顺利，则会出现Arch的引导菜单(如果使用自定义的制作启动盘的方式，并且没有将U盘卷标设为镜像文件挂载之后的卷标，则务必编辑引导菜单中的label的值部分（或者，可以不用 label 而是直接用设备名或者是 UUID 什么的）,在这里，默认值为系统名称和发行时间。lable值应该和 U 盘卷标一样)，然后回车引导系统；如果顺利，系统将会初始化多个虚拟控制台，并且在第一个控制台tty1出现一个命令提示符并以 root 用户自动登录，否则会卡在挂载文件系统这一项系统任务上。
+[^wifi_menu]: 有时候，对于使用 wpa+ 加密的无线网络，我更愿意使用 wpa_supplicant 和 dhcpcd，因为 wifi_menu 不认识中文的 ESSID 。
 
-[^swap]: 我们非常建议你启用一个交换分区（如果你的计算机有很多内存而又不打算休眠系统，那么设置交换空间这种做法看上去好像很鸡肋），但是如果你的 Linux 用作开发，在编译某些大型软件时，交换分区是很有用的。不必太大，即使你的系统拥有足够的内存可使用。当然，如果你计算机内存不是很富足，你不应该尝试使用交换分区来代替物理内存，那是没有用的。
+[^swap]: 我们非常建议你启用一个交换分区（即使你的计算机拥有足够多的内存而又不打算休眠系统，那么设置交换空间这种做法看上去好像很鸡肋），不过 Linux 用作开发，在编译某些大型软件时，交换分区还是很有用的。不必太大，当然，如果内存不是很富足，不应该尝试使用交换分区来代替物理内存，那是没有用的。
 
 [^efi]: **如果你打算用其它系统的 grub 来引导，那就可以不用安装和挂载 EFI～**
 
 [^boot_efi]: 没有 EFI 分区而又打算使用 UEFI 启动，创建 EFI 系统分区：`mkfs.vfat -F32 -s1 -n ESP /dev/sda1`
+
+[^secureboot]: 有资料显示这是为了阻止某种病毒。UEFI 默认引导管理器的 efi 文件存放的位置和名称总是固定的（`EFI/boot/bootx64.efi`，这是 64 位的），除非使用另外的方式。据说这是为了解决 MBR 的弊端。每一个组织都希望用自己的引导管理器来引导其它的操作系统，因此，如果是在安装 Windows 之前安装的 Linux，就算是安装了其它的引导管理器，如果没有进行配置，依旧不能进入 Linux。Windows Boot Manager 会将原来的引导管理器覆盖掉（是的，覆盖掉，并且还不会去搜索硬盘上的其它非 Win 系统。一旦出现这种事情，那就不得不重新安装可以发现硬盘上所有 OS 的引导管理器，我们称之为`引导修复`）。
+
+[^grub]: grub 就是一个可以用来搜索并引导硬盘上 OS 的引导管理器。在 grub 没有出现之前， loli 担任了这个任务。而 syslinux 是一种驱动。

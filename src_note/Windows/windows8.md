@@ -18,6 +18,26 @@
 + [Firefox：一个免费的高自定义(扩展很多)浏览器的扩展小配置](firefox.md)
 + [Windows Applications List](programfiles.md)
 
+## 修复[^repier] windows 8: `sfc /scannow`
+
+![](images/1548505975_5924.png)
+
+```cmd
+REM:: 如果修复失败可以尝试一下 DISM 联机修复
+DISM.exe /Online /Cleanup-image /Restorehealth
+
+REM 挂载 Windows 系统镜像，然后使用镜像修复
+
+REM Dism /Image:C:\offline /Cleanup-Image /RestoreHealth /Source:c:\test\mount\windows
+
+REM DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:h:\Windows /LimitAccess
+```
+
++ [解决Windows 资源保护找到了损坏文件但无法修复问题](https://wangye.org/blog/archives/1081/)
++ [使用系统文件检查器工具修复丢失或损坏的系统文件](https://support.microsoft.com/zh-cn/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system)
++ [Repair a Windows Image](http://technet.microsoft.com/zh-cn/library/hh824869.aspx)
+
+
 > 参考：
 
 + [360个人图书馆 轻松解除网页防复制  老D](https://laod.cn/black-technology/360doc-copy.html)
@@ -55,3 +75,5 @@
 + 宏碁v3 572g换高清屏_笔记本吧_百度贴吧
 + 笔记本电脑排线怎么拆 笔记本各种排线的拆卸教程_笔记本_硬件教程_脚本之家
 + 经典怀旧：VirtualBox安装Win95 - 详细图片展示 - 银河军团的日志 - 网易博客
+
+[^repier]: 因为我的误操作导致了 Win8 Metro 界面的所有应用包括 Win8 设置都无法正常使用。

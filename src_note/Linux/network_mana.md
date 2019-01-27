@@ -20,15 +20,18 @@ ip link show
 dhcpcd wlp3s0
 ```
 
-
 ### 连接[^conn]到使用 WPA 或者 WPA2 加密的无线热点[^wlan]
 
 ```Bash
+## 初始化无线网卡并连接到设备 wpa_supplicant -iwlp3s0 -c<(wpa_passphare "ssid" "psk") -B
 wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
 
 # 手动给无线网卡分配 IP 
 ip address add 192.168.43.111/24 broadcast 192.168.43.255 [dev] wlp3s0
 ip link set [dev] wlp3s0 up # 添加默认路由时需要打开网卡接口
+# 确认并打开网络接口准备扫描无线网络
+ifconfig -a
+ip link set wlp3s0 up # ifconfig wlp3s0 up
 ip route add default via 192.168.43.1 # 或者使用 route add default gw 192.168.43.1
 
 # 关闭网络接口
@@ -49,8 +52,6 @@ ip link set [dev] wlp3s0 down
 #1. find network adapter interface name
 ifconfig -a # or:
 ip
-
-# Warning！一些指令需要用根用户权限运行！
 
 #2. 给以太网适配器添加一个 IP，手动分配 IP,example：
 
@@ -83,7 +84,7 @@ ifconfig [option] enp2s0f1 up # 或者 ip link set enp2s0f1 up
 dhcpcd enp2s0f1
 ```
 
-> 如果你希望手动删除给网卡分配的 IP
+> 手动删除给网卡分配的 IP
 
 ```Bash
 # 更常用的做法
@@ -102,7 +103,7 @@ ip -f inet addr delete 192.168.2.13/32 enp2s0f1
 
 ```
 
-**&nbsp;&nbsp;如果你希望了解更多，可以参阅各种 Unix 及其变体包括 Linux 的 Wiki， Wiki 百科。**
+**&nbsp;&nbsp;参阅各种 Unix 及其变体包括 Linux 的 Wiki， Wiki 百科。**
 
 + [Arch Linux wiki 网络配置][net_set]
 
@@ -160,7 +161,7 @@ iw [dev] <interface> scan | grep -i 'ssid*'
 
 [^wlan]: &nbsp;&nbsp;无线 AP(WIFI)和无线网络(WLAN)是一个截然不同的概念。目前，无线网又分加密的和开放的，开放的又分验证登录的和直接可连接的，加密的又分 WEB 、WPA、WPA2 几种。其中，WPA2 加密等级最高，即最安全。`WPA2` 使用 `RSA`() 加密。比 `WPA`(WIFI Pro Acecess) 协议保护性更高。
 
-[^conn]: &nbsp;&nbsp;你必须事先知道网络 SSID 和密钥。直接使用 `iw` 或者 `iwlist` 扫描仅仅能获取到网络的 SSID 以及一些基本信息，网络密码是不可能出现在扫描结果中的。然后使用 `wpa_passphrase` 将 SSID 和密钥（密钥在写入过程会经过加密，一般用户是没有权限查看的）写入配置文件，一般是 `/etc/wpa_supplicant/wpa_supplicant.conf`，`wpa_supplicant` 可能会用到它。当然，你完全可以使用进程替换(类似 `wpa_supplicant -i wlp3s0 -B -c <(wpa_passphrase "ESSID" "PSK")` 的方式来避免频繁的对配置文件进行写入和读取。
+[^conn]: &nbsp;&nbsp;你必须事先知道网络 SSID 和密钥。使用 `iw` 或者 `iwlist` 扫描 `iw [dev] wlp3s0 scan[|grep -i ssid]` 只能获取到网络的 SSID 和一些基本信息，密码是不可能出现在扫描结果中的。 然后使用 `wpa_passphrase` 将 SSID 和密钥（密钥在写入过程会经过加密，一般用户是没有权限查看的）写入配置文件，一般是 `/etc/wpa_supplicant/wpa_supplicant.conf`，`wpa_supplicant` 可能会用到它。当然，你完全可以使用进程替换(类似 `wpa_supplicant -i wlp3s0 -B -c <(wpa_passphrase "ESSID" "PSK")` 的方式来避免频繁的对配置文件进行写入和读取。
 
 [^ip]: &nbsp;&nbsp;这里分配的 IP 只是局域的。
 
