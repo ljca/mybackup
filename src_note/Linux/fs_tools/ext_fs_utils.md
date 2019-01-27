@@ -1,7 +1,7 @@
 # §. Ext文件系统工具
 
-+ §. badblocks
-+ §. chattr
++ badblocks
++ chattr
 
 ```Bash
 chattr [Options] +-=[Aais..]
@@ -13,22 +13,22 @@ i:如果将这个属性对目录或者文件直接应用，那么将不能对文
 s:让文件或者目录在移除时可以被彻底删除并释放空间
 ```
 
-+ §. compile_et
-+ §. debugfs
-+ §. dumpe2fs
-+ §. e2freefrag
-+ §. e2fsck
-+ §. e2image
-+ §. e2label
-+ §. e2undo
-+ §. e4crypt
-+ §. e4defrag
-+ §. filefrag
-+ §. fsck.ext2
-+ §. fsck.ext3
-+ §. fsck.ext4
-+ §. logsave
-+ §. lsattr：显示文件的隐藏属性。用法：
++ compile_et
++ debugfs
++ dumpe2fs
++ e2freefrag
++ e2fsck
++ e2image
++ e2label
++ e2undo
++ e4crypt
++ e4defrag
++ filefrag
++ fsck.ext2
++ fsck.ext3
++ fsck.ext4
++ logsave
++ lsattr：显示文件的隐藏属性。用法：
 
 ```Bash
 lsattr Options file/Directory
@@ -37,15 +37,15 @@ Options:
 -a:显示所有文件或者目录的隐藏属性
 ```
 
-+ §. mk_cmds
-+ §. mke2fs
-+ §. mkfs.ext2
-+ §. mkfs.ext3
-+ §. mkfs.ext4
-+ §. mklost+found
-+ §. resize2fs
-+ §. tune2fs
++ mk_cmds
++ mke2fs
++ mkfs.ext2
++ mkfs.ext3
++ mkfs.ext4
++ mklost+found
++ resize2fs
++ tune2fs
 
 # 附
 
-+ [可扩展文件系统(Ext)数据恢复笔记](recovery_data.md)
++ [数据恢复工具](../recovery_data.md)
