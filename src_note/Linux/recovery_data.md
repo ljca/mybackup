@@ -1,4 +1,4 @@
-# 可扩展文件系统(Ext)数据恢复笔记
+# 数据恢复笔记
 
 &nbsp;&nbsp;关于`Linux`上可扩展文件(Ext)系统的数据存放原理及组织方式，我不得而知。以下仅对其恢复工具的用法进行简要的讨论：
 
@@ -55,7 +55,7 @@ sudo ntfsundelete /dev/sda9 -u -i `sudo ntfsundelete /dev/sda9 -m "*.mp4"|sed '1
 for d in $(for i in `find ../video/ -type f -size 0 -name "*.mp4"`;do basename $i;done|xargs);do cp -ibv "$d" ../video/1069/;done`
 ```
 
-[^ntfs]: 虽然 Linux 内核已经提供了 NTFS 模块，但只能读取 NTFS 文件而不支持写入。如果想要在 NTFS 上创建、删除、更新文件，还要在 Linux 上按安装 ntfs-3g。ntfs-3g 软件包不仅提供了支持 NTFS 读取/写入的模块，还提供了一系列用于 NTFS 的工具集。
+[^ntfs]: 虽然 Linux 内核已经提供了 NTFS 模块，但只能读取 NTFS 文件而不支持写入。如果想要在 NTFS 上创建、删除、更新文件，还要在 Linux 上安装 ntfs-3g。ntfs-3g 软件包不仅提供了支持 NTFS 读取/写入的模块，还提供了一系列用于 NTFS 的工具集。
 
 [^undelete]: ntfsundelete 属于 ntfs-3g，似乎要运行的更快更高效。
 
