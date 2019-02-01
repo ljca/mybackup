@@ -45,7 +45,7 @@ sudo ext4magic  -R -b $(date -d "-42day" +%s) /dev/sda7 -d /mnt
 
 [^win]: 在`Windows`上，你可以尝试一下&nbsp;D-Recovery&nbsp;For&nbsp;Linux&nbsp;等工具，一些新的工具正在开发中，也许不久之后就会上市。
 
-+ ntfsundelete[^undelete]：恢复在 NTFS 文件系统上误删的文件。 `sudo ntfsundelete /dev/sda9 -m "*.mp4"` [output](ntfsundelete.log) [output](ntfsundelete.log)
++ ntfsundelete[^undelete]：恢复在 NTFS 文件系统上误删的文件。 `sudo ntfsundelete /dev/sda9 -m "*.mp4"` [output](ntfsundelete.logs)
 
 ```Bash
 sudo ntfsundelete /dev/sda9 -u -i `sudo ntfsundelete /dev/sda9 -m "*.mp4"|sed '1,2d;/^$/d;$d'|cut -d" " -f-1|xargs|tr ' ' ','` -d ./tmp
