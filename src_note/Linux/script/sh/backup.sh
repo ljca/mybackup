@@ -26,16 +26,18 @@ case $OSTYPE in
         back_dir=/media/Others/Backup/myback/src_note/Linux/config
         mkdir -p $back_dir/.vim
         cd 
-        cp -ur .config/{i3*,gtk*,font*} $back_dir &> /dev/null
+        #cp -ur .config/{i3*,gtk*,font*,qt*} $back_dir &> /dev/null
+        cp -ur ~/.config/{*.[a-z]?*,qt*,xfce4,vnote,i3*,tilda,font*,gtk-*} $back_dir
         #tar -cRJf $back_dir/config.tar.xz .config &> /dev/null
         cp -u .vim/{gvim*,vim*} $back_dir/.vim &> /dev/null
-        cp -u .tmux.conf .bash* .fbtermrc .pythonhist .inputrc .gtkrc-2.0 .zsh* .myclirc .xinitrc .Xresources .xprofile $back_dir
-        cp -ru .*conf* .*his* .*rc* .*profile* $back_dir &> /dev/null
+        #cp -u .tmux.conf .bash* .fbtermrc .pythonhist .inputrc .gtkrc-2.0 .zsh* .myclirc .xinitrc .Xresources .xprofile $back_dir
+        cp -ru .*.conf .*his* .*rc* .*profile .Xresources $back_dir &> /dev/null
         echo "Backup user shell scripts...."
         cp -ru /home/external/sh $back_dir/../script
 
-        echo "pushd git...."
+        echo "Checking the networks...."
         if ping -c 2 www.baidu.com &> /dev/null;then
+          echo "pushd git...."
           cd $back_dir/../../..
           git add .
           #git commit -m "My Backup scripts."
