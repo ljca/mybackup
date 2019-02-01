@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+ "/WEB-INF/dtd-xml/xwork-validator-1.0.2.dtd">
+<!-- "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+-->
+<validators>
+	<!-- 用户名验证 -->
+	<field name="user.uname">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>用户名不能为空！</message>
+		</field-validator>
+		<!-- <field-validator type="stringlength"> <param name="maxLength">10</param> 
+			<param name="minLength">6</param> <message>用户名长度必须在${minLength}和${maxLength}之间！</message> 
+			</field-validator> -->
+	</field>
+	<!-- 密码验证 -->
+	<field name="user.pwd">
+		<field-validator type="requiredstring">
+			<message>密码不能为空！</message>
+		</field-validator>
+		<!-- <field-validator type="stringlength"> <param name="minLength">6</param> 
+			<message>密码长度不能小于${minLength}</message> </field-validator> -->
+	</field>
+	<!-- 重复密码验证！ -->
+	<field name="repwd">
+		<field-validator type="requiredstring">
+			<message>确认密码不能为空！</message>
+		</field-validator>
+		<!-- <field-validator type="fieldexpression"> <param name="regex">user.pwd==repwd</param> 
+			<message>两次输入密码必须匹配！</message> </field-validator> -->
+	</field>
+</validators>

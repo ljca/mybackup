@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT tmps (tmp*,stu*)>
+<!ELEMENT tmp (year)>
+<!ELEMENT year (#PCDATA)>
+<!--<!ELEMENT id (#PCDATA)> <!ELEMENT name (#PCDATA)>-->
+
+<!ELEMENT stu (id,name,age,sex,address,tel)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>

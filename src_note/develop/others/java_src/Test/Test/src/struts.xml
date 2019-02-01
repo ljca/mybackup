@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" 
+"struts-2.1.7.dtd" >
+<struts>
+	<!-- <constant name="StrutsDev" value="true"></constant> -->
+	<package name="temp" extends="struts-default" namespace="">
+<!-- 		<action name="helloWorld" class="test.struts.HelloWorldAction">
+			<result name="success">/jsp/helloWorld.jsp</result>
+		</action>
+
+		<action name="login" class="test.struts.UserStruts">
+			<result name="success">/jsp/tmp.jsp</result>
+			<result name="error">/jsp/tmp.jsp</result>
+		</action> -->
+		<action name="register" class="test.struts.RegisterAction" >
+			<result name="input">/register.jsp</result>
+			<!-- <result name="tmp">/register.jsp</result> -->
+			<result name="success">/index.jsp</result>
+			<!-- <result name="error">/jsp/register.jsp</result> -->
+		</action>
+		
+		<action name="ognlAction" class="test.struts.TestOGNLAction">
+		<result name="success">/testognl.jsp</result>
+		</action>
+		
+	</package>
+</struts>

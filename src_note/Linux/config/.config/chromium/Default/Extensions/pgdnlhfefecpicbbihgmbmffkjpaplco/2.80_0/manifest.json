@@ -1,0 +1,28 @@
+{
+   "author": "Raymond Hill",
+   "browser_action": {
+      "default_icon": {
+         "19": "icon19.png",
+         "38": "icon38.png"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentscript.js" ],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "A companion extension to uBlock Origin: to gain ability to foil early hostile anti-user mechanisms working around content blockers.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjy3vM/z5JhH9tM6ixjwkrudYsoHL8H2qY4tDusSFxZrFPL5F7ut2ddyqsCNCZ141WEK9c+pVCvt6DtQRzzS/vY5qtDC0aSg22vB6Qx20cIeJn+9NMWDKtFz33jXaWu7ycq4M5LHypdvOA4+wwp+PG0SfWqxQKQomBlF7l1y11XKB8QmbqIQxeSncaiyeQbup1ZE/7fcf7UqZMqYFNUuq/7sHtl83fV8YBU/W8a9s9XPRZpYSoEU7IZz1luHYSGEwaprZsigq/7orRBp/OhANqF3asYLQYqbaUnLw0dCU35awI0YdbCrBvPHnH0KdPyFtU7jbl2lO4ppP+ERG8weeVQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "36.0",
+   "name": "uBlock Origin Extra",
+   "short_name": "uBO-Extra",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.80"
+}

@@ -13,13 +13,14 @@
         <value type="int" value="1"/>
         <value type="int" value="3"/>
         <value type="int" value="15"/>
+        <value type="int" value="5"/>
         <value type="int" value="7"/>
         <value type="int" value="2"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
-        <value type="int" value="5"/>
       </property>
       <property name="background-alpha" type="uint" value="93"/>
+      <property name="disable-struts" type="bool" value="false"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -50,8 +51,10 @@
         <value type="string" value="docky"/>
         <value type="string" value="kw player"/>
         <value type="string" value="stardict"/>
+        <value type="string" value="qbittorrent"/>
         <value type="string" value="vnote-1.22-x86_64.appimage"/>
         <value type="string" value="simplescreenrecorder"/>
+        <value type="string" value="guake"/>
         <value type="string" value="网络管理器小程序"/>
         <value type="string" value="深度音乐"/>
         <value type="string" value="vnote"/>
@@ -66,6 +69,7 @@
       </property>
       <property name="names-hidden" type="array">
       </property>
+      <property name="show-frame" type="bool" value="false"/>
     </property>
     <property name="plugin-2" type="string" value="power-manager-plugin"/>
     <property name="plugin-4" type="string" value="pulseaudio">

@@ -26,14 +26,13 @@ doc
 txt
 *.txt
 scot
-#src_note/develop/others/html/images/*
 source/src/c
 source/src/C++
 source/src/php
 source/src/docbook-5.0
 src_note/develop/others/db/sql/myorder.sql
 #src_note/develop/others/c#
-src_note/develop/others/java_src
+#src_note/develop/others/java_src
 source/docs/tmp/星际I介绍/
 src_note/tmp
 

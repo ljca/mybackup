@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE poems SYSTEM "poem.dtd">
+<poems>
+	<poem>
+		<author firstname="" name="">王维</author>
+		<title>芦柴</title>
+		<content>空山不见人，但闻人语声。返景入深林，复照青苔上。</content>
+	</poem>
+</poems>

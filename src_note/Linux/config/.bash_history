@@ -64,10 +64,10 @@ su -c 'echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo'
 sudo cpupower frequency-info
 sudoe /etc/sysctl.d/100-swap.conf
 sudoe /etc/systemd/system/getty@tty1.service.d/noclear.conf
+sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=boot --boot-directory=/boot/efi/EFI/boot --compress="xz" --debug
 sudo efibootmgr -b 2 -B
 sudo efibootmgr -c -l \\EFI\\rEFInd\\refind_grub.efi -u "shim.efi refind_x64.efi" 
 sudo efibootmgr -c -L "Windows Boot Manager" -l \\EFI\\Microsoft\\Boot\\bootmgfw.efi
-sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --boot-directory=/boot/efi/EFI/Arch --compress="xz" --debug
 sudo hdparm -I /dev/sda | grep -i advanced
 sudo hdparm -S 
 sudo inotifywait -rmcq -d -e create,modify,move,moved_to,moved_from,delete /media/Others/Backup/myback -o inotifywait.log
@@ -96,7 +96,7 @@ sudo pacman -S fcitx{,-gtk2,-gtk3,-qt4,-qt5,-configtool,-fbterm}
 sudo pip2 install fabric
 sudo pip2 install ntplib diesel nmap scapy netifaces netaddr pyopenssl pygeocoder pyyaml requests feedparser paramiko fabric  bottlenose construct SOAPpy supervisor
 sudo sensors-detect 
-sudo sshfs tmp@192.168.43.191:/ /mnt -o compression=yes,uid=$UID,allow_other,port=10010
+sudo sshfs tmp@192.168.43.191:/ /mnt -o compression=yes,uid=$UID,allow_other,port=10086
 sudo systemctl enable thermald.service 
 sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;cs
 sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;rs

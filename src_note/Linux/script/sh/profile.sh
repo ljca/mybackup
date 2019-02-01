@@ -39,11 +39,12 @@ ${cyan}\#${normal}${yellow}:${normal}\
 ${pink}\u${normal}${yellow}:${normal}\
 ${white}\w${normal}\n\
 \`if [ \$? -eq 0 ];then echo \"${white}^_^${normal}\";else echo \"${red}:(${normal}\";fi\`\
-${pink}-${normal}${yellow}\\$ ${normal}"
+${pink}-${red}${normal}${yellow}\\$ ${normal}"
 export PS2="$pink>> $normal"
 
 unset normal black red green yellow blue pink cyan white
 #fi
+#$(date +%H:%M)
 
 #
 export HISTSIZE=5000

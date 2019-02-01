@@ -52,10 +52,10 @@ alias bd='source $HOME/.local/bin/bd -si'
 
 #cd /media/Others/Backup/lin/publicUser/src_note/lin/shell
 
-type vb &> /dev/null || alias vb='vboxmanage'
-type vbm &> /dev/null || alias vbm='vboxmanage modifyvm'
-type vbc &> /dev/null || alias vbc='vboxmanage controlvm'
-type vbs &> /dev/null || alias vbs='vboxmanage storageattach'
+type vm &> /dev/null || alias vm='vboxmanage'
+type vmm &> /dev/null || alias vmm='vboxmanage modifyvm'
+type vmc &> /dev/null || alias vmc='vboxmanage controlvm'
+type vms &> /dev/null || alias vms='vboxmanage storageattach'
 
 #http_proxy="http://192.168.43.191:31285/"
 #https_proxy="$http_proxy"

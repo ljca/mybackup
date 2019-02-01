@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=masterpdfeditor4.desktop;evince.desktop;masterpdfeditor3.desktop;
+application/pdf=evince.desktop;masterpdfeditor4.desktop;masterpdfeditor3.desktop;
 text/plain=medit.desktop;mousepad.desktop;org.gnome.gedit.desktop;
 video/mp4=vlc.desktop;smplayer.desktop;smplayer_enqueue.desktop;
 text/html=firefox.desktop;chromium.desktop;medit.desktop;mousepad.desktop;

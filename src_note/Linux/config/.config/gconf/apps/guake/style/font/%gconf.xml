@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="style" mtime="1548318274" type="string">
+		<stringvalue>Monaco 13</stringvalue>
+	</entry>
+	<entry name="palette_name" mtime="1548318432" type="string">
+		<stringvalue>Linux Console</stringvalue>
+	</entry>
+	<entry name="palette" mtime="1548318432" type="string">
+		<stringvalue>#000000000000:#aaaa00000000:#0000aaaa0000:#aaaa55550000:#00000000aaaa:#aaaa0000aaaa:#0000aaaaaaaa:#aaaaaaaaaaaa:#555555555556:#ffff55555555:#5555ffff5555:#ffffffff5555:#55555555ffff:#ffff5555ffff:#5555ffffffff:#ffffffffffff:#ffffffffffff:#000000000000</stringvalue>
+	</entry>
+	<entry name="allow_bold" mtime="1548318432" type="bool" value="true"/>
+</gconf>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class table="DEPT" schema="Scott" name="test.entity.Dept">
+		<id name="deptNo" type="java.lang.Integer" column="DEPTNO">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="dName" type="java.lang.String" column="DNAME"></property>
+		<property name="loc" type="java.lang.String" column="LOC"></property>
+	</class>
+</hibernate-mapping>

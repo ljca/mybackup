@@ -1,7 +1,8 @@
 # i3 窗口调整与切换的主使用键：Mod1 <=> Meta(Alt) | Mod4 <=> (Windows键，Supper键)
 set $mod Mod4
 
-font pango:DejaVu Sans Mono 10
+#font pango:DejaVu Sans Mono 8
+font pango:Monaco 9
 #                       border  bgcolor fgcolor msg
 client.focused          #333333 #333333 #FFFFFF #333333
 client.focused_inactive #999999 #999999 #FFFFFF #3399FF
@@ -22,8 +23,13 @@ bindsym $mod+Return exec xfce4-terminal
 #
 # 随 i3 一起启动的程序（这些程序在使用之前必须被安装到系统中），为了让调整的设置生效，你可能需要重启 X 或者 i3 会话……
 # 为了设置 i3 壁纸（图片路径需要被正确设置）……
-exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/solar_term/1209601106.jpg"
-#exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/573d31d4263ea.jpg"
+# Moss_inflorescence_by_carmelo75.jpg
+# warty-final-ubuntu.jpg
+# 00003.jpg
+# 0128.jpg
+#
+exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/Moss_inflorescence_by_carmelo75.jpg"
+#exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper0104.jpg/573d31d4263ea.jpg"
 
 # 因为 i3 窗口合成器不支持对窗口合成一些混合效果（比如：窗口的打开/关闭动画（淡入淡出）、混合透明、窗口阴影），所以如果你希望窗口有这些效果的话，你可能需要安装`xcompmpr`或者其它类似的程序并在终端模拟器中添加适当的选项在后台运行它，如果你不打算让它随 i3 一起启动的话……
 #exec --no-startup-id xcompmgr -FCf -nc -t -5 &

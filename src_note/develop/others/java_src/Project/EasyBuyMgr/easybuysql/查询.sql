@@ -1,0 +1,17 @@
+show databases;
+use easybuy;
+show tables;
+show columns from easybuy_user;
+show columns from easybuy_news;
+desc easybuy_comment;
+desc easybuy_product_category;
+desc easybuy_product;
+desc easybuy_order;
+desc easybuy_order_detail;
+select * from easybuy_order;
+select * from easybuy_news;
+select * from easybuy_user;
+select * from easybuy_comment;
+select * from easybuy_order_detail;
+select * from easybuy_product;
+select * from easybuy_product_category;

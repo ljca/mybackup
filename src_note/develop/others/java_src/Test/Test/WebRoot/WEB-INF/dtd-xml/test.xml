@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmps SYSTEM "test.dtd">
+<tmps>
+	<tmp>
+		<year>未知年份</year>
+	</tmp>
+	<stu>
+		<id>y2ls</id>
+		<name>tmp</name>
+		<age>22</age>
+		<sex>男</sex>
+		<address>未知通讯地址</address>
+		<tel>未知联系方式</tel>
+	</stu>
+	 <stu>
+    <id>test</id>
+    <name>test</name>
+    <age>22</age>
+    <sex>女</sex>
+    <address>未知通讯地址</address>
+    <tel>未知联系方式</tel>
+  </stu>
+</tmps>

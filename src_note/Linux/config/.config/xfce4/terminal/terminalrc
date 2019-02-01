@@ -5,7 +5,7 @@ MiscBellUrgent=FALSE
 MiscBordersDefault=FALSE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
-MiscDefaultGeometry=194x34
+MiscDefaultGeometry=192x50
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
@@ -34,4 +34,5 @@ ScrollingOnOutput=FALSE
 MiscDefaultWorkingDir=
 TitleMode=TERMINAL_TITLE_REPLACE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+BackgroundDarkness=0.000000
 

@@ -16,10 +16,10 @@
             "date_added": "13171097181320961",
             "id": "9",
             "meta_info": {
-               "last_visited_desktop": "13191569526891296"
+               "last_visited_desktop": "13191955398650779"
             },
             "name": "",
-            "sync_transaction_version": "60",
+            "sync_transaction_version": "75",
             "type": "url",
             "url": "https://www.google.com/ncr"
          }, {
@@ -237,7 +237,7 @@
          "sync_transaction_version": "3",
          "type": "folder"
       },
-      "sync_transaction_version": "74",
+      "sync_transaction_version": "75",
       "synced": {
          "children": [  ],
          "date_added": "13169956440955440",

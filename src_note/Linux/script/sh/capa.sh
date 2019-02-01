@@ -22,11 +22,11 @@ sync;sync;sync;sync;sync;
 
 capa=`cat /sys/class/power_supply/BAT1/capacity`
 ring='/home/external/usr/share/ring/Message07.ogg'
-#if [ $capa -le 30 ];then 
-if [ $capa -le 60 ];then 
-  /usr/bin/mpv $ring &>/dev/null &
+if [ $capa -le 30 ];then 
+  #if [ $capa -le 60 ];then 
+  #/usr/bin/mpv $ring &>/dev/null &
   #notify-send -i "$(echo terminal)" "你的设备电量不足30%！\n为了数据安全，系统将会挂起！请尽快为你的设备充电。" && 
-    #systemctl suspend;
+    systemctl suspend;
 elif [ $capa -eq 100 ];then
   /usr/bin/mpv $ring &
   #notify-send -i "$(echo terminal)" "请不要为你的设备过度充电。"

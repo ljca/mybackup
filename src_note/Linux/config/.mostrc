@@ -1,10 +1,10 @@
 % Color settings
-color normal lightgray black
+% color normal lightgray black
 color status yellow blue
 color underline yellow black
 color overstrike brightblue black
 
-# 以下示例配置more的使用类似less的快捷键：
+% 以下示例配置more的使用类似less的快捷键：
 
 % less-like keybindings
 unsetkey "^K"

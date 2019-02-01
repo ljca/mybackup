@@ -1,0 +1,17 @@
+#MyEclipse Hibernate Properties
+#Wed Mar 02 12:29:03 CST 2016
+genVersionTag=false
+sessionFactoryName=news.jdbc.entity.HibernateSessionFactory
+genAnnotations=false
+configFile=/News/src/hibernate.cfg.xml
+reStrategyClass=
+sessionFactoryId=
+profile=
+detectM2M=false
+genBasicCompId=false
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+detectO2O=false
+useJavaTypes=true
+reSettingsFile=

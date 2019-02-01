@@ -6,6 +6,7 @@
       <value type="string" value="Blueman"/>
       <value type="string" value="Docky"/>
       <value type="string" value="Firefox"/>
+      <value type="string" value="Guake"/>
       <value type="string" value="KW Player"/>
       <value type="string" value="nm-applet"/>
       <value type="string" value="notify-send"/>
