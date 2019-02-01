@@ -5,7 +5,6 @@ __pycache__
 *.class
 *.exe
 *.log
-*.jar
 jquery*.js
 build
 _v_recycle_bin
