@@ -65,6 +65,8 @@ watch progress -w
 
 ```
 
++ most: 一个分页器，类似 less 或者 more
+
 + [lsp](https://github.com/dborzov/lsp)
 
 如果你的系统还没有安装`go`，需要先安装`go`。
