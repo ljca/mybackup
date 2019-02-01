@@ -1,11 +1,11 @@
 #*.json
 __pycache__
 *.o
-*.so
+#*.so
 *.class
 *.exe
 *.log
-jquery*.js
+#jquery*.js
 build
 _v_recycle_bin
 bin
@@ -21,7 +21,7 @@ bk
 *.bk
 .*-bk
 *.md-bk
-doc
+#doc
 txt
 *.txt
 scot
