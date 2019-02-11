@@ -59,7 +59,7 @@
 + if
 + jobs：列出后台作业
 + kill：根据给出的命令进程号和选项对进程发送信号，默认是杀死
-+ let：算术计算
++ let：算术计算[^let]
 + local：仅在 function 中定义和生效的变量。
 + logout：注销系统
 + mapfile
@@ -154,7 +154,7 @@
 > Csh 内建
 
 + setenv: 设置环境变量，`setenv name value`
-+ alias: 定义别名，`alias name command & options`
++ alias: 定义别名[^alias]，`alias name command & options`
 
 ## Ksh
 
@@ -178,3 +178,9 @@
 [^test]: 大多数情况下，我们在进行条件测试时可能更喜欢使用 `[`。
 
 [^cd]: `-P -L`
+
+[^alias]:  在 Bash 的待执行指令前加一反斜杠或者使用 `command` 执行一个指令时使用的指令会取消所有别名定义或者类似使用绝对路径的指令。
+
+[^history]: 
+
+[^let]: 如果要执行算数运算的表达式是变量，那么引用变量不必使用`$`。`let i++`

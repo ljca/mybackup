@@ -1,33 +1,17 @@
-# mplayer
+# [mplayer](http://mplayerhq.hu/design7/dload.html)[^mplayer]
 
-[mplayer](http://mplayerhq.hu/design7/dload.html)
-
-> mplayer编译选项
+# 附：
+## 从源码编译安装 mplayer
 
 ```Bash
 ./configure --prefix=/usr/local --enable-menu --enable-gui --enable-x11 --enable-debug
-make&&sudo makeinstall
-```
-
-皮肤安装：
-```Bash
+make && sudo make install
+# 皮肤安装：
 sudo tar --xattrs -xf Blue.tar.bz2 -C /usr/local/share/mplayer/skins/
 sudo mv /usr/local/share/mplayer/skins/{Blue,default}
 ```
 
-mplayer后台播放技巧[^1] `mplayer test.mp4 < /dev/null &> /dev/null&`
-
-后台播放多个文件的技巧
-```Bash
-\ls*.mp4 > mp4.list
-mplayer -playlis tmp4.list < /dev/null &> /dev/null&
-```
-
-循环播放 -loop选项 `mplayer -loop 0 test.mp4 < /dev/null &>/dev/null&`
-
-选择其它解码器播放
- 
-> 常用快捷键：
+## mplayer 常用快捷键 & 播放技巧
 
 + Enter: 跳转到下一个
 + 空格/p: 暂停/播放
@@ -46,5 +30,12 @@ mplayer -playlis tmp4.list < /dev/null &> /dev/null&
 + -：
 + `(`：
 
-[^1]: </dev/null &>/dev/null 屏蔽输入，输出，日志错误输出。
- 
+> 播放技巧：
+
++ 后台播放[^1]: `mplayer test.mp4 < /dev/null &> /dev/null&`
++ 后台播放多个文件: `\ls*.mp4 > mp4_list; mplayer -playlist tmp4_list < /dev/null &> /dev/null&`
++ 循环播放 -loop选项: `mplayer -loop 0 test.mp4 < /dev/null &>/dev/null&`
++ 选择其它解码器播放
+
+[^mplayer]: mplayer 从终端启动，运行速度很快。甚至还支持在 fbterm 上播放多媒体视频文件。
+[^1]: `</dev/null &>/dev/null` 屏蔽标准输入、标准输出、标准错误。

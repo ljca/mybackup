@@ -1,7 +1,7 @@
 # grub 笔记
 
 ## GRUB 2 Themes
-&nbsp;&nbsp;如果你希望调整`Grub`默认主题并且没兴趣了解、讨论`Grub`主题配置文件细节，你可以尝试从 Gnome Themes 的 [Grub Themes][grub_themes] 节获取您喜欢的主题后放到合适的位置然后根据需要调整…… 下面这些仅仅适合我和那些“希望了解`Grub`主题包细节和对`Grub`主题进行微小调整的人群”……
+&nbsp;&nbsp;如果你希望调整`Grub`默认主题并且没兴趣了解、讨论`Grub`主题配置文件细节，你可以尝试直接从 Gnome Themes 的 [Grub Themes][grub_themes] 节获取您喜欢的主题后放到合适的位置然后根据需要调整……而下面这些仅仅适合我和那些“希望了解`Grub`主题包细节和对`Grub`主题进行微小调整的人群”……
 
 &nbsp;&nbsp;如果您希望在`Grub`引导菜单项中能见到您喜欢的`OS`图标，您可以自己收集您喜欢的`OS`图标文件(尺寸：`24x24/32x32/64x64/72x72/88x88/128x128……`，格式：`8 bit 的 png`)重命名(os\_dist\_type.png)后存放到固定位置处（`Grub`主题目录下的`icons`目录中）。
 
@@ -43,17 +43,17 @@
 
 &nbsp;&nbsp; 如果你希望自定义`Grub`主题，一个格式是纯文本的文件（文件名倒是可以随意，但引用时必须一致）是必须的，它被用来定义`Grub`主题样式。
 
-> [themes.txt](config/themes.txt)
+> ![](images/tips/conf.png)[themes.txt](config/themes.txt)
 
 &nbsp;&nbsp;如果你在第一次更改`Grub`主题文件后已经更新过了`Grub`配置文件，那么之后如果仅仅是对`Grub`主题文件作了修改就不再需要更新`Grub`配置文件…… 然后更新`Grub`配置文件应用`Grub`主题： `/etc/default/grub`,`/etc/grub.d/40-custom`....还可以是其它的[^2]。
 
 
-> /etc/default/grub 
+> ![](images/tips/conf.png)/etc/default/grub 
 
 ```config
 # ……
 GRUB_GFXMODE=1024x768x32,auto
-GRUB_THEME="/boot/efi/EFI/Arch/grub/themes/books/theme.txt" # 这里，请务必调整为你的 Grub 主题文件正确的路径。
+GRUB_THEME="/boot/efi/EFI/boot/grub/themes/books/theme.txt" # 这里，请务必调整为你的 Grub 主题文件正确的路径。
 # ……
 ```
 
@@ -61,7 +61,7 @@ GRUB_THEME="/boot/efi/EFI/Arch/grub/themes/books/theme.txt" # 这里，请务必
 
 ```Bash
 # 以根用户权限运行 Grub 配置生成脚本 grub-mkconfig ，最后的输出路径务必自行调整……
-grub-mkconfig -o /boot/efi/EFI/Arch/grub/grub.cfg
+grub-mkconfig -o /boot/efi/EFI/boot/grub/grub.cfg
 ```
 
 > &nbsp;&nbsp;如果您觉得`grub-mkconfig`脚本更新`Grub`配置太慢(查找其它的`OS`)尝试直接编辑`Grub`最终生成的`grub.cfg`，用于设置主题的指令类似：
@@ -69,7 +69,7 @@ grub-mkconfig -o /boot/efi/EFI/Arch/grub/grub.cfg
 ```config
 insmod gfxmenu
 insmod png
-set theme=(hd0,1)/EFI/Arch/grub/themes/books/theme.txt 
+set theme=(hd0,1)/EFI/boot/grub/themes/books/theme.txt 
 export theme
 ```
 
@@ -79,9 +79,9 @@ export theme
 ## 附
 ### 加密 GRUB 2 命令行
 
-&nbsp;&nbsp;grub 2 现在使用的加密工具是 `grub-mkpasswd-pbkdf2`,要加密 grub 的命令行和编辑功能，我们需要先使用它生成密码并根据需要将它加入 grub.d 下的配置文件中 `grub-mkpasswd-pbkdf2 >> /etc/grub.d/00_header` 并用 grub-mkconfig 重新生成 `grub.cfg` 或者仅仅添加变化的部分到`grub.cfg`。那就无需对 /etc/grub.d/ 下的脚本做任何修改，也无需调用 grub-mkconfig。
+&nbsp;&nbsp;grub 2 现在使用的加密工具是 `grub-mkpasswd-pbkdf2`，要加密 grub 的命令行和编辑功能，我们需要先使用它生成密码并根据需要将它加入 grub.d 下的配置文件中 `grub-mkpasswd-pbkdf2 >> /etc/grub.d/00_header`（只有放在所有 menuentry 和所有 submenu 项之前，才能对它们进行应用密码）并用 grub-mkconfig 重新生成 `grub.cfg` 或者仅仅添加变化的部分到`grub.cfg`（这样就无需对 /etc/grub.d/ 下的脚本做任何修改，也无需调用 grub-mkconfig）。
 
-======= /etc/grub.d/00_header =======
+======= ![](images/tips/conf.png) /etc/grub.d/00_header =======
 
 ```cfg
 # ....
@@ -110,10 +110,7 @@ grub> boot
 # Windows，链式加载 
 ```
 
-### Security Shell
-
-&nbsp;&nbsp;首先尝试使用 insmod 载入 normal 模块以回到正常的 grub shell，然后尝试引导系统。
-
+### Security Shell，见参考。
 
 [grub_themes]: https://www.gnome-look.org/browse/cat/109/ord/latest/
 

@@ -17,6 +17,5 @@ TTYVTDisallocate=no
 > 参考：
 
 + [stty linux 命令 在线中文手册](http://linux.51yip.com/search/stty)
-
 + [linux_unix命令行终端的光标及字符控制快捷键 - 技术文档 - 系统管理 Linux时代 - 开源、自由、共享 - 中国最大的Linux技术社区](http://linux.chinaunix.net/techdoc/system/2007/11/23/973027.shtml)
 + [让Linux开机进入字符界面的方法及设置FrameBuffer分辨率的方法_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2015-04/116075.htm)

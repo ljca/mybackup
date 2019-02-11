@@ -3,7 +3,7 @@
 + addpart：
 + agetty：
 + blkdiscard：
-+ blkid：获取磁盘分区信息 `sudo blkid`
++ blkid：读取磁盘分区信息 `sudo blkid`
 
 ```log
 /dev/sda1: SEC_TYPE="msdos" LABEL="ESP" UUID="0000-4823" TYPE="vfat" PARTLABEL="EFI System Partition" PARTUUID="69d56666-9053-4130-b728-c551d84346f1"
@@ -21,42 +21,42 @@
 ```
 
 + blockdev：
-+ cal：
-+ cfdisk：
++ cal：命令行日历
++ cfdisk：伪 GUI 分区编辑工具
 + chcpu：
-+ chfn：
++ chfn：更改用户信息, `chfn `
 + chrt：
-+ chsh：
-+ col：
++ chsh：更改用户 shell, `chsh -s /bin/bash user`
++ col：格式化列
 + colcrt：
 + colrm：
 + column：
 + ctrlaltdel：
 + delpart：
-+ dmesg：
++ dmesg：读取内核开机自检信息
 + eject：
 + fallocate：
 + fdformat：
-+ fdisk：
++ fdisk：一个命令行下的分区编辑工具
 + findfs：
 + findmnt：
 + flock：
-+ fsck：
++ fsck：检查 ext 系列文件系统
 + fsck.cramfs：
 + fsck.minix：
 + fsfreeze：
 + fstrim：
-+ getopt：
-+ hexdump：
-+ hwclock：
++ getopt：获取命令行选项
++ hexdump：读取二进制数据并转换为十六进制
++ hwclock：读取，调整硬件时钟
 + i386：
 + ionice：
 + ipcmk：
 + ipcrm：
 + ipcs：
 + isosize：
-+ kill：
-+ last：
++ kill：给进程发送信号
++ last：显示最后登录用户
 + lastb：
 + ldattach：
 + linux32：
@@ -64,21 +64,21 @@
 + logger：
 + login：
 + look：
-+ losetup：
-+ lsblk：
-+ lscpu：
++ losetup：设置环回设备
++ lsblk：读取并列出硬盘及其分区信息
++ lscpu：读取 CPU 参数
 + lsipc：
 + lslocks：
 + lslogins：
 + lsns：
 + mcookie：
 + mesg：
-+ mkfs：
++ mkfs：在硬盘或者分区上创建文件系统
 + mkfs.bfs：
 + mkfs.cramfs：
-mkfs.minix：
-mkswap：
-+ more：
++ mkfs.minix：
++ mkswap：将分区格式化为交换分区
++ more：命令行分页器，类似的有 less, most.
 + <a href="util-linux/mount.md#mount"> mount：挂载磁盘或者分区</a>
 + mountpoint：
 + namei：
@@ -90,7 +90,7 @@ mkswap：
 + prlimit：
 + raw：
 + readprofile：
-+ rename：
++ rename：批量重命名文件。
 + renice：
 + resizepart：
 + rev：
@@ -101,12 +101,12 @@ mkswap：
 + setarch：
 + setsid：
 + setterm：
-+ sfdisk：
-+ su：
++ sfdisk：命令行分区工具
++ su：用户切换
 + sulogin：
-+ swaplabel：
-+ swapoff：
-+ swapon：
++ swaplabel：设置交换分区卷标
++ swapoff：关闭交换分区
++ swapon：启用交换分区
 + switch_root：
 + taskset：
 + ul：
@@ -116,8 +116,8 @@ mkswap：
 + utmpdump：
 + uuidd：
 + uuidgen：
-+ vigr：
-+ vipw：
++ vigr：更安全的编辑 `/etc/group` 方式
++ vipw：更安全的的编辑 `/etc/passwd`方式
 + wall：
 + wdctl：
 + whereis：指令文件定位
@@ -125,7 +125,6 @@ mkswap：
 + write：
 + x86\_64：
 + zramctl：
-
 
 [mount]: util-linux/mount.md
 [script]: util-linux/script.md

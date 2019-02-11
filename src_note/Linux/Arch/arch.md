@@ -8,8 +8,7 @@
 
 ﻿&nbsp;&nbsp;也许`Arch Linux`滚动式发行的特点能让系统一下子就更新到最新状态，但不幸的是：并非所有的旧硬件(比如我的)都能适应这种变化。经过升级的软件包释出的一些新特性也许并不兼容`PC`机上的旧硬件。或者在使用之前至少需要对某其中的一项做出微小调整后才能正常工作。因此，此时的你也许对新版本的软件包并不感冒，而希望将它降级后使用。
 
-&nbsp;&nbsp;如果你的`Arch Linux`中的某个软件包因为一些问题需要降级，可以从存档库中下载历史版本然后手动降级[^1]。
-&nbsp;&nbsp;然而，当我尝试从 Arch Linux 回滚机[^archive]上降级`Arch Linux`时，遇到了下面的一些问题[^problem]。
+&nbsp;&nbsp;如果你的`Arch Linux`中的某个软件包因为一些问题需要降级，可以从存档库中下载历史版本然后手动降级[^1]。然而，当我尝试从 Arch Linux 回滚机[^archive]上降级`Arch Linux`时，遇到了下面的一些问题[^problem]。
 
 ```Bash
 # shell
@@ -91,7 +90,7 @@ pacstrap -i /mnt base base-devel net-tools wpa_supplicant dhcpcd
 
 [^problem]: 如果你的系统时钟是错误的，可能会无法正常访问网络……
 
-# FIQ
+# FAQ
 ## Arch Linux滚系统后pacman无法正常使用
 [^archlinux]: Arch Linux 是一个比较"前卫"的滚动式(系统没有版本号，一条指令能更新系统中所有的软件到最新版本)Linux 发行，因为它使用的软件包版本始终都是最新的。
 
@@ -175,12 +174,11 @@ journalctl -f | tee sys_faild.log
 
 &nbsp;&nbsp;在仅安装了 Xfce4  桌面环境的 Arch Linux 系统上，一开始是不能使用亮度/声音全局控制键的(比如宏碁笔记本用来调节亮度的Fn ←/Fn → 和调节声音的Fn ↓/Fn ↑)，不过物理功能控制键(Fn F7.....)是正常的。
 
-> Note！！！
-
-+ 属于`alsa-utils`的`speaker-test`可以用来测试喇叭是否工作正常。
+> ！！！![](../images/tips/tips.png) 属于`alsa-utils`的`speaker-test`可以用来测试喇叭是否工作正常。
 
 
 ## 当我的Arch Linux自动挂起之后被重新唤醒时，Thunar等Gtk程序的菜单（右键上下文和菜单栏）等变成了英文
+
 > 这也许是锁屏工具带来的影响……
 
 &nbsp;&nbsp;在我的 *Arch Linux* 上，屏幕保护程序不能很好的在我的计算上工作（或许是我的显示器原因导致的花屏问题），而用户级 .xprofile 却需要（或者类似）一个登录管理器的程序才能正常被读取，一些屏幕保护程序提供了此类功能，比如 *xscreensaver*。
@@ -210,28 +208,10 @@ done
 
 我尝试重新设置了用户目录。以下是配置文件内容：
 
-=============== $HOME/.config/user-dirs.dirs ==================
++ ![](../images/tips/conf.png) [$HOME/.config/user-dirs.dirs](../config/user-dirs.dirs)
++ ![](../images/tips/conf.png) [$HOME/.config/user-dir.locale]()
 
-```ini
-# This file is written by xdg-user-dirs-update
-# If you want to change or add directories, just edit the line you're
-# interested in. All local changes will be retained on the next run
-# Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
-# homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
-# absolute path. No other format is supported.
-# 
-XDG_DESKTOP_DIR="$HOME/Desktop"
-XDG_DOWNLOAD_DIR="$HOME/Downloads"
-XDG_TEMPLATES_DIR="$HOME/"
-XDG_PUBLICSHARE_DIR="/tmp"
-XDG_DOCUMENTS_DIR="$HOME/"
-XDG_MUSIC_DIR="$HOME/CloudMusic"
-XDG_PICTURES_DIR="$HOME/"
-XDG_VIDEOS_DIR="$HOME/"
-```
-
-=============== $HOME/.config/user-dir.locale =================
-```
+```config
 en_US
 ```
 

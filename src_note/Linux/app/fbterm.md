@@ -1,6 +1,8 @@
-# fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器[^tty]。
+#  fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器[^tty]。
 
 ----------------------------------------------
+
+![](../images/ui/terminal.ico)
 
 > 如果你希望使用[fbterm](http://fbterm.googlecode.com/files) [^1] 并打算动手编译安装到系统中……
 
@@ -41,11 +43,12 @@ tmp=/usr/local/tmp-tools/gcc-4.9.2/bin CC=$tmp/gcc CXX=$tmp/g++ \
 ./configure && make -j5 && sudo make install 
 ```
 
-## ![](images/1543757688_489799211.png) 配置 fbterm
+## ![](../images/tips/config.png) 配置 fbterm
 
-![](images/1543757709_1159148631.png) 默认安装好未做任何配置的 fbterm 直接用普通用户运行可能会失败(虽然可以使用根用户来运行，但这并不推荐)，fbterm 已经提供了解决方案并对其做出了解释：
+![](../images/tips/help_book.png) 默认安装好未做任何配置的 fbterm 直接用普通用户运行可能会失败(虽然可以使用根用户来运行，但这并不推荐)，fbterm 已经提供了解决方案并对其做出了解释：
 
 + fbterm 在运行时需要临时具有根用户的权限来存取内核（据称这是为了映射某些键），给 fbterm 设置 uid 位也许是最合适的方法，就像 passwd 程序一样。不然以普通用户运行的 fbterm 会收到一个 can't change kernel keymap.....一样的消息，这时你也许会发现 fbterm 的某些快捷键也用不上（比如新建终端窗口的 Ctrl+Meta+C 和切换终端窗口的 Shift ←，Shift →)。
+
 ```Bash
 #  普通用户需要加入 video 组才能有打开 fbdev 的权限。
 gpasswd -a $USER video
@@ -54,6 +57,7 @@ chmod u+s $(which fbterm)
 ```
 
 + 如果是编译的话，fbterm 的 terminfo 文件可能也要放到合适的位置(比如 /usr/share/terminfo/f/ $HOME/.terminfo/f/ )下。
+
 ```Bash
 # fbterm 的 terminfo 文件 fbterm 需要放到合适的位置。不然在 fbterm 下，某些需要 fbterm 的 terminfo 信息的应用可能不会正常工作……
 # 如果你在系统中没有找到 fbterm 的 terminfo 文件，那可以尝试手动编译它：
@@ -64,9 +68,9 @@ tic fbterm
 
 ---------------------------------
 ##  fbterm 运行时配置及基本快捷键
-![](images/1543757709_1159148631.png)可以通过传递参数给 fbterm 或者在配置文件中定义选项来更改它的行为。注：配置文件不是 shell 脚本，shell 指令无效。
+![](../images/tips/help_book.png)可以通过传递参数给 fbterm 或者在配置文件中定义选项来更改它的行为。注：配置文件不是 shell 脚本，shell 指令无效。
 
-============ ![](images/1543758336_1061117187.png) ~/.fbtermrc ===========
+============ ![](../images/tips/conf.png) ~/.fbtermrc ===========
 
 ```ini
 font-names=DejaVu\ Sans\ Mono\ for\ Powerline:Style=Bold
@@ -80,6 +84,7 @@ cursor-interval=0 # fbterm 光标闪烁时差，0 即为不闪烁
 input-method=fcitx-fbterm # fbterm 输入法
 .....
 ```
+
 ### 基本快捷键列表
 + Ctrl+Meta+C 新建一个窗口
 + Shift <- 或者 Shfit -> 在窗口之间切换
@@ -87,13 +92,17 @@ input-method=fcitx-fbterm # fbterm 输入法
 
 -----------------------
 
-+ ![](images/1543757709_1159148631.png)如果你觉得在 fbterm 上使用背景图片能增加一些点缀的话，那就给 fbterm 设置背景图片。不过在使用背景图片之前，你可能需要先安装 fbv。
++ ![](../images/tips/help_book.png)如果你觉得在 fbterm 上使用背景图片能增加一些点缀的话，那就给 fbterm 设置背景图片。不过在使用背景图片之前，你可能需要先安装 fbv。
 
 + 假如你希望每次启动 fbterm 时使用不同的背景图片，那么可以尝试将背景图片的路径以位置参数的形式传递给 fbv），如果写成了 shell 脚本又没有设置 fbterm 在登录 tty 时自动启动的话。如果 X 用的少，shell 又是 Bash，那么可以选择在登录 tty 时自动进入 fbterm，如果你希望如此的话。
 
+> fbterm & tmux.
+
+![](../images/ui/fbterm_fb.jpg)
+
 下面的技巧来源于 wiki：
 
-============== ![](images/1543758336_1061117187.png) ~/.bashrc ===============
+============== ![](../images/tips/conf.png) ~/.bashrc ===============
 ```cfg
 [ "$TERM" = "linux" ] && echo -en "\e]P7ffffff"
 if [[ `tty` = \/dev\/tty[1-6]  ]] && type fbterm &> /dev/null;then 
@@ -110,7 +119,7 @@ fi
 ```
 
 ##  `fbterm`中文输入法: `fcitx-fbterm？` `yong？`[^yong] `ibus-fbterm？`
- ![](images/1543757663_1255876179.png)如果你希望在 fbterm 上输入中文，那么安装一个 fbterm 中文输入法并激活它就是必要的。
+ ![](../images/tips/tips.png)如果你希望在 fbterm 上输入中文，那么安装一个 fbterm 中文输入法并激活它就是必要的。
 
 
 + 我使用的中文输入法框架是`fcitx`，然而据说基于`fcitx`框架的 [fcitx-fbterm](https://github.com/fcitx/fcitx-fbterm) 已经停止开发了，但实际上它还能在 [git](https://github.com/fcitx/fcitx-fbterm) 或者 [fcitx-fbterm][fcitx-fbterm] 找到。如果你用的是 Arch Linux，还可以从 AUR 上找到。另外，部分 Linux 发行系统源中也还没有移除这个软件包。
@@ -142,7 +151,7 @@ LANG="zh_CN.UTF-8" fcitx &>/dev/null &
 
 # 附
 
-#  terminfo
+##  terminfo
 
 + tic：编译 terminfo 文件为数据格式，默认会保存到 ~/.terminfo/[x]/ 下.
 
@@ -165,6 +174,11 @@ infocmp
 + [TermKit](https://github.com/unconed/TermKit)
 + [stjerm](https://github.com/stjerm/stjerm)
 + [Google Code Archive - Long-term storage for Google Code Project Hosting][src]
++ Coolterm
+
+![](../images/ui/截图_2017-07-05_00-35-26.jpg)
+
+![](../images/ui/截图_2017-07-05_00-40-39.jpg)
 
 [fcitx-fbterm]: https://github.com/felixonmars/aur3-mirror/tree/master/fcitx-fbterm.git
 [src]: https://code.google.com/archive/p/fbterm/

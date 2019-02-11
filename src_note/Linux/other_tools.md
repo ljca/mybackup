@@ -1,29 +1,22 @@
 # Other Linux Tools
 
 + erase
-+ file/stat
++ file：获取文件类型
++ stat：显示文件统计信息
 + dump
 + sudo
 + ps
 + skill
 + nice
-+ killall
++ killall：根据进程名
++ pkill: 根据进程名杀死进程
 + useradd/userdel
 + groupadd/groupdel
 + passwd/gpasswd
 + usermod/groupmod
 + <a href="#screen" name="screen">screen：Linux 终端多会话</a>
-
-`usage: `
-
 + [tmux：终端上的多会话](otools/tmux.md)
-+ bc：数学计算
-
-> option，多个选项使用分号分隔。
-
-+ obase：输出进制
-+ ibase：输入进制
-+ scale：浮点运算时精度控制
++ bc：数学计算[^bc]，`echo "15**2"|bc` `bc <<< "15**2"`
 
 ```Bash
 # 0X2BF 进制转换：16 -> 2
@@ -31,20 +24,10 @@ bc <<< "ibase=16;obase=2;0X2BF"
 ```
 
 + iconv：文件编码转换工具 `iconv -f 源文件编码(输入文件编码) -t 目的编码 要转换的文件(即源文件或者输入文件) -o 输出文件名`
-
-> 参数解释：
-
--f
--t 
--o 指定输出文件名(如果输出文件和源文件同名，那么将会覆盖源文件内容。如果不带-o选项则会将转换编码后的文件内容输出到控制台)
--l 列出所有编码
-
-+ shutdown/halt/poweroff/reboot
++ shutdown/halt/poweroff/reboot：关机，重新引导系统
 + crontab/at
-+ tzselect
-+ hwclock
-+ locale
-
++ tzselect：时区选择
++ locale：字符集配置
 + [cv](https://github.com/Xfennec/progress) 显示`cp`、`mv`、等指令在工作时的进度。
 
 ```Bash
@@ -66,7 +49,6 @@ watch progress -w
 ```
 
 + most: 一个分页器，类似 less 或者 more
-
 + [lsp](https://github.com/dborzov/lsp)
 
 如果你的系统还没有安装`go`，需要先安装`go`。
@@ -92,21 +74,10 @@ export PATH="$GOPATH/bin:$PATH" # GOPATH 默认在 $HOME/go
 make && make install 
 ```
 
-+ ncdu
-+ htop | atop
++ ncdu：一个 du 的更好实现
++ htop | atop：一个 top 的更好实现
 + man2html：`man ls | man2html`
-+ htmltext（python-html2text）：`html2text <(man ls|man2html) > ls.txt` `html2text [options] file|url [encoding]`
-
-可以是一个本地文件或者url路径,其后的编码项是可选的
-
-> 选项:
-
---ignore-links
---ignore-images
-
-```Bash
-for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs && mv $i bk;done
-```
++ html2text（python-html2text）：`html2text <(man ls|man2html) > ls.txt` `html2text [options] file|url [encoding]`
 
 + dos2unix
 + docx2txt
@@ -127,6 +98,7 @@ for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs &&
 
 > 参考：
 
++ 
 + [使用 Synergy 共享你的鼠标和键盘](http://easwy.com/blog/archives/share-your-keyboard-and-mouse-by-synergy/)
 + [11个让你吃惊的 Linux 终端命令 - 51CTO.COM](http://os.51cto.com/art/201505/476564.htm)
 + [12款最佳Linux命令行终端工具 - 生死看淡，不服就干！ - 博客频道 - CSDN.NET](https://blog.csdn.net/u013634961/article/details/39534521)
@@ -153,3 +125,9 @@ for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs &&
 + [code-prettify](https://github.com/google/code-prettify)
 + [chinese-copywriting-guidelines](https://github.com/mzlogin/chinese-copywriting-guidelines)
 
+
+[^iconv]:  参数解释： -f 源文件编码，-t 目标文件编码，-o 输出文件名(如果输出文件和源文件同名，那么将会覆盖源文件内容。如果不带-o选项则会将转换编码后的文件内容输出到控制台)，-l 列出所有编码
+
+[^html2text]: 可以是一个本地文件或者url路径,其后的编码项是可选的。选项: --ignore-links --ignore-images `Bash for i in *.html;do html2text2 --ignore-images $i > `echo $i|cut -d. -f1`.logs && mv $i bk;done`
+
+[^bc]: 多个选项使用分号分隔。obase：输出进制，ibase：输入进制，scale：浮点运算时精度控制
