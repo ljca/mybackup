@@ -21,9 +21,14 @@ case $OSTYPE in
             Fedora*)
           :;;
       esac
-      if [ $UID -ne 0 ];then
+      if [ $EUID -eq 0 ];then
+        echo "Backup boot & efi files..."
+        tar -czRf "$back_dir/lin/pub/etc/${des:-linux}-etc.tar.gz" /etc &> /dev/null
+        tar -cJRf "$back_dir/boot/efi.tar.xz" /boot/efi/EFI/boot &> /dev/null
+        tar -cRf "$back_dir/boot/${des:-linux}-boot.tar" /boot/*-linux* &> /dev/null
+      else
         echo "Backup User profiles...."
-        back_dir=/media/Others/Backup/myback/src_note/Linux/config
+        back_dir=$back_dir/myback/src_note/Linux/config
         mkdir -p $back_dir/.vim
         cd 
         #cp -ur .config/{i3*,gtk*,font*,qt*} $back_dir &> /dev/null
@@ -34,23 +39,16 @@ case $OSTYPE in
         cp -ru .*.conf .*his* .*rc* .*profile .Xresources $back_dir &> /dev/null
         echo "Backup user shell scripts...."
         cp -ru /home/external/sh $back_dir/../script
-
         echo "Checking the networks...."
         if ping -c 2 www.baidu.com &> /dev/null;then
-          echo "pushd git...."
+          echo "Pushd git...."
           cd $back_dir/../../..
           git add .
           #git commit -m "My Backup scripts."
           git commit -a -m "`hostname` `date`" > /dev/null
           git push origin master 
-        else echo "无网络服务...";
+        else echo "No networks...";
         fi
-
-      elif [ $UID -eq 0 ];then 
-        echo "Backup boot & efi files..."
-        tar -czRf "$back_dir/lin/pub/etc/${des:-linux}-etc.tar.gz" /etc &> /dev/null
-        tar -cJRf "$back_dir/boot/efi.tar.xz" /boot/efi/EFI/boot &> /dev/null
-        tar -cRf "$back_dir/boot/${des:-linux}-boot.tar" /boot/*-linux* &> /dev/null
       fi
     fi
 
@@ -61,7 +59,7 @@ case $OSTYPE in
   msys)
     tar -czRf "/i/Backup/lin/msys-etc.tar.gz" /etc;;
   *)
-    echo "no backup.";;
+    echo "No backup.";;
 esac
 
 unset des back_dir

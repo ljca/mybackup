@@ -81,6 +81,7 @@ application/x-bittorrent=qbittorrent.desktop;
 audio/x-mod=medit.desktop;kid3-qt.desktop;
 application/octet-stream=userapp-medit-PQQ9UZ.desktop;
 text/x-chdr=bluefish.desktop;
+application/x-shellscript=medit.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop

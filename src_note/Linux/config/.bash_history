@@ -1,4 +1,3 @@
-adb kill-server 
 cat /proc/sys/kernel/sysrq
 cat /proc/sys/vm/laptop_mode 
 cat /sys/module/ath9k/parameters/ps_enable 
@@ -103,3 +102,5 @@ sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;rs
 watch grep \"cpu MHz\" /proc/cpuinfo
 xsltproc -o docbook.html /usr/share/xml/docbook/xsl-stylesheets-1.79.1/html/docbook.xsl docbook.xml 
 yaourt -S libfdk-aac daala-git alac-git neroaac 
+#1550066089
+l
