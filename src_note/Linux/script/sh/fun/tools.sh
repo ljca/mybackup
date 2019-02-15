@@ -140,7 +140,7 @@ function vsplit()
     for i in *;do 
       #if [[ $# -eq 1 ]];then set " ()";fi
       ##mv -iv "$i" "`echo $i|sed 's/[$1]//g'`" 2>/dev/null
-      mv -iv "$i" "`echo $i|sed \"s|[ @]|-|g;s|[()+%]||g\"`"
+      mv -iv "$i" "`echo $i|sed \"s|[ @]|-|g;s|[+%]||g;s|(.*)||g;s|\[.*\]||g\"`"
       popd &>/dev/null
     done
   }

@@ -4,7 +4,7 @@
 + [windows控制台命令笔记 :) :(](windows_cmd.md)
 + [注册表笔记](regedit.md)
 
-# FIQ
+> 一点心得：
 
 + [Windows 8.1 启用 .NET Framework 组件](Windows8.1启用.NET3.0和4.0组件.md)
 + [解决Windows 8.1 在雾面屏上字体渲染模糊的问题](win_font.md)
