@@ -128,23 +128,22 @@ am service subcmd   //subcmd 可以是 list(列出)
 
 -----------------------------
 
-# aapt：Android apk 分析工具
-&nbsp;&nbsp;Android apk 分析工具(Android Assiant Packging Tool)，不仅可以用来分析得到一些 apk 概况(比如列出 apk 包内的文件和列出 apk 权限)还可以用来更改 apk 包(添加或者删除 apk 包中的某个文件,甚至可以用来重新打包 apk)
+# aapt：Android apk 分析工具[^aapt]
 
-&nbsp;&nbsp;这个工具是在编译 Android 系统镜像时交叉编译(为主机而编译)然后输出到安卓 sdk 源码下的`/out/host/linux-x86/bin`这个目录下的。这个工具不需要以根用户权限来执行，下面是它的几个基本使用方法：
+下面是它的几个基本使用方法：
 
-+ 列出 apk 包中包含的文件：`aapt l[ist] [-v] [-a] apk_file_name`
- 
- + list 表示列出文件,方括号和方括号中的字符表示这是可选输入的
- + -v 选项能以更详细的表格形式列出 apk 包中包含的文件信息
- + -a 选项能以更详细的输出显示 Android apk 包的资源表(Resources Table)
+>  列出 apk 包中包含的文件：`aapt l[ist] [-v] [-a] apk_file_name`
+
++ list 表示列出文件,方括号和方括号中的字符表示这是可选输入的
++ -v 选项能以更详细的表格形式列出 apk 包中包含的文件信息
++ -a 选项能以更详细的输出显示 Android apk 包的资源表(Resources Table)
 
 ```Bash
 #以表格详情列出 Test.apk 包中包含的文件
 aapt list -v Test.apk
 ```
 
-Test.apk
+> Test.apk
 
 |Length|Method|Size|Ratio|Offset|Date/Time|CRC-32|Name|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -152,11 +151,7 @@ Test.apk
 |.......|
 
 
-+ 列出 apk 包详情 aapt d[ump]  //转存
- 
-```Bash
-aapt dump badging Test.apk
-```
++ 列出 apk 包详情 aapt d[ump]  //转存 `aapt dump badging Test.apk`
 
 > 输出类似于以下结果:
 
@@ -186,11 +181,22 @@ locales: '--_--'
 densities: '160' '240'
 ```
 
-+ 列出 GoogleTTS.apk 权限
- 
-```Bash
-aapt dump permissions GoogleTTS.apk
+> 查询多个 apk 包信息：`for i in *.apk;do aapt dump badging $i|grep -iE "application-label:|package:";done`
+
+```log
+package: name='cn.kuwo.player' versionCode='7700' versionName='7.7.0.0' platformBuildVersionName='5.0.1-1624448'
+application-label:'酷我音乐'
+package: name='com.tencent.mm' versionCode='921' versionName='6.3.31' platformBuildVersionName='6.0-2704002'
+application-label:'WeChat'
+package: name='cn.kuwo.player' versionCode='8350' versionName='8.3.5.0' platformBuildVersionName='5.0-1521886'
+application-label:'酷我音乐-蒙面唱将'
+package: name='com.netease.cloudmusic' versionCode='79' versionName='3.7.1' platformBuildVersionName='6.0-2438415'
+application-label:'网易云音乐'
+package: name='com.tencent.mm' versionCode='600' versionName='6.2.4.49_r8d971a2' platformBuildVersionName='4.4.2-1456859'
+application-label:'WeChat'
 ```
+
++ 列出 GoogleTTS.apk 权限: `aapt dump permissions GoogleTTS.apk`
 
 > package: com.google.android.tts //包名
 
@@ -203,10 +209,9 @@ aapt dump permissions GoogleTTS.apk
 
 # logcat：Android 日志分析器
 
-
 --------------------
 
-# FIQ
+# FAQ
 
 ？普通用户执行adb devices: `adb devices`
 
@@ -282,7 +287,7 @@ rmmod: delete_module 'led_mod' failed (errno 16)
 ? Unable to handle kernel paging request at virtual address 110002e0
 ! 只能访问经过映射为虚拟地址后的寄存器变量
 
-```adb shell
+```shell
 shell@android:/data/local # rmmod ledtest                                      
 ```
 
@@ -315,3 +320,5 @@ shell@android:/data/local # [  384.020000] Unable to handle kernel paging reques
 ```
 
 ? 动态库需要在系统引导时重新载入:
+
+[^aapt]: Android apk 分析工具(Android Assiant Packging Tool)，不仅可以用来分析得到一些 apk 概况(比如列出 apk 包内的文件和列出 apk 权限)还可以用来更改 apk 包(添加或者删除 apk 包中的某个文件,甚至可以用来重新打包 apk)；这个工具是在编译 Android 系统镜像时交叉编译(为主机而编译)然后输出到安卓 sdk 源码下的`/out/host/linux-x86/bin`这个目录下的。这个工具不需要以根用户权限来执行。 当然，它们同样可以到 googlecode 去下载，[apktool](https://connortumbleson.com/apktool/googlecode/)和[android-build-tools](https://dl-ssl.google.com/android/repository/)已经提供了这些工具，但是需要自行解决依赖。而在 Arch Linux，AUR 上已经有人提供了它们以及更多关于 android 相关的 `PKGBUILD`。

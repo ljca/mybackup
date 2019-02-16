@@ -102,5 +102,5 @@ sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;sync;rs
 watch grep \"cpu MHz\" /proc/cpuinfo
 xsltproc -o docbook.html /usr/share/xml/docbook/xsl-stylesheets-1.79.1/html/docbook.xsl docbook.xml 
 yaourt -S libfdk-aac daala-git alac-git neroaac 
-#1550066089
-l
+#1550293032
+for i in *.apk;do aapt dump badging $i|grep -iE 'application-label:|package:';done
