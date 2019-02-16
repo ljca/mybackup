@@ -1,6 +1,5 @@
-# ACL：更精细的权限控制授予
-`setfacl` `getfacl`
+# ACL：更精细的权限控制授予。 核心工具是: `setfacl` `getfacl`
 
-`setfacl -R -m u:$USER:rwx dir/file`
+`setfacl -m u:$USER:rwx dir/file`
 
 `getfacl -b dir/file`

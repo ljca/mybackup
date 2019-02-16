@@ -87,11 +87,10 @@ make && make install
 # 附
 
 + [asciinema：高级的终端会话记录和回放工具](otools/asciinema.md)
-+  [convert-format](otools/convert-format.md)
++ [在 Linux 上读取、转换、分隔多媒体格式的多媒体工具集](otools/convert-format.md)
 + [cscope&ctags](otools/cscope-ctags.md)
 + [pandoc](otools/pandoc.md)
 + [xclip：Linux X 下的命令行剪贴板工具](otools/xclip.md)
-+  [ffmpeg：视频、音频读取、转换、生成工具](otools/ffmpeg.md)
 + [gvfs-google & gvfs-mtp：让Linux的文件管理器可以自动挂载Android设备的外部和内部存储卡](otools/gvfs_mtp.md)
 + [instant-markdown-d：在浏览器中预览 markdown](otools/instant-markdown-d.md)
 + [我见过的一些终端下很有意思的命令和脚本](otools/intestresting-command.md)
