@@ -1,53 +1,92 @@
 # Gentoo 笔记：
- 
-# 附
+## 桌面配置
+### Install software
 
-## 安装 
-
-### Install 之前
-
-> 制作 Gentoo 可启动盘……
-
-+ 可启动`Gentoo`镜像：
-+ stage 3 （可选）
-+ portage 树（可选）
++ app-shells/bash-completion
++ app-text/lesspipe
++ vim
++ mc
++ lynx: `USE="ssl" emerge --ask lynx`
++ fbterm
 
 ```Bash
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 0xBB572E0E2D182910
-gpg --verify install-amd64-minimal-20170810.iso.DIGESTS.asc 
-grep -A 1 -i sha512 install-amd64-minimal-20170810.iso.DIGESTS.asc 
-sha512sum install-amd64-minimal-20170810.iso
+emerge --search fbterm
+emerge -av app-i18n/fbterm
+cp -r .fbtermrc  .config/fontconfig/ ~/
+chmod u+s /usr/bin/fbterm 
+mkdir .config
+mv fontconfig/ .config/
+LANG="zh_CN.UTF-8" exec fbterm
 ```
 
-> 从 BIOS[^bios]启动 Gentoo 可启动盘，选择一个内核和可选内核参数启动[^kernel_option]，开始安装 Gentoo 前的准备。
+### X Server & Window Manager & Desktop 
 
-### 设置网络[^wpa2]。
+> 选择桌面配置文件 desktop profile: eselect profile set 20
 
-### 磁盘配置
++ x11-base/xorg-server: `echo 'INPUT_DEVICES="keyboard libinput mouse evdev synaptics void" VIDEO_CARDS="i915 intel nvidia fbdev vesa"' >> /etc/portage/make.conf;` `emerge -av xorg-drivers`
+
+> 压缩/解压:
+
++ `USE="rar" paci p7zip`
++ app-arch/unrar: `emerge -av app-arch/unrar`
+
+> 输入法：
+
++ fcitx: `USE="gtk2" paci fcitx` `eval "$(dbus-launch --sh-syntax --exit-with-session)"`
++ fcitx-libpinyin
+
+> 解码器，媒体播放器：
+
++ mocp
++ media-video/ffmpeg: `USE="libav" paci media/ffmpeg`
++ vlc : `emerge --ask --verbose vlc`
++ smplayer: `USE="faac faad fbcon -xscreensaver theora vdpau pulseaudio libmpeg2 twolame rar" paci smplayer`
++ media-video/simplescreenrecorder: `USE="pulseaudio theora" paci media-video/simplescreenrecorder`
+
+> 字体配置：安装或者拷贝中文字体到系统中。搜索并安装字体优化：fontconfig-infinality，fontconfig-ultimate 并启用它们的配置文件： `eselect fontconfig enable <Tab>`
+
++ media-libs/fontconfig-infinality
++ media-libs/fontconfig-ultimate
+
++ `merge -av gparted --autounmask-write`
+
+> gentoo-zh:
+
++ `USE="gpg sqlite squashfs sync-plugin-portage" paci layman`
++ `layman -a gentoo-zh`
+
+## 系统服务：rc-update 
+## 软件管理：[emerge](emerge.md)
+
+## Install[^install]
+
+&nbsp;&nbsp;**从 UEFI[^gentoo_uefi]启动 Gentoo 可启动盘，选择一个内核和可选内核参数启动[^kernel_option]，开始安装 Gentoo 前的准备。 set network[^wpa2]. net-set or wpa_supplicant & dhcpcd**
+
+> DISK CONFIGURE 
 
 ```Bash
 mount -v /dev/disk/by-label/Gentoo /mnt/gentoo
 cd /mnt/gentoo
-
 blkid
-swapon /dev/sda9
-
-# 配置网络。。。
-
-links https://www.gentoo.org/download
-
-#. 解包 stage3 和 portage 树……
-tar --numric-owner --xattrs-include=*.* -xvpf stage3*.tar.bz2 -C mnt/gentoo #tar -xf stage3...tar.gz --xattrs -p --numeric-owner
-
-find / -type f -name ".keep" -exec rm -v '{}' ';'
-
-## Set make.conf设置 MAKEOPTS SYNC GENTOO_MIRRORS CFLAGS....... snapshot，portage 树 
-
+swapon /dev/sda10
 ```
 
-### chroot 前要做的工作：
+> 准备根文件系统: /
 
-#### 挂载必须的虚拟文件系统
++ 获取 stage3: `cd /mnt/gentoo;links https://www.gentoo.org/downloads`
++ 解包 stage3 和 portage 树…… `tar --numric-owner --xattrs-include="*.*" -xvpf stage3*.tar.xz` ; `find . -type f -name ".keep" -exec rm -v '{}' ';'`
+
+
+### chroot
+
+> 拷贝必须的配置文件到目标系统:
+
++ /mnt/gentoo/etc/wpa_supplicant/wpa_supplicant.conf 
++ `cp -Libv /etc/resolv.conf /mnt/gentoo/etc`
++ 选择源：`mirrorselect -i >> /mnt/gentoo/etc/portage/make.conf` mirrorlist -i -o >> /mnt/gentoo/etc/portage/make.conf 
+
+> 挂载必须的虚拟文件系统
+
 ```Bash
 # dev(绑定挂载)
 mount -o bind /dev /mnt/gentoo/dev
@@ -65,61 +104,91 @@ chmod 1777 /dev/shm
 # tmpfs
 ```
 
-#### 拷贝必须的配置文件到目标系统
+> Chroot: `chroot /mnt/gentoo /bin/bash`
+
+### Config
+
++ soure /etc/profile
++ export PS1="(chroot) $PS1"
++ export HISTCONTROL="ignoreboth:erasedups"
+
+> /etc/
+
++ /etc/fstab 
++ echo 'hostname="my-gentoo-pc"' > /etc/conf.d/hostname
++ /etc/hosts
++ /etc/issue
++ /etc/localtime
++ /etc/timezone
++ /etc/env.d/02locale
++ /etc/locale.gen
++ /etc/rc.conf 
++ /etc/conf.d/keymaps 
++ /etc/conf.d/hwclock 
++ /etc/conf.d/net
++ /etc/inittab 
+
+> 同步 snapshot,portage 树：emerge-webrsync或者emerge --sync或者直接解包之前的 snapshot 包。
+
++ `emerge-webrsync`
++ `emerge --sync --quiet`
+
+> 从列表选择一个默认的 profile
 
 ```Bash
-cp /etc/wpa_supplicant/wpa_supplicant.conf /mnt/gentoo/etc
-cp -Libv /etc/resolv.conf /mnt/gentoo/etc
-
-mirrorlist -i -o >> /mnt/gentoo/etc/portage/make.conf 
-
-## Chroot
-chroot /mnt/gentoo /bin/bash
+eselect list
+eselect  profile list
+# base 
+eselect profile set 16
 ```
 
-## 配置
+设置 USE 标记配置系统： emerge --info|grep ^USE;  /etc/portage/make.conf: `nano /etc/portage/make.conf`
+
+> 更新 USE 标记: emerge --ask --update --deep --newuse @world
+
+
+> clock & date 
 
 ```Bash
-soure /etc/profile
-export PS1="(chroot) $PS1"
-
-设置 USE 标记配置系统：
-emerge --info|grep -i '^use'
-nano /etc/portage/make.conf
-
-# 更新 USE 标记
-emerge --ask --update --deep --newuse @world
-
-# 同步 snapshot,portage 树：emerge-webrsync或者emerge --sync或者直接解包之前的 snapshot 包。
-emerge-webrsync 
-emerge --sync --quiet
-
-# 从列表选择一个默认的 profile
-eselect list
-eselect profile list
-eselect news list
-eselect news read
-eselect profile set 3
-
-export HISTCONTROL="ignoreboth:erasedups"
-
-# clock
+ls /usr/share/zoneinfo/
 echo 'Alsa/Shanghai' > /etc/localtime
-emerge --config sys-libs/timezone-data
+echo "Asia/Shanghai" > /etc/timezone
+emerg --config sys-libs/timezone-data
+date -s "19:45"
+```
 
-# languages & locales 
-nano /etc/locale.gen 
++ languages & locales: /etc/locale.gen /etc/env.d/02locale 
+
+```Bash
 locale-gen 
-
 eselect locale list
 eselect locale set 3
-
+echo 'LANG="en_US.UTF-8"' > /etc/env.d/02locale 
 env-update && source /etc/profile && export PS1="(chroot) $PS1"
+```
 
-# kernel & initramfs
+> news:
+
++ `eselect news list`
++ `eselect news read`
++ `eselect news purge`
+
+> portage package config
+
++ package.license
++ package.use
++ package.unmask 
++ package.keywords
++ make.conf
+
+> Install kernel & inintramfs
+
+```Bash
 emerge --ask pciutils
-
-emerge --ask sys-kernel/gentoo-sources
+echo kernel
+emerge --ask sys-kernel/gentoo-sources 
+emerge --ask sys-kernel/linux-firmware
+emerge --ask sys-kernel/genkernel
 cd /usr/src/linux
 zcat /proc/config.gz > .config
 # make help
@@ -128,50 +197,66 @@ make menuconfig
 make -j4 && make modules_install
 make install 
 
-emerge --ask sys-kernel/genkernel
+genkernel all 
 genkernel --install initramfs 
-emerge --ask sys-kernel/linux-firmware
+genkernel --lvm --mdadm initramfs 
 
-mount /dev/disk/by-label/Home /home
-
-groupadd kyzs
-useradd -m -d /home/user/Ootneg -g kyzs -G wheel -r -s /bin/bash ootng
-passwd ootng
-passwd 
-su - ootneg
-usermod -m -d /home/user/Ootng ootng
+etc-update && env-update && source /etc/profile && export PS1="(chroot) $PS1"
 ```
 
-### Install software
+
++ Add user: 
 
 ```Bash
-emerge --ask swig
-emerge --ask iw 
-emerge --ask net-wireless/wpa_supplicant
-emerge --ask wireless-tools
-emerge --ask dhcpcd
-emerge --ask ip 
-
-emerge --ask app-editors/vim
-emerge --ask app-misc/mc
-emerge --ask fbterm
-
-emerge e2fsprogs 
-
-mkdir /boot/efi -vp
-mount /dev/disk/by-label/ESP /boot/efi
-
-emerge --ask sys-boot/{grub:2,efibootmgr,os-prober}
-
-emerge --ask bash-completion
-emerge --search ntfs
-emerge --ask app-admin/syslog-ng sys-process/cronie
-emerge --ask sys-apps/lsb-release
-emerge --ask sys-fs/{xfsprogs,jfsutils,dosfstools,btrfs-progs,reiserfsprogs}
-
+passwd
+mount /dev/disk/by-label/Home /home
+useradd -m -d /home/user/Gentoo -g kyzs -G wheel -r -s /bin/bash kyzs && passwd 
 ```
 
-## 参考
+> 配置网络
+
+```Bash
+cd etc/init.d
+ln -sv net.lo net.wlp3s0
+rc-update add net.wlp3s0 default
+```
+
+> network tools: 
+
++ iw
++ ip 
++ net-wireless/wpa_supplicant
++ dhcpcd & dhcp
++ net-misc/netifrc
++ swig
++ wireless-tools
+
+> System Services: 
+
++ `emerge --ask app-admin/sysklogd; rc-update add sysklogd default`
++ `app-admin/syslog-ng sys-process/cronie`
++ `emerge  --ask sys-process/cronie; rc-update add cronie default`
++ `emerge  --ask sys-apps/mlocate`
++ `rc-update add sshd default`
+
+> Grub:2
+
+```Bash
+mkdir /boot/efi -vp
+mount /dev/disk/by-label/ESP /boot/efi
+```
+> system tools: 
+
++ e2fsprogs 
++ sys-boot/{grub:2,efibootmgr,os-prober}
++ sys-apps/lsb-release
++ sys-fs/{xfsprogs,jfsutils,dosfstools,btrfs-progs,reiserfsprogs}
++ sys-apps/{pciutils,pcmciautils}
++ sys-fs/dosfstools 
++ emerge --search ntfs
++ emerge -av sys-fs/ntfs3g
+
+> 参考
 
 + [Configuring the Linux kernel - Gentoo Wiki](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel/zh-cn#.E5.AE.89.E8.A3.85.E6.BA.90.E7.A0.81)
 + [Configuring the network - Gentoo Wiki](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Networking/zh-cn)
@@ -186,63 +271,23 @@ emerge --ask sys-fs/{xfsprogs,jfsutils,dosfstools,btrfs-progs,reiserfsprogs}
 + [启用systemd的gentoo安装方法 - KlausZL的个人页面 - 开源中国社区](http://my.oschina.net/klauszl/blog/223752)
 
 
-## GentooUSE标记
+## FAQ
 
-> 一些ebuild需要或禁止USE标志的某些组合才能正常工作。 这通过放置在 REQUIRED\_USE，用一组条件来表示。 此条件确保所有功能和依赖性都已完成，并且构建将成功并按预期执行。 如果任何一个不符合，emerge会提醒你，并要求你解决这个问题。
+### Gentoo 中文字体在重新引导系统或者注销之后再次登录到桌面变成了另外一种字体。
 
-```
-下面是REQUIRED_USE的一个例子：
-Example 	Description
-REQUIRED_USE="foo? ( bar )" 	如果 foo 被设定, 必须设定bar 。
-REQUIRED_USE="foo? ( !bar )" 	如果 foo 被设定， 必须设定 bar。
-REQUIRED_USE="foo? ( || ( bar baz ) )" 	如果 foo被设定， 必须设定 bar 或baz 。
-REQUIRED_USE="^^ ( foo bar baz )" 	foo bar 或baz 必须有一个被设定
-REQUIRED_USE="|| ( foo bar baz )" 	至少 foo bar 或 baz 有一个被设定。
-REQUIRED_USE="?? ( foo bar baz )" 	foo bar 或 baz中必须同时被设定多个
-```
+检查 fontconfig 以及中文字体，可能是 media-fonts/arphicfonts 在 `emerge --update --deep --ask --verbose --newuse @world` 之后作为依赖被安装到了系统中。
 
-> 参考：
++ `eselect fontconfig list`
++ `eselect fontconfig enable/disable `
 
-+ [USE Flags](https://www.gentoo.org/support/use-flags/)
+> 列出软件包中的文件： `equery files media-fonts/arphicfonts media-fonts/croscorefonts`
 
-# FIQ 
-## 当我在Gentoo上安装chromium的时候，遇到了下面的问题
 
-```log
-!!! The ebuild selected to satisfy ">=media-video/ffmpeg-3:=" has unmet requirements.
-- media-video/ffmpeg-3.2.6::gentoo USE="X alsa bzip2 encode gpl hardcoded-tables iconv mp3 network opengl postproc sdl threads truetype vorbis x264 xcb xvid zlib (-altivec) -amr -amrenc (-armv5te) (-armv6) (-armv6t2) (-armvfp) -bluray -bs2b -cdio -celt -chromaprint -cpudetection -debug -doc -ebur128 -fdk -flite -fontconfig -frei0r -fribidi -gcrypt -gme -gmp -gnutls -gsm -iec61883 -ieee1394 -jack -jpeg2k -kvazaar -ladspa -libass -libcaca -libilbc -librtmp -libsoxr -libv4l -lzma (-mipsdspr1) (-mipsdspr2) (-mipsfpu) (-mmal) -modplug (-neon) -nvenc -openal -openh264 -openssl -opus -oss -pic -pulseaudio -rubberband -samba -schroedinger -snappy -speex -ssh -static-libs -test -theora -twolame -v4l -vaapi -vdpau -vpx -wavpack -webp -x265 -zimg -zvbi" ABI_X86="(64) -32 (-x32)" CPU_FLAGS_X86="mmx sse sse2 -3dnow -3dnowext -aes -avx -avx2 -fma3 -fma4 -mmxext -sse3 -sse4_1 -sse4_2 -ssse3 -xop" FFTOOLS="aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart sidxindex trasher"
-
-  The following REQUIRED_USE flag constraints are unsatisfied:
-    cpu_flags_x86_sse? ( cpu_flags_x86_mmxext )
-
-  The above constraints are a subset of the following complete expression:
-    libv4l? ( v4l ) fftools_cws2fws? ( zlib ) test? ( encode ) postproc? ( gpl ) frei0r? ( gpl ) cdio? ( gpl ) samba? ( gpl ) encode? ( x264? ( gpl ) x265? ( gpl ) xvid? ( gpl ) X? ( !xcb? ( gpl ) ) ) cpu_flags_x86_avx2? ( cpu_flags_x86_avx ) cpu_flags_x86_fma4? ( cpu_flags_x86_avx ) cpu_flags_x86_fma3? ( cpu_flags_x86_avx ) cpu_flags_x86_xop? ( cpu_flags_x86_avx ) cpu_flags_x86_avx? ( cpu_flags_x86_sse4_2 ) cpu_flags_x86_aes? ( cpu_flags_x86_sse4_2 ) cpu_flags_x86_sse4_2? ( cpu_flags_x86_sse4_1 ) cpu_flags_x86_sse4_1? ( cpu_flags_x86_ssse3 ) cpu_flags_x86_ssse3? ( cpu_flags_x86_sse3 ) cpu_flags_x86_sse3? ( cpu_flags_x86_sse2 ) cpu_flags_x86_sse2? ( cpu_flags_x86_sse ) cpu_flags_x86_sse? ( cpu_flags_x86_mmxext ) cpu_flags_x86_mmxext? ( cpu_flags_x86_mmx ) cpu_flags_x86_3dnowext? ( cpu_flags_x86_3dnow ) cpu_flags_x86_3dnow? ( cpu_flags_x86_mmx )
-
-(dependency required by "www-client/chromium-60.0.3112.78::gentoo[system-ffmpeg]" [ebuild])
-(dependency required by "chromium" [argument])
-```
-
-然后我尝试：
-
-```Bash
-# 自动解决 USE 标记
-emerge --autoumask-write --ask www-client/firefox
-```
-
-```Bash
-# 并更新配置文件
-etc-update #
-dispatch-conf # 合并 USE 标记
-```
-
+[^install]: Install 之前: 准备 Gentoo 可启动盘…… ，可启动`Gentoo`镜像：，stage 3 （可选），portage 树（可选），check md5sums: `gpg --keyserver hkp://keys.gnupg.net --recv-keys 0xBB572E0E2D182910` `gpg --verify install-amd64-minimal-20170810.iso.DIGESTS.asc` `grep -A 1 -i sha512 install-amd64-minimal-20170810.iso.DIGESTS.asc` `sha512sum install-amd64-minimal-20170810.iso`
 [^kernel_option]: 按下 F2, F3, F4 分别可以列出选项以及可选择的内核参数。默认选择 gentoo 
-
 [^wpa2]: 无线网络(wpa2加密)wpa_supplicant 和 dhcpcd(也许需要在系统中先停掉这个服务)`wpa_passhare "SSID" "PASSWORD" >> /etc/wpa_supplicant/wpa_supplicant.conf` `wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -B && dhcpcd wlp3s0` 检查网络。如果你不熟悉`wpa_supplicant`的配置，记得准备一份以作参考。
-
 [^stage3]: stage3 包含了安装 Gentoo 时，它的根文件系统需要的基本目录层次结构以及那些必须和可能要用到的的工具
-
 [^snapshot]: snapshot 包含了安装 Gentoo 时需要的 portage 树，是可选的一个打包……
-
-[^bios]: 然而 Gentoo 的启动盘并不支持从 UEFI 启动，据称只有少数的 Live DVD 可以。
-
+[^gentoo_uefi]: 过去的 Gentoo 的启动盘并不支持从 UEFI 启动，2020 以后已经支持了。据称只有少数的 Live DVD 可以。
 [^gentoo_systemd]: Gentoo 默认使用的 init 是 OpenRC，
+[^paci]: `alias paci="emerge --ask --verbose --autounmask-write"`
