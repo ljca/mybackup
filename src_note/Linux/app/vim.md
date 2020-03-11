@@ -42,13 +42,20 @@ windows gvim启动文件 $VIM\_vimrc $VIM\gvimrc %userprofile%\.vimrc
 git地址:https://git.com/tpope/vim-pathogen
 Windows下的VIM(Vi Impls...)插件默认安装到$VIMRUNTIME和$VIM/vimfiles/或者~/vim/vimfiles下的一些特殊的目录中，所有插件都以一个可执行的vim或者vmp文件出现
 这些目录中的插件在vim/gvim启动时会被自动载入，当然，这需要正确配置了vim/gvim启动文件
-插件目录
+
+> 插件目录
 
 + autoload
++ backup
++ bundle
++ colors
++ compiler
++ ftdetect
 + ftplugin(filetypeplugin)
++ indent
++ keymap
 + plugin
 + syntax
-+ colors
 + doc
 + .....
 
@@ -205,14 +212,11 @@ endfunc[tion]
 + ..\plugin\lookupfile.vim
 + ..\plugin\minibufexpl.vim
 + ..\plugin\taglist.vim
-+ ..\plugin\vimcdoc.vim
 + ..\plugin\visualmark.vim
 + ..\plugin\vulkan1.0.vim
 + ..\plugin\winfileexplorer.vim
 + ..\plugin\winmanager.vim
 + ..\plugin\wintagexplorer.vim
-+ ..\syntax\help_cn.vim
-
 
 粘贴缩进错乱：
 + 粘贴前先在 vim 中启用粘贴模式 `set paste`再执行粘贴操作

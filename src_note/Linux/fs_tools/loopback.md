@@ -1,6 +1,10 @@
 # Loop Device：a magic device（奇妙的环回设备）。
 
-&nbsp;&nbsp;  我们还可以将一个文件来作为磁盘读写，做法与创建交换文件作为操作系统交换空间类似,其原理是将这个文件全用0来填充，然后将它像磁盘一样格式化，但挂载时需要将它挂载为环回设备。 我们首先需要使用 **`dd`** 指令[^dd]创建一个由特殊字符 '\0' 填充的数据文件[^size]，特殊设备 `/dev/zero` 可以完成这个任务。 `mkdir tmp;dd if=/dev/zero of=tmp/loop.iso bs=1024M count=1`
+::: alert-info
+
+&nbsp;&nbsp;我们可以将一个文件来作为磁盘读写，做法与创建交换文件作为操作系统交换空间类似,其原理是将这个文件全用0来填充，然后将它像磁盘一样格式化，但挂载时需要将它挂载为环回设备。 我们首先需要使用 **`dd`** 指令[^dd]创建一个由特殊字符 '\0' 填充的数据文件[^size]，特殊设备 `/dev/zero` 可以完成这个任务。 `mkdir tmp;dd if=/dev/zero of=tmp/loop.iso bs=1024M count=1`
+
+:::
 
 [^dd]: 
 
@@ -8,7 +12,12 @@
 
  &nbsp;&nbsp;在这个特殊的文件上创建文件系统 `sudo mkfs -t ext4 -L "Loop" tmp/loop.iso` 。将它以环回设备挂载 `mkdir loop;sudo mount -o loop  tmp/loop.iso ./loop`。
 
+::: alert-info
+
 &nbsp;&nbsp;为了不与系统动态创建的环回设备混淆，我们可以手动创建一个环回设备 `sudo mknod /dev/loop8 b 7 8`。同时，将手动创建的环回设备和那个存在文件系统的特殊文件映射,设置环回设备 ` sudo losetup /dev/loop8 tmp/loop.iso` 。这样就可以直接挂载环回设备，而不需要使用-o loop的方式；如果有必要， 如果将这个文件放到了U盘，并且还将它与一个环回设备相关联了，那么在卸载U盘时需要先取消它与环回设备的关联之后才能卸载U盘。否则卸载U盘时会弹出一个设备忙的消息。
+
+:::
+
 
 ```Bash
 sudo umount -v ./loop

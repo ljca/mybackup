@@ -7,10 +7,10 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "develop"
+            "name": "Linux"
         },
         {
-            "name": "Linux"
+            "name": "develop"
         },
         {
             "name": "tmp"
