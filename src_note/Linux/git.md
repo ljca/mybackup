@@ -6,21 +6,21 @@
 ***~~如果你希望从命令行 push，那么你至少得有一个 git 帐号、一个 git repo(仓库，这需要你自己动手在 git 网站上创建)，除了这些，你还必须正确配置了 ssh key 或者 gpg key。git 官方配置文档的传送门在[这里][git&ssh]。~~***
 
 
+```Bash
+#首先，在终端上生成公钥对: 
+ssh-keygen -t rsa -b 4096 -C "k_y_z_s@yeah.net"
+# 然后将 ssh-key 私钥添加到 ssh-agent。
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
 
-## 
+#同时，还需要将 rsa 公钥（~/.ssh/id_rsa.pub）添加到 git 帐号上： 
+xclip -sel clip < ~/.ssh/id_rsa.pub
 
-+ 生成公钥对: `ssh-keygen -t rsa -b 4096 -C "k_y_z_s@yeah.net"`
+#点击头像 -> Settings -> SSH and GPG keys -> New SSH key ....
 
-+ 然后将你的 ssh-key 私钥添加到 ssh-agent。
-
- + `eval "$(ssh-agent -s)"`
- + `ssh-add ~/.ssh/id_rsa`
-
-+ 同时，还需要将 rsa 公钥（~/.ssh/id_rsa.pub）添加到 git 帐号上： `xclip -sel clip < ~/.ssh/id_rsa.pub`
-
-点击头像 -> Settings -> SSH and GPG keys -> New SSH key ....
-
-测试公钥：`ssh -vT git@github.com`
+#测试公钥：
+ssh -vT git@github.com
+```
 
 
 ***~~为了使命令行尽可能的简洁，可以对用户名和邮箱进行映射。当然，这些你完全可以通过 git config 进行设置。~~***
