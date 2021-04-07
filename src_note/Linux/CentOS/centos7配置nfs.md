@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # centos 7 配置 nfs & Samba
 
 

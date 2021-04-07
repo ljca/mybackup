@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # pacman：Arch Linux 的软件包管理器
 
 > 安装：-S
@@ -41,7 +44,13 @@
 + pactree
 + /etc/pacman.conf
 + /etc/pacman.d/mirrorlist
-+ pacman-key --init & 
+
+> dir: /etc/pacman.d/gnupg
+
+```bash
+pacman-key --init & 
+pacman-key --populate archlinux
+```
 
 > **参考：**
 

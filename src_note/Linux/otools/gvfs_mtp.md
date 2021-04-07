@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # gvfs-google & gvfs-mtp：让Linux的文件管理器可以自动挂载Android设备的外部和内部存储卡
 
 如果你希望 Android 设备在连接上 Linux 计算机后就可以被系统自动识别并以合适的参数自动挂载，你可以尝试安装`gvfs-google`&`gvfs-mtp`。

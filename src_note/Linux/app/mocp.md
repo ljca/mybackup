@@ -1,4 +1,7 @@
-# mocp[^mocp]：Linux 上的一个轻量级命令行音乐播放器。
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
+# mocp[^mocp]：Linux 上的一个轻量级命令行本地音乐播放器。
 
 ![](../images/ui/mocp.jpg)
 
@@ -37,7 +40,7 @@ mocp -O AutoNext=no -O messagelingertime=1 -O XTerms+=xxt:xwt
 ========== ![](../images/tips/conf.png) [~/.moc/config](.moc/config) ========== 
  
 ### 2. mocp 键盘映射配置 
-![](../images/tips/help_book.png)假如你不喜欢`mocp`的默认键盘映射，你可以将其中的部分键盘映射通过配置文件改成自己喜欢的。&nbsp;&nbsp;关于`mocp`键盘映射，在`$prefix/share/moc/keymap.example`（`$prefix` 一般是 /usr 或者 /usr/local）可以找到，mocp 最终的键映射可以直接在 mocp 界面按 h 或者 ? 获得。mocp 键盘映射文件名需要和 mocp 的配置文件中的 Keymap 字段定义一致。下面这个是我的：
+![](../images/tips/help_book.png)假如你不喜欢`mocp`的默认键盘映射，你可以将其中的部分键盘映射通过配置文件改成自己喜欢的。关于`mocp`键盘映射，在`$prefix/share/moc/keymap.example`（`$prefix` 一般是 /usr 或者 /usr/local）可以找到，mocp 最终的键映射可以直接在 mocp 界面按 h 或者 ? 获得。mocp 键盘映射文件名需要和 mocp 的配置文件中的 Keymap 字段定义一致。下面这个是我的：
 
 ========== ![](../images/tips/conf.png)~/.moc/keymap ==========  
 
@@ -60,7 +63,7 @@ menu_last_item        = M-d END
  cp /usr/share/moc/themes/moca_theme ~/.moc/themes/user_moca_theme  
 ```
 
-&nbsp;&nbsp;然后根据需要进行调整：
+然后根据需要进行调整：
 
 ========== ![](../images/tips/conf.png)[~/.moc/themes/user_moca_theme](.moc/themes/user_moca_theme) ========== 
 
@@ -79,7 +82,7 @@ selected_file        = white black bold
 ....... 
 ```
 
-&nbsp;&nbsp;随后在配置文件中永久设定。
+随后在配置文件中永久设定。
 
 ##  mocp 基本使用[^usage]
 

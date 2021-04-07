@@ -1,8 +1,11 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # tmux：终端上的多会话，以前使用 [screen](../other_tools.md#screen)。
 
 > 一对尖括号 `<>` 扩起来的键是键盘上的区分于字母或者数字键的专有键，比如 `<Space>` 代表空格键，`<C-b>` 代表了 `Ctrl b`，`<M-b>` 即是 `Alt b`。
 
-***~~&nbsp;&nbsp;`<prefix>`代表 tmux 全局键，默认为`<C-b>`。根据需要，你可以在 `tmux` 配置文件中自行调整。如果 tmux 工作在 vi 模式，那么所有对 pane 或者 tmux 其它对象操作的按键都需要加上 `tmux 全局键` 才能正常工作。并且，这些操作均可使用 `tmux` 指令完成，如果在 vi 模式（默认），命令模式由 `<prefix>:` 触发。你可以在 tmux 中按下 `tmux 全局键 ?` 来查看所有 tmux 的键绑定。~~***
+***~~`<prefix>`代表 tmux 全局键，默认为`<C-b>`。根据需要，你可以在 `tmux` 配置文件中自行调整。如果 tmux 工作在 vi 模式，那么所有对 pane 或者 tmux 其它对象操作的按键都需要加上 `tmux 全局键` 才能正常工作。并且，这些操作均可使用 `tmux` 指令完成，如果在 vi 模式（默认），命令模式由 `<prefix>:` 触发。你可以在 tmux 中按下 `tmux 全局键 ?` 来查看所有 tmux 的键绑定。~~***
 
 常用功能：
 
@@ -68,7 +71,7 @@ bind-key l select-pane -R
 
 > tmux 的 Copy-in 模式。
 
-***~~&nbsp;&nbsp;如果你的 tmux 工作在 vi 模式下，那么只有在 Copy-in 模式，你才能在终端窗口进行上下滚动。它在 vi 模式下的默认键绑定是 `[`。~~***
+***~~如果你的 tmux 工作在 vi 模式下，那么只有在 Copy-in 模式，你才能在终端窗口进行上下滚动。它在 vi 模式下的默认键绑定是 `[`。~~***
 
 + 翻页／滚动：
 

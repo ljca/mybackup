@@ -1,4 +1,9 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Linux 笔记
+
+<div class="dir">
 
 + [Linux 命令行艺术：管道、重定向 & shell 扩展](cli_art.md)
 + [Linux 核心控制台（tty）：](console.md)
@@ -23,7 +28,11 @@
 + [Ext FS Tools](fs_tools/ext_fs_utils.md)
 + [一些技巧](some_tips.md)
 
+</div>
+
 > 参考：
+
+<div class="dir">
 
 + [Linux查看硬件信息（北桥芯片组、南桥、PCI接口、CPU等） ](https://www.linuxidc.com/Linux/2014-04/99718.htm)
 + [教你如何优化Linux运行速度_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2017-02/141138.htm)
@@ -35,6 +44,8 @@
 + [贡献30本经典Linux学习和开发教程和资料，都是pdf完整版的 - anhuidelinger的专栏 - 博客频道 - CSDN](http://blog.csdn.net/anhuidelinger/article/details/10746613)
 + [如何成为一个真正在路上的Linuxer_Linux新闻_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2014-11/109730.htm)
 
+</div>
+
 
 [cloneall]: https://github.com/bedekelly/cloneall
 
@@ -42,6 +53,8 @@
 [asciinema-player]: https://github.com/asciinema/asciinema-player
 
 # 附
+
+<div class="dir">
 
 + [FreeBSD 笔记](freebsd.md)
 + [Arch Linux 笔记](Arch/arch.md)
@@ -52,9 +65,11 @@
 + [Fedora Linux 笔记](Fedora/fedora.md)
 + [LFS 笔记](Lfs/lfs.md)
 
+</div>
+
 ## font config 基本配置：
 
-&nbsp;&nbsp;现代 Linux 大多使用了FreeType2来渲染文字，配置文件在 /etc/fonts/fonts.conf、/etc/fonts/conf.d、`$xdg_home/.config/fontconfig/fonts.conf`、`$xdg_home/.config/fontconfig/conf.d`
+现代 Linux 大多使用了FreeType2来渲染文字，配置文件在 /etc/fonts/fonts.conf、/etc/fonts/conf.d、`$xdg_home/.config/fontconfig/fonts.conf`、`$xdg_home/.config/fontconfig/conf.d`
 
 > fontconfig基本配置：
 
@@ -99,30 +114,42 @@ mv alt.map.gz /usr/share/kbd/keymaps/my
 
 > 也许这是因为 laptopmode-tools 工具的设备自动挂起功能
 
-&nbsp;&nbsp;如果你打开了 laptopmode-tools `AUTOSUSPEND_USE_WHITELIST=0`（laptopmode-tools 使用了黑名单[^version]）选项？可以尝试将 USB 设备的 VID 和 PID 号（！关于这个，可以尝试插拔 USB 设备并对比 lsusb 指令上下文的变化，多个设备的 vid 和 pid 使用空格分开）添加到 `AUTOSUSPEND_RUNTIME_DEVID_BLACKLIST=""` 段并重启　laptopmode-tools 服务，可能还要重新插拔一下　USB 设备。更多 laptopmode-tools 问题参见 Arch Linux laptopmode-tools Wiki.
+如果你打开了 laptopmode-tools `AUTOSUSPEND_USE_WHITELIST=0`（laptopmode-tools 使用了黑名单[^version]）选项？可以尝试将 USB 设备的 VID 和 PID 号（！关于这个，可以尝试插拔 USB 设备并对比 lsusb 指令上下文的变化，多个设备的 vid 和 pid 使用空格分开）添加到 `AUTOSUSPEND_RUNTIME_DEVID_BLACKLIST=""` 段并重启　laptopmode-tools 服务，可能还要重新插拔一下　USB 设备。更多 laptopmode-tools 问题参见 Arch Linux laptopmode-tools Wiki.
 
 [^cause]: 我觉得更有可能的原因是：你在打字时不小心碰到了触摸板，觉得很烦，然后打开了`在输入时（使用键盘时，包括 Alt Tab 切换窗口）禁用触摸板多长时间`这个桌面环境下的鼠标选项，同时忘记了调整……
 
 [^version]: Note：新版本的 `laptopmode-tools` 已经将 USB 自动挂起功能从 usb-autosuspend 模块移动到运行时 pm 模块（关于它的配置文件移到了 /etc/laptop-mode/conf.d/runtime-pm.conf）。如果你希望知道 laptopmode-tools 的详细信息，请参阅 laptop-mode.conf（8）手册页。
 
 
-## 如何清除 gtk 程序的最近打开历史？
+## 清除 gtk 程序的最近打开历史
 
-&nbsp;&nbsp;`Linux`上不少有图形界面的程序在打开对话框中都存在最近打开这个选项，但是却没有提供清除最近打开的选项。不过实际上，不少`GTK`程序的实现都是类似的，它们共享最近打开历史（最近打开保存在一个`recently-used.xbel($HOME/.local/share/)` 文档中的，格式是`xml`的）。
+<div class="p">
 
-&nbsp;&nbsp;有时候，你可能不希望在打开对话框的最近打开中存在着敏感信息或者是希望将其中一些足以泄漏隐私信息的东西清除。对此，只需要对这个文件进行操作即可对一些`GTK`程序生效。而`Qt`程序则已经提供了清除最近历史的选项。
+`Linux`上不少有图形界面的程序在打开对话框中都存在最近打开这个选项，但是却没有提供清除最近打开的选项。不过实际上，不少`GTK`程序的实现都是类似的，它们共享最近打开历史（最近打开保存在一个`recently-used.xbel($HOME/.local/share/)` 文档中的，格式是`xml`的）。
 
-## 如何禁用 Xfce4 DE Alt+鼠标滚轮缩放屏幕？
+有时候，你可能不希望在打开对话框的最近打开中存在着敏感信息或者是希望将其中一些足以泄漏隐私信息的东西清除。对此，只需要对这个文件进行操作即可对一些`GTK`程序生效。而`Qt`程序则已经提供了清除最近历史的选项。
 
-&nbsp;&nbsp;我使用的是 Xfce4 桌面，而且用的是触摸板，因此，很容易就会碰到 `Alt + 鼠标中键(双指滚动)`这个操作（在`Xfce4`桌面环境，这个操作被定义为缩放屏幕）,我认为我并不需要这个功能，但我找了很久，都没有找到方法来禁用或者关掉这个功能…… 后来我知道，这是由窗口管理器提供的功能。因此，如果你真的不喜欢这个功能又懒得去配置，可以尝试搭配另一个窗口管理器。
+</div>
 
-## 如何解决 Linux 声卡独占问题？
+## 禁用 Xfce4 DE Alt+鼠标滚轮缩放屏幕
 
-&nbsp;&nbsp;对`Linux`上这种奇葩的声卡独占问题[^softmix]一直很奇怪也没有找到解决方案，各种折腾后竟然在`ALSA`配置文件中用`pulseaudio`解决了这个问题（其实维基里面有这方面的提醒和注意）。我听说以前的`OSS`声音驱动是可以直接启用软件混音的，然而现代的`ALSA`要启用软件混音……
+<div class="p">
 
-&nbsp;&nbsp;如果你和我一样用的是较新的`Linux 发行`版本并且希望使用混音（就是那种多个应用程序同时使用声卡的情况）而且你的声卡有可能不支持硬件混音，可以尝试启用软件混音（详见 Arch Linux Wiki）[ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) 部分。另一种方式则是尝试使用 pulseaudio（这种方式貌似不适合 mpd）……
+我使用的是 Xfce4 桌面，而且用的是触摸板，因此，很容易就会碰到 `Alt + 鼠标中键(双指滚动)`这个操作（在`Xfce4`桌面环境，这个操作被定义为缩放屏幕）,我认为我并不需要这个功能，但我找了很久，都没有找到方法来禁用或者关掉这个功能…… 后来我知道，这是由窗口管理器提供的功能。因此，如果你真的不喜欢这个功能又懒得去配置，可以尝试搭配另一个窗口管理器。
 
-&nbsp;&nbsp;如果你希望使用`ALSA`+`pulseaudio`，你也许需要先检查你的系统中是否已经安装了pulseaudio，假如没有的话你可能需要先拿起你的软件包管理器安装它，接着尝试让 ALSA 使用 pulseaudio 接管声卡：
+</div>
+
+## Linux 声卡独占问题
+
+<div class="p">
+
+对`Linux`上这种奇葩的声卡独占问题[^softmix]一直很奇怪也没有找到解决方案，各种折腾后竟然在`ALSA`配置文件中用`pulseaudio`解决了这个问题（其实维基里面有这方面的提醒和注意）。我听说以前的`OSS`声音驱动是可以直接启用软件混音的，然而现代的`ALSA`要启用软件混音……
+
+如果你和我一样用的是较新的`Linux 发行`版本并且希望使用混音（就是那种多个应用程序同时使用声卡的情况）而且你的声卡有可能不支持硬件混音，可以尝试启用软件混音（详见 Arch Linux Wiki）[ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) 部分。另一种方式则是尝试使用 pulseaudio（这种方式貌似不适合 mpd）……
+
+如果你希望使用`ALSA`+`pulseaudio`，你也许需要先检查你的系统中是否已经安装了pulseaudio，假如没有的话你可能需要先拿起你的软件包管理器安装它，接着尝试让 ALSA 使用 pulseaudio 接管声卡：
+
+</div>
 
 > 配置文件(/etc/asound.conf or ~/.asoundrc)其实是在更新系统时（不知道是由`ALSA`还是`pulseaudio`创建的）是这样写的：
 
@@ -152,7 +179,7 @@ defaults.pcm.device 0
 defaults.ctl.card 1
 ```
 
-&nbsp;&nbsp;接下来，我先用 vlc 播放了一个 MV，又用 smplayer 播放了一个视频，同时又打开了 mocp 和　RhythmCat 播放音乐，当我同时听到了它们放出的美妙声音时，心里其实挺激动的（貌似这在`Windows`上根本就不需要配置就可以直接使用的）。遗憾的是，至今仍未找到方法在 Firefox 浏览器播放在线音乐或者视频时的同时在本地播放多媒体（或者相反。据称，这可能是由于 firefox 浏览器是直接使用的 pluseaudio 来解析在线媒体流），虽然一般不会有人这样子搞……
+接下来，我先用 vlc 播放了一个 MV，又用 smplayer 播放了一个视频，同时又打开了 mocp 和　RhythmCat 播放音乐，当我同时听到了它们放出的美妙声音时，心里其实挺激动的（貌似这在`Windows`上根本就不需要配置就可以直接使用的）。遗憾的是，至今仍未找到方法在 Firefox 浏览器播放在线音乐或者视频时的同时在本地播放多媒体（或者相反。据称，这可能是由于 firefox 浏览器是直接使用的 pluseaudio 来解析在线媒体流），虽然一般不会有人这样子搞……
 
 ----------------
 
@@ -171,13 +198,13 @@ defaults.ctl.card 1
 
 [^start]: 这仅适合 init 是 systemd，登录管理器使用的是 lxdm 的 Linux 系统，OpenRC，Upstart 使用了不同的方式。
 
-[^tmp1]: &nbsp;&nbsp;除非掉了 X 服务器(后台运行 startx 似乎没有什么用)，tty1 才会重新显示出 shell 的提示符(如果确定 X 服务配置没有问题而又不希望看到那些日志信息的话，可以尝试将输出和错误信息重定向到位桶(/dev/null)，这样重新回到字符界面的时候控制台看起来也许会显得“干净”一点)。而有的时候出于需要，不想让 tty1 直接被 X 服务器占用。除了尝试传递参数给 X 服务器之外。
+[^tmp1]: 除非掉了 X 服务器(后台运行 startx 似乎没有什么用)，tty1 才会重新显示出 shell 的提示符(如果确定 X 服务配置没有问题而又不希望看到那些日志信息的话，可以尝试将输出和错误信息重定向到位桶(/dev/null)，这样重新回到字符界面的时候控制台看起来也许会显得“干净”一点)。而有的时候出于需要，不想让 tty1 直接被 X 服务器占用。除了尝试传递参数给 X 服务器之外。
 
-[^tmp]: &nbsp;&nbsp;还可以通过编辑显示管理器的服务和配置文件（假如 `init` 使用的是 `systemd` 的话。不过，init 使用的是 `System V` 的 `openRC` 的话 也可以尝试使用类似的方法配置）来让显示管理器和 X 服务器明白自己“应该”在哪一个 tty 上启动自己做到“永久性配置”。假如桌面环境显示管理器或者说是登录管理器使用的是 lxdm（其它的似乎也没有多少不同），它的 systemd 服务单元文件在不同的 Linux 发行上位置可能不同，不过实际上`/etc/systemd/system/display-manager.service` 只是一个指向显示管理器服务的符号链接，一般是在显示服务器的服务被允许开机启动或者多用户环境目标被设为图形用户时自动创建。
+[^tmp]: 还可以通过编辑显示管理器的服务和配置文件（假如 `init` 使用的是 `systemd` 的话。不过，init 使用的是 `System V` 的 `openRC` 的话 也可以尝试使用类似的方法配置）来让显示管理器和 X 服务器明白自己“应该”在哪一个 tty 上启动自己做到“永久性配置”。假如桌面环境显示管理器或者说是登录管理器使用的是 lxdm（其它的似乎也没有多少不同），它的 systemd 服务单元文件在不同的 Linux 发行上位置可能不同，不过实际上`/etc/systemd/system/display-manager.service` 只是一个指向显示管理器服务的符号链接，一般是在显示服务器的服务被允许开机启动或者多用户环境目标被设为图形用户时自动创建。
 
 [^graphics]: 假如你希望登录管理器 lxdm 在系统引导时自动启动（如果系统已经直接将多用户目标配置为图形用户，那么根本不需要这样做），以根用户权限运行： `systemctl enable lxdm`。
 
-&nbsp;&nbsp;如果你希望 systemd 在其它的 tty(比如个人计算机上很少使用的 tty12)启动显示管理器，那么通常你只需要适当的编辑登录管理器的 systemd 单元文件和登录管理器自己的配置文件（当然，还可以直接给 X 服务器传递适当的参数）：
+如果你希望 systemd 在其它的 tty(比如个人计算机上很少使用的 tty12)启动显示管理器，那么通常你只需要适当的编辑登录管理器的 systemd 单元文件和登录管理器自己的配置文件（当然，还可以直接给 X 服务器传递适当的参数）：
 
 ```Bash
 #sudoe是sudo -E vim的别名，目的是为了在以其它用户启动vim时仍然使用现在用户的环境比如仍然读取当前用户的vimrc。
@@ -205,11 +232,11 @@ arg=/usr/bin/X -background vt12 # 这会让显示管理器在第 12 个 tty 上�
 root       790  1.7  3.0 616836 120248 tty12   Ssl+ 17:20   0:41 /usr/lib/xorg-server/Xorg -background none :0 vt12 -nolisten tcp -novtswitch -auth /var/run/lxdm/lxdm-:0.auth
 ```
 
-[^tmp]: &nbsp;&nbsp;另一个问题是：在我的个人计算机上似乎并不需要这么多的 tty 在按下终端切换组合键时启动 getty 和 login（虽然在每一个 tty 上登录然后尝试在上面执行一些不同的任务或者启动多个不同的桌面环境听起来似乎比 windows 要酷多了，但实际上，这样做的也许仅仅是极少数。）
+[^tmp]: 另一个问题是：在我的个人计算机上似乎并不需要这么多的 tty 在按下终端切换组合键时启动 getty 和 login（虽然在每一个 tty 上登录然后尝试在上面执行一些不同的任务或者启动多个不同的桌面环境听起来似乎比 windows 要酷多了，但实际上，这样做的也许仅仅是极少数。）
 
 如果不想启动太多 tty 的话，可以尝试控制启动的 tty 的个数:
 
-&nbsp;&nbsp;`Arch Linux` 维基上说，在以 `systemd` 作为 `init` 的系统上，可以编辑 `/etc/systemd/logind.conf` 配置文件的 `Login` 段，其中 `NAutoVTs` 的值就是用来控制默认的 `getty` 个数，默认有 6 个，但都是在用户按下 Ctrl+Alt Fn(1-6)时才会触发 getty 并启动一个 login。
+`Arch Linux` 维基上说，在以 `systemd` 作为 `init` 的系统上，可以编辑 `/etc/systemd/logind.conf` 配置文件的 `Login` 段，其中 `NAutoVTs` 的值就是用来控制默认的 `getty` 个数，默认有 6 个，但都是在用户按下 Ctrl+Alt Fn(1-6)时才会触发 getty 并启动一个 login。
 
 如果将它设为 11，则会在所有 tty 上启动 getty 并将 tty1 的消息转发到 tty12。
 
@@ -225,7 +252,7 @@ ReserveVT=2 # 哪一个 tty 可以自动启动
 
 ## 如何在 Linux 上统一调整、应用所有 qt 程序的外观？程序主题（界面、字体、风格）？
 
-[^tmp2]: &nbsp;&nbsp;qt4 应用程序风格除了可以在程序代码中单独配置外，还可以使用 qtconfig-qt4 工具来配置从而将效果生效应用于本地所有 qt4 应用。注：仅指窗口风格与应用程序菜单字体调整。qt4 软件包所提供的 qtconfig-qt4 用来设置了 qt 应用的风格，它将应用于本地所有的 Qt 应用程序，不过这只限于 Qt4。而 qt5 编写的应用程序已经默认遵循操作系统的风格配置，包括菜单字体风格和窗口风格，如果你启动的是桌面环境，则不需要另行手动配置。
+[^tmp2]: qt4 应用程序风格除了可以在程序代码中单独配置外，还可以使用 qtconfig-qt4 工具来配置从而将效果生效应用于本地所有 qt4 应用。注：仅指窗口风格与应用程序菜单字体调整。qt4 软件包所提供的 qtconfig-qt4 用来设置了 qt 应用的风格，它将应用于本地所有的 Qt 应用程序，不过这只限于 Qt4。而 qt5 编写的应用程序已经默认遵循操作系统的风格配置，包括菜单字体风格和窗口风格，如果你启动的是桌面环境，则不需要另行手动配置。
 
 QT4: qtconfig-qt4
 QT5: qt5ct
@@ -243,9 +270,9 @@ QT5: qt5ct
 
 ## Linux上较轻量级浏览器Opera的简要配置
 
-&nbsp;&nbsp;Opera 属于浏览器中的较轻量级浏览器。说是较轻量级，也只是针对 Linux PC 端的 Firefox 和 Chrome,Chromium 的内存占用而言，不过浏览器该有的功能却是有的。而且，字体渲染也不差。
+Opera 属于浏览器中的较轻量级浏览器。说是较轻量级，也只是针对 Linux PC 端的 Firefox 和 Chrome,Chromium 的内存占用而言，不过浏览器该有的功能却是有的。而且，字体渲染也不差。
 
-&nbsp;&nbsp;Linux 中的 Opera 浏览器链接总是被添加了下划线，这样可以迅速与其它的文本相区分。
+Linux 中的 Opera 浏览器链接总是被添加了下划线，这样可以迅速与其它的文本相区分。
 
 > Note：假如你觉得这有些影响视觉，可以尝试在首选项中更改，如果你没有在浏览器中的选项中找到这个选项，那么你可以尝试通过插件在样式表中重设元素样式来做到迂回更改（这种方式可能只适合 Linux PC 端）。
 
@@ -275,9 +302,9 @@ a:visited{color:#cc00ff;}
 
 ## 如何在不使用桌面环境的电源管理插件下保持对核显的亮度调节？
 
-﻿&nbsp;&nbsp;假如没你并不希望使用桌面环境的笔记本亮度调节，而同时又希望保持对核显的亮度调节的话。
+﻿假如没你并不希望使用桌面环境的笔记本亮度调节，而同时又希望保持对核显的亮度调节的话。
 
-&nbsp;&nbsp;然而，即便没有安装核显的驱动包，内核也直接提供了相应的通用模块。在我的计算机上，核显使用的是`i915`模块(这可以通过`lspci -kv`来查看)。假如你同时在`/sys`文件系统下找到了由内核中的驱动提供的接口文件，那么就可以通过它直接调节核显亮度。不幸的是：这只会对会当前用户会话生效。而如果你希望对核显亮度的调节能在重启系统后同样保持，那么你可能需要在调节亮度之后将`X`服务器杀死一次才能在重新引导系统之后保持之前对核显调整好的亮度。
+然而，即便没有安装核显的驱动包，内核也直接提供了相应的通用模块。在我的计算机上，核显使用的是`i915`模块(这可以通过`lspci -kv`来查看)。假如你同时在`/sys`文件系统下找到了由内核中的驱动提供的接口文件，那么就可以通过它直接调节核显亮度。不幸的是：这只会对会当前用户会话生效。而如果你希望对核显亮度的调节能在重启系统后同样保持，那么你可能需要在调节亮度之后将`X`服务器杀死一次才能在重新引导系统之后保持之前对核显调整好的亮度。
 
 ```log
 .............

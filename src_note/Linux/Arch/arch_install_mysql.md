@@ -1,9 +1,12 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # MySQL在Arch Linux上的安装与配置
 [TOC]
 
 >虽然 MySQL 已经被 Oracle 收购，但一款向上兼容 MySQL，叫做 MariaDB 的数据库已经开发并稳定下来。MariaDB 是可以直接从系统源中安装的，不过，MySQL 也还没有彻底闭源。
 
- &nbsp;&nbsp;如果没有从 MySQL 的网站或者系统源中找到适合于自己系统已经编译好的二进制包(二进制包是针对于某一系统且已经编译好的可以直接安装到系统的软件包)，那也许需要 从源码编译安装 MySQL 到系统中了。
+ 如果没有从 MySQL 的网站或者系统源中找到适合于自己系统已经编译好的二进制包(二进制包是针对于某一系统且已经编译好的可以直接安装到系统的软件包)，那也许需要 从源码编译安装 MySQL 到系统中了。
 
 ## 从源码编译安装 MySQL
 1.1 从 MySQL 网站 获取 MySQL 源码

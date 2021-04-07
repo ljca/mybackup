@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # Java 笔记
 ## [Java第一课：Java开发环境](java/Java第一课：Java开发环境.md)
 ## [Java第二课](java/Java第二课.md)

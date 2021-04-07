@@ -1,10 +1,13 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 怎样在 Arch Linux 构建一个简单的软件包？
 
-&nbsp;&nbsp; 最初，我使用`Deepin`的图标集，但我很快发现并不是很习惯其设计，而 Arch Linux 所带的几套图标主题尽管简洁但我不是很喜欢。想了很久，发现还是很喜欢最开始使用的那套 Humman 图标集，遗憾的是：搜遍源和`AUR`，也没有发现提供给`Arch Linux`的。不过我很快在网络上找到了它，发现只有提供给`Ubuntu`和`Fedora`的。
+ 最初，我使用`Deepin`的图标集，但我很快发现并不是很习惯其设计，而 Arch Linux 所带的几套图标主题尽管简洁但我不是很喜欢。想了很久，发现还是很喜欢最开始使用的那套 Humman 图标集，遗憾的是：搜遍源和`AUR`，也没有发现提供给`Arch Linux`的。不过我很快在网络上找到了它，发现只有提供给`Ubuntu`和`Fedora`的。
 
-&nbsp;&nbsp;最初我用了一个 shell 脚本(包括获取 rpm 以及解包 rpm，安装，卸载等工作)希望可以一劳永逸让以后的安装与卸载仅仅需要一条指令，后来还是厌烦了这样做[^1][^2]。
+最初我用了一个 shell 脚本(包括获取 rpm 以及解包 rpm，安装，卸载等工作)希望可以一劳永逸让以后的安装与卸载仅仅需要一条指令，后来还是厌烦了这样做[^1][^2]。
 
-&nbsp;&nbsp;`Arch Linux`赋予了更多的自由给使用者，它还允许使用者去自己构建和构建自己的软件包。于是按照 Wiki 创建了一个临时构建目录，并创建一个最基础的 PKGBUILD (示例文件可以从 /usr/share/pacman/ 下找到)，它是一个 shell 脚本，在 Bash 上能保证运行的很好。随时可以运行 makepkg 测试创建的 PKGBUILD 是否工作正常。
+`Arch Linux`赋予了更多的自由给使用者，它还允许使用者去自己构建和构建自己的软件包。于是按照 Wiki 创建了一个临时构建目录，并创建一个最基础的 PKGBUILD (示例文件可以从 /usr/share/pacman/ 下找到)，它是一个 shell 脚本，在 Bash 上能保证运行的很好。随时可以运行 makepkg 测试创建的 PKGBUILD 是否工作正常。
 
 > Note：makepkg 要求下面的几个变量和一个 package 函数是必须在 PKGBUILD 脚本中定义的:
 

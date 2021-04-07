@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # rpm：Red Hat 系[^redhat]底层软件包管理
 
 ## `rpm -q`：查询 rpm

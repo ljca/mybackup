@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # [Fedora Xfce 23 software List](https://)
 
 > Others

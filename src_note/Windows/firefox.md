@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Firefox：一个免费的高自定义(扩展很多)浏览器的扩展小配置
 
 > 与 Firefox 有关的设置项，可以直接在地址栏中输入：
@@ -5,7 +8,7 @@
 + Firefox 设置: `about:preferences#general`
 + Firefx 高级配置选项： `about:config`
 + 固定一组相同网址的网页缩放比列（`browser.zoom.full`），值为 true;
-+ `browser.zoom.siteSpecific` &nbsp;&nbsp;  `browser.zoom.updateBackgroundTabs`此值为true 时可能会与 Firefox 扩展 Nosquint 冲突
++ `browser.zoom.siteSpecific`   `browser.zoom.updateBackgroundTabs`此值为true 时可能会与 Firefox 扩展 Nosquint 冲突
 + 验证扩展的签名`xpinstall.signatures.required`，值如果为 false，则不对扩展的签名进行验证，默认为 true;
 + Firefox 扩展管理： `about:addons`
 
@@ -30,7 +33,7 @@
 
 [^ublock]:  ublock origin 版本过滤广告效果要更好。
 
-[^stylish]: &nbsp;&nbsp;在附加组件 about:addons -> 搜索并安装 Stylish -> 打开 Stylish，点击编写一个样式表或者搜索网络上的样式表来自定义页面样式样式表中设置的中英文字体必须已经安装到系统中，否则会使用系统字体而让样式表中设置的字体失效。最好不要在样式表重设字体参数，因为这可能会打乱原网页的页面布局和显示方式。当然，如果对这些并不在意，那么可以随意在样式表中对字体等样式进行重设，然而，仍旧不推荐重设字体大小。
+[^stylish]: 在附加组件 about:addons -> 搜索并安装 Stylish -> 打开 Stylish，点击编写一个样式表或者搜索网络上的样式表来自定义页面样式样式表中设置的中英文字体必须已经安装到系统中，否则会使用系统字体而让样式表中设置的字体失效。最好不要在样式表重设字体参数，因为这可能会打乱原网页的页面布局和显示方式。当然，如果对这些并不在意，那么可以随意在样式表中对字体等样式进行重设，然而，仍旧不推荐重设字体大小。
 
 > 参考：
 

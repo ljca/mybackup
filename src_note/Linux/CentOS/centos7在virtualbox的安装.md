@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # CentOS7在VirtualBox的安装
 # §. CentOS 7 在 VirtualBox 里的安装
 
@@ -8,7 +11,7 @@
 + SCSI
 + ......
 
-> &nbsp;&nbsp;对于低版本的 VirtualBox，如果你选择了用 UEFI 来引导安装的系统，在安装完成之后，你需要通过 UEFI SHELL 启动 CentOS 并在系统中调整 efi 位置[^efi]。如果你的系统在 VirtualBox 能顺利引导的话就不必这样了。
+> 对于低版本的 VirtualBox，如果你选择了用 UEFI 来引导安装的系统，在安装完成之后，你需要通过 UEFI SHELL 启动 CentOS 并在系统中调整 efi 位置[^efi]。如果你的系统在 VirtualBox 能顺利引导的话就不必这样了。
 
 ```Batch
 FS0:\EFI\centos\grubx64.efi 
@@ -22,7 +25,7 @@ dir BOOT
 ```
 
 
-> &nbsp;&nbsp;在大多数情况下，我们在虚拟机上安装了~~用于学习的Linux~~之后，通常都会希望在主机上能够直接通过 `ssh` 程序连接到它并进行管理。 除了 `VirtualBox` 上的网络配置，你还需要正确配置了虚拟机里系统的防火墙和 `ssh` 服务。
+> 在大多数情况下，我们在虚拟机上安装了~~用于学习的Linux~~之后，通常都会希望在主机上能够直接通过 `ssh` 程序连接到它并进行管理。 除了 `VirtualBox` 上的网络配置，你还需要正确配置了虚拟机里系统的防火墙和 `ssh` 服务。
 
 ## §. 系统里的设置
 ### 1. ssh server

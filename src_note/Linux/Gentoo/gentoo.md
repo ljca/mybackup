@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Gentoo 笔记：
 ## 桌面配置
 ### Install software
@@ -60,7 +63,7 @@ LANG="zh_CN.UTF-8" exec fbterm
 
 ## Install[^install]
 
-&nbsp;&nbsp;**从 UEFI[^gentoo_uefi]启动 Gentoo 可启动盘，选择一个内核和可选内核参数启动[^kernel_option]，开始安装 Gentoo 前的准备。 set network[^wpa2]. net-set or wpa_supplicant & dhcpcd**
+**从 UEFI[^gentoo_uefi]启动 Gentoo 可启动盘，选择一个内核和可选内核参数启动[^kernel_option]，开始安装 Gentoo 前的准备。 set network[^wpa2]. net-set or wpa_supplicant & dhcpcd**
 
 > DISK CONFIGURE 
 

@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # DB 笔记
 
 ## [Access学习笔记](db/access.md)

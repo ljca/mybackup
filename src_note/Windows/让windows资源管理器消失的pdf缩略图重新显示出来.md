@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 让windows资源管理器消失的pdf缩略图重新显示出来
 
 **据说，`windows`在安装了`Adobe Arocat Pro`之后，pdf 文档就不会显示缩略图了。**

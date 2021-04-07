@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # C双重for循环进行冒泡排序在使用gcc时遇到的问题：内层循环循环控制的初始化部分不可省略？
 在一个双重 for 循环之外，我声明了两个局部变量并将它们初始化用做控制循环迭代的变量。
 

@@ -1,6 +1,9 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Windows 8.1 启用 .NET Framework 组件[^.net]
 
-**&nbsp;&nbsp;在 `Windows更新服务`不好使或者`没有网络的状态下`可以直接使用 win8.1 的安装媒体（光盘，U 盘，iso 镜像）启用[^method] .NET 组件：首先挂载 iso 镜像，然后`以管理员权限运行命令提示符`使用 `Windows 部署工具：dism` 部署即可。**
+**在 `Windows更新服务`不好使或者`没有网络的状态下`可以直接使用 win8.1 的安装媒体（光盘，U 盘，iso 镜像）启用[^method] .NET 组件：首先挂载 iso 镜像，然后`以管理员权限运行命令提示符`使用 `Windows 部署工具：dism` 部署即可。**
 
 [^.net]: `.NET Framework` 框架是 windows 上一组很重要的组件或者说运行时环境（实际上，它为用它实现的程序提供了运行时需要的库），它提供了某些应用程序和游戏运行时支持，如果你在运行一个程序时收到了 `需要安装 .NET Framework...` 类似的警告和提示，那就表明你的系统中没有安装 Windows 的这个功能。为了启用 windows  .Net Framework. 组件，你需要在 Windows 的程序和功能组件中安装这些更新（当然，你同样可以选择从他们的官网下直接下载这个组件然后运行安装程序来安装）。不过启用 windows 功能和更新需要联网，因此请确保网络畅通。另外，某些刚出厂的win8系统已经默认开启....
 

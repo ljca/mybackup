@@ -1,6 +1,9 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Windows上连接网络遇到的问题
 
-> **&nbsp;&nbsp;如果某一天你发现你的 Windows 在连接以太网后居然有两个以上的活动连接[^conn]？其中的某个还无法连接到互联网…… 如果你喜欢使用命令行，以管理权限运行命令提示符 [^netsh]：**
+> **如果某一天你发现你的 Windows 在连接以太网后居然有两个以上的活动连接[^conn]？其中的某个还无法连接到互联网…… 如果你喜欢使用命令行，以管理权限运行命令提示符 [^netsh]：**
 
 ```batch
 :: 未来的某一天，Microsoft 计划移除 netsh，改用 Power Shell……

@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # emerge[^emerge]
 
 [^emerge]: Gentoo 软件包管理器

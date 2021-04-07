@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # C 语言笔记
 
 c语言运行的几个阶段：

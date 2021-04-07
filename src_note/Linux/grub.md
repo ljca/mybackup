@@ -1,11 +1,14 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # grub 笔记
 
 ## GRUB 2 Themes
-&nbsp;&nbsp;如果你希望调整`Grub`默认主题并且没兴趣了解、讨论`Grub`主题配置文件细节，你可以尝试直接从 Gnome Themes 的 [Grub Themes][grub_themes] 节获取您喜欢的主题后放到合适的位置然后根据需要调整……而下面这些仅仅适合我和那些“希望了解`Grub`主题包细节和对`Grub`主题进行微小调整的人群”……
+如果你希望调整`Grub`默认主题并且没兴趣了解、讨论`Grub`主题配置文件细节，你可以尝试直接从 Gnome Themes 的 [Grub Themes][grub_themes] 节获取您喜欢的主题后放到合适的位置然后根据需要调整……而下面这些仅仅适合我和那些“希望了解`Grub`主题包细节和对`Grub`主题进行微小调整的人群”……
 
-&nbsp;&nbsp;如果您希望在`Grub`引导菜单项中能见到您喜欢的`OS`图标，您可以自己收集您喜欢的`OS`图标文件(尺寸：`24x24/32x32/64x64/72x72/88x88/128x128……`，格式：`8 bit 的 png`)重命名(os\_dist\_type.png)后存放到固定位置处（`Grub`主题目录下的`icons`目录中）。
+如果您希望在`Grub`引导菜单项中能见到您喜欢的`OS`图标，您可以自己收集您喜欢的`OS`图标文件(尺寸：`24x24/32x32/64x64/72x72/88x88/128x128……`，格式：`8 bit 的 png`)重命名(os\_dist\_type.png)后存放到固定位置处（`Grub`主题目录下的`icons`目录中）。
 
-&nbsp;&nbsp;当然，除了可选的`OS`图标，`Grub`主题还包含一些其它的东西(主题定义文件)、资源文件(这些东西需要你自己动手搜集[^1]，如果你对自定义充满了兴趣并表示不反对的话)。
+当然，除了可选的`OS`图标，`Grub`主题还包含一些其它的东西(主题定义文件)、资源文件(这些东西需要你自己动手搜集[^1]，如果你对自定义充满了兴趣并表示不反对的话)。
 
 >  一个`Grub`主题包结构类似：
 
@@ -41,11 +44,11 @@
 └── .......
 ```
 
-&nbsp;&nbsp; 如果你希望自定义`Grub`主题，一个格式是纯文本的文件（文件名倒是可以随意，但引用时必须一致）是必须的，它被用来定义`Grub`主题样式。
+ 如果你希望自定义`Grub`主题，一个格式是纯文本的文件（文件名倒是可以随意，但引用时必须一致）是必须的，它被用来定义`Grub`主题样式。
 
 > ![](images/tips/conf.png)[themes.txt](config/themes.txt)
 
-&nbsp;&nbsp;如果你在第一次更改`Grub`主题文件后已经更新过了`Grub`配置文件，那么之后如果仅仅是对`Grub`主题文件作了修改就不再需要更新`Grub`配置文件…… 然后更新`Grub`配置文件应用`Grub`主题： `/etc/default/grub`,`/etc/grub.d/40-custom`....还可以是其它的[^2]。
+如果你在第一次更改`Grub`主题文件后已经更新过了`Grub`配置文件，那么之后如果仅仅是对`Grub`主题文件作了修改就不再需要更新`Grub`配置文件…… 然后更新`Grub`配置文件应用`Grub`主题： `/etc/default/grub`,`/etc/grub.d/40-custom`....还可以是其它的[^2]。
 
 
 > ![](images/tips/conf.png)/etc/default/grub 
@@ -64,7 +67,7 @@ GRUB_THEME="/boot/efi/EFI/boot/grub/themes/books/theme.txt" # 这里，请务必
 grub-mkconfig -o /boot/efi/EFI/boot/grub/grub.cfg
 ```
 
-> &nbsp;&nbsp;如果您觉得`grub-mkconfig`脚本更新`Grub`配置太慢(查找其它的`OS`)尝试直接编辑`Grub`最终生成的`grub.cfg`，用于设置主题的指令类似：
+> 如果您觉得`grub-mkconfig`脚本更新`Grub`配置太慢(查找其它的`OS`)尝试直接编辑`Grub`最终生成的`grub.cfg`，用于设置主题的指令类似：
 
 ```config
 insmod gfxmenu
@@ -73,13 +76,13 @@ set theme=(hd0,1)/EFI/boot/grub/themes/books/theme.txt
 export theme
 ```
 
-&nbsp;&nbsp;在更新`Grub`和重新引导系统之前，不要忘了备份旧的`Grub`配置文件和使用`grub-script-check`来检查`grub.cfg`是否存在问题。
+在更新`Grub`和重新引导系统之前，不要忘了备份旧的`Grub`配置文件和使用`grub-script-check`来检查`grub.cfg`是否存在问题。
 
 
 ## 附
 ### 加密 GRUB 2 命令行
 
-&nbsp;&nbsp;grub 2 现在使用的加密工具是 `grub-mkpasswd-pbkdf2`，要加密 grub 的命令行和编辑功能，我们需要先使用它生成密码并根据需要将它加入 grub.d 下的配置文件中 `grub-mkpasswd-pbkdf2 >> /etc/grub.d/00_header`（只有放在所有 menuentry 和所有 submenu 项之前，才能对它们进行应用密码）并用 grub-mkconfig 重新生成 `grub.cfg` 或者仅仅添加变化的部分到`grub.cfg`（这样就无需对 /etc/grub.d/ 下的脚本做任何修改，也无需调用 grub-mkconfig）。
+grub 2 现在使用的加密工具是 `grub-mkpasswd-pbkdf2`，要加密 grub 的命令行和编辑功能，我们需要先使用它生成密码并根据需要将它加入 grub.d 下的配置文件中 `grub-mkpasswd-pbkdf2 >> /etc/grub.d/00_header`（只有放在所有 menuentry 和所有 submenu 项之前，才能对它们进行应用密码）并用 grub-mkconfig 重新生成 `grub.cfg` 或者仅仅添加变化的部分到`grub.cfg`（这样就无需对 /etc/grub.d/ 下的脚本做任何修改，也无需调用 grub-mkconfig）。
 
 ======= ![](images/tips/conf.png) /etc/grub.d/00_header =======
 
@@ -94,7 +97,7 @@ EOF
 
 ### GRUB2 启动 ISO：从 ISO 直接安装
 
-&nbsp;&nbsp;GRUB 2 支持读取 iso（然而，一些 Linux 发行的 Live CD 并不支持从 NTFS 分区读取 ISO 文件)并尝试启动。你只需要在 [`/etc/grub.d/40-custom`](config/40_custom) 脚本[^others]中添加自定义菜单项然后使用 `grub-mkconfig` 脚本更新 grub 配置文件就行了。
+GRUB 2 支持读取 iso（然而，一些 Linux 发行的 Live CD 并不支持从 NTFS 分区读取 ISO 文件)并尝试启动。你只需要在 [`/etc/grub.d/40-custom`](config/40_custom) 脚本[^others]中添加自定义菜单项然后使用 `grub-mkconfig` 脚本更新 grub 配置文件就行了。
 
 [^others]: 当然，你可以自定义脚本，只要你能保证 `grub-mkconfig` 脚本可以调用到。但实在没有什么理由要这样做，不是吗？或者，干脆直接编辑这个脚本生成的最终配置文件 `grub.cfg` 好了。甚至都不用修改配置文件，在 Grub 的命令行下就可以读取并启动 iso，但这是一次性的。
 
@@ -108,6 +111,10 @@ grub> initrd /boot/initramfs-linux.img
 grub> boot
 
 # Windows，链式加载 
+grub> set root=(hd0,gpt1)
+grub> search --label --set=root ESP
+grub> chainloader /efi/win/Boot/bootmgfw.efi
+grub> boot
 ```
 
 ### Security Shell，见参考。

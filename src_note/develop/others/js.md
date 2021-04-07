@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # JavaScript[^js]：在浏览器客户端执行的脚本
 
 > 网页中使用JS的几种方式：

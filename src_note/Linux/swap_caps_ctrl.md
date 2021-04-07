@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 交换 Caps Lock & 左 Ctrl 键
 
 > 参考：

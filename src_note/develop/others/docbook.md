@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # charpter1
 [^docbook]学习笔记
 

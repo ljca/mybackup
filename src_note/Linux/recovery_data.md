@@ -1,8 +1,11 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 数据恢复笔记
 
 ## ext4magic 
 
-&nbsp;&nbsp;关于`Linux`上可扩展文件(Ext)系统的数据存放原理及组织方式，我不得而知。以下仅对其恢复工具的用法进行简要的讨论：
+关于`Linux`上可扩展文件(Ext)系统的数据存放原理及组织方式，我不得而知。以下仅对其恢复工具的用法进行简要的讨论：
 
 > `Linux`平台[^lin][^win]  Ext 系列文件系统目前已知的数据恢复工具：
 
@@ -45,7 +48,7 @@ sudo ext4magic  -R -b $(date -d "-42day" +%s) /dev/sda7 -d /mnt
 
 [^lin]: 因为`Linux`上的数据恢复工具似乎从未有过图形界面，而命令行工具选项的复杂使得使用难度增加了不少。
 
-[^win]: 在`Windows`上，你可以尝试一下&nbsp;D-Recovery&nbsp;等工具，一些新的工具正在开发中，也许不久之后就会上市。
+[^win]: 在`Windows`上，你可以尝试一下D-Recovery等工具，一些新的工具正在开发中，也许不久之后就会上市。
 
 ## ntfsundelete[^undelete]：恢复在 NTFS 文件系统上误删的文件。
 

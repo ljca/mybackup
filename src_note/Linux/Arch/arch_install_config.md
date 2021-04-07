@@ -1,8 +1,11 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Arch Linux 的安装配置笔记
 
-> *&nbsp;&nbsp;本次安装的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi][^secure_boot]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*
+> *本次安装的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi][^secure_boot]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*
 
-**&nbsp;&nbsp;你必须已经准备好了引导盘[^boot]，可以是可启动的 U 盘，光盘，甚至如果你有系统镜像并且系统上已经安装了某一个 Linux 发行使用 GRUB2 引导，你还可以直接使用 GRUB2 引导。同时，你还可以选择从网络引导。**
+**你必须已经准备好了引导盘[^boot]，可以是可启动的 U 盘，光盘，甚至如果你有系统镜像并且系统上已经安装了某一个 Linux 发行使用 GRUB2 引导，你还可以直接使用 GRUB2 引导。同时，你还可以选择从网络引导。**
 
 ## Start Install[^start]
 
@@ -56,7 +59,7 @@ pacman -Syy
 ```
 
 ### Set partitions
-&nbsp;&nbsp;我们假定你使用 UEFI[^uefi] 来引导系统，并且`EFI启动分区`[^boot_efi]在磁盘上已经存在。准备`Arch Linux`分区。我的分区规划是：
+我们假定你使用 UEFI[^uefi] 来引导系统，并且`EFI启动分区`[^boot_efi]在磁盘上已经存在。准备`Arch Linux`分区。我的分区规划是：
 
 - /
 - home
@@ -229,7 +232,7 @@ reboot
 
 [^option]: 据称，只要 Bash 的版本合适，这些虚拟文件系统甚至可以不必配置。
 
-&nbsp;&nbsp;如果没有 arch-chroot 脚本，你就需要手动(正常的chroot环境包括根 /  分区，home分区(这并不是必须的)以及(Live系统环境)挂载必需的虚拟文件系统（它们包括 ： devtmpfs      dev/pts   proc    sys      run）。这些虚拟文件系统对于系统来说是必须的，其中某些需要使用绑定挂载。
+如果没有 arch-chroot 脚本，你就需要手动(正常的chroot环境包括根 /  分区，home分区(这并不是必须的)以及(Live系统环境)挂载必需的虚拟文件系统（它们包括 ： devtmpfs      dev/pts   proc    sys      run）。这些虚拟文件系统对于系统来说是必须的，其中某些需要使用绑定挂载。
 
 + dev：`mount --bind -v /dev /mnt/dev`
 + dev/pts： `mount -vt devpts devpts /mnt/dev/pts`

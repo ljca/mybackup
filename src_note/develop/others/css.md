@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # CSS：层叠样式表
 
 1. css的声明包括选择器和声明
@@ -33,7 +35,6 @@ css代码
 将css代码(不得存在`<style>`标签)写在一个单独的文件中，使用时需要在html文档的`<head>`标签中使用`<link/>`标签引入。外部样式表引入，语法:
 
 ```html
-<link type='text/css' rel='stylesheet' href='' />;
 ```
 
 ## 选择器 复合选择器：

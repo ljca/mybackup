@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # FreeBSD 笔记
 
 ## pkg: FreeBSD 10+ 预编译软件包管理

@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 一点小技巧
 
 + rar 一次解压多个密码相同[^rar]的rar压缩包。

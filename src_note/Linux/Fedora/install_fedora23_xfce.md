@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Fedora Xfce 23：安装与配置指东
 ## 安装
 
@@ -129,7 +132,7 @@ cp -r usr/share/license /usr/share/license/
 
 #### 字体优化[^warn]
 
-[^warn]: 因为那些预编译的软件包在&nbsp;Fedora&nbsp;中文源中，所以这需要正确配置了&nbsp;Fedora&nbsp;中文源。
+[^warn]: 因为那些预编译的软件包在Fedora中文源中，所以这需要正确配置了Fedora中文源。
 
 ```Bash
 git clone https://github.com/FZUG/repo.wiki.git

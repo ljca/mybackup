@@ -1,3 +1,6 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # adb：Android调试桥
 
 > adb 是 Android 调试桥(Android Debug Bridge)的简称，一般而言，adb 至少具有以下几个功能：
@@ -6,7 +9,7 @@
 2. 安装、卸载、运行、停止设备上的 Android 应用
 3. ...................................................
 
-&nbsp;&nbsp;adb 默认并不会安装在操作系统上，在 Linux 上系统上已经有软件包(一些 Linux 发行已经包含在官方源中)直接提供,可以直接使用软件包管理器下载安装。而 windows 上需要自行下载 adb 并配置环境变量(如果有必要的话)
+adb 默认并不会安装在操作系统上，在 Linux 上系统上已经有软件包(一些 Linux 发行已经包含在官方源中)直接提供,可以直接使用软件包管理器下载安装。而 windows 上需要自行下载 adb 并配置环境变量(如果有必要的话)
 
 ---------------------------------------------
 > 在使用 adb 之前，需要先安装 google usb 驱动并打开Android智能手机的调试功能。如果确定 google usb 驱动已经配置完成，那么先要以根用户权限(windows 上是管理员权限)启动 adb server
@@ -70,7 +73,7 @@ adb pull /sdcard/tmp/test.txt /tmp
 
 ## adb shell：进入 adb shell 环境或者执行 adb shell 指令
 
-&nbsp;&nbsp; shell 是 adb 中一个强大的指令，它不仅可以直接进入 Android 的  shell，还可以直接运行 Android Shell 里面的可执行程序。对于已经获取了 root 权限的 Android 设备来说，能进行的操作更多。它允许直接从 Android shell 中：
+ shell 是 adb 中一个强大的指令，它不仅可以直接进入 Android 的  shell，还可以直接运行 Android Shell 里面的可执行程序。对于已经获取了 root 权限的 Android 设备来说，能进行的操作更多。它允许直接从 Android shell 中：
 
  * 启动/停止 Android 应用活动，服务
  * 卸载/安装 Android (系统)应用
@@ -78,7 +81,7 @@ adb pull /sdcard/tmp/test.txt /tmp
 ............
 
 ---------------------------
-&nbsp;&nbsp; adb shell 不仅可以直接执行位于 Android 系统中的本地可执行(包括 shell 脚本和本地可执行,大多数位于/system/bin;/system/xbin;/system/sbin下.少数位于 /sbin 等目录下)(adb shell 允许传递一个指令作为参数来直接执行一个位于 Android 设备上的本地可执行文件而不必每次都要先通过 adb shell 进入了 Android 的 shell 环境后再去执行某个指令。)
+ adb shell 不仅可以直接执行位于 Android 系统中的本地可执行(包括 shell 脚本和本地可执行,大多数位于/system/bin;/system/xbin;/system/sbin下.少数位于 /sbin 等目录下)(adb shell 允许传递一个指令作为参数来直接执行一个位于 Android 设备上的本地可执行文件而不必每次都要先通过 adb shell 进入了 Android 的 shell 环境后再去执行某个指令。)
 
 > adb shell : 进入设备的shell
 
@@ -93,9 +96,9 @@ $ adb shell busybox mount -o remount,rw /system
 
 ### am：Android 应用、服务调试工具
 
-&nbsp;&nbsp;Android shell 里不仅可以执行标准的 sh，还可以执行某些只适用于 Android 设备的指令，比如调试专用的 am 和 logcat
+Android shell 里不仅可以执行标准的 sh，还可以执行某些只适用于 Android 设备的指令，比如调试专用的 am 和 logcat
 
-&nbsp;&nbsp;am 是一个位于 Android 设备上的本地可执行，主要功能是运行/停止 Android 设备上的一个 Android 应用，管理 Android 设备上的服务.....。它们都需要在 adb shell 中或者以 adb shell 的子命令形式使用。用法： 
+am 是一个位于 Android 设备上的本地可执行，主要功能是运行/停止 Android 设备上的一个 Android 应用，管理 Android 设备上的服务.....。它们都需要在 adb shell 中或者以 adb shell 的子命令形式使用。用法： 
 
 ```adb shell
 am subcmd options或者adb shell am subcmd options
@@ -155,7 +158,7 @@ aapt list -v Test.apk
 
 > 输出类似于以下结果:
 
-&nbsp;&nbsp;包名被提供给 adb 工具的 uninstall 参数时会卸载 Android 应用,系统应用不再此列，Android sdk tools 命令行创建项目时也需要指定包名，Android 的 am 工具运行 Android 应用时需要使用包名参数
+包名被提供给 adb 工具的 uninstall 参数时会卸载 Android 应用,系统应用不再此列，Android sdk tools 命令行创建项目时也需要指定包名，Android 的 am 工具运行 Android 应用时需要使用包名参数
 
 ```log
 package: name='led.test' versionCode='1' versionName='1.0'

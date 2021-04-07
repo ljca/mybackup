@@ -1,16 +1,19 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Windows使用过程中遇到的一些问题
 
 > windows 资源管理器无法完全访问ftp服务器？在windows资源管理器键入一个 ftp 地址想要访问却被提示无法完全访问 ftp，如果需要可以与管理员联系或者重新设置代理服务器？
 
-&nbsp;&nbsp; 这个奇葩的问题其实只需要重启 windows 的资源管理器就可以了，与什么网络浏览器的代理服务器配置完全无关，也不需要管理员权限
+ 这个奇葩的问题其实只需要重启 windows 的资源管理器就可以了，与什么网络浏览器的代理服务器配置完全无关，也不需要管理员权限
 
 > Windows 资源管理器没有权限上传指定的文件到指定的目录？
 
-&nbsp;&nbsp;可能因为目录权限问题，或者文件名存在非法字符(可以试试以 ascll 来命名文件名)
+可能因为目录权限问题，或者文件名存在非法字符(可以试试以 ascll 来命名文件名)
 
 > 如何阻止旧版 UC 浏览器自动升级？ 如何解决 UC 浏览器自动更新的问题？
 
-&nbsp;&nbsp;在 NTFS 文件系统上，我们可以更改安装目录下的 Application 文件夹访问权限为读取、执行，列出文件夹内容，删掉 update-server.exe 文件就能解决这个问题然而这样还是有问题
+在 NTFS 文件系统上，我们可以更改安装目录下的 Application 文件夹访问权限为读取、执行，列出文件夹内容，删掉 update-server.exe 文件就能解决这个问题然而这样还是有问题
 
 * UC 浏览器旧版自带可爱的翻墙功能，还能使用插件强行更改网页中英文字体和修改网页背景颜色，拦截广告也有，只是内存占用过高？
 * 欧鹏浏览器？改了字体无法生效，无法对缩放网页进行永久生效
@@ -20,15 +23,15 @@
  
 > Firefox 内存占用问题？
 
-&nbsp;&nbsp;实际上是因为广告拦截插件 Adb_lock Plus 占用内存大。 浏览器内存优化工具 WebBrowseOptimizer 可以优化浏览器内存占用太大的问题。它能将我的 Firefox 内存优化到只占 50 多 M，但对谷歌浏览器不是很明显(因为谷歌浏览器是多线程的运行模式)；但会使这个插件失效。或许应该换一个广告拦截插件
+实际上是因为广告拦截插件 Adb_lock Plus 占用内存大。 浏览器内存优化工具 WebBrowseOptimizer 可以优化浏览器内存占用太大的问题。它能将我的 Firefox 内存优化到只占 50 多 M，但对谷歌浏览器不是很明显(因为谷歌浏览器是多线程的运行模式)；但会使这个插件失效。或许应该换一个广告拦截插件
 
 > 安装 UC 之后，再安装 VS、SQL Server 等大型程序不成功？
 
-&nbsp;&nbsp;如果 UC 已经被设为默认浏览器并且在设置中锁定了自身，那么一旦有别的程序试图关联被被它应经关联的文件类型，它就会阻止别的程序关联，这可能就是安装了 UC 再去安装 VS、SQL Server 等程序会失败的原因。安装时如果被阻止只需要被允许就可以了或者安装之前只需要解除 UC 自身的锁定就能解决这个问题
+如果 UC 已经被设为默认浏览器并且在设置中锁定了自身，那么一旦有别的程序试图关联被被它应经关联的文件类型，它就会阻止别的程序关联，这可能就是安装了 UC 再去安装 VS、SQL Server 等程序会失败的原因。安装时如果被阻止只需要被允许就可以了或者安装之前只需要解除 UC 自身的锁定就能解决这个问题
 
 > 控制台`move`和`ren`命令无法修改带有系统属性的文件或者目录？
 
-&nbsp;&nbsp; 使用`attribe`命令去掉文件或者目录的系统属性，再去执行`move`或者`ren`命令
+ 使用`attribe`命令去掉文件或者目录的系统属性，再去执行`move`或者`ren`命令
 
 > windows自带控制台cmd显示utf-8编码格式的文件乱码？ 使用`chcp`更改控制台代码页并更改命令提示符窗口的字体
   1.  `chcp [number]`
@@ -36,11 +39,11 @@
 
 > UC 等开启了极速模式的浏览器无法正常使用网页功能？ 将极速模式切换到兼容模式
 
-&nbsp;&nbsp;`2016/4/14 星期四 任务栏优化工具 7+ Taskbar Tweaker 无法载入动态链接库(107)`  windows 8.1 安装某个更新之后，任务栏优化工具 7+ Taskbar Tweaker 提示无法载入动态链接库(107) ；将 7+ Taskbar Tweaker 升级到最新版本
+`2016/4/14 星期四 任务栏优化工具 7+ Taskbar Tweaker 无法载入动态链接库(107)`  windows 8.1 安装某个更新之后，任务栏优化工具 7+ Taskbar Tweaker 提示无法载入动态链接库(107) ；将 7+ Taskbar Tweaker 升级到最新版本
 
 > msi 程序包安装失败？
 
-&nbsp;&nbsp; 有些 msi 程序包需要以管理员权限来运行才会安装成功，然而 windows 的 msi 程序包右键菜单并没有以管理员权限运行这个选项菜单。因此只要到注册表去给 msi 程序包右键菜单加上这个选项就可以了(不推荐！) ；运行 regedit -> 依次展开路径第一根键(HKEY_CLASSES_ROOT)\Msi.Packge\Shell -> 新建项 runas -> 在值中键入以管理员权限运行 -> 继续在 runas 下新建项 command 并添加字符串值 `msiexec /i "%1"` 或者以管理员权限运行命令提示符，切换到 msi 所在程序路径，执行 msi 程序或者输入 msi 程序全路径执行
+ 有些 msi 程序包需要以管理员权限来运行才会安装成功，然而 windows 的 msi 程序包右键菜单并没有以管理员权限运行这个选项菜单。因此只要到注册表去给 msi 程序包右键菜单加上这个选项就可以了(不推荐！) ；运行 regedit -> 依次展开路径第一根键(HKEY_CLASSES_ROOT)\Msi.Packge\Shell -> 新建项 runas -> 在值中键入以管理员权限运行 -> 继续在 runas 下新建项 command 并添加字符串值 `msiexec /i "%1"` 或者以管理员权限运行命令提示符，切换到 msi 所在程序路径，执行 msi 程序或者输入 msi 程序全路径执行
 
 > 如何解决 autorun.inf [^autorun] U 盘病毒？
 
@@ -67,7 +70,7 @@
 
 > windows 8.1 桌面崩溃怎么办？
 
-&nbsp;&nbsp; 可以尝试按下组合键 Ctrl+Alt+Del 或者 Ctrl+Shift+Esc，用此方式调出任务管理器，执行新任务`Explorer`，或者注销系统命令`logoff`之后重新登录系统。那要是按不动的话该如何是好？简单。只要长按电源键强行关机或者拔电池就行了，如果是笔记本的话。
+ 可以尝试按下组合键 Ctrl+Alt+Del 或者 Ctrl+Shift+Esc，用此方式调出任务管理器，执行新任务`Explorer`，或者注销系统命令`logoff`之后重新登录系统。那要是按不动的话该如何是好？简单。只要长按电源键强行关机或者拔电池就行了，如果是笔记本的话。
 
 > windows 自带镜像部署工具 dism 能做什么
 
@@ -89,7 +92,7 @@
 
 > Windows Installer 服务无法更改启动类型
 
-[^autorun]: &nbsp;&nbsp;2014 年下旬-2015 年上旬，windows 下一种 U 盘(autorun.inf)病毒，它会隐藏 U 盘里面所有的文件夹，而产生一些跟文件夹同名的所谓屏幕保护程序(.scr)，还会隐藏掉任务管理器 ；当 U 盘插入时，这种病毒会在 U 盘下创建一个指向 dos 窗口的快捷方式(*.pif),和一个 windows 设备自动安装文件(autorun.inf)
+[^autorun]: 2014 年下旬-2015 年上旬，windows 下一种 U 盘(autorun.inf)病毒，它会隐藏 U 盘里面所有的文件夹，而产生一些跟文件夹同名的所谓屏幕保护程序(.scr)，还会隐藏掉任务管理器 ；当 U 盘插入时，这种病毒会在 U 盘下创建一个指向 dos 窗口的快捷方式(*.pif),和一个 windows 设备自动安装文件(autorun.inf)
 
-[^5]: &nbsp;&nbsp; 同一时间,搜狗输入法中文输入功能也不能正常使用  CRITICAL_STRUCTURE_CORRUPTION 2016-3-21 星期一 下午 windows8.1_Pro_x64 Inel Core i5-5200U Nvidia Geforce 840M & Intel Graphics 550
+[^5]:  同一时间,搜狗输入法中文输入功能也不能正常使用  CRITICAL_STRUCTURE_CORRUPTION 2016-3-21 星期一 下午 windows8.1_Pro_x64 Inel Core i5-5200U Nvidia Geforce 840M & Intel Graphics 550
 

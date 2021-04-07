@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # Qt开发环境搭建小记
 # Qt开发环境搭建小记
 

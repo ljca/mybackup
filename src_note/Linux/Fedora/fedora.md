@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Fedora 23 笔记：
 
 ## dnf[^dnf]：Fedora 新一代的软件包管理器

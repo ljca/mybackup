@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # Ajax，Async.. JavaScript And XML：异步JavaScript和XML可扩展语言
 Ajax其实不是一种新技术，根据相关文献，它来源于MS公司。为了解决
 一些浏览器厂商纷纷对它提供了支持。

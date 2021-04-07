@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Arch Linux 软件
 
 + xorg and nvidia drivers

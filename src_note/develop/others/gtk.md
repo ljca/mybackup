@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # gtk
 
 所有的gtk程序都要包含头文件gtk.h,然而这个头文件在不同的Linux发行的位置却不是一样的。

@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # pidgin-lwqq & Smart QQ 已经快要玩完，都散了吧
 据说，[pidgin-lwqq](https://github.com/xiehuc/pidgin-lwqq) 项目已经快要停止维护，而且 webqq 也有了另外一个名字，它被称作 *Smart QQ*。现在，它的账号密码登录接口已经没有了，只能通过手机扫码登录。因此，pidgin-lwqq 也算快要玩完了，假如侬不死心的话，可以尝试手动编译安装它后打开 pidgin 登录看看。详细编译 `pidgin-lwqq`教程见作者编写的 [wiki](https://github.com/xiehuc/lwqq/wiki/Build-From-Source)。
 1. 首先使用包管理器安装 `pidgin`

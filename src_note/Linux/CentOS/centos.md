@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Cent OS 7 笔记：
 
 ## yum: RedHat 系软件包管理器。

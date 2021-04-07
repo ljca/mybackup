@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # pandoc：
 `pandoc -f|--from <formats> -t|--to <formarts> file -o file` 
 

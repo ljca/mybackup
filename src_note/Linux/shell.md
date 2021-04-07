@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Linux Shell[^shell]笔记
 
 ## sh：波恩 Shell 
@@ -135,7 +138,7 @@
 
 > Ctrl+X 模式：
 
-**&nbsp;&nbsp;当 Bash 处于 emacs 模式下并且需要在终端键入一个长长的带很多参数的命令时，可以按下 Ctrl+X  Ctrl+E 启动一个文本编辑器(这个编辑器可以由 EDITOR 环境变量来指定)来编辑这个或者这一组命令，保存退出之后即可执行。**
+**当 Bash 处于 emacs 模式下并且需要在终端键入一个长长的带很多参数的命令时，可以按下 Ctrl+X  Ctrl+E 启动一个文本编辑器(这个编辑器可以由 EDITOR 环境变量来指定)来编辑这个或者这一组命令，保存退出之后即可执行。**
 
 + `Ctrl R`：重载 Readline init file，~/.inputrc，/etc/inputrc
 + `Ctrl v`：打印 Bash 版本

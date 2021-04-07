@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # strlen_sizeof
 strlen和sizeof的区别：
 

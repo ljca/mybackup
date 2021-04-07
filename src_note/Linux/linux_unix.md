@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Linux和Unix
 Unix哲学可以用简单、小巧、精致这几个词语来概括。从操作系统内核到软件和工具，基本上所有系统组件都遵循了这个原则。
 

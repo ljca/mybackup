@@ -1,3 +1,6 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # MySQL[^sql]笔记
 
 ## show 指令
@@ -253,7 +256,7 @@ Create ..An...Account //启用匿名用户连接
 
 > 现今 MySQL 已经被 Oracle 收购，但一款向上兼容 MySQL，叫做 Maridb 的数据库已经开发并稳定下来。Maridb 是可以直接从系统源中安装的，不过，MySQL 也还没有彻底闭源。
 
-&nbsp;&nbsp;如果没有从 MySQL 的网站或者系统源中找到适合于自己系统已经编译好的二进制包(二进制包是针对于某一系统且已经编译好的可以直接安装到系统的软件包)，那也许需要 [从源码编译安装 MySQL]() 到系统中了。
+如果没有从 MySQL 的网站或者系统源中找到适合于自己系统已经编译好的二进制包(二进制包是针对于某一系统且已经编译好的可以直接安装到系统的软件包)，那也许需要 [从源码编译安装 MySQL]() 到系统中了。
 
 1.1 从 [MySQL 网站]() 获取 MySQL 源码
 1.2 配置编译参数并尝试编译 MySQL，5.6 以上版本 使用 cmake 编译。
@@ -297,7 +300,7 @@ bin/mysql_secure_installation
 + mysql update 语句 `update mysql.user set Password=password("") where user='root';`
 +  使用mysqladmin 指令 `mysqladmin -uroot -p password ""`
 
-&nbsp;&nbsp;`mysqladmin -uroot [-p旧密码] password 新密码;`修改root用户的密码，注意：这必须已经打开了mysql服务。
+`mysqladmin -uroot [-p旧密码] password 新密码;`修改root用户的密码，注意：这必须已经打开了mysql服务。
 "如果root用户一开始就没有密码，则不需要指定-p选项。执行这条命令会给root用户添加一个新的密码。新密码如果包含特殊字符则需要使用单引号将密码引起来，如果省略，则会在控制台提示输入新密码
 
 
@@ -336,15 +339,15 @@ pid=
 
 + 如果没有将 mysql 安装为服务，则应该使用命令(Ctrl C 当然也可以)`mysqladmin -uroot shutdown -p`来停止关闭服务器
 
-&nbsp;&nbsp;MySQL 默认只提供了命令行界面，在 Windows 上，用于启动 MySQL 的命令类似于： ` net start MySql` 或者 `sc start MySql` 。如果不喜欢，可以使用图形界面的服务管理器services.msc模块启动mysql服务。 连接MySql必须先开启MySql服务或者使用命令行运行 MySQL 服务器。
+MySQL 默认只提供了命令行界面，在 Windows 上，用于启动 MySQL 的命令类似于： ` net start MySql` 或者 `sc start MySql` 。如果不喜欢，可以使用图形界面的服务管理器services.msc模块启动mysql服务。 连接MySql必须先开启MySql服务或者使用命令行运行 MySQL 服务器。
 
 ### 命令行启动（非守护进程，服务式） MySQL 
 
-&nbsp;&nbsp;如果没有将 MySQL 注册为系统服务，则需要在控制台启动mysql服务器，如果没有将mysql添加到系统的PATH环境变量中,则需要使用mysql服务器的全路径来启动mysqld，在 Windows 上，非服务启动方式的指令类似 `mysqld --console`，在 Linux 上，使用 `mysqld_safe` 启动。
+如果没有将 MySQL 注册为系统服务，则需要在控制台启动mysql服务器，如果没有将mysql添加到系统的PATH环境变量中,则需要使用mysql服务器的全路径来启动mysqld，在 Windows 上，非服务启动方式的指令类似 `mysqld --console`，在 Linux 上，使用 `mysqld_safe` 启动。
 
 ## mysql 客户端指令集：
 
-&nbsp;&nbsp; -u 选项指定用户root,-h选项用来指定主机，如果是本地登录，则可以省略此项。database_name用来指定连接的数据库，它并不是必须的。-p选项指定要用密码来连接root用户。如果连接成功则显示提示符,在此提示符下的所有语句都要用英文中的分号结尾，切换数据库上下文时可以省略。数据库中的每一种语言...都可以在之前使用help命令获取帮助。-e 用来执行一条或者一组 SQL，如果使用的 Shell 是 Bash，该选项还可以使用立即字符串 `<<<` 代替。
+ -u 选项指定用户root,-h选项用来指定主机，如果是本地登录，则可以省略此项。database_name用来指定连接的数据库，它并不是必须的。-p选项指定要用密码来连接root用户。如果连接成功则显示提示符,在此提示符下的所有语句都要用英文中的分号结尾，切换数据库上下文时可以省略。数据库中的每一种语言...都可以在之前使用help命令获取帮助。-e 用来执行一条或者一组 SQL，如果使用的 Shell 是 Bash，该选项还可以使用立即字符串 `<<<` 代替。
 
 > 如果你希望某些选项成为默认值而不必每次输入，你需要自行在 MySQL 配置文件中的 client 段配置这些选项。
 
@@ -377,13 +380,13 @@ nvarchar实际上是varchar的同义词
 ## FIQ：
 
 1. 忘记 MySQL 密码
-&nbsp;&nbsp;假如你忘记了 MySQL root 账户密码？你可以在命令提示符或者命令解释器上以 `--skip-grant-tables` 选项运行 MySQL 服务器。**如果 mysql 服务已经在运行，需要先停止 mysql 服务 `sudo killall mysqld`**。
+假如你忘记了 MySQL root 账户密码？你可以在命令提示符或者命令解释器上以 `--skip-grant-tables` 选项运行 MySQL 服务器。**如果 mysql 服务已经在运行，需要先停止 mysql 服务 `sudo killall mysqld`**。
 
    1. 这时，就可以在客户端上直接连接 MySQL 了。如果是 windows？在一个控制台窗口中运行带这个选项的 `mysqld --console --skip-grant-tables`，然后重新打开一个控制台窗口；如果是 Linux？保持运行在后台 `mysqld_safe --skip-grant-tables &`。
    2. 接着：使用无密码的方式登录 mysql，`mysql -uroot -p` 提示键入密码时省略密码直接回车 然后执行 update 语句直接更新 mysql.user 表或者执行 set 语句 `UPDATE mysql.user SET password=PASSWORD('newpassword') WHERE user='root';`。如果想要立即生效，则需要重新载入授权表 `flush privileges;`。也可以重启服务后重新登录 mysql。
 
 2. 如果你的 MySQL 服务启动错误：
-***&nbsp;&nbsp;在 Windows，你可以在命令提示符上使用 mysqld --console 启动 mysql 服务器并能看到 MySQL 服务器的详细启动消息或者检查 mysql 服务器的启动日志文件，如果 mysql 启动存在错误，则 mysql 服务器会创建一个以主机名打头的 err 文件，在这个文件中详细的列出了启动过程，如果有错误，则只需要检查以 err 开始的行即可很快发现错误(可以通过更改配置文件将这个错误日志文件保存到其它位置，方法是在 mysql 配置文件 my.ini 或者 ~/my.cnf 中的[mysqld]段下面增加节点 log-error***
+***在 Windows，你可以在命令提示符上使用 mysqld --console 启动 mysql 服务器并能看到 MySQL 服务器的详细启动消息或者检查 mysql 服务器的启动日志文件，如果 mysql 启动存在错误，则 mysql 服务器会创建一个以主机名打头的 err 文件，在这个文件中详细的列出了启动过程，如果有错误，则只需要检查以 err 开始的行即可很快发现错误(可以通过更改配置文件将这个错误日志文件保存到其它位置，方法是在 mysql 配置文件 my.ini 或者 ~/my.cnf 中的[mysqld]段下面增加节点 log-error***
 
 
 3. 当 mysql 配置文件有语法错误时可能导致 mysql 服务无法开启

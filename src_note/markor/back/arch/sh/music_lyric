@@ -1,0 +1,32 @@
+#! /bin/bash -
+
+pushd ~/sdcard/Music
+
+for d in Pop 古风 The_1990s tmp;do
+  pushd "$d";
+  for i in *.mp3 *.ape *.m4a *.flac;do
+    [ -f "$i" ] && 
+      {
+        tmp=$(echo "${i##*-}"|sed -Ee 's/^ //;s/mp3$|m4a$|ape$|flac$/lrc/')
+        lyric="${i%.*}.lrc"
+        if [ ! -f "$lyric" ];then
+          echo -e "Checking $i lyric is in Musiclrc dir.....\n"
+          if [ -f "../Musiclrc/$tmp" ];then
+            echo -e "Found the $i lyric: ../Musiclrc/$tmp is in Musiclrc dir. Then moving/coping the lyric from Musiclrc dir.\n"
+            mv -bv "../Musiclrc/$tmp" "$lyric"
+          else echo -e "Not found $i lyric is in Musiclrc dir. Skip. \n"
+          fi
+        elif [ -f "$lyric" ] && [ -f "../Musiclrc/$tmp" ];then
+          echo -e "$i's lyric is exist in current dir and Mudiclrc dir. \n Removing lyric in Musiclrc dir...\n "
+          rm -v "../Musiclrc/$tmp"
+        else 
+          echo -e "$i lyric is exist in current dir. Skip. \n";
+        fi;
+      }
+  done;
+  popd;
+done
+popd
+
+unset tmp
+

@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Windows 8 笔记：
 
 + [Windows 8.1 Optimization Tools](windows_tools.md)

@@ -1,3 +1,6 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # kernel_modules
 内核模块实现:
 #include <linux/init.h>

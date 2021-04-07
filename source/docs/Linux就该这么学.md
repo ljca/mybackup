@@ -1,3 +1,5 @@
+<link href="/media/Others/Backup/myback/css/style.css" rel="stylesheet" type="text/css" />
+
 # 《Linux就该这么学》
 
 + [第0章][0] 咱们先来谈谈学习方法和红帽系统。

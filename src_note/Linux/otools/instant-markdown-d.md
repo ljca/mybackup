@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # instant-markdown-d：在浏览器中预览 vim 中正在编辑的 markdown
 
 + 首先安装 npm

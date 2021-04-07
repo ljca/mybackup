@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Windows 8.1 Optimization[^op] Tools
 
 + **`Aero Glass for Win 8.1` 可以将 windos 8.1 的颜色窗口边框[^window-border]调整成类似于 win7 那样的毛玻璃显示效果。而 Win8 的 `Ribbon` 样式菜单也是可以禁用[^ribbon]的。**

@@ -1,7 +1,10 @@
-# compiz
-***~~&nbsp;&nbsp;如果你向往 Mac 那花哨的界面和动画，而又恰好使用的是 `Linux`，那么不妨尝试一下`堆叠式窗口管理器` `compiz`，请放心，最多就是桌面崩溃，而不是系统崩溃……~~~***
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-***~~&nbsp;&nbsp;很不幸，我使用的是 Linux 是 Arch Linux，而 Arch Linux 官方源中并不包含 `compiz`。 幸运的是：有人在`AUR`上提交了`compiz`的`PKGBUILD`。这意味着不需要自己解决依赖问题。以下的所有安装构建都是一步一步手动进行的，如果你不喜欢这样做，可以尝试使用`yaourt -S compiz`一步到位。~~***
+
+# compiz
+***~~如果你向往 Mac 那花哨的界面和动画，而又恰好使用的是 `Linux`，那么不妨尝试一下`堆叠式窗口管理器` `compiz`，请放心，最多就是桌面崩溃，而不是系统崩溃……~~~***
+
+***~~很不幸，我使用的是 Linux 是 Arch Linux，而 Arch Linux 官方源中并不包含 `compiz`。 幸运的是：有人在`AUR`上提交了`compiz`的`PKGBUILD`。这意味着不需要自己解决依赖问题。以下的所有安装构建都是一步一步手动进行的，如果你不喜欢这样做，可以尝试使用`yaourt -S compiz`一步到位。~~***
 
 > ！`AUR`上的软件包除了软件包的名字不相同，前面的地址基本一致。
 
@@ -9,7 +12,7 @@
 构建`compiz`并使用`ccsm`对`compiz`窗口管理器进行配置……
 > Note！
 
-&nbsp;&nbsp;`compiz`存在 0.8 和 0.9 两种版本，这两种版本采用了不同的打包方式。0.8 的将插件和和`compiz`设置等分开打包了，而 0.9 的将所有的打包到了一起。这里安装的是`compiz-0.9`，如果你希望安装 0.8 版本的`compiz`，请阅读`Arch Linux` `Wiki`关于 [compiz][0] 的条目……
+`compiz`存在 0.8 和 0.9 两种版本，这两种版本采用了不同的打包方式。0.8 的将插件和和`compiz`设置等分开打包了，而 0.9 的将所有的打包到了一起。这里安装的是`compiz-0.9`，如果你希望安装 0.8 版本的`compiz`，请阅读`Arch Linux` `Wiki`关于 [compiz][0] 的条目……
 ```Bash
 # yaourt -Ss compiz ## 获取 AUR 上 compiz 的软件包名
 # 获取 compiz-0.9 PKGBUILD...

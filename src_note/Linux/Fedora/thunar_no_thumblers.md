@@ -1,9 +1,12 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Fedora Xfce 23 thunar 显不出文件缩略图却不知为那般？
-&nbsp;&nbsp;在我的 Fedora[^fedora] Xfce 系统上，有一个问题让我让我觉得十分奇怪：Xfce 的 Thunar 文件管理器不显示出图片/视频/文档等文件的缩略图(我发现一开始好像不会这样，后来就变成了文件的缩略图上仅仅只有文件类型了)，图片浏览器 Ristretto 也是如此…… 哦，不知道是什么原因导致了这样的问题[^problem]。
+在我的 Fedora[^fedora] Xfce 系统上，有一个问题让我让我觉得十分奇怪：Xfce 的 Thunar 文件管理器不显示出图片/视频/文档等文件的缩略图(我发现一开始好像不会这样，后来就变成了文件的缩略图上仅仅只有文件类型了)，图片浏览器 Ristretto 也是如此…… 哦，不知道是什么原因导致了这样的问题[^problem]。
 
 ## 重新编译安装 tumbler 
 
-> &nbsp;&nbsp;为了能够让 thunar 显示文件缩略图，我们需要安装 tumbler 插件以及生成某类文件缩略图的工具，如果这没有用，**`那么我们很有可能需要重新编译 tumbler`[^option]** 以便让 Thunar 在启动时就能够加载 tumbler 发现某类文件的缩略图生成工具生成缩略图。这就需要在编译它的时候检测到（没有检测到恐怕默认是不会启用的）缩略图插件并启用它，因此，我们在编译 tumbler 之前，还得根据需要安装 `启用某类文件缩略图支持` 所需要的库才行[^config]。
+> 为了能够让 thunar 显示文件缩略图，我们需要安装 tumbler 插件以及生成某类文件缩略图的工具，如果这没有用，**`那么我们很有可能需要重新编译 tumbler`[^option]** 以便让 Thunar 在启动时就能够加载 tumbler 发现某类文件的缩略图生成工具生成缩略图。这就需要在编译它的时候检测到（没有检测到恐怕默认是不会启用的）缩略图插件并启用它，因此，我们在编译 tumbler 之前，还得根据需要安装 `启用某类文件缩略图支持` 所需要的库才行[^config]。
 
 [^config]: 请注意 ./configure 脚本的输出(这个地方是因为我不知道需要安装那些库和头文件，因此手动运行了 configure 脚本查看配置，安装这些库和头文件之后还要对刚才的 configure 脚本执行后生成的文件进行清理(一般是运行 make clean 或者 make distclean)然后重新运行 configure 脚本生成 Makefile.)可以看出要让 Thunar 支持，只需要使用 dnf 安装对应的库和头文件(库和头文件在 Fedora 系统上被分别打包成了一个软件包，库名能通过搜索得到，头文件一般是库加上 -devel 的形式出现)就行。
 
@@ -78,9 +81,9 @@ make && sudo make install
 ```
 
 
-> &nbsp;&nbsp;[Thunar Thumbnailers](http://goodies.xfce.org/projects/thunar-plugins/thunar-thumbnailers)  项目的目的是为其他缩略图忽略的媒体格式提供缩略图生成。下面这些是 thunar-thumbnailers 项目对其简单介绍和安装方法的谷歌翻译：
+> [Thunar Thumbnailers](http://goodies.xfce.org/projects/thunar-plugins/thunar-thumbnailers)  项目的目的是为其他缩略图忽略的媒体格式提供缩略图生成。下面这些是 thunar-thumbnailers 项目对其简单介绍和安装方法的谷歌翻译：
 
-&nbsp;&nbsp;Thunar 使用外部实用程序（称为缩略图）来生成某些文件的预览。 Thunar 附带缩略图，以生成图像和字体文件的预览，并且可以自动使用可用的GNOME缩略图，如果它是支持 gconf 构建的。然而，即使这样，也有几种不存在缩略图的文件类型。 Thunar-thumbnailers 项目为 Thunar 提供了更多的缩略图，也覆盖了较少的常见文件格式。
+Thunar 使用外部实用程序（称为缩略图）来生成某些文件的预览。 Thunar 附带缩略图，以生成图像和字体文件的预览，并且可以自动使用可用的GNOME缩略图，如果它是支持 gconf 构建的。然而，即使这样，也有几种不存在缩略图的文件类型。 Thunar-thumbnailers 项目为 Thunar 提供了更多的缩略图，也覆盖了较少的常见文件格式。
 
 > Thunth-thumnbnailers 生成以下格式的缩略图：
 

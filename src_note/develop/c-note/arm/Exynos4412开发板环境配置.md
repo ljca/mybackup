@@ -1,3 +1,6 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 嵌入式第一课：Exynos4412开发板环境配置小结
 
 ## 安装配置minicom
@@ -45,13 +48,13 @@ TINY4412
 # ext3format mmc 1:3
 # ext3format mmc 1:4
 # emmc open 1
-# dnw 0x40000000  <==========> &nbsp;dnw E4412_N.bl1.bin
+# dnw 0x40000000  <==========> dnw E4412_N.bl1.bin
 # mmc write 1 0x40000000 0 0x10
-# dnw 0x40000000 <==========> &nbsp;dnw bl2.bin
+# dnw 0x40000000 <==========> dnw bl2.bin
 # mmc write 1 0x40000000 0x10 0x1C
-# dnw 0x40000000 <=======> &nbsp;dnw ../../u-boot.bin
+# dnw 0x40000000 <=======> dnw ../../u-boot.bin
 # mmc write 1 0x40000000 0x20c 0x21D
-# dnw 0x40000000 <=======> &nbsp;dnw E4412_tzsw.bin
+# dnw 0x40000000 <=======> dnw E4412_tzsw.bin
 # mmc write 1 0x40000000 0x30 0xB8
 # emmc close 1
 ```
@@ -93,7 +96,7 @@ minicom(TINY4412):
 set bootargs console=ttySAC0 root=/dev/nfs rootfs=192.168.1.10 ip=192.168.1.20
 set ipaddr 192.168.1.20
 save
-dnw 40008000 <===========> &nbsp;dnw zImage
+dnw 40008000 <===========> dnw zImage
 bootm 4000800 //测试引导 
 
 # Host executeable command：

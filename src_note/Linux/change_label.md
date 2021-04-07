@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 如何在 Linux 上修改磁盘分区卷标：
 
 + Ext 系列 使用 e2label[^e2label]：修改 Ext 系列文件系统卷标: `sudo e2label /dev/sda4 Lfs`
@@ -22,7 +25,7 @@ drive h: file="/dev/sdb2"
 mtools_lower_case=1
 ```
 
-&nbsp;&nbsp;然后以根用户权限执行`mlabel h: LIN`（可能需要先挂载`fat`卷）更改`fat 卷`卷标，mlabel 如果不带任何参数，且没有在命令行上指定卷标名，系统将会提示键入新的卷标, 更多用法参考 `mlabel --help`。
+然后以根用户权限执行`mlabel h: LIN`（可能需要先挂载`fat`卷）更改`fat 卷`卷标，mlabel 如果不带任何参数，且没有在命令行上指定卷标名，系统将会提示键入新的卷标, 更多用法参考 `mlabel --help`。
 
 ## 文件系统检查[^disk_check]：
 

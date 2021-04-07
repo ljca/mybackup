@@ -1,3 +1,5 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
 # PHP笔记：PHP 中文手册在[这里][php-man-zh].
 
 ## 基本输出/打印函数。
@@ -39,11 +41,11 @@ $google = new array
 
 # PHP 扩展：
 
-**&nbsp;&nbsp;无论是 `Apache` 还是 `Nginx` 抑或 `IIS` 等 `web服务器`，默认都不会解释 php 代码，如果要临时调用浏览器解释 php，可以使用以 -S 和 -t 选项运行 php。 `php -S localhost:8000 -t /home/data/web` .**
+**无论是 `Apache` 还是 `Nginx` 抑或 `IIS` 等 `web服务器`，默认都不会解释 php 代码，如果要临时调用浏览器解释 php，可以使用以 -S 和 -t 选项运行 php。 `php -S localhost:8000 -t /home/data/web` .**
 
 ## Nginx 集成 php：php-fpm
 
-**&nbsp;&nbsp; Nginx 无论怎样也不会解释 php，但是它可以读取外部程序的解释结果。 php-fpm 是一个 cgi 程序，其实就是一个包装了的外壳程序，它可以调用 php 解释器读取 php 并对其解释，然后将解释后的代码返回给 Nginx 读取。**
+** Nginx 无论怎样也不会解释 php，但是它可以读取外部程序的解释结果。 php-fpm 是一个 cgi 程序，其实就是一个包装了的外壳程序，它可以调用 php 解释器读取 php 并对其解释，然后将解释后的代码返回给 Nginx 读取。**
 
 ```config
 #....
@@ -79,7 +81,7 @@ listen.mode = 0660
 
 ### php & mysql
 
-**&nbsp;&nbsp;为了在 PHP 调用 MySQL，我们必须确认 PHP 已经启用了 mysql 模块。然后通过 php 的 -i 选项或者 phpinfo() 函数进行确认。**
+**为了在 PHP 调用 MySQL，我们必须确认 PHP 已经启用了 mysql 模块。然后通过 php 的 -i 选项或者 phpinfo() 函数进行确认。**
 
 ```ini
 ...
@@ -105,7 +107,7 @@ $cfg['Servers'][$i]['host'] = '127.0.0.1';
 ```
 
 ## PHP 的命令行模式官方文档见[这里][php-cli].
-**&nbsp;&nbsp;在 Unix 及其变体上，默认是启用了 php-cli 以及 php-cgi，通过 php -v 可以确认运行在那种模式下的。**
+**在 Unix 及其变体上，默认是启用了 php-cli 以及 php-cgi，通过 php -v 可以确认运行在那种模式下的。**
 
 + -r --run 运行单行 php 代码，如果使用变量，为了不被 shell 强行解释，因该对`$`去引用。
 + -s --syntax-hightlight  渲染 php 文档，输出 html 代码块。
@@ -117,7 +119,7 @@ $cfg['Servers'][$i]['host'] = '127.0.0.1';
 + -w strip-space 去掉多余空格。
 + -c 指定新的 php 配置文件
 
-**&nbsp;&nbsp;如果要使用 php 解释器解释 php 文档，除了使用 web 服务器，可以直接使用命令行模式下的 php 解释，但是 php 解释器不会解释非 php 代码。**
+**如果要使用 php 解释器解释 php 文档，除了使用 web 服务器，可以直接使用命令行模式下的 php 解释，但是 php 解释器不会解释非 php 代码。**
 
 test.php
 ```php

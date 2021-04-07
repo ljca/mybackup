@@ -1,3 +1,6 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # Linux 核心控制台（tty）：
 
 > 禁止Arch Linux启动时清除启动信息： 创建目录 `/etc/systemd/system/getty@tty1.service.d`，And Then,Touch file: `noclear.conf`, Add: 
@@ -7,11 +10,11 @@
 TTYVTDisallocate=no
 ```
 
-&nbsp;&nbsp;在systemd上,禁止tmp分区自动挂载为tmpfs：`systemctl mask tmp.mount`，这会在/etc/systemd/system下创建一个指向/dev/null的符号链接tmp.mount
+在systemd上,禁止tmp分区自动挂载为tmpfs：`systemctl mask tmp.mount`，这会在/etc/systemd/system下创建一个指向/dev/null的符号链接tmp.mount
 
-&nbsp;&nbsp;核心控制台滚动缓冲区大小设置，传递内核参数：fbcon:scrollback=Nk,默认为32K
+核心控制台滚动缓冲区大小设置，传递内核参数：fbcon:scrollback=Nk,默认为32K
 
-&nbsp;&nbsp;临时启用 SysRq：`su -c 'echo 1 > /proc/sys/kernel/sysrq'`，if init=systemd: touch the file:`/etc/sysctl.d/N-xx.conf`, And then add：`kernel.sysrq=1`
+临时启用 SysRq：`su -c 'echo 1 > /proc/sys/kernel/sysrq'`，if init=systemd: touch the file:`/etc/sysctl.d/N-xx.conf`, And then add：`kernel.sysrq=1`
 
 
 > 参考：

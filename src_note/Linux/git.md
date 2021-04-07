@@ -1,6 +1,9 @@
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # git[^git] 笔记
 
-***~~&nbsp;&nbsp;如果你希望从命令行 push，那么你至少得有一个 git 帐号、一个 git repo(仓库，这需要你自己动手在 git 网站上创建)，除了这些，你还必须正确配置了 ssh key 或者 gpg key。git 官方配置文档的传送门在[这里][git&ssh]。~~***
+***~~如果你希望从命令行 push，那么你至少得有一个 git 帐号、一个 git repo(仓库，这需要你自己动手在 git 网站上创建)，除了这些，你还必须正确配置了 ssh key 或者 gpg key。git 官方配置文档的传送门在[这里][git&ssh]。~~***
 
 
 
@@ -20,7 +23,7 @@
 测试公钥：`ssh -vT git@github.com`
 
 
-***~~&nbsp;&nbsp;为了使命令行尽可能的简洁，可以对用户名和邮箱进行映射。当然，这些你完全可以通过 git config 进行设置。~~***
+***~~为了使命令行尽可能的简洁，可以对用户名和邮箱进行映射。当然，这些你完全可以通过 git config 进行设置。~~***
 
 ========== $HOME/.gitconfig ========== 
 

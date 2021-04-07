@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # kernel 笔记：
 
 ## [kernel_modules](kernel/kernel_modules.md)

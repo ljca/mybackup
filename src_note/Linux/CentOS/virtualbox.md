@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # §.VirtualBox[^virtualbox] 笔记
 # §. 附
 ## Ⅰ. ViratulBox 增强包：
@@ -41,7 +44,7 @@ sudo mount -t vboxsf -o rw,uid=$UID,gid=500 Others /media/others
 ### 1.3 图形界面可完整显示在显示器上。
 
 ## Ⅱ. 网络设置：端口转发（仅主机）：
-> &nbsp;&nbsp;网络设置：如果你懒得去理解什么端口转发[^port_fireward]，可以让虚拟机和主机桥接网卡[^brige]。
+> 网络设置：如果你懒得去理解什么端口转发[^port_fireward]，可以让虚拟机和主机桥接网卡[^brige]。
 
 ```flow
 st=>start: 管理
@@ -68,7 +71,7 @@ e=>end: 结束
 
 ##  Ⅲ. vdfuse：Read/Mounting VirtualBox disk images (VDI/VMDK/VHD)
 
-> &nbsp;&nbsp;Arch Linux 详见维基 [virtualbox 条目][wiki]。其它系统可参阅[Google][google]。以下是在 `Arch Linux` 上的安装和对 `CentOS` 虚拟机硬盘镜像的测试：
+> Arch Linux 详见维基 [virtualbox 条目][wiki]。其它系统可参阅[Google][google]。以下是在 `Arch Linux` 上的安装和对 `CentOS` 虚拟机硬盘镜像的测试：
 
 ### 安装virtualbox fuse pkgcofig
 ```Bash
@@ -249,7 +252,7 @@ vboxmanage storageattach CentOS7 --storagectl SCSI|SATA|IDE|... --device 0 --por
 
 
 ### `createmedium`：创建虚拟硬盘介质
-> ***&nbsp;&nbsp;手动创建的虚拟硬盘介质还需要附加到存储控制器上才能工作。在附加之前，存储控制器必须已经创建完成。如果是已经创建好的，直接附加即可。见  `storagectl` 和 `storageattach`。***
+> ***手动创建的虚拟硬盘介质还需要附加到存储控制器上才能工作。在附加之前，存储控制器必须已经创建完成。如果是已经创建好的，直接附加即可。见  `storagectl` 和 `storageattach`。***
 
 ```Bash
 VBoxManage createmedium     [disk|dvd|floppy]  Options

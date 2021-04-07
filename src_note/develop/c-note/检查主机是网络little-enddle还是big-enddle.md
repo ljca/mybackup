@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # 检查主机是网络little-enddle还是big-enddle
 
 

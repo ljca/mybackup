@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # [mplayer](http://mplayerhq.hu/design7/dload.html)[^mplayer]
 
 # 附：

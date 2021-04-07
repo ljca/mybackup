@@ -1,3 +1,6 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+
 # cmus(C\* Music Player) Install & Configure #
 cmus 和 moc 一样都是放在官方仓库中的，因此安装可以直接使用软件包管理器进行安装。
 
