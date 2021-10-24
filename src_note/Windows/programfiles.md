@@ -3,6 +3,11 @@
 
 # Applications
 
+## Pdf Tools
+
++ [中文PDF电子书自动添加书签指南](https://zhuanlan.zhihu.com/p/170590863)
++ [快速给电子书pdf添加书签](https://zhuanlan.zhihu.com/p/146126295)
+
 ## Study
 
 + Aboboo

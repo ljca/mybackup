@@ -4,11 +4,16 @@
 # grub 笔记
 
 ## GRUB 2 Themes
+
+<div class="p">
+
 如果你希望调整`Grub`默认主题并且没兴趣了解、讨论`Grub`主题配置文件细节，你可以尝试直接从 Gnome Themes 的 [Grub Themes][grub_themes] 节获取您喜欢的主题后放到合适的位置然后根据需要调整……而下面这些仅仅适合我和那些“希望了解`Grub`主题包细节和对`Grub`主题进行微小调整的人群”……
 
 如果您希望在`Grub`引导菜单项中能见到您喜欢的`OS`图标，您可以自己收集您喜欢的`OS`图标文件(尺寸：`24x24/32x32/64x64/72x72/88x88/128x128……`，格式：`8 bit 的 png`)重命名(os\_dist\_type.png)后存放到固定位置处（`Grub`主题目录下的`icons`目录中）。
 
 当然，除了可选的`OS`图标，`Grub`主题还包含一些其它的东西(主题定义文件)、资源文件(这些东西需要你自己动手搜集[^1]，如果你对自定义充满了兴趣并表示不反对的话)。
+
+</div>
 
 >  一个`Grub`主题包结构类似：
 
@@ -76,13 +81,21 @@ set theme=(hd0,1)/EFI/boot/grub/themes/books/theme.txt
 export theme
 ```
 
+::: alert-info
+
 在更新`Grub`和重新引导系统之前，不要忘了备份旧的`Grub`配置文件和使用`grub-script-check`来检查`grub.cfg`是否存在问题。
+
+:::
 
 
 ## 附
 ### 加密 GRUB 2 命令行
 
+::: alert-danger
+
 grub 2 现在使用的加密工具是 `grub-mkpasswd-pbkdf2`，要加密 grub 的命令行和编辑功能，我们需要先使用它生成密码并根据需要将它加入 grub.d 下的配置文件中 `grub-mkpasswd-pbkdf2 >> /etc/grub.d/00_header`（只有放在所有 menuentry 和所有 submenu 项之前，才能对它们进行应用密码）并用 grub-mkconfig 重新生成 `grub.cfg` 或者仅仅添加变化的部分到`grub.cfg`（这样就无需对 /etc/grub.d/ 下的脚本做任何修改，也无需调用 grub-mkconfig）。
+
+:::
 
 ======= ![](images/tips/conf.png) /etc/grub.d/00_header =======
 
@@ -101,9 +114,18 @@ GRUB 2 支持读取 iso（然而，一些 Linux 发行的 Live CD 并不支持�
 
 [^others]: 当然，你可以自定义脚本，只要你能保证 `grub-mkconfig` 脚本可以调用到。但实在没有什么理由要这样做，不是吗？或者，干脆直接编辑这个脚本生成的最终配置文件 `grub.cfg` 好了。甚至都不用修改配置文件，在 Grub 的命令行下就可以读取并启动 iso，但这是一次性的。
 
+```bash
+insmod iso9660
+insmod loopback
+set iso=(hd0,7)/xxx/xxx.iso
+loopback loop (hd0,7)/$iso
+linux ...
+initrd ...
+```
+
 ### 从 GRUB 2 命令行手动引导 OS
 
-```
+```sh
 # Arch Linux
 grub> set root=(hd0,gpt3)
 grub> linux /boot/vmlinuz-linux root=LABEL=Arch rw
@@ -115,6 +137,7 @@ grub> set root=(hd0,gpt1)
 grub> search --label --set=root ESP
 grub> chainloader /efi/win/Boot/bootmgfw.efi
 grub> boot
+
 ```
 
 ### Security Shell，见参考。

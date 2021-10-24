@@ -91,6 +91,7 @@ h1,h2,h3,h4,h5,h6{
   border-bottom: 0px/* solid #696969*/;
   /*border-top: 2px solid #696969;*/
   /* text-decoration: overline; */
+  /* font-family: "UbuntuMono", "华文行楷"; */
   font-family: "UbuntuMono", "华文行楷";
   font-size: 1.4em;
   fonf-weight: normal;
@@ -417,3 +418,4 @@ span.r{
 }
 
 .pages ul li a:hover:not(.active) {background-color: #ddd;}
+

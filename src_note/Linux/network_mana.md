@@ -3,7 +3,6 @@
 
 # Linux 上 网络的手动配置
 
-***~~我相信没有多少人（除了那些可怜的服务器维护人员）会愿意使用命令行接口手动完成网络配置这一繁琐过程。在这个过程中，你很可能被迫去了解一些诸如网关之类专业晦涩的网络术语，可能会被活活逼疯。。。更何况，一切都是基于命令行的，那可怜的一点 Windows 命令行基础根本就不可能在 Windows 上手动完成这一过程，还好，Linux 的要简单很多。~~***
 
 ## Linux 无线网络[^wlan]手动配置残篇
 
@@ -162,7 +161,14 @@ iw [dev] <interface> scan | grep -i 'ssid*'
 [wireless]: https://wiki.archlinux.org/index.php/Wireless_network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 [net_set]: https://wiki.archlinux.org/index.php/Wireless_network_configuration
 
-[^wlan]: 无线 AP(WIFI)和无线网络(WLAN)是一个截然不同的概念。目前，无线网又分加密的和开放的，开放的又分验证登录的和直接可连接的，加密的又分 WEB 、WPA、WPA2 几种。其中，WPA2 加密等级最高，即最安全。`WPA2` 使用 `RSA`() 加密。比 `WPA`(WIFI Pro Acecess) 协议保护性更高。
+<div class="p">
+
+[^wlan]:  ***<del>（除了那些可怜的服务器维护人员）</del>我相信没有多少人会愿意使用命令行接口手动完成网络配置这一繁琐过程。在这个过程中，你很可能被迫去了解一些诸如网关之类专业晦涩的网络术语，可能会被活活逼疯。。。更何况，一切都是基于命令行的，那可怜的一点 Windows 命令行基础根本就不可能在 Windows 上手动完成这一过程，还好，Linux 的要简单很多。***
+
+
+    无线 AP(WIFI)和无线网络(WLAN)是一个截然不同的概念。目前，无线网又分加密的和开放的，开放的又分验证登录的和直接可连接的，加密的又分 WEB 、WPA、WPA2 几种。其中，WPA2 加密等级最高，即最安全。`WPA2` 使用 `RSA`() 加密。比 `WPA`(WIFI Pro Acecess) 协议保护性更高。
+
+</div>
 
 [^conn]: 这必须事先知道网络 SSID 和密钥。使用 `iw` 或者 `iwlist` 扫描 `iw [dev] wlp3s0 scan[|grep -i ssid]` 只能获取到网络的 SSID 和一些基本信息，密码是不可能出现在扫描结果中的。 然后使用 `wpa_passphrase` 将 SSID 和密钥（密钥在写入过程会经过加密，一般用户是没有权限查看的）写入配置文件，一般是 `/etc/wpa_supplicant/wpa_supplicant.conf`，`wpa_supplicant` 可能会用到它。当然，你完全可以使用进程替换(类似 `wpa_supplicant -i wlp3s0 -B -c <(wpa_passphrase "ESSID" "PSK")` 的方式来避免频繁的对配置文件进行写入和读取。
 

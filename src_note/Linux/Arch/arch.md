@@ -9,9 +9,17 @@
 ## [安装 & 配置](arch_install_config.md)
 ## 让Arch Linux“滚回”到以前的版本
 
+::: alert-info
+
+<div class="p">
+
 ﻿也许`Arch Linux`滚动式发行的特点能让系统一下子就更新到最新状态，但不幸的是：并非所有的旧硬件(比如我的)都能适应这种变化。经过升级的软件包释出的一些新特性也许并不兼容`PC`机上的旧硬件。或者在使用之前至少需要对某其中的一项做出微小调整后才能正常工作。因此，此时的你也许对新版本的软件包并不感冒，而希望将它降级后使用。
 
 如果你的`Arch Linux`中的某个软件包因为一些问题需要降级，可以从存档库中下载历史版本然后手动降级[^1]。然而，当我尝试从 Arch Linux 回滚机[^archive]上降级`Arch Linux`时，遇到了下面的一些问题[^problem]。
+
+</div>
+
+:::
 
 ```Bash
 # shell
@@ -53,8 +61,11 @@ community/sl  5.02-4  0.01 MiB  0.01 MiB
 error setting certificate verify locations:
 ```
 
+::: alert-error
+
 当然，如果你并不介意这些问题，那么则可以直接将源的地址写死到回滚机的某个时间点，然后尝试降级系统。
 
+:::
 
 =============== /etc/pacman.d/mirrorlist =================
 

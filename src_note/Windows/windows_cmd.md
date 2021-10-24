@@ -295,112 +295,114 @@ rar command [-options1] [-options2] .... [-optionsN] 压缩包名 压缩文件(�
 
 ---------------------------------------
 
-+ wmic
+## 压轴命令：wmic [全局开关] <命令>
 
-[全局开关] <命令>
-可以使用以下全局开关:
-/NAMESPACE 别名在其上操作的命名空间的路径。
-/ROLE 包含别名定义的角色的路径。
-/NODE 别名在其上操作的服务器。
-/IMPLEVEL 客户端模拟级别。
-/AUTHLEVEL 客户端身份验证级别。
-/LOCALE 客户端应使用的语言 ID。
-/PRIVILEGES 启用或禁用所有权限。
-/TRACE 将调试信息输出到 stderr。
-/RECORD 记录所有输入命令和输出内容。
-/INTERACTIVE 设置或重置交互模式。
-/FAILFAST 设置或重置 FailFast 模式。
-/USER 会话期间要使用的用户。
-/PASSWORD 登录会话时要使用的密码。
-/OUTPUT 指定输出重定向模式。
-/APPEND 指定输出重定向模式。
-/AGGREGATE 设置或重置聚合模式。
-/AUTHORITY 指定连接的 <授权类型>。
-/?[:<BRIEF|FULL>] 用法信息。
+> 可以使用以下全局开关:
+
++ /NAMESPACE 别名在其上操作的命名空间的路径。
++ /ROLE 包含别名定义的角色的路径。
++ /NODE 别名在其上操作的服务器。
++ /IMPLEVEL 客户端模拟级别。
++ /AUTHLEVEL 客户端身份验证级别。
++ /LOCALE 客户端应使用的语言 ID。
++ /PRIVILEGES 启用或禁用所有权限。
++ /TRACE 将调试信息输出到 stderr。
++ /RECORD 记录所有输入命令和输出内容。
++ /INTERACTIVE 设置或重置交互模式。
++ /FAILFAST 设置或重置 FailFast 模式。
++ /USER 会话期间要使用的用户。
++ /PASSWORD 登录会话时要使用的密码。
++ /OUTPUT 指定输出重定向模式。
++ /APPEND 指定输出重定向模式。
++ /AGGREGATE 设置或重置聚合模式。
++ /AUTHORITY 指定连接的 <授权类型>。
++ /?[:<BRIEF|FULL>] 用法信息。
+
 有关特定全局开关的详细信息，请键入: switch-name /?
 
-当前角色中可以使用以下别名:
-ALIAS - 对本地系统上可用别名的访问
-BASEBOARD - 基板(也称为主板或系统板)管理。
-BIOS - 基本输入/输出服务(BIOS)管理。
-BOOTCONFIG - 启动配置管理。
-CDROM - CD-ROM 管理。
-COMPUTERSYSTEM - 计算机系统管理。
-CPU - CPU 管理。
-CSPRODUCT - SMBIOS 中的计算机系统产品信息。
-DATAFILE - 数据文件管理。
-DCOMAPP - DCOM 应用程序管理。
-DESKTOP - 用户的桌面管理。
-DESKTOPMONITOR - 桌面监视器管理。
-DEVICEMEMORYADDRESS - 设备内存地址管理。
-DISKDRIVE - 物理磁盘驱动器管理。
-DISKQUOTA - 用于 NTFS 卷的磁盘空间使用量。
-DMACHANNEL - 直接内存访问(DMA)通道管理。
-ENVIRONMENT - 系统环境设置管理。
-FSDIR - 文件系统目录项管理。
-GROUP - 组帐户管理。
-IDECONTROLLER - IDE 控制器管理。
-IRQ - 中断请求线路(IRQ)管理。
-JOB - 提供对使用计划服务安排的作业的访问。
-LOADORDER - 定义执行依赖关系的系统服务的管理。
-LOGICALDISK - 本地存储设备管理。
-LOGON - 登录会话。
-MEMCACHE - 缓存内存管理。
-MEMORYCHIP - 内存芯片信息。
-MEMPHYSICAL - 计算机系统的物理内存管理。
-NETCLIENT - 网络客户端管理。
-NETLOGIN - 网络登录信息(属于特定用户)管理。
-NETPROTOCOL - 协议(及其网络特征)管理。
-NETUSE - 活动网络连接管理。
-NIC - 网络接口控制器(NIC)管理。
-NICCONFIG - 网络适配器管理。
-NTDOMAIN - NT 域管理。
-NTEVENT - NT 事件日志中的项目。
-NTEVENTLOG - NT 事件日志文件管理。
-ONBOARDDEVICE - 主板(系统板)中内置的通用适配器设备的管理。
-OS - 已安装操作系统的管理。
-PAGEFILE - 虚拟内存文件交换管理。
-PAGEFILESET - 页面文件设置管理。
-PARTITION - 物理磁盘的已分区区域的管理。
-PORT - I/O 端口管理。
-PORTCONNECTOR - 物理连接端口管理。
-PRINTER - 打印机设备管理。
-PRINTERCONFIG - 打印机设备配置管理。
-PRINTJOB - 打印作业管理。
-PROCESS - 进程管理。
-PRODUCT - 安装程序包任务管理。
-QFE - 快速修复工程。
-QUOTASETTING - 卷上的磁盘配额设置信息。
-RDACCOUNT - 远程桌面连接权限管理。
-RDNIC - 对特定网络适配器的远程桌面连接管理。
-RDPERMISSIONS - 特定远程桌面连接的权限。
-RDTOGGLE - 远程打开或关闭远程桌面侦听程序。
-RECOVEROS - 操作系统出现故障时将从内存收集的信息。
-REGISTRY - 计算机系统注册表管理。
-SCSICONTROLLER - SCSI 控制器管理。
-SERVER - 服务器信息管理。
-SERVICE - 服务应用程序管理。
-SHADOWCOPY - 卷影副本管理。
-SHADOWSTORAGE - 卷影副本存储区域管理。
-SHARE - 共享资源管理。
-SOFTWAREELEMENT - 系统上安装的软件产品元素的管理。
-SOFTWAREFEATURE - SoftwareElement 的软件产品子集的管理。
-SOUNDDEV - 声音设备管理。
-STARTUP - 当用户登录到计算机系统时自动运行的命令的管理。
-SYSACCOUNT - 系统帐户管理。
-SYSDRIVER - 基本服务的系统驱动程序管理。
-SYSTEMENCLOSURE - 物理系统外壳管理。
-SYSTEMSLOT - 物理连接点(包括端口、插槽和外设以及专用连接点)的管理。
-TAPEDRIVE - 磁带驱动器管理。
-TEMPERATURE - 温度传感器(电子温度计)数据管理。
-TIMEZONE - 时区数据管理。
-UPS - 不间断电源(UPS)管理。
-USERACCOUNT - 用户帐户管理。
-VOLTAGE - 电压传感器(电子电压表)数据管理。
-VOLUME - 本地存储卷管理。
-VOLUMEQUOTASETTING - 将磁盘配额设置与特定磁盘卷相关联。
-VOLUMEUSERQUOTA - 每用户存储卷配额管理。
-WMISET - WMI 服务操作参数管理。
+> 当前角色中可以使用以下别名:
+
++ ALIAS - 对本地系统上可用别名的访问
++ BASEBOARD - 基板(也称为主板或系统板)管理。
++ BIOS - 基本输入/输出服务(BIOS)管理。
++ BOOTCONFIG - 启动配置管理。
++ CDROM - CD-ROM 管理。
++ COMPUTERSYSTEM - 计算机系统管理。
++ CPU - CPU 管理。
++ CSPRODUCT - SMBIOS 中的计算机系统产品信息。
++ DATAFILE - 数据文件管理。
++ DCOMAPP - DCOM 应用程序管理。
++ DESKTOP - 用户的桌面管理。
++ DESKTOPMONITOR - 桌面监视器管理。
++ DEVICEMEMORYADDRESS - 设备内存地址管理。
++ DISKDRIVE - 物理磁盘驱动器管理。
++ DISKQUOTA - 用于 NTFS 卷的磁盘空间使用量。
++ DMACHANNEL - 直接内存访问(DMA)通道管理。
++ ENVIRONMENT - 系统环境设置管理。
++ FSDIR - 文件系统目录项管理。
++ GROUP - 组帐户管理。
++ IDECONTROLLER - IDE 控制器管理。
++ IRQ - 中断请求线路(IRQ)管理。
++ JOB - 提供对使用计划服务安排的作业的访问。
++ LOADORDER - 定义执行依赖关系的系统服务的管理。
++ LOGICALDISK - 本地存储设备管理。
++ LOGON - 登录会话。
++ MEMCACHE - 缓存内存管理。
++ MEMORYCHIP - 内存芯片信息。
++ MEMPHYSICAL - 计算机系统的物理内存管理。
++ NETCLIENT - 网络客户端管理。
++ NETLOGIN - 网络登录信息(属于特定用户)管理。
++ NETPROTOCOL - 协议(及其网络特征)管理。
++ NETUSE - 活动网络连接管理。
++ NIC - 网络接口控制器(NIC)管理。
++ NICCONFIG - 网络适配器管理。
++ NTDOMAIN - NT 域管理。
++ NTEVENT - NT 事件日志中的项目。
++ NTEVENTLOG - NT 事件日志文件管理。
++ ONBOARDDEVICE - 主板(系统板)中内置的通用适配器设备的管理。
++ OS - 已安装操作系统的管理。
++ PAGEFILE - 虚拟内存文件交换管理。
++ PAGEFILESET - 页面文件设置管理。
++ PARTITION - 物理磁盘的已分区区域的管理。
++ PORT - I/O 端口管理。
++ PORTCONNECTOR - 物理连接端口管理。
++ PRINTER - 打印机设备管理。
++ PRINTERCONFIG - 打印机设备配置管理。
++ PRINTJOB - 打印作业管理。
++ PROCESS - 进程管理。
++ PRODUCT - 安装程序包任务管理。
++ QFE - 快速修复工程。
++ QUOTASETTING - 卷上的磁盘配额设置信息。
++ RDACCOUNT - 远程桌面连接权限管理。
++ RDNIC - 对特定网络适配器的远程桌面连接管理。
++ RDPERMISSIONS - 特定远程桌面连接的权限。
++ RDTOGGLE - 远程打开或关闭远程桌面侦听程序。
++ RECOVEROS - 操作系统出现故障时将从内存收集的信息。
++ REGISTRY - 计算机系统注册表管理。
++ SCSICONTROLLER - SCSI 控制器管理。
++ SERVER - 服务器信息管理。
++ SERVICE - 服务应用程序管理。
++ SHADOWCOPY - 卷影副本管理。
++ SHADOWSTORAGE - 卷影副本存储区域管理。
++ SHARE - 共享资源管理。
++ SOFTWAREELEMENT - 系统上安装的软件产品元素的管理。
++ SOFTWAREFEATURE - SoftwareElement 的软件产品子集的管理。
++ SOUNDDEV - 声音设备管理。
++ STARTUP - 当用户登录到计算机系统时自动运行的命令的管理。
++ SYSACCOUNT - 系统帐户管理。
++ SYSDRIVER - 基本服务的系统驱动程序管理。
++ SYSTEMENCLOSURE - 物理系统外壳管理。
++ SYSTEMSLOT - 物理连接点(包括端口、插槽和外设以及专用连接点)的管理。
++ TAPEDRIVE - 磁带驱动器管理。
++ TEMPERATURE - 温度传感器(电子温度计)数据管理。
++ TIMEZONE - 时区数据管理。
++ UPS - 不间断电源(UPS)管理。
++ USERACCOUNT - 用户帐户管理。
++ VOLTAGE - 电压传感器(电子电压表)数据管理。
++ VOLUME - 本地存储卷管理。
++ VOLUMEQUOTASETTING - 将磁盘配额设置与特定磁盘卷相关联。
++ VOLUMEUSERQUOTA - 每用户存储卷配额管理。
++ WMISET - WMI 服务操作参数管理。
 
 ----------------------------------------
 
@@ -485,6 +487,7 @@ set /p variable= [prompt]
 
 ## 附
 
+### 重新实现的系统管理接口：PowerShell
 ### 命令提示符
 
 [^batch]: 批处理脚本程序(以.bat为扩展)或者命令行脚本(以.cmd为扩展),二者本质上相同,但它们唯一的不同之处在于它们的用处不同；批处理程序主要处理一些较小型的作业，如关机，重启等命令。而命令行脚本主要用于处理一些较高级的作业，比如创建windows服务,修改一些系统设置.....
@@ -513,12 +516,12 @@ set /p variable= [prompt]
 + ^：命令转义符 ` echo ^&` // 输出符号& ；如果想要显示某个特殊的字符，则需要使用^符号进行转义
 + @:屏蔽命令回显：如果想要命令在屏幕上不显示，则可在此命令前加上@
 + 标准输入(0)、标准输出(1)、标准错误(2)
-+ 命令输入/输出重定向(>,>>,<,<<)
++ 命令输入/输出重定向(`>,>>,<,<<`)
 + `>`：读取命令输出结果重定向写入到文件或者输出到设备，默认输出到设备屏幕 如果文件不存在，则会创建一个文件 将命令错误重定向到文件  `command 2>file` 如果不想显示错误消息，则可以将错误重定向到特殊文件null中  `command 2>null或者command 2>1` 将命令输出和错误同时重定向到文件，顺序不能颠倒，必须将错误重定向放到最后 `命令 > 文件 >2&1`
 + `>>`：读取命令输出并重定向写入到(追加)指定文件中，不覆盖原有内容，如果不存在此文件则创建一个文件
-+ `<`：从文件中而不是从键盘中读取命令输入并输出 `more /c /e < Desktop.ini` 以下命令将会逐屏显示Desktop.ini文件的内容 
-+ &：执行多个使用&连接的命令：连接两个以上命令，无论&之前的命令执行成功与否，都会继续执行&之后的命令
-+ &&:执行多个使用&&连接的命令：连接两个命令，如果前一个命令执行成功，则继续执行&&之后的命令
++ `<`：从文件中而不是从键盘中读取命令输入并输出 `more /c /e <Desktop.ini` 以下命令将会逐屏显示Desktop.ini文件的内容 
++ `&`：执行多个使用&连接的命令：连接两个以上命令，无论&之前的命令执行成功与否，都会继续执行&之后的命令
++ `&&`:执行多个使用&&连接的命令：连接两个命令，如果前一个命令执行成功，则继续执行&&之后的命令
 + ||:执行多个使用||连接的命令 连接两个命令，如果前一个命令执行失败，才继续执行||之后的命令
 + |:管道，从一个命令读取输出并将其写入到另一个命令的输入 将管道符|之前的命令作为管道符之后命令的标准输出
 + ::注释符，位于::之后的内容会被系统忽略，等同REM命令
@@ -537,19 +540,12 @@ set /p variable= [prompt]
 一些程序的运行必须依赖于另一些程序，这就是对于运行环境的描述。如果无法在环境变量PATH的路径中找到它们所依赖的程序，具有依赖的程序可能会无法运行
 
 + PATHEXT变量：提供一组以分号分隔的扩展名，控制那些扩展可以直接被Windows或者命令解释器解释执行。
-
 + PROMPT:命令解释器的命令提示符变量，默认没有，如果定义了这个环境变量则可以被命令解释器直接使用。
-
 + SystemRoot:
-
 + USERPROFILE:
-
 + TEMP/TMP:
-
 + HOMEPATH:
-
 + WINDIR:
-
 + APPDATA:
 
 ### 组策略编辑器(gpedit.msc)
@@ -573,3 +569,5 @@ windows NT以上系统引入了ACL；T以上windows系统使用另一种新型�
 ### 配置文件：
 
 + hosts: `%windir%\System32\drivers\etc\hosts`
+
+
