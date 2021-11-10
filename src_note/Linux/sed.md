@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # sed [^sed] 笔记
 
 [^sed]: sed 是 Linux 以及 Unix 变体上的 I/O 流编辑器。
@@ -44,7 +43,6 @@ sed '/^##/{s/^##//;n;G}' file
 ## 删除多余空行，会同时移除行首的空行，但会保留尾部空行
 sed '/./,/^$/!d' file|I/O
 ```
-
 
 + d：删除模式空间里的行
 

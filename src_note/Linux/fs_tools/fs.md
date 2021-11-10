@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 文件系统笔记
 
 ## Windows 
@@ -23,8 +22,6 @@ NT4.0/NT5.0/NT6.0
 windowsXP/windows2003/windowsVista/windows7/windows8/windows8.1/windows10  
 ntfs
 
-
-
 ## Unix 及 Unix 变体
 
 ### Linux 
@@ -38,7 +35,6 @@ ntfs
   
 
 #### Xfs
-
 
 #### RreiserFS
 

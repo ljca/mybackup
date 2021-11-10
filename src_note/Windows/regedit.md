@@ -1,8 +1,6 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 注册表笔记
-
 
 注册表 
 第一根键、第三根键互为映射
@@ -94,10 +92,6 @@ HKEY_CLASSES_ROOT\*\shell和HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
 
 这类命令叫做壳扩展（Shell Extensions）要想删除这些命令，就要删除该子键下相应的键值项
 
-
-
-
-
 在右键菜单下添加用记事本打开
 
 1.在HKEY_CLASSES_ROOT\*\shell（如果不存在需要新建该主键）下新建一子键，命名为“右键记事本菜单”或您喜欢的名字，然后修改默认键值项的值为“用记事本打开”
@@ -107,10 +101,6 @@ HKEY_CLASSES_ROOT\*\shell和HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
 3.修改command子键的默认键值项值为“C:\Windows\notepad.exe%1”
 
 现在右键单击任何命令都会看到这个命令了
-
-
-
-
 
 所有文件和文件夹的右键菜单
 
@@ -122,17 +112,11 @@ HKEY_CLASSES_ROOT\*\shell和HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
 
 2.选中copy to主键，在右窗格中修改“默认”键值项的值为{C2FBB630-2971-11D1-A18C-00C04FD75D13}即可
 
-
-
-
-
 为浏览器右键菜单做主
 
 浏览器右键集中在HKEY-CURRENT-USER\Software\Microsoft\Internet Explorer\MenuExt主键下。每一个子键就是一个菜单命令，主键名称就是菜单名，因此，要想删除IE浏览器右键菜单中的一个命令，删除该主键下的相应子键即可。
 
-
 5
-
 
 巧用发送到菜单
 
@@ -152,7 +136,6 @@ sid号，文件或目录的sid号，识别文件或者目录的特征码
 
 /* 此键的更改会对所有类型的文件右键产生影响 */
 键路径：[hkey_classes_root\*\shell]
-
 
 /*只对驱动器产生影响*/
 [hkey_classes_root\drive\shell]
@@ -185,7 +168,6 @@ HKEY_CLASSES_ROOT\SystemFileAssociations\video
 HKEY_CLASSES_ROOT\SystemFileAssociations\audio
 HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio
 
-
 windows服务注册表路径
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
 
@@ -210,10 +192,8 @@ windows regidit versions 5.1
  * 查询开机启动程序
   > reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
 
-
 调整控制台字体
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
-
 
 开始菜单运行历史记录
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU

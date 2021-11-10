@@ -14,11 +14,9 @@ int、float、bool，bool 取值 True 和 False | str、tuple，list，有序列
 不可变 | 可变
 int、float、bool、str、tuple | list、set、key-value
 
-
 > 布尔(bool)
 
 True,False
-
 
 ### 组：序列，序列可以通过索引访问和进行切片运算。
 
@@ -39,7 +37,6 @@ True,False
 string=
 string.replace(part,repel)
 ```
-
 
 > 列表(list)：[]
 
@@ -113,8 +110,6 @@ def xxx():
 return xxxs
 ```
 
-
-
 ## 面向对象
 ### 包、类、实例
 
@@ -128,7 +123,6 @@ __class__
 __dict__
 ```
 
-
 ### 类方法和实例方法、静态方法
 Python 类的带参构造：`__init__(型参列表,....)`
 
@@ -138,7 +132,6 @@ Python 类的带参构造：`__init__(型参列表,....)`
 staticmethod()
 classmethod()
 ```
-
 
 ### python 装饰器：
 ```python
@@ -173,7 +166,6 @@ bin() | 将数值转换为二进制进制后输出 ，以 0b 打头
 print() | 
 type() | 
 isinstance() | 
-
 
 ## 运算符优先级
 
@@ -238,7 +230,6 @@ ord()
 + `\S`：匹配一个空格
 + .....
 
-
 > 边界匹配模式：
 + ^：从指定的字符开始匹配
 + $：匹配到指定的字符结束
@@ -272,5 +263,4 @@ def convert(value):
 ```
 
 原型为：`sub(par,repl,string,count,flag)`
-
 

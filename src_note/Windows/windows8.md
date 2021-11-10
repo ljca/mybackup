@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Windows 8 笔记
 
 + [Windows 8.1 Optimization Tools](windows_tools.md)
@@ -48,7 +47,6 @@ REM DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:h:\Windows /LimitAcce
 + [使用系统文件检查器工具修复丢失或损坏的系统文件](https://support.microsoft.com/zh-cn/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system)
 + [Repair a Windows Image](http://technet.microsoft.com/zh-cn/library/hh824869.aspx)
 
-
 > 参考：
 
 + [360个人图书馆 轻松解除网页防复制  老D](https://laod.cn/black-technology/360doc-copy.html)
@@ -89,5 +87,4 @@ REM DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:h:\Windows /LimitAcce
 
 [^repier]: 因为我的误操作导致了 Win8 Metro 界面的所有应用包括 Win8 设置都无法正常使用。
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-
 

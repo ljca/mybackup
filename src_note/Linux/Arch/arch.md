@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Arch Linux 笔记
 
 ## [pacman：Arch Linux 软件包管理器](pacman.md)
@@ -99,7 +98,6 @@ pacstrap -i /mnt base base-devel net-tools wpa_supplicant dhcpcd
 
 [^1]: 手动降级某个软件包时，pacman并不会顺带解决依赖问题。所以在降级时可以需要连其依赖一起降级。不过，AUR上提供了一个用来降级软件包的工具downgrade和downgrader。它们都可以根据需要降级指定的软件包并尝试解决依赖问题，而使用它们降级软件包时也只需要提供一个要降级的软件包名，然后从多个历史版本中选择一个版本就能降级这个软件包到某个历史版本。除了下载速度有些慢之外。如果你希望了解更多，请参考 Arch Linux 存档库维基。
 
-
 [^archive]: 回滚机可以把系统“回滚”到以前的某种“状态”。不过，也许只有滚动式发行的才有，Arch Linux 的在[这里](https://archive.archlinux.org)。不幸的是：这同时也会降低系统的安全性。
 
 [^problem]: 如果你的系统时钟是错误的，可能会无法正常访问网络……
@@ -115,8 +113,6 @@ pacstrap -i /mnt base base-devel net-tools wpa_supplicant dhcpcd
 首先，我用了常规解决方案，看看系统中有没有这个动态库？没有，那有没有这个软件包？没有？从 Arch Linux 官网上下一个。libnghttp2  属于 Core 的，而 pacman  的启动依赖于这个软件包。
 
 因为 Arch Linux 的软件包实际上就是一个经过 tar 打包然后用 xz 压缩过的归档。所以解决方案就是直接解开软件包并将解开后的文件放到合适的位置(虽然放到 usr下再用 pacman 工作正常，但依然无法将缺的这个软件包装上，会提示已经存在同名文件，不过，为了让 pacman 工作正常，传递 --force 选项给 pacman 进行覆盖安装好了)放到 /usr/local 下更好或者其它位置，但需要进行另外配置。)之后，pacman 能正常工作了。这时重新安装安装 pacman 所缺的这个软件包已经没有了问题。虽然在 Live 环境的 pacstrap 也能完成这个工作，不过却是显得有些繁琐了。
-
-
 
 ## 为什么fcitx不显示输入候选框
 当我启动`fcitx`尝试输入中文时，很奇怪，中文输入候选并没有被显示出来。再切换`fcitx`中英文状态时，也无任何提示与动静。
@@ -178,7 +174,6 @@ journalctl -f | tee sys_faild.log
 
 最后，我不得不清除了缓存 ~/.cache 目录和 fcitx 配置目录 ~/.config/fcitx 以及 ibus 用户配置文件并换回了 fcitx 拼音输入法。
 
-
 ## 用的好好的Arch Linux突然放不出了声音
 用的好好的 Arch Linux 不知怎么突然没声音了，检查了驱动和固件一切正常。结果发现竟然是我不知道什么时候 Mute audio output，真是尴尬。
 
@@ -189,7 +184,6 @@ journalctl -f | tee sys_faild.log
 在仅安装了 Xfce4  桌面环境的 Arch Linux 系统上，一开始是不能使用亮度/声音全局控制键的(比如宏碁笔记本用来调节亮度的Fn ←/Fn → 和调节声音的Fn ↓/Fn ↑)，不过物理功能控制键(Fn F7.....)是正常的。
 
 > ！！！![](../images/tips/tips.png) 属于`alsa-utils`的`speaker-test`可以用来测试喇叭是否工作正常。
-
 
 ## 当我的Arch Linux自动挂起之后被重新唤醒时，Thunar等Gtk程序的菜单（右键上下文和菜单栏）等变成了英文
 

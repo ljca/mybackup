@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 嵌入式第一课：Exynos4412开发板环境配置小结
 
 ## 安装配置minicom
@@ -74,7 +73,6 @@ chkconfig --level 235 nfs on
 
 Add rootfs abstract path to /etc/exports  and restart nfs server.
 
-
 ========== Host File：/etc/exports ===========
 
 ```
@@ -115,7 +113,6 @@ minicom(TINY4412):：
 ```
     
 ### 刷写内核到开发板
-
 
 # Host：
 

@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # CentOS7在VirtualBox的安装
 # §. CentOS 7 在 VirtualBox 里的安装
 
@@ -23,7 +22,6 @@ dir
 cp centos\grubx64.efi BOOT
 dir BOOT
 ```
-
 
 > 在大多数情况下，我们在虚拟机上安装了~~用于学习的Linux~~之后，通常都会希望在主机上能够直接通过 `ssh` 程序连接到它并进行管理。 除了 `VirtualBox` 上的网络配置，你还需要正确配置了虚拟机里系统的防火墙和 `ssh` 服务。
 
@@ -51,7 +49,6 @@ ssh [-p port] [user@]192.168.56.1
 ```
 
 ### 2. 防火墙 firewalld [^firewalld]服务规则
-
 
 [^uefi]: 统一可扩展固件的缩写。
 

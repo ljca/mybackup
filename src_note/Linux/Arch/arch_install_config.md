@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Arch Linux 的安装配置笔记
 
 > *本次安装的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi][^secure_boot]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*

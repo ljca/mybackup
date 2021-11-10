@@ -114,10 +114,8 @@ square
 + inherit：根据父元素
 + hidden
 
-
 + overflow-x：水平方向，默认
 + overflow-y：垂直方向
-
 
 border <====> border-width,border-style,border-color
 

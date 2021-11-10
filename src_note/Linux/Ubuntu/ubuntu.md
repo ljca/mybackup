@@ -1,10 +1,8 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Ubuntu 
 
 ## apt(Advice package tool)
-
 
 # 附
 ## [在Ubuntu Linux上启用3D桌面和更多的窗口动画](在UbuntuLinux上启用3D桌面和更多的窗口动画.md)

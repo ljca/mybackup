@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Gentoo 笔记：
 ## 桌面配置
 ### Install software
@@ -79,7 +78,6 @@ swapon /dev/sda10
 + 获取 stage3: `cd /mnt/gentoo;links https://www.gentoo.org/downloads`
 + 解包 stage3 和 portage 树…… `tar --numric-owner --xattrs-include="*.*" -xvpf stage3*.tar.xz` ; `find . -type f -name ".keep" -exec rm -v '{}' ';'`
 
-
 ### chroot
 
 > 拷贝必须的配置文件到目标系统:
@@ -149,7 +147,6 @@ eselect profile set 16
 
 > 更新 USE 标记: emerge --ask --update --deep --newuse @world
 
-
 > clock & date 
 
 ```Bash
@@ -206,7 +203,6 @@ genkernel --lvm --mdadm initramfs
 
 etc-update && env-update && source /etc/profile && export PS1="(chroot) $PS1"
 ```
-
 
 + Add user: 
 
@@ -273,7 +269,6 @@ mount /dev/disk/by-label/ESP /boot/efi
 + [Linux-4.4-x86_64 内核配置选项简介](http://www.jinbuguo.com/kernel/longterm-linux-kernel-options.html)
 + [启用systemd的gentoo安装方法 - KlausZL的个人页面 - 开源中国社区](http://my.oschina.net/klauszl/blog/223752)
 
-
 ## FAQ
 
 ### Gentoo 中文字体在重新引导系统或者注销之后再次登录到桌面变成了另外一种字体。
@@ -284,7 +279,6 @@ mount /dev/disk/by-label/ESP /boot/efi
 + `eselect fontconfig enable/disable `
 
 > 列出软件包中的文件： `equery files media-fonts/arphicfonts media-fonts/croscorefonts`
-
 
 [^install]: Install 之前: 准备 Gentoo 可启动盘…… ，可启动`Gentoo`镜像：，stage 3 （可选），portage 树（可选），check md5sums: `gpg --keyserver hkp://keys.gnupg.net --recv-keys 0xBB572E0E2D182910` `gpg --verify install-amd64-minimal-20170810.iso.DIGESTS.asc` `grep -A 1 -i sha512 install-amd64-minimal-20170810.iso.DIGESTS.asc` `sha512sum install-amd64-minimal-20170810.iso`
 [^kernel_option]: 按下 F2, F3, F4 分别可以列出选项以及可选择的内核参数。默认选择 gentoo 

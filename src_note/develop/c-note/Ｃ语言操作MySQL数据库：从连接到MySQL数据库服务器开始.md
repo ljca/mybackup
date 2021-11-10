@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Ｃ语言操作MySQL数据库：从连接到MySQL数据库服务器开始
 Ｃ语言连接 MySQL 以及显示错误日志的 API，下面是 mysql.h 里关于它们的声明：
 

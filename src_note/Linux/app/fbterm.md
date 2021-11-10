@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 #  fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器[^tty]。
 
 ----------------------------------------------
@@ -125,7 +124,6 @@ fi
 ##  `fbterm`中文输入法: `fcitx-fbterm？` `yong？`[^yong] `ibus-fbterm？`
  ![](../images/tips/tips.png)如果你希望在 fbterm 上输入中文，那么安装一个 fbterm 中文输入法并激活它就是必要的。
 
-
 + 我使用的中文输入法框架是`fcitx`，然而据说基于`fcitx`框架的 [fcitx-fbterm](https://github.com/fcitx/fcitx-fbterm) 已经停止开发了，但实际上它还能在 [git](https://github.com/fcitx/fcitx-fbterm) 或者 [fcitx-fbterm][fcitx-fbterm] 找到。如果你用的是 Arch Linux，还可以从 AUR 上找到。另外，部分 Linux 发行系统源中也还没有移除这个软件包。
 
 + fcitx-fbterm 是用 cmake 来配置的。最简单的安装方法可以从 INSTALL 文档取得。
@@ -170,7 +168,6 @@ tic fbterm
 infocmp fbterm
 infocmp
 ```
-
 
 ## 其它终端：
 

@@ -1,11 +1,8 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
-
 包、类、对象、方法以及其它类中的成员
 java中的包(package)及import关键字
 java中使用包(package)组织管理类，这样可以有效解决类名冲突的问题，包名不允许以点开始和结尾但可以用英文句点作为分隔符，包名一般都是小写字符组成，并且一般会以域名倒置的形式来命名一个包；如果在一个公共类有包声明语句，那么包声明语句必须位于所有代码之前。
-
 
 > 包声明语句：
 
@@ -79,8 +76,6 @@ public class 类名 [[extends] 父类 [impre..] 接口1,...接口n()]{
 
 > 字段私有，字段getter/setter方法公开
 
-
-
 ### ◆ 类成员：数组(引用类型)，可以分为基本、引用，以及对象数组
 数组在声明可以留空长度也可以指定长度，也可以在声明数组的同时给数组赋值
  以下数组声明都是合法的：
@@ -124,7 +119,6 @@ ps: 构造方法、抽象方法使用与此不同的形式来定义或者声明�
 
 ### ◆ 对象数组的声明
 
-
 ### ◆ 类成员: 静态代码块和代码块
 
 在一个类或者一个方法中，可以使用一组花括号将代码包含，来声明一个代码块{}，它并不会比，除非它被声明为静态的(static)
@@ -145,7 +139,6 @@ static{}
 ```Java
 [访问修饰符] 类名(参数列表){}
 ```
-
 
 ## ★ java中的访问修饰符
 
@@ -267,7 +260,6 @@ instanceof关键字用于判断对象类型
 + 接口中所有的方法默认都是抽象方法，即使没有使用abstract修饰，它们都必须重新在子类中被重写
 + 接口中不能声明变量，但可以声明常量，并且这个常量只能是静态的;接口中不允许存在构造方法，因为它和抽象类一样不允许被实例化，但它允许是实现类对象的声明类型
 
-
 ```Java
 [访问修饰符] static final 常量名 = 常量值;
 ```
@@ -347,7 +339,6 @@ try{
 + getLast()
 + addFirst();
 + addLast()
-
 
 ### ◆ Map接口\<HashSet>实现类
 
@@ -431,7 +422,6 @@ boolean execute(String sql);
 + int getInt(int columnIndex);int getInt(String columnLabel);
 + String getString(int columnIndex);String getString(String columnLabel);根据列名返回列的字符串值
 
-
 ◆ 按照连接对象先建立后关闭的原则依次关闭所有创建的数据库对象
 
 ## ★ 数据访问层(数据持久化)
@@ -471,7 +461,6 @@ import java.io.;
 + String getPath(); // String getAbsolutePath(); // 返回File对象所在相对路径，返回.....绝对路径
 + String getName(); // 返回File对象表示的文件或者目录名称
 + boolean delete(); // 删除File对象指定的文件或者目录
-
 
 ```Java
 // 如何使用File类来对文件或者目录操作？
@@ -523,7 +512,6 @@ BufferedReader 对象名 = new FileBufferedReader(Reader re);
 
 基类：Writer,OutputStream
 
-
 ## ★ Java中的反射机制：Java将所有事物都看做对象。而每个类一被jvm加载，则会在内存中创建一个与之对应的Class对象
 
 > 获取内存中的对象(包括类)至少有三种方式
@@ -540,5 +528,4 @@ BufferedReader 对象名 = new FileBufferedReader(Reader re);
 为了获取直接父类的类型的泛型参数类型，应该调用参数化类型接口对象的的getActualTypeArguments方法，而泛型参数大多数并不止一个，因此，此方法返回的是一个数组。
 
 2. ParameterizedType[] getActualTypeArguments() // 此方法获取所有参数化类型对象,返回一个参数化数组
-
 

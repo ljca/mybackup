@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # web_server缓存服务
 
 ## 静态资源缓存服务：squid

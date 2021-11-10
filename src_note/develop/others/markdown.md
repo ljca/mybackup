@@ -13,7 +13,6 @@
 - [Cmd Markdown 作业部落](https://www.zybuluo.com)
 - ..........
 
-
 > 跨平台（同时支持 Linux 和 Windows）的客户端有：
 
 - [VNote](https://github.com/tamlok/vnote)[^vnote]
@@ -87,7 +86,6 @@ s->op->io->con
 con(yes)->op2->e
 con(no)->op
 ```
-
 
 ### 时序图
 

@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # MySQL在Arch Linux上的安装与配置
 [TOC]
 

@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # operator_priority
  + 单目运算符是指仅需要一个操作数，运算符一般位于操作数左边，运算顺序是从右到左的运算符。
  + 双目运算符需要两个操作数，运算符一般位于两个操作数之间，运算顺序从左到右。

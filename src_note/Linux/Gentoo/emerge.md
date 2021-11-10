@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # emerge[^emerge]
 
 [^emerge]: Gentoo 软件包管理器
@@ -61,7 +60,6 @@ USE="X a52 aac acl acpi alsa amd64 berkdb bluetooth brandin...." INPUT_DEVICES="
 
 > 被锁住的包： 根据 [Gentoo 维基](https://wiki.gentoo.org/wiki/Handbook:X86/Working/Portage#Blocked_packages)，这是由于二者之间存在冲突，因此要么移除掉其中的一个，要么不安装其中的一个。比如 libav 和 ffmpeg，i3 和 i3-gaps
 
-
 ## equery[^gentoolkit]
 
 + `equery uses <sr>` # \<sr\>：类名/软件包名，e.g. media-vedio/vlc
@@ -71,7 +69,6 @@ USE="X a52 aac acl acpi alsa amd64 berkdb bluetooth brandin...." INPUT_DEVICES="
 ## genkernel
 
 ## Gentoo USE[^gentoo_use] 标记，参考 Gentoo [USE Flags](https://www.gentoo.org/support/use-flags/)
-
 
 ```log
 下面是 WIKI 页 REQUIRED_USE的一个例子：

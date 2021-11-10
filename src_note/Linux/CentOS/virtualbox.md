@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # §.VirtualBox[^virtualbox] 笔记
 # §. 附
 ## Ⅰ. ViratulBox 增强包：
@@ -214,7 +213,6 @@ vboxmanage controlvm "CentOS7" poweroff
 VBoxManage storagectl       <uuid|vmname> --name <name>
 ```
 
-
 + `--add ide|sata|scsi|....`
 + `--portcount <1-n>` 端口数
 + `--hostiocache on|off` 主机缓存
@@ -249,7 +247,6 @@ vboxmanage storageattach CentOS7 --storagectl SCSI --device 0 --port 1 --type dv
 # 从存储控制器上移除附加的光驱文件或者虚拟硬盘|分离虚拟光盘或者硬盘
 vboxmanage storageattach CentOS7 --storagectl SCSI|SATA|IDE|... --device 0 --port 0 [--type dvddrive|hdd|...] --medium none
 ```
-
 
 ### `createmedium`：创建虚拟硬盘介质
 > ***手动创建的虚拟硬盘介质还需要附加到存储控制器上才能工作。在附加之前，存储控制器必须已经创建完成。如果是已经创建好的，直接附加即可。见  `storagectl` 和 `storageattach`。***

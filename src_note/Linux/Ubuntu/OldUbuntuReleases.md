@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Old Ubuntu Releases
 对于一些非`LTS`版本的`Ubuntu`，`Canonical`公司可能在它们过了维护期后就不再进行维护。
 

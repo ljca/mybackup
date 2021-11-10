@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # vim安装与配置笔记
 ## 安装
 
@@ -94,7 +93,6 @@ n[ore]map(正常模式,当vim不以任何参数或者特殊参数启动或者打
 i[nsert]map(插入模式,当在正常模式键入i/I,c/C,s/S,o/O……键之后)
 
 v[isual]n[ore]map(可视模式,当正常模式下键入v或者V)
-
 
 r[eplay]map(替换模式,当在正常模式之下键入R之后)
 可视行，可视，可视块
@@ -243,7 +241,6 @@ $ vim --version
 install.py --clang-completer ~/vim/bundles/YouCompleteMe ~/third_party/ycmd/clang_archives/clang+llvm-3.9.0-x86_64-opensuse13.2.tar.xz
 ```
 
-
 > Full Installation
 ```
 mkdir ~/{ycm_build,ycm_tmp}
@@ -266,7 +263,6 @@ cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~/.vi
 ```
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 ```
-
 
 ##  参考：
 

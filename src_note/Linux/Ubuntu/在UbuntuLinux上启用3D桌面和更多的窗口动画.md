@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 在Ubuntu Linux上启用3D桌面和更多的窗口动画[^anima]
 
 [^anima]: 对于我而言，3D桌面是次要的，我真正需要的是对窗口动画和主题进行自定义……

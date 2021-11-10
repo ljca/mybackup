@@ -1,9 +1,7 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # lib_call
 C库调用及系统调用
-
 
  
 文件/目录相关

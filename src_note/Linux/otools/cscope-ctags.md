@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # cscope&ctags
 ## vim 插件 cscope&ctags
 
@@ -17,8 +16,6 @@ and then edit vim profiles
 
 add following the line
 set ctags += path(abslote)
-
-
 
 ### Search And Install：cscope
 

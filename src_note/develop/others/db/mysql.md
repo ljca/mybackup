@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # MySQL[^sql]笔记
 
 ## show 指令
@@ -111,7 +110,6 @@ insert into test (descs) values ('真诚'),('诚实'),('勇敢'),('善良'),('�
 如果只是想清空表数据而保留表的结构，则可以使用不带条件的DELETE语句
 ！如果设置了自增列，则直接删除所有数据并不能让自增列重新开始。如果要想自增列从新开始，则应该使用truncate table语句，但这必须确保要truncate的表没有被其它表引用。
 
-
 ## `ALTER TABLE` 语句：修改表、视图。。。
 
 ```sql
@@ -148,7 +146,6 @@ cloumn_name1 data_type [约束集合],
 cloumn_nameN data_type [约束集合]
 );
 ```
-
 
 ```sql
 --修改列定义，包括数据类型，约束，描述等
@@ -229,7 +226,6 @@ Multifuco.... //
 Transactional... //
 Non-Transactional... //
 
-
 Manual S.... //自定义
 Decision... //标准连接
 Online.... //使用在线连接...
@@ -237,7 +233,6 @@ Online.... //使用在线连接...
 Enable Tcp/IP.... //启用Ip连接
 Add firewall... //允许端口进出防火墙
 Enable Strict.... //启用严格模式
-
 
 Stadard....//标准字符编码集
 Best...
@@ -302,7 +297,6 @@ bin/mysql_secure_installation
 
 `mysqladmin -uroot [-p旧密码] password 新密码;`修改root用户的密码，注意：这必须已经打开了mysql服务。
 "如果root用户一开始就没有密码，则不需要指定-p选项。执行这条命令会给root用户添加一个新的密码。新密码如果包含特殊字符则需要使用单引号将密码引起来，如果省略，则会在控制台提示输入新密码
-
 
 ## MySQL 配置文件
 
@@ -387,7 +381,6 @@ nvarchar实际上是varchar的同义词
 
 2. 如果你的 MySQL 服务启动错误：
 ***在 Windows，你可以在命令提示符上使用 mysqld --console 启动 mysql 服务器并能看到 MySQL 服务器的详细启动消息或者检查 mysql 服务器的启动日志文件，如果 mysql 启动存在错误，则 mysql 服务器会创建一个以主机名打头的 err 文件，在这个文件中详细的列出了启动过程，如果有错误，则只需要检查以 err 开始的行即可很快发现错误(可以通过更改配置文件将这个错误日志文件保存到其它位置，方法是在 mysql 配置文件 my.ini 或者 ~/my.cnf 中的[mysqld]段下面增加节点 log-error***
-
 
 3. 当 mysql 配置文件有语法错误时可能导致 mysql 服务无法开启
 指定 basedir 与 datadir 目录时，不能使用反斜杠'\'来作为路径分隔符，而是使用正斜杠'/'来作为目录分隔符

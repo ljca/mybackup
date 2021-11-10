@@ -1,8 +1,6 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Linux 上 网络的手动配置
-
 
 ## Linux 无线网络[^wlan]手动配置残篇
 
@@ -155,7 +153,6 @@ iw [dev] <interface> scan | grep -i 'ssid*'
 + [使用ssh连接虚拟机网络的方法 - 虚拟机教程文章_推动虚拟化发展 - 红黑联盟](http://www.2cto.com/os/201206/137291.html)
 + [完全教程 Aircrack-ng破解WEP、WPA-PSK加密利器 - 51CTO](http://netsecurity.51cto.com/art/201105/264844_all.htm)
 
-
 [nm]: https://wiki.archlinux.org/index.php/NetworkManager_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 [network]: https://wiki.archlinux.org/index.php/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.90.AF.E7.94.A8.E5.92.8C.E7.A6.81.E7.94.A8.E7.BD.91.E7.BB.9C.E6.8E.A5.E5.8F.A3
 [wireless]: https://wiki.archlinux.org/index.php/Wireless_network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
@@ -164,7 +161,6 @@ iw [dev] <interface> scan | grep -i 'ssid*'
 <div class="p">
 
 [^wlan]:  ***<del>（除了那些可怜的服务器维护人员）</del>我相信没有多少人会愿意使用命令行接口手动完成网络配置这一繁琐过程。在这个过程中，你很可能被迫去了解一些诸如网关之类专业晦涩的网络术语，可能会被活活逼疯。。。更何况，一切都是基于命令行的，那可怜的一点 Windows 命令行基础根本就不可能在 Windows 上手动完成这一过程，还好，Linux 的要简单很多。***
-
 
     无线 AP(WIFI)和无线网络(WLAN)是一个截然不同的概念。目前，无线网又分加密的和开放的，开放的又分验证登录的和直接可连接的，加密的又分 WEB 、WPA、WPA2 几种。其中，WPA2 加密等级最高，即最安全。`WPA2` 使用 `RSA`() 加密。比 `WPA`(WIFI Pro Acecess) 协议保护性更高。
 

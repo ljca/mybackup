@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Cent OS 7 笔记：
 
 ## yum: RedHat 系软件包管理器。
@@ -34,7 +33,6 @@ sudo wget http://mirrors.aliyun.com/repo/epel-6.repo
 + [web_server缓存服务](web_server缓存服务.md)
 + [web服务器httpd](web服务器httpd.md)
 + [web服务器ngnix](web服务器ngnix.md)
-
 
 > 参考：
 

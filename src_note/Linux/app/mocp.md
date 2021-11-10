@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # mocp[^mocp]：Linux 上的一个轻量级命令行本地音乐播放器。
 
 ![](../images/ui/mocp.jpg)
@@ -18,7 +17,6 @@
 
 + 基本上很多 Linux 发行的官方仓库中已经包含了这个软件包[^mocp_tray]，因此安装的话直接使用默认的软件包管理工具安装就行了。如果你需要自定义特性及其支持，那么你可以选择手动编译……
 
-
 ##  ![](../images/tips/app_config.png)mocp Configure
 
 ### 1. mocp 配置[^start]文件[^config]
@@ -31,7 +29,6 @@
 ```
  
 命令行上的 -O 选项能覆盖任何配置文件中的选项！
-
 
 ```Bash
 mocp -O AutoNext=no -O messagelingertime=1 -O XTerms+=xxt:xwt 

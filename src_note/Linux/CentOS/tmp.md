@@ -1,7 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
-
  sudo groupmod -g 501 kyzs 
 
 sudo mkfs.ext4 -L "Raid0" /dev/md0 
@@ -11,7 +9,6 @@ cat /proc/mdstat
 
 sudo mount -t ext4 -v -o rw /dev/md0 /media/raid 
 sudo chkconfig --level=2345 mdmonitor off 
-
 
 sudo yum install dos2unix
 sudo yum install zsh

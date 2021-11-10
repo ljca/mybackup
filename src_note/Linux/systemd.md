@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # systemd 笔记
 
 > ***~~作为新一代 `Linux` 的 `init`，`systemd` 优化了 `Sys V` 以及 `Upstart` 在启动和管理系统时暴露的 lue shi 。另外，`systemd` 在设计时并不遵循 `Unix` 哲学。~~***

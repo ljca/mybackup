@@ -11,7 +11,6 @@
 
 在 docbook [主页](https://sourceforge.net/projects/docbook/files)可以获得其它版本的 xsl.
 
-
 ```Bash
 xsltproc -o docbook.html /usr/share/xml/docbook/xsl-stylesheets-1.79.1/html/docbook.xsl docbook.xml
 ```

@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 一个精巧的十进制转二进制（巧妙的位运算）程序，来源于C语言详解
 
 ```c

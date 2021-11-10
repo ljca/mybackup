@@ -1,8 +1,6 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # low_interface
-
 
 ```
 /sys
@@ -40,7 +38,6 @@
 └── wakeup_count
 ```
 
-
 ```
 # 如果驱动被正确的载入，可以从这里查看笔记本电池电量信息……
 /sys/class/power_supply/BAT1@/
@@ -75,7 +72,6 @@
 ├── voltage_min_design
 └── voltage_now
 ```
-
 
 ```
 # /sys/class/power_supply/ACAD/

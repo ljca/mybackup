@@ -1,7 +1,6 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
-# 在 Linux 上读取、转换、分隔多媒体格式的多媒体工具集：
+# 在 Linux 上读取、转换、分隔多媒体格式的多媒体工具集
 
 ## Audio：音频
 
@@ -29,7 +28,6 @@
 + `split2flac`
 + `shntools`
 + shnconv `shnconv -i song.flac song.ape`
-
 
 ## Video：视频
 

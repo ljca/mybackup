@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Other FS Tools
 
 + [`LVM`：逻辑卷管理](fs_tools/lvm.md)

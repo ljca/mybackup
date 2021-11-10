@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # [avconv](https://libav.org/download/)
 
 ::: alert-info
@@ -15,7 +14,6 @@
 :::
 
 + 以根用户录制 tty 数据： `avconv -f fbdev -r 30 -i /dev/fb0 tty1.avi`
-
 
 参考：
 

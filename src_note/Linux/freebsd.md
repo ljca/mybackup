@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # FreeBSD 笔记
 
 ## pkg: FreeBSD 10+ 预编译软件包管理
@@ -45,7 +44,6 @@ sshd_enable="YES"
 ```
 
 [^net_ini]: 如果不是手动使用 ifconfig 给网卡添加 ip ，那么通常需要重启 `netif` 和 `routing` 服务。
-
 
 + 删除网卡地址：`ifconfig em0 delete`
 + 查看路由表 `netstat -rn`

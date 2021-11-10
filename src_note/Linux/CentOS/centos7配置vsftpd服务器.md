@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # centos7配置vsftpd服务器
 
 在 Linux 上，FTP 服务器的实现，真的有很多。比如：`tftp-server`。但是 vsftpd 是轻量级的，安全的。
@@ -16,7 +15,6 @@
 ### 虚拟用户
 
 >  ftp 客户端，CLI: `ftp`、`lftp`，GUI: `filezilla` 
-
 
 # 附 
 

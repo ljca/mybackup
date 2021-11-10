@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # tmux：终端上的多会话，以前使用 [screen](../other_tools.md#screen)。
 
 > 一对尖括号 `<>` 扩起来的键是键盘上的区分于字母或者数字键的专有键，比如 `<Space>` 代表空格键，`<C-b>` 代表了 `Ctrl b`，`<M-b>` 即是 `Alt b`。
@@ -29,7 +28,6 @@
 + main-horizontal `<M-3>`
 + main-vertical `<M-4>`
 + tiled `<M-5>`
-
 
 `<Space>` 可自由在几种 layout 中进行切换。
 
@@ -76,5 +74,4 @@ bind-key l select-pane -R
 + 翻页／滚动：
 
 一旦进入了 Copy-in 模式，就可以使用一些 vim 和 less 的键绑定了，包括翻页的 `<C-u> <C-d> <C-f> <C-b>`。
-
 

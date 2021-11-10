@@ -10,7 +10,6 @@
 
 </div>
 
-
 <div class="p">
 
 为了将多个文件合并转换，可以在命令行中使用正则表达式指定多个输入文件。合并转换多个 html 到 pdf： `pandoc --toc -N --pdf-engine=wkhtmltopdf -f html -t pdf  -o ../tmp.pdf  *.html`
@@ -22,7 +21,6 @@
 [^pandoc]: pandoc 支持多种文档格式互相转换。类似的转换工具还有 gitbook，功能少些，这个工具在我的计算机多次配置失败，只能放弃。
 [^_^]: 我们可以直接使用 wkhtmltopdf 将 html 转换到 pdf。但是，这需要将 markdown 文档先行转换成 html 文档。很明显，pandoc 功能更多更完善。
 
-
 ## 附：
 
 + [Pandoc   a universal document converter](https://pandoc.org/)
@@ -30,4 +28,5 @@
 + [Pandoc：一个超级强大的文档格式转换工具](https://tonydong.blog.csdn.net/article/details/108536784?utm_term=pandoc%E6%95%99%E7%A8%8B&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-108536784&spm=3001.4430)
 + [使用 Pandoc 将你的书转换成网页和电子书](https://linux.cn/article-10287-1.html?utm_source=weixin)
 + [Turn your book into a website and an ePub using Pandoc](https://opensource.com/article/18/10/book-to-website-epub-using-pandoc)
++ [在命令行使用 Pandoc 进行文件转换](https://linux.cn/article-10228-1-rel.html)
 

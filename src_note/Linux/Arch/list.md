@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Arch Linux 软件
 
 + xorg and nvidia drivers
@@ -127,13 +126,11 @@
   - pulseaudio opusfile
   - pulseaudio-alsa
 
-
 + 压缩/解压/打印/字典
   - p7zip
   - cups cups-pdf
   - stardict
   - espea
-
 
 + Build:
   - abs

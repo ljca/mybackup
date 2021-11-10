@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # xfce acpid 自定义电源事件
 
 > install acpid

@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Arch Linux上的网易云音乐
 移动窗口需要按住Alt，那么调整窗口大小要按住什么？为什么连调个窗口大小都如此困难？
 
@@ -11,5 +10,4 @@
 为什么有些格式的音频播放不了？
 
 为什么缓存与下载路径无法更改？
-
 

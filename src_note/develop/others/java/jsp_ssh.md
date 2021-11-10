@@ -1,8 +1,6 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Structs Sprint Hibernate：Java Web 的三大框架
-
 
 使用框架技术来重构WEB项目
 为什么要使用框架技术？
@@ -605,7 +603,6 @@ at test.dao.OracleDao.main(OracleDao.java:44)
 
 ！数据库方言属性dialect设置错误了错误的值。
 
-
 ```
 ？
 二月 29, 2016 11:59:22 上午 org.hibernate.util.NamingHelper getInitialContext
@@ -715,7 +712,6 @@ at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBu
 ```
 ！mapper元素resource属性值中的路径错误导致系统找不到SQL映射文件。
 
-
 ERROR：
 
 ```
@@ -791,7 +787,6 @@ at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(Persiste
 .......
 ```
 ！数据库列与持久化类的字段数据类型映射错误
-
 
 Struts2
 

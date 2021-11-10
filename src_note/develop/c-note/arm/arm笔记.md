@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Arm 笔记：嵌入式系统的初步了解
 
 > 参考：

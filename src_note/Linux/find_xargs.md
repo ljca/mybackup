@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # find与xargs：
 
 ## find：文件搜索……
@@ -49,7 +48,6 @@ find . -type f -perm 0755  # 比如在 Ext 系列文件系统上，可以用这�
 find [主命令及主命令选项] [附加指令及附加指令选项]
 ```
 
-
 > find 附加指令及附加指令选项
 
 ```Bash
@@ -60,7 +58,6 @@ find <> 附加指令 {} ;  # 此处的 {} 表示find 查找的文件集合……
 + -print
 + -rm
 + -ask
-
 
 [^option]: 如果你希望组合条件，-a 或者 -o， 那么务必要使用圆括号将它们包围起来，由于圆括号会被 shell 解释，圆括号也要转义，条件与圆括号之间还要留空。就像这样子：`\( -name "" -o -name "" \)`
 
@@ -74,7 +71,6 @@ locate "reg"
 > Note：
 
 + which 无法定位命令别名……
-
 
 ## xargs
 

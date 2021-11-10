@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Fedora Xfce 23：安装与配置指东
 ## 安装
 
@@ -22,7 +21,6 @@
 
 + Fedora 国内（[163](), ali, ustc）源:
 + rpm-flusion[^rpm-flusion] 源:
-
 
 > fedora 21 及以上版本启用 rpm-flusion 源
 
@@ -69,9 +67,6 @@ createrepo -v sr/lin
 + 清除所有缓存 `sudo dnf clean all`
 
 + 创建 repo 缓存 `sudo dnf makecache`
-
-
-
 
 + 刷新软件源，建立源元数据，源缓存，更新系统
 ``` Bash
@@ -184,7 +179,6 @@ chromium依赖： chromium-libs chromium-libs-media u2f-hidraw-policy
 + [chromium-libs-media-55-fc23](http://dl.fedoraproject.org/pub/fedora/linux/updates/testing/23/x86_64/c/chromium-libs-media-55.0.2883.87-1.fc23.x86_64.rpm)
 + [chromium 54/55以上 x86_64](http://dl.fedoraproject.org/pub/fedora/linux/updates/23/x86_64/u/u2f-hidraw-policy-1.0.2-1.fc23.x86_64.rpm)
 
-
 ## Fedora 23 install lovewallpapers
 
 1. install 必须依赖 python-pyside ：`dnf install python-pyside`
@@ -197,7 +191,6 @@ chromium依赖： chromium-libs chromium-libs-media u2f-hidraw-policy
 
 为了方便安装和卸载,将安装脚本修改为makefile,然后使用make来直接安装或者卸载 ：`mv INSTALL.sh makefile && make install`
 
-
 # FAQ
 ## wps for linux 启动错误:
 
@@ -208,7 +201,6 @@ wps: error while loading shared libraries: libpng12.so.0: cannot open shared obj
 这是意味系统缺少 png12 库，只需 `dnf install -y libpng12`
 
 ## [Fedora Xfce 23 thunar 显不出文件缩略图却不知为那般？](thunar_no_thumblers.md)
-
 
 ## 参考：
 

@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # xsel & xclip：Linux X 下的命令行剪贴板工具
 
  `primary` `clipboard` `second` `-sel`

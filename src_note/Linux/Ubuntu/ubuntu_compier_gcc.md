@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 sudo ntpdate time.nist.gov
 sudo clock -w
 sudo ifconfig eth0 192.168.1.10

@@ -1,12 +1,10 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # ★ Oracle的基本操作 DML:CUID
 ## 实例
 ！安装Oracle过程中，如果配置了数据库，则
 
 Oracle的对象并不放在数据库中，而是放在一个被称为表空间的逻辑结构中。一个数据库对应于一个实例，一个实例对应一个 service，创建多个数据库就会创建多个实例，这样会增大系统开销
-
 
 ## 表空间(TABLESPACE)
 
@@ -234,7 +232,6 @@ partition 标识符 values less than (maxvalue)..
 );
 ```
 
-
 ## 同义词
 
 同义词可以减少一些操作或者隐藏掉系统数库的真实名称。可以防止不相干的人随意猜测数据库表的内部结构。主要包括公有和私有同义词。
@@ -245,7 +242,6 @@ partition 标识符 values less than (maxvalue)..
 ## 查询
 模糊查询
 _单个字符匹配
-
 
 # PL/SQL编程
 
@@ -302,11 +298,9 @@ sql..
 exit when ... 
 end loop;
 
-
 while ... loop
 sql...
 end loop;
-
 
 for 计数器 in [reverse] 下限 ... 上限 loop
 sql...
@@ -314,7 +308,6 @@ end loop;
 ```
 
 ## 顺序结构 null、goto
-
 
 ## 异常处理 预定义异常&用户自定义异常
 
@@ -380,7 +373,6 @@ PL/SQL Developer(64位Oracle需要配置32位的客户端)
 在客户端network\admin目录下建立listener.ora启动文件，可以直接复制服务端的监听配置文件
 SQL Developer
 
-
 ### 字符集配置
 
 ```batch
@@ -393,7 +385,6 @@ SQL Developer
 + CHINESE_CHINA.ZHS32GB18030
 + zh_CN.GBK SIMPLIFIED CHINESE_CHINA.ZHS16GBK
 + zh_CN.UTF-8 SIMPLIFIED CHINESE_CHINA.AL32UTF8
-
 
 ## ★ 使用sqlplus
 
@@ -498,7 +489,6 @@ Oracle_11g_r2 64位在windows初始化参数的位置：
 Oralce详细启动日志位于:
 <Oralce_HOME>\diag\rdbms\orcl\orcl\trace\alert_<ORCLE_SID>.log
 
-
 ## 伪列
 ROWID
 ROWNM
@@ -522,7 +512,6 @@ Oracle数据字典也叫系统表，它保存了大多数的Oracle信息，主�
 
 用户级约束数据字典:user_constraints;
 
-
 dba_users:保存了所有用户信息。
 dba_data_files:保存了系统所有数据文件的信息。
 dba_tablespaces:保存了所有表空间的信息。
@@ -533,7 +522,6 @@ dba_tables:保存了所有表的信息。
 user_tables
 user_tablespaces
 user_users
-
 
 用户权限数据字典：
 dba_sys_privs

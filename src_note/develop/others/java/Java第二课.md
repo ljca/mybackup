@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Java第二课
 
 Java 吸收了`C++`的优点，代码组织方式借鉴了 C++ 的，却与 C++ 的存在着不同。

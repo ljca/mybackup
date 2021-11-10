@@ -1,11 +1,9 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # asciinema：高级的终端会话记录[^script]和回放工具
 ##  安装
 
 [asciinema][asciinema] 是一个用 python 实现的程序，主要用于录制和回放终端会话（可以是 asciiname 网络上的，也可以是本地的）[^0][^1]。因此它没有太多的依赖，大多数较新的 Linux 发行都在官方源包含了这个工具，只需要使用包管理器就能直接安装它。 如果没有在官方源中找到这个工具，[asciinema][asciinema_install]网站上已经提供了较详细的安装教程，[git][asciinema_git]上也提供另外的安装方法。当然，如果是在 Linux 上，还可以直接使用 pip3/pip 安装 `sudo pip3 install asciinema`
-
 
 ```
 Collecting asciinema
@@ -25,7 +23,6 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 > Note：
 
 asciinema 使用 json 格式记录终端会话和时序信息。如果在命令行上没有指定本地文件名，则默认将会保存到 asciinema 网站上。即便如此，asciinema 在录制完毕(按下 Ctrl D 或者键入 exit 之后)仍然会询问是否将录制的会话文件上传到 asciinema 网站上。权衡是否会泄露隐私后再做打算，因为 asciinema 提供了单独上传的选项。 上传录制的会话文件： `asciinema upload localfile`。如果上传成功，`asciinema`将会返回一个 asciinema 上的[网络地址][addr]。在终端，你可以通过`asciinema`直接使用这种地址进行会话回放，不过这需要网络。另外，如果你尝试在浏览器中访问上述类似的地址或者是 asciinema 网站上的，没有意外的话将会出现一个播放器一样的东西，你可以尝试点击中间那个播放按钮看一看会发生什么事（你也许会觉得那很眼熟，它看起来就像是在用 HTML 5 播放视频）。
-
 
 ## asciinema 回放终端会话
 与录制相似，不过 asciinema 并不需要单独的时序文件(因为所有的时序信息和终端输出信息使用了一种叫做 json 的格式保存在了同一个文件中)，回放时仅仅需要提供一个会话文件就行了，这可以是本地的会话文件，还可以是 asciinema 网站上的。 回放会话，file 可以是一个本地由 asciinema 录制成的 json 文件，还可以是一个 asciinema 网址。 `asciinema play [file]`

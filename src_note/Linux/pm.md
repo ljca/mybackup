@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Power Manager：Linux 上的电源管理方案
 
 > 参考：

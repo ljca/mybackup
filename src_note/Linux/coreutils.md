@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # [coreutils：Linux 核心工具集][1]
 
 + [：

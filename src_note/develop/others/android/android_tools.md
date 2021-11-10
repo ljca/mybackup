@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # adb：Android调试桥
 
 > adb 是 Android 调试桥(Android Debug Bridge)的简称，一般而言，adb 至少具有以下几个功能：
@@ -153,7 +152,6 @@ aapt list -v Test.apk
 |文件长度|使用的方法|未知|大小|偏移|时间|校验和|文件或者目录名称|
 |.......|
 
-
 + 列出 apk 包详情 aapt d[ump]  //转存 `aapt dump badging Test.apk`
 
 > 输出类似于以下结果:
@@ -244,7 +242,6 @@ chmod u+s `which adb`
 
 ！adb连接的设备可能因为某些问题而存在延时问题,可以尝试重启一下udev服务 ` ervice udev restart`
 
-
 > 添加google推荐的udev规则到 /etc/udev/rules.d/,然后重启udev服务（`service udev restart`），google android设备udev规则
 
 ======== vim /etc/udev/rules.d/50-android.rules ============
@@ -254,7 +251,6 @@ SUBSYSTEM=="andorid" ATTR{},ATTR{},
 ```
 
 删除 ~/.android/adbkey* 不是必须的，`rm -fr ~/.android`
-
 
 ？adb push文件到/system下出现
 

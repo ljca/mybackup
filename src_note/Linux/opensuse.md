@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # OpenSUSE: 一个严谨[^opensuse]的 Linux OS。
 
 ## zypper[^zypper]：OpenSUSE 的命令行软件包管理器

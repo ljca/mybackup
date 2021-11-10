@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 windows8.1上安装mapGIS K9
 必须安装.NET Framework2.0和安装c++2005 32位运行库
 windows8.1启用.NET Framework2.0可到控制面板 -> 启用或关闭windows功能 -> 勾选.NET Framework3.5下的复选框然后单击确定即可完成激活，这必须要联网。

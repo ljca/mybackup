@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Unix网络编程
 ## 网络模型 ##
 > 虽然 *ISO* 提出了 *OSI* (Open System Internet，中文译作开放系统互联）模型并规定网络应该有七个层次，但实际上，仅仅只有四层的 *TCP/IP 协议族* 已经成为了网络模型事实上的标准。
@@ -57,7 +56,6 @@ TCP/IP 协议族：
  + htonl()/htons()
  + bzero()/memset()
  + strcpy()/memcpy()/bcopy()
-
 
 关于《Unix 网络编程卷》源码可以从它的[ 网站 ][0]或者[ 图灵社区 ][1]下载。
 [0]: https://

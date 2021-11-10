@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 怎样在 Arch Linux 构建一个简单的软件包？
 
  最初，我使用`Deepin`的图标集，但我很快发现并不是很习惯其设计，而 Arch Linux 所带的几套图标主题尽管简洁但我不是很喜欢。想了很久，发现还是很喜欢最开始使用的那套 Humman 图标集，遗憾的是：搜遍源和`AUR`，也没有发现提供给`Arch Linux`的。不过我很快在网络上找到了它，发现只有提供给`Ubuntu`和`Fedora`的。

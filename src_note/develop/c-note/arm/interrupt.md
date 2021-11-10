@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # interrupt
 #include <linux/interrupt.h>
 #include <asm/gpio.h>
@@ -9,7 +8,6 @@ request_irq()
 free_irq()
 
 gpio_to_irq() //将gpio转换成irq
-
 
 时钟
 WDT中断

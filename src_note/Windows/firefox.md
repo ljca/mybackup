@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Firefox：一个免费的高自定义(扩展很多)浏览器的扩展小配置
 
 > 与 Firefox 有关的设置项，可以直接在地址栏中输入：

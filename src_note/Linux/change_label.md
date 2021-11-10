@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 如何在 Linux 上修改磁盘分区卷标：
 
 + Ext 系列 使用 e2label[^e2label]：修改 Ext 系列文件系统卷标: `sudo e2label /dev/sda4 Lfs`

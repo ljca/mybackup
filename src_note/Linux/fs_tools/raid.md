@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # `RAID`：磁盘阵列
 
 ** RAID磁盘阵列其实就是磁盘组，从类型上分，可以分成硬RAID和软RAID。 硬RAID就是依据经过特殊设计的硬件架构，将多个物理硬盘使用特殊的结构组合到一起让操作系统认为是单个硬盘；软RAID就是使用软件来模拟真正的物理RAID。磁盘阵列多用作处理运算和备份。然而磁盘阵列由于存在设计上的缺陷，据说会降低CPU的工作效率.  软raid有多个级别，从0开始到15都有,raid0是安全高速的。**
@@ -76,5 +75,4 @@ cat /proc/mdstat
 + [Linux下用mdadm命令创建软RAID5_服务器应用_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2012-06/62354.htm)
 
 [raid]: https://wiki.archlinux.org/index.php/RAID_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
-
 

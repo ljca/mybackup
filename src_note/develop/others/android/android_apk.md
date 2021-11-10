@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 在 Linux 命令行上管理 Android 项目
 
 ## 环境准备

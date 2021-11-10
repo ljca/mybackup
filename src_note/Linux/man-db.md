@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 > 运行 `whatis ls` 或者 `apropos ls` 或者 `man -k ls` 出现：
 
 ```log

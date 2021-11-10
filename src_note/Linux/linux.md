@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Linux 笔记
 
 <div class="dir">
@@ -46,7 +45,6 @@
 + [如何成为一个真正在路上的Linuxer_Linux新闻_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2014-11/109730.htm)
 
 </div>
-
 
 [cloneall]: https://github.com/bedekelly/cloneall
 
@@ -120,7 +118,6 @@ mv alt.map.gz /usr/share/kbd/keymaps/my
 [^cause]: 我觉得更有可能的原因是：你在打字时不小心碰到了触摸板，觉得很烦，然后打开了`在输入时（使用键盘时，包括 Alt Tab 切换窗口）禁用触摸板多长时间`这个桌面环境下的鼠标选项，同时忘记了调整……
 
 [^version]: Note：新版本的 `laptopmode-tools` 已经将 USB 自动挂起功能从 usb-autosuspend 模块移动到运行时 pm 模块（关于它的配置文件移到了 /etc/laptop-mode/conf.d/runtime-pm.conf）。如果你希望知道 laptopmode-tools 的详细信息，请参阅 laptop-mode.conf（8）手册页。
-
 
 ## 清除 gtk 程序的最近打开历史
 
@@ -277,7 +274,6 @@ Linux 中的 Opera 浏览器链接总是被添加了下划线，这样可以迅�
 
 > Note：假如你觉得这有些影响视觉，可以尝试在首选项中更改，如果你没有在浏览器中的选项中找到这个选项，那么你可以尝试通过插件在样式表中重设元素样式来做到迂回更改（这种方式可能只适合 Linux PC 端）。
 
-
 假如你需要使用插件来更改，那么首先你需要在浏览器扩展中获取扩展`stylish`添加一个新样式并尝试对所有链接应用样式：
 
 ```css
@@ -290,7 +286,6 @@ a:link{text-decoration:none;}
 并设置一个颜色以区别其它的文本。 */
 a:hover{text-decoration:underline;color:red;}
 ```
-
 
 ```css
 /* 还可以通过 a 标签的 visited 伪类来设置当链接点击后变成另外的样子，比如让链接访问后变成其它颜色：*/
@@ -326,7 +321,6 @@ a:visited{color:#cc00ff;}
 # 以根用户权限杀死 X 服务器
 pkill X
 ```
-
 
 ```Bash
 # 用于直接调节亮度的函数，通过直接操作由内核驱动提供的底层接口文件。虽然我知道有个 sl 的程序是用来在终端上跑火车的……

@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 解决 Windows 8.1 的字体渲染问题
 
 ***~~为了解决 Windows 8.1 在雾化屏上字体显示模糊的问题，我使用 Windows 8.1 自带的  `ClearType 渲染` 工具重新调整了字体渲染，但不幸的是：问题似乎并未就此解决。。。。为此，我只好使用了第三方字体渲染工具：`MacType` 来替代 Windows 8.1 自带的字体渲染工具[^1]。~~***

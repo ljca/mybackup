@@ -1,13 +1,11 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # compiz
 ***~~如果你向往 Mac 那花哨的界面和动画，而又恰好使用的是 `Linux`，那么不妨尝试一下`堆叠式窗口管理器` `compiz`，请放心，最多就是桌面崩溃，而不是系统崩溃……~~~***
 
 ***~~很不幸，我使用的是 Linux 是 Arch Linux，而 Arch Linux 官方源中并不包含 `compiz`。 幸运的是：有人在`AUR`上提交了`compiz`的`PKGBUILD`。这意味着不需要自己解决依赖问题。以下的所有安装构建都是一步一步手动进行的，如果你不喜欢这样做，可以尝试使用`yaourt -S compiz`一步到位。~~***
 
 > ！`AUR`上的软件包除了软件包的名字不相同，前面的地址基本一致。
-
 
 构建`compiz`并使用`ccsm`对`compiz`窗口管理器进行配置……
 > Note！

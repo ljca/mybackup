@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Db2安装配置笔记
 
 下载地址：https://www-01.ibm.com/marketing/iwm/iwm/web/pick.do?source=swg-db2expressc&S_TACT=000000VR&S_OFF_CD=10000761&lang=en_US

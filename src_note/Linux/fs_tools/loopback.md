@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Loop Device：a magic device（奇妙的环回设备）。
 
 ::: alert-info
@@ -20,7 +19,6 @@
 为了不与系统动态创建的环回设备混淆，我们可以手动创建一个环回设备 `sudo mknod /dev/loop8 b 7 8`。同时，将手动创建的环回设备和那个存在文件系统的特殊文件映射,设置环回设备 ` sudo losetup /dev/loop8 tmp/loop.iso` 。这样就可以直接挂载环回设备，而不需要使用-o loop的方式；如果有必要， 如果将这个文件放到了U盘，并且还将它与一个环回设备相关联了，那么在卸载U盘时需要先取消它与环回设备的关联之后才能卸载U盘。否则卸载U盘时会弹出一个设备忙的消息。
 
 :::
-
 
 ```Bash
 sudo umount -v ./loop

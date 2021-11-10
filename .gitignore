@@ -1,7 +1,7 @@
 #*.json
 __pycache__
 *.o
-#*.so
+*.so
 *.class
 *.exe
 *.log

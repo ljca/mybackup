@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Linux 命令行[^com]艺术：管道、重定向 & shell 扩展
 
 ## §. 命令行艺术：管道
@@ -66,7 +65,6 @@ cat tmp.c
 
 >  在没有编辑器的 Linux 系统里，我们常常得这样子来编辑并创建文件（来源于 LFS）。
 
-
 + cat
 
 ```Bash
@@ -115,7 +113,6 @@ sh -c "" ====> sh <<< ""
 
 + `<>`：这个奇怪的重定向符与文件描述符有关，它打开文件是为了可能的读和写。
 
-
 #### 2.2 输出重定向：
 + `>`
 + `>>`
@@ -145,7 +142,6 @@ command >& filename
 + `<(subcmd)`
 + `>(subcmd)`
 + `(< cmd)`
-
 
 ## §. 命令行艺术：Shell 扩展
 ### §. 花括号扩展
@@ -198,7 +194,6 @@ echo ~1
 
 尽管`Unix`风格的命令替换 ` `` ` 和`GNU`风格的命令替换 $() 都可以用来执行命令替换，也允许嵌套使用。然而，在`Unix`风格的命令替换中，嵌套使用 \` 需要使用 \\ 转义 ……
 
-
 # 附
 ## §. 正则表达式
 
@@ -221,8 +216,6 @@ echo ~1
 + []
 + {}
 
-
-
 ## 参考：
 
 + Bash 4.0 中文手册
@@ -230,7 +223,6 @@ echo ~1
 + [Linux 文档项目 : 高级 Bash 脚本指南](http://www.tldp.org/LDP/abs/html/)
 + [Awesome Shell](https://github.com/sindresorhus/awesome)
 + [Awesome Fish](https://github.com/jbucaran/awesome-fish)
-
 
 [^dirs]: 如果波浪号后有数字，数字前可能还有 + 或者 - 前缀，则 shell 会对其扩展为目录栈中的字符串……
 

@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # iptables：Linux 服务器的包请求过滤
 
 INPUT, OUTPUT, FORWARD, PREROUTING, POSTROUTING
@@ -11,14 +10,12 @@ filter
 
 nat
 
-
 # 附
 
 > 参考：
 
 + [iptables参数详解_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2012-12/76737.htm)
 + [linux配置防火墙详细步骤(iptables命令使用方法)_LINUX_操作系统_脚本之家](http://www.jb51.net/LINUXjishu/155175.html)
-
 
 ## iptables 手册页
 

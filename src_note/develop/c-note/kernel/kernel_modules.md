@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # kernel_modules
 内核模块实现:
 #include <linux/init.h>
@@ -58,12 +57,10 @@ clean:
 
 自动构建方式：
 
-
 编译内核和模块
 make 
 make zImage
 make modules
-
 
 模块的载入与卸载:
 insmod/rmmod

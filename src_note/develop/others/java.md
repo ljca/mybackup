@@ -49,7 +49,6 @@ log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
 log4j.appender.logfile.layout.ConversionPattern=%d{} %l %F %p %m%n
 ```
 
-
 ## 术语
 
 + JDK(Java Divelopment Kit):Java开发工具包。java程序的开发：编译，运行都需要它

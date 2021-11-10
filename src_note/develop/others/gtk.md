@@ -27,8 +27,6 @@ gtk_main(); //开始主循环，等待X窗口事件连接.然而，在没有连�
 + g_signal_connect();
 + g_signal_connect_swapped();
 
-
-
 > 事件：
 
 + activate

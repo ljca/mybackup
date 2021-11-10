@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # mount/umount：挂载/卸载磁盘或者分区
 
 + <a href="#mount" name="mount">mount：挂载磁盘或者分区</a>

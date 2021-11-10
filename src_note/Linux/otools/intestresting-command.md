@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 我见过的一些终端下很有意思的命令和脚本 
 
 +  *sl* 终端上一辆从未来穿行到过去的火车
@@ -22,7 +21,6 @@ notify-send 指令可以将一组指令(需要使用命令替换)然后执行出
 # 这是一个定义在 Ubuntu 上的别名，用于将用户命令历史记录最后一条以系统通知的形式呈现出来。
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 ```
-
 
 +  *pv* 在终端像打字机一样慢慢打印命令输出 
 +  *lolcat* 让文字像彩虹一样显示在终端上的 ruby 脚本 

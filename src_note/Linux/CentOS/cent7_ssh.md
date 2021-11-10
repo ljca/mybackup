@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # ssh：安全连接到远程主机
 
 ## ssh 服务配置
@@ -45,7 +44,6 @@ ssh-keygen -t rsa
 ssh-copy-id -i ~/.ssh/centos_rsa.pub tmp@192.168.43.191
 
 ```
-
 
 ## 使用别名来替代用户名等命令行参数
 
@@ -117,7 +115,6 @@ umount -v local_mount_point
 ``` Bash
 fusermount -u local_mount_point
 ```
-
 
 ``` Bash
 systemctl stop sshd.service

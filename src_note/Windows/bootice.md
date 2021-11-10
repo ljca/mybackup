@@ -1,6 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # 分区切换工具：bootice
 
 为了方便，你可能在你的移动磁盘（比如`Ｕ盘`）上分了多个区，这种情况下，你可能希望在`Windows`[^windows]上能自由地在各个分区中进行切换和访问。实际上，Windows 上这类对磁盘分区操作的系统软件其实不少，但我还是比较喜欢使用`BOOTICE`。

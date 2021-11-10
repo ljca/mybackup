@@ -1,7 +1,6 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
 
-
 ```Bash
 pacman -S zsh
 pacman -S dialog wire_less

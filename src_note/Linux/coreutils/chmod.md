@@ -1,6 +1,5 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 ## §. chmod：更改文件或者目录权限
 
 `chmod [ugoa]+=-[rwxts],..[ugoa]+-=[rwxts] file/dir` `chmod [选项] 八进制模式 file/Dirctory`

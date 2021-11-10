@@ -1,6 +1,5 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # Jsp & Servlet：
 
 C/S(Client/Server):客户端/服务器端模式，基于局域网
@@ -410,7 +409,6 @@ status:迭代状态值，它主要有以下子属性
 + public Object query();
 + public Object query();
 
-
 ## Dbutils工具类
  提供了包含多个重载的关闭连接的类方法，所有方法都是静态的，并且都没有返回值
  参数可以是连接对象，结果集对象，执行一个安全的sql的预编译对象Prep..stateMent
@@ -511,7 +509,6 @@ var variable = /^[\w]+.?{}\d\.$/
 用于验证字符串是否匹配正则表达式的方法，使用值为正则表达式的变量来调用
 test(字符串|变量) 验证圆括号中的表达式或者变量是否与定义的正则表达式匹配 match()
 
-
 2015/12/7 星期一
 
 ？在javascript中以style属性设置样式时，如果在属性中存在中划线'-'，则应该将中划线去掉，并且将紧邻中划线的后一个字母大写
@@ -554,7 +551,6 @@ Web应用程序[/ HouseMgr]创建一个ThreadLocal类型的键[java.lang.ThreadL
 1. 6.0以上版本的Tomcat在运行时部署项目可能存在内存泄露的问题，安全的部署项目应该在Tomcat服务被停止之后。或者关掉6.0以上版本的tomcat内存溢出监听功能
 
 在tomcat的server.xml文件中把 `<Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>` 注释了就行了
-
 
 # 参阅：
 

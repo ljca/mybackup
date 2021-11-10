@@ -17,15 +17,12 @@ input();
 
 ## global & GLOBALS
 
-
 ## 超级全局变量：
-
 
 ## 数组
 
 ```php
 $arry = new array("","","");
-
 
 多维：
 
@@ -78,7 +75,6 @@ listen.mode = 0660
 ;......
 ```
 
-
 ### php & mysql
 
 **为了在 PHP 调用 MySQL，我们必须确认 PHP 已经启用了 mysql 模块。然后通过 php 的 -i 选项或者 phpinfo() 函数进行确认。**
@@ -91,7 +87,6 @@ extension = mysqli.so
 mysqli_default_socket = .
 ....
 ```
-
 
 ### phpmyadmin：可视化的 MySQL Web 管理器.
 

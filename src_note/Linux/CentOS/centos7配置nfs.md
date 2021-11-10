@@ -1,8 +1,6 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-
 # centos 7 配置 nfs & Samba
-
 
 # 附
 
@@ -21,7 +19,6 @@ exportfs工具允许修改了/etc/exports后不需重启nfs服务就可以应用
 ```Bash
 showmount -a
 ```
-
 
 ## sambashare
 
