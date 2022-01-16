@@ -155,6 +155,8 @@ grub> boot
 + [详细图解美化Grub2原创 - 查看主题 • Ubuntu中文论坛](http://forum.ubuntu.org.cn/viewtopic.php?t=257189)
 + [GRUB2中文指南第二版上 - Ubuntu 正體中文 Wiki][grub_]
 + [用GRUB启动ISO镜像_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2015-01/111838.htm)
++ [Grub 2：拯救你的 bootloader](https://linux.cn/article-6892-1-rel.html)
++ [Linux下修改引导器的工具：Boot-Repair](https://linux.cn/article-3087-1-rel.html)
 
 [grub_]: http://wiki.ubuntu-tw.org/index.php?title=GRUB2%E4%B8%AD%E6%96%87%E6%8C%87%E5%8D%97%E7%AC%AC%E4%BA%8C%E7%89%88(%E4%B8%8A%EF%BC%89)
 

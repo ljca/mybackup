@@ -51,7 +51,7 @@
 + find
 + ftype
 
-## *磁盘*
+### *磁盘*
 
 + format:格式化磁盘  ` format 驱动器(卷标、盘符) [options]`
 
@@ -223,7 +223,7 @@ rar command [-options1] [-options2] .... [-optionsN] 压缩包名 压缩文件(�
 + cls:清屏
 + exit:退出命令行解释程序
 
-## *系统*
+### *系统*
 
 + tasklist:根据选项列出系统中所有已经运行的程序 `tasklist Options `
 
@@ -294,7 +294,7 @@ rar command [-options1] [-options2] .... [-optionsN] 压缩包名 压缩文件(�
 
 ---------------------------------------
 
-## 压轴命令：wmic [全局开关] <命令>
+### wmic [全局开关] <命令>
 
 > 可以使用以下全局开关:
 
@@ -567,4 +567,7 @@ windows NT以上系统引入了ACL；T以上windows系统使用另一种新型�
 ### 配置文件：
 
 + hosts: `%windir%\System32\drivers\etc\hosts`
+
+
+# PowerShell
 

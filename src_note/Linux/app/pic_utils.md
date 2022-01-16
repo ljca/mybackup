@@ -39,6 +39,11 @@ parallel convert '{}' '{.}.jpg' ::: *.png
 parallel convert '{}' '{.}.jpg' -- *.png
 ```
 
+## webp -> png,jpg
+
++ dwebp
++ cwebp
+
 # 参阅
 
 + [Batch converting PNG to JPG in linux](https://superuser.com/questions/71028/batch-converting-png-to-jpg-in-linux)

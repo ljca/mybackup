@@ -10,15 +10,29 @@ ffmpeg -i in.mp4 -vcodec copy -acodec copy -ss 00:00:00 -to 00:18:50 out.mp4
 ffmpeg -i in.mp4 -vcodec copy -acodec copy -ss 00:18:50 out.mp4
 ```
 
+
+
+> 输出文件选项：
+
++ -s 1920x1080
++ -b:v 4096k  位率
++ `-c:v:0 h264_qsv 使用视频编码器（核显加速）`
++ -c:a aac 音频编码器
++ -r 25 每秒帧
++ -rtbufsize  30M
++ -max_muxing_queue_size 1024
+
+> 
+
 + 合并，连接、拼接视频：`ffmpeg -f concat -i flie.list -c copy 08.mp4`
 
 ============= file.list ============
 
 ```list
-file: xxx.mp4
-file: xxx1.mp4
-file: xxx2.mp4
-file: xxx3.mp4
+file 'xxx.mp4'
+file 'xxx1.mp4'
+file 'xxx2.mp4'
+file 'xxx3.mp4'
 ```
 
 > mp4 批量转换到 mkv：
@@ -40,3 +54,7 @@ for i in `file *.mp4|grep -i 'mp4 v2'|cut -d: -f1`;do ffmpeg -i "$i" -f matroska
 [^1]: [ffmpeg](https://)
 
 [^2]: 虽然`ffmpeg`是基于`Linux`的，但它也有`Windows`版本的……
+
+> 参考：
+
++ [FFmpeg命令实例合集](https://blog.csdn.net/yu540135101/article/details/103025957)
