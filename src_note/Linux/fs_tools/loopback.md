@@ -58,3 +58,96 @@ tmp/loop.iso: Linux rev 1.0 ext4 filesystem data (needs journal recovery) (exten
 
 + Linux Shell 脚本攻略
 
+sudo mount -o ro FD12FULL.img /tmp/tmp
+mount: /tmp/tmp: 文件系统类型错误、选项错误、/dev/loop0 上有坏超级块、缺少代码页或帮助程序或其他错误.
+
+^_^-$  file ~2/FD12FUL*
+
+/home/user/Arch/Downloads/fd12full/FD12FULL.img:  DOS/MBR boot sector, FREE-DOS Beta 0.9 MBR; partition 1 : ID=0x6, active, start-CHS (0x0,1,1), end-CHS (0x27,31,63), startsector 63, 1048257 sectors
+/home/user/Arch/Downloads/fd12full/FD12FULL.vmdk: ASCII text
+
+
+:(-$  l
+FD12FULL.img*  README.md*  FD12FULL.vmdk*
+
+^_^-$  sudo fdisk FD12FULL.img
+
+```log
+
+欢迎使用 fdisk (util-linux 2.37.2)。
+更改将停留在内存中，直到您决定将更改写入磁盘。
+使用写入命令前请三思。
+
+
+命令(输入 m 获取帮助)：m
+
+帮助：
+
+  DOS (MBR)
+   a   开关 可启动 标志
+   b   编辑嵌套的 BSD 磁盘标签
+   c   开关 dos 兼容性标志
+
+  常规
+   d   删除分区
+   F   列出未分区的空闲区
+   l   列出已知分区类型
+   n   添加新分区
+   p   打印分区表
+   t   更改分区类型
+   v   检查分区表
+   i   打印某个分区的相关信息
+
+  杂项
+   m   打印此菜单
+   u   更改 显示/记录 单位
+   x   更多功能(仅限专业人员)
+
+  脚本
+   I   从 sfdisk 脚本文件加载磁盘布局
+   O   将磁盘布局转储为 sfdisk 脚本文件
+
+  保存并退出
+   w   将分区表写入磁盘并退出
+   q   退出而不保存更改
+
+  新建空磁盘标签
+   g   新建一份 GPT 分区表
+   G   新建一份空 GPT (IRIX) 分区表
+   o   新建一份的空 DOS 分区表
+   s   新建一份空 Sun 分区表
+
+
+命令(输入 m 获取帮助)：p
+Disk FD12FULL.img：512 MiB，536870912 字节，1048576 个扇区
+单元：扇区 / 1 * 512 = 512 字节
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+磁盘标签类型：dos
+磁盘标识符：0x00000000
+
+设备          启动 起点    末尾    扇区   大小 Id 类型
+FD12FULL.img1 *      63 1048319 1048257 511.8M  6 FAT16
+
+命令(输入 m 获取帮助)：q
+
+```
+
+`:(-$  sudo mount -o loop,offset=$((63*512)) FD12FULL.img /tmp/tmp`
+
+^_^-$  p /tmp/tmp
+^_^-$  l
+COMMAND.COM*  KERNEL.SYS*  FDSETUP/  SETUP.BAT*  AUTOEXEC.BAT*  FDCONFIG.SYS*
+
+^_^-$  l -l
+总用量 152K
+-r-xr-xr-x 1 root root  66K  8月 28  2006 COMMAND.COM*
+-r-xr-xr-x 1 root root  46K  5月 11  2016 KERNEL.SYS*
+drwxr-xr-x 8 root root 8.0K 12月 20  2016 FDSETUP/
+-rwxr-xr-x 1 root root 6.3K  5月  6  2016 SETUP.BAT*
+-rwxr-xr-x 1 root root 1.9K 12月 20  2016 AUTOEXEC.BAT*
+-rwxr-xr-x 1 root root  225 12月 20  2016 FDCONFIG.SYS*
+
+
++ [linux系统中如何打开察看img文件内容](https://blog.csdn.net/weixin_34343689/article/details/91506135)
+
