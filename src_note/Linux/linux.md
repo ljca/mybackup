@@ -64,7 +64,7 @@
 + [Gentoo Linux 笔记](Gentoo/gentoo.md)
 + [Fedora Linux 笔记](Fedora/fedora.md)
 + [LFS 笔记](Lfs/lfs.md)
-+ [其它配置](ohter_config.md)
++ [一些问题](other_config.md)
 
 </div>
 
