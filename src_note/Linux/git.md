@@ -85,7 +85,7 @@ git checkout -- welcome.txt
 [git&ssh]: https://help.github.com/articles/connecting-to-github-with-ssh/
 
 
-> 运行`git push origin master` 出现：
+> 运行`git push origin master` 出现：，见 [CSDN 博客](https://blog.csdn.net/iiiliuyang/article/details/104203197)
 
 ```log
 ssh: connect to host github.com port 10086: Connection timed out
@@ -99,7 +99,9 @@ fatal: 无法读取远程仓库。
 + [Windows 系统下 Git 安装图解](http://www.w3cplus.com/node/74)
 
 ```Bash
-git rm -r --cache 远程仓库地址
+# 删除远程仓库的某个目录或者文件（对本地没有影响）
+# 切回远程仓库对应的本地路径，移除远程仓库文件或者目录
+git rm -r --cache [远程仓库地址/]目录，文件
 git commit -m update
 git push -u origin master 
 ```
