@@ -94,9 +94,14 @@ fatal: 无法读取远程仓库。
 ```
 
 
-
-
 ## 参考：
 
 + [Windows 系统下 Git 安装图解](http://www.w3cplus.com/node/74)
+
+```Bash
+git rm -r --cache 远程仓库地址
+git commit -m update
+git push -u origin master 
+```
+
 
