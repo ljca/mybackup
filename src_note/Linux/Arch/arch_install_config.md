@@ -37,9 +37,9 @@ dhcpcd enp2s0f1
 > **请务必确认系统时钟正确与否，因为系统时钟错误将会产生非常严重的后果。。。**
 
 ```Bash
-# 使用hwcolock或者clock工具。
+# 使用hwcolock或者clock工具。 写入硬件时钟
 hwcolok --show|-r 显示硬件时间 -s 将硬件始终设置为当前时钟。
-date -s "2016-1-10 20:00:00" && hwcolock -w --localtime
+#date -s "2016-1-10 20:00:00" && hwcolock -w --localtime
 
 # Or 使用`ntp`同步时间服务器更新系统时间。或者 直接使用date工具来更改，然后写入BIOS
 timedatectl set-ntp true
@@ -135,7 +135,7 @@ vim /etc/hosts
 ```
 ### 安装 Grub[^grub]
 
-```
+```Bash
 # Install Grub to the Disk boot partition And Update Grub Configure
 pacman -S --needed os-prober grub efibootmgr dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=boot --boot-directory=/boot/efi/EFI/boot --compress="xz" --debug
@@ -165,6 +165,7 @@ reboot
 + [Installation guide (简体中文) - ArchWiki][guide]
 + [Arch based distributions (active) (简体中文) - ArchWiki][base_install]
 + [archlinux2015](http://my.oschina.net/wzkiron/blog/511458)
++ [2022.5 archlinux详细安装过程](https://zhuanlan.zhihu.com/p/513859236)
 + [Arch Linux 安装指南2016](http://bbs.archlinuxcn.org/viewtopic.php?id=1037)
 + [archlinux201501版，最小化精减安装的步骤要点，系统大小在1G内_老圃无蔓_新浪博客](http://blog.sina.com.cn/s/blog_69e5d8400102vp00.html)
 + [Archlinux安装笔记 - 时光旅行的懒猫 - 博客园]( http://www.cnblogs.com/timeship/archive/2013/02/28/2937635.html)

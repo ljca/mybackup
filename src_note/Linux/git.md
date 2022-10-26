@@ -73,23 +73,30 @@ git checkout -- welcome.txt
 ```
 
 `git status`
-
 `git log`
-
 `git reset HEAD`
-
 `git remote remove origin`
 
-## branch
-
-`git checkout -b lex`
-
-`git branch add lex`
-
-`git checkout lex`
+- branch
+    - `git checkout -b lex`
+    - `git branch add lex`
+    - `git checkout lex`
 
 [git&ssh]: https://help.github.com/articles/connecting-to-github-with-ssh/
+
+
+> 运行`git push origin master` 出现：
+
+```log
+ssh: connect to host github.com port 10086: Connection timed out
+fatal: 无法读取远程仓库。
+请确认您有正确的访问权限并且仓库存在。
+```
+
+
+
 
 ## 参考：
 
 + [Windows 系统下 Git 安装图解](http://www.w3cplus.com/node/74)
+
