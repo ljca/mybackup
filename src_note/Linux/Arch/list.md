@@ -42,7 +42,6 @@
   - scrot 
   - guake,tilda
   - fbterm fbset fbv fbreader jfbview fbgrab fbcat 
-
   - cscope & ctags 
 
 + filesystem

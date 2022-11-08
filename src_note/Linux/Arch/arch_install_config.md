@@ -10,6 +10,9 @@
 
 ### set network
 
+
+<!--
+
 ```Bash
 systemctl restart dhcpcd@enp2s0.service
 # 或者
@@ -17,6 +20,8 @@ systemctl stop dhcpcd@enp2s0.service
 ifconfig enp2s0f1 up
 dhcpcd enp2s0f1 
 ```
+
+-->
 
 >  `wifi-menu` 可以用来直接选择并连接到一个无线网络[^wifi_menu]。 参考：
 
@@ -51,7 +56,8 @@ timedatectl set-localtime-rtc true
 
 ```Bash
 cd /etc/pacman.d
-grep -i -A1 "china" mirrorlist | vim -
+#grep -i -A1 "china" mirrorlist | vim -
+sed -iE "/China/ s/^# //" mirrorlist
 # 编辑软件源配置文件之后需要初始化源和软件源钥匙环文件(gpg)
 #pacman-key --init && pacman-key --populate archlinux
 pacman -Syy
@@ -116,13 +122,26 @@ less /mnt/etc/fstab
 
 ## Configure System
 
+::: alert-info
+
+> Set root password
+
+```Bash
+passwd
+```
+
+:::
+
 ```Bash
 ln -sfv /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-date -s ""
+#date -s ""
+timedatectl set-ntp true
 hwcolock -w --localtime
 
+
 echo LANG='"en_US.UTF-8"' > /etc/locale.conf
-grep -iE 'zh_CN|en_US' /etc/locale.gen | vim - && locele-gen
+#grep -iE 'zh_CN|en_US' /etc/locale.gen | vim - && locele-gen
+sed -iE '/zh_CN|en_US/ s/^# //' /etc/locale.gen && locele-gen
 echo '' > /etc/hostname
 vim /etc/hosts
 ```
