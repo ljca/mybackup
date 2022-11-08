@@ -2,7 +2,7 @@
 
 # Linux 笔记
 
-<div class="dir">
+<div class="pages">
 
 + [Linux 命令行艺术：管道、重定向 & shell 扩展](cli_art.md)
 + [Linux 核心控制台（tty）：](console.md)
@@ -54,7 +54,7 @@
 
 # 附
 
-<div class="dir">
+<div class="pages">
 
 + [FreeBSD 笔记](freebsd.md)
 + [Arch Linux 笔记](Arch/arch.md)

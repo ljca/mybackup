@@ -87,34 +87,40 @@ wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
 + [零起点构建自己的Linux ( LFS-6.2-5 ＋ BLFS-6.2.0 )](http://www.phpfans.net/ask/fansa1/5203889388.html)
 + [我在BLFS中遇到的一些问题（非求助）](http://www.phpfans.net/ask/fansa1/9994845314.html)
 + [【转】 从LFS到BLFS-compilehacker-ChinaUnix博客](http://blog.chinaunix.net/uid-23219753-id-116154.html)
-    1  2016-09-30 17:11:02 bash --version|head -n1
-    2  2016-09-30 17:11:18 readlink -f /bin/sh
-    3  2016-09-30 17:11:34 ld --version|head -n1
-    4  2016-09-30 17:13:31 dnfi bison
-    5  2016-09-30 17:14:29 yacc --version
-    6  2016-09-30 17:15:18 sudo cp -sv /usr/bin/bison /usr/bin/yacc
-    7  2016-09-30 17:15:35 readlink -f /usr/bin/yacc
-    8  2016-09-30 17:16:14 yacc --version|head -n1
-    9  2016-09-30 17:17:29 bzip2 --version 2>&1 < /dev/null|head -n1|cut -d" " -f1,6-
-   10  2016-09-30 17:18:10 echo -n "Coreutils: ";chown --version|head -n1
-   11  2016-09-30 17:18:28 diff --version|head -n1
-   12  2016-09-30 17:18:38 find --version|head -n1
-   13  2016-09-30 17:18:55 readlink -f /usr/bin/gawk;gawk --version|head -n1
-   14  2016-09-30 17:20:49 awk --version | head -n1
-   15  2016-09-30 17:21:04 gcc --version|head -n1
-   16  2016-09-30 17:21:13 g++ --version|head -n1
-   17  2016-09-30 17:21:22 ldd --version|head -n1
-   18  2016-09-30 17:21:38 grep --version|head -n1
-   19  2016-09-30 17:21:48 gzip --version|head -n1
-   20  2016-09-30 17:21:54 cat /proc/version 
-   21  2016-09-30 17:22:19 m4 --version|head -n1
-   22  2016-09-30 17:22:28 make --version|head -n1
-   23  2016-09-30 17:22:48 dnfi patch
-   24  2016-09-30 17:23:07 patch --version|head -n1
-   25  2016-09-30 17:23:36 perl -V:version
-   26  2016-09-30 17:23:43 sed --version|head -n1
-   27  2016-09-30 17:23:56 tar --version|head -n1
-   28  2016-09-30 17:24:06 makeinfo --version|head -n1
-   29  2016-09-30 17:24:14 xz --version|head -n1
-   30  2016-09-30 17:25:41 echo 'main(){}' >dummy.c&&g++ -o dummy dummy.c
-   31  2016-09-30 17:26:42 if [ -x dummy ] ; then echo "g++ compilation OK";else echo "g++ compilation failed";fi
+
+```Bash
+
+bash --version|head -n1
+readlink -f /bin/sh
+ld --version|head -n1
+dnfi bison
+yacc --version
+sudo cp -sv /usr/bin/bison /usr/bin/yacc
+readlink -f /usr/bin/yacc
+yacc --version|head -n1
+bzip2 --version 2>&1 < /dev/null|head -n1|cut -d" " -f1,6-
+echo -n "Coreutils: ";chown --version|head -n1
+diff --version|head -n1
+find --version|head -n1
+readlink -f /usr/bin/gawk;gawk --version|head -n1
+awk --version | head -n1
+gcc --version|head -n1
+g++ --version|head -n1
+ldd --version|head -n1
+grep --version|head -n1
+gzip --version|head -n1
+cat /proc/version 
+m4 --version|head -n1
+make --version|head -n1
+dnfi patch
+patch --version|head -n1
+perl -V:version
+sed --version|head -n1
+tar --version|head -n1
+makeinfo --version|head -n1
+xz --version|head -n1
+echo 'main(){}' >dummy.c&&g++ -o dummy dummy.c
+if [ -x dummy ] ; then echo "g++ compilation OK";else echo "g++ compilation failed";fi
+
+```
+

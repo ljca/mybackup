@@ -282,6 +282,7 @@ white-space:nowrap;
 /* 当文本溢出时显示为 …… */
 text-overflow: ellipsis;
 overflow: hidden;
+color: blue;
 /*
 display:-moz-box;
 display:-webkit-box;
