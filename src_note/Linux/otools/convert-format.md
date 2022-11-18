@@ -28,6 +28,10 @@
 + `split2flac`
 + `shntools`
 + shnconv `shnconv -i song.flac song.ape`
+- [使用这个多功能的 Linux 命令[^sox]转换音频文件](https://linux.cn/article-15246-1.html)
+
+
+[^sox]: 即 sox。
 
 ## Video：视频
 
