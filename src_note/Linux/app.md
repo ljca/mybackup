@@ -2,6 +2,8 @@
 
 # Some Applications
 
+<div class="pages">
+
 + [cmus(C Music Player) Install & Configure ](app/cmus.md)
 + [compiz](app/compiz.md)
 + [fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器。](app/fbterm.md)
@@ -17,7 +19,8 @@
 + [pandoc 使用笔记](app/pandoc.md)
 + [gitbook](app/gitbook.md)
 + [linuxcn](app/lincn.md)
-- oneko<sup>aur</sup>：追逐光标的精灵。
-- mdbook: 与 gitbook 功能相似的一个笔记编译工具。但功能较少。
-- [wkhtmltopdf：html -> pdf](https://linux.cn/article-8362-1.html)
++ [oneko<sup>aur</sup>：追逐光标的精灵。](#)
++ [mdbook: 与 gitbook 功能相似的一个笔记编译工具。但功能较少。](#)
++ [wkhtmltopdf：html -> pdf](https://linux.cn/article-8362-1.html)
 
+</div>

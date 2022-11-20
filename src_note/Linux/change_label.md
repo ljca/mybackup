@@ -29,7 +29,7 @@ mtools_lower_case=1
 ## 文件系统检查[^disk_check]：
 
 + Ext 系列：fsck 
-+ NTFS 使用 ntfsfix[^fix]：NTFS 分区检查工具， `sudo ntfsfix /dev/sda8`
++ 使用 ntfsfix[^fix] 检查 NTFS 分区：`sudo ntfsfix /dev/sda8`
 
 ```log
 Mounting volume... The disk contains an unclean file system (0, 0).
