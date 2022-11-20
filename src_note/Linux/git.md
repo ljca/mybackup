@@ -44,43 +44,6 @@ git push -u origin master
 git pull origin master 
 ```
 
-```Bash
-git config --global color.ui true
-git config --global alias.cm commit
-git config --global alias.ck checkout
-git config --global alias.br branch
-git config --global alias.st status
-git rev-parse --git-dir
-git rev-parse --show-toplevel
-git rev-parse --show-prefix
-git rev-parse --show-cdup
-git config -a
-git config -e
-git config -e --global
-git commit -m "test commit" --allow-empty 
-git log --pretty=fuller 
-git log --stat 
-git commit -m "Append a nice line."
-git add welcome.txt 
-git status 
-git diff HEAD 
-git diff --cached 
-git commit -m "which version checked in?" 
-git log --pretty=oneline 
-git status -s
-git diff
-git checkout -- welcome.txt
-```
-
-`git status`
-`git log`
-`git reset HEAD`
-`git remote remove origin`
-
-- branch
-    - `git checkout -b lex`
-    - `git branch add lex`
-    - `git checkout lex`
 
 [git&ssh]: https://help.github.com/articles/connecting-to-github-with-ssh/
 
@@ -106,4 +69,99 @@ git commit -m update
 git push -u origin master 
 ```
 
+## git subcmd
+
+> config
+
+```Bash
+git config --global color.ui true
+git config --global alias.cm commit
+git config --global alias.ck checkout
+git config --global alias.br branch
+git config --global alias.st status
+git config -a
+git config -e
+git config -e --global
+```
+
+
+> pull：
+
+> rm
+> mv 
+> add 
+
+git add welcome.txt 
+
+> commit 
+git commit -m update
+> push：
+git push -u origin master
+
+> status
+
+`git status`
+git status -s
+
+> rev-parse
+
+```Bash
+git rev-parse --git-dir
+git rev-parse --show-toplevel
+git rev-parse --show-prefix
+git rev-parse --show-cdup
+```
+
+> commit
+
+```Bash
+git commit -m "test commit" --allow-empty 
+git commit -m "Append a nice line."
+git commit -m "which version checked in?" 
+```
+> reset
+
+`git reset HEAD`
+
+> remote
+
+`git remote remove origin`
+
+
+> diff
+```Bash
+git diff
+git diff HEAD 
+git diff --cached 
+```
+
+> log
+
+```Bash
+`git log`
+git log --pretty=fuller 
+git log --stat 
+git log --pretty=oneline 
+
+git log --all --oneline --graph
+
+```
+
+> branch：管理分支
+
+- branch
+    - `git checkout -b lex`
+    - `git branch add lex`
+    - `git checkout lex`
+
+> checkout
+
+git checkout -- welcome.txt
+
+> switch：切换分支
+
+> rebase：切换到另一个分支并应用更改
+
+git rebase HEAD master
+git checkout master
 
