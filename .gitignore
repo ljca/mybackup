@@ -29,7 +29,7 @@ source/src/php
 source/src/docbook-5.0
 #source/src
 src_note/develop/others/db/sql/myorder.sql
-src_note/develop/others/java/java_src*
+java_src*
 *.class
 *.mdf
 *.ldf
@@ -38,7 +38,7 @@ src_note/develop/others/c#/c#_src*
 source/docs/tmp/星际I介绍/
 src_note/tmp
 src_note--bk
-src_note/markor.tar.xz
+markor.tar.xz
 src_note/markor/diaries
 src_note/markor/tmp
 src_note/markor/.scot
