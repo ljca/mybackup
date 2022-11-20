@@ -61,13 +61,6 @@ fatal: 无法读取远程仓库。
 
 + [Windows 系统下 Git 安装图解](http://www.w3cplus.com/node/74)
 
-```Bash
-# 删除远程仓库的某个目录或者文件（对本地没有影响）
-# 切回远程仓库对应的本地路径，移除远程仓库文件或者目录
-git rm -r --cache [远程仓库地址/]目录，文件
-git commit -m update
-git push -u origin master 
-```
 
 ## git subcmd
 
@@ -87,11 +80,17 @@ git config -e --global
 
 > pull：
 
-> rm
-> mv 
-> add 
+> rm：删除远程仓库的某个目录或者文件（对本地没有影响）
 
-git add welcome.txt 
+```Bash
+#切回远程仓库对应的本地路径，移除远程仓库文件或者目录
+git rm -r --cache [远程仓库地址/]目录，文件
+#git commit -m update
+#git push -u origin master 
+```
+
+> mv 
+> add：`git add welcome.txt`
 
 > commit 
 git commit -m update
@@ -164,4 +163,9 @@ git checkout -- welcome.txt
 
 git rebase HEAD master
 git checkout master
+
+参考：
+
++ [如何将分离的HEAD与master / origin协调？](https://www.javaroad.cn/questions/42269)
++ [如何在分离的HEAD状态下找到当前的git分支](https://www.javaroad.cn/questions/10400)
 
