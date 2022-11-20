@@ -34,7 +34,7 @@ java_src*
 *.mdf
 *.ldf
 *.jar
-src_note/develop/others/c#/c#_src*
+c#_src*
 source/docs/tmp/星际I介绍/
 src_note/tmp
 src_note--bk
