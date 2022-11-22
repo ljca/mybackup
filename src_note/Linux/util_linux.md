@@ -2,10 +2,10 @@
 
 # util-linux：Linux工具
 
-+ addpart：
-+ agetty：
-+ blkdiscard：
-+ blkid：读取磁盘分区信息 `sudo blkid`
+- addpart[^addpart]：
+- agetty[^agetty]：
+- blkdiscard[^blkdiscard]：
+- blkid[^blkid]：读取磁盘分区信息 `sudo blkid`
 
 ```log
 /dev/sda1: SEC_TYPE="msdos" LABEL="ESP" UUID="0000-4823" TYPE="vfat" PARTLABEL="EFI System Partition" PARTUUID="69d56666-9053-4130-b728-c551d84346f1"
@@ -22,111 +22,220 @@
 /dev/loop1: LABEL="Xfs" UUID="ced03b26-bafe-4d0d-b780-5079946b3f69" TYPE="xfs"
 ```
 
-+ blockdev：
-+ cal：命令行日历
-+ cfdisk：伪 GUI 分区编辑工具
-+ chcpu：
-+ chfn：更改用户信息, `chfn `
-+ chrt：
-+ chsh：更改用户 shell, `chsh -s /bin/bash user`
-+ col：格式化列
-+ colcrt：
-+ colrm：
-+ column：
-+ ctrlaltdel：
-+ delpart：
-+ dmesg：读取内核开机自检信息
-+ eject：
-+ fallocate：
-+ fdformat：
-+ fdisk：一个命令行下的分区编辑工具
-+ findfs：
-+ findmnt：
-+ flock：
-+ fsck：检查 ext 系列文件系统
-+ fsck.cramfs：
-+ fsck.minix：
-+ fsfreeze：
-+ fstrim：
-+ getopt：获取命令行选项
-+ hexdump：读取二进制数据并转换为十六进制
-+ hwclock：读取，调整硬件时钟
-+ i386：
-+ ionice：
-+ ipcmk：
-+ ipcrm：
-+ ipcs：
-+ isosize：
-+ kill：给进程发送信号
-+ last：显示最后登录用户
-+ lastb：
-+ ldattach：
-+ linux32：
-+ linux64：
-+ logger：
-+ login：
-+ look：
-+ losetup：设置环回设备
-+ lsblk：读取并列出硬盘及其分区信息
-+ lscpu：读取 CPU 参数
-+ lsipc：
-+ lslocks：
-+ lslogins：
-+ lsns：
-+ mcookie：
-+ mesg：
-+ mkfs：在硬盘或者分区上创建文件系统
-+ mkfs.bfs：
-+ mkfs.cramfs：
-+ mkfs.minix：
-+ mkswap：将分区格式化为交换分区
-+ more：命令行分页器，类似的有 less, most.
-+ <a href="util-linux/mount.md#mount"> mount：挂载磁盘或者分区</a>
-+ mountpoint：
-+ namei：
-+ newgrp：
-+ nologin：
-+ nsenter：
-+ partx：
-+ pivot_root：
-+ prlimit：
-+ raw：
-+ readprofile：
-+ rename：批量重命名文件。
-+ renice：
-+ resizepart：
-+ rev：
-+ rtcwake：
-+ runuser：
-+ [script][script]
-+ [scriptreplay][script]
-+ setarch：
-+ setsid：
-+ setterm：
-+ sfdisk：命令行分区工具
-+ su：用户切换
-+ sulogin：
-+ swaplabel：设置交换分区卷标
-+ swapoff：关闭交换分区
-+ swapon：启用交换分区
-+ switch_root：
-+ taskset：
-+ ul：
-+ <a href="util-linux/mount.md#umount">umount：卸载磁盘或者分区</a>
-+ uname26：
-+ unshare：
-+ utmpdump：
-+ uuidd：
-+ uuidgen：
-+ vigr：更安全的编辑 `/etc/group` 方式
-+ vipw：更安全的的编辑 `/etc/passwd`方式
-+ wall：
-+ wdctl：
-+ whereis：指令文件定位
-+ wipefs：
-+ write：
-+ x86\_64：
-+ zramctl：
+- blockdev[^blockdev]：
+- cal[^cal]：命令行日历
+- cfdisk[^cfdisk]：伪 GUI 分区编辑工具
+- chcpu[^chcpu]：
+- chfn[^chfn]：更改用户信息, `chfn `
+- chrt[^chrt]：
+- chsh[^chsh]：更改用户 shell, `chsh -s /bin/bash user`
+- col[^col]：格式化列
+- colcrt[^colcrt]：
+- colrm[^colrm]：
+- column[^column]：
+- ctrlaltdel[^ctrlaltdel]：
+- delpart[^delpart]：
+- dmesg[^dmesg]：读取内核开机自检信息
+- eject[^eject]：
+- fallocate[^fallocate]：
+- fdformat[^fdformat]：
+- fdisk[^fdisk]：一个命令行下的分区编辑工具
+- findfs[^findfs]：
+- findmnt[^findmnt]：
+- flock[^flock]：
+- fsck[^fsck]：检查 ext 系列文件系统
+- fsck.cramfs[^fsck.cramfs]：
+- fsck.minix[^fsck.minix]：
+- fsfreeze[^fsfreeze]：
+- fstrim[^fstrim]：
+- getopt[^getopt]：获取命令行选项
+- hexdump[^hexdump]：读取二进制数据并转换为十六进制
+- hwclock[^hwclock]：读取，调整硬件时钟
+- i386[^i386]：
+- ionice[^ionice]：
+- ipcmk[^ipcmk]：
+- ipcrm[^ipcrm]：
+- ipcs[^ipcs]：
+- isosize[^isosize]：
+- kill[^kill]：给进程发送信号
+- last[^last]：显示最后登录用户
+- lastb[^lastb]：
+- ldattach[^ldattach]：
+- linux32[^linux32]：
+- linux64[^linux64]：
+- logger[^logger]：
+- login[^login]：
+- look[^look]：
+- losetup[^losetup]：设置环回设备
+- lsblk[^lsblk]：读取并列出硬盘及其分区信息
+- lscpu[^lscpu]：读取 CPU 参数
+- lsipc[^lsipc]：
+- lslocks[^lslocks]：
+- lslogins[^lslogins]：
+- lsns[^lsns]：
+- mcookie[^mcookie]：
+- mesg[^mesg]：
+- mkfs[^mkfs]：在硬盘或者分区上创建文件系统
+- mkfs.bfs[^mkfs.bfs]：
+- mkfs.cramfs[^mkfs.cramfs]：
+- mkfs.minix[^mkfs.minix]：
+- mkswap[^mkswap]：将分区格式化为交换分区
+- more[^more]：命令行分页器，类似的有 less, most.
+- <a href="util-linux/mount.md#mount"> mount<a href="util-linux/mount.md#mount">：挂载磁盘或者分区</a>[^mount]
+- mountpoint[^mountpoint]：
+- namei[^namei]：
+- newgrp[^newgrp]：
+- nologin[^nologin]：
+- nsenter[^nsenter]：
+- partx[^partx]：
+- pivot_root[^pivot_root]：
+- prlimit[^prlimit]：
+- raw[^raw]：
+- readprofile[^readprofile]：
+- rename[^rename]：批量重命名文件。
+- renice[^renice]：
+- resizepart[^resizepart]：
+- rev[^rev]：
+- rtcwake[^rtcwake]：
+- runuser[^runuser]：
+- script[^script]：
+- scriptreplay[^script]：
+- setarch[^setarch]：
+- setsid[^setsid]：
+- setterm[^setterm]：
+- sfdisk[^sfdisk]：命令行分区工具
+- su[^su]：用户切换
+- sulogin[^sulogin]：
+- swaplabel[^swaplabel]：设置交换分区卷标
+- swapoff[^swapoff]：关闭交换分区
+- swapon[^swapon]：启用交换分区
+- switch_root[^switch_root]：
+- taskset[^taskset]：
+- ul[^ul]：
+- <a href="util-linux/mount.md#umount">umount<a href="util-linux/mount.md#umount">：卸载磁盘或者分区</a>[^umount]
+- uname26[^uname26]：
+- unshare[^unshare]：
+- utmpdump[^utmpdump]：
+- uuidd[^uuidd]：
+- uuidgen[^uuidgen]：
+- vigr[^vigr]：更安全的编辑 `/etc/group` 方式
+- vipw[^vipw]：更安全的的编辑 `/etc/passwd`方式
+- wall[^wall]：
+- wdctl[^wdctl]：
+- whereis[^whereis]：指令文件定位
+- wipefs[^wipefs]：
+- write[^write]：
+- x86\_64[^x86\_64]：
+- zramctl[^zramctl]：
 
 [mount]: util-linux/mount.md
 [script]: util-linux/script.md
+
+[^addpart]: 
+[^agetty]: 
+[^blkdiscard]: 
+[^blkid]: 读取磁盘分区信息 `sudo blkid`
+[^blockdev]: 
+[^cal]: 命令行日历
+[^cfdisk]: 伪 GUI 分区编辑工具
+[^chcpu]: 
+[^chfn]: 更改用户信息, `chfn `
+[^chrt]: 
+[^chsh]: 更改用户 shell, `chsh -s /bin/bash user`
+[^col]: 格式化列
+[^colcrt]: 
+[^colrm]: 
+[^column]: 
+[^ctrlaltdel]: 
+[^delpart]: 
+[^dmesg]: 读取内核开机自检信息
+[^eject]: 
+[^fallocate]: 
+[^fdformat]: 
+[^fdisk]: 一个命令行下的分区编辑工具
+[^findfs]: 
+[^findmnt]: 
+[^flock]: 
+[^fsck]: 检查 ext 系列文件系统
+[^fsck.cramfs]: 
+[^fsck.minix]: 
+[^fsfreeze]: 
+[^fstrim]: 
+[^getopt]: 获取命令行选项
+[^hexdump]: 读取二进制数据并转换为十六进制
+[^hwclock]: 读取，调整硬件时钟
+[^i386]: 
+[^ionice]: 
+[^ipcmk]: 
+[^ipcrm]: 
+[^ipcs]: 
+[^isosize]: 
+[^kill]: 给进程发送信号
+[^last]: 显示最后登录用户
+[^lastb]: 
+[^ldattach]: 
+[^linux32]: 
+[^linux64]: 
+[^logger]: 
+[^login]: 
+[^look]: 
+[^losetup]: 设置环回设备
+[^lsblk]: 读取并列出硬盘及其分区信息
+[^lscpu]: 读取 CPU 参数
+[^lsipc]: 
+[^lslocks]: 
+[^lslogins]: 
+[^lsns]: 
+[^mcookie]: 
+[^mesg]: 
+[^mkfs]: 在硬盘或者分区上创建文件系统
+[^mkfs.bfs]: 
+[^mkfs.cramfs]: 
+[^mkfs.minix]: 
+[^mkswap]: 将分区格式化为交换分区
+[^more]: 命令行分页器，类似的有 less, most.
+[^mount]: 挂载磁盘或者分区
+[^mountpoint]: 
+[^namei]: 
+[^newgrp]: 
+[^nologin]: 
+[^nsenter]: 
+[^partx]: 
+[^pivot_root]: 
+[^prlimit]: 
+[^raw]: 
+[^readprofile]: 
+[^rename]: 批量重命名文件。
+[^renice]: 
+[^resizepart]: 
+[^rev]: 
+[^rtcwake]: 
+[^runuser]: 
+[^script]: 
+[^setarch]: 
+[^setsid]: 
+[^setterm]: 
+[^sfdisk]: 命令行分区工具
+[^su]: 用户切换
+[^sulogin]: 
+[^swaplabel]: 设置交换分区卷标
+[^swapoff]: 关闭交换分区
+[^swapon]: 启用交换分区
+[^switch_root]: 
+[^taskset]: 
+[^ul]: 
+[^umount]: 卸载磁盘或者分区
+[^uname26]: 
+[^unshare]: 
+[^utmpdump]: 
+[^uuidd]: 
+[^uuidgen]: 
+[^vigr]: 更安全的编辑 `/etc/group` 方式
+[^vipw]: 更安全的的编辑 `/etc/passwd`方式
+[^wall]: 
+[^wdctl]: 
+[^whereis]: 指令文件定位
+[^wipefs]: 
+[^write]: 
+[^x86\_64]: 
+[^zramctl]: 

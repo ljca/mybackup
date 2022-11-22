@@ -1,7 +1,10 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
 # Fedora Xfce 23：安装与配置指东
-## 安装
+
+## 安装[^install]
+
+[^install]: 因为有图形安装程序引导，所以 Fedora 系统的安装并不困难。
 
 ### grub2[^grub-faild]配置
 

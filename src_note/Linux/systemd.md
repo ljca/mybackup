@@ -11,23 +11,14 @@
 ## systemctl
 
 + *`systemctl status [unit-files]`*：查询系统或者某个单元状态
-
 + *`systemctl list-unit-files [--type]`*
-
 + *`systemctl daemon-reload`*：重载服务
-
 + *`systemctl cat <unit-files>`*：查看单元
-
 + *`systemctl start/stop/restart/kill <service>`*：启动/停止/重启/杀掉服务
-
 + *`systemctl disable/eanble <unit-files>`*：禁用/启用服务或者单元
-
 + *`systemctl mask/umask <unit-files>`*
-
 + *`systemctl reboot`*：重启系统
-
 + *`systemctl suspend`*：挂起系统/待机
-
 + ....
  
  --------------------------- 

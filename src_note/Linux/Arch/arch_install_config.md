@@ -209,6 +209,8 @@ reboot
 + [在 Arch Linux 上安装 XFCE - ReJaVu的个人页面](https://my.oschina.net/ReJaVu/blog/182581?p=1)
 + [Arch Linux办公环境安装配置纯小白包通过教程_沉沦的菩提_新浪博客](http://blog.sina.com.cn/s/blog_6379f4350102wicg.html)
 + [Arch Linux安装后的一些初始设置简介_LINUX_操作系统_脚本之家](http://www.jb51.net/LINUXjishu/401340.html)
+- [如何配置linux 平铺式窗口管理器i3wm？](https://www.zhihu.com/question/62251457/answer/1726675662?utm_id=0)
+- [SzLeaves beauty-dark-i3](https://github.com/SzLeaves/beauty-dark-i3)
 + [对《Arch Linux办公环境安装配置纯小白包通过教程》的补充，关于无线和蓝牙_沉沦的菩提_新浪博客](http://blog.sina.com.cn/s/blog_6379f4350102wifv.html)
 + [infinality-bundle_ good looking fonts made (even) easier _ Community Contributions _ Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=162098)
 + [Fonts (简体中文) - ArchWiki][fonts]
@@ -281,7 +283,7 @@ reboot
 
 [^boot]: 制作启动盘的方式是多样的。在 Linux 上，你可以直接使用 dd 或者 cat。 在 Windows 上，可以试下 rufus（旧版软碟通并不支持UEFI方式启动）。不过你要是希望被用作启动盘后的 U 盘还可以作为普通的磁盘读写，可以试下转换 U 盘分区表到 GPT（哦，对了，转换分区表并不需要对U盘重新格式化），在 Windows 平台，无损转换分区表的软件有很多。转换 U 盘分区表为 GPT 之后（这种方式同样支持 windows 8），并创建一个 fat32 的首分区（为了可以用来安装 Windows 8.1，我分给了它足足 4 个多 G 的空间。至于为什么还要弄其它分区，那是因为 Fat32 限制了单个文件的大小超过 4G）。然后挂载 U 盘首分区和 Arch Linux iso 并复制ISO镜像中的所有目录和文件到刚才创建好的 fat32 分区根目录下(最好备份U盘文件，也可以将之前文件和目录集中放到一个临时目录下，为了避免与系统文件和目录出现混淆，另外，重设卷标)，当然，这只适合 UEFI GPT 硬盘的的启动以及引导方式。
 
-[^start]: **我们假定你已经准备好了启动盘和规划好了系统分区，后期版本的Arch系统并没有提供安装框架(伪图形界面的安装引导程序)；所以，在这里，所有安装任务都需要使用命令（会有一份详细指南）完成。Live系统默认采用的shell是zsh,并且提供了bash，/root 目录下的 install.log 简要的叙述了安装步骤。 如果一切顺利，将会出现Arch的引导菜单(如果使用自定义的制作启动盘的方式，并且没有将U盘卷标设为镜像文件挂载之后的卷标，则务必编辑引导菜单中的label的值部分（或者，可以不用 label 而是直接用设备名或者是 UUID 什么的）,在这里，默认值为系统名称和发行时间。lable值应该和 U 盘卷标一样)，然后回车引导系统；如果顺利，系统将会初始化多个虚拟控制台，并且在第一个控制台tty1出现一个命令提示符并以 root 用户自动登录，否则会卡在挂载文件系统这一项系统任务上。**
+[^start]: **截至 2020 年更新，Arch Linux 恢复了自动化脚本安装引导程序。参考：[用 archinstall 自动化脚本安装 Arch Linux](https://linux.cn/article-14444-1.html)。我们假定你已经准备好了启动盘和规划好了系统分区，后期版本的Arch系统并没有提供安装框架(伪图形界面的安装引导程序)；所以，在这里，所有安装任务都需要使用命令（会有一份详细指南）完成。Live系统默认采用的shell是zsh,并且提供了bash，/root 目录下的 install.log 简要的叙述了安装步骤。 如果一切顺利，将会出现Arch的引导菜单(如果使用自定义的制作启动盘的方式，并且没有将U盘卷标设为镜像文件挂载之后的卷标，则务必编辑引导菜单中的label的值部分（或者，可以不用 label 而是直接用设备名或者是 UUID 什么的）,在这里，默认值为系统名称和发行时间。lable值应该和 U 盘卷标一样)，然后回车引导系统；如果顺利，系统将会初始化多个虚拟控制台，并且在第一个控制台tty1出现一个命令提示符并以 root 用户自动登录，否则会卡在挂载文件系统这一项系统任务上。**
 
 [^wifi_menu]: 有时候，对于使用 wpa+ 加密的无线网络，我更愿意使用 wpa_supplicant 和 dhcpcd，因为 wifi_menu 不认识中文的 ESSID 。
 

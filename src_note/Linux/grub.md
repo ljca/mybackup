@@ -93,7 +93,11 @@ export theme
 
 ::: alert-danger
 
+<div class="p">
+
 grub 2 现在使用的加密工具是 `grub-mkpasswd-pbkdf2`，要加密 grub 的命令行和编辑功能，我们需要先使用它生成密码并根据需要将它加入 grub.d 下的配置文件中 `grub-mkpasswd-pbkdf2 >> /etc/grub.d/00_header`（只有放在所有 menuentry 和所有 submenu 项之前，才能对它们进行应用密码）并用 grub-mkconfig 重新生成 `grub.cfg` 或者仅仅添加变化的部分到`grub.cfg`（这样就无需对 /etc/grub.d/ 下的脚本做任何修改，也无需调用 grub-mkconfig）。
+
+</div>
 
 :::
 

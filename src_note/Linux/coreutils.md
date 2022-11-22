@@ -18,12 +18,6 @@
 - cp[^cp]：
 - csplit[^csplit]：
 - cut[^cut]：转换，输出[^cut]
-
-```Bash
-# -d 使用自定义控制符过滤,这必须和-f选项一起使用
-# -f 指定域，也就是文件中的每行中的哪几部分，以数字计数。还可以使用-1，指定每行中哪几部分，如0-1,5这可以
-```
-
 - date[^date]：
 - dd[^dd]：读取、转换、输入、输出
 - dfm[^dfm]：
@@ -34,15 +28,6 @@
 - echo[^echo]：
 - env[^env]：
 - expand[^expand]：制表符转换为空格
-
-```bash
-expand options [file]|-
-options:
--i
--t|--tabs #制表符默认为8个空格，如果需要将制表符转换为更少的空格，使用-t参数。
--t|--tabs #指定制表符出现的位置，以逗号分隔
-```
-
 - expr[^expr]：
 - factor[^factor]：
 - false[^false]：
@@ -92,12 +77,6 @@ options:
 - shuf[^shuf]：随机选取
 - sleep[^sleep]：
 - sort[^sort]：I/O 排序，输出
-
-```Bash
-# -n，让 sort 使用数值排序
-# -h，让 sort 使用可读的数值排序，du -sh /home/*|sort -hr
-# -r，反转排序
-```
 - split[^split]：
 - stat[^stat]：
 - stdbuf[^stdbuf]：
@@ -133,7 +112,7 @@ options:
 - 王垠 - 开源世界旅行手册
 
 [^touch]: 如果不存在则创建一个新文件)文件或者目录访问或者修改时间；同样可以使用重定向等方式或者直接使用编辑器 vi/vim/nano 等创建文件
-[^cut]: 此命令以行为单位，对命令输出或者文件流进行第二次处理。 不带任何参数的cut命令默认使用空格或者tab来作为分隔符。
+[^cut]: 此命令以行为单位，对命令输出或者文件流进行第二次处理。 不带任何参数的cut命令默认使用空格或者tab来作为分隔符。-d 使用自定义控制符过滤,这必须和-f选项一起使用  -f 指定域，也就是文件中的每行中的哪几部分，以数字计数。还可以使用-1，指定每行中哪几部分，如0-1,5这可以
 [^test]: [ 是 test 的别名。
 [^b2sum]: 
 [^base32]: 
@@ -159,7 +138,7 @@ options:
 [^du]: 
 [^echo]: 
 [^env]: 
-[^expand]: 制表符转换为空格
+[^expand]: expand options [file]|- -i -t|--tabs #制表符默认为8个空格，如果需要将制表符转换为更少的空格，使用-t参数。 -t|--tabs #指定制表符出现的位置，以逗号分隔
 [^expr]: 
 [^factor]: 
 [^false]: 
@@ -208,7 +187,7 @@ options:
 [^shred]: 移除文件并释放磁盘占用
 [^shuf]: 随机选取
 [^sleep]: 
-[^sort]: I/O 排序，输出
+[^sort]: I/O 排序，输出。-n，让 sort 使用数值排序 -h，让 sort 使用可读的数值排序，du -sh /home/*|sort -hr -r，反转排序
 [^split]: 
 [^stat]: 
 [^stdbuf]: 
