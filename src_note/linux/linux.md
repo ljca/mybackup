@@ -70,6 +70,7 @@
 
 ## 其它
 
-+ [在 Linux 上安装和使用 Homebrew 包管理器](https://linux.cn/article-14065-1.html?utm_source=index&utm_medium=moremore)
-+ [CS 技能树](https://edu.csdn.net/skill/gml/gml-f0d68868583b48d0851c7add33e2f8ff)
+- [在 Linux 上安装和使用 Homebrew 包管理器](https://linux.cn/article-14065-1.html?utm_source=index&utm_medium=moremore)
+- [CS 技能树](https://edu.csdn.net/skill/gml/gml-f0d68868583b48d0851c7add33e2f8ff)
+- [linuxcn](app/lincn.md)
 

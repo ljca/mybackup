@@ -2,6 +2,8 @@
 
 # Db2安装配置笔记
 
+<!--
+
 下载地址：https://www-01.ibm.com/marketing/iwm/iwm/web/pick.do?source=swg-db2expressc&S_TACT=000000VR&S_OFF_CD=10000761&lang=en_US
 ibm db2 Express-C 10.1 64位下载地址：
 DB2 Express-C light（仅限英语。不包含 Text Search、Configuration Assistant 或 First Steps）
@@ -21,7 +23,11 @@ db2_v101_win_vsai.exe (64MB)
 https://www6.software.ibm.com/sdfdl/v2/regs2/db2pmopn/db2_v101/expc/Xa.2/Xb.aA_60_-i7wn_sM010lfXXCE7XWCdSywiF6-TIMcmIn0/Xc.db2_v101/expc/db2_v101_win_vsai.exe/Xd./Xf.LPr.D1vk/Xg.8786919/Xi.swg-db2expressc/XY.regsrvs/XZ.N1ecIOYzuP_iejrEEDNLaaOT2OM/db2_v101_win_vsai.exe
 IBM Data Server Driver for JDBC and SQLJ V10.1 Fix Pack 5
 https://delivery04.dhe.ibm.com/sdfdl/v2/sar/CM/IM/05fz2/1/Xa.2/Xb.jusyLTSp44S0Qs61wesNF_HcDRx0gpuuK_4rfS43OUlhmN3q02aLc15obIE/Xc.CM/IM/05fz2/1/v10.1fp5_jdbc_sqlj.tar.gz/Xd./Xf.LPR.D1vk/Xg.8788446/Xi.habanero/XY.habanero/XZ.XCmWMXHp6UxsJ_67oCl4IxdWK0E/v10.1fp5_jdbc_sqlj.tar.gz
+
+-->
  
+## 安装和配置
+
 G:\DeveLop\DataBase\DB2\BIN
 :( > db2start
 DB2 : 服务已返回特定的服务错误代码。
@@ -42,4 +48,5 @@ db2 catalog db db_name
 db2 => create database test on G:\Temp\Data
 SQL1052N 数据库路径 "G:\Temp\Data" 不存在。
 :( > db2set DB2_CREATE_DB_ON_PATH=yes
+
  vim:set filetype=markdown: 

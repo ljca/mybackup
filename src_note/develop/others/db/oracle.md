@@ -1,7 +1,7 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 
-# ★ Oracle的基本操作 DML:CUID
-## 实例
+#  Oracle的基本操作 DML:CUID
+## ★ 实例
 ！安装Oracle过程中，如果配置了数据库，则
 
 Oracle的对象并不放在数据库中，而是放在一个被称为表空间的逻辑结构中。一个数据库对应于一个实例，一个实例对应一个 service，创建多个数据库就会创建多个实例，这样会增大系统开销

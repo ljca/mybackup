@@ -2,6 +2,8 @@
 
 # 《Linux就该这么学》
 
+<div class="pages">
+
 + [第0章][0] 咱们先来谈谈学习方法和红帽系统。
 + [第1章][1] 部署虚拟环境安装linux系统。
 + [第2章][2] 新手必须掌握的Linux命令。
@@ -27,6 +29,8 @@
 + [第22章][22] 使用openstack部署云计算服务环境
 + [第23章][23] 使用OpenLDAP部署目录服务。
 
+</div>
+
 [0]: http://www.linuxprobe.com/chapter-00.html
 [1]: http://www.linuxprobe.com/chapter-01.html
 [2]: http://www.linuxprobe.com/chapter-02.html
@@ -51,4 +55,5 @@
 [21]: http://www.linuxprobe.com/chapter-21.html
 [22]: http://www.linuxprobe.com/chapter-22.html
 [23]: http://www.linuxprobe.com/chapter-23.html
+
 

@@ -2,7 +2,7 @@
 
 # Others Programmings 
 
-<div class="dir">
+<div class="pages">
 
 + [Ajax：异步JavaScript和XML可扩展语言](others/ajax.md)
 + [Markdown 笔记](others/markdown.md)

@@ -244,7 +244,7 @@ Include Bin...Path//包含到windows环境变量Path中
 设置root用户的密码
 Enable root access from ....//允许root用户从网络上连接
 Create ..An...Account //启用匿名用户连接
-如果是免安装版？则应该配置MySql目录下的ini配置文件。
+如果是免安装版？直接编辑MySql目录下的ini配置文件即可。
 
 ### Linux
 #### 从源码编译安装 MySQL
