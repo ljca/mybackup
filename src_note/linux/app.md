@@ -12,8 +12,6 @@
 - [ruxvt](app/ruxvt.md)
 - [vim安装与配置笔记](app/vim.md)
 
-</div>
-
 > Terminal File Browser
 
 + [clifm](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
@@ -31,11 +29,11 @@
 
 > Media Player
 
-- [Listen1_Desktop app](https://github.com/listen1/listen1_desktop)
 - [mocp：Linux 上的一个轻量级命令行本地音乐播放器。](app/mocp.md)
 - [rhythmcat: ](app/rhythmcat.md)
 - [cmus(C Music Player) Install & Configure ](app/cmus.md)
 - [mplayer](app/mplayer.md)
+- [Listen1_Desktop app](https://github.com/listen1/listen1_desktop)
 
 > Documents Software
 
@@ -47,7 +45,6 @@
 
 > Others app
 
-<div class="pages"
 
 - [oneko<sup>aur</sup>：追逐光标的精灵。](#)
 - [lolcat](#)
