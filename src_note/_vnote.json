@@ -4,7 +4,7 @@
     ],
     "sub_directories": [
         {
-            "name": "Linux"
+            "name": "linux"
         },
         {
             "name": "develop"
@@ -13,7 +13,7 @@
             "name": "tmp"
         },
         {
-            "name": "Windows"
+            "name": "windows"
         }
     ],
     "version": "1"

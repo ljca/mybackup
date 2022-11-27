@@ -2,7 +2,7 @@
 set $mod Mod4
 
 #font pango:DejaVu Sans Mono 8
-font pango:Monaco 9
+font pango:Monaco 9.5
 #                       border  bgcolor fgcolor msg
 client.focused          #333333 #333333 #FFFFFF #333333
 client.focused_inactive #999999 #999999 #FFFFFF #3399FF
@@ -22,18 +22,23 @@ bindsym $mod+Return exec xfce4-terminal
 
 #
 # 随 i3 一起启动的程序（这些程序在使用之前必须被安装到系统中），为了让调整的设置生效，你可能需要重启 X 或者 i3 会话……
+
+exec --no-startup-id xfce4-power-manager -D
+
 # 为了设置 i3 壁纸（图片路径需要被正确设置）……
 # Moss_inflorescence_by_carmelo75.jpg
 # warty-final-ubuntu.jpg
 # 00003.jpg
 # 0128.jpg
 #
-exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/Moss_inflorescence_by_carmelo75.jpg"
-#exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper0104.jpg/573d31d4263ea.jpg"
+#exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/Moss_inflorescence_by_carmelo75.jpg"
+exec --no-startup-id feh --bg-scale "/home/external/usr/share/backgrounds/Wallpaper/ubuntu/Moss_inflorescence_by_carmelo75.jpg"
+#
 
 # 因为 i3 窗口合成器不支持对窗口合成一些混合效果（比如：窗口的打开/关闭动画（淡入淡出）、混合透明、窗口阴影），所以如果你希望窗口有这些效果的话，你可能需要安装`xcompmpr`或者其它类似的程序并在终端模拟器中添加适当的选项在后台运行它，如果你不打算让它随 i3 一起启动的话……
-#exec --no-startup-id xcompmgr -FCf -nc -t -5 &
-exec --no-startup-id compton -b -f -i 0.8 -C -G -c
+exec --no-startup-id xcompmgr -FCf -nc -t -5 &
+#exec --no-startup-id compton -b -f -i 0.8 -C -G -c
+#picom
 
 # 为了启动 i3bar 上的网络管理小程序……
 #exec --no-startup-id nm-applet&
@@ -42,8 +47,8 @@ exec --no-startup-id compton -b -f -i 0.8 -C -G -c
 exec --no-startup-id LANG="zh_CN.UTF-8" fcitx &
 
 # 为了设置电源管理……
-exec --no-startup-id xset s 0
-exec --no-startup-id xset dpms 90 300
+# exec --no-startup-id xset s 0
+# exec --no-startup-id xset dpms 90 300
 
 # 为了在 i3bar 上显示那种桌面环境面板上的托盘图标，你需要调整`xrandr`的输出（可以尝试运行`xrandr`获取）的……
 #exec --no-starup-id xrandr --output eDP-1 --primary
@@ -56,6 +61,8 @@ exec --no-startup-id xfce4-terminal&>/dev/null&
 
 # 为了启用触摸板的轻触功能，不过在这里设置无效……
 #synclient VertTwoFingerScroll = 1 HorizTwoFingerScroll = 1 TapButton1 = 1 TapButton2 = 3 TapButton3 = 2
+exec synclient TapButton1=1 TapButton2=3 TapButton3=2 VertEdgeScroll=1 HorizEdgeScroll=1  VertTwoFingerScroll=1 HorizTwoFingerScroll=1
+
 
 # kill 窗口的键绑定……
 #bindsym $mod+Shift+q kill
@@ -71,14 +78,17 @@ bindsym Print exec xfce4-screenshooter -m 2>/dev/null
 #bindsym Ctrl+mod1+F exec pcmanfm &>/dev/null&
 
 # File Browser 2
-bindsym Ctrl+mod1+F exec thunar &>/dev/null&
+#bindsym Ctrl+mod1+F exec thunar &>/dev/null&
+#bindsym  mod1+E exec thunar &>/dev/null&
+bindsym  $mod+E exec thunar &>/dev/null&
 
 # Pdf Browser
 #bindsym Ctrl+mod1+D exec masterpdfeditor3 &>/dev/null&
 bindsym Ctrl+mod1+D exec evince &>/dev/null&
 
 # Web Browser
-bindsym Ctrl+mod1+W exec firefox &>/dev/null&
+#bindsym Ctrl+mod1+W exec firefox &>/dev/null&
+bindsym mod1+W exec firefox &>/dev/null&
 
 # Music Player 
 bindsym Ctrl+mod1+M exec RhythmCat &>/dev/null &
@@ -128,7 +138,7 @@ bindsym $mod+plus scratchpad show
 
 
 # 调整窗口边框样式……
-bindsym $mod+u border none
+bindsym $mod+m border none
 bindsym $mod+n border normal
 bindsym $mod+o border 1pixel
 bindsym $mod+b border toggle
@@ -145,8 +155,8 @@ bindsym $mod+f fullscreen toggle
 
 # 改变窗口的布局方式（平铺还是标签化？或者是堆叠？）……
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout tabbed
+bindsym $mod+u layout toggle split
 
 # 窗口浮动切换……
 bindsym $mod+Shift+space floating toggle
@@ -186,7 +196,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # 在工作区的窗口间切换……
 bindsym $mod+Tab workspace next
+#bindsym mod1+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+#bindsym mod1+Shift+Tab workspace prev
 
 # 窗口大小调整键绑定配置……
 mode "resize" {
@@ -196,24 +208,39 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
+
   bindsym h resize grow width 5 px or 5 ppt
-    bindsym l resize shrink width 5 px or 5 ppt
-    bindsym j resize grow height 5 px or 5 ppt
-    bindsym k resize shrink height 5 px or 5 ppt
-#bindsym semicolon resize grow width 10 px or 10 ppt
+  bindsym l resize shrink width 5 px or 5 ppt
+  bindsym j resize grow height 5 px or 5 ppt
+  bindsym k resize shrink height 5 px or 5 ppt
+
+# bindsym semicolon resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
+
+# Volume：for sound control
+bindsym XF86AudioRaiseVolume exec amixer set Master playback 1000+
+bindsym XF86AudioLowerVolume exec amixer set Master playback 1000-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound>
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound>
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Light：Install xorg-xbacklight  or acpixbacklight or light-git or acpilight
+# bindsym XF86MonBrightnessUp exec"xbacklight -inc 10; notify-send 'brightness up'
+# bindsym XF86MonBrightnessDown exec"xbacklight -inc 10; notify-send 'brightness down'
 
 # i3bar 配置……
 bar {
@@ -271,6 +298,7 @@ assign [class="(?i)thunderbird"] 4
 
 assign [class="(?i)firefox"] 5
 assign [class="(?i)chromium"] 5
+assign [class="(?i)vivaldi"] 5
 assign [class="(?i)opera"] 5
 
 
@@ -299,6 +327,8 @@ bindsym $mod+Shift+c reload
 # 重启 i3 窗口管理器……
 bindsym $mod+Shift+r restart
 
+bindsym $mod+Shift+p exec "i3lock -i /home/external/usr/share/backgrounds/Wallpaper/solar_term/1236523106.png -n"
+
 # 退出 i3，也会杀死 X ……
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -308,3 +338,4 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg e
 # { "full_text" : " ${time %H:%M}" , "color" : "\#8BADF9" }
 #{ "full_text": " ${exec curl icanhazip.com}"},
 #
+

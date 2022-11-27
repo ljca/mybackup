@@ -6,6 +6,7 @@
 
 > `eselect profile list`
 
+```log
 Current /etc/portage/make.profile symlink:
   default/linux/amd64/17.1
 Available profile symlink targets:
@@ -15,28 +16,8 @@ Available profile symlink targets:
 + [3]   default/linux/amd64/17.0/hardened (stable)
 + [4]   default/linux/amd64/17.0/hardened/selinux (stable)
 + [5]   default/linux/amd64/17.0/desktop (stable)
-+ [6]   default/linux/amd64/17.0/desktop/gnome (stable)
-+ [7]   default/linux/amd64/17.0/desktop/gnome/systemd (stable)
-+ [8]   default/linux/amd64/17.0/desktop/plasma (stable)
-+ [9]   default/linux/amd64/17.0/desktop/plasma/systemd (stable)
-+ [10]  default/linux/amd64/17.0/developer (stable)
-+ [11]  default/linux/amd64/17.0/no-multilib (stable)
-+ [12]  default/linux/amd64/17.0/no-multilib/hardened (stable)
-+ [13]  default/linux/amd64/17.0/no-multilib/hardened/selinux (stable)
-+ [14]  default/linux/amd64/17.0/systemd (stable)
-+ [15]  default/linux/amd64/17.0/x32 (dev)
-+ [16]  default/linux/amd64/17.1 (stable) *
-+ [17]  default/linux/amd64/17.1/selinux (stable)
-+ [18]  default/linux/amd64/17.1/hardened (stable)
-+ [19]  default/linux/amd64/17.1/hardened/selinux (stable)
-+ [20]  default/linux/amd64/17.1/desktop (stable)
-+ [21]  default/linux/amd64/17.1/desktop/gnome (stable)
-+ [22]  default/linux/amd64/17.1/desktop/gnome/systemd (stable)
-+ [23]  default/linux/amd64/17.1/desktop/plasma (stable)
-+ [24]  default/linux/amd64/17.1/desktop/plasma/systemd (stable)
-+ [25]  default/linux/amd64/17.1/developer (stable)
-+ [26]  default/linux/amd64/17.1/no-multilib (stable)
   .......
+```
 
 USE="acl acpi amd64 berkdb bzip2 cli ....." ....
 

@@ -7,20 +7,24 @@
 - [compiz](app/compiz.md)
 - [i3wm：Linux 上的一个像桌面环境的窗口管理器。](app/i3.md)
 - [fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器。](app/fbterm.md)
-- [mc](app/mc.md)
-- [Linux 图片工具](app/pic_utils.md)
 - [ruxvt](app/ruxvt.md)
 - [vim安装与配置笔记](app/vim.md)
+- [mc](app/mc.md)
 
-> Terminal File Browser
+> cd 的代替、辅助工具
 
-+ [clifm](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
-+ [archivemount](http://mirrors.xmu.edu.cn/gentoo/distfiles/74/archivemount-0.9.1.tar.gz)
-+ [lsd](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
-+ [ranger](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
-+ [exa](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
+- [zoxide](#)
+- [autojump](#)
+
+> Terminal File Browser：ls 的进一步实现
+
 + [sebastiencs/icons-in-terminal](https://github.com/sebastiencs/icons-in-terminal#installation)
 + [sebastiencs/ls-icons](https://github.com/sebastiencs/ls-icons)
++ [lsd](#)
++ [ranger](#)
++ [exa](#)
++ [clifm](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
++ [压缩包环回挂载：archivemount](http://mirrors.xmu.edu.cn/gentoo/distfiles/74/archivemount-0.9.1.tar.gz)
 
 > Terminal File Searcher
 
@@ -33,7 +37,7 @@
 - [rhythmcat: ](app/rhythmcat.md)
 - [cmus(C Music Player) Install & Configure ](app/cmus.md)
 - [mplayer](app/mplayer.md)
-- [Listen1_Desktop app](https://github.com/listen1/listen1_desktop)
+- [Listen1_Desktop app：一个更好的网络音乐播放器实现](https://github.com/listen1/listen1_desktop)
 
 > Documents Software
 
@@ -46,6 +50,7 @@
 > Others app
 
 
+- [Linux 图片工具](app/pic_utils.md)
 - [oneko<sup>aur</sup>：追逐光标的精灵。](#)
 - [lolcat](#)
 - [cowsay](#)
