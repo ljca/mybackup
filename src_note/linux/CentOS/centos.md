@@ -36,6 +36,8 @@ sudo wget http://mirrors.aliyun.com/repo/epel-6.repo
 
 > 参考：
 
+<div class="dir">
+
 + [Linux编译安装Apache2](http://www.server110.com/apache/201308/78.html)
 + [Linux搭建SVN 服务器 - LionelShen的个人空间 - 开源中国社区](http://my.oschina.net/lionel45/blog/298305)
 + [linux下安装配置svn独立服务器 - 大徐 - 博客园](http://www.cnblogs.com/b028/configive/2010/07/23/1867311.html)
@@ -69,4 +71,6 @@ sudo wget http://mirrors.aliyun.com/repo/epel-6.repo
 - [yum升级CentOS内核_百度经验](#)
 - [如何在Ubuntu-CentOS上安装Linux内核4_0_百度知道](#)
 - [折腾一天安装Centos7，以及后面恢复Win7引导的曲折历程 - 其他 - 红黑联盟](#)
+
+</div>
 

@@ -89,7 +89,6 @@ wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
 + [【转】 从LFS到BLFS-compilehacker-ChinaUnix博客](http://blog.chinaunix.net/uid-23219753-id-116154.html)
 
 ```Bash
-
 bash --version|head -n1
 readlink -f /bin/sh
 ld --version|head -n1

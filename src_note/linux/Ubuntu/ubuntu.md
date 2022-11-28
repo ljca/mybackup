@@ -9,6 +9,8 @@
 
 > 参考：
 
+<div class="dir">
+
 + [Ubuntu 14.04~15.10 Linux 3D桌面完全教程，显卡驱动安装方法，compiz特效介绍，常见问题解答 - 查看主题 • Ubuntu中文论坛](http://forum.ubuntu.org.cn/viewtopic.php?t=140531)
 + [Ubuntu 16.04安装资源管理器软件 Double Commander_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2016-04/130192.htm)
 + [Ubuntu笔记本电池续航不佳解决_Linux教程_Linux公社-Linux系统门户网站](http://www.linuxidc.com/Linux/2016-04/130122.htm)
@@ -68,4 +70,6 @@
 - [网易163的Ubuntu apt镜像源_Linux教程_Linux公社-Linux系统门户网站](#)
 - [为 Ubuntu Server 安装图形桌面环境 - 开源中国社区](#)
 - [在Ubuntu操作系统上安装mono和jexus搭建_NET的运行环境 - 巴朗鱼 - 博客频道 - CSDN_NET](#)
+
+</div>
 
