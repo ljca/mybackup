@@ -84,7 +84,41 @@ REM DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:h:\Windows /LimitAcce
 + 宏碁v3 572g换高清屏_笔记本吧_百度贴吧
 + 笔记本电脑排线怎么拆 笔记本各种排线的拆卸教程_笔记本_硬件教程_脚本之家
 + 经典怀旧：VirtualBox安装Win95 - 详细图片展示 - 银河军团的日志 - 网易博客
+- [1_4804591.doc](#)
+- [AutoHotkey 0级入门教程_让重复工作一键完成_善用佳软_新浪博客](#)
+- [file.txt](#)
+- [GPT 分区详解 [金步国]](#)
+- [GPT分区表详解.docx](#)
+- [jQuery Ajax异步处理Json数据详解_jquery_脚本之家](#)
+- [jQuery使用$.each遍历json数组的简单实现方法_jquery_脚本之家](#)
+- [MyEclipse的下载地址.txt](#)
+- [Re_ 崩溃到ntdll.dll的问题 - 高端调试 __ 论坛](#)
+- [WinDBG加载符号表的一点心得体会 - whatday的专栏 - 博客频道 - CSDN.NET](#)
+- [Windbg符号与源码 《第二篇》 - 逆心 - 博客园](#)
+- [Windows 10上使用Bash on Ubuntu_Linux新闻_Linux公社-Linux系统门户网站](#)
+- [Windows下vim方式操作软件+Gvim使用 - Augusdi的专栏 - 博客频道 - CSDN.NET](#)
+- [Windows平台SSH登录Linux并使用图形化界面_Linux教程_Linux公社-Linux系统门户网站](#)
+- [Winsxs文件夹内容怎么清理 Winsxs文件夹瘦身清理教程图解_电脑常识_电脑基础_脚本之家](#)
+- [xP系统DOS命令.doc](#)
+- [【教程】教你解决“Windows 资源保护找到了损坏文件但无法修复其中某些文件”的问题 _ Cystc's Blog](#)
+- [关于GPT磁盘的分区表备份 - 系统应用交流 - 红联Linux论坛](#)
+- [原创 不花钱！！自己动手，笔记本液晶屏屏线维修全程分享（图） 15步搞定 申精_电脑综合论坛](#)
+- [在 win7 - win8 下安装苹果系统 (懒人版) 【转】_y480吧_百度贴吧](#)
+- [在windows平台编译monodevelop - 夏雪的日志 - 网易博客](#)
+- [如何删除右键菜单里的赘余项目_Windows 8_www.knowsky.com](#)
+- [如何拆装笔记本显示器_百度经验](#)
+- [学电脑应该先学习什么？_百度知道](#)
+- [宏基V3-572g成功安装黑苹果10_10懒人版-远景论坛-微软极客社区](#)
+- [宏碁v3 572g换高清屏_笔记本吧_百度贴吧](#)
+- [手把手教你在VirtualBox中与主机共享文件夹（图文介绍）_其它系统_操作系统_脚本之家.docx](#)
+- [手把手教你在VirtualBox中与主机共享文件夹（图文介绍）_其它系统_操作系统_脚本之家](#)
+- [桌面文档.txt](#)
+- [笔记本电脑排线怎么拆 笔记本各种排线的拆卸教程_笔记本_硬件教程_脚本之家](#)
+- [经典怀旧：VirtualBox安装Win95 - 详细图片展示 - 银河军团的日志 - 网易博客.docx](#)
+- [经典怀旧：VirtualBox安装Win95 - 详细图片展示 - 银河军团的日志 - 网易博客](#)
+- [让Win10蓝屏显示详细信息，解决蓝屏哭脸-- Win10之家 - Win10系统下载官网](#)
+- [让Win8.1“这台电脑”回到Win7风格-PChome](#)
+- [逝去的经典-Windows95简体中文完全版_软件下载_软件区 卡饭论坛 - 互助分享 - 大气谦和_](#)
 
 [^repier]: 因为我的误操作导致了 Win8 Metro 界面的所有应用包括 Win8 设置都无法正常使用。
-<link href="../css/style.css" rel="stylesheet" type="text/css" />
 

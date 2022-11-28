@@ -274,8 +274,145 @@ sudo journalctl -p 3 -xb --no-hostname --no-pager
 
 gstreamer [源码树](https://gstreamer.freedesktop.org/src/). gstreamer [项目地址](https://gitlab.com/gstreamer-sdk/). gstreamer0.10-plugins-good-0.10.31 [补丁](https://patchwork.openembedded.org/patch/35979/). 
 
-gstreamer0.10-plugins-good-0.10.31 编译出错。
+gstreamer0.10-plugins-good-0.10.31 编译[出错][20]。
 
-http://blog.csdn.net/zwlq1314521/article/details/42965035
 
-## [怎样在 Arch Linux 构建一个简单的软件包？](structure_pkg.md)
+<div class="dir">
+
+- [怎样在 Arch Linux 构建一个简单的软件包？](structure_pkg.md)
+- [ACPI modules (简体中文) - ArchWiki](#)
+- [Advanced Linux Sound Architecture (简体中文) - ArchWiki](#)
+- [Arch based distributions (active) (简体中文) - ArchWiki](#)
+- [Arch boot process (简体中文) - ArchWiki](#)
+- [archlinux201501版，最小化精减安装的步骤要点，系统大小在1G内_老圃无蔓_新浪博客](#)
+- [archlinux2015.09.01基本系统安装 - wzk的个人页面 - 开源中国社区](#)
+- [Archlinux CN 镜像源使用帮助 [LUG@USTC]](#)
+- [Arch Linux Localization (简体中文) - ArchWiki](#)
+- [Archlinux安装笔记 - 时光旅行的懒猫 - 博客园](#)
+- [Arch Linux安装后的一些初始设置简介_LINUX_操作系统_脚本之家](#)
+- [Archlinux 安装教程 - 撸代码 - LuCode.net](#)
+- [ArchLinux安装完没有声音之解决办法 - 待一切尘埃落定 - SegmentFault](#)
+- [Arch Linux 安装指南[2016.01] _ 安装问题 _ Arch Linux 中文论坛](#)
+- [ArchLinux 的 pacman 命令详解 - 开源中国社区](#)
+- [Arch Linux实现wifi和有线联网_Linux教程_Linux公社-Linux系统门户网站](#)
+- [archlinux 无线网卡资料一-heiyou-ChinaUnix博客](#)
+- [Archlinux 下Intel + NVIDIA 双显卡3D 游戏配置（dota2@steam） - 河 的 第 三 条 岸 - 博客频道 - CSDN.NET](#)
+- [Arch Linux 下Intel + NVIDIA 双显卡3D 游戏配置（dota2@steam） - 河 的 第 三 条 岸 - 博客频道 - CSDN.NET](#)
+- [Archlinux中文化－－怎么显示中文的界面](#)
+- [Arch Linux办公环境安装配置纯小白包通过教程_沉沦的菩提_新浪博客](#)
+- [AUR (en) - laptop-mode-tools](#)
+- [Change root (简体中文) - ArchWiki](#)
+- [Core utilities (简体中文) - ArchWiki](#)
+- [CPU frequency scaling (简体中文) - ArchWiki](#)
+- [Daemons List (简体中文) - ArchWiki](#)
+- [Display Power Management Signaling (简体中文) - ArchWiki](#)
+- [en_users_Documentation_iw - Linux Wireless](#)
+- [fbcon](#)
+- [Fbterm (简体中文) - ArchWiki](#)
+- [Font configuration (简体中文) - ArchWiki](#)
+- [Fonts (简体中文) - ArchWiki](#)
+- [fstab (简体中文) - ArchWiki](#)
+- [General recommendations (简体中文) - ArchWiki](#)
+- [GNOME (简体中文) - ArchWiki](#)
+- [Google Code Archive - Long-term storage for Google Code Project Hosting.](#)
+- [GRUB (简体中文) - ArchWiki](#)
+- [IBus (简体中文) - ArchWiki](#)
+- [infinality-bundle_ good looking fonts made (even) easier _ Community Contributions _ Arch Linux Forums](#)
+- [Installation guide (简体中文) - ArchWiki](#)
+- [Kernel parameters (简体中文) - ArchWiki](#)
+- [Laptop Mode Tools (简体中文) - ArchWiki](#)
+- [Linux问题解决_arch系统安装完没有声音 - FaceYe](#)
+- [List of applications (简体中文) - ArchWiki](#)
+- [makepkg (简体中文) - ArchWiki](#)
+- [Network configuration (简体中文) - ArchWiki](#)
+- [NetworkManager (简体中文) - ArchWiki](#)
+- [NVIDIA (简体中文) - ArchWiki](#)
+- [pacman.conf(5)](#)
+- [pacman_Package signing (简体中文) - ArchWiki](#)
+- [Pacman_Tips and tricks (简体中文) - ArchWiki](#)
+- [PacmanTips and tricks (简体中文) - ArchWiki](#)
+- [Pacman (简体中文) - ArchWiki](#)
+- [pm-utils (简体中文) - ArchWiki](#)
+- [Power management (简体中文) - ArchWiki](#)
+- [RGB颜色查询对照表](#)
+- [Systemd (简体中文) - ArchWiki](#)
+- [Systemd (简体中文) - ArchWiki.MHT](#)
+- [tmpfs - ArchWiki](#)
+- [Unofficial user repositories (简体中文) - ArchWiki](#)
+- [Wireless network configuration - ArchWiki](#)
+- [Wirelessnetworkconfiguration简体中文-ArchWiki](#)
+- [Wireless network configuration (简体中文) - ArchWiki](#)
+- [xinitrc (简体中文) - ArchWiki](#)
+- [Xorg (简体中文) - ArchWiki](#)
+- [Zsh (简体中文) - ArchWiki](#)
+- [把Arch Linux安装到U盘上的具体教程_LINUX_操作系统_脚本之家](#)
+- [对《Arch Linux办公环境安装配置纯小白包通过教程》的补充，关于无线和蓝牙_沉沦的菩提_新浪博客](#)
+
+</div>
+
+[acpi_modules]: https://wiki.archlinux.org/index.php/ACPI_modules_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[alsa]: https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E7.94.A8.E6.88.B7.E6.9D.83.E9.99.90
+[active]: https://wiki.archlinux.org/index.php/Arch_based_distributions_(active)_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[arch_boot_process]: https://wiki.archlinux.org/index.php/Arch_boot_process_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[arch_i18n]: https://wiki.archlinux.org/index.php/Arch_Linux_Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[chroot]: https://wiki.archlinux.org/index.php/Change_root_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[core_utils]: https://wiki.archlinux.org/index.php/Core_utilities_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#cat
+[cpu_freq]: https://wiki.archlinux.org/index.php/CPU_frequency_scaling_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[damons_list]: https://wiki.archlinux.org/index.php/Daemons_List_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[dpm]: https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[iw]: http://linuxwireless.org/en/users/Documentation/iw/
+[fbcon]: https://www.kernel.org/doc/Documentation/fb/fbcon.txt
+[fbterm]: https://wiki.archlinux.org/index.php/Fbterm_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[font]: https://wiki.archlinux.org/index.php/Font_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[fonts]: https://wiki.archlinux.org/index.php/Fonts_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[fstab]: https://wiki.archlinux.org/index.php/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[General_recommendations_]: https://wiki.archlinux.org/index.php/General_recommendations_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[gnome]: https://wiki.archlinux.org/index.php/GNOME_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29
+[fbterm_src]: https://code.google.com/archive/p/fbterm/
+[grub]: https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#x86_64
+[ibus]: https://wiki.archlinux.org/index.php/IBus_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[viewtopic]: https://bbs.archlinux.org/viewtopic.php?id=162098
+[install_guide]: https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[kernel_parameters]: https://wiki.archlinux.org/index.php/Kernel_parameters_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[laptop]: https://wiki.archlinux.org/index.php/Laptop_Mode_Tools_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[list_app]: https://wiki.archlinux.org/index.php/List_of_applications_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E6.88.AA.E5.8F.96.E5.B1.8F.E5.B9.95
+[makepkg]: https://wiki.archlinux.org/index.php/Makepkg_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[network_config]: https://wiki.archlinux.org/index.php/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.90.AF.E7.94.A8.E5.92.8C.E7.A6.81.E7.94.A8.E7.BD.91.E7.BB.9C.E6.8E.A5.E5.8F.A3
+[networkmanager]: https://wiki.archlinux.org/index.php/NetworkManager_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[nvidia]: https://wiki.archlinux.org/index.php/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[pacman.conf]: https://www.archlinux.org/pacman/pacman.conf.5.html#_package_and_database_signature_checking
+[package_signe]: https://wiki.archlinux.org/index.php/Pacman/Package_signing_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E9.85.8D.E7.BD.AE_pacman
+[pacman_tips]: https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[pacman]: https://wiki.archlinux.org/index.php/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.88.A0.E9.99.A4.E8.BD.AF.E4.BB.B6.E5.8C.85
+[pm-utils]: https://wiki.archlinux.org/index.php/Pm-utils_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[pm]: https://wiki.archlinux.org/index.php/Power_management_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[rgb]: https://www.114la.com/other/rgb.htm
+[systemd]: https://wiki.archlinux.org/index.php/Systemd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[tmpfs]: https://wiki.archlinux.org/index.php/Tmpfs
+[aur]: https://wiki.archlinux.org/index.php/Unofficial_user_repositories_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#archlinuxcn
+[wireless_cnofig]: https://wiki.archlinux.org/index.php/Wireless_network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[xinitrc]: https://wiki.archlinux.org/index.php/Xinitrc_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[xorg]: https://wiki.archlinux.org/index.php/Xorg_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[zsh]: https://wiki.archlinux.org/index.php/Zsh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[fs]: https://wiki.archlinux.org/index.php/File_systems_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[1]: http://blog.sina.com.cn/s/blog_69e5d8400102vp00.html
+[2]: http://my.oschina.net/wzkiron/blog/511458
+[3]: https://lug.ustc.edu.cn/wiki/mirrors/help/archlinuxcn
+[4]: http://www.cnblogs.com/timeship/archive/2013/02/28/2937635.html
+[4]: http://www.jb51.net/LINUXjishu/401340.html
+[5]: http://blog.lucode.net/linux/archlinux-install-tutorial.html
+[6]: http://www.tuicool.com/articles/AvaiuqI
+[7]: http://bbs.archlinuxcn.org/viewtopic.php?id=1037
+[8]: http://www.oschina.net/question/54100_29072
+[9]: http://www.linuxidc.com/Linux/2016-11/137666.htm
+[10]: http://blog.chinaunix.net/uid-108863-id-136997.html
+[11]: http://blog.csdn.net/ispeller/article/details/37765999
+[12]: http://blog.csdn.net/ispeller/article/details/37765999
+[13]: http://www.360doc.com/content/12/0713/15/6828497_223986769.shtml
+[14]: http://blog.sina.com.cn/s/blog_6379f4350102wicg.html
+[15]: https://aur.archlinux.org/packages/laptop-mode-tools/
+[16]: http://www.jb51.net/LINUXjishu/401298.html
+[17]: http://blog.sina.com.cn/s/blog_6379f4350102wifv.html
+[18]: http://www.faceye.net/search/98807.html
+[19]: https://segmentfault.com/a/1190000002918394?utm_source=tuicool&utm_medium=referral
+[20]: http://blog.csdn.net/zwlq1314521/article/details/42965035
