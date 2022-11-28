@@ -42,3 +42,5 @@ markor.tar.xz
 src_note/markor/diaries
 src_note/markor/tmp
 src_note/markor/.scot
+# 
+*.vswp
