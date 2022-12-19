@@ -179,11 +179,7 @@ infocmp
 
 ## 其它终端：
 
-+ [community/terminator](#)
-+ [community/tilda](#)
-+ [community/guake](#)
 + [Google Code Archive - Long-term storage for Google Code Project Hosting][src]
-+ Coolterm
 + [Floby-TermKit](https://github.com/Floby/TermKit)
 + [TermKit](https://github.com/unconed/TermKit)
 + [stjerm](https://github.com/stjerm/stjerm)

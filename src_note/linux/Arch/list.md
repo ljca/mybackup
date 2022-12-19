@@ -117,7 +117,8 @@
   - fluidsynth
   - simplescreenrecorder
   - moc
-  - netease-cloud-music
+  - netease-cloud-music(AUR)
+  - [Listen1_Desktop app：一个更好的网络音乐播放器实现](https://github.com/listen1/listen1_desktop)
   - RhythmCat(AUR)
   - deadbeef(AUR)
   - osdlyrics
@@ -126,7 +127,7 @@
   - pulseaudio-alsa
 
 + 压缩/解压/打印/字典
-  - p7zip
+  - p7zip unrar rar
   - cups cups-pdf
   - stardict
   - espea
@@ -134,6 +135,7 @@
 + Build:
   - abs
   - yaourt(AUR)
+  - pacaur(AUR)
   - aurvote customizepkg
   - git subversion 
 

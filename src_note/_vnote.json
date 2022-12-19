@@ -1,7 +1,10 @@
 {
+    "attachment_folder": "_v_attachments",
     "created_time": "2020-02-14T01:03:02Z",
     "files": [
     ],
+    "image_folder": "",
+    "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
             "name": "linux"
@@ -15,6 +18,8 @@
         {
             "name": "windows"
         }
+    ],
+    "tags": [
     ],
     "version": "1"
 }
