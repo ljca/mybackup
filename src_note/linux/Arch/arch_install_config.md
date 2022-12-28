@@ -2,9 +2,9 @@
 
 # Arch Linux 的安装配置笔记
 
-> *本次安装的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi][^secure_boot]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*
+> *本次安装[^install]的 Arch Linux 从 UEFI 启动，使用纯 UEFI & GPT 引导[^uefi][^secure_boot]的硬盘～ grub2 引导加载器，init 使用的是 systemd；*
 
-**你必须已经准备好了引导盘[^boot]，可以是可启动的 U 盘，光盘，甚至如果你有系统镜像并且系统上已经安装了某一个 Linux 发行使用 GRUB2 引导，你还可以直接使用 GRUB2 引导。同时，你还可以选择从网络引导。**
+[^install]: **你必须已经准备好了引导盘[^boot]，可以是可启动的 U 盘，光盘，甚至如果你有系统镜像并且系统上已经安装了某一个 Linux 发行使用 GRUB2 引导，你还可以直接使用 GRUB2 引导。同时，你还可以选择从网络引导。使用 zfs 文件系统的可以阅读[在启用 ZSTD 压缩的 ZFS 根分区上安装 ArchLinux 并配置 Windows 双启动](https://blog.csdn.net/pinghigh/article/details/128336149?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EAD_ESQUERY%7Eyljh-2-128336149-blog-114218992.pc_relevant_landingrelevant&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EAD_ESQUERY%7Eyljh-2-128336149-blog-114218992.pc_relevant_landingrelevant&utm_relevant_index=5)**
 
 ## Start Install[^start]
 

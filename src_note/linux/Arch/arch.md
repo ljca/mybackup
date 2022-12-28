@@ -14,7 +14,7 @@
 
 ﻿也许`Arch Linux`滚动式发行的特点能让系统一下子就更新到最新状态，但不幸的是：并非所有的旧硬件(比如我的)都能适应这种变化。经过升级的软件包释出的一些新特性也许并不兼容`PC`机上的旧硬件。或者在使用之前至少需要对某其中的一项做出微小调整后才能正常工作。因此，此时的你也许对新版本的软件包并不感冒，而希望将它降级后使用。
 
-如果你的`Arch Linux`中的某个软件包因为一些问题需要降级，可以从存档库中下载历史版本然后手动降级[^1]。然而，当我尝试从 Arch Linux 回滚机[^archive]上降级`Arch Linux`时，遇到了下面的一些问题[^problem]。
+`Arch Linux`中的某个软件包因为一些问题需要降级，可以从存档库中下载历史版本然后手动降级[^1]。然而，当我尝试从 Arch Linux 回滚机[^archive]上降级`Arch Linux`时，遇到了下面的一些问题[^problem]。
 
 </div>
 
@@ -100,7 +100,10 @@ pacstrap -i /mnt base base-devel net-tools wpa_supplicant dhcpcd
 
 [^archive]: 回滚机可以把系统“回滚”到以前的某种“状态”。不过，也许只有滚动式发行的才有，Arch Linux 的在[这里](https://archive.archlinux.org)。不幸的是：这同时也会降低系统的安全性。
 
-[^problem]: 如果你的系统时钟是错误的，可能会无法正常访问网络……
+[^problem]: 如果系统时钟错误，可能会无法正常访问网络……
+
+
+<!-- 
 
 # FAQ
 ## Arch Linux滚系统后pacman无法正常使用
@@ -270,14 +273,22 @@ sudo journalctl -p 3 -xb --no-hostname --no-pager
 
 其中有几个错误都和 laptopmode-tools 直接有关，因此我首先尝试了禁用掉了 laptop-mode 服务： `sudo systemctl disable laptop-mode.service`，但我很快发觉这并没有什么用，重新引导系统后，最初出现的错误依旧没有消失。很困惑，有人认为这可能跟位于主板上的`BIOS`存在一定的关联性，难道是因为我的计算机更换了主板后一直没有更新`BIOS`的原因吗？或许我应该尝试更新一下它？
 
-## 怎样在 Arch Linux 安装 Rhythmcat？
+-->
 
+## 怎样在 Arch Linux 安装 Rhythmcat[^rhythmcat]？
+
+<!--
 gstreamer [源码树](https://gstreamer.freedesktop.org/src/). gstreamer [项目地址](https://gitlab.com/gstreamer-sdk/). gstreamer0.10-plugins-good-0.10.31 [补丁](https://patchwork.openembedded.org/patch/35979/). 
 
 gstreamer0.10-plugins-good-0.10.31 编译[出错][20]。
+-->
+
+[^rhythmcat]: Rhythmcat 是开源项目，作者已经提交到 github。可选择克隆安装。当然，如果系统是 Arch Linux，AUR 上也有人提交了 PKGBUILD。
 
 
-<div class="dir">
+> 以下是一些无关的链接：
+
+<div class="pages">
 
 - [怎样在 Arch Linux 构建一个简单的软件包？](structure_pkg.md)
 - [ACPI modules (简体中文) - ArchWiki](#)
@@ -299,7 +310,7 @@ gstreamer0.10-plugins-good-0.10.31 编译[出错][20]。
 - [Archlinux 下Intel + NVIDIA 双显卡3D 游戏配置（dota2@steam） - 河 的 第 三 条 岸 - 博客频道 - CSDN.NET](#)
 - [Arch Linux 下Intel + NVIDIA 双显卡3D 游戏配置（dota2@steam） - 河 的 第 三 条 岸 - 博客频道 - CSDN.NET](#)
 - [Archlinux中文化－－怎么显示中文的界面](#)
-- [Arch Linux办公环境安装配置纯小白包通过教程_沉沦的菩提_新浪博客](#)
+- [Arch Linux办公环境安装配置纯小白包通过教程_沉沦的菩提_新浪博客](#)
 - [AUR (en) - laptop-mode-tools](#)
 - [Change root (简体中文) - ArchWiki](#)
 - [Core utilities (简体中文) - ArchWiki](#)
@@ -346,7 +357,7 @@ gstreamer0.10-plugins-good-0.10.31 编译[出错][20]。
 - [Xorg (简体中文) - ArchWiki](#)
 - [Zsh (简体中文) - ArchWiki](#)
 - [把Arch Linux安装到U盘上的具体教程_LINUX_操作系统_脚本之家](#)
-- [对《Arch Linux办公环境安装配置纯小白包通过教程》的补充，关于无线和蓝牙_沉沦的菩提_新浪博客](#)
+- [对《Arch Linux办公环境安装配置纯小白包通过教程》的补充，关于无线和蓝牙_沉沦的菩提_新浪博客](#)
 
 </div>
 

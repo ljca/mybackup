@@ -1,10 +1,13 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-# 如何在 Linux 上修改磁盘分区卷标：
+# 在 Linux 上修改磁盘分区卷标
 
 + Ext 系列 使用 e2label[^e2label]：修改 Ext 系列文件系统卷标: `sudo e2label /dev/sda4 Lfs`
 + NTFS 使用 ntfslabel[^ntfslabel]：`ntfslabel `
-+ mlabel[^mlabel]: `fat`系列卷标修改工具
++ `fat`系列以前使用 mlabel[^mlabel]，现在使用 fatlabel
++ `exfat` 使用 extfatlabel
+
+<!--
 
  =========== /etc/mtools.conf ============
 
@@ -25,6 +28,7 @@ mtools_lower_case=1
 ```
 
 然后以根用户权限执行`mlabel h: LIN`（可能需要先挂载`fat`卷）更改`fat 卷`卷标，mlabel 如果不带任何参数，且没有在命令行上指定卷标名，系统将会提示键入新的卷标, 更多用法参考 `mlabel --help`。
+-->
 
 ## 文件系统检查[^disk_check]：
 
@@ -54,7 +58,11 @@ NTFS partition /dev/sda8 was processed successfully.
 
 [^ntfslabel]: ntfslabel 属于 ntfs-3g 软件包。
 
-[^mlabel]: mlabel命令由mtools软件包提供，然而，并不是所有的Linux发行都会默认安装。可以直接使用`gparted`修改`U`盘或者`移动硬盘`卷标。同样，也可以使用命令行由`mtools`软件包提供的 mlabel 修改。当然，这需要先在/etc/mtools.conf中给`移动磁盘`映射一个虚拟驱动器号。
+[^mlabel]: 现在不使用了 mlbel 了。也可以直接使用`gparted`修改`U`盘或者`移动硬盘`卷标。
+
+<!--
+同样，也可以使用命令行由`mtools`软件包提供的 mlabel 修改。当然，这需要先在/etc/mtools.conf中给`移动磁盘`映射一个虚拟驱动器号mlabel命令由mtools软件包提供，然而，并不是所有的Linux发行都会默认安装。
+-->
 
 [^disk_check]: 我们不可避免的会遇到这个问题。或者是因为停电，或者是误操作，或者是不小心碰到了电源开关。
 

@@ -42,7 +42,7 @@
 
 </div>
 
-![ls-icons 项目让 ls 在使用时可以带有一个图标](images/20221218220132402_1583915895.png)
+![icons-in-terminal & ls-icons 项目让 ls 在使用时可以带有一个图标](images/20221218220132402_1583915895.png)
 
 
 [^ls-iocns]: ls-icons 项目支持在终端模拟器上使用 ls 时在目录或者文件前显示一个图标。请注意：此 ls 并非系统中的 ls。

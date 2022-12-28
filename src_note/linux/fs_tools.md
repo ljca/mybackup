@@ -20,11 +20,15 @@
 
 ## [Ext 文件系统工具集](fs_tools/ext_fs_utils.md)
 
+> 其它文件系统
+
 + jfs
 + xfs
 + `reiser2fs`
 + btrfs
 + hfs|hfs+
++ UFS
++ ZFS
 
 > 基于`iso9660/UDF`文件系统的工具：
 
