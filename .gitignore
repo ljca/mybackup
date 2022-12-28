@@ -38,10 +38,10 @@ c#_src*
 星际I介绍*
 src_note/tmp
 src_note--bk
-markor.tar.xz
 src_note/markor/diaries
 src_note/markor/tmp
 src_note/markor/.scot
+markor*
 .private
 # 
 *.vswp
