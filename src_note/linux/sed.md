@@ -37,6 +37,10 @@ sed 's/ MA/,Massachusetts/' list
 
 ```Bash
 sed '/^##/{s/^##//;n;G}' file
+#1672497618
+for i in *.htm;do s -i "/<\/head>|<\/HEAD>/i\ `echo $i|s 's/\.htm//'`\n" "$i";done
+#1672498633
+for i in *.htm;do s -i "/<\/HEAD>/i\ <h1>`echo $i|s 's/\.htm//'`</h1>\n" "$i";done
 ```
 
 ```Bash

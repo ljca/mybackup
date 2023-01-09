@@ -1,8 +1,8 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-# Arch Linux 
+# Thunar 显示 mp3 文件缩略图[^mp3]
 
-## Thunar 显示 mp3 文件缩略图
+[^mp3]: 本次在 Arch Linux 上测试。
 
 ::: alert-info
 

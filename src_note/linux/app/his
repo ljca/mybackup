@@ -1,2 +1,16 @@
 #1669120379
 git clone https://github.com/sebastiencs/icons-in-terminal.git icons-in-terminal
+#1669103047
+perl -MCPAN -e shell
+#1669126988
+
+#1669127064
+export CFLAGS=-DNO_TRUE_COLOURS=1 CC=clang CXX=clang++   ./configure --prefix=/opt/coreutils 
+#1669127098
+export CFLAGS=-DNO_TRUE_COLOURS=1 CC=clang CXX=clang++ ./configure --prefix=/opt/coreutils
+#1669127148
+export CFLAGS=-DNO_TRUE_COLOURS=1 CC=clang CXX=clang++
+#1669127159
+./configure --prefix=/opt/coreutils
+#1669127663
+gh repo clone sebastiencs/ls-icons

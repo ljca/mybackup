@@ -20,7 +20,7 @@
   - xcursor-themes
   - arc-icon-theme mate-themes numix-themes 
   - mate-themes
-  - humman(AUR)
+  - humman-icons<sup>AUR</sup>
 
 + Network Browser
   - lynx elinks chromium firefox firefox-i18n-zh-cn 
@@ -156,3 +156,53 @@
  
   - qtcurve-gtk1 qtcurve-gtk2 
   - driconf
+ambiance-rw-git
+archivemount
+audiothumbnailer
+auracle-git
+autojump
+baidunetdisk-bin
+clifm
+compiz
+emerald
+emerald-themes
+ffmpeg-audio-thumbnailer
+flashplugin
+gcc5
+harmonoid-bin
+humanity-icon-theme
+i3-volume
+icons-in-terminal
+kaf-cli
+koreader-bin
+kwplayer
+lector
+libav
+listen1-desktop-appimage
+lite-xl
+masterpdfeditor
+masterpdfeditor-free
+mssql-server
+nerdfetch
+netease-cloud-music
+oneko
+pacaur
+pepper-flash
+phonon-qt4
+python-pyside
+python-pyside-common
+python-shiboken
+python2-pip
+python2-pyside
+python2-shiboken
+qt4
+shiboken
+termpub
+tumbler-folder-thumbnailer
+tumbler-stl-thumbnailer
+txt2epub
+ubuntu-themes
+vdfuse
+vnote-git
+vscodium-bin
+vte-legacy

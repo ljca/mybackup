@@ -15,9 +15,11 @@
 
 + -o: 查询本地指定的文件或者指令属于哪个软件包。 `pacman -Qo $(which ls)`
 + -c: 检查已安装的软件包完整性。
-+ -i: 查询已安装的某个软件包信息。`pacman -Qi $(which ls)`, -ii 显示所有
-+ -n：查询不在系统仓库中的软件包
-+ -m：查询位于软件仓库中的软件包
++ -i: 列出已安装的某个软件包信息。`pacman -Qi $(which ls)`, -ii 显示所有
++ -e：列出单独安装的软件包
++ -n：列出软件仓库中的软件包
++ -m：列出不在系统仓库中的软件包
++ -l：列出软件包内的文件
 + -d
 + -t
 + -q：简略格式
@@ -38,7 +40,7 @@
 
 # 附
 
-+ yaourt | pacaur: 从 aur 搜索，安装。
++ yaourt | pacaur | yay: 从 aur 搜索，安装。
 + pkgfile
 + pactree
 + /etc/pacman.conf
@@ -62,3 +64,4 @@ pacman-key --populate archlinux
 [pacman]: https://wiki.archlinux.org/index.php/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.88.A0.E9.99.A4.E8.BD.AF.E4.BB.B6.E5.8C.85
 [pkg_sig]: https://wiki.archlinux.org/index.php/Pacman/Package_signing_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E9.85.8D.E7.BD.AE_pacman
 [pacman_tricks]: https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+
