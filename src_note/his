@@ -1,0 +1,8 @@
+#1673187901
+for d in *;do   [ -d "$d" ] && {   pushd "$d";fd -e "html" -e "htm"   | xargs -t -I{}  sed -E -i 's/(<title>)(.*)(<\/title>)/\1\2\3\n<h1>\2<\/h1>\n/' ; popd;  };done &>/tmp/test.log
+#1673189710
+fd -e "htm" |xargs -v sed -E -i 's/(<TITLE>)(.*)(<\/TITLE>)/\1\2\3\n<h1>\2<\/h1>\n/' '{}'
+#1673189720
+ fd -e "htm" |xargs -t sed -E -i 's/(<TITLE>)(.*)(<\/TITLE>)/\1\2\3\n<h1>\2<\/h1>\n/' '{}'
+#1673189874
+fd -e "htm" |xargs -t -I{} sed -E -i 's/(<TITLE>)(.*)(<\/TITLE>)/\1\2\3\n<h1>\2<\/h1>\n/' '{}'

@@ -41,7 +41,7 @@ src_note--bk
 src_note/markor/diaries
 src_note/markor/tmp
 src_note/markor/.scot
-markor*
+markor.*
 .private
 # 
 *.vswp

@@ -1,0 +1,7 @@
+## 第二部分 我们对待自己的态度
+s -i '/<.*>/{N;s/\n//;}' tmp2
+s -i -e '/<.*>/ s/<.*"(\/.*)">(\+ .*)/\2(http:\/\/m.tadu.com\1)/' -e '/^$/d' tmp2
+s -i -e '/^> .*。$/ s/$/”/' -e '/^> .*。”$/ s/^> /“/'  -e '/^◆ / s/◆/>/' 世间纷扰，安得静好.md  
+s  -i -e '/^> .*$/ s//<\/div>\n\n&\n\n<div class="p">\n\n/'  世间纷扰，安得静好.md  
+s  -i -e '/^> .*$/ s//<\/div>\n<\/div>\n\n&\n\n<div class="p">\n<div class="wavy">\n/'  世间纷扰，安得静好.md  
+s  -i -e '/^##.*/ s//<\/div>\n<\/div>\n\n&\n\n<div class="p">\n<div class="wavy">\n/' 论生命之短暂.md 

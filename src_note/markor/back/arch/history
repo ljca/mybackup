@@ -1,0 +1,285 @@
+ useradd -md /home/Ljca -G wheel -r kyzs
+ userdel -r alarm
+ passwd kyzs
+ passwd 
+ passwd 
+ pacman -S sudo
+ sl -al /
+ ls -al /
+ cd/etc
+ cd /etc
+ ls -l
+ su - kyzs
+ cp ~kyzs/termux/arch/pacman.conf /etc
+ cp ~kyzs/termux/arch/pacman.d/mirrorlist /etc/pacman.d/mirrorlist 
+ pacman -Syy
+ pacman -S sudo
+ visudo
+ pacman -Syyu
+ pacman -Rnc xfsprogs
+ pacman -Rnc linux-firmware
+  visudo
+ su - kyzs
+ s - kyzs
+ su - kyzs
+ vi /etc/locale.gen
+ locale-gen 
+ cd ~kyzs
+ cd sdcard/Documents/markor/back/arch/
+ l
+ ls
+ pacman -S --needed $(cat pacq*.log|xargs)
+ pacman -S --needed $(cat pacq*.log|xargs)
+ pkgfile --update
+ pacman -Scc
+ su - kyzs
+ dirs
+ l
+ su - jyzs
+ su kyzs 
+ su - kyzs 
+ npm search gitbook-cli
+ npm help 
+ npm -l
+ vim  /usr/lib/node_modules/npm/npmrc 
+ pacq -l nodejs|less
+ pacs nodejs
+ pacs node-js
+ pacs node
+ su - kyzs
+ su - kyzs 
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ npm i cnpm
+ rm -rf .npm/
+ less .npmrc 
+ npm i gitbook-cli
+ vim .npmrc 
+ npm --help
+npm install cnpm -g --registry=https://r.npm.taobao.org
+ cd .npm/
+ cd _cacache/
+ ls
+ ls content-v2/sha512/
+ pushd /usr/lib/node_modules/
+ ls
+ cp tmp/cnpm/ . -r
+ ls
+ cd cnpm/
+ ls
+ ln -sv ../npm/node_modules 
+ ls
+ bin/cnpm 
+ cd node_modules
+ ls
+  cd ..
+ ls
+ ls lib
+ cd lib
+ ls
+ vim parse_argv.js 
+ pushd 
+ pushd 
+ cd ..
+ ls
+ cp -r ../tmp/* node_modules -v
+ bin/cnpm
+ bin/cnpm-doc 
+ ls
+ npm
+ pacman -Ss gitbook
+ pacman -Ss pacaur
+ rm -r node_modules/cnpm/ 
+  ls
+ cd ..
+ ls
+ popd
+ cd
+ su - kyzs
+ cd .npm/
+ l
+ ls
+ ls _cacache/
+ cd _cacache/
+ ls
+ ls -aF
+ ls tmp/
+ cd /usr/lib/node_modules/
+ l
+ ls
+ mkdir tmp
+ mv * tmp
+ cd tmp/
+ mv npm ..
+ mv node-gyp/ ..
+ cd ..
+ ls
+ npm/bin/npm --version
+ cd npm/node_modules/
+ ls
+ ls -aF
+ npm --help
+ pwd
+ cd ../../tmp/
+ ls -al
+ mv semver/ ..
+ npm
+ npm --help
+ ls -l
+   cd cnpm/
+ ls
+ less README.md 
+ cd 
+ cd .npm/_logs/
+ s
+ ls
+ less 2020-10-18T08_55_48_737Z-debug.log 
+ cd
+popd
+ su  - kyzs
+ cd
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ al
+ su - kyzs
+ ls -l /proc
+ su - kyzs
+ ls /dev/
+ su - kyzs
+ su - kyzs
+ sshd
+ type sshd
+ /usr/bin/sshd
+ sshd --help
+ man sshd
+ pacq -o $(which sshd)
+ service sshd start
+ service list
+ type service
+ /usr/bin/faked
+ su - kzs
+ su - kyzs
+ su - kyzs
+ su - kyzs 
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ vim .bashrc
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs 
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+  su - kyzs 
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs 
+ su - kyzs
+ passwd kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ p
+ p
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ cd /dev
+ l
+ ls -l
+ ls 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
+ su - kyzs 
