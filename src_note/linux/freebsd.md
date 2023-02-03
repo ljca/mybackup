@@ -32,6 +32,8 @@
 
 ### 自动分配 IP： `/etc/rc.conf`
 
++ [FreeBSD 无线网络设置](https://www.bilibili.com/read/cv18330894)
+
 ### 手动网络配置：ifconfig
 
 > 配置默认 IP 和 路由 `/etc/rc.conf`
@@ -127,6 +129,8 @@ FreeBSD 9+ 安装框架 bsdinstall
 
 -->
 
+- [FreeBSD 中文手册页](https://docs.freebsd.org/zh-cn/books/handbook/)
+- [FreeBSD 简体中文手册页](https://handbook.bsdcn.org/freebsd-shou-ce.html)
 - [开源镜像站](https://mirrors.aliyun.com/freebsd/releases/ISO-IMAGES/13.1/)
 - [FreeBSD Mirror list](http://mirrors.ustc.edu.cn/freebsd/releases)
 - [GRUB2引导FreeBSD(GPT+UEFI)](https://www.bilibili.com/read/cv14215466)

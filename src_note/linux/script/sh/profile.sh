@@ -1,4 +1,4 @@
-#!/bin/bash -
+#! /bin/bash -
 
 #dir="$(cd -P $(dirname $0);pwd)"
 SH_DIR= #"$(cd -P $(readlink -f .);pwd)"
@@ -32,10 +32,10 @@ white="\[\e[1;37m\]"
 	#${color}\!${normal}${color}:${normal}${green}\\$ ${normal}"
 
 #
+#${green}\!${normal}${yellow}:${normal}\
+#${cyan}\#${normal}${yellow}:${normal}\
 
 export PS1="${red}\$?${normal}${yellow}:${normal}\
-${green}\!${normal}${yellow}:${normal}\
-${cyan}\#${normal}${yellow}:${normal}\
 ${pink}\u${normal}${yellow}:${normal}\
 ${white}\w${normal}\n\
 \`if [ \$? -eq 0 ];then echo \"${white}^_^${normal}\";else echo \"${red}:(${normal}\";fi\`\
@@ -66,7 +66,7 @@ case $OS in
 		;;
 
 		#
-    *Linux*)
+    *Linux*|FreeBSD*)
 		[ -r "${SH_DIR}/bash_aliases" ] && source ${SH_DIR}/bash_aliases
 
 		[ -x /usr/bin/dircolors ] && [ -r ${SH_DIR}/dircolors ] && eval "$(dircolors -b ${SH_DIR}/dircolors)"
@@ -88,4 +88,6 @@ esac
 
 export VISUAL="vim" EDITOR="vim"
 export CDPATH back;
+
+shopt -s autocd
 

@@ -1,18 +1,25 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-# Some Applications
+# Some Applications[^app]
 
-<div class="dir">
+[^app]: 以下软件在 Arch Linux 经测试可用，在其它 Linux 发行版应该也可以。
+
+
 
 - [compiz](app/compiz.md)
 - [i3wm：Linux 上的一个像桌面环境的窗口管理器。](app/i3.md)
 - [vim安装与配置笔记](app/vim.md)
-- [fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器。](app/fbterm.md)
+
+<div class="dir">
+
+## 终端模拟器
+
 - [ruxvt](app/ruxvt.md)
-+ [community/terminator](#)
-+ [community/tilda](#)
-+ [community/guake](#)
-+ Coolterm
+- [terminator](#)
+- [tilda](#)
+- [guake](#)
+- [Coolterm](#)
+- [fbterm：Linux 上，一个不需要 X 就能显示、输入中文的伪终端模拟器。](app/fbterm.md)
 
 </div>
 
@@ -42,7 +49,7 @@
 
 </div>
 
-![icons-in-terminal & ls-icons 项目让 ls 在使用时可以带有一个图标](images/20221218220132402_1583915895.png)
+![icons-in-terminal & ls-icons 项目让 ls 被调用时在文件前带有一个图标](images/20221218220132402_1583915895.png)
 
 
 [^ls-iocns]: ls-icons 项目支持在终端模拟器上使用 ls 时在目录或者文件前显示一个图标。请注意：此 ls 并非系统中的 ls。
@@ -52,7 +59,7 @@
 + [fzf](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
 + [fd](https://github.com/leo-arch/clifm/wiki/Advanced#archives)
 
-> Media Player
+## Media Player
 
 <div class="dir">
 
@@ -64,7 +71,9 @@
 
 </div>
 
-> Documents Software
+## Documents Software
+
+> Markdown
 
 <div class="dir">
 
@@ -77,7 +86,7 @@
 
 </div>
 
-> Others app
+## Others app
 
 <div class="pages">
 
@@ -107,15 +116,12 @@
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-# vnote
+> vnote
 
 参考：
 
-> VNote界面自定义字体大小
-
-+ [issue#1214][#1214]
-
-> VNote 阅读界面不显示
+- VNote界面自定义字体大小 [issue#1214][#1214]
+- VNote 阅读界面不显示
 
 <div class="pages">
 
@@ -129,9 +135,12 @@
 [#1214]: https://github.com/vnotex/vnote/issues/1214
 [#1483]: https://github.com/vnotex/vnote/issues/1483
 [#2104]: https://github.com/vnotex/vnote/issues/2104
-<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 
-# [rhythmcat](https://github.com/lazymonkey/rhythmcat)
+- [rhythmcat](https://github.com/lazymonkey/rhythmcat)
+
+<details>
+
+<summary>..... </summary>
 
 > 依赖：
 
@@ -147,9 +156,6 @@
 + gstreamer0.10-ugly-plugins-0.10.19
 
 
-<details>
-
-<summary>..... </summary>
 
 ```log
 编译失败的gstremer0.10-good

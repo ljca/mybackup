@@ -139,7 +139,7 @@ command >& filename
 
 #### 2.4 进程替换
 + `< <(subcmd)`
-+ `<(subcmd)`
++ `<(subcmd)`: xclip <(ls)，将 ls 的输出复制到 X 缓冲区剪贴板。
 + `>(subcmd)`
 + `(< cmd)`
 

@@ -1,4 +1,5 @@
 #!/bin/bash -
+
 [ -r ${SH_DIR}/ck_os.sh ] && source ${SH_DIR}/ck_os.sh
 
 #functions
@@ -8,7 +9,8 @@ function sys_alias()
   type sys_bs &>/dev/null || alias sys_bs='xset dpms force off'
 
   # 锁屏
-  type lk &>/dev/null || alias lk='xtrlock&'
+  #type lk &>/dev/null || alias lk='xtrlock&'
+  type lk &>/dev/null || alias lk='i3lock -i /home/external/usr/share/backgrounds/Wallpaper/ubuntu/warty-final-ubuntu.png -n'
 
   # 电量
   type capa &>/dev/null || alias capa='echo capacity:$(cat /sys/class/power_supply/BAT1/capacity)%'
@@ -17,16 +19,16 @@ function sys_alias()
 function public_linux_alias()
 {
 	case $OSTYPE in
-		linux-gnu)
+		linux-gnu|freebsd13.1)
       [ -r ${SH_DIR}/fun/app_aliases.sh ] && source ${SH_DIR}/fun/app_aliases.sh
       [ -r ${SH_DIR}/fun/tools.sh ] && source ${SH_DIR}/fun/tools.sh
       [ -r ${SH_DIR}/fun/others.sh ] && source ${SH_DIR}/fun/others.sh
       sys_alias
 			alias sync="${SUDO}sync;${SUDO}sync;${SUDO}sync;${SUDO}sync"
-			[ -e /dev/disk/by-label/Applications ] && [ -d "/media/Applications" ] && type mount-app &>/dev/null || alias mount-app="${SUDO}mount -vw -t ntfs /dev/disk/by-label/Applications /media/Applications" 
-			[ -d "/media/tmp" ] && type umt &>/dev/null || alias umt="${SUDO}umount -v /media/tmp"
-			[ -d "/media/Applications" ] && type uma &>/dev/null || alias uma="${SUDO}umount -v /media/Applications"
-			[ -d "/media/Others" ] && type umo &>/dev/null || alias umo="${SUDO}umount -v /media/Others"
+			#[ -e /dev/disk/by-label/Applications ] && [ -d "/media/Applications" ] && type mount-app &>/dev/null || alias mount-app="${SUDO}mount -vw -t ntfs /dev/disk/by-label/Applications /media/Applications" 
+			#[ -d "/media/tmp" ] && type umt &>/dev/null || alias umt="${SUDO}umount -v /media/tmp"
+			#[ -d "/media/Applications" ] && type uma &>/dev/null || alias uma="${SUDO}umount -v /media/Applications"
+			#[ -d "/media/Others" ] && type umo &>/dev/null || alias umo="${SUDO}umount -v /media/Others"
 			type cs &> /dev/null || alias cs="${SUDO}sync;${SUDO}sync;${SUDO}sync;${SUDO}shutdown -hf now"
 			type rs &>/dev/null || alias rs="${SUDO}sync;${SUDO}sync;${SUDO}sync; ${SUDO}reboot now"
 			if [ "$TERM" == "linux" ] && ps aux|grep -v grep|grep fbterm &>/dev/null;then 
@@ -46,31 +48,68 @@ function public_linux_alias()
 function public_alias()
 {
   public_linux_alias
-  type -a .. &> /dev/null || alias ..="cd .."
-  type -a ... &> /dev/null || alias ...="cd ../.."
-	type -a md &> /dev/null || alias md="mkdir -pv" 
 	alias free="free -hmt"
-	alias ls="ls --color=auto"
-  alias ll="ls -aSFlh --color=always"
-	type -a l >& /dev/null || alias l="ls -AXF --color=always"
+
+  # file and dir alias
+	#alias ls="ls --color=auto"
+  #typte -a ll &>/dev/null || alias ll="ls -aSFlh --color=always"
+  #type -a .. &> /dev/null || alias ..="cd .."
+  #type -a ... &> /dev/null || alias ...="cd ../.."
+	type -a md &> /dev/null || alias md="mkdir -pv" 
+  [[ $TERM == "linux" || $TERM == "screen" || $TERM == "fbterm" || $TERM == "xterm*" ]] && alias cd="cd -P"
+
+  type -a b &>/dev/null || alias b="bat"
+  type -a c &>/dev/null || alias c="cat -n"
+  type -a d &>/dev/null || alias d="cd -P"
+  type -a C &>/dev/null || alias C="cp -irv"
+  type -a e &>/dev/null || alias e="vim"
+  type -a f &>/dev/null || alias f="fd"
+  type -a F &>/dev/null || alias F="find"
+  type -a g &>/dev/null || alias g="grep -E --color=auto"
+  type -a h &>/dev/null || alias h="history"
+  type -a H &>/dev/null || alias H="htop"
+  type -a i &>/dev/null || alias i="ls"
+  #type -a j &>/dev/null || alias j=""
+  type -a k &>/dev/null || alias k="kill"
+	type -a l >& /dev/null || alias l="$USR/bin/ls -hSF --color=always"
+  type -a a &>/dev/null || alias a="l -A"
+  type -a m &>/dev/null || alias m="mv -iv"
+  type -a n &>/dev/null || alias n="ls"
+  type -a o &>/dev/null || alias o="ls"
+  type -a p &>/dev/null || alias p="pushd $1 &> /dev/null"
+  type -a q &>/dev/null || alias q="popd $1 &> /dev/null"
+  type -a r &>/dev/null || alias r="rm -rv"
+  type -a R &> /dev/null || alias R='calibre'
+  type -a E &> /dev/null || alias E='calibre'
+  type -a s &>/dev/null || alias s="sed -E"
+  type -a S &>/dev/null || alias S="grep -iE $1 -r ."
+  type -a t &>/dev/null || alias t="tldr"
+  type -a T &>/dev/null || alias T="tar"
+type M &> /dev/null || alias M="mpv --shuffle /media/Others/Music/{流行,纯音,古风,怀旧}/{*.flac,*.ape,*.mp3}  &>/dev/null &"
+#&& unset music_file"
+#type cli_reader &> /dev/null || alias cli_reader='calibre'
+
+
+  #alias cp="cp -iv"
+
+  type -a u &>/dev/null || alias u="sed -E"
+  type -a v &>/dev/null || alias v="dirs -v"
+  #type -a w &>/dev/null || alias w="ls"
+  type -a x &>/dev/null || alias x="xclip"
+  type -a y &>/dev/null || alias y="yes"
+  #type -a z &>/dev/null || alias z="less -R"
+  type -a L &>/dev/null || alias L="less -R"
+
 	#type -a la >& /dev/null || alias la="ls -AF --color=always"
   alias dir="dir --color=always"
-	alias dirs="dirs -v"
   alias vdir="vdir --color=auto"
-  alias grep="grep -E --color=auto"
   alias fgrep="fgrep --color=auto"
   alias egrep="egrep --color=auto"
   alias pwd="pwd -P"
-  [[ $TERM == "linux" || $TERM == "screen" || $TERM == "fbterm" ]] && alias cd="cd -P"
   alias du="du -h"
   alias df="df -h"
-  alias cp="cp -iv"
-  alias rm="rm -iv"
-  alias mv="mv -iv"
-  alias less="less -R"
-	alias pushd="pushd $1 &> /dev/null"
-	alias popd="popd $1 &> /dev/null"
-	type sed_expand_tab >& /dev/null || alias sed_expand_tab="sed 's/\t/  /g'"
+	#type sed_expand_tab >& /dev/null || alias sed_expand_tab="sed 's/\t/  /g'"
+  #type his &>/dev/null || alias his="history"
 }
 
 ###
@@ -89,9 +128,17 @@ function other_alias()
 function pacman_alias()
 {
 	type pacs &>/dev/null || alias pacs="pacman -Ss"
-	type pacq &>/dev/null || alias pacq="pacman -Q"
+	#type pacfs &>/dev/null || alias pacfs="pacman -Fs"
 	type pacf &>/dev/null || alias pacf="pacman -F"
-	type pacfs &>/dev/null || alias pacfs="pacman -Fs"
+	type pacfs &>/dev/null || alias pacfs="pkgfile"
+
+  # Query
+	type pacq &>/dev/null || alias pacq="pacman -Q"
+	type pacqo &>/dev/null || alias pacqo="pacman -Qo"
+	type pacql &>/dev/null || alias pacqo="pacman -Ql"
+	type pacqu &>/dev/null || alias pacqo="pacman -Qu"
+	#type pacqo &>/dev/null || alias pacqo="pacman -Qo"
+  
 	case $OS in
 		Arch*|Fedo*)
 			type paci &>/dev/null || alias paci="${SUDO}pacman -S --needed "
@@ -106,7 +153,7 @@ function pacman_alias()
 	esac
 }
 
-########## package alias function ##########
+########## package manager alias function ##########
 function package_manage()
 {
 	case $OS in
@@ -121,11 +168,11 @@ function package_manage()
 			type dnfr &>/dev/null || alias dnfr="${SUDO}dnf remove"
 			type dnfu &>/dev/null || alias dnfu="${SUDO}dnf update";;
 		Gentoo*)
-      type emeri &>/dev/null || alias emeri="${SUDO}emerge --autounmask-write --ask"
-      type emers &>/dev/null || alias emers="emerge --search"
-      type emerS &>/dev/null || alias emerS="emerge -S"
-      type emerp &>/dev/null || alias emerp="emerge --pretend --verbose"
-      type emerc &>/dev/null || alias emerc="${SUDO} emerge -C"
+      type paci &>/dev/null || alias paci="${SUDO}emerge --autounmask-write --ask --verbose"
+      type pacs &>/dev/null || alias pacs="emerge --search"
+      type pacS &>/dev/null || alias pacS="emerge -S"
+      type pacp &>/dev/null || alias pacp="emerge --pretend --verbose"
+      type pacc &>/dev/null || alias pacc="${SUDO} emerge -C"
 
 			;;
 		Ubuntu*)
@@ -136,6 +183,17 @@ function package_manage()
 			:;;
 		msys)
 			pacman_alias;;
+    FreeBSD*)
+			type paci &>/dev/null || alias paci="${SUDO}pkg install"
+			type pacs &>/dev/null || alias pacs="pkg search"
+			type pacr &>/dev/null || alias pacr="${SUDO}pkg uninstall"
+			type pacu &>/dev/null || alias pacu="${SUDO}pkg update"
+      ## Ports
+			type porti &>/dev/null || alias porti="pushd /usr/ports &>/dev/null && ${SUDO}make install clean"
+			type portsn &>/dev/null || alias portsn="pushd /usr/ports&>/dev/null && make search name="
+			type portsk &>/dev/null || alias pacisk="pushd /usr/ports&>/dev/null && make search key="
+			type portr &>/dev/null || alias portr="${SUDO}pkg uninstall";;
+			#type portu &>/dev/null || alias paciu="${SUDO}pkg update";;
 	esac
 }
 ##

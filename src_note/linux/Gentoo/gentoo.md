@@ -288,3 +288,4 @@ mount /dev/disk/by-label/ESP /boot/efi
 [^gentoo_uefi]: 过去的 Gentoo 的启动盘并不支持从 UEFI 启动，2020 以后已经支持了。据称只有少数的 Live DVD 可以。
 [^gentoo_systemd]: Gentoo 默认使用的 init 是 OpenRC，
 [^paci]: `alias paci="emerge --ask --verbose --autounmask-write"`
+

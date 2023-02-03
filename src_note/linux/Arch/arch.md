@@ -228,6 +228,8 @@ en_US
 
  + 保存会话后注销重新登录
  + 检查用户目录是否正确配置
+
+-->
   
 ## 当我启动Arch Linux时，我发现了一些晦涩难懂的错误消息
 
@@ -268,9 +270,25 @@ sudo journalctl -p 3 -xb --no-hostname --no-pager
 6月 01 15:50:14 kernel: ACPI Error: Method parse/execution failed [\_TZ.FN00._OFF] (Node ffff88015a0ec168), AE_NOT_FOUND (20160930/psparse-543)
 ```
 
+
+<div class="p">
+
 其中有几个错误都和 laptopmode-tools 直接有关，因此我首先尝试了禁用掉了 laptop-mode 服务： `sudo systemctl disable laptop-mode.service`，但我很快发觉这并没有什么用，重新引导系统后，最初出现的错误依旧没有消失。很困惑，有人认为这可能跟位于主板上的`BIOS`存在一定的关联性，难道是因为我的计算机更换了主板后一直没有更新`BIOS`的原因吗？或许我应该尝试更新一下它？
 
--->
+
+> FreeBSD [手册页](https://docs.freebsd.org/zh-cn/books/handbook/config/#ACPI-debug)对此类错误已经找到了解决方案：
+
+12.16.4. ASL、acpidump， 以及 IASL
+最常见的问题是 BIOS 制造商提供的不正确 (甚至完全错误的!) 字节代码。 这通常会以类似下面这样的内核消息显示在控制台上：
+
+ACPI-1287: *** Error: Method execution failed [\\_SB_.PCI0.LPC0.FIGD._STA] \\
+(Node 0xc3f6d160), AE_NOT_FOUND
+许多时候， 您可以通过将 BIOS 升级到最新版本来解决此类问题。 绝大多数控制台消息是无害的， 但如果您有其他问题例如电池工作不正常， 则从 AML 开始查找问题将是一条捷径。 字节代码， 或常说的 AML， 是从一种叫做 ASL 的语言写成的源代码进行编译得到的结果。 AML 一般存放在 DSDT 表中。 要得到您系统的 ASL， 需要使用 acpidump(8)。 需要同时指定 -t (显示固定标的内容) 和 -d (将 AML 反编译成 ASL) 两个选项。 请参见 如何提交调试信息 一节了解如何使用它。
+
+最方便的初步检查是尝试重新编译 ASL 来看看是否有错误。 通常可以忽略这一过程中产生的警告， 但错误一般就都是 bug， 它们通常就是导致 ACPI 无法正常工作的原因。 要重新编译您的 ASL， 可以使用下面的命令
+
+</div>
+
 
 ## 怎样在 Arch Linux 安装 Rhythmcat[^rhythmcat]？
 
@@ -285,78 +303,6 @@ gstreamer0.10-plugins-good-0.10.31 编译[出错][20]。
 
 > 以下是一些无关的链接：
 
-<div class="pages">
-
-- [怎样在 Arch Linux 构建一个简单的软件包？](structure_pkg.md)
-- [ACPI modules (简体中文) - ArchWiki](#)
-- [Advanced Linux Sound Architecture (简体中文) - ArchWiki](#)
-- [Arch based distributions (active) (简体中文) - ArchWiki](#)
-- [Arch boot process (简体中文) - ArchWiki](#)
-- [archlinux201501版，最小化精减安装的步骤要点，系统大小在1G内_老圃无蔓_新浪博客](#)
-- [archlinux2015.09.01基本系统安装 - wzk的个人页面 - 开源中国社区](#)
-- [Archlinux CN 镜像源使用帮助 [LUG@USTC]](#)
-- [Arch Linux Localization (简体中文) - ArchWiki](#)
-- [Archlinux安装笔记 - 时光旅行的懒猫 - 博客园](#)
-- [Arch Linux安装后的一些初始设置简介_LINUX_操作系统_脚本之家](#)
-- [Archlinux 安装教程 - 撸代码 - LuCode.net](#)
-- [ArchLinux安装完没有声音之解决办法 - 待一切尘埃落定 - SegmentFault](#)
-- [Arch Linux 安装指南[2016.01] _ 安装问题 _ Arch Linux 中文论坛](#)
-- [ArchLinux 的 pacman 命令详解 - 开源中国社区](#)
-- [Arch Linux实现wifi和有线联网_Linux教程_Linux公社-Linux系统门户网站](#)
-- [archlinux 无线网卡资料一-heiyou-ChinaUnix博客](#)
-- [Archlinux 下Intel + NVIDIA 双显卡3D 游戏配置（dota2@steam） - 河 的 第 三 条 岸 - 博客频道 - CSDN.NET](#)
-- [Arch Linux 下Intel + NVIDIA 双显卡3D 游戏配置（dota2@steam） - 河 的 第 三 条 岸 - 博客频道 - CSDN.NET](#)
-- [Archlinux中文化－－怎么显示中文的界面](#)
-- [Arch Linux办公环境安装配置纯小白包通过教程_沉沦的菩提_新浪博客](#)
-- [AUR (en) - laptop-mode-tools](#)
-- [Change root (简体中文) - ArchWiki](#)
-- [Core utilities (简体中文) - ArchWiki](#)
-- [CPU frequency scaling (简体中文) - ArchWiki](#)
-- [Daemons List (简体中文) - ArchWiki](#)
-- [Display Power Management Signaling (简体中文) - ArchWiki](#)
-- [en_users_Documentation_iw - Linux Wireless](#)
-- [fbcon](#)
-- [Fbterm (简体中文) - ArchWiki](#)
-- [Font configuration (简体中文) - ArchWiki](#)
-- [Fonts (简体中文) - ArchWiki](#)
-- [fstab (简体中文) - ArchWiki](#)
-- [General recommendations (简体中文) - ArchWiki](#)
-- [GNOME (简体中文) - ArchWiki](#)
-- [Google Code Archive - Long-term storage for Google Code Project Hosting.](#)
-- [GRUB (简体中文) - ArchWiki](#)
-- [IBus (简体中文) - ArchWiki](#)
-- [infinality-bundle_ good looking fonts made (even) easier _ Community Contributions _ Arch Linux Forums](#)
-- [Installation guide (简体中文) - ArchWiki](#)
-- [Kernel parameters (简体中文) - ArchWiki](#)
-- [Laptop Mode Tools (简体中文) - ArchWiki](#)
-- [Linux问题解决_arch系统安装完没有声音 - FaceYe](#)
-- [List of applications (简体中文) - ArchWiki](#)
-- [makepkg (简体中文) - ArchWiki](#)
-- [Network configuration (简体中文) - ArchWiki](#)
-- [NetworkManager (简体中文) - ArchWiki](#)
-- [NVIDIA (简体中文) - ArchWiki](#)
-- [pacman.conf(5)](#)
-- [pacman_Package signing (简体中文) - ArchWiki](#)
-- [Pacman_Tips and tricks (简体中文) - ArchWiki](#)
-- [PacmanTips and tricks (简体中文) - ArchWiki](#)
-- [Pacman (简体中文) - ArchWiki](#)
-- [pm-utils (简体中文) - ArchWiki](#)
-- [Power management (简体中文) - ArchWiki](#)
-- [RGB颜色查询对照表](#)
-- [Systemd (简体中文) - ArchWiki](#)
-- [Systemd (简体中文) - ArchWiki.MHT](#)
-- [tmpfs - ArchWiki](#)
-- [Unofficial user repositories (简体中文) - ArchWiki](#)
-- [Wireless network configuration - ArchWiki](#)
-- [Wirelessnetworkconfiguration简体中文-ArchWiki](#)
-- [Wireless network configuration (简体中文) - ArchWiki](#)
-- [xinitrc (简体中文) - ArchWiki](#)
-- [Xorg (简体中文) - ArchWiki](#)
-- [Zsh (简体中文) - ArchWiki](#)
-- [把Arch Linux安装到U盘上的具体教程_LINUX_操作系统_脚本之家](#)
-- [对《Arch Linux办公环境安装配置纯小白包通过教程》的补充，关于无线和蓝牙_沉沦的菩提_新浪博客](#)
-
-</div>
 
 [acpi_modules]: https://wiki.archlinux.org/index.php/ACPI_modules_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 [alsa]: https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E7.94.A8.E6.88.B7.E6.9D.83.E9.99.90

@@ -42,6 +42,8 @@ case $OSTYPE in
     OS="Other Linux"
   fi
   ;;
+freebsd13.1)
+  OS="FreeBSD";;
 esac
 
 export OS
