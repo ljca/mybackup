@@ -45,3 +45,4 @@ markor.*
 .private
 # 
 *.vswp
+*.swp
